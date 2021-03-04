@@ -1,1 +1,13 @@
 
+Stata codes for component studies are located in directories under /Data/
+
+SRIV		Srivastava
+DELP		Differential Equations Leads to Predictions of Hospitalizations
+        and Infections
+IHME		Institute for Health Metrics and Evaluation
+IMPE		Imperial College 
+JOHN		Johns Hopkins
+LANL		Los Alamos National Laboratory
+master	master do file
+merge		merge studies’ estimates
+Soltani	Soltani
