@@ -7,6 +7,6 @@ IHME		    Institute for Health Metrics and Evaluation
 IMPE		    Imperial College 
 JOHN		    Johns Hopkins
 LANL		    Los Alamos National Laboratory
-master	    Nil. The master do file does not directly produce output. 
+master      Nil. The master do file does not directly produce output. 
 merge		    Merge studies’ estimates and graphs. 
-Soltani	         Soltani
+Soltani     Soltani
