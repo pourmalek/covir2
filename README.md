@@ -11,9 +11,7 @@ README for covir2 repo
 * Time (initial): 2021-02-10
 * **OBJECTIVE** of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values
 
-Here's a line for us to start with.
 
-This line is separated from the one above by two newlines
 
 * Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
 
