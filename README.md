@@ -21,7 +21,7 @@ to reflect where the directory /data/ or \data\ is located on your machine. Save
 3. Run the saved "do Iran master.do". 
 
 
-* Details:
+* Details of do files:
 
 Stata do files Get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located here \data\Soltani\Soltani dig data.xlsx)
 
@@ -29,11 +29,12 @@ Stata do files Get and prepare component studies' estimates for Iran, using the 
 
 Do files are located in directories: 
 
-DELP, Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
+\data\ DELP, Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
 
-The above directories are located in a directory named \data\
+
 
 [![DOI](https://zenodo.org/badge/344389637.svg)](https://zenodo.org/badge/latestdoi/344389637)
 
 End. 
+
 
