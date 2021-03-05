@@ -1,6 +1,6 @@
 # covir2
 
-COVID-19 Iran Review No 2
+COVID-19 Iran Review No 2, Stata codes
 
 README for covir2 repo
 
