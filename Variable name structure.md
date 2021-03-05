@@ -1,4 +1,4 @@
-Variable name structure
+### Variable name structure
 
 Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from component studies, are the target primary outcomes intended in the review. Incident daily event estimates are targeted for Total Deaths and Total Cases. 
 
