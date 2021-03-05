@@ -3,13 +3,13 @@
 
 Example file path edit needed for use of the Stata codes in this reposiry (https://github.com/pourmalek/covir2)
 
-- Go to page https://github.com/pourmalek/covir2
+- Go to repo home page covir2 / Data / [master](https://github.com/pourmalek/covir2)
 
 - Click on "Code", then "Download ZIP"
 
-- Locate the downloaded "covir2-main" directory
+- Locate the DOWNLODED "covir2-main" directory on your local machine
 
-- Locate file "do Iran master.do" in /covir2-main/Data/master/
+- Locate file "do Iran master.do" in your local directory /covir2-main/Data/master/
 
 - Open do file and edit the following line:
 
