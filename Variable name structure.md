@@ -5,8 +5,11 @@ Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from compo
 In order to facilitate handling and preparation of the four outcome variables, naming of the variables from component studies was performed following some conventions described below, which will facilitate following the State codes. 
 
 Sample variable name:
+
 TotDeaMeRaA01S00V03
+
 1234567890123456789
+
          10      
 
 Tot...Dea...Me....Ra.....A01.....S00......V03
