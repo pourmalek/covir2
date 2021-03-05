@@ -1,6 +1,7 @@
 # covir2
 COVID1-19 Iran Review No 2
-README for covir2
+
+README for covir2 repo
 
 * Project: Rapid review of estimates of COVID Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
