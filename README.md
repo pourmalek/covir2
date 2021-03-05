@@ -21,7 +21,7 @@ README for covir2 repo
 
 
 
-* SUMMARY of how to use the codes in this repo
+### SUMMARY of how to use the codes in this repo
 
 1. Open "do Iran master.do" located in /data/master
 2. Edit the contents within " " of 
