@@ -7,7 +7,7 @@ In order to facilitate handling and preparation of the four outcome variables, n
 Variable names have 7 parts, each part denoting one piece of info about the variable, as described below through and example. 
 
 
---- Example variable name:
+#### --- Example variable name:
 
 TotDeaMeRaA01S00V03
 
