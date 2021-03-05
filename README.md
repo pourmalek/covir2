@@ -27,8 +27,8 @@ README for covir2 repo
 2. Edit the contents within " " of 
 global pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
 to reflect where the directory /data/ or \data\ is located on your machine. Save the do file. 
-3. Run the saved "do Iran master.do". /
-
+3. Run the saved "do Iran master.do". 
+/
 
 * Details of do files:
 
