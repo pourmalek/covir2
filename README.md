@@ -9,7 +9,7 @@ README for covir2 repo
 * Project: Rapid review of estimates of COVID-19 Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
 * Time (initial): 2021-02-10
-* **OBJECTIVE** of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values
+* **OBJECTIVE** of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values ...
 
 
 
