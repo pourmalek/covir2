@@ -1,6 +1,8 @@
 # covir2
 
-COVID-19 Iran Review No 2, Stata codes
+### COVID-19 Iran Review No 2, Stata codes
+
+
 
 README for covir2 repo
 
@@ -9,7 +11,14 @@ README for covir2 repo
 * Time: 2021-02-10
 * OBJECTIVE of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values
 
-* Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results. For meore details on how to use the codes, see covir2 / Data / master / Example file path edit.md
+* Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
+
+
+* For meore details on how to use the codes, see covir2 / Data / master / Example file path edit.md
+
+* For description of variable name structure used in codes, see covir2 / Variable name structure.md
+
+
 
 
 * SUMMARY of how to use the codes in this repo
@@ -25,6 +34,7 @@ to reflect where the directory /data/ or \data\ is located on your machine. Save
 
 Stata do files Get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located here \data\Soltani\Soltani dig data.xlsx)
 
+
 * Directory structure:
 
 Do files are located in directories: 
@@ -32,9 +42,15 @@ Do files are located in directories:
 \data\ DELP, Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
 
 
+* Variable name structure
+
+
+
+
+
 
 [![DOI](https://zenodo.org/badge/344389637.svg)](https://zenodo.org/badge/latestdoi/344389637)
 
-End. 
+
 
 
