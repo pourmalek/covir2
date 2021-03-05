@@ -60,8 +60,7 @@ SOLT Soltani
 ### References for component studies
 
 * A00 JOHN 
-* Johns Hopkins University. Coronavirus resource center. https://coronavirus.
-jhu.edu/map.html
+* Johns Hopkins University. Coronavirus resource center. https://coronavirus.jhu.edu/map.html
 * A01 DELP 
 * COVID Analytics. DELPHI epidemiological case predictions. Cambridge: Operations Research Center, Massachusetts Institute of Technology https://www.covidanalytics.io/projections
 * A02 IHME 
