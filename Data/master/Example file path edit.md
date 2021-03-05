@@ -1,4 +1,4 @@
-* Example file path edit
+## Example file path edit
 
 
 Example file path edit needed for use of the Stata codes in https://github.com/pourmalek/covir2
