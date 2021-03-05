@@ -1,5 +1,6 @@
 # covir2
-COVID1-19 Iran Review No 2
+
+COVID-19 Iran Review No 2
 
 README for covir2 repo
 
