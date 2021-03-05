@@ -42,7 +42,6 @@ Do files are located in directories:
 \data\ DELP, Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
 
 
-* Variable name structure
 
 
 
