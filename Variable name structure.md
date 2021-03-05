@@ -10,15 +10,14 @@ TotDeaMeRaA01S00V03
 
 1234567890123456789
 
-         10      
-
 Tot...Dea...Me....Ra.....A01.....S00......V03
 
 1-3...4-6...7-8...9-10...11-13...14-16....17-19
 
-1-3 		Tot or Day: Total (cumulative) or Daily
-4-6 		Dea or Cas: Deaths or Cases
-7-8 		Me, Lo, or Up: Mean, Lower, Upper (uncertainty bound)
+
+1-3 	Tot or Day: Total (cumulative) or Daily
+4-6 	Dea or Cas: Deaths or Cases
+7-8 	Me, Lo, or Up: Mean, Lower, Upper (uncertainty bound)
 9-10 	Ra or Sam: Raw (not smoothed) or Smoothed
 11-13 	A00 to A05: Component study number 
 14-16 	S??: Scenario number within component study
