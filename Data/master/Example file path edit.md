@@ -13,13 +13,13 @@ Example file path edit needed for use of the Stata codes in https://github.com/p
 
 - Open do file and edit the following line:
 
-global pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
+`global` pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
 
 in order to type in the file path for your downloaded "covir2-main" directory (e.g. /Users/farshadpourmalek/Downloads/covir2-main, or C:\Users\farshadpourmalek\)
 
 e.g. to:
 
-global pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
+`global` pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
 
 - Save the edited /covir2-main/Data/master/do Iran master.do
 
