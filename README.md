@@ -28,6 +28,8 @@ README for covir2 repo
 
 ### SUMMARY of how to use the codes in this repo
 
+Once you have downloaded the repo on your local machine, perform the following:
+
 1. Open "do Iran master.do" here covir2 / data / master / [do Iran master.do](https://github.com/pourmalek/covir2/blob/main/Data/master/do%20Iran%20master.do)
 2. Edit the contents within " " of 
 `global` pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
@@ -44,7 +46,7 @@ Stata do files Get and prepare component studies' estimates for Iran, using the 
 
 Do files are located in directories: 
 
-covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data), Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
+covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [IHME](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [IMPE](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [JOHN](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [LANL](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [master](https://github.com/pourmalek/covir2/tree/main/Data/master), [merge](https://github.com/pourmalek/covir2/tree/main/Data/merge), [Soltani](https://github.com/pourmalek/covir2/tree/main/Data/Soltani), [SRIV]()https://github.com/pourmalek/covir2/tree/main/Data/SRIV.
 
 
 
