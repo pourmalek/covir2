@@ -37,14 +37,14 @@ to reflect where the directory /data/ or \data\ is located on your machine. Save
 
 * Details of do files:
 
-Stata do files Get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located here \data\Soltani\Soltani dig data.xlsx)
+Stata do files Get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located here covir2/data/Soltani/[Soltani dig data.xlsx](https://github.com/pourmalek/covir2/tree/main/Data/Soltani))
 
 
 * Directory structure:
 
 Do files are located in directories: 
 
-\data\ DELP, Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
+covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data), Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
 
 
 
