@@ -17,7 +17,8 @@ README for covir2 repo
 * For meore details on how to use the codes, see covir2 / Data / master / Example file path edit.md
 
 * For description of variable name structure used in codes, see covir2 / Variable name structure.md
-* [Variable name structure](/Variable name structure)
+
+* [Variable name structure](covir2/Variable name structure)
 
 
 
