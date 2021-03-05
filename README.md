@@ -29,5 +29,7 @@ DELP, Ghanbari, IHME, IMPE, JOHN, LANL, master, merge, Soltani, SRIV.
 
 The above directories are located in a directory named \data\
 
+https://zenodo.org/badge/344389637.svg
+
 End. 
 
