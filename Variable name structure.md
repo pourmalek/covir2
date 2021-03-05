@@ -16,23 +16,36 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 
 
 1-3 	Tot or Day: Total (cumulative) or Daily
+
 4-6 	Dea or Cas: Deaths or Cases
+
 7-8 	Me, Lo, or Up: Mean, Lower, Upper (uncertainty bound)
+
 9-10 	Ra or Sam: Raw (not smoothed) or Smoothed
+
 11-13 	A00 to A05: Component study number 
+
 14-16 	S??: Scenario number within component study
+
 17-19	V??: Model version of component study
 
 
 Component study number:
 
 A00 JOHN Johns Hopkins
+
 A01 DELP DELPHI
+
 A02 IHME Institute for Health Metrics and Evaluation
+
 A03 IMPE Imperial College
+
 A04 LANL Los Alamos National Laboratory
+
 A05 SRIV Srivastava
+
 SOLT Soltani
+	 
 	 
 DELPHI = Differential Equations Leads to Predictions of Hospitalizations and Infections 
 
