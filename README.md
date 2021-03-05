@@ -23,6 +23,7 @@ README for covir2 repo
 * For description of variable name structure used in codes, see covir2 / Variable name structure.md
 
 * [Variable name structure](../Variable name structure)
+* [GitHub](http://github.com)
 
 
 
