@@ -4,7 +4,7 @@ Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from compo
 
 In order to facilitate handling and preparation of the four outcome variables, naming of the variables from component studies was performed following some conventions described below. 
 
-Variable names have 7 parts, each part denoting one piece of info about the variable, as described below through and example. 
+Variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. 
 
 
 #### --- Example variable name:
