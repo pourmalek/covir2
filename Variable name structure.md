@@ -33,7 +33,7 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 
 
 
-* Component study number:
+--- Component study number:
 
 A00 JOHN Johns Hopkins
 
