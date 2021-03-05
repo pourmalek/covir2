@@ -8,7 +8,7 @@ README for covir2 repo
 
 * Project: Rapid review of estimates of COVID-19 Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
-* Time: 2021-02-10
+* Time (initial): 2021-02-10
 * **OBJECTIVE** of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values
 
 * Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
@@ -17,6 +17,7 @@ README for covir2 repo
 * For meore details on how to use the codes, see covir2 / Data / master / Example file path edit.md
 
 * For description of variable name structure used in codes, see covir2 / Variable name structure.md
+[Variable name structure](/Variable name structure)
 
 
 
