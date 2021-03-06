@@ -115,7 +115,7 @@ if regexm(c(os),"Mac") == 1 {
 
 	merge 1:1 date using "$pathcovir2/Soltani/Iran Soltani"
 }
-else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\Soltani/\ran Soltani"
+else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\Soltani\Iran Soltani"
 
 drop _merge date2
 
