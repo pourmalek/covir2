@@ -17,7 +17,6 @@ Sometime, if the downloaded zip file is unzipped manually in Windows, there migh
 
 * **Problem** (2): Stata spontaneously RESTARTs with a clear start logo. 
 If during running the codes, the demand and supply of memory needed and available for Stata get critically unbalanced, it might be possible that Stata restarts by itself without warning and shows a fresh start logo and empty memory. 
-*
 - **Treatment**: Provide more memory available for Stata:
 - In older versions of Stata, manually set a higher memory, e.g., - set mem 1000m-. Memory no longer needs to be set in modern Statas; memory adjustments are performed on the fly automatically.
 - Quit all other open and / or applications / programs until Stata runs the codes and the last output, that is "log Iran merge.smcl" is shown up. 
