@@ -1,7 +1,7 @@
 ## Example file path edit
 
 
-Example file path edit needed for use of the Stata codes in this reposiry (https://github.com/pourmalek/covir2)
+Example file path edit needed for use of the Stata codes in this repository (https://github.com/pourmalek/covir2)
 
 - Go to repo home page covir2 / Data / [master](https://github.com/pourmalek/covir2)
 
