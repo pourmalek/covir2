@@ -30,8 +30,9 @@ README for covir2 repo
 3. Locate the DOWNLODED "covir2-main" directory on your local machine
 
 4. Locate file "do Iran master.do" in your local directory /covir2-main/Data/master/ and run this do file
+5. Go to your local directory /covir2-main/Data/merge/ and view the produced graphs stored in PDF files (starting with graph 11 COVID-19 daily deaths, Iran, reference scenarios, with DELPHI.PDF)
 
-5. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+6. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 
 
