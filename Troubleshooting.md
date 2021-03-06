@@ -16,6 +16,7 @@ Manually rearrange the directories so that the expected file path leading to "do
 Sometime, if the downloaded zip file is unzipped manually in Windows, there might be a possibility that the file path is not as identical to the correct path that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to "do Iran master.do".
 * 
 *
+*
 **Problem** (2): Stata spontaneously RESTARTs with a clear start logo. 
 *
 If during running the codes, the demand and supply of memory needed and available for Stata get critically unbalanced, it might be possible that Stata restarts by itself without warning and shows a fresh start logo and empty memory. 
