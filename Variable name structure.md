@@ -6,8 +6,8 @@ In order to facilitate handling and preparation of the four outcome variables, n
 
 Variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. 
 
-*
-*
+<br/><br/>
+
 
 #### --- Example variable name:
 
@@ -41,8 +41,7 @@ Version of the model in component study is the only part that is fixed within ea
 
 The sample varaiable name TotDeaMeRaA01S00V03 denotes Total Deaths, mean raw, DELPHI, single scenario, version 3. 
 
-*
-*
+<br/><br/>
 
 
 #### * Component study number:
@@ -61,8 +60,8 @@ A05 SRIV Srivastava
 
 SOLT Soltani
 	 
-*
-*
+<br/><br/>
+
 
 ### References for component studies
 
@@ -81,8 +80,8 @@ University of Southern California (USC). COVID-19 forecast. Los Angeles: Univers
 * **SOLT Soltani**
 * Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Governmental Decisions on the Progress of the CoViD-19 Epidemic. arxiv preprint. Submitted on 15 Aug 2020. https://arxiv.org/abs/2008.11716
 
-*
-*
+<br/><br/>
+
 
 ### Scenario number within component study
 
@@ -132,6 +131,7 @@ University of Southern California (USC). COVID-19 forecast. Los Angeles: Univers
 * S02 = Reopening scenario 2 = Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 32% and at lowest point between third and fourth peaks (about 2021-03-01 )is 22%.
 
 
+<br/><br/>
 
 
 ### Version of the model in component study 
