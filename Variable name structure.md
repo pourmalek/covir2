@@ -86,7 +86,6 @@ University of Southern California (USC). COVID-19 forecast. Los Angeles: Univers
 
 ### Scenario number within component study
 
-### Scenario number within component study
 
 [Names within brackets assigned by this review study.]
 
@@ -105,7 +104,7 @@ University of Southern California (USC). COVID-19 forecast. Los Angeles: Univers
 * S04  Surged Additional 50% Reduction [Best, Surged]
 * S05  "Surged Maintain Status Quo [Reference, Surged] 	
 * S06  "Surged Relax Interventions 50% [Worst, Surged]	
-LANL** 
+* **A04 LANL** 
 * S00 = Single scenario
 * **A05 SRIV**
 * S01 = [current1 = current level of interventions and reciprocal of gamma is 1 = current, worse]
