@@ -86,10 +86,53 @@ University of Southern California (USC). COVID-19 forecast. Los Angeles: Univers
 
 ### Scenario number within component study
 
-((((write here)))
+### Scenario number within component study
 
-*
-*
+[Names within brackets assigned by this review study.]
+
+* **A00 JOHN**
+* Not Applicable
+* **A01 DELP** 
+* S00 = Single scenario
+* **A02 IHME** 
+* S01 = Reference scenario [Status Quo] 
+* S02 = Best scenario (Universal masks) [Best]
+* S03 = Worse scenario (Mandates easing) [Worst] 
+* **A03 IMPE** 
+* S01 = Additional 50% Reduction [Best]	
+* S02 = Maintain Status Quo	[Reference] 			
+* S03  = Relax Interventions 50% [Worst]
+* S04  Surged Additional 50% Reduction [Best, Surged]
+* S05  "Surged Maintain Status Quo [Reference, Surged] 	
+* S06  "Surged Relax Interventions 50% [Worst, Surged]	
+LANL** 
+* S00 = Single scenario
+* **A05 SRIV**
+* S01 = [current1 = current level of interventions and reciprocal of gamma is 1 = current, worse]
+* S02 = [current2 = current level of interventions and reciprocal of gamma is 2 = current, default]
+* S03 = [current5 = current level of interventions and reciprocal of gamma is 5 = current, better]
+* S04 = [current10 = current level of interventions and reciprocal of gamma is 10 (current extreme)]
+* S05 = [current20 = current level of interventions and reciprocal of gamma is 20 (current extreme)]
+* S06 = [current40 = current level of interventions and reciprocal of gamma is 40 (current extreme)]
+
+* S07 = [released1 = released level of interventions and reciprocal of gamma is 1 = released, worse]
+* S08 = [released2 = released level of interventions and reciprocal of gamma is 2 = released, default]
+* S09 = [released5 = released level of interventions and reciprocal of gamma is 5 = released, better]
+* S10 = [released10 = released level of interventions and reciprocal of gamma is 10 (released extreme)]
+* S11 = [released20 = released level of interventions and reciprocal of gamma is 20 (released extreme)]
+* S12 = [released40 = released level of interventions and reciprocal of gamma is 40 (too extreme)]
+
+* S13 = [restricted1 = restricted level of interventions and reciprocal of gamma is 1 = restricted, worse]
+* S14 = [restricted2 = restricted level of interventions and reciprocal of gamma is 2 = restricted, default]
+* S15 = [restricted5 = restricted level of interventions and reciprocal of gamma is 5 = restricted, better]
+* S16 = [restricted10 = restricted level of interventions and reciprocal of gamma is 10 (restricted extreme)]
+* S17 = [restricted20 = restricted level of interventions and reciprocal of gamma is 20 (restricted extreme)]
+* S18 = [restricted40 = restricted level of interventions and reciprocal of gamma is 40 (restricted extreme)
+* **SOLT Soltani**
+* S01 = Reopening scenario 1 = Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 35% and at lowest point between third and fourth peaks (about 2021-03-01 )is 20%. 
+* S02 = Reopening scenario 2 = Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 32% and at lowest point between third and fourth peaks (about 2021-03-01 )is 22%.
+
+
 
 
 ### Version of the model in component study 
