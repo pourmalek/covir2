@@ -50,7 +50,7 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 *
 *
 
-* List of descriptive texts in other md files in this repo:
+* **List of descriptive texts in other md files in this repo**
 
 * For more details on how to use the codes, see covir2 / Data / master / [Example file path edit](https://github.com/pourmalek/covir2/blob/main/Data/master/Example%20file%20path%20edit.md)
 
