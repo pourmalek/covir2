@@ -16,11 +16,11 @@ This code was developed and run using Stata SE 14.2 on MacOS Big Sur 11.2.2 (als
 
 * setup Stata path by operating system 
 
+clear all
+
 set more off 
 
 set mem 1000m // for older versions of Stata
-
-clear all
 
 dis "`c(username)'"
 
