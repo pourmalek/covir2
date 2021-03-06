@@ -42,6 +42,7 @@ Version of the model in component study is the only part that is fixed within ea
 The sample varaiable name TotDeaMeRaA01S00V03 denotes Total Deaths, mean raw, DELPHI, single scenario, version 3. 
 
 *
+*
 
 
 #### * Component study number:
