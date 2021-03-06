@@ -96,12 +96,15 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 
 * **A00 JOHN**
 * Not Applicable
+<br/><br/>
 * **A01 DELP** 
 * S00 = Single scenario
+<br/><br/>
 * **A02 IHME** 
 * S01 = Reference scenario [Status Quo] 
 * S02 = Best scenario (Universal masks) [Best]
 * S03 = Worse scenario (Mandates easing) [Worst] 
+<br/><br/>
 * **A03 IMPE** 
 * S01 = Additional 50% Reduction [Best]	
 * S02 = Maintain Status Quo	[Reference] 			
@@ -109,8 +112,10 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 * S04  Surged Additional 50% Reduction [Best, Surged]
 * S05  "Surged Maintain Status Quo [Reference, Surged] 	
 * S06  "Surged Relax Interventions 50% [Worst, Surged]	
+<br/><br/>
 * **A04 LANL** 
 * S00 = Single scenario
+<br/><br/>
 * **A05 SRIV**
 * S01 = [current1 = current level of interventions and reciprocal of gamma is 1 = current, worse]
 * S02 = [current2 = current level of interventions and reciprocal of gamma is 2 = current, default]
