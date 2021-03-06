@@ -18,9 +18,6 @@ README for covir2 repo
 * Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
 
 
-* For meore details on how to use the codes, see covir2 / Data / master / [Example file path edit](https://github.com/pourmalek/covir2/blob/main/Data/master/Example%20file%20path%20edit.md)
-
-* For description of variable name structure used in codes, see covir2 / [Variable name structure](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
 
 
 
@@ -47,6 +44,15 @@ Stata do files Get and prepare component studies' estimates for Iran, using the 
 Do files are located in directories: 
 
 covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [IHME](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [IMPE](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [JOHN](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [LANL](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [master](https://github.com/pourmalek/covir2/tree/main/Data/master), [merge](https://github.com/pourmalek/covir2/tree/main/Data/merge), [Soltani](https://github.com/pourmalek/covir2/tree/main/Data/Soltani), [SRIV](https://github.com/pourmalek/covir2/tree/main/Data/SRIV)
+
+
+* List of descriptive texts in other md files in this repo:
+
+* For more details on how to use the codes, see covir2 / Data / master / [Example file path edit](https://github.com/pourmalek/covir2/blob/main/Data/master/Example%20file%20path%20edit.md)
+
+* For description of variable name structure used in codes, see covir2 / [Variable name structure](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
+
+* For troubleshooting possible errors returned during running the codes, see covir2 / [troubleshooting] 
 
 
 
