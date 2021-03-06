@@ -45,12 +45,9 @@ empty line above
 
 6. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
-
-
 <br/><br/>
 
 <br/><br/>
-
 
 * Details of do files:
 
