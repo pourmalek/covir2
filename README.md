@@ -1,7 +1,5 @@
 # covir2
 
-<br/><br/>
-
 # COVID-19 Iran Review No 2, Stata codes
 
 <br/><br/>
