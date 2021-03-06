@@ -136,12 +136,12 @@ University of Southern California (USC). COVID-19 forecast. Los Angeles: Univers
 
 ### Version of the model in component study 
 
-A00 JOHN = Version Not Applicable
-A01 DELP = V03
-A02 IHME = V03
-A03 IMPE = V07	
-A04 LANL = V02
-A05 SRIV = Version Not Mentioned
-SOLT = Version Not Applicable
+* A00 JOHN = Version Not Applicable
+* A01 DELP = V03
+* A02 IHME = V03
+* A03 IMPE = V07	
+* A04 LANL = V02
+* A05 SRIV = Version Not Mentioned
+* SOLT = Version Not Applicable
 
 
