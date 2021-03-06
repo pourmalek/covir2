@@ -39,7 +39,7 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 Version of the model in component study is the only part that is fixed within each component study in this review. 
 
 
-The sample varaiable name TotDeaMeRaA01S00V03 denotes Total Deaths, mean raw, DELPHI, single scenario, version 3. 
+The sample varaiable name TotDeaMeRaA01S00V03 denotes Total Deaths, mean, raw, DELPHI, single scenario, version 3. 
 
 <br/><br/>
 
