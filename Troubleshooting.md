@@ -9,7 +9,7 @@ If the downloaded "do Iran master.do" is initiated running, and Stata returns *E
 
 "/Users/your-user-name/Downloads/covir2-main/Data/" [for Mac]
 
-"C:\Users\your-user-name\Downloads\covir2-main\Data\" [for Windows].
+"C:\Users\your-user-name\Downloads\covir2-main\Data\\" [for Windows].
 
 Manually rearrange the directories so that the expected file path leading to "do Iran master.do" reads as mentioned above. 
 *
