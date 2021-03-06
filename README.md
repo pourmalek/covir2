@@ -74,7 +74,9 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 * See [LICENSE](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
            
-           
+ `
+ `
+ |
            
            
 
