@@ -13,12 +13,12 @@ README for covir2 repo
 * **OBJECTIVE** of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values 
 *******************************************************************************************************************
 
-* tab below
+* 
            
            
 
            
-*
+
 
 * Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
 
@@ -73,8 +73,10 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 * See [LICENSE](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
-*
-*
+           
+           
+           
+           
 
 [![DOI](https://zenodo.org/badge/344389637.svg)](https://zenodo.org/badge/latestdoi/344389637)
 
