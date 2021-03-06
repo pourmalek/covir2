@@ -31,7 +31,7 @@ README for covir2 repo
 
 4. Locate file "do Iran master.do" in your local directory /covir2-main/Data/master/ and run this do file
 
-5. If Stata returns error codes, check the troubleshooting ------
+5. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 
 
@@ -56,11 +56,9 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 * **List of descriptive texts in other md files in this repo**
 
-* For more details on how to use the codes, see covir2 / Data / master / [Example file path edit](https://github.com/pourmalek/covir2/blob/main/Data/master/Example%20file%20path%20edit.md)
-
 * For description of variable name structure used in codes, see covir2 / [Variable name structure](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
 
-* For troubleshooting possible errors returned during running the codes, see covir2 / [troubleshooting] 
+* For troubleshooting possible errors returned during running the codes, see covir2 / [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 *
 *
