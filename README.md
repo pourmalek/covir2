@@ -23,20 +23,24 @@ README for covir2 repo
 
 ### SUMMARY of how to use the codes in this repo
 
-Once you have downloaded the repo to your local machine, perform the following on your *DOWNLOADED* do file:
+1. Go to repo home page covir2 / Data / master
 
-1. Open "do Iran master.do" here covir2 / data / master / [do Iran master.do](https://github.com/pourmalek/covir2/blob/main/Data/master/do%20Iran%20master.do)
-2. Edit the contents within " " of 
-`global` pathcovir2 "/Users/farshadpourmalek/Downloads/covir2-main/data/"
-to reflect where the directory /data/ or \data\ is located on your machine. Save the do file. 
-3. Run the saved "do Iran master.do". 
+2. Click on "Code", then "Download ZIP" to your local machine
+
+3. Locate the DOWNLODED "covir2-main" directory on your local machine
+
+4. Locate file "do Iran master.do" in your local directory /covir2-main/Data/master/ and run this do file
+
+5. If Stata returns error codes, check the troubleshooting ------
+
+
 
 *
 *
 
 * Details of do files:
 
-Stata do files Get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located here covir2 / data / Soltani / Soltani dig data.xlsx)
+Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located at covir2 / data / Soltani / Soltani dig data.xlsx) 
 
 *
 *
