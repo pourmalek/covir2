@@ -1,7 +1,7 @@
 # Troubleshooting
 
 
-If "do Iran master.do" (downloaded and located in in your computer’s local directory Downloads/covir2-main/Data/master/) is initiated running, and Stata returns *ERRORs* or *RESTARTs*, the following are among possible causes and treatments. 
+If the downloaded "do Iran master.do" is initiated running, and Stata returns *ERRORs* or *RESTARTs*, the following are among possible causes and treatments. The downloaded "do Iran master.do" is expected to be located in in your computer’s local directory Downloads | covir2-main | Data | master |, with | being \ or / depending on the operating system. 
 
 * **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, unable to change to (some directory name), 
 
