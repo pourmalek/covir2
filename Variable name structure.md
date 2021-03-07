@@ -107,14 +107,14 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 <br/><br/>
 * **A03 IMPE** 
 * S01 = Additional 50% Reduction [Best]	
-* S02 = Maintain Status Quo	[Reference] 			
+* S02 = Current level of interventions [Reference] 			
 * S03 = Relax Interventions 50% [Worst]
 * S04 = Surged Additional 50% Reduction [Best, Surged]
 * S05 = Surged Maintain Status Quo [Reference, Surged] 	
 * S06 = Surged Relax Interventions 50% [Worst, Surged]	
 <br/><br/>
 * **A04 LANL** 
-* S00 = Single scenario
+* S00 = [Single scenario]
 <br/><br/>
 * **A05 SRIV**
 * S01 = [current1 = current level of interventions and reciprocal of gamma is 1 = current, worse]
@@ -129,7 +129,7 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 * S09 = [released5 = released level of interventions and reciprocal of gamma is 5 = released, better]
 * S10 = [released10 = released level of interventions and reciprocal of gamma is 10 (released extreme)]
 * S11 = [released20 = released level of interventions and reciprocal of gamma is 20 (released extreme)]
-* S12 = [released40 = released level of interventions and reciprocal of gamma is 40 (too extreme)]
+* S12 = [released40 = released level of interventions and reciprocal of gamma is 40 (released extreme)]
 <br/><br/>
 * S13 = [restricted1 = restricted level of interventions and reciprocal of gamma is 1 = restricted, worse]
 * S14 = [restricted2 = restricted level of interventions and reciprocal of gamma is 2 = restricted, default]
