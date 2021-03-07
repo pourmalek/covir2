@@ -98,7 +98,7 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 * Not Applicable
 <br/><br/>
 * **A01 DELP** 
-* S00 = Single scenario
+* S00 = [Single scenario]
 <br/><br/>
 * **A02 IHME** 
 * S01 = Reference scenario [Status Quo] 
