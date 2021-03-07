@@ -29,11 +29,11 @@
 
 3. Locate the DOWNLODED "covir2-main" directory on your local machine
 
-4. Locate file "do Iran master.do" in your local directory /covir2-main/Data/master/ and run this do file. 
+4. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denoted / for Mac or \ for Windows.
 
-- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph, with title "COVID-19 total cases, Iran, reference scenarios", with file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.gph", and if acrobat available on system, also file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.pdf". This signifies the end of the code implementation. These files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
+- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph, with title "COVID-19 total cases, Iran, reference scenarios", with file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.gph". This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
 
-5. Go to your local directory |Downloads|covir2-main|Data|merge| and view the produced graphs (graph files start with "graph 11 COVID-19 daily deaths, Iran, reference scenarios, with DELPHI.gph, and pdf). | means / or \ depending on local OS. 
+5. Go to your local directory |Downloads|covir2-main|Data|merge| and view the produced graphs (graph files start with "graph 11 COVID-19 daily deaths, Iran, reference scenarios, with DELPHI.gph"). 
 
 6. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
@@ -41,7 +41,7 @@
 
 * Details of do files:
 
-Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files, except for study "Soltani" using the digitized data (located at covir2 / data / Soltani / Soltani dig data.xlsx) 
+Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files, except for study "Soltani", for which digitized data is used. 
 
 <br/><br/>
 
