@@ -108,10 +108,10 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 * **A03 IMPE** 
 * S01 = Additional 50% Reduction [Best]	
 * S02 = Maintain Status Quo	[Reference] 			
-* S03  = Relax Interventions 50% [Worst]
-* S04  Surged Additional 50% Reduction [Best, Surged]
-* S05  "Surged Maintain Status Quo [Reference, Surged] 	
-* S06  "Surged Relax Interventions 50% [Worst, Surged]	
+* S03 = Relax Interventions 50% [Worst]
+* S04 = Surged Additional 50% Reduction [Best, Surged]
+* S05 = "Surged Maintain Status Quo [Reference, Surged] 	
+* S06 = "Surged Relax Interventions 50% [Worst, Surged]	
 <br/><br/>
 * **A04 LANL** 
 * S00 = Single scenario
