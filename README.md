@@ -18,7 +18,7 @@ README for covir2 repo
 <br/><br/>
 
 
-* Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimtions peroformed by the compnent studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
+* Details: This is a review study of estimates of COVID1-9 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study. 
 
 <br/><br/>
 
@@ -34,7 +34,7 @@ README for covir2 repo
 
 4. Locate file "do Iran master.do" in your local directory /covir2-main/Data/master/ and run this do file. 
 
-- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph, with title "COVID-19 total cases, Iran, reference scenarios", with file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.gph", and if acrobat available on system, also file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.pdf". This signifies the end of the code implementation. These files are stoted in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
+- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph, with title "COVID-19 total cases, Iran, reference scenarios", with file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.gph", and if acrobat available on system, also file name "graph 45 COVID-19 total cases, Iran, reference scenarios, with DELPHI, 01dec2020 on, CI, wo IMPE upper.pdf". This signifies the end of the code implementation. These files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
 
 5. Go to your local directory |Downloads|covir2-main|Data|merge| and view the produced graphs (graph files start with "graph 11 COVID-19 daily deaths, Iran, reference scenarios, with DELPHI.gph, and pdf). | means / or \ depending on local OS. 
 
