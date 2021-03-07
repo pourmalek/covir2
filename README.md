@@ -5,12 +5,12 @@
 <br/><br/>
 
 
-*******************************************************************************************************************
+********************************************************************************************************************************************
 * Project: Rapid review of estimates of COVID-19 Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
 * Time (initial): 2021-02-10
-* **OBJECTIVE** of Project: Get and prepare component studies' estimates for Iran, Locate peak dates and values 
-*******************************************************************************************************************
+* **OBJECTIVE** of these Stata codes: Get and prepare component studies' estimates for Iran, locate peak dates and values, graph estimates
+********************************************************************************************************************************************
 
 <br/><br/>
 
