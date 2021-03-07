@@ -7,9 +7,9 @@ Once you have started executing the downloaded code that is expected to be locat
 
 * **Treatment**: Make sure the file path to directory |Data| is: 
 
-"/Users/your-user-name/Downloads/covir2-main/Data/" [for Mac]
+"/Users/local-user-name/Downloads/covir2-main/Data/" [for Mac]
 
-"C:\Users\your-user-name\Downloads\covir2-main\Data\\" [for Windows].
+"C:\Users\local-user-name\Downloads\covir2-main\Data\\" [for Windows].
 
 Manually rearrange the directories so that the expected file path leading to |Data| reads as mentioned above. 
 *
