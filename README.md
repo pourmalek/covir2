@@ -41,7 +41,7 @@
 
 * Details of do files:
 
-Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files, except for study "Soltani", for which digitized data is used. 
+Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files, except for study "Soltani", for which digitized data is used. "do Iran master.do" is the only file that needs to be run. 
 
 <br/><br/>
 
