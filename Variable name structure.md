@@ -20,6 +20,7 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 
 1-3...4-6...7-8...9-10...11-13...14-16..17-19
 
+<br/><br/>
 
 * 1-3 	Tot or Day: Total (cumulative) or Daily (incident daily)
 
