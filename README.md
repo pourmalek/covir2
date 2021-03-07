@@ -44,7 +44,7 @@ README for covir2 repo
 
 * Details of do files:
 
-Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain the estimates’ files, except for study "Soltani" using the digitized data (located at covir2 / data / Soltani / Soltani dig data.xlsx) 
+Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files, except for study "Soltani" using the digitized data (located at covir2 / data / Soltani / Soltani dig data.xlsx) 
 
 <br/><br/>
 
