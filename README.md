@@ -4,7 +4,6 @@
 
 <br/><br/>
 
-README for covir2 repo
 <br/><br/>
 
 
