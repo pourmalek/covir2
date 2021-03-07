@@ -15,7 +15,6 @@ Manually rearrange the directories so that the expected file path leading to |Da
 *
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not as identical to the correct path that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data| (in root of which is located the "do Iran master.do"). There might be an additional potential for file directory and path clash in "do Iran IHME.do" in case clash occurs in the beginning (in "do Iran master.do"), and the treatment is likewise manual editing of the file paths.  
 <br/><br/>
-
 * **Problem** (2): Stata spontaneously *RESTARTs* with a clear start logo. 
 
 If during running the codes, the demand and supply of memory needed and available for Stata get critically unbalanced, it might be possible that Stata restarts by itself without warning and shows a fresh start logo and empty memory. 
