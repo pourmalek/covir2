@@ -1,6 +1,6 @@
 ## Variable name structure
 
-Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from component studies, are the target primary outcomes intended in the review. Incident daily event estimates are targeted for Total Deaths and Total Cases. 
+Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from component studies, are the target primary outcomes intended in the review. Incident (not prevalent) daily cases estimates are targeted, where avialable, for Daily Cases. 
 
 In order to facilitate handling and preparation of the four outcome variables, naming of the variables from component studies was performed following some conventions described below. 
 
