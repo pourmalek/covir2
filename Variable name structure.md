@@ -104,11 +104,11 @@ Los Alamos National Laboratory (LANL). COVID-19 cases and deaths forecasts. Los 
 **A05 SRIV**
 University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19
 <br/><br/>
-**SOLT Soltani**
+**A06 SOLT**
 Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Governmental Decisions on the Progress of the CoViD-19 Epidemic. arxiv preprint. Submitted on 15 Aug 2020. https://arxiv.org/abs/2008.11716
-
 <br/><br/>
-
+**A07 GHAN**
+Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. Chaos Solitons Fractals. 2020 Nov;140:110176. doi: 10.1016/j.chaos.2020.110176. Epub 2020 Jul 28.
 
 ### Scenario number within component study
 <br/><br/>
@@ -164,8 +164,8 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 * S02 = Reopening scenario 2 = Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 32% and at lowest point between third and fourth peaks (about 2021-03-01 )is 22%.
 <br/><br/>
 * **GHAN Ghanbari**
-* Ghanbari has two subtypes of Daily Cases, “Density of the infected population with a *strong immunity system*”, 
-and “Density of the infected population with a *weak immunity system* or with a historical medical illness as diabetic, blood pressure, heart issue, and others. [verbatim]” Each subtype is presented with 18 different values (aka model subtypes) based on different values of three parameters in their model. 
+* Ghanbari has two subtypes of Daily Cases, “Density of the infected population with a strong immunity system”, 
+and “Density of the infected population with a weak immunity system or with a historical medical illness as diabetic, blood pressure, heart issue, and others. [*verbatim*]” Each subtype is presented with 18 different values (aka model subtypes) based on different values of three parameters in their model. 
 We selected the median scenario for the first subtype for digitalization. It is model the model subtype number 9 out of 18 subtypes (named S09 here), with the following details. Model subtype parameter: γ1 = 0.09, where γ1 is recovery rate in population subtype 1. 
 Time point: Second peak. 
 Estimate type: Mean. 
