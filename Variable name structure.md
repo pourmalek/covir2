@@ -10,7 +10,6 @@ Primary variables were created by the component studies, their `var name`s and `
 
 
 #### Primary variable names:
-<br/><br/>
 
 Note: All the variables have descriptive var `label`s that show what the variable stores. 
 <br/><br/>
