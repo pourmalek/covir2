@@ -11,6 +11,7 @@ Variable names have 7 parts, each part denoting one piece of info about the vari
 
 #### --- Example variable name:
 
+
 TotDeaMeRaA01S00V03
 
 1234567890123456789
