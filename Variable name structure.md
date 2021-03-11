@@ -4,7 +4,7 @@ Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from compo
 
 In order to facilitate handling and preparation of the four outcome variables, naming of the variables from component studies was performed following some conventions described below. 
 
-Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. 
+Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. Primary variables are created by the component studies, their `var name`s and `var label`s are modified, not their `var value`s. Secondary variables are created in this review study, to store certain values of some primary variables, as described further below. 
 
 <br/><br/>
 
@@ -47,7 +47,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 <br/><br/>
 
-Secondary variable name:
+Secondary variable names:
 
 Values and dates of peaks (or other time points) are stored in secondary variables, ending in the following three characters: P?? 
 
