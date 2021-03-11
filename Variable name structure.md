@@ -4,12 +4,12 @@ Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from compo
 
 In order to facilitate handling and preparation of the four outcome variables, naming of the variables from component studies was performed following some conventions described below. 
 
-Variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. 
+Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. 
 
 <br/><br/>
 
 
-#### --- Example variable name:
+#### --- Example primary variable name:
 <br/><br/>
 
 Note: All the variables have descriptive var `label`s that show what the variable stores. 
@@ -43,9 +43,11 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 Version of the model in component study is the only part that is fixed within each component study in this review. 
 
 
-The example variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, mean, raw, DELPHI, single scenario, version 3. 
+The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, mean, raw, DELPHI, single scenario, version 3. 
 
 <br/><br/>
+
+Secondary variable name:
 
 Values and dates of peaks (or other time points) are stored in secondary variables, ending in the following three characters: P?? 
 
@@ -56,9 +58,9 @@ Values and dates of peaks (or other time points) are stored in secondary variabl
 * 22 V or D: Value or Date (of estimate)
 
 
-Example: In DayDeaMeRaA01S00V03P0D, P0D denotes One peak, Date, and the whole variable name DayDeaMeRaA01S00V03P0D denotes Date of one peak shown in DayDeaMeRaA01S00V03. 
+Example primary variable name: In DayDeaMeRaA01S00V03P0D, P0D denotes One peak, Date, and the whole variable name DayDeaMeRaA01S00V03P0D denotes Date of one peak shown in DayDeaMeRaA01S00V03. 
 
-Example: In DayDeaMeRaA01S00V03P0V, P0V denotes One peak, Value, and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
+Example primary variable name: In DayDeaMeRaA01S00V03P0V, P0V denotes One peak, Value, and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
 
 <br/><br/>
 
