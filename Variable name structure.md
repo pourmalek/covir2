@@ -162,6 +162,19 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 * **SOLT Soltani**
 * S01 = Reopening scenario 1 = Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 35% and at lowest point between third and fourth peaks (about 2021-03-01 )is 20%. 
 * S02 = Reopening scenario 2 = Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 32% and at lowest point between third and fourth peaks (about 2021-03-01 )is 22%.
+* **GHAN Ghanbari**
+* Ghanbari has two subtypes of Daily Cases, “Density of the infected population with a strong immunity system”, 
+and “Density of the infected population with a weak immunity system or with a historical medical illness as diabetic, blood pressure, heart issue, and others.” 
+Each subtype is presented with 18 different values (aka model subtypes) based on different values of three parameters in their model. 
+We selected the median scenario for the first subtype for digitalization. It is model the model subtype number 9 out of 18 subtypes (named S09 here), with the following details. 
+
+Model subtype parameter: γ1 = 0.09, where γ1 is recovery rate in population subtype 1. 
+Time point: Second peak. 
+Estimate type: Mean. 
+Peak value mentioned: 897,264. 
+Peak date Solar: 1399 11 30. 
+Peak date Gregorian: 2021 02 18. 	
+Source: Fig 4a, green curve. 
 
 
 <br/><br/>
