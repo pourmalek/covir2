@@ -210,3 +210,5 @@ Source: Fig 4a, green curve.
 
 
 
+<br/><br/>
+Note: Johns Hopkins, obviously not an "estimation study", is used as a benchmark gauge of the *under-reported* so-called "Ground Truth". 
