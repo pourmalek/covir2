@@ -22,5 +22,9 @@ If during running the codes, the demand and supply of memory needed and availabl
 - In older versions of Stata, manually set a higher memory, e.g., - set mem 1000m-. Memory no longer needs to be set in modern Statas; memory adjustments are performed on the fly automatically.
 - Quit all other open applications / programs until Stata runs the codes and the last output, that is "log Iran merge.smcl" is shown up. 
 
+* **Problem** (3): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading -renvers- Stata command. 
+
+* **Treatment**: Unresponsiveness of a component study site server (or -renvers- ) should be temporary, and is usually resolved in about a day. Alternatively, one can check the previously created results in covir2/[Output](https://github.com/pourmalek/covir2/tree/main/Output) 
+
 
 
