@@ -51,6 +51,8 @@ Secondary variable names:
 
 Values and dates of peaks (or other time points) are stored in secondary variables, ending in the following three characters: P?? 
 
+* 20-22	P??:
+
 * 20 P: Peak (or other time point) 
 
 * 21 ?: Number of peak (or other time point). 0: One peak (only one peak shown), 1: Peak 1, 2: Peak 2, 3: Peak 3, 4: Peak 4, 5: Start of plateau after peak three (in JOHN), 6: Start of increase after peak three (in JOHN), 7: Start time (of provided estimates), 8: End time (of provided estimates)
