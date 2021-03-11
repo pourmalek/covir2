@@ -2,7 +2,7 @@
 
 Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from component studies, are the target primary outcomes intended in the review. Incident (not prevalent) daily cases estimates are targeted, where avialable, for Daily Cases. 
 
-In order to facilitate handling and preparation of the four outcome variables, naming of the variables from component studies was performed according to following conventions. Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. Primary variables are created by the component studies, their `var name`s and `var label`s are modified, not their `var value`s. Secondary variables are created in this review study, to store certain values of some primary variables, as described further below. 
+In order to facilitate handling and preparation of the four outcome variables, `rename'ing of the variables from component studies was performed according to following conventions. Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. Primary variables are created by the component studies, their `var name`s and `var label`s are modified, not their `var value`s. Secondary variables are created in this review study, to store certain values of some primary variables, as described further below. 
 
 <br/><br/>
 
