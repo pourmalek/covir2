@@ -49,7 +49,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 Secondary variable names:
 
-Values and dates of peaks (or other time points) are stored in secondary variables, ending in the following three characters: P?? 
+Values and dates of peaks (or other time points) of daily deaths and daily cases are stored in secondary variables, ending in the following three characters: P?? 
 
 * 20-22	P??:
 
