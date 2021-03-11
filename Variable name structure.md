@@ -14,7 +14,6 @@ All the variables have descriptive var `label`s that show what the variable stor
 
 #### Primary variable names:
 
-<br/><br/>
 Example:
 
 TotDeaMeRaA01S00V03
