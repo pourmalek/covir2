@@ -61,9 +61,11 @@ Values and dates of peaks (or other time points) of daily deaths and daily cases
 * 22 V or D: Value or Date (of estimate)
 
 
-Example primary variable name: In DayDeaMeRaA01S00V03P0D, P0D denotes One peak, Date, and the whole variable name DayDeaMeRaA01S00V03P0D denotes Date of one peak shown in DayDeaMeRaA01S00V03. 
+Example:
+In DayDeaMeRaA01S00V03P0D, P0D denotes "One peak, Date", and the whole variable name DayDeaMeRaA01S00V03P0D denotes Date of one peak shown in DayDeaMeRaA01S00V03. 
 
-Example primary variable name: In DayDeaMeRaA01S00V03P0V, P0V denotes One peak, Value, and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
+Example:
+In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
 
 <br/><br/>
 
