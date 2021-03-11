@@ -1,8 +1,8 @@
 ## Variable name structure
 
-Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from component studies, are the target primary outcomes intended in the review. Incident (not prevalent) daily cases estimates are targeted, where avialable, for Daily Cases. 
+Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from component studies, are the target primary outcomes intended in the review. Incident (not prevalent) daily cases estimates are targeted, where available, for Daily Cases. 
 
-In order to facilitate data management, the four target outcome variables were `rename`d using the variables from component studies according to following conventions. Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. Secondary variable names have one additional compmonent.
+In order to facilitate data management, the four target outcome variables were `rename`d using the variables from component studies according to following conventions. Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. Secondary variable names have one additional component.
 
 Primary variables were created by the component studies, their `var name`s and `var label`s were modified in this review study codes. Secondary variables were created in this review study codes, to store certain values of daily primary variables, as described further below. 
 
@@ -201,7 +201,7 @@ Source: Fig 4a, green curve.
 
 * A04 LANL = V02
 
-* A05 SRIV = V00 [Version Not Mentioned; or not readily locatable]
+* A05 SRIV = V00 [Version Not Mentioned; or could not be located]
 
 * A06 SOLT = V00 [Version Not Applicable; non-updating study]
 
