@@ -61,6 +61,7 @@ Example: In DayDeaMeRaA01S00V03P0D, P0D denotes One peak, Date, and the whole va
 Example: In DayDeaMeRaA01S00V03P0V, P0V denotes One peak, Value, and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
 
 <br/><br/>
+<br/><br/>
 
 
 #### * Component study number:
@@ -80,6 +81,7 @@ A05 SRIV Srivastava
 
 SOLT Soltani
 	 
+<br/><br/>
 <br/><br/>
 
 
@@ -109,6 +111,8 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 <br/><br/>
 **A07 GHAN**
 Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. Chaos Solitons Fractals. 2020 Nov;140:110176. doi: 10.1016/j.chaos.2020.110176. Epub 2020 Jul 28. [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/)
+<br/><br/>
+<br/><br/>
 
 ### Scenario number within component study
 <br/><br/>
@@ -175,6 +179,7 @@ Peak date Gregorian: 2021 02 18.
 Source: Fig 4a, green curve. 
 
 
+<br/><br/>
 <br/><br/>
 
 
