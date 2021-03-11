@@ -4,7 +4,7 @@ Estimates of Daily Deaths, Total Deaths, Daily Cases, and Total Cases from compo
 
 In order to facilitate data management, the four target outcome variables were `rename`d using the variables from component studies according to following conventions. Primary variable names have 7 parts, each part denoting one piece of info about the variable, as described below through an example. Secondary variable names have one additional compmonent.
 
-Primary variables were created by the component studies, their `var name`s and `var label`s are modified, not their `var value`s. Secondary variables were created in this review study, to store certain values of some primary variables, as described further below. 
+Primary variables were created by the component studies, their `var name`s and `var label`s were modified in this review study codes. Secondary variables were created in this review study codes, to store certain values of daily primary variables, as described further below. 
 
 <br/><br/>
 
