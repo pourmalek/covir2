@@ -11,6 +11,10 @@ Variable names have 7 parts, each part denoting one piece of info about the vari
 
 #### --- Example variable name:
 <br/><br/>
+
+Note: All the variables have descriptive var `label`s that show what the variable stores. 
+<br/><br/>
+
 TotDeaMeRaA01S00V03
 
 1234567890123456789
@@ -40,6 +44,21 @@ Version of the model in component study is the only part that is fixed within ea
 
 
 The example variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, mean, raw, DELPHI, single scenario, version 3. 
+
+<br/><br/>
+
+Values and dates of peaks (or other time points) are stored in secondary variables, ending in the following three characters: P?? 
+
+* 20 P: Peak (or other time point) 
+
+* 21 ?: Number of peak (or other time point). 0: One peak (only one peak shown), 1: Peak 1, 2. Peak 2, 3. Peak 3, 4: Peak 4, 5: Start of plateau after peak three (in JOHN), 6: Start of increase after peak three (in JOHN), 7: Start time (of provided estimates), 8. End time (of provided estimates)
+
+* 22 V or D: Value or Date (of estimate)
+
+
+Example: In DayDeaMeRaA01S00V03P0D, P0D denotes One peak, Date, and the whole variable name DayDeaMeRaA01S00V03P0D denotes Date of one peak shown in DayDeaMeRaA01S00V03. 
+
+Example: In DayDeaMeRaA01S00V03P0V, P0V denotes One peak, Value, and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
 
 <br/><br/>
 
