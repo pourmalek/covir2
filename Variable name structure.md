@@ -9,11 +9,12 @@ Primary variables were created by the component studies, their `var name`s and `
 <br/><br/>
 
 
-#### --- Example primary variable name:
+#### Primary variable names:
 <br/><br/>
 
 Note: All the variables have descriptive var `label`s that show what the variable stores. 
 <br/><br/>
+Example:
 
 TotDeaMeRaA01S00V03
 
@@ -47,7 +48,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 <br/><br/>
 
-Secondary variable names:
+#### Secondary variable names:
 
 Values and dates of peaks (or other time points) of daily deaths and daily cases are stored in secondary variables, ending in the following three characters: P?? 
 
