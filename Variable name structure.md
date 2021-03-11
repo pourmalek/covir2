@@ -10,7 +10,6 @@ Variable names have 7 parts, each part denoting one piece of info about the vari
 
 
 #### --- Example variable name:
-
 <br/><br/>
 
 TotDeaMeRaA01S00V03
@@ -47,6 +46,7 @@ The example variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, mean, raw,
 
 
 #### * Component study number:
+<br/><br/>
 
 A00 JOHN Johns Hopkins
 
@@ -66,6 +66,7 @@ SOLT Soltani
 
 
 ### References for component studies
+<br/><br/>
 
 **A00 JOHN**
 Johns Hopkins University. Coronavirus resource center. https://coronavirus.jhu.edu/map.html
@@ -92,7 +93,7 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 
 
 ### Scenario number within component study
-
+<br/><br/>
 
 [Names within brackets assigned by this review study.]
 
@@ -149,6 +150,7 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 
 
 ### Version of the model in component study 
+<br/><br/>
 
 * A00 JOHN = Version Not Applicable
 
