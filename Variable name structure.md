@@ -6,12 +6,14 @@ In order to facilitate data management, the four target outcome variables were `
 
 Primary variables were created by the component studies, their `var name`s and `var label`s were modified in this review study codes. Secondary variables were created in this review study codes, to store certain values of daily primary variables, as described further below. 
 
+All the variables have descriptive var `label`s that show what the variable stores. 
+
+
 <br/><br/>
 
 
 #### Primary variable names:
 
-Note: All the variables have descriptive var `label`s that show what the variable stores. 
 <br/><br/>
 Example:
 
