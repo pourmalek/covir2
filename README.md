@@ -25,7 +25,7 @@
 
 1. Go to repo home page covir2 / Data / [master page](https://github.com/pourmalek/covir2)
 
-2. Click on "Code", then "Download ZIP" to your local machine
+2. Click on `Code`, then `Download ZIP` to your local machine
 
 3. Locate the DOWNLODED "covir2-main" directory on your local machine
 
