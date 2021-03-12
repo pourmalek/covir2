@@ -160,8 +160,8 @@ ytitle(Daily deaths) title("COVID-19 daily deaths, Iran, DELP, single scenario",
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)	
    
   	   
-graph save "graph COVID-19 daily deaths, Iran, DELP.gph", replace
-// graph export "graph COVID-19 daily deaths, Iran, DELP.pdf", replace
+graph save "graph 1 COVID-19 daily deaths, Iran, DELP.gph", replace
+// graph export "graph 1 COVID-19 daily deaths, Iran, DELP.pdf", replace
 
 
 
@@ -177,8 +177,8 @@ ytitle(Daily cases) title("COVID-19 daily cases, Iran, DELP, single scenario", s
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)	
 	   
 
-graph save "graph COVID-19 daily cases, Iran, DELP.gph", replace
-// graph export "graph COVID-19 daily cases, Iran, DELP.pdf", replace
+graph save "graph 2 COVID-19 daily cases, Iran, DELP.gph", replace
+// graph export "graph 2 COVID-19 daily cases, Iran, DELP.pdf", replace
 
 
 
@@ -195,8 +195,8 @@ ytitle(Daily cases) title("COVID-19 daily CFR, Iran, DELP, single scenario", siz
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)	
 	   
 
-graph save "graph COVID-19 daily CFR, Iran, DELP.gph", replace
-// graph export "graph COVID-19 daily CFR, Iran, DELP.pdf", replace
+graph save "graph 3 COVID-19 daily CFR, Iran, DELP.gph", replace
+// graph export "graph 3 COVID-19 daily CFR, Iran, DELP.pdf", replace
 
 
 
