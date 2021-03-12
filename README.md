@@ -63,6 +63,11 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 <br/><br/>
 
+### covir2-output
+
+* A copy of previously created *outputs* is stored in covir2-output
+
+<br/><br/>
 
 * See [LICENSE](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
