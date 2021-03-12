@@ -27,7 +27,7 @@ If during running the codes, the demand and supply of memory needed and availabl
 ********************************************************************************************************************************************
 * **Problem** (3): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading `-renvers-` Stata command. 
 
-* **Treatment**: Unresponsiveness of a component study site server (or `-renvers-` ) should be temporary, and is usually resolved in about a day. Alternatively, one can check the previously created results in covir2/[Output](https://github.com/pourmalek/covir2/tree/main/Output) 
+* **Treatment**: Unresponsiveness of a component study site server (or `-renvers-` ) should be temporary, and is usually resolved in about a day. Alternatively, one can check the previously created results in [covir2-output](https://github.com/pourmalek/covir2-output) 
 
 
 
