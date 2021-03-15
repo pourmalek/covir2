@@ -7,7 +7,7 @@ cd LANL
 
 capture log close 
 
-log using "log Iran LANL.smcl", replace
+capture log using "log Iran LANL.smcl", replace
 
 ***************************************************************************
 * This is "do Iran LANL.do"
