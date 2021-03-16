@@ -50,8 +50,6 @@ gen date2 = .
 
 replace date2 = 21960 in 1
 
-//replace date2 = date2[_n-1] + 1 in 2/610
-
 replace date2 = date2[_n-1] + 1 in 2/l
 
 
