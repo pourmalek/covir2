@@ -221,7 +221,6 @@ Source: Fig 4a, green curve.
 
 ### Version of the model in component study 
 <br/><br/>
-
 * A00 JOHN = V00 [Version Not Applicable; updates daily]
 
 * A01 DELP = V03
