@@ -51,7 +51,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 ##### Secondary outcome variable names:
 
-* Places 4-6 in variable name can be, for instance,  *Act*, that means *Active cases* [in study *DELP*]
+* Positions 4-6 in variable name can be, for instance,  *Act*, that means *Active cases* [in study *DELP*]
 
 * 4-6  = meaning [study]
 
