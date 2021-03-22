@@ -182,7 +182,6 @@ Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. 
 <br/><br/>
 * **A05 SRIV**
 * S00 = [current]
-
 <br/><br/>
 * **SOLT Soltani**
 * S01 = Reopening scenario 1 = [Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 35% and at lowest point between third and fourth peaks (about 2021-03-01 )is 20%]. 
