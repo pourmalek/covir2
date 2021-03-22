@@ -11,6 +11,9 @@ All the variables have descriptive var `-label-`s that show what the variable st
 Stata commands are displayed as `-command-` and Stata non-command syntax as -syntax-. 
 <br/><br/>
 
+### Variable names
+
+<br/><br/>
 
 #### Primary outcome variable names:
 
@@ -80,6 +83,9 @@ Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand 
 <br/><br/>
 						
 #### Secondary variable names:
+
+Secondary variables store values and dates of peaks, or a calculated daily CFR. In the latter case, positions 4-6 read as CFR. 
+
 
 Values and dates of peaks (or other time points) of daily deaths and daily cases are stored in secondary variables, ending in the following three characters: P?? 
 
