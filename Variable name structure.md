@@ -49,7 +49,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 <br/><br/>
 
-##### Secondary outcome variable names:
+#### Secondary outcome variable names:
 
 * Positions 4-6 in variable name can be, for instance,  *Act*, that means *Active cases* [in study *DELP*]
 
@@ -79,7 +79,7 @@ Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand 
 
 <br/><br/>
 						
-##### Secondary variable names:
+#### Secondary variable names:
 
 Values and dates of peaks (or other time points) of daily deaths and daily cases are stored in secondary variables, ending in the following three characters: P?? 
 
@@ -103,7 +103,7 @@ In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable
 <br/><br/>
 
 
-#### * Component study number:
+#### Component study number:
 <br/><br/>
 
 A00 JOHN Johns Hopkins
