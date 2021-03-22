@@ -181,26 +181,8 @@ Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. 
 * S00 = [Single scenario]
 <br/><br/>
 * **A05 SRIV**
-* S01 = [current1 = current level of interventions and reciprocal of gamma is 1 = current, worse]
-* S02 = [current2 = current level of interventions and reciprocal of gamma is 2 = current, default]
-* S03 = [current5 = current level of interventions and reciprocal of gamma is 5 = current, better]
-* S04 = [current10 = current level of interventions and reciprocal of gamma is 10 (current extreme)]
-* S05 = [current20 = current level of interventions and reciprocal of gamma is 20 (current extreme)]
-* S06 = [current40 = current level of interventions and reciprocal of gamma is 40 (current extreme)]
-<br/><br/>
-* S07 = [released1 = released level of interventions and reciprocal of gamma is 1 = released, worse]
-* S08 = [released2 = released level of interventions and reciprocal of gamma is 2 = released, default]
-* S09 = [released5 = released level of interventions and reciprocal of gamma is 5 = released, better]
-* S10 = [released10 = released level of interventions and reciprocal of gamma is 10 (released extreme)]
-* S11 = [released20 = released level of interventions and reciprocal of gamma is 20 (released extreme)]
-* S12 = [released40 = released level of interventions and reciprocal of gamma is 40 (released extreme)]
-<br/><br/>
-* S13 = [restricted1 = restricted level of interventions and reciprocal of gamma is 1 = restricted, worse]
-* S14 = [restricted2 = restricted level of interventions and reciprocal of gamma is 2 = restricted, default]
-* S15 = [restricted5 = restricted level of interventions and reciprocal of gamma is 5 = restricted, better]
-* S16 = [restricted10 = restricted level of interventions and reciprocal of gamma is 10 (restricted extreme)]
-* S17 = [restricted20 = restricted level of interventions and reciprocal of gamma is 20 (restricted extreme)]
-* S18 = [restricted40 = restricted level of interventions and reciprocal of gamma is 40 (restricted extreme)
+* S00 = [current]
+
 <br/><br/>
 * **SOLT Soltani**
 * S01 = Reopening scenario 1 = [Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 35% and at lowest point between third and fourth peaks (about 2021-03-01 )is 20%]. 
