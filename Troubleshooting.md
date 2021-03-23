@@ -14,7 +14,7 @@ Once you have started executing the downloaded code that is expected to be locat
 
 Manually rearrange the directories so that the expected file path leading to |Data| reads as mentioned above. 
 <br/><br/>
-Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not as identical to the correct path that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data| (in root of which is located the "do Iran master.do").   
+Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data| (in root of which is located the "do Iran master.do").   
 <br/><br/>
 ********************************************************************************************************************************************
 * **Problem** (2): Stata spontaneously *RESTARTs* and shows start logo. 
