@@ -4,7 +4,7 @@
 Once you have started executing the downloaded code that is expected to be located in your local machine's |Downloads|covir2-main|Data|master|do Iran merge.do, Stata may return *ERRORs*, or may *RESTART*. The following are among possible causes and treatments. | denotes / or \ for Mac or Windows respectively. 
 <br/><br/>
 
-##KNOWN ISSUES
+## KNOWN ISSUES
 
 
 * **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-, 
@@ -35,7 +35,7 @@ If during running the codes, the demand and supply of memory needed and availabl
 <br/><br/>
 
 
-##INCIDENT ISSUES
+## INCIDENT ISSUES
 
 
 Inform Farshad Pourmalek about incident issues not listed above. 
