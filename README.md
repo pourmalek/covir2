@@ -29,7 +29,7 @@
 
 3. Locate the DOWNLODED "covir2-main" directory on your local machine, in the Downloads folder
 
-4. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denoted / for Mac or \ for Windows.
+4. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows.
 
 - Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
 
