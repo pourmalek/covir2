@@ -27,7 +27,7 @@
 
 2. Click on `Code`, then `Download ZIP` to your local machine
 
-3. Locate the DOWNLODED "covir2-main" directory on your local machine, in the Downloads foleder
+3. Locate the DOWNLODED "covir2-main" directory on your local machine, in the Downloads folder
 
 4. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denoted / for Mac or \ for Windows.
 
