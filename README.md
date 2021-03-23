@@ -33,7 +33,7 @@
 
 - Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
 
-5. Go to your local directory |Downloads|covir2-main|Data|merge| and view the produced graphs (graph files start with "graph 11 COVID-19 daily deaths, Iran, reference scenarios, with DELPHI.gph"). 
+5. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combibed data. The combined graphs are stored in this directory. 
 
 6. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
