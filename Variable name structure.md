@@ -24,25 +24,27 @@ TotDeaMeRaA01S00V03
 
 1234567890123456789
 
+-Varname- has 19 positions. 
+
 
 Tot...Dea...Me....Ra.....A01.....S00......V03
 
 1-3...4-6...7-8...9-10...11-13...14-16..17-19
 <br/><br/>
 
-* 1-3 	Tot or Day: Total (cumulative) or Daily 
+* Positions 1-3: Tot or Day: Total (cumulative) or Daily 
 
-* 4-6 	Dea, Cas, or Act: Dea for Deaths, Cas for incident Cases, or Act for Active cases (for primary outcomes; for secondary outcomes see below)
+* Positions 4-6: Dea, Cas, or Act: Dea for Deaths, Cas for incident Cases, or Act for Active cases (for primary outcomes; for secondary outcomes see below)
 
-* 7-8 	Me, Lo, or Up: Mean, Lower, or Upper (uncertainty bound)
+* Positions 7-8: Me, Lo, or Up: Mean, Lower, or Upper (uncertainty bound)
 
-* 9-10 	Ra or Sm: Raw (not smoothed) or Smoothed
+* Positions 9-10: Ra or Sm: Raw (not smoothed) or Smoothed
 
-* 11-13 A00 to A05: Component study number (see details below)
+* Positions 11-13: A00 to A05: Component study number (see details below)
 
-* 14-16 S??: Scenario number within component study (see details below)
+* Positions 14-16 S??: Scenario number within component study (see details below)
 
-* 17-19	V??: Version of the model in component study (see details below)
+* Positions 17-19: V??: Version of the model in component study (see details below)
 
 
 Version of the model in component study is the only part that is fixed within each component study in this review. 
@@ -56,27 +58,27 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 * Positions 4-6 in variable name can be, for instance,  *Act*, that means *Active cases* [in study *DELP*]
 
-* 4-6  = meaning [study]
+* Positions 4-6: meaning [study]
 
-* Act	= Active cases [DELP]														
-* Adm 	= Admissions (hospital admissions by day) [IHME]							
-* Bed = Bed need (covid beds needed by day) [IHME]							
-* Beo	= Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) )	 [IHME]
-* Hod 	= Hospital Demand [IMPE]									
-* Hos	= Hospitalized [DELP]										
-* How 	= Hospital incidence [IMPE]									
-* Icd 	= ICU Demand [IMPE]										
-* Ici 	= ICU incidence	 [IMPE]									
-* Icn	= ICU new (number of new people going to the ICU by day) [IHME]					
-* Ico	= ICU over ( [covid ICU beds needed] - ([total ICU capacity] - [average ICU bed usage]) ) 	[IHME]
-* Icu 	= ICU need (ICU covid beds needed by day) [IHME]							
-* Pre	= Prevalence [IMPE]										
-* Ref	= R effective [IMPE]										
-* Rt	= R t [IMPE]											
-* Ser 	= Seroprevalence (seroprevalence) [IHME]								
-* Tes	= Tests (total tests)	[IHME]								
-* Ven	= Ventilated [DELP]									
-* Ven = 	Vent need (invasive Ventilation needed by day) [IHME]
+* Act: Active cases [DELP]														
+* Adm: Admissions (hospital admissions by day) [IHME]							
+* Bed: Bed need (covid beds needed by day) [IHME]							
+* Beo: Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) ) [IHME]
+* Hod: Hospital Demand [IMPE]									
+* Hos: Hospitalized [DELP]										
+* How: Hospital incidence [IMPE]									
+* Icd: ICU Demand [IMPE]										
+* Ici: ICU incidence [IMPE]									
+* Icn: ICU new (number of new people going to the ICU by day) [IHME]					
+* Ico: ICU over ( [covid ICU beds needed] - ([total ICU capacity] - [average ICU bed usage]) ) 	[IHME]
+* Icu: ICU need (ICU covid beds needed by day) [IHME]							
+* Pre: Prevalence [IMPE]										
+* Ref: R effective [IMPE]										
+* Rtt : R t [IMPE]											
+* Ser: Seroprevalence (seroprevalence) [IHME]								
+* Tes: Tests (total tests) [IHME]								
+* Ven: Ventilated [DELP]									
+* Ven: Vent need (invasive Ventilation needed by day) [IHME]
 
 Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand Mean A03 S01 V07". It is the daily ICU demand, mean estimate, in study A03 (IMPE), scenario 1, model version 7. 
 
@@ -84,18 +86,15 @@ Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand 
 						
 #### Secondary variable names:
 
-Secondary variables store values and dates of peaks, or a calculated daily CFR. In the latter case, positions 4-6 read as CFR. 
+Secondary variables store values and dates of peaks, or a calculated daily CFR. In the latter case, positions 4-6 read as CFR. In the former group, positions 20-22 are related to values and dates of peaks (or other time points) of daily deaths and daily cases, ending in the following three characters: P?? 
 
+* Positions 20-22: P??
 
-Values and dates of peaks (or other time points) of daily deaths and daily cases are stored in secondary variables, ending in the following three characters: P?? 
+* Position 20 P: Peak (or other time point) 
 
-* 20-22	P??:
+* Position 21 ?: Number of peak (or other time point). 0: One peak (only one peak shown), 1: Peak 1, 2: Peak 2, 3: Peak 3, 4: Peak 4, 5: Start of plateau after peak three (in JOHN), 6: Start of increase after peak three (in JOHN), 7: Start time (of provided estimates), 8: End time (of provided estimates)
 
-* 20 P: Peak (or other time point) 
-
-* 21 ?: Number of peak (or other time point). 0: One peak (only one peak shown), 1: Peak 1, 2: Peak 2, 3: Peak 3, 4: Peak 4, 5: Start of plateau after peak three (in JOHN), 6: Start of increase after peak three (in JOHN), 7: Start time (of provided estimates), 8: End time (of provided estimates)
-
-* 22 V or D: Value or Date (of estimate)
+* Position 22: V or D: Value or Date (of estimate)
 
 
 Example:
