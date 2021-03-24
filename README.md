@@ -64,6 +64,7 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 <br/><br/>
 
 ### Related repositories 
+* [`covir2`](https://github.com/pourmalek/covir2), the current repo, is the main repo, related to which are the following:
 
 * [`covir2-output`](https://github.com/pourmalek/covir2-output) contains a copy of previously created *outputs* 
 
