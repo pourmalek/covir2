@@ -78,7 +78,7 @@ Rationale for related repositories:
 
 * Users might want to see the outputs without running the codes. [`covir2-output`](https://github.com/pourmalek/covir2-output) provides such outputs.
 
-* Structures of estimates files, scenarios, and variables from component studies do change partially and periodically, writing a universal code that is set to anticipate and intake all such future changes is doable but not cost-effective. As such, codes are periodically updated and stored in [`covir2-updates`](https://github.com/pourmalek/covir2-updates)
+* Structures of estimates files, scenarios, and variables from component studies do change partially and periodically. Writing a universal code that is set to anticipate and intake all such future changes is doable but not cost-effective. As such, codes are periodically updated and stored in [`covir2-updates`](https://github.com/pourmalek/covir2-updates)
 
 *  Users might want to see the outputs of updated codes without running the codes. [`covir2-output-updates`](https://github.com/pourmalek/covir2-output-updates) provides such outputs.
 
