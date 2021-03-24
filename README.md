@@ -63,9 +63,9 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 <br/><br/>
 
-### covir2-output repo
+### Related repositories 
 
-* A copy of previously created *outputs* is stored in [`covir2-output`](https://github.com/pourmalek/covir2-output)
+* [`covir2-output`](https://github.com/pourmalek/covir2-output) contains a copy of previously created *outputs* 
 
 <br/><br/>
 
