@@ -74,7 +74,7 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 <br/><br/>
 
-Rationale for related repositories:
+#### Rationale for related repositories:
 
 * Users might want to see the outputs without running the codes. [`covir2-output`](https://github.com/pourmalek/covir2-output) provides such outputs.
 
