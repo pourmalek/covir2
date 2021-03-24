@@ -72,6 +72,8 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 * [`covir2-output-updates`](https://github.com/pourmalek/covir2-output-updates) contains periodical UPDATES for **_outputs_**
 
+<br/><br/>
+
 Rationale for related repositories:
 
 * Users might want to see the outputs without running the codes. [`covir2-output`](https://github.com/pourmalek/covir2-output) provides such outputs.
