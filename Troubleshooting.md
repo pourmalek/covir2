@@ -6,7 +6,9 @@ Once you have started executing the downloaded code that is expected to be locat
 
 ## KNOWN ISSUES
 
+<br/><br/>
 
+********************************************************************************************************************************************
 * **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-, 
 
 * **Treatment**: Make sure the file path to directory |Data| is: 
