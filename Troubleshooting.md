@@ -19,8 +19,19 @@ Manually rearrange the directories so that the expected file path leading to |Da
 <br/><br/>
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data| (in root of which is located the "do Iran master.do").   
 <br/><br/>
+
 ********************************************************************************************************************************************
-* **Problem** (2): Stata spontaneously *RESTARTs* and shows start logo. 
+* **Problem** (2): Stata error message r(691);
+
+* -I/O error
+r(691);-
+
+* This might happen during download of component study data, and is usually and intenet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
+
+- **Treatment**: (1) Close all running programs / applications except Stata and try again. (2) Try a better internet connetion. (3) Try again later. 
+<br/><br/>
+********************************************************************************************************************************************
+* **Problem** (3): Stata spontaneously *RESTARTs* and shows start logo. 
 
 If during running the codes, the demand and supply of memory needed and available for Stata get critically unbalanced, it might be possible that Stata restarts by itself without warning and shows a fresh start logo and empty memory. 
 - **Treatment**: Provide more memory available for Stata:
