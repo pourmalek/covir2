@@ -29,10 +29,10 @@ If during running the codes, the demand and supply of memory needed and availabl
 - Quit all other open applications / programs until Stata runs the codes and the last output, that is "log Iran merge.smcl" is shown up. 
 <br/><br/>
 ********************************************************************************************************************************************
-* **Problem** (3): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading `-renvars-` Stata command. The error message might be -I/O error r(691);- that is usually and internet connection issue.
+* **Problem** (3): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading `-renvars-` Stata command. The error message might be -r(691); I/O error- that is usually and internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
 
 * **Treatment**: (1) Close all running programs / applications except Stata and try again. (2) Try a better internet connection. (3) Try again later. 
-Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. Alternatively, one can check the previously created results in [covir2-output](https://github.com/pourmalek/covir2-output) 
+Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`covir2-output`](https://github.com/pourmalek/covir2-output) 
 <br/><br/>
 <br/><br/>
 
