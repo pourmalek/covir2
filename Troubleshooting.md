@@ -24,11 +24,12 @@ Sometime, if the downloaded zip file is unzipped manually (in Windows), there mi
 * **Problem** (2): Stata error message r(691);
 
 * -I/O error
+
 r(691);-
 
-* This might happen during download of component study data, and is usually and intenet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
+* This might happen during download of component study data, and is usually and internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
 
-- **Treatment**: (1) Close all running programs / applications except Stata and try again. (2) Try a better internet connetion. (3) Try again later. 
+- **Treatment**: (1) Close all running programs / applications except Stata and try again. (2) Try a better internet connection. (3) Try again later. 
 <br/><br/>
 ********************************************************************************************************************************************
 * **Problem** (3): Stata spontaneously *RESTARTs* and shows start logo. 
