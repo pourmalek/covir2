@@ -23,7 +23,7 @@ Sometime, if the downloaded zip file is unzipped manually (in Windows), there mi
 <br/><br/>
 
 ********************************************************************************************************************************************
-* **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading `-renvars-` Stata command. The error message might be -r(691); I/O error- that is usually and internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
+* **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading `-renvars-` Stata command. The error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
 
 * **Treatment**: (1) Close all running programs / applications except Stata and try again. (2) Try a better internet connection. (3) Try again later. 
 Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`covir2-output`](https://github.com/pourmalek/covir2-output) 
