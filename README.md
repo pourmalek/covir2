@@ -88,11 +88,11 @@ Do files are located in directories:
 
 <br/><br/>
 
-### Troubleshooting, Erros, Bugs, and Vulnerabilities
+### Troubleshooting, Errors, Bugs, and Vulnerabilities
 
-* For Troubleshooting and Erros, see [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+* For Troubleshooting and Errors, see [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
-* To report an incident issue or error, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
+* To report an incident issue or error in running the code, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
 
 * To report a Bug, use [`bug_report`](https://github.com/pourmalek/covir2/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) or [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions)
 
