@@ -2,8 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The following versions are currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -12,6 +11,8 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Create an issue. Expectation to to get an update on a reported vulnerability is about less than a week. 
+To report a vulnerability, create an issue, or email the repo owner via pourmalek_farshad@yahoo.com
+
+Expectation to to get an update on a reported vulnerability is about less than a week. 
 
 
