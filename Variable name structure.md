@@ -8,7 +8,7 @@ As described below through an example, primary variable names have 7 parts, each
 
 All the variables have descriptive var `-label-`s that show what the variable stores. 
 
-Stata commands are displayed as `-command-` and Stata non-command syntax as -syntax-. GitHub terms also displayed like `GitHub term`
+Stata commands are displayed as `-command-` and Stata non-command syntax as -syntax-.
 <br/><br/>
 
 ### Variable names
