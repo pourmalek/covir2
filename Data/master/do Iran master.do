@@ -5,7 +5,7 @@
 
 * Project: Rapid review of estimates of COVID Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
-* Time: 2021-02-10
+* Time (initial): 2021-02-10
 
 * OBJECTIVE: Get and prepare component studies' estimates for Iran, Locate peak dates and values
 ***************************************************************************
