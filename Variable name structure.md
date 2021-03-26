@@ -24,7 +24,7 @@ TotDeaMeRaA01S00V03
 
 1234567890123456789
 
--Varname- has 19 positions. 
+-varname- has 19 positions. 
 
 
 Tot...Dea...Me....Ra.....A01.....S00......V03
@@ -66,7 +66,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Beo: Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) ) [IHME]
 * Hod: Hospital Demand [IMPE]									
 * Hos: Hospitalized [DELP]										
-* How: Hospital incidence [IMPE]									
+* Hoi: Hospital incidence [IMPE]									
 * Icd: ICU Demand [IMPE]										
 * Ici: ICU incidence [IMPE]									
 * Icn: ICU new (number of new people going to the ICU by day) [IHME]					
