@@ -40,7 +40,7 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 ## INCIDENT ISSUES
 
 
-To report an incident issue or error, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner [via](pourmalek_farshad@yahoo.com)
+To report an incident issue or error, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
 
 ********************************************************************************************************************************************
 
