@@ -36,7 +36,7 @@ The whole code can be executed with less than ten clicks.
 
 - Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
 
-4. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combibed data. The combined graphs are stored in this directory. 
+4. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
 
 5. If Stata returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
@@ -44,7 +44,7 @@ The whole code can be executed with less than ten clicks.
 
 * Details of do files:
 
-Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files - studies "Soltani" and "Ghanbari" graphs digitized. The file "do Iran master.do" is the only file that needs to be run. 
+Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files - studies "SOLT" and "GHAN" graphs digitized. The file "do Iran master.do" is the only file that needs to be run. 
 
 <br/><br/>
 
