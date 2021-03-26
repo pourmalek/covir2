@@ -9,7 +9,7 @@ Once you have started executing the downloaded code that is expected to be locat
 <br/><br/>
 
 ********************************************************************************************************************************************
-* **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-, 
+* **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-. 
 
 * **Treatment**: Make sure the file path to directory |Data| is: 
 
@@ -23,18 +23,16 @@ Sometime, if the downloaded zip file is unzipped manually (in Windows), there mi
 <br/><br/>
 
 ********************************************************************************************************************************************
-* **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server. Less frequently, web server unresponsiveness might occur during downloading `-renvars-` Stata command. The error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
+* **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server, or less frequently, web server unresponsiveness might occur during downloading `-renvars-` Stata command. For instance, the error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
 
 * **Treatment**: (1) Close all running programs / applications except Stata and try again. (2) Try a better internet connection. (3) Try again later. 
 Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`covir2-output`](https://github.com/pourmalek/covir2-output) 
 <br/><br/>
 
 ********************************************************************************************************************************************
-* **Problem** (3): Stata spontaneously *RESTARTs* and shows start logo. 
+* **Problem** (3): Stata spontaneously *RESTARTs* and shows start logo. If during running the codes, the demand and supply of memory needed by and available for Stata get critically unbalanced, it might be possible that Stata restarts by itself without warning and shows a fresh start logo and empty memory. 
 
-If during running the codes, the demand and supply of memory needed by and available for Stata get critically unbalanced, it might be possible that Stata restarts by itself without warning and shows a fresh start logo and empty memory. 
-- **Treatment**: 
-(1) Quit all other open applications / programs until Stata runs the codes and the last output, that is "log Iran merge.smcl" is shown up. (2) Provide more memory available for Stata: In older versions of Stata, manually set a higher memory, e.g., `-set mem 1000m`-. In modern Statas, memory is no longer needed to be manually set, as memory adjustments are automatically performed.
+* **Treatment**: (1) Quit all other open applications / programs until Stata runs the codes and the last output, that is "log Iran merge.smcl" is shown up. (2) Provide more memory available for Stata: In older versions of Stata, manually set a higher memory, e.g., `-set mem 1000m`-. In modern Statas, memory is no longer needed to be manually set, as memory adjustments are automatically performed.
 <br/><br/>
 <br/><br/>
 
