@@ -88,13 +88,18 @@ Do files are located in directories:
 
 <br/><br/>
 
-### Errors, Troubleshooting, Bugs, and Vulnerabilities
+### Troubleshooting, Erros, Bugs, and Vulnerabilities
 
-For Errors and Troubleshooting, see [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+* For Troubleshooting and Erros, see [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
-To report an incident error, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions) or email repo owner via pourmalek_farshad@yahoo.com
+* To report an incident issue or error, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
 
-To report a bug, use [`bug_report`](https://github.com/pourmalek/covir2/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) or [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions)
+* To report a Bug, use [`bug_report`](https://github.com/pourmalek/covir2/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) or [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions)
+
+* To report a Vulnerabily, use [`bug_report`](https://github.com/pourmalek/covir2/blob/main/.github/ISSUE_TEMPLATE/bug_report.md)
+
+<br/><br/>
+
 
 * See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
