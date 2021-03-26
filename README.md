@@ -38,7 +38,7 @@
 
 5. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combibed data. The combined graphs are stored in this directory. 
 
-6. If Stata returns error codes, check the [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+6. If Stata returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 <br/><br/>
 
@@ -53,16 +53,16 @@ Stata do files get and prepare component studies' estimates for Iran, using the 
 
 Do files are located in directories: 
 
-covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [GHAN](https://github.com/pourmalek/covir2/tree/main/Data/GHAN), [IHME](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [IMPE](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [JOHN](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [LANL](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [SOLT](https://github.com/pourmalek/covir2/tree/main/Data/Soltani), [SRIV](https://github.com/pourmalek/covir2/tree/main/Data/SRIV), [master](https://github.com/pourmalek/covir2/tree/main/Data/master), [merge](https://github.com/pourmalek/covir2/tree/main/Data/merge)
+covir2 / data / [`DELP`](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [`GHAN`](https://github.com/pourmalek/covir2/tree/main/Data/GHAN), [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [`IMPE`](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [`JOHN`](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [`LANL`](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [`SOLT`](https://github.com/pourmalek/covir2/tree/main/Data/Soltani), [`SRIV`](https://github.com/pourmalek/covir2/tree/main/Data/SRIV), [`master`](https://github.com/pourmalek/covir2/tree/main/Data/master), [`merge`](https://github.com/pourmalek/covir2/tree/main/Data/merge)
 
 <br/><br/>
 
 
 * **List of descriptive texts in other md files in this repo**
 
-* For description of variable name structure used in codes, see covir2 / [Variable name structure](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
+* For description of variable name structure used in codes, see covir2 / [`Variable name structure`](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
 
-* For troubleshooting possible errors returned during running the codes, see covir2 / [troubleshooting](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+* For troubleshooting possible errors returned during running the codes, see covir2 / [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 <br/><br/>
 
@@ -88,7 +88,7 @@ covir2 / data / [DELP](https://github.com/pourmalek/covir2/tree/main/Data/DELP),
 
 <br/><br/>
 
-* See [LICENSE](https://github.com/pourmalek/covir2/blob/main/LICENSE)
+* See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
 <br/><br/>
 
