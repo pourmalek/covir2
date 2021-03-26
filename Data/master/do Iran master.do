@@ -67,7 +67,7 @@ cd master
 
 
 
-* presrve native scheme (of the local machine; will be eventually restored at the end of "do Iran merge.do")
+* preserve native scheme (of the local machine; will be eventually restored at the end of "do Iran merge.do")
 
 di c(scheme)
 
@@ -107,9 +107,9 @@ GHAN
 
 
 
-* run the do files for each study and merge them. 
+* runs the do files for each study and merge them. 
 
-* IF the target server for a given study is temp down, comment out that line. 
+* IF the target server for a given study is temp down, the respective line can be commented out. Edits would then be needed in merge.do, however. 
 
 
 do "$pathcovir2/JOHN/do Iran JOHN.do" 
@@ -135,7 +135,7 @@ do "$pathcovir2/merge/do Iran merge.do"
 
 
 
-* Useful additional note:  After first clean execution of entire codes, time-consuming commands can be /* bypassed */. These are -copy- commands to downloaded component studies' estimates files, and -import delimited- after them. 
+* Useful additional note:  After first clean execution of entire codes, time-consuming commands can be /* bypassed */. These are -copy- commands to download component studies' estimates files, and -import delimited- after them. 
 
 
 
