@@ -53,7 +53,7 @@ Stata do files get and prepare component studies' estimates for Iran, using the 
 
 Do files are located in directories: 
 
-covir2 / data / [`DELP`](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [`GHAN`](https://github.com/pourmalek/covir2/tree/main/Data/GHAN), [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [`IMPE`](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [`JOHN`](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [`LANL`](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [`SOLT`](https://github.com/pourmalek/covir2/tree/main/Data/Soltani), [`SRIV`](https://github.com/pourmalek/covir2/tree/main/Data/SRIV), [`master`](https://github.com/pourmalek/covir2/tree/main/Data/master), [`merge`](https://github.com/pourmalek/covir2/tree/main/Data/merge)
+covir2 / data / [`DELP`](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [`GHAN`](https://github.com/pourmalek/covir2/tree/main/Data/GHAN), [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [`IMPE`](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [`JOHN`](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [`LANL`](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [`SOLT`](https://github.com/pourmalek/covir2/tree/main/Data/SOLT), [`SRIV`](https://github.com/pourmalek/covir2/tree/main/Data/SRIV), [`master`](https://github.com/pourmalek/covir2/tree/main/Data/master), [`merge`](https://github.com/pourmalek/covir2/tree/main/Data/merge)
 
 <br/><br/>
 
