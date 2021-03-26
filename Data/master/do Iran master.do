@@ -15,7 +15,7 @@
 
 This file "do Iran master.do" was set up to be run from |Users|local-user-name|Downloads|covir2-main|Data|master|do Iran master.do
 
-If the first run does not go thru, edit the contents within " " of the line 54 or 57 below, located beneath ****** set path based on local operating system ****** ,,, 
+If the first run does not go thru due to directory path clash, edit the contents within " " of the line 54 or 57 below, located beneath ****** set path based on local operating system ****** ,,, 
 ,,, to reflect the location of directory /data/ or \data\ on your local machine. Path of /data/ or \data\ should be:
 
 
