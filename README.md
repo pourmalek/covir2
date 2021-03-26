@@ -26,19 +26,17 @@
 
 ### SUMMARY of how to use the codes in this repo
 
-1. Go to repo home page covir2 / Data / [`master`](https://github.com/pourmalek/covir2)
+1. Clik here on this [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) to download the zipped code to your local machine.
 
-2. Click on the green `Code` box, then [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) to your local machine
+2. Locate the file covir2-main.zip or directory covir2-main on your local machine - by default in the Downloads folder. File or directory depends on zip-file auto-inflation setting of the local machine. If it is the file covir2-main.zip, unzip and move the unzipped covir2-main directory to the root of Downloads folder. If the unzipped covir2-main directory is not located at the root of the Downloads folder, the running the code will return error. 
 
-3. Locate the DOWNLODED "covir2-main" directory on your local machine, in the Downloads folder
-
-4. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows.
+3. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows.
 
 - Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
 
-5. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combibed data. The combined graphs are stored in this directory. 
+4. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combibed data. The combined graphs are stored in this directory. 
 
-6. If Stata returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+5. If Stata returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 <br/><br/>
 
