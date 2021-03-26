@@ -15,7 +15,7 @@ log using "log Iran merge.smcl", replace
 
 * Project: Rapid review of estimates of COVID Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
-* Time: 2021-02-10
+* Time (initial): 2021-02-10
 
 * OBJECTIVE: Merge component studies' estimates for Iran, grphas
 ***************************************************************************
