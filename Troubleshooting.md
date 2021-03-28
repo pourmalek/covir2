@@ -38,6 +38,14 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 
 * **Treatment**: (1) Quit all other open applications / programs until Stata runs the codes and the last output, that is "log Iran merge.smcl" is shown up. (2) Provide more memory available for Stata: In older versions of Stata, manually set a higher memory, e.g., `-set mem 1000m`-. In modern Statas, memory is no longer needed to be manually set, as memory adjustments are automatically performed.
 <br/><br/>
+
+********************************************************************************************************************************************
+* **Problem** (4): With less expected frequency, your local machine can stop responding or restart, due to oversaturation of CPU and RAM. Fan noise might be heard. 
+* **Treatment**: (1) If this happens during running the code while all programs except Stata and the web browser are NOT closed, you may want to retry with all other programs and applications are closed. (2) If this happens during running the code while all programs except Stata and the web browser ARE closed, the CPU and RAM of the local machine cannot afford running the code. You may want to try running the code on another computer with better CPU and RAM.
+
+
+
+<br/><br/>
 <br/><br/>
 
 
