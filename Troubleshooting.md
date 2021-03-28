@@ -5,6 +5,7 @@ Once you have started executing the downloaded code that is expected to be locat
 <br/><br/>
 
 ## KNOWN ISSUES
+Déjà diagnostiqué 
 
 <br/><br/>
 
@@ -41,7 +42,7 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 
 
 ## INCIDENT ISSUES
-
+Jamais diagnostiqué
 
 * To report an incident issue or error in running the code, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
 
