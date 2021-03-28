@@ -40,8 +40,8 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 <br/><br/>
 
 ********************************************************************************************************************************************
-* **Problem** (4): With less expected frequency, your local machine can stop responding or restart, due to oversaturation of CPU and RAM. Fan noise might be heard. 
-* **Treatment**: (1) If this happens during running the code while all programs except Stata and the web browser are NOT closed, you may want to retry with all other programs and applications are closed. (2) If this happens during running the code while all programs except Stata and the web browser ARE closed, the CPU and RAM of the local machine cannot afford running the code. You may want to try running the code on another computer with better CPU and RAM.
+* **Problem** (4): With less expected frequency, your local machine might stop responding or restart, due to oversaturation of CPU and RAM. Fan noise might be heard. 
+* **Treatment**: (1) If this happens during running the code while all programs except Stata and the web browser are NOT already closed, you may want to retry with all other programs and applications are closed. (2) If this happens during running the code while all programs except Stata and the web browser ARE closed, the CPU and RAM of the local machine cannot afford running the code. You may want to try running the code on another computer with better CPU and RAM.
 
 
 
