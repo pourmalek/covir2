@@ -9,13 +9,13 @@
 * Project: Rapid review of estimates of COVID-19 Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
 * Time (initial): 2021-02-10
-* **OBJECTIVE** of these Stata codes: Get and prepare component studies' estimates for Iran, locate peak dates and values, graph estimates
+* **OBJECTIVE** of these `Stata` codes: Get and prepare component studies' estimates for Iran, locate peak dates and values, graph estimates
 ********************************************************************************************************************************************
 
 <br/><br/>
 
 
-* Details: This is a review study of estimates of COVID-19 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare them, locate peak dates and values, and produce graphs using Stata. This repo can be used to replicate the results of the review study ('Computational reproducibility').
+* Details: This is a review study of estimates of COVID-19 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare them, locate peak dates and values, and produce graphs using `Stata`. This repo can be used to replicate the results of the review study ('Computational reproducibility').
 
 
 * Iteration one, here: [Rapid review of COVID-19 epidemic estimation studies for Iran]( https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)
@@ -40,13 +40,13 @@ The whole code can be executed with less than ten clicks.
 
 4. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
 
-5. If Stata returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+5. If `Stata` returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 <br/><br/>
 
 * Details of do files:
 
-Stata do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files - studies "SOLT" and "GHAN" graphs digitized. The file "do Iran master.do" is the only file that needs to be run. 
+`Stata` do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files - studies "SOLT" and "GHAN" graphs digitized. The file "do Iran master.do" is the only file that needs to be run. 
 
 <br/><br/>
 
@@ -65,6 +65,8 @@ Do files are located in directories:
 * For description of variable name structure used in codes, see covir2 / [`Variable name structure`](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
 
 * For troubleshooting possible errors returned during running the codes, see covir2 / [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
+
+* [`Frequently Asked Questions`](https://github.com/pourmalek/covir2/blob/main/FAQs.md)
 
 <br/><br/>
 
@@ -98,7 +100,7 @@ Do files are located in directories:
 
 * To report a Bug, use [`bug_report`](https://github.com/pourmalek/covir2/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) or [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions)
 
-* To report a Vulnerabily, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
+* To report a Vulnerability, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad@yahoo.com
 
 <br/><br/>
 
