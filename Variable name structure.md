@@ -64,6 +64,9 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Adm: Admissions (hospital admissions by day) [IHME]							
 * Bed: Bed need (covid beds needed by day) [IHME]							
 * Beo: Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) ) [IHME]
+* CaM: (Cases Mean) Daily Cases Mean (within each country in EMR) [JOHNEMR]
+* CbD (Cases by Deaths) "Daily cases mean div by daily deaths mean JOHN" [JOHNEMR]
+* DeM: (Deaths Mean) Daily Deaths Mean (within each country in EMR) [JOHNEMR]
 * Hod: Hospital Demand [IMPE]									
 * Hos: Hospitalized [DELP]										
 * Hoi: Hospital incidence [IMPE]									
@@ -79,6 +82,12 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Tes: Tests (total tests) [IHME]								
 * Ven: Ventilated [DELP]									
 * Ven: Vent need (invasive Ventilation needed by day) [IHME]
+
+* DayDea_multip_ "Daily deaths scaled (times means of cases by deaths) only for visualization JOHN" [JOHNEMR] This one is a deviation from the overarching nomenclature rules.  
+
+
+
+
 
 Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand Mean A03 S01 V07". It is the daily ICU demand, mean estimate, in study A03 (IMPE), scenario 1, model version 7. 
 
