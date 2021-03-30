@@ -111,8 +111,6 @@ Example:
 
 In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
 
-<br/><br/>
-
 
 **(2) store a calculated daily CFR*
 
