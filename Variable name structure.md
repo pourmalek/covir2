@@ -60,10 +60,10 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 * Positions 4-6: meaning [study]
 
-* Act: Active cases [DELP]														
-* Adm: Admissions (hospital admissions by day) [IHME]							
-* Bed: Bed need (covid beds needed by day) [IHME]							
-* Beo: Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) ) [IHME]
+* Act: Active cases [`DELP`](https://github.com/pourmalek/covir2/tree/main/Data/DELP)									
+* Adm: Admissions (hospital admissions by day) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)					
+* Bed: Bed need (covid beds needed by day) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)						
+* Beo: Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) ) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)
 * CaM: (Cases Mean) Daily Cases Mean (within each country in EMR) [JOHNEMR]
 * CbD (Cases by Deaths) "Daily cases mean div by daily deaths mean JOHN" [JOHNEMR]
 * DeM: (Deaths Mean) Daily Deaths Mean (within each country in EMR) [JOHNEMR]
@@ -72,16 +72,16 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Hoi: Hospital incidence [IMPE]									
 * Icd: ICU Demand [IMPE]										
 * Ici: ICU incidence [IMPE]									
-* Icn: ICU new (number of new people going to the ICU by day) [IHME]					
-* Ico: ICU over ( [covid ICU beds needed] - ([total ICU capacity] - [average ICU bed usage]) ) 	[IHME]
-* Icu: ICU need (ICU covid beds needed by day) [IHME]							
+* Icn: ICU new (number of new people going to the ICU by day) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)				
+* Ico: ICU over ( [covid ICU beds needed] - ([total ICU capacity] - [average ICU bed usage]) ) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)
+* Icu: ICU need (ICU covid beds needed by day) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)					
 * Pre: Prevalence [IMPE]										
 * Ref: R effective [IMPE]										
 * Rtt : R t [IMPE]											
-* Ser: Seroprevalence (seroprevalence) [IHME]								
-* Tes: Tests (total tests) [IHME]								
+* Ser: Seroprevalence (seroprevalence) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)						
+* Tes: Tests (total tests) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)								
 * Ven: Ventilated [DELP]									
-* Ven: Vent need (invasive Ventilation needed by day) [IHME]
+* Ven: Vent need (invasive Ventilation needed by day) [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME)
 
 * DayDea_multip_ "Daily deaths scaled (times means of cases by deaths) only for visualization JOHN" [JOHNEMR] This one is a deviation from the overarching nomenclature rules.  
 
