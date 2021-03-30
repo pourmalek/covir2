@@ -114,7 +114,7 @@ In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable
 
 _(2) store a calculated daily CFR_
 
-. Positions 4-6 read as CFR. 
+* Positions 4-6 read as CFR. 
 
 Example:
 
@@ -155,7 +155,7 @@ A07 GHAN Ghanbari
 
 
 ### References for component studies
-<br/><br/>
+
 
 **A00 JOHN**
 Johns Hopkins University. Coronavirus resource center. https://coronavirus.jhu.edu/map.html
