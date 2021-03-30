@@ -32,8 +32,9 @@ The whole code can be executed with less than ten clicks.
 
 1. **CLICK HERE ON THIS**  [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) **TO DOWNLOAD THE ZIPPED CODE TO YOUR LOCAL MACHINE.** 
 
-This is equivalent to clicking on the green box marked `Code` ![image](https://user-images.githubusercontent.com/30849720/113066810-061f2080-9170-11eb-8775-c2973d4b226d.png)
-on top-right side of page https://github.com/pourmalek/covir2, then clicking on `Download ZIP` on the dropdown menu. 
+This is equivalent to clicking on the green `Code` ![image](https://user-images.githubusercontent.com/30849720/113066810-061f2080-9170-11eb-8775-c2973d4b226d.png)
+on top-right side of page https://github.com/pourmalek/covir2, then clicking on ![image](https://user-images.githubusercontent.com/30849720/113066904-35ce2880-9170-11eb-8169-793013512025.png)
+on the dropdown menu. 
 
 ![image](https://user-images.githubusercontent.com/30849720/113066678-cc4e1a00-916f-11eb-8092-997db9a695c3.png)
 
