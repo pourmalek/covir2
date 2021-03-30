@@ -13,6 +13,7 @@ All the variables have descriptive var `-label-`s that show what the variable st
 
 ### Variable names
 
+<br/><br/>
 
 
 #### Primary outcome variable names:
