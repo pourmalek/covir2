@@ -294,6 +294,8 @@ gen DayCfrMeRaA00S00V00 = 100 * DayDeaMeRaA00S00V00 / DayCasMeRaA00S00V00
 
 label var DayCfrMeRaA00S00V00 "Daily CFR JOHN"
 
+di in red "negative CFR values:"
+
 list date loc_grand_name DayDeaMeRaA00S00V00 DayCasMeRaA00S00V00 DayCfrMeRaA00S00V00 if DayCfrMeRaA00S00V00 < 0
 
 
