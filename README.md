@@ -30,7 +30,7 @@
 
 The whole code can be executed with less than ten clicks. 
 
-**Express: Run "Users\local-user-name\Downloads\covir2-main\Data\do Iran master.do" after the directory \covir2-main\ is downloaded into root of \Downloads\ folder of your local machine.** Or read the follwing. 
+##**Express: Run "Users\local-user-name\Downloads\covir2-main\Data\do Iran master.do" after the directory \covir2-main\ is downloaded into root of \Downloads\ folder of your local machine.** Or read the follwing. 
 
 1. **CLICK HERE ON THIS**  [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) **TO DOWNLOAD THE ZIPPED CODE TO YOUR LOCAL MACHINE.** 
 
