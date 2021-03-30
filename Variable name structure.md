@@ -90,7 +90,7 @@ Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand 
 Secondary variables have 3 subtypes: (1) store values and dates of peaks, (2) store a calculated daily CFR, (3) store values created for visualization of temporal succession of daily cases and daily deaths peaks.
 
 
-	(1) store values and dates of peaks
+_(1) store values and dates of peaks_
 
 Positions 20-22 are related to values and dates of peaks (or other time points) of daily deaths and daily cases, ending in the following three characters: P?? 
 
@@ -112,7 +112,7 @@ Example:
 In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
 
 
-	(2) store a calculated daily CFR
+_(2) store a calculated daily CFR_
 
 . Positions 4-6 read as CFR. 
 
@@ -121,7 +121,7 @@ Example:
 DayCfrMeRaA00S00V00 "Daily CFR JOHN"
 
 
-	(3) store values created for visualization of temporal succession of daily cases and daily deaths peaks
+_(3) store values created for visualization of temporal succession of daily cases and daily deaths peaks_
 
 * CaM: (Cases Mean) Daily Cases Mean (within each country in EMR) [JOHNEMR]
 * CbD (Cases by Deaths) "Daily cases mean div by daily deaths mean JOHN" [JOHNEMR]
