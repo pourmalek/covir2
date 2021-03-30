@@ -57,6 +57,8 @@ Do files are located in directories:
 
 [`covir2`](https://github.com/pourmalek/covir2) / [`data`](https://github.com/pourmalek/covir2/tree/main/Data) / [`DELP`](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [`GHAN`](https://github.com/pourmalek/covir2/tree/main/Data/GHAN), [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [`IMPE`](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [`JOHN`](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/Data/JOHNEMR), [`LANL`](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [`SOLT`](https://github.com/pourmalek/covir2/tree/main/Data/SOLT), [`SRIV`](https://github.com/pourmalek/covir2/tree/main/Data/SRIV), [`master`](https://github.com/pourmalek/covir2/tree/main/Data/master), [`merge`](https://github.com/pourmalek/covir2/tree/main/Data/merge)
 
+`JOHNEMR` looks at temporal concession of daily cases and daily deaths peaks
+
 <br/><br/>
 
 
