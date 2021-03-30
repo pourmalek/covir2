@@ -116,6 +116,10 @@ In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable
 
 . Positions 4-6 read as CFR. 
 
+Example:
+
+DayCfrMeRaA00S00V00 "Daily CFR JOHN"
+
 
 **(3) store values created for visualization of temporal succession of daily cases and daily deaths peaks*
 
@@ -126,6 +130,7 @@ In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable
 * DayDea_multip_ "Daily deaths scaled (times means of cases by deaths) only for visualization JOHN" [JOHNEMR] This one is a deviation from the overarching nomenclature rules. 
 
 
+<br/><br/>
 
 #### Component study number:
 <br/><br/>
