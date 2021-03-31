@@ -26,7 +26,7 @@
 
 ### SUMMARY of how to use the codes in this repo
 
-0. Save all unsaved works and files on your local machine and exit all open programs and applications. This is a cautionary measure for not losing unsaved parts of files in case the local machine stops responding or restarts due to oversaturation of CPU and RAM. 
+0. Save all unsaved works and files on your local machine and exit all open programs and applications. This is a cautionary measure for not losing unsaved parts of files in case the local machine stops responding or restarts due to oversaturation of CPU and RAM. Even better: Restarting the local machine (to empty the cache), invoking no program, and running the code can be more efficient than running the code on the local machine even with closing all running programs.
 
 The whole code can be executed with less than ten clicks. 
 
