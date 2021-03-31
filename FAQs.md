@@ -12,10 +12,11 @@
 
 <br/><br/>
 
+********************************************************************************************************************************************
 
-Q. How to use the codes, after all? 
+* Question: How to use the codes, after all? 
 
-A. Only one Stata do file needs to be executed. It is "do Iran master.do". 
+* Answer: Only one Stata do file needs to be executed. It is "do Iran master.do".
 
 * To download the code, click on this [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) 
 
