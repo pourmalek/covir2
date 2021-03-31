@@ -13,6 +13,18 @@
 <br/><br/>
 
 
+Q. How to use the codes, after all? 
+
+A. Only one Stata do file needs to be executed. It is "do Iran master.do". 
+
+* To download the code, click on this [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) 
+
+* Either a directory named \covir2-main\ or a zip file named covir2-main.zip shows up in \Downloads\ folder.
+
+* If a directory named \covir2-main\ shows up in \Downloads\ folder, go inside \covir2-main\ and open \Data\ , then \merge\ , and find and run the "do Iran master.do". 
+
+* If a zip file named covir2-main.zip shows up in \Downloads\ folder, unzip it, and make sure the resultant \covir2-main\ is directly in the root of in \Downloads\ folder. Go inside \covir2-main\ and open \Data\ , then \merge\ , and find and run the "do Iran master.do". 
+
 
 
 
