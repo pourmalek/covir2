@@ -249,3 +249,12 @@ Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. 
 
 <br/><br/>
 Note: Johns Hopkins, obviously not an "estimation study", is used as a benchmark gauge of the *under-reported* so-called "Ground Truth". 
+
+
+
+<br/><br/>
+<br/><br/>
+
+* All codes are copyrighted by the author under Apache License 2.0.
+
+* See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
