@@ -125,7 +125,8 @@ Do files are located in directories:
 [![DOI](https://zenodo.org/badge/344389637.svg)](https://zenodo.org/badge/latestdoi/344389637)
 
 
-[DOI](https://zenodo.org/record/4584122#.YGPaTi295O0)
+
+[`DOI`](https://zenodo.org/record/4584122#.YGPaTi295O0)
 
 
 
