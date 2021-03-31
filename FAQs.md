@@ -3,7 +3,9 @@
 
 
  
+<br/><br/>
 
+********************************************************************************************************************************************
 
 * Question: Are these codes in `R (CRAN)` software?
 
@@ -26,17 +28,20 @@
 * If a zip file named covir2-main.zip shows up in \Downloads\ folder, unzip it, and make sure the resultant \covir2-main\ is directly in the root of in \Downloads\ folder. Go inside \covir2-main\ and open \Data\ , then \merge\ , and find and run the "do Iran master.do". 
 
 
+********************************************************************************************************************************************
+<br/><br/>
 
 
 
 
 <br/><br/>
 
+
+* All codes are copyrighted by the author under Apache License 2.0.
 
 * See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
 <br/><br/>
-
 
 
 
