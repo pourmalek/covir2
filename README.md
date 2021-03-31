@@ -117,6 +117,7 @@ Do files are located in directories:
 
 
 * All codes are copyrighted by the author under Apache License 2.0.
+
 * See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
 
 <br/><br/>
