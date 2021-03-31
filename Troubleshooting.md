@@ -20,6 +20,8 @@ Déjà diagnostiqué
 
 Manually rearrange the directories so that the expected file path leading to |Data| reads as mentioned above. 
 <br/><br/>
+This code is set up to work from "Users\local-user-name\Downloads\covir2-main\Data\master\do Iran master.do". Sometimes users chose destinations other than |Downloads| folder. Before editing the code, it will not work from anywhere else.
+<br/><br/>
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data| (in root of which is located the "do Iran master.do").   
 <br/><br/>
 
