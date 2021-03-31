@@ -21,7 +21,9 @@
 
 * To download the code, click on this [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) 
 
-* Either a directory named \covir2-main\ or a zip file named covir2-main.zip shows up in \Downloads\ folder.
+* Either a directory named \covir2-main\ or a zip file named covir2-main.zip shows up in \Downloads\ folder. 
+
+This code is set up to work from "Users\local-user-name\Downloads\covir2-main\Data\master\do Iran master.do". Sometimes users chose destinations other than \Downloads\ folder. Before editing the code, it will not work from anywhere else. 
 
 * If a directory named \covir2-main\ shows up in \Downloads\ folder, go inside \covir2-main\ and open \Data\ , then \merge\ , and find and run the "do Iran master.do". 
 
