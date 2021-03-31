@@ -7,7 +7,7 @@
 
 ********************************************************************************************************************************************
 
-* Question: Are these codes in `R (CRAN)` software?
+* Question: **Are these codes in `R (CRAN)` software?**
 
 * Answer: No. These codes are not in R. They are in `Stata`. Notes files are stored in markdown files with (.md) extension. If no application that specifically reads markdown files (.md) is working on a local machine, the operating system might open or suggest opening markdown files with R or R Studio. While R is not very successful in reading these .md files, R Studio reads them is their raw format. 
 
@@ -15,7 +15,7 @@
 
 ********************************************************************************************************************************************
 
-* Question: How to use the codes, after all? 
+* Question: **How to use the codes, after all?**
 
 * Answer: Only one Stata do file needs to be executed. It is "do Iran master.do".
 
