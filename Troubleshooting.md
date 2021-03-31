@@ -36,7 +36,7 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 ********************************************************************************************************************************************
 * **Problem** (3): `Stata` spontaneously *RESTARTs* and shows start logo. If during running the codes, the demand and supply of memory needed by and available for `Stata` get critically unbalanced, it might be possible that `Stata` restarts by itself without warning and shows a fresh start logo and empty memory. 
 
-* **Treatment**: (1) Quit all other open applications / programs until `Stata` runs the codes and the last output, that is "log Iran merge.smcl" is shown up. (2) Provide more memory available for `Stata`: In older versions of `Stata`, manually set a higher memory, e.g., `-set mem 1000m`-. In modern `Statas`, memory is no longer needed to be manually set, as memory adjustments are automatically performed.
+* **Treatment**: (1) Quit all other open applications / programs until `Stata` runs the codes and the last output, that is "log Iran merge.smcl" is shown up. Restarting the local machine (to empty the cache), invoking no program, and running the code can be more efficient than running the code on the local machine even with closing all running programs. (2) Provide more memory available for `Stata`: In older versions of `Stata`, manually set a higher memory, e.g., `-set mem 1000m`-. In modern `Statas`, memory is no longer needed to be manually set, as memory adjustments are automatically performed.
 <br/><br/>
 
 ********************************************************************************************************************************************
