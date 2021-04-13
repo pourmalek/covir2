@@ -38,7 +38,7 @@ By the way, clicking on [`Download ZIP`](https://github.com/pourmalek/covir2/arc
 on top-right side of page https://github.com/pourmalek/covir2, then clicking on ![image](https://user-images.githubusercontent.com/30849720/113066904-35ce2880-9170-11eb-8169-793013512025.png)
 on the dropdown menu. 
 
-                                              ![image](https://user-images.githubusercontent.com/30849720/113066678-cc4e1a00-916f-11eb-8092-997db9a695c3.png)
+![image](https://user-images.githubusercontent.com/30849720/113066678-cc4e1a00-916f-11eb-8092-997db9a695c3.png)
 
 
 2. Locate the file covir2-main.zip or directory covir2-main on your local machine - by default in the Downloads folder. File or directory depends on zip-file auto-inflation setting of the local machine. If it is the file covir2-main.zip, unzip and move the unzipped covir2-main directory to the root of Downloads folder. If the unzipped covir2-main directory is not located at the root of the Downloads folder, running the code will return error. Cl 2-4.
@@ -65,8 +65,8 @@ The `Stata` -do- file "do Iran Farsi graphs.do" is an additional code file for c
 
 <br/><br/>
 
+![image](https://user-images.githubusercontent.com/30849720/114602005-fd881900-9c4a-11eb-95d3-87d88180a8cd.png)
 
-![image](https://user-images.githubusercontent.com/30849720/114601464-6327d580-9c4a-11eb-85b8-daace58fc209.png)
 
 <br/><br/>
 
