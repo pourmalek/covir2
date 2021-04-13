@@ -66,6 +66,7 @@ The `Stata` -do- file "do Iran Farsi graphs.do" is an additional code file for c
 <br/><br/>
 
 
+![image](https://user-images.githubusercontent.com/30849720/114601464-6327d580-9c4a-11eb-85b8-daace58fc209.png)
 &#x202b; *  نمودارهای فارسی
 
 &#x202b; باید
