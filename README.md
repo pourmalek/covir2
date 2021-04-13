@@ -65,6 +65,16 @@ The `Stata` -do- file "do Iran Farsi graphs.do" is an additional code file for c
 
 <br/><br/>
 
+
+*  نمودارهای فارسی
+
+فایل "do Iran Farsi graphs.do" حاوی دستورات استیتا برای ایجاد نمودارهای فارسی است که در مقاله فارسی وجود دارند و باید بعد از اجرای "do Iran master.do" اجرا گردد. محل آن در دیرکتوری
+ “Users|local-user-name|Downloads|covir2-main|Data|master|" 
+در کامپیوتر شما خواهد بود. دلیل اینکه این فایل به صورت جداگانه از مجموعه کلی دستورات (یعنی فایل "do Iran master.do") قرار داده شده است این است که اجرای آن روی کامپیوتر کاربرانی که فونت فارسی ندارد منجر به ایجاد نتایج خوانا و قابل استفاده نخواهد شد. 
+
+<br/><br/>
+
+
 * Directory structure:
 
 Do files are located in directories: 
