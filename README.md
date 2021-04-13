@@ -59,13 +59,6 @@ on the dropdown menu.
 
 <br/><br/>
 
- * Farsi graphs 
-
-The `Stata` -do- file "do Iran Farsi graphs.do" is an additional code file for creating graphs in Farsi. It needs to be executed after executing "do Iran master.do". It will be located in “Users|local-user-name|Downloads|covir2-main|Data|master|" of the local system (your computer). The reason it is not embedded in the whole code (that is in "do Iran master.do") is that it might not result in readable graphs users of the code without Farsi fonts on their local machine.
-
-
-
-![image](https://user-images.githubusercontent.com/30849720/114602188-2c05f400-9c4b-11eb-824a-007ee48dbc30.png)
 
 
 
