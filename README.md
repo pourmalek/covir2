@@ -53,6 +53,8 @@ on the dropdown menu.
 
 Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2-main|Data|merge|" of the local machine (your computer) will be the final graphs that use Farsi (Hijri Solar) dates. A combined copy of them can be viewed here: [`graphs Farsi`](https://github.com/pourmalek/covir2-output/blob/main/graphs%20Farsi.pdf)
 
+
+
 5. If `Stata` returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 <br/><br/>
