@@ -59,6 +59,8 @@ on the dropdown menu.
 
 <br/><br/>
 
+* Farsi graphs:
+
 "do Iran Farsi graphs.do" is an additional `Stata` -do- file for creating graphs in Farsi. It needs to be executed after executing "do Iran master.do". It is located in [`merge`](https://github.com/pourmalek/covir2/tree/main/Data/merge) The reason it is not embedded in the whole code (that is in "do Iran master.do") is that it might not result in readable graphs users of the code without Farsi fonts on their local machine.  
 
 <br/><br/>
