@@ -94,9 +94,9 @@ Do files are located in directories:
 
 * [`covir2-output`](https://github.com/pourmalek/covir2-output) contains a copy of previously created **_outputs_**
 
-* [`covir2-updates`](https://github.com/pourmalek/covir2-updates) contains periodical UPDATES for **_codes_**
+### * [`covir2-updates`](https://github.com/pourmalek/covir2-updates) contains periodical UPDATES for **_codes_**
 
-* [`covir2-output-updates`](https://github.com/pourmalek/covir2-output-updates) contains periodical UPDATES for **_outputs_**
+### * [`covir2-output-updates`](https://github.com/pourmalek/covir2-output-updates) contains periodical UPDATES for **_outputs_**
 
 <br/><br/>
 
