@@ -1,17 +1,20 @@
-covir2 20210405 14000116 dates of component studies updates used
+### covir2 20210405 14000116 dates of component studies updates used
 
-This is covir2 20210405 14000116.
+This is the original version of covir2 codes. Date of collection of component studies' updates: 20210405 (14000116).
 
-The following dates are the study estimates' update date used here in covir2 20210405 14000116. 
+The following dates are the update date of study estimates used in this version of covir2 codes. 
 
-Study Date
 
-DELP 2021 04 05
+Study | Update date of study estimates used here
 
-IHME 2021 04 01
+| DELP  |  2021 04 05 |
+| ----- | ----------- |
+| IHME  |  2021 04 01 |
 
-IMPE 2021 03 19
+| IMPE  |  2021 03 19 |
 
-LANL 2021 04 04
+| LANL  |  2021 04 04 |
 
-SRIV 2021 04 04
+| SRIV  |  2021 04 04 |
+
+
