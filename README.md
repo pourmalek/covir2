@@ -43,15 +43,15 @@ on the dropdown menu.
 
 2. Locate the file covir2-main.zip or directory covir2-main on your local machine - by default in the Downloads folder. File or directory depends on zip-file auto-inflation setting of the local machine. If it is the file covir2-main.zip, unzip and move the unzipped covir2-main directory to the root of Downloads folder. If the unzipped covir2-main directory is not located at the root of the Downloads folder, running the code will return error. Cl 2-4.
 
-3. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|Data|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows. Cl 5-6.
+3. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|20210405|code|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows. Cl 5-6.
 
-- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/Data/merge/ (Mac) or Downloads\covir2-main\Data\merge\ (Windows).
+- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/20210405/code/merge/ (Mac) or Downloads\covir2-main\20210405\code\merge\ (Windows).
 
-4. Go to your local directory |Downloads|covir2-main|Data|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
+4. Go to your local directory |Downloads|covir2-main|20210405|code|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
 
 ## * Farsi-dated graphs:
 
-Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2-main|Data|merge|" of the local machine (your computer) will be the final graphs that use Farsi (Hijri Solar) dates. A combined copy of them can be viewed here: [`graphs Farsi`](https://github.com/pourmalek/covir2-output/blob/main/graphs%20Farsi.pdf)
+Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2-main|20210405|code|merge|" of the local machine (your computer) will be the final graphs that use Farsi (Hijri Solar) dates. 
 
 
 
