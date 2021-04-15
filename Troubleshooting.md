@@ -14,9 +14,9 @@ Déjà diagnostiqué
 
 * **Treatment**: Make sure the file path to directory |Data| is: 
 
-"/Users/local-user-name/Downloads/covir2-main/Data/" [for Mac]
+"/Users/local-user-name/Downloads/covir2-main/20210405/code" [for Mac]
 
-"C:\Users\local-user-name\Downloads\covir2-main\Data\" [for Windows].
+"C:\Users\local-user-name\Downloads\covir2-main\20210405\code" [for Windows].
 
 Manually rearrange the directories so that the expected file path leading to |Data| reads as mentioned above. 
 <br/><br/>
