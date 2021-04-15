@@ -31,9 +31,9 @@ The whole code can be executed with less than ten clicks.
 
 # Express: Run "Users\local-user-name\Downloads\covir2-main\20210405\code\master\do Iran master.do" on local machine after the directory \covir2-main\ is downloaded into and is located in the root of \Downloads\ folder of your local machine, for original update.
 # Use "Users\local-user-name\Downloads\covir2-main\2021MMDD\code\master\do Iran master.do" for other updates.
-  Read \ as / if using a Mac. Or read the follwing. 
-  
 
+  Read \ as / if using a Mac. Or read the follwing. 
+  <br/><br/>
 1. **CLICK HERE ON THIS**  [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) **TO DOWNLOAD THE ZIPPED CODE TO YOUR LOCAL MACHINE.** 
 
 By the way, clicking on [`Download ZIP`](https://github.com/pourmalek/covir2/archive/refs/heads/main.zip) is equivalent to clicking on the green box ![image](https://user-images.githubusercontent.com/30849720/113066810-061f2080-9170-11eb-8775-c2973d4b226d.png)
