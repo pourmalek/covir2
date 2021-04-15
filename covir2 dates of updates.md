@@ -5,10 +5,9 @@ This is the original version of covir2 codes. Date of collection of component st
 The following dates are the update date of study estimates used in this version of covir2 codes. 
 
 
-Study | Update date of study estimates used here
-
-| DELP  |  2021 04 05 |
+| Study | Update date of study estimates used here |
 | ----- | ----------- |
+| DELP  |  2021 04 05 |
 | IHME  |  2021 04 01 |
 | IMPE  |  2021 03 19 |
 | LANL  |  2021 04 04 |
