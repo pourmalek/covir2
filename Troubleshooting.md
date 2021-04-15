@@ -18,17 +18,12 @@ Déjà diagnostiqué
 
 "C:\Users\local-user-name\Downloads\covir2-main\20210405\code" [for Windows].
 
-Manually rearrange the directories so that the expected file path leading to |Data| reads as mentioned above. 
+Manually rearrange the directories so that the expected file path leading to |code| reads as mentioned above. 
 <br/><br/>
-This code is set up to work from "Users\local-user-name\Downloads\covir2-main\Data\master\do Iran master.do". Sometimes users chose destinations other than |Downloads| folder. Before editing the code, it will not work from anywhere else.
+This code is set up to work from "|Users|local-user-name|Downloads|covir2-main|20210405|code|master|do Iran master.do". Sometimes users chose destinations other than |Downloads| folder. Before editing the code, it will not work from anywhere else.
 <br/><br/>
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data|master|do Iran master.do"   
 <br/><br/>
-**The full path of the do file that needs to be run is:**
-
-"Users\local-user-name\Downloads\covir2-main\Data\master\do Iran master.do"
-
-"Users/local-user-name/Downloads/covir2-main/Data/master/do Iran master.do"
 
 ********************************************************************************************************************************************
 * **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server, or less frequently, web server unresponsiveness might occur during downloading `-renvars-` `Stata` command. For instance, the error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
