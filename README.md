@@ -73,21 +73,24 @@ Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2
 
 
 Updates and directory structure:
+<br/><br/>
 
 
-Level 1 of directories || dates on which the current codes were updated. 
+Level 1 of directories || dates on which the current codes were updated:
 
 [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405), [`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413), etc.
 
+<br/><br/>
 
 
-Level 2 of directories || code contains Stata codes, output contains codes' output 
+Level 2 of directories || code contains Stata codes, output contains codes' output:
 
 [`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
 
 
+<br/><br/>
 
-Level 3 of directories || component studies, master, and merge
+Level 3 of directories || component studies, master, and merge:
 
 [`DELP`](https://github.com/pourmalek/covir2/tree/main/20210405/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210405/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SOLT) 
 [`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SRIV)
