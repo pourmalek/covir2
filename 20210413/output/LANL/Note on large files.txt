@@ -1,0 +1,5 @@
+Note on large files
+
+The following files larger than 25 MB not uploaded here
+
+global_cumulative_daily_cases.dtaglobal_cumulative_daily_deaths.dtaglobal_incidence_daily_cases.dtaglobal_incidence_daily_deaths.dta2021-04-11_global_cumulative_daily_cases_website.csv2021-04-11_global_cumulative_daily_deaths_website.csv2021-04-11_global_incidence_daily_cases_website.csv2021-04-11_global_incidence_daily_deaths_website.csv
