@@ -19,8 +19,6 @@
 
 
 * Iteration one, here: [Rapid review of COVID-19 epidemic estimation studies for Iran]( https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)
-
-<br/><br/>
 * Iteration two, here: (soon)
 <br/><br/>
 
