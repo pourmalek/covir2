@@ -25,13 +25,15 @@ This code is set up to work from "|Users|local-user-name|Downloads|covir2-main|2
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data|master|do Iran master.do"   
 <br/><br/>
 
+|20210413| or other later updates an be similary used instead of original |20210405|
+
 ********************************************************************************************************************************************
 * **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server, or less frequently, web server unresponsiveness might occur during downloading `-renvars-` `Stata` command. For instance, the error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
 * Intermittent good and bad internet connection: 
 In cases where one or more component study files have been downloaded but then the internet connection fails to download a next component study file in the row of files to be downloaded, see _(4) Palliative treatment_  below.
 
 * **Treatment**: (1) Close all running programs / applications except `Stata` and try again. (2) Try a better internet connection. (3) Try again later. 
-Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`covir2-output`](https://github.com/pourmalek/covir2-output) _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
+Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`20210405 output`]https://github.com/pourmalek/covir2/tree/main/20210405/output) or [`20210413 output'](https://github.com/pourmalek/covir2/tree/main/20210413/output) or later outputs. _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
 
 <br/><br/>
 
