@@ -75,18 +75,15 @@ Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2
 Updates and directory structure:
 <br/><br/>
 
-
 Level 1 of directories || dates on which the current codes were updated:
 
 [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405), [`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413), etc.
 
 <br/><br/>
 
-
 Level 2 of directories || code contains Stata codes, output contains codes' output:
 
 [`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
-
 
 <br/><br/>
 
