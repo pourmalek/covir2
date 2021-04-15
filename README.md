@@ -76,8 +76,8 @@ Updates and directory structure:
 <br/><br/>
 Level 1 of directories || dates on which the current codes were updated:
 
-[`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405) -> see selected graphs here: [En](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20English.pdf) [Fa](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20Farsi.pdf)
-[`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413) -> see selected graphs here: En Fa
+[`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405) -> ##see selected graphs here:##  -> see selected graphs here: [En](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20English.pdf) [Fa](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20Farsi.pdf)
+[`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413)
 <br/><br/>
 Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
 
