@@ -72,9 +72,31 @@ Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2
 
 Do files are located in directories: 
 
-[`covir2`](https://github.com/pourmalek/covir2) / [`DELP`](https://github.com/pourmalek/covir2/tree/main/Data/DELP), [`GHAN`](https://github.com/pourmalek/covir2/tree/main/Data/GHAN), [`IHME`](https://github.com/pourmalek/covir2/tree/main/Data/IHME), [`IMPE`](https://github.com/pourmalek/covir2/tree/main/Data/IMPE), [`JOHN`](https://github.com/pourmalek/covir2/tree/main/Data/JOHN), [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/Data/JOHNEMR), [`LANL`](https://github.com/pourmalek/covir2/tree/main/Data/LANL), [`SOLT`](https://github.com/pourmalek/covir2/tree/main/Data/SOLT), [`SRIV`](https://github.com/pourmalek/covir2/tree/main/Data/SRIV), [`master`](https://github.com/pourmalek/covir2/tree/main/Data/master), [`merge`](https://github.com/pourmalek/covir2/tree/main/Data/merge)
+Updates and directory structure:
 
-[`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/Data/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
+
+Level 1 of directories || dates on which the current codes were updated. 
+
+20210405, 20210413, etc.
+
+
+Level 2 
+
+code, output || code contains Stata codes, output contains codes' output 
+
+
+Level 3 
+
+DELP, GHAN, IHME, IMPE, JOHN, JOHNEMR, LANL, SOLT, SRIV, master, merge 
+
+codes and outputs for each component study
+
+master contains the master code to run the whole codes 
+
+merge contains the combined estimates and graphs from component studies
+
+JOHNEMR looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
+
 
 <br/><br/>
 
