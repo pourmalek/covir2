@@ -12,7 +12,7 @@ Déjà diagnostiqué
 ********************************************************************************************************************************************
 * **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-. 
 
-* **Treatment**: Make sure the file path to directory |Data| on the local machine is: 
+* **Treatment**: Make sure the file path to directory |code| on the local machine is: 
 
 "/Users/local-user-name/Downloads/covir2-main/20210405/code" [for Mac]
 
