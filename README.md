@@ -18,8 +18,8 @@
 * Details: This is a review study of estimates of COVID-19 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare them, locate peak dates and values, and produce graphs using `Stata`. This repo can be used to replicate the results of the review study ('Computational reproducibility').
 
 
-* Iteration one, here: [Rapid review of COVID-19 epidemic estimation studies for Iran]( https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)
-* Iteration two, here: (soon)
+* Journal article for iteration one, here: [Rapid review of COVID-19 epidemic estimation studies for Iran]( https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)
+* Journal article for iteration two (this iteration), here: (soon)
 <br/><br/>
 
 
