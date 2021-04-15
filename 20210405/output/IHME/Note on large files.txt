@@ -1,0 +1,5 @@
+Note on large files
+
+The following files larger than 25 MB not uploaded here
+
+|2021_04_01|Reference_hospitalization_all_locs.dtaBest_masks_hospitalization_all_locs.dtaWorse_hospitalization_all_locs.dta
