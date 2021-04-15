@@ -74,18 +74,19 @@ Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2
 
 Updates and directory structure:
 <br/><br/>
-Level 1 of directories || dates on which the current codes were updated:
+1- Level 1 of directories || dates on which the current codes were updated:
 
 [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405) 
-## see selected graphs here: [En](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20English.pdf) [Fa](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20Farsi.pdf)
+### see selected graphs here: [En](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20English.pdf) [Fa](https://github.com/pourmalek/covir2/blob/main/20210405/output/Update%2020210405%20selected%20graphs%20Farsi.pdf)
 
 [`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413)
+### see selected graphs here: [En](https://github.com/pourmalek/covir2/blob/main/20210413/output/Update%2020210413%20selected%20graphs%20English.pdf) [Fa](https://github.com/pourmalek/covir2/blob/main/20210413/output/Update%2020210413%20selected%20graphs%20Farsi.pdf)
 <br/><br/>
-Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
+2- Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
 
 [`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
 <br/><br/>
-Level 3 of directories || component studies, master, and merge:
+3- Level 3 of directories || component studies, master, and merge:
 
 [`DELP`](https://github.com/pourmalek/covir2/tree/main/20210405/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210405/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SOLT) 
 [`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SRIV)
