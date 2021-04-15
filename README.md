@@ -78,7 +78,7 @@ Level 1 of directories || dates on which the current codes were updated:
 
 [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405), [`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413), etc.
 <br/><br/>
-Level 2 of directories || code contains Stata codes, output contains codes' output:
+Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
 
 [`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
 <br/><br/>
@@ -106,26 +106,6 @@ component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/m
 * [`Frequently Asked Questions`](https://github.com/pourmalek/covir2/blob/main/FAQs.md)
 
 <br/><br/>
-
-### Related repositories 
-* [`covir2`](https://github.com/pourmalek/covir2) is the current and main repo, contains **_codes_**, and to which are related the following:
-
-* [`covir2-output`](https://github.com/pourmalek/covir2-output) contains a copy of previously created **_outputs_**
-
-### * [`covir2-updates`](https://github.com/pourmalek/covir2-updates) contains periodical UPDATES for **_codes_**
-
-### * [`covir2-output-updates`](https://github.com/pourmalek/covir2-output-updates) contains periodical UPDATES for **_outputs_**
-
-<br/><br/>
-
-#### Rationale for related repositories:
-
-* Users might want to see the outputs without (or before or after) running the codes. [`covir2-output`](https://github.com/pourmalek/covir2-output) provides such outputs.
-
-* Structures of estimates files, scenarios, and variables from component studies do change partially and periodically. Writing a universal code that is set to anticipate and intake all such future changes is doable but not cost-effective. As such, codes are periodically updated and stored in [`covir2-updates`](https://github.com/pourmalek/covir2-updates)
-
-*  Users might want to see the outputs of updated codes without running the codes. [`covir2-output-updates`](https://github.com/pourmalek/covir2-output-updates) provides such outputs.
-
 
 <br/><br/>
 
