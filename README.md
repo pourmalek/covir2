@@ -77,25 +77,26 @@ Updates and directory structure:
 
 Level 1 of directories || dates on which the current codes were updated. 
 
-[`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405), 20210413, etc.
+[`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405), [`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413), etc.
 
 
-Level 2 
 
-code, output || code contains Stata codes, output contains codes' output 
+Level 2 of directories || code contains Stata codes, output contains codes' output 
+
+[`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
 
 
-Level 3 
 
-DELP, GHAN, IHME, IMPE, JOHN, JOHNEMR, LANL, SOLT, SRIV, master, merge 
+Level 3 of directories || component studies, master, and merge
 
-codes and outputs for each component study
+[`DELP`](https://github.com/pourmalek/covir2/tree/main/20210405/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210405/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SOLT) 
+[`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SRIV)
 
-master contains the master code to run the whole codes 
+[`master`](https://github.com/pourmalek/covir2/tree/main/20210405/code/master) contains the master code (i.e. "do Iran master.do") to run the whole codes 
 
-merge contains the combined estimates and graphs from component studies
+[`merge`](https://github.com/pourmalek/covir2/tree/main/20210405/code/merge) contains the combined estimates and graphs from component studies
 
-JOHNEMR looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
+component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/output/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
 
 
 <br/><br/>
