@@ -68,16 +68,16 @@ Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2
 
 
 
-* Directory structure:
+* Updates and directory structure:
 
-Do files are located in directories: 
+
 
 Updates and directory structure:
 
 
 Level 1 of directories || dates on which the current codes were updated. 
 
-20210405, 20210413, etc.
+[`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405), 20210413, etc.
 
 
 Level 2 
