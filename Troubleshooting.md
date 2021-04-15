@@ -12,7 +12,7 @@ Déjà diagnostiqué
 ********************************************************************************************************************************************
 * **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-. 
 
-* **Treatment**: Make sure the file path to directory |Data| is: 
+* **Treatment**: Make sure the file path to directory |Data| on the local machine is: 
 
 "/Users/local-user-name/Downloads/covir2-main/20210405/code" [for Mac]
 
@@ -33,7 +33,7 @@ Sometime, if the downloaded zip file is unzipped manually (in Windows), there mi
 In cases where one or more component study files have been downloaded but then the internet connection fails to download a next component study file in the row of files to be downloaded, see _(4) Palliative treatment_  below.
 
 * **Treatment**: (1) Close all running programs / applications except `Stata` and try again. (2) Try a better internet connection. (3) Try again later. 
-Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`20210405 output`]https://github.com/pourmalek/covir2/tree/main/20210405/output) or [`20210413 output'](https://github.com/pourmalek/covir2/tree/main/20210413/output) or later outputs. _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
+Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`20210405 output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) or [`20210413 output`](https://github.com/pourmalek/covir2/tree/main/20210413/output) or later outputs. _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
 
 <br/><br/>
 
