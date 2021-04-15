@@ -25,7 +25,7 @@ This code is set up to work from "|Users|local-user-name|Downloads|covir2-main|2
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data|master|do Iran master.do"   
 <br/><br/>
 
-|20210413| or other later updates an be similary used instead of original |20210405|
+Note: |20210413| or other later updates an be similary used instead of original |20210405|. For instance, run "|Users|local-user-name|Downloads|covir2-main|20210413|code|master|do Iran master.do" on local machine for the 20210413 update.
 
 ********************************************************************************************************************************************
 * **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server, or less frequently, web server unresponsiveness might occur during downloading `-renvars-` `Stata` command. For instance, the error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error)
