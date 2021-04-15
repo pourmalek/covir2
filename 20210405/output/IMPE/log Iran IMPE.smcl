@@ -1,0 +1,4631 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/log Iran IMPE.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}15 Apr 2021, 09:46:39
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Iran IMPE.do"
+. 
+. * Project: Rapid review of estimates of COVID Iran - No 2
+. * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare IMPErial study estimates for Iran, Locate peak dates and values
+. ***************************************************************************
+. 
+. clear all
+{txt}
+{com}. 
+. 
+. *****************************
+. 
+. * get IMPE estimates
+. 
+. 
+. copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/IRN/2021-03-19/projections.csv projections.csv
+{txt}
+{com}. 
+.  
+. ******************************
+. 
+. * import csv file
+. 
+. 
+. import delimited "projections.csv", clear varnames(1)
+{res}{text}(14 vars, 34,572 obs)
+
+{com}. 
+. 
+. * gen date 
+. 
+. rename date date_original
+{res}{txt}
+{com}. 
+. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2)
+{txt}
+{com}. egen dateblock = concat(year month day)
+{txt}
+{com}. drop year month day
+{txt}
+{com}. 
+. 
+. * rename uncertainty limits
+. 
+. rename y_025    y_025_
+{res}{txt}
+{com}. rename y_25     y_250_
+{res}{txt}
+{com}. rename y_median y_med_
+{res}{txt}
+{com}. rename y_mean   y_mea_
+{res}{txt}
+{com}. rename y_75     y_750_
+{res}{txt}
+{com}. rename y_975    y_975_
+{res}{txt}
+{com}. 
+. 
+. foreach var of varlist y_025-y_975 {c -(}
+{txt}  2{com}.         ds `var'
+{txt}  3{com}.         label variable `var' `r(varlist)'
+{txt}  4{com}. {c )-}
+{txt}{col 1}y_025_
+{col 1}y_250_
+{col 1}y_med_
+{col 1}y_mea_
+{col 1}y_750_
+{col 1}y_975_
+
+{com}. *
+. 
+. 
+. 
+. * rename scenarios 
+. 
+. tab scenario 
+
+                       {txt}scenario {c |}      Freq.     Percent        Cum.
+{hline 32}{c +}{hline 35}
+       Additional 50% Reduction {c |}{res}      5,762       16.67       16.67
+{txt}            Maintain Status Quo {c |}{res}      5,762       16.67       33.33
+{txt}        Relax Interventions 50% {c |}{res}      5,762       16.67       50.00
+{txt}Surged Additional 50% Reduction {c |}{res}      5,762       16.67       66.67
+{txt}     Surged Maintain Status Quo {c |}{res}      5,762       16.67       83.33
+{txt} Surged Relax Interventions 50% {c |}{res}      5,762       16.67      100.00
+{txt}{hline 32}{c +}{hline 35}
+                          Total {c |}{res}     34,572      100.00
+{txt}
+{com}. 
+. 
+. /*
+> Scenarios:
+> 
+> S1  "Additional 50% Reduction"                  "S1_Add_Half_Reduction"
+> S2  "Maintain Status Quo"                               "S2_Maintain_Staus_Quo"
+> S3  "Relax Interventions 50%"                   "S3_Relax_Half_Intervention"
+> 
+> S4  "Surged Additional 50% Reduction"   "S4_Surged_Add_Half_Reduction"
+> S5  "Surged Maintain Status Quo"                "S5_Surged_Maintain_Staus_Quo"
+> S6  "Surged Relax Interventions 50%"    "S6_Surged_Relax_Half_Intervention"
+> */
+. 
+. 
+. gen scenario_snail = ""
+{txt}(34,572 missing values generated)
+
+{com}. replace scenario_snail = "S1" if scenario == "Additional 50% Reduction"
+{txt}variable {bf}scenario_snail{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str2{sf}
+{txt}(5,762 real changes made)
+
+{com}. replace scenario_snail = "S2" if scenario == "Maintain Status Quo"
+{txt}(5,762 real changes made)
+
+{com}. replace scenario_snail = "S3" if scenario == "Relax Interventions 50%"
+{txt}(5,762 real changes made)
+
+{com}. replace scenario_snail = "S4" if scenario == "Surged Additional 50% Reduction"
+{txt}(5,762 real changes made)
+
+{com}. replace scenario_snail = "S5" if scenario == "Surged Maintain Status Quo"
+{txt}(5,762 real changes made)
+
+{com}. replace scenario_snail = "S6" if scenario == "Surged Relax Interventions 50%"
+{txt}(5,762 real changes made)
+
+{com}. 
+. 
+. gen underline = "_"
+{txt}
+{com}. egen scenario_snail_dateblock = concat(scenario_snail underline dateblock)
+{txt}
+{com}. 
+. drop date_original scenario
+{txt}
+{com}. 
+. drop scenario_snail_dateblock 
+{txt}
+{com}.   
+. drop y_250_ y_med_ y_750_
+{txt}
+{com}.  
+. 
+. * Primary outcomes Total Deaths, Total Cases, Daily Deaths, and Daily Cases
+. 
+. replace compartment = "cumul_death" if compartment == "cumulative_deaths"
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "cumul_infec" if compartment == "cumulative_infections"
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "daily_death" if compartment == "deaths"
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "daily_infec" if compartment == "infections"
+{txt}(3,144 real changes made)
+
+{com}. 
+. 
+. * other outcomes
+. 
+. replace compartment = "icu___deman" if compartment == "ICU_demand"                      // Icd
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "icu___incid" if compartment == "ICU_incidence"           // Ici
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "reff_______" if compartment == "Reff"                            // Ref
+{txt}(3,138 real changes made)
+
+{com}. replace compartment = "rt_________" if compartment == "Rt"                                      // Rtt
+{txt}(3,138 real changes made)
+
+{com}. replace compartment = "hospi_deman" if compartment == "hospital_demand"         // Hod
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "hospi_incid" if compartment == "hospital_incidence"  // Hoi
+{txt}(3,144 real changes made)
+
+{com}. replace compartment = "preval_____" if compartment == "prevalence"                      // Pre
+{txt}(3,144 real changes made)
+
+{com}. 
+. 
+. 
+. 
+. * reshape
+. 
+. egen compartment_scenario_snail = concat(compartment underline scenario_snail)  
+{txt}
+{com}. 
+. drop compartment underline scenario_snail
+{txt}
+{com}. 
+. tab compartment_scenario_snail
+
+{txt}compartment_sc {c |}
+  enario_snail {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+cumul_death_S1 {c |}{res}        524        1.52        1.52
+{txt}cumul_death_S2 {c |}{res}        524        1.52        3.03
+{txt}cumul_death_S3 {c |}{res}        524        1.52        4.55
+{txt}cumul_death_S4 {c |}{res}        524        1.52        6.06
+{txt}cumul_death_S5 {c |}{res}        524        1.52        7.58
+{txt}cumul_death_S6 {c |}{res}        524        1.52        9.09
+{txt}cumul_infec_S1 {c |}{res}        524        1.52       10.61
+{txt}cumul_infec_S2 {c |}{res}        524        1.52       12.13
+{txt}cumul_infec_S3 {c |}{res}        524        1.52       13.64
+{txt}cumul_infec_S4 {c |}{res}        524        1.52       15.16
+{txt}cumul_infec_S5 {c |}{res}        524        1.52       16.67
+{txt}cumul_infec_S6 {c |}{res}        524        1.52       18.19
+{txt}daily_death_S1 {c |}{res}        524        1.52       19.70
+{txt}daily_death_S2 {c |}{res}        524        1.52       21.22
+{txt}daily_death_S3 {c |}{res}        524        1.52       22.74
+{txt}daily_death_S4 {c |}{res}        524        1.52       24.25
+{txt}daily_death_S5 {c |}{res}        524        1.52       25.77
+{txt}daily_death_S6 {c |}{res}        524        1.52       27.28
+{txt}daily_infec_S1 {c |}{res}        524        1.52       28.80
+{txt}daily_infec_S2 {c |}{res}        524        1.52       30.31
+{txt}daily_infec_S3 {c |}{res}        524        1.52       31.83
+{txt}daily_infec_S4 {c |}{res}        524        1.52       33.34
+{txt}daily_infec_S5 {c |}{res}        524        1.52       34.86
+{txt}daily_infec_S6 {c |}{res}        524        1.52       36.38
+{txt}hospi_deman_S1 {c |}{res}        524        1.52       37.89
+{txt}hospi_deman_S2 {c |}{res}        524        1.52       39.41
+{txt}hospi_deman_S3 {c |}{res}        524        1.52       40.92
+{txt}hospi_deman_S4 {c |}{res}        524        1.52       42.44
+{txt}hospi_deman_S5 {c |}{res}        524        1.52       43.95
+{txt}hospi_deman_S6 {c |}{res}        524        1.52       45.47
+{txt}hospi_incid_S1 {c |}{res}        524        1.52       46.99
+{txt}hospi_incid_S2 {c |}{res}        524        1.52       48.50
+{txt}hospi_incid_S3 {c |}{res}        524        1.52       50.02
+{txt}hospi_incid_S4 {c |}{res}        524        1.52       51.53
+{txt}hospi_incid_S5 {c |}{res}        524        1.52       53.05
+{txt}hospi_incid_S6 {c |}{res}        524        1.52       54.56
+{txt}icu___deman_S1 {c |}{res}        524        1.52       56.08
+{txt}icu___deman_S2 {c |}{res}        524        1.52       57.60
+{txt}icu___deman_S3 {c |}{res}        524        1.52       59.11
+{txt}icu___deman_S4 {c |}{res}        524        1.52       60.63
+{txt}icu___deman_S5 {c |}{res}        524        1.52       62.14
+{txt}icu___deman_S6 {c |}{res}        524        1.52       63.66
+{txt}icu___incid_S1 {c |}{res}        524        1.52       65.17
+{txt}icu___incid_S2 {c |}{res}        524        1.52       66.69
+{txt}icu___incid_S3 {c |}{res}        524        1.52       68.21
+{txt}icu___incid_S4 {c |}{res}        524        1.52       69.72
+{txt}icu___incid_S5 {c |}{res}        524        1.52       71.24
+{txt}icu___incid_S6 {c |}{res}        524        1.52       72.75
+{txt}preval______S1 {c |}{res}        524        1.52       74.27
+{txt}preval______S2 {c |}{res}        524        1.52       75.78
+{txt}preval______S3 {c |}{res}        524        1.52       77.30
+{txt}preval______S4 {c |}{res}        524        1.52       78.82
+{txt}preval______S5 {c |}{res}        524        1.52       80.33
+{txt}preval______S6 {c |}{res}        524        1.52       81.85
+{txt}reff________S1 {c |}{res}        523        1.51       83.36
+{txt}reff________S2 {c |}{res}        523        1.51       84.87
+{txt}reff________S3 {c |}{res}        523        1.51       86.38
+{txt}reff________S4 {c |}{res}        523        1.51       87.90
+{txt}reff________S5 {c |}{res}        523        1.51       89.41
+{txt}reff________S6 {c |}{res}        523        1.51       90.92
+{txt}rt__________S1 {c |}{res}        523        1.51       92.44
+{txt}rt__________S2 {c |}{res}        523        1.51       93.95
+{txt}rt__________S3 {c |}{res}        523        1.51       95.46
+{txt}rt__________S4 {c |}{res}        523        1.51       96.97
+{txt}rt__________S5 {c |}{res}        523        1.51       98.49
+{txt}rt__________S6 {c |}{res}        523        1.51      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}     34,572      100.00
+{txt}
+{com}. 
+. 
+. 
+. reshape wide y_025_   y_mea_  y_975_, i(country dateblock) j(compartment_scenario_snail) string
+{txt}(note: j = cumul_death_S1 cumul_death_S2 cumul_death_S3 cumul_death_S4 cumul_death_S5 cumul_death_S6 cumul_infec_S1 cumul_infec_S2 cumul_infec_S3 cumul_infec_S4 cumul_infec_S5 cumul_infec_S6 daily_death_S1 daily_death_S2 daily_death_S3 daily_death_S4 daily_death_S5 daily_death_S6 daily_infec_S1 daily_infec_S2 daily_infec_S3 daily_infec_S4 daily_infec_S5 daily_infec_S6 hospi_deman_S1 hospi_deman_S2 hospi_deman_S3 hospi_deman_S4 hospi_deman_S5 hospi_deman_S6 hospi_incid_S1 hospi_incid_S2 hospi_incid_S3 hospi_incid_S4 hospi_incid_S5 hospi_incid_S6 icu___deman_S1 icu___deman_S2 icu___deman_S3 icu___deman_S4 icu___deman_S5 icu___deman_S6 icu___incid_S1 icu___incid_S2 icu___incid_S3 icu___incid_S4 icu___incid_S5 icu___incid_S6 preval______S1 preval______S2 preval______S3 preval______S4 preval______S5 preval______S6 reff________S1 reff________S2 reff________S3 reff________S4 reff________S5 reff________S6 rt__________S1 rt__________S2 rt__________S3 rt__________S4 rt__________S5 rt__________S6)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}   34572   {txt}->{res}     524
+{txt}Number of variables            {res}      10   {txt}->{res}     204
+{txt}j variable (66 values){res}compartment_scenario_snail{txt}->(dropped)
+xij variables:
+                                 {res}y_025_   {txt}->   {res}y_025_cumul_death_S1 y_025_cumul_death_S2 ... y_025_rt__________S6
+                                 y_mea_   {txt}->   {res}y_mea_cumul_death_S1 y_mea_cumul_death_S2 ... y_mea_rt__________S6
+                                 y_975_   {txt}->   {res}y_975_cumul_death_S1 y_975_cumul_death_S2 ... y_975_rt__________S6
+{txt}{hline 77}
+
+{com}. 
+. 
+. *
+. 
+. 
+. 
+. foreach v of varlist y_025_cumul_death_S1-y_975_rt__________S6 {c -(} 
+{txt}  2{com}. 
+.         local first = substr("`v'", 7, 11) 
+{txt}  3{com}.         local second = substr("`v'", 6, 1)
+{txt}  4{com}.         local third  = substr("`v'", 1, 5)
+{txt}  5{com}.         local fourth = substr("`v'", 19, 2)
+{txt}  6{com}.         label var `v' "`first'`second'`third'`second'`fourth'"
+{txt}  7{com}. {c )-} 
+{txt}
+{com}. *
+. 
+. 
+. 
+. foreach v of varlist y_025_cumul_death_S1-y_975_rt__________S6 {c -(} 
+{txt}  2{com}.         di `"`: var label `v''"' 
+{txt}  3{com}.         local fifth `"`: var label `v''"'
+{txt}  4{com}.         rename `v'   `fifth'
+{txt}  5{com}. {c )-}
+cumul_death_y_025_S1
+{res}cumul_death_y_mea_S1
+cumul_death_y_975_S1
+cumul_death_y_025_S2
+cumul_death_y_mea_S2
+cumul_death_y_975_S2
+cumul_death_y_025_S3
+cumul_death_y_mea_S3
+cumul_death_y_975_S3
+cumul_death_y_025_S4
+cumul_death_y_mea_S4
+cumul_death_y_975_S4
+cumul_death_y_025_S5
+cumul_death_y_mea_S5
+cumul_death_y_975_S5
+cumul_death_y_025_S6
+cumul_death_y_mea_S6
+cumul_death_y_975_S6
+cumul_infec_y_025_S1
+cumul_infec_y_mea_S1
+cumul_infec_y_975_S1
+cumul_infec_y_025_S2
+cumul_infec_y_mea_S2
+cumul_infec_y_975_S2
+cumul_infec_y_025_S3
+cumul_infec_y_mea_S3
+cumul_infec_y_975_S3
+cumul_infec_y_025_S4
+cumul_infec_y_mea_S4
+cumul_infec_y_975_S4
+cumul_infec_y_025_S5
+cumul_infec_y_mea_S5
+cumul_infec_y_975_S5
+cumul_infec_y_025_S6
+cumul_infec_y_mea_S6
+cumul_infec_y_975_S6
+daily_death_y_025_S1
+daily_death_y_mea_S1
+daily_death_y_975_S1
+daily_death_y_025_S2
+daily_death_y_mea_S2
+daily_death_y_975_S2
+daily_death_y_025_S3
+daily_death_y_mea_S3
+daily_death_y_975_S3
+daily_death_y_025_S4
+daily_death_y_mea_S4
+daily_death_y_975_S4
+daily_death_y_025_S5
+daily_death_y_mea_S5
+daily_death_y_975_S5
+daily_death_y_025_S6
+daily_death_y_mea_S6
+daily_death_y_975_S6
+daily_infec_y_025_S1
+daily_infec_y_mea_S1
+daily_infec_y_975_S1
+daily_infec_y_025_S2
+daily_infec_y_mea_S2
+daily_infec_y_975_S2
+daily_infec_y_025_S3
+daily_infec_y_mea_S3
+daily_infec_y_975_S3
+daily_infec_y_025_S4
+daily_infec_y_mea_S4
+daily_infec_y_975_S4
+daily_infec_y_025_S5
+daily_infec_y_mea_S5
+daily_infec_y_975_S5
+daily_infec_y_025_S6
+daily_infec_y_mea_S6
+daily_infec_y_975_S6
+hospi_deman_y_025_S1
+hospi_deman_y_mea_S1
+hospi_deman_y_975_S1
+hospi_deman_y_025_S2
+hospi_deman_y_mea_S2
+hospi_deman_y_975_S2
+hospi_deman_y_025_S3
+hospi_deman_y_mea_S3
+hospi_deman_y_975_S3
+hospi_deman_y_025_S4
+hospi_deman_y_mea_S4
+hospi_deman_y_975_S4
+hospi_deman_y_025_S5
+hospi_deman_y_mea_S5
+hospi_deman_y_975_S5
+hospi_deman_y_025_S6
+hospi_deman_y_mea_S6
+hospi_deman_y_975_S6
+hospi_incid_y_025_S1
+hospi_incid_y_mea_S1
+hospi_incid_y_975_S1
+hospi_incid_y_025_S2
+hospi_incid_y_mea_S2
+hospi_incid_y_975_S2
+hospi_incid_y_025_S3
+hospi_incid_y_mea_S3
+hospi_incid_y_975_S3
+hospi_incid_y_025_S4
+hospi_incid_y_mea_S4
+hospi_incid_y_975_S4
+hospi_incid_y_025_S5
+hospi_incid_y_mea_S5
+hospi_incid_y_975_S5
+hospi_incid_y_025_S6
+hospi_incid_y_mea_S6
+hospi_incid_y_975_S6
+icu___deman_y_025_S1
+icu___deman_y_mea_S1
+icu___deman_y_975_S1
+icu___deman_y_025_S2
+icu___deman_y_mea_S2
+icu___deman_y_975_S2
+icu___deman_y_025_S3
+icu___deman_y_mea_S3
+icu___deman_y_975_S3
+icu___deman_y_025_S4
+icu___deman_y_mea_S4
+icu___deman_y_975_S4
+icu___deman_y_025_S5
+icu___deman_y_mea_S5
+icu___deman_y_975_S5
+icu___deman_y_025_S6
+icu___deman_y_mea_S6
+icu___deman_y_975_S6
+icu___incid_y_025_S1
+icu___incid_y_mea_S1
+icu___incid_y_975_S1
+icu___incid_y_025_S2
+icu___incid_y_mea_S2
+icu___incid_y_975_S2
+icu___incid_y_025_S3
+icu___incid_y_mea_S3
+icu___incid_y_975_S3
+icu___incid_y_025_S4
+icu___incid_y_mea_S4
+icu___incid_y_975_S4
+icu___incid_y_025_S5
+icu___incid_y_mea_S5
+icu___incid_y_975_S5
+icu___incid_y_025_S6
+icu___incid_y_mea_S6
+icu___incid_y_975_S6
+preval______y_025_S1
+preval______y_mea_S1
+preval______y_975_S1
+preval______y_025_S2
+preval______y_mea_S2
+preval______y_975_S2
+preval______y_025_S3
+preval______y_mea_S3
+preval______y_975_S3
+preval______y_025_S4
+preval______y_mea_S4
+preval______y_975_S4
+preval______y_025_S5
+preval______y_mea_S5
+preval______y_975_S5
+preval______y_025_S6
+preval______y_mea_S6
+preval______y_975_S6
+reff________y_025_S1
+reff________y_mea_S1
+reff________y_975_S1
+reff________y_025_S2
+reff________y_mea_S2
+reff________y_975_S2
+reff________y_025_S3
+reff________y_mea_S3
+reff________y_975_S3
+reff________y_025_S4
+reff________y_mea_S4
+reff________y_975_S4
+reff________y_025_S5
+reff________y_mea_S5
+reff________y_975_S5
+reff________y_025_S6
+reff________y_mea_S6
+reff________y_975_S6
+rt__________y_025_S1
+rt__________y_mea_S1
+rt__________y_975_S1
+rt__________y_025_S2
+rt__________y_mea_S2
+rt__________y_975_S2
+rt__________y_025_S3
+rt__________y_mea_S3
+rt__________y_975_S3
+rt__________y_025_S4
+rt__________y_mea_S4
+rt__________y_975_S4
+rt__________y_025_S5
+rt__________y_mea_S5
+rt__________y_975_S5
+rt__________y_025_S6
+rt__________y_mea_S6
+rt__________y_975_S6
+{txt}
+{com}. *
+. 
+. 
+. * gen date
+. 
+. gen year = substr(dateblock,1,4) 
+{txt}
+{com}. gen month = substr(dateblock,5,2) 
+{txt}
+{com}. gen day = substr(dateblock,7,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21924{txt},{res}22447{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}10jan2020{txt},{res}16jun2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}524{col 51}{txt}missing .:  {res}0{txt}/{res}524
+
+{txt}{col 19}mean:{res}{col 26} 22185.5{txt} = {res}27sep2020{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26}  151.41
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21976{col 37} 22054.5{col 47} 22185.5{col 57} 22316.5{col 67}   22395
+{col 26}02mar2020{col 36}19may2020{col 46}27sep2020{col 56}05feb2021{col 66}25apr2021
+{txt}
+{com}. 
+. 
+. 
+. * 
+. 
+. 
+. * get renvars
+. 
+. net from  http://www.stata-journal.com/software/sj5-4
+{s6hlp}
+.-
+http://www.stata-journal.com/software/sj5-4/
+^Stata Journal volume 5, issue 4^
+.-
+{smcl}
+
+DIRECTORIES you could -{hilite:net cd}- to:
+{p2colset 5 23 23 2}{...}
+{p2col :{net cd ..:..}}Other Stata Journals{p_end}
+{p2colreset}{...}
+
+PACKAGES you could -{hilite:net describe}-:
+{s6hlp}
+    @net:describe dm67_3!dm67_3@            Update:  Numbers of present and missing values
+    @net:describe dm88_1!dm88_1@            Update:  Renaming variables, multiply and
+                      systematically
+    @net:describe gr0021!gr0021@            Double, diagonal, and polar smoothing
+    @net:describe sg134_1!sg134_1@           Update: Model selection using akaike information
+                      criterion
+    @net:describe st0030_2!st0030_2@          Update:  Instrumental variables and GMM:  Estimation
+                      and testing
+    @net:describe st0037_2!st0037_2@          Update:  Adaptive kernel density estimation
+    @net:describe st0067_2!st0067_2@          Update:  Multiple imputation of missing values
+    @net:describe st0091!st0091@            Estimation and inference in dynamic unbalanced
+                      panel data models with a small number of individuals
+    @net:describe st0092!st0092@            Extended generalized linear models: Simulataneous
+                      estimation of flexible link and variance functions
+    @net:describe st0093!st0093@            Buckley-James method for analyzing censored data,
+                      with an application to a heart disease study
+    @net:describe st0094!st0094@            Confidence intervals for predicted outcomes in
+                      regression models for categorical outcomes
+{smcl}
+{.-}
+
+{com}. 
+. net describe dm88_1
+
+{txt}{.-}
+{s6hlp}
+package ^dm88_1^ from http://www.stata-journal.com/software/sj5-4
+{smcl}
+{.-}
+{s6hlp}
+
+^TITLE^
+      SJ5-4 dm88_1.  Update:  Renaming variables, multiply and...
+
+^DESCRIPTION/AUTHOR(S)^
+      Update:  Renaming variables, multiply and systematically
+      by Nicholas J. Cox, Durham University, UK
+         Jeroen Weesie, Utrecht University, Netherlands
+      Support:  n.j.cox@@durham.ac.uk, j.weesie@@fss.uu.nl
+      After installation, type help ^renvars^
+
+^INSTALLATION FILES^                               (type ^net install^ ^dm88_1^)
+      dm88_1/renvars.ado
+      dm88_1/renvars.hlp
+
+^ANCILLARY FILES^                                  (type ^net get^ ^dm88_1^)
+      dm88_1/renvars.do
+{smcl}
+{.-}
+
+{com}. 
+. net install dm88_1
+checking {hilite:dm88_1} consistency and verifying not already installed...
+all files already exist and are up to date.
+{txt}
+{com}. 
+. 
+. * 
+. 
+. * -renvars- somanyvars rather time consuming
+. 
+. foreach v of varlist cumul_death_y_025_S1-rt__________y_975_S6 {c -(} 
+{txt}  2{com}. 
+.     qui renvars, presub(cumul_death_y_025_ TotDeaLoRa)
+{txt}  3{com}.     qui renvars, presub(cumul_death_y_975_ TotDeaUpRa)
+{txt}  4{com}.     qui renvars, presub(cumul_death_y_mea_ TotDeaMeRa)
+{txt}  5{com}. 
+.         qui renvars, presub(daily_death_y_025_ DayDeaLoRa)
+{txt}  6{com}.         qui renvars, presub(daily_death_y_975_ DayDeaUpRa)
+{txt}  7{com}.         qui renvars, presub(daily_death_y_mea_ DayDeaMeRa)
+{txt}  8{com}.         
+.     qui renvars, presub(cumul_infec_y_025_ TotCasLoRa)
+{txt}  9{com}.     qui renvars, presub(cumul_infec_y_975_ TotCasUpRa)
+{txt} 10{com}.     qui renvars, presub(cumul_infec_y_mea_ TotCasMeRa)
+{txt} 11{com}.         
+.         qui renvars, presub(daily_infec_y_025_ DayCasLoRa)
+{txt} 12{com}.         qui renvars, presub(daily_infec_y_975_ DayCasUpRa)
+{txt} 13{com}.         qui renvars, presub(daily_infec_y_mea_ DayCasMeRa)
+{txt} 14{com}.         
+.         * other outcomes
+.         
+.         qui renvars, presub(icu___deman_y_025_ DayIcdLoRa) // "ICU_demand" 
+{txt} 15{com}.         qui renvars, presub(icu___deman_y_975_ DayIcdUpRa)
+{txt} 16{com}.         qui renvars, presub(icu___deman_y_mea_ DayIcdMeRa)
+{txt} 17{com}.         
+.         qui renvars, presub(icu___incid_y_025_ DayIciLoRa) // "ICU_incidence"
+{txt} 18{com}.         qui renvars, presub(icu___incid_y_975_ DayIciUpRa)
+{txt} 19{com}.         qui renvars, presub(icu___incid_y_mea_ DayIciMeRa)
+{txt} 20{com}.         
+.         qui renvars, presub(reff________y_025_ DayRefLoRa) // "Reff"
+{txt} 21{com}.         qui renvars, presub(reff________y_975_ DayRefUpRa)
+{txt} 22{com}.         qui renvars, presub(reff________y_mea_ DayRefMeRa)
+{txt} 23{com}.         
+.         qui renvars, presub(rt__________y_025_ DayRttLoRa) // "Rt"
+{txt} 24{com}.         qui renvars, presub(rt__________y_975_ DayRttUpRa)
+{txt} 25{com}.         qui renvars, presub(rt__________y_mea_ DayRttMeRa)
+{txt} 26{com}.         
+.         qui renvars, presub(hospi_deman_y_025_ DayHodLoRa) // "hospital_demand"
+{txt} 27{com}.         qui renvars, presub(hospi_deman_y_975_ DayHodUpRa)
+{txt} 28{com}.         qui renvars, presub(hospi_deman_y_mea_ DayHodMeRa)
+{txt} 29{com}.         
+.         qui renvars, presub(hospi_incid_y_025_ DayHoiLoRa) // "hospital_incidence"
+{txt} 30{com}.         qui renvars, presub(hospi_incid_y_975_ DayHoiUpRa)
+{txt} 31{com}.         qui renvars, presub(hospi_incid_y_mea_ DayHoiMeRa)
+{txt} 32{com}.         
+.         qui renvars, presub(preval______y_025_ DayPreLoRa) // "prevalence"
+{txt} 33{com}.         qui renvars, presub(preval______y_975_ DayPreUpRa)
+{txt} 34{com}.         qui renvars, presub(preval______y_mea_ DayPreMeRa)
+{txt} 35{com}.         
+.         qui renvars, postsub(S1 A03S01V07) 
+{txt} 36{com}.         qui renvars, postsub(S2 A03S02V07) 
+{txt} 37{com}.         qui renvars, postsub(S3 A03S03V07) 
+{txt} 38{com}.         qui renvars, postsub(S4 A03S04V07) 
+{txt} 39{com}.         qui renvars, postsub(S5 A03S05V07) 
+{txt} 40{com}.         qui renvars, postsub(S6 A03S06V07) 
+{txt} 41{com}.         
+.         * "Wait Note: renvars are working ..."
+.         
+. {c )-} 
+{txt}
+{com}. *   
+. 
+. 
+. 
+. *
+. 
+. drop iso3c report_date version death_calibrated year month day date2 dateblock
+{txt}
+{com}. 
+. order date  
+{txt}
+{com}. 
+. label var DayCasLoRaA03S01V07 "Daily Cases Lower A03 S01 V07"
+{txt}
+{com}. label var DayCasLoRaA03S02V07 "Daily Cases Lower A03 S02 V07"
+{txt}
+{com}. label var DayCasLoRaA03S03V07 "Daily Cases Lower A03 S03 V07"
+{txt}
+{com}. label var DayCasLoRaA03S04V07 "Daily Cases Lower A03 S04 V07"
+{txt}
+{com}. label var DayCasLoRaA03S05V07 "Daily Cases Lower A03 S05 V07"
+{txt}
+{com}. label var DayCasLoRaA03S06V07 "Daily Cases Lower A03 S06 V07"
+{txt}
+{com}. label var DayCasMeRaA03S01V07 "Daily Cases Mean A03 S01 V07"
+{txt}
+{com}. label var DayCasMeRaA03S02V07 "Daily Cases Mean A03 S02 V07"
+{txt}
+{com}. label var DayCasMeRaA03S03V07 "Daily Cases Mean A03 S03 V07"
+{txt}
+{com}. label var DayCasMeRaA03S04V07 "Daily Cases Mean A03 S04 V07"
+{txt}
+{com}. label var DayCasMeRaA03S05V07 "Daily Cases Mean A03 S05 V07"
+{txt}
+{com}. label var DayCasMeRaA03S06V07 "Daily Cases Mean A03 S06 V07"
+{txt}
+{com}. label var DayCasUpRaA03S01V07 "Daily Cases Upper A03 S01 V07"
+{txt}
+{com}. label var DayCasUpRaA03S02V07 "Daily Cases Upper A03 S02 V07"
+{txt}
+{com}. label var DayCasUpRaA03S03V07 "Daily Cases Upper A03 S03 V07"
+{txt}
+{com}. label var DayCasUpRaA03S04V07 "Daily Cases Upper A03 S04 V07"
+{txt}
+{com}. label var DayCasUpRaA03S05V07 "Daily Cases Upper A03 S05 V07"
+{txt}
+{com}. label var DayCasUpRaA03S06V07 "Daily Cases Upper A03 S06 V07"
+{txt}
+{com}. label var DayDeaLoRaA03S01V07 "Daily Deaths Lower A03 S01 V07"
+{txt}
+{com}. label var DayDeaLoRaA03S02V07 "Daily Deaths Lower A03 S02 V07"
+{txt}
+{com}. label var DayDeaLoRaA03S03V07 "Daily Deaths Lower A03 S03 V07"
+{txt}
+{com}. label var DayDeaLoRaA03S04V07 "Daily Deaths Lower A03 S04 V07"
+{txt}
+{com}. label var DayDeaLoRaA03S05V07 "Daily Deaths Lower A03 S05 V07"
+{txt}
+{com}. label var DayDeaLoRaA03S06V07 "Daily Deaths Lower A03 S06 V07"
+{txt}
+{com}. label var DayDeaMeRaA03S01V07 "Daily Deaths Mean A03 S01 V07"
+{txt}
+{com}. label var DayDeaMeRaA03S02V07 "Daily Deaths Mean A03 S02 V07"
+{txt}
+{com}. label var DayDeaMeRaA03S03V07 "Daily Deaths Mean A03 S03 V07"
+{txt}
+{com}. label var DayDeaMeRaA03S04V07 "Daily Deaths Mean A03 S04 V07"
+{txt}
+{com}. label var DayDeaMeRaA03S05V07 "Daily Deaths Mean A03 S05 V07"
+{txt}
+{com}. label var DayDeaMeRaA03S06V07 "Daily Deaths Mean A03 S06 V07"
+{txt}
+{com}. label var DayDeaUpRaA03S01V07 "Daily Deaths Upper A03 S01 V07"
+{txt}
+{com}. label var DayDeaUpRaA03S02V07 "Daily Deaths Upper A03 S02 V07"
+{txt}
+{com}. label var DayDeaUpRaA03S03V07 "Daily Deaths Upper A03 S03 V07"
+{txt}
+{com}. label var DayDeaUpRaA03S04V07 "Daily Deaths Upper A03 S04 V07"
+{txt}
+{com}. label var DayDeaUpRaA03S05V07 "Daily Deaths Upper A03 S05 V07"
+{txt}
+{com}. label var DayDeaUpRaA03S06V07 "Daily Deaths Upper A03 S06 V07"
+{txt}
+{com}. label var TotCasLoRaA03S01V07 "Total Cases Lower A03 S01 V07"
+{txt}
+{com}. label var TotCasLoRaA03S02V07 "Total Cases Lower A03 S02 V07"
+{txt}
+{com}. label var TotCasLoRaA03S03V07 "Total Cases Lower A03 S03 V07"
+{txt}
+{com}. label var TotCasLoRaA03S04V07 "Total Cases Lower A03 S04 V07"
+{txt}
+{com}. label var TotCasLoRaA03S05V07 "Total Cases Lower A03 S05 V07"
+{txt}
+{com}. label var TotCasLoRaA03S06V07 "Total Cases Lower A03 S06 V07"
+{txt}
+{com}. label var TotCasMeRaA03S01V07 "Total Cases Mean A03 S01 V07"
+{txt}
+{com}. label var TotCasMeRaA03S02V07 "Total Cases Mean A03 S02 V07"
+{txt}
+{com}. label var TotCasMeRaA03S03V07 "Total Cases Mean A03 S03 V07"
+{txt}
+{com}. label var TotCasMeRaA03S04V07 "Total Cases Mean A03 S04 V07"
+{txt}
+{com}. label var TotCasMeRaA03S05V07 "Total Cases Mean A03 S05 V07"
+{txt}
+{com}. label var TotCasMeRaA03S06V07 "Total Cases Mean A03 S06 V07"
+{txt}
+{com}. label var TotCasUpRaA03S01V07 "Total Cases Upper A03 S01 V07"
+{txt}
+{com}. label var TotCasUpRaA03S02V07 "Total Cases Upper A03 S02 V07"
+{txt}
+{com}. label var TotCasUpRaA03S03V07 "Total Cases Upper A03 S03 V07"
+{txt}
+{com}. label var TotCasUpRaA03S04V07 "Total Cases Upper A03 S04 V07"
+{txt}
+{com}. label var TotCasUpRaA03S05V07 "Total Cases Upper A03 S05 V07"
+{txt}
+{com}. label var TotCasUpRaA03S06V07 "Total Cases Upper A03 S06 V07"
+{txt}
+{com}. label var TotDeaLoRaA03S01V07 "Total Deaths Lower A03 S01 V07"
+{txt}
+{com}. label var TotDeaLoRaA03S02V07 "Total Deaths Lower A03 S02 V07"
+{txt}
+{com}. label var TotDeaLoRaA03S03V07 "Total Deaths Lower A03 S03 V07"
+{txt}
+{com}. label var TotDeaLoRaA03S04V07 "Total Deaths Lower A03 S04 V07"
+{txt}
+{com}. label var TotDeaLoRaA03S05V07 "Total Deaths Lower A03 S05 V07"
+{txt}
+{com}. label var TotDeaLoRaA03S06V07 "Total Deaths Lower A03 S06 V07"
+{txt}
+{com}. label var TotDeaMeRaA03S01V07 "Total Deaths Mean A03 S01 V07"
+{txt}
+{com}. label var TotDeaMeRaA03S02V07 "Total Deaths Mean A03 S02 V07"
+{txt}
+{com}. label var TotDeaMeRaA03S03V07 "Total Deaths Mean A03 S03 V07"
+{txt}
+{com}. label var TotDeaMeRaA03S04V07 "Total Deaths Mean A03 S04 V07"
+{txt}
+{com}. label var TotDeaMeRaA03S05V07 "Total Deaths Mean A03 S05 V07"
+{txt}
+{com}. label var TotDeaMeRaA03S06V07 "Total Deaths Mean A03 S06 V07"
+{txt}
+{com}. label var TotDeaUpRaA03S01V07 "Total Deaths Upper A03 S01 V07"
+{txt}
+{com}. label var TotDeaUpRaA03S02V07 "Total Deaths Upper A03 S02 V07"
+{txt}
+{com}. label var TotDeaUpRaA03S03V07 "Total Deaths Upper A03 S03 V07"
+{txt}
+{com}. label var TotDeaUpRaA03S04V07 "Total Deaths Upper A03 S04 V07"
+{txt}
+{com}. label var TotDeaUpRaA03S05V07 "Total Deaths Upper A03 S05 V07"
+{txt}
+{com}. label var TotDeaUpRaA03S06V07 "Total Deaths Upper A03 S06 V07"
+{txt}
+{com}. 
+. 
+. * other outcomes
+. 
+. label var DayHodMeRaA03S01V07 "Daily hospital demand Mean A03 S01 V07"
+{txt}
+{com}. label var DayHodLoRaA03S01V07 "Daily hospital demand Lower A03 S01 V07"
+{txt}
+{com}. label var DayHodUpRaA03S01V07 "Daily hospital demand Upper A03 S01 V07"
+{txt}
+{com}. label var DayHodMeRaA03S02V07 "Daily hospital demand Mean A03 S02 V07"
+{txt}
+{com}. label var DayHodLoRaA03S02V07 "Daily hospital demand Lower A03 S02 V07"
+{txt}
+{com}. label var DayHodUpRaA03S02V07 "Daily hospital demand Upper A03 S02 V07"
+{txt}
+{com}. label var DayHodMeRaA03S03V07 "Daily hospital demand Mean A03 S03 V07"
+{txt}
+{com}. label var DayHodLoRaA03S03V07 "Daily hospital demand Lower A03 S03 V07"
+{txt}
+{com}. label var DayHodUpRaA03S03V07 "Daily hospital demand Upper A03 S03 V07"
+{txt}
+{com}. label var DayHodMeRaA03S04V07 "Daily hospital demand Mean A03 S04 V07"
+{txt}
+{com}. label var DayHodLoRaA03S04V07 "Daily hospital demand Lower A03 S04 V07"
+{txt}
+{com}. label var DayHodUpRaA03S04V07 "Daily hospital demand Upper A03 S04 V07" 
+{txt}
+{com}. label var DayHodMeRaA03S05V07 "Daily hospital demand Mean A03 S05 V07"
+{txt}
+{com}. label var DayHodLoRaA03S05V07 "Daily hospital demand Lower A03 S05 V07"
+{txt}
+{com}. label var DayHodUpRaA03S05V07 "Daily hospital demand Upper A03 S05 V07"
+{txt}
+{com}. label var DayHodMeRaA03S06V07 "Daily hospital demand Mean A03 S06 V07"
+{txt}
+{com}. label var DayHodLoRaA03S06V07 "Daily hospital demand Lower A03 S06 V07"
+{txt}
+{com}. label var DayHodUpRaA03S06V07 "Daily hospital demand Upper A03 S06 V07"
+{txt}
+{com}. 
+. label var DayHoiMeRaA03S01V07 "Daily hospital incidence Mean A03 S01 V07"
+{txt}
+{com}. label var DayHoiLoRaA03S01V07 "Daily hospital incidence Lower A03 S01 V07"
+{txt}
+{com}. label var DayHoiUpRaA03S01V07 "Daily hospital incidence Upper A03 S01 V07"
+{txt}
+{com}. label var DayHoiMeRaA03S02V07 "Daily hospital incidence Mean A03 S02 V07"
+{txt}
+{com}. label var DayHoiLoRaA03S02V07 "Daily hospital incidence Lower A03 S02 V07"
+{txt}
+{com}. label var DayHoiUpRaA03S02V07 "Daily hospital incidence Upper A03 S02 V07"
+{txt}
+{com}. label var DayHoiMeRaA03S03V07 "Daily hospital incidence Mean A03 S03 V07"
+{txt}
+{com}. label var DayHoiLoRaA03S03V07 "Daily hospital incidence Lower A03 S03 V07"
+{txt}
+{com}. label var DayHoiUpRaA03S03V07 "Daily hospital incidence Upper A03 S03 V07"
+{txt}
+{com}. label var DayHoiMeRaA03S04V07 "Daily hospital incidence Mean A03 S04 V07"
+{txt}
+{com}. label var DayHoiLoRaA03S04V07 "Daily hospital incidence Lower A03 S04 V07"
+{txt}
+{com}. label var DayHoiUpRaA03S04V07 "Daily hospital incidence Upper A03 S04 V07"
+{txt}
+{com}. label var DayHoiMeRaA03S05V07 "Daily hospital incidence Mean A03 S05 V07"
+{txt}
+{com}. label var DayHoiLoRaA03S05V07 "Daily hospital incidence Lower A03 S05 V07"
+{txt}
+{com}. label var DayHoiUpRaA03S05V07 "Daily hospital incidence Upper A03 S05 V07"
+{txt}
+{com}. label var DayHoiMeRaA03S06V07 "Daily hospital incidence Mean A03 S06 V07"
+{txt}
+{com}. label var DayHoiLoRaA03S06V07 "Daily hospital incidence Lower A03 S06 V07"
+{txt}
+{com}. label var DayHoiUpRaA03S06V07 "Daily hospital incidence Upper A03 S06 V07"
+{txt}
+{com}. 
+. label var DayIcdMeRaA03S01V07 "Daily ICU demand Mean A03 S01 V07"
+{txt}
+{com}. label var DayIcdLoRaA03S01V07 "Daily ICU demand Lower A03 S01 V07"
+{txt}
+{com}. label var DayIcdUpRaA03S01V07 "Daily ICU demand Upper A03 S01 V07"
+{txt}
+{com}. label var DayIcdMeRaA03S02V07 "Daily ICU demand Mean A03 S02 V07"
+{txt}
+{com}. label var DayIcdLoRaA03S02V07 "Daily ICU demand Lower A03 S02 V07"
+{txt}
+{com}. label var DayIcdUpRaA03S02V07 "Daily ICU demand Upper A03 S02 V07"
+{txt}
+{com}. label var DayIcdMeRaA03S03V07 "Daily ICU demand Mean A03 S03 V07"
+{txt}
+{com}. label var DayIcdLoRaA03S03V07 "Daily ICU demand Lower A03 S03 V07"
+{txt}
+{com}. label var DayIcdUpRaA03S03V07 "Daily ICU demand Upper A03 S03 V07"
+{txt}
+{com}. label var DayIcdMeRaA03S04V07 "Daily ICU demand Mean A03 S04 V07"
+{txt}
+{com}. label var DayIcdLoRaA03S04V07 "Daily ICU demand Lower A03 S04 V07"
+{txt}
+{com}. label var DayIcdUpRaA03S04V07 "Daily ICU demand Upper A03 S04 V07"
+{txt}
+{com}. label var DayIcdMeRaA03S05V07 "Daily ICU demand Mean A03 S05 V07"
+{txt}
+{com}. label var DayIcdLoRaA03S05V07 "Daily ICU demand Lower A03 S05 V07"
+{txt}
+{com}. label var DayIcdUpRaA03S05V07 "Daily ICU demand Upper A03 S05 V07"
+{txt}
+{com}. label var DayIcdMeRaA03S06V07 "Daily ICU demand Mean A03 S06 V07"
+{txt}
+{com}. label var DayIcdLoRaA03S06V07 "Daily ICU demand Lower A03 S06 V07"
+{txt}
+{com}. label var DayIcdUpRaA03S06V07 "Daily ICU demand Upper A03 S06 V07"
+{txt}
+{com}. 
+. label var DayIciMeRaA03S01V07 "Daily ICU incidence Mean A03 S01 V07"
+{txt}
+{com}. label var DayIciLoRaA03S01V07 "Daily ICU incidence Lower A03 S01 V07"
+{txt}
+{com}. label var DayIciUpRaA03S01V07 "Daily ICU incidence Upper A03 S01 V07"
+{txt}
+{com}. label var DayIciMeRaA03S02V07 "Daily ICU incidence Mean A03 S02 V07"
+{txt}
+{com}. label var DayIciLoRaA03S02V07 "Daily ICU incidence Lower A03 S02 V07"
+{txt}
+{com}. label var DayIciUpRaA03S02V07 "Daily ICU incidence Upper A03 S02 V07"
+{txt}
+{com}. label var DayIciMeRaA03S03V07 "Daily ICU incidence Mean A03 S03 V07"
+{txt}
+{com}. label var DayIciLoRaA03S03V07 "Daily ICU incidence Lower A03 S03 V07"
+{txt}
+{com}. label var DayIciUpRaA03S03V07 "Daily ICU incidence Upper A03 S03 V07"
+{txt}
+{com}. label var DayIciMeRaA03S04V07 "Daily ICU incidence Mean A03 S04 V07"
+{txt}
+{com}. label var DayIciLoRaA03S04V07 "Daily ICU incidence Lower A03 S04 V07"
+{txt}
+{com}. label var DayIciUpRaA03S04V07 "Daily ICU incidence Upper A03 S04 V07"
+{txt}
+{com}. label var DayIciMeRaA03S05V07 "Daily ICU incidence Mean A03 S05 V07"
+{txt}
+{com}. label var DayIciLoRaA03S05V07 "Daily ICU incidence Lower A03 S05 V07"
+{txt}
+{com}. label var DayIciUpRaA03S05V07 "Daily ICU incidence Upper A03 S05 V07"
+{txt}
+{com}. label var DayIciMeRaA03S06V07 "Daily ICU incidence Mean A03 S06 V07"
+{txt}
+{com}. label var DayIciLoRaA03S06V07 "Daily ICU incidence Lower A03 S06 V07"
+{txt}
+{com}. label var DayIciUpRaA03S06V07 "Daily ICU incidence Upper A03 S06 V07"
+{txt}
+{com}. 
+. label var DayPreMeRaA03S01V07 "Daily prevalence Mean A03 S01 V07"
+{txt}
+{com}. label var DayPreLoRaA03S01V07 "Daily prevalence Lower A03 S01 V07"
+{txt}
+{com}. label var DayPreUpRaA03S01V07 "Daily prevalence Upper A03 S01 V07"
+{txt}
+{com}. label var DayPreMeRaA03S02V07 "Daily prevalence Mean A03 S02 V07"
+{txt}
+{com}. label var DayPreLoRaA03S02V07 "Daily prevalence Lower A03 S02 V07"
+{txt}
+{com}. label var DayPreUpRaA03S02V07 "Daily prevalence Upper A03 S02 V07"
+{txt}
+{com}. label var DayPreMeRaA03S03V07 "Daily prevalence Mean A03 S03 V07"
+{txt}
+{com}. label var DayPreLoRaA03S03V07 "Daily prevalence Lower A03 S03 V07"
+{txt}
+{com}. label var DayPreUpRaA03S03V07 "Daily prevalence Upper A03 S03 V07"
+{txt}
+{com}. label var DayPreMeRaA03S04V07 "Daily prevalence Mean A03 S04 V07"
+{txt}
+{com}. label var DayPreLoRaA03S04V07 "Daily prevalence Lower A03 S04 V07"
+{txt}
+{com}. label var DayPreUpRaA03S04V07 "Daily prevalence Upper A03 S04 V07"
+{txt}
+{com}. label var DayPreMeRaA03S05V07 "Daily prevalence Mean A03 S05 V07"
+{txt}
+{com}. label var DayPreLoRaA03S05V07 "Daily prevalence Lower A03 S05 V07"
+{txt}
+{com}. label var DayPreUpRaA03S05V07 "Daily prevalence Upper A03 S05 V07"
+{txt}
+{com}. label var DayPreMeRaA03S06V07 "Daily prevalence Mean A03 S06 V07"
+{txt}
+{com}. label var DayPreLoRaA03S06V07 "Daily prevalence Lower A03 S06 V07"
+{txt}
+{com}. label var DayPreUpRaA03S06V07 "Daily prevalence Upper A03 S06 V07"
+{txt}
+{com}. 
+. label var DayRefMeRaA03S01V07 "Daily R effective Mean A03 S01 V07"
+{txt}
+{com}. label var DayRefLoRaA03S01V07 "Daily R effective Lower A03 S01 V07"
+{txt}
+{com}. label var DayRefUpRaA03S01V07 "Daily R effective Upper A03 S01 V07"
+{txt}
+{com}. label var DayRefMeRaA03S02V07 "Daily R effective Mean A03 S02 V07"
+{txt}
+{com}. label var DayRefLoRaA03S02V07 "Daily R effective Lower A03 S02 V07"
+{txt}
+{com}. label var DayRefUpRaA03S02V07 "Daily R effective Upper A03 S02 V07"
+{txt}
+{com}. label var DayRefMeRaA03S03V07 "Daily R effective Mean A03 S03 V07"
+{txt}
+{com}. label var DayRefLoRaA03S03V07 "Daily R effective Lower A03 S03 V07"
+{txt}
+{com}. label var DayRefUpRaA03S03V07 "Daily R effective Upper A03 S03 V07"
+{txt}
+{com}. label var DayRefMeRaA03S04V07 "Daily R effective Mean A03 S04 V07"
+{txt}
+{com}. label var DayRefLoRaA03S04V07 "Daily R effective Lower A03 S04 V07"
+{txt}
+{com}. label var DayRefUpRaA03S04V07 "Daily R effective Upper A03 S04 V07"
+{txt}
+{com}. label var DayRefMeRaA03S05V07 "Daily R effective Mean A03 S05 V07"
+{txt}
+{com}. label var DayRefLoRaA03S05V07 "Daily R effective Lower A03 S05 V07"
+{txt}
+{com}. label var DayRefUpRaA03S05V07 "Daily R effective Upper A03 S05 V07"
+{txt}
+{com}. label var DayRefMeRaA03S06V07 "Daily R effective Mean A03 S06 V07"
+{txt}
+{com}. label var DayRefLoRaA03S06V07 "Daily R effective Lower A03 S06 V07"
+{txt}
+{com}. label var DayRefUpRaA03S06V07 "Daily R effective Upper A03 S06 V07"
+{txt}
+{com}. 
+. label var DayRttMeRaA03S01V07 "Daily R t Mean A03 S01 V07"
+{txt}
+{com}. label var DayRttLoRaA03S01V07 "Daily R t Lower A03 S01 V07"
+{txt}
+{com}. label var DayRttUpRaA03S01V07 "Daily R t Upper A03 S01 V07"
+{txt}
+{com}. label var DayRttMeRaA03S02V07 "Daily R t Mean A03 S02 V07"
+{txt}
+{com}. label var DayRttLoRaA03S02V07 "Daily R t Lower A03 S02 V07"
+{txt}
+{com}. label var DayRttUpRaA03S02V07 "Daily R t Upper A03 S02 V07"
+{txt}
+{com}. label var DayRttMeRaA03S03V07 "Daily R t Mean A03 S03 V07"
+{txt}
+{com}. label var DayRttLoRaA03S03V07 "Daily R t Lower A03 S03 V07"
+{txt}
+{com}. label var DayRttUpRaA03S03V07 "Daily R t Upper A03 S03 V07"
+{txt}
+{com}. label var DayRttMeRaA03S04V07 "Daily R t Mean A03 S04 V07"
+{txt}
+{com}. label var DayRttLoRaA03S04V07 "Daily R t Lower A03 S04 V07"
+{txt}
+{com}. label var DayRttUpRaA03S04V07 "Daily R t Upper A03 S04 V07"
+{txt}
+{com}. label var DayRttMeRaA03S05V07 "Daily R t Mean A03 S05 V07"
+{txt}
+{com}. label var DayRttLoRaA03S05V07 "Daily R t Lower A03 S05 V07"
+{txt}
+{com}. label var DayRttUpRaA03S05V07 "Daily R t Upper A03 S05 V07"
+{txt}
+{com}. label var DayRttMeRaA03S06V07 "Daily R t Mean A03 S06 V07"
+{txt}
+{com}. label var DayRttLoRaA03S06V07 "Daily R t Lower A03 S06 V07"
+{txt}
+{com}. label var DayRttUpRaA03S06V07 "Daily R t Upper A03 S06 V07"
+{txt}
+{com}. 
+. 
+. rename country loc_grand_name
+{res}{txt}
+{com}. 
+. 
+. 
+. order ///
+> loc_grand_name date     ///
+> TotDeaMeRaA03S01V07     TotDeaLoRaA03S01V07     TotDeaUpRaA03S01V07     ///
+> TotDeaMeRaA03S02V07     TotDeaLoRaA03S02V07     TotDeaUpRaA03S02V07     ///
+> TotDeaMeRaA03S03V07     TotDeaLoRaA03S03V07     TotDeaUpRaA03S03V07     ///
+> TotDeaMeRaA03S04V07     TotDeaLoRaA03S04V07     TotDeaUpRaA03S04V07     ///
+> TotDeaMeRaA03S05V07     TotDeaLoRaA03S05V07     TotDeaUpRaA03S05V07     ///
+> TotDeaMeRaA03S06V07     TotDeaLoRaA03S06V07     TotDeaUpRaA03S06V07     ///
+> DayDeaMeRaA03S01V07     DayDeaLoRaA03S01V07     DayDeaUpRaA03S01V07     ///
+> DayDeaMeRaA03S02V07     DayDeaLoRaA03S02V07     DayDeaUpRaA03S02V07     ///
+> DayDeaMeRaA03S03V07     DayDeaLoRaA03S03V07     DayDeaUpRaA03S03V07     ///
+> DayDeaMeRaA03S04V07     DayDeaLoRaA03S04V07     DayDeaUpRaA03S04V07     ///
+> DayDeaMeRaA03S05V07     DayDeaLoRaA03S05V07     DayDeaUpRaA03S05V07     ///
+> DayDeaMeRaA03S06V07     DayDeaLoRaA03S06V07     DayDeaUpRaA03S06V07     ///
+> TotCasMeRaA03S01V07     TotCasLoRaA03S01V07     TotCasUpRaA03S01V07     ///
+> TotCasMeRaA03S02V07     TotCasLoRaA03S02V07     TotCasUpRaA03S02V07     ///
+> TotCasMeRaA03S03V07     TotCasLoRaA03S03V07     TotCasUpRaA03S03V07     ///
+> TotCasMeRaA03S04V07     TotCasLoRaA03S04V07     TotCasUpRaA03S04V07     ///
+> TotCasMeRaA03S05V07     TotCasLoRaA03S05V07     TotCasUpRaA03S05V07     ///
+> TotCasMeRaA03S06V07     TotCasLoRaA03S06V07     TotCasUpRaA03S06V07     ///
+> DayCasMeRaA03S01V07     DayCasLoRaA03S01V07     DayCasUpRaA03S01V07     ///
+> DayCasMeRaA03S02V07     DayCasLoRaA03S02V07     DayCasUpRaA03S02V07     ///
+> DayCasMeRaA03S03V07     DayCasLoRaA03S03V07     DayCasUpRaA03S03V07     ///
+> DayCasMeRaA03S04V07     DayCasLoRaA03S04V07     DayCasUpRaA03S04V07     ///
+> DayCasMeRaA03S05V07     DayCasLoRaA03S05V07     DayCasUpRaA03S05V07     ///
+> DayCasMeRaA03S06V07     DayCasLoRaA03S06V07     DayCasUpRaA03S06V07
+{txt}
+{com}. 
+. 
+.  *
+.  
+.  
+. * gen cfr
+. 
+. gen DayCfrMeRaA03S01V07 = 100 * DayDeaMeRaA03S01V07 / DayCasMeRaA03S01V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA03S01V07 = 100 * DayDeaLoRaA03S01V07 / DayCasLoRaA03S01V07 
+{txt}(21 missing values generated)
+
+{com}. gen DayCfrUpRaA03S01V07 = 100 * DayDeaUpRaA03S01V07 / DayCasUpRaA03S01V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrMeRaA03S02V07 = 100 * DayDeaMeRaA03S02V07 / DayCasMeRaA03S02V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA03S02V07 = 100 * DayDeaLoRaA03S02V07 / DayCasLoRaA03S02V07 
+{txt}(8 missing values generated)
+
+{com}. gen DayCfrUpRaA03S02V07 = 100 * DayDeaUpRaA03S02V07 / DayCasUpRaA03S02V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrMeRaA03S03V07 = 100 * DayDeaMeRaA03S03V07 / DayCasMeRaA03S03V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA03S03V07 = 100 * DayDeaLoRaA03S03V07 / DayCasLoRaA03S03V07 
+{txt}(8 missing values generated)
+
+{com}. gen DayCfrUpRaA03S03V07 = 100 * DayDeaUpRaA03S03V07 / DayCasUpRaA03S03V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrMeRaA03S04V07 = 100 * DayDeaMeRaA03S04V07 / DayCasMeRaA03S04V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA03S04V07 = 100 * DayDeaLoRaA03S04V07 / DayCasLoRaA03S04V07 
+{txt}(14 missing values generated)
+
+{com}. gen DayCfrUpRaA03S04V07 = 100 * DayDeaUpRaA03S04V07 / DayCasUpRaA03S04V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrMeRaA03S05V07 = 100 * DayDeaMeRaA03S05V07 / DayCasMeRaA03S05V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA03S05V07 = 100 * DayDeaLoRaA03S05V07 / DayCasLoRaA03S05V07 
+{txt}(7 missing values generated)
+
+{com}. gen DayCfrUpRaA03S05V07 = 100 * DayDeaUpRaA03S05V07 / DayCasUpRaA03S05V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrMeRaA03S06V07 = 100 * DayDeaMeRaA03S06V07 / DayCasMeRaA03S06V07 
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA03S06V07 = 100 * DayDeaLoRaA03S06V07 / DayCasLoRaA03S06V07 
+{txt}(7 missing values generated)
+
+{com}. gen DayCfrUpRaA03S06V07 = 100 * DayDeaUpRaA03S06V07 / DayCasUpRaA03S06V07 
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayCfrMeRaA03S01V07 "Daily CFR Mean A03 S01 V07"
+{txt}
+{com}. label var DayCfrLoRaA03S01V07 "Daily CFR Lower A03 S01 V07"
+{txt}
+{com}. label var DayCfrUpRaA03S01V07 "Daily CFR Upper A03 S01 V07"
+{txt}
+{com}. label var DayCfrMeRaA03S02V07 "Daily CFR Mean A03 S02 V07"
+{txt}
+{com}. label var DayCfrLoRaA03S02V07 "Daily CFR Lower A03 S02 V07"
+{txt}
+{com}. label var DayCfrUpRaA03S02V07 "Daily CFR Upper A03 S02 V07"
+{txt}
+{com}. label var DayCfrMeRaA03S03V07 "Daily CFR Mean A03 S03 V07"
+{txt}
+{com}. label var DayCfrLoRaA03S03V07 "Daily CFR Lower A03 S03 V07"
+{txt}
+{com}. label var DayCfrUpRaA03S03V07 "Daily CFR Upper A03 S03 V07"
+{txt}
+{com}. label var DayCfrMeRaA03S04V07 "Daily CFR Mean A03 S04 V07"
+{txt}
+{com}. label var DayCfrLoRaA03S04V07 "Daily CFR Lower A03 S04 V07"
+{txt}
+{com}. label var DayCfrUpRaA03S04V07 "Daily CFR Upper A03 S04 V07"
+{txt}
+{com}. label var DayCfrMeRaA03S05V07 "Daily CFR Mean A03 S05 V07"
+{txt}
+{com}. label var DayCfrLoRaA03S05V07 "Daily CFR Lower A03 S05 V07"
+{txt}
+{com}. label var DayCfrUpRaA03S05V07 "Daily CFR Upper A03 S05 V07"
+{txt}
+{com}. label var DayCfrMeRaA03S06V07 "Daily CFR Mean A03 S06 V07"
+{txt}
+{com}. label var DayCfrLoRaA03S06V07 "Daily CFR Lower A03 S06 V07"
+{txt}
+{com}. label var DayCfrUpRaA03S06V07 "Daily CFR Upper A03 S06 V07"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. * gen "Daily cases mean div by daily deaths mean IMPE DayCbD" for visulization of temporal relation of deaths and cases peaks 
+. 
+. 
+.         summ DayDeaMeRaA03S02V07 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~2V07 {c |}{res}        524     132.988    99.60013          0     460.09
+{txt}
+{com}.         gen DayDeMMeRaA03S02V07 = r(mean)
+{txt}
+{com}.         label var DayDeMMeRaA03S02V07 "Daily deaths mean IMPE DayDeM"
+{txt}
+{com}. 
+.         summ DayCasMeRaA03S02V07 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~2V07 {c |}{res}        524    41522.99    29873.98          0   132379.5
+{txt}
+{com}.         gen DayCaMMeRaA03S02V07 = r(mean)
+{txt}
+{com}.         label var DayCaMMeRaA03S02V07 "Daily cases mean IMPE DayCaM"
+{txt}
+{com}.                            
+.         gen DayCbDMeRaA03S02V07 = DayCaMMeRaA03S02V07 / DayDeMMeRaA03S02V07
+{txt}
+{com}.         label var DayCbDMeRaA03S02V07 "Daily cases mean div by daily deaths mean IMPE DayCbD"
+{txt}
+{com}.         summ DayCbDMeRaA03S02V07
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCbDMeR~07 {c |}{res}        524    312.2311           0   312.2311   312.2311
+{txt}
+{com}.                                               
+.         gen DayDMuMeRaA03S02V07 = DayDeaMeRaA03S02V07 * DayCbDMeRaA03S02V07
+{txt}
+{com}.     label var DayDMuMeRaA03S02V07 "Daily deaths scaled (times means of cases by deaths) IMPE"
+{txt}
+{com}.         summ DayDMuMeRaA03S02V07
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDMuMeR~07 {c |}{res}        524    41522.98    31098.26          0   143654.4
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. *************************
+. 
+. * graphs 
+. 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. * daily deaths, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayDeaMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayDeaMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayDeaMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayDeaMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayDeaMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 1 COVID-19 daily deaths, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 1 COVID-19 daily deaths, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 1 COVID-19 daily deaths, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 1 COVID-19 daily deaths, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily deaths, S2 = median scenario 
+. 
+. twoway ///
+> (rarea DayDeaLoRaA03S02V07 DayDeaUpRaA03S02V07 date, sort color(green*0.2)) ///
+> (line DayDeaMeRaA03S02V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 2 COVID-19 daily deaths, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 2 COVID-19 daily deaths, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 2 COVID-19 daily deaths, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 2 COVID-19 daily deaths, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total deaths, 6 scenarios
+. 
+. 
+. twoway ///
+> (line TotDeaMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line TotDeaMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line TotDeaMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line TotDeaMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line TotDeaMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 3 COVID-19 total deaths, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 3 COVID-19 total deaths, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 3 COVID-19 total deaths, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 3 COVID-19 total deaths, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total deaths, S2 = median scenario 
+. 
+. twoway ///
+> (rarea TotDeaLoRaA03S02V07 TotDeaUpRaA03S02V07 date, sort color(green*0.2)) ///
+> (line TotDeaMeRaA03S02V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 4 COVID-19 total deaths, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 4 COVID-19 total deaths, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 4 COVID-19 total deaths, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 4 COVID-19 total deaths, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayCasMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayCasMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayCasMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayCasMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayCasMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayCasMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 5 COVID-19 daily cases, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 5 COVID-19 daily cases, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 5 COVID-19 daily cases, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 5 COVID-19 daily cases, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases, S2 = median scenario 
+. 
+. twoway ///
+> (rarea DayCasLoRaA03S02V07 DayCasUpRaA03S02V07 date, sort color(green*0.2)) ///
+> (line DayCasMeRaA03S02V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 6 COVID-19 daily cases, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 6 COVID-19 daily cases, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 6 COVID-19 daily cases, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 6 COVID-19 daily cases, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases, 6 scenarios
+. 
+. 
+. twoway ///
+> (line TotCasMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line TotCasMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line TotCasMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line TotCasMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line TotCasMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line TotCasMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 7 COVID-19 total cases, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 7 COVID-19 total cases, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 7 COVID-19 total cases, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 7 COVID-19 total cases, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases, S2 = median scenario 
+. 
+. twoway ///
+> (rarea TotCasLoRaA03S02V07 TotCasUpRaA03S02V07 date, sort color(green*0.2)) ///
+> (line TotCasMeRaA03S02V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Total cases) title("COVID-19 total cases, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 8 COVID-19 total cases, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 8 COVID-19 total cases, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 8 COVID-19 total cases, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 8 COVID-19 total cases, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cfr, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayCfrMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayCfrMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayCfrMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayCfrMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayCfrMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayCfrMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 9 COVID-19 daily CFR, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 9 COVID-19 daily CFR, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 9 COVID-19 daily CFR, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 9 COVID-19 daily CFR, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cfr, S2 = median scenario 
+. 
+. twoway ///
+> (rarea DayCfrLoRaA03S02V07 DayCfrUpRaA03S02V07 date, sort color(green*0.2)) ///
+> (line DayCfrMeRaA03S02V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 10 COVID-19 daily CFR, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 10 COVID-19 daily CFR, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 10 COVID-19 daily CFR, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 10 COVID-19 daily CFR, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. * other outcomes
+. 
+. 
+. 
+. * daily hospital demand, median scenario
+. 
+. 
+. twoway ///
+> (rarea DayHodLoRaA03S01V07 DayHodUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayHodMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily hospital demand, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 11 COVID-19 daily hospital demand, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 11 COVID-19 daily hospital demand, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 11 COVID-19 daily hospital demand, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 11 COVID-19 daily hospital demand, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily hospital demand, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayHodMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayHodMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayHodMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayHodMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayHodMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayHodMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily hospital demand, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 12 COVID-19 daily hospital demand, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 12 COVID-19 daily hospital demand, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 12 COVID-19 daily hospital demand, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 12 COVID-19 daily hospital demand, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily hospital incidence, median scenario
+. 
+. 
+. twoway ///
+> (rarea DayHoiLoRaA03S01V07 DayHoiUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayHoiMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily hospital incidence, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 13 COVID-19 daily hospital incidence, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 13 COVID-19 daily hospital incidence, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 13 COVID-19 daily hospital incidence, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 13 COVID-19 daily hospital incidence, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. * daily hospital incidence, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayHoiMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayHoiMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayHoiMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayHoiMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayHoiMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayHoiMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily hospital incidence, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 14 COVID-19 daily hospital incidence, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 14 COVID-19 daily hospital incidence, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 14 COVID-19 daily hospital incidence, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 14 COVID-19 daily hospital incidence, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily ICU demand, median scenario
+. 
+. 
+. twoway ///
+> (rarea DayIcdLoRaA03S01V07 DayIcdUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayIcdMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily ICU demand, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 15 COVID-19 daily ICU demand, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 15 COVID-19 daily ICU demand, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 15 COVID-19 daily ICU demand, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 15 COVID-19 daily ICU demand, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily ICU demand, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayIcdMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayIcdMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayIcdMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayIcdMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayIcdMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayIcdMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily ICU demand, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 16 COVID-19 daily ICU demand, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 16 COVID-19 daily ICU demand, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 16 COVID-19 daily ICU demand, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 16 COVID-19 daily ICU demand, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily ICU incidence, median scenario
+. 
+. 
+. twoway ///
+> (rarea DayIciLoRaA03S01V07 DayIciUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayIciMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily ICU incidence, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 17 COVID-19 daily ICU incidence, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 17 COVID-19 daily ICU incidence, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 17 COVID-19 daily ICU incidence, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 17 COVID-19 daily ICU incidence, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. * daily ICU incidence, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayIciMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayIciMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayIciMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayIciMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayIciMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayIciMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily ICU incidence, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 18 COVID-19 daily ICU incidence, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 18 COVID-19 daily ICU incidence, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 18 COVID-19 daily ICU incidence, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 18 COVID-19 daily ICU incidence, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * daily R effective, median scenario Reff
+. 
+. 
+. twoway ///
+> (rarea DayRefLoRaA03S01V07 DayRefUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayRefMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily R effective, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 19 COVID-19 daily R effective, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 19 COVID-19 daily R effective, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 19 COVID-19 daily R effective, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 19 COVID-19 daily R effective, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. * daily R effective, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayRefMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayRefMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayRefMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayRefMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayRefMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayRefMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily R effective, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 20 COVID-19 daily R effective, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 20 COVID-19 daily R effective, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 20 COVID-19 daily R effective, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 20 COVID-19 daily R effective, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily R t, median scenario 
+. 
+. 
+. twoway ///
+> (rarea DayRttLoRaA03S01V07 DayRttUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayRttMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily R t, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 21 COVID-19 daily R t, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 21 COVID-19 daily R t, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 21 COVID-19 daily R t, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 21 COVID-19 daily R t, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily R t, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayRttMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayRttMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayRttMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayRttMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayRttMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayRttMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily R t, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 22 COVID-19 daily R t, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 22 COVID-19 daily R t, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 22 COVID-19 daily R t, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 22 COVID-19 daily R t, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily prevalence, median scenario 
+. 
+. 
+. twoway ///
+> (rarea DayPreLoRaA03S01V07 DayPreUpRaA03S01V07 date, sort color(green*0.2)) ///
+> (line DayPreMeRaA03S01V07 date, sort lcolor(black)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> ytitle(Daily outcome) title("COVID-19 daily prevalence, Iran, IMPE, median scenario", size(medium)) legend(off)
+{res}{txt}
+{com}. 
+. graph save "graph 23 COVID-19 daily prevalence, median scenario, Iran, IMPE.gph", replace
+{res}{txt}(file graph 23 COVID-19 daily prevalence, median scenario, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 23 COVID-19 daily prevalence, median scenario, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 23 COVID-19 daily prevalence, median scenario, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily prevalence, 6 scenarios
+. 
+. 
+. twoway ///
+> (line DayPreMeRaA03S01V07 date, sort lcolor(green)) ///
+> (line DayPreMeRaA03S02V07 date, sort lcolor(black)) ///
+> (line DayPreMeRaA03S03V07 date, sort lcolor(red)) ///
+> (line DayPreMeRaA03S04V07 date, sort lcolor(green) lpattern(dash)) ///
+> (line DayPreMeRaA03S05V07 date, sort lcolor(black) lpattern(dash)) ///
+> (line DayPreMeRaA03S06V07 date, sort lcolor(red) lpattern(dash)) ///
+> if date > td(31dec2019) & date < td(2jul2021) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily prevalence, Iran, IMPE, 6 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6") rows(1))
+{res}{txt}
+{com}.            
+. graph save "graph 24 COVID-19 daily prevalence, 6 scenarios, Iran, IMPE.gph", replace
+{res}{txt}(file graph 24 COVID-19 daily prevalence, 6 scenarios, Iran, IMPE.gph saved)
+
+{com}. graph export "graph 24 COVID-19 daily prevalence, 6 scenarios, Iran, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/graph 24 COVID-19 daily prevalence, 6 scenarios, Iran, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. * DayCas DayDeaDay Dea_multip
+. 
+. twoway ///
+> (line DayCasMeRaA03S02V07 date, sort lcolor(blue)) ///
+> (line DayDeaMeRaA03S02V07 date, sort lcolor(red)) ///
+> (line DayDMuMeRaA03S02V07 date, sort lpattern(dot) lcolor(red)) ///
+> if date > td(01jan2020) ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases and deaths) title("COVID-19 daily cases and deaths, Iran, IMPE", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(4)) legend(region(lcolor(none)))  ///
+> legend(order(1 "Daily cases" 2 "Daily deaths" 3 "Daily deaths scaled for visualization") size(small)) ///
+> subtitle("Daily deaths, scaled = times (means of cases divided by deaths) for visualization only", size(small)) ///
+> note("Current scenario, mean estimate")
+{res}{txt}
+{com}. 
+. qui graph save "graph 25 COVID-19 daily deaths and cases Iran, IMPE.gph", replace
+{txt}
+{com}. qui graph export "graph 25 COVID-19 daily deaths and cases Iran, IMPE.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. *************************************
+. 
+. * Locate peak dates and values 
+. 
+. /*
+> 
+> * IMPE daily deaths after third peak:
+> (graph 1 COVID-19 daily deaths, 6 scenarios, Iran, IMPE)
+> 
+> One small peak in 21-02-01 to 21-04-01 for all scenarios  date > td(01feb2021) &  date < td(01apr2021)
+>  
+> 
+> After that small peak,   
+> no 4th peak, S2 (median) increases slightly until end date  date == td(16jun2021)
+> no 4th peak, S1 (best) decreases drastically until end date  date == td(16jun2021)
+> yes 4th peak, S3 (works) shoots up to a forth peak early after 21-06-01  date >  td(01apr2021)
+> 
+> 
+> 
+> 
+> * IMPE daily cases after third peak:
+> (graph 5 COVID-19 daily cases, 6 scenarios, Iran, IMPE)
+> 
+> One small peak in 21-02-01 to 21-03-01  date > td(01feb2021) &  date < td(01mar2021)
+> 
+> After that small peak,   
+> no 4th peak, S2 (median) increases slightly until end date      date == td(16jun2021)
+> no 4th peak, S1 (best) decreases drastically until end date      date == td(16jun2021)
+> yes 4th peak, S3 (works) shoots up to a forth peak before 21-06-01      date >  td(01apr2021)
+> 
+>                                                 
+>           summ: S1 and S2 do not show a large fourth peak during the time shown (ending 16jun2021), but S3 does.
+> 
+> */
+. 
+. *************************************
+. 
+. * Locate peak dates and values - deaths 
+. 
+. 
+. 
+. * S2 = median scenario 
+. 
+. 
+. * first peak
+. 
+. summ DayDeaMeRaA03S02V07 if date > td(15mar2020) & date < td(15apr2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~2V07 {c |}{res}         30    139.5457    27.58156      82.17     170.57
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P1V = r(max)
+{txt}
+{com}.  
+. summ date if DayDeaMeRaA03S02V07 == DayDeaMeRaA03S02V07P1V & date > td(15mar2020) & date < td(15apr2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22011           .      22011      22011
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P1D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S02V07 if date == DayDeaMeRaA03S02V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~2V07 {c |}{res}          1       136.9           .      136.9      136.9
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S02V07P1V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S02V07 if date == DayDeaMeRaA03S02V07P1D 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~2V07 {c |}{res}          1      214.57           .     214.57     214.57
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S02V07P1V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S02V07P1V "DayDeaMeRaA03S02V07 Peak 1 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S02V07P1D "DayDeaMeRaA03S02V07 Peak 1 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S02V07P1V "DayDeaLoRaA03S02V07 Peak 1 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S02V07P1V "DayDeaUpRaA03S02V07 Peak 1 Value"
+{txt}
+{com}. format DayDeaMeRaA03S02V07P1D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S02V07P1V DayDeaLoRaA03S02V07P1V DayDeaUpRaA03S02V07P1V DayDeaMeRaA03S02V07P1D
+
+{res}-> tabulation of DayDeaMeRaA03S02V07P1V  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     170.57 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S02V07P1V  
+
+{txt}DayDeaLoRaA {c |}
+   03S02V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      136.9 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S02V07P1V  
+
+{txt}DayDeaUpRaA {c |}
+   03S02V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     214.57 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S02V07P1D  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+Peak 1 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  06Apr2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * second peak 
+. 
+. summ DayDeaMeRaA03S02V07 if date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~2V07 {c |}{res}         28    217.0511    27.33943     175.38     254.81
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P2V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S02V07 == DayDeaMeRaA03S02V07P2V & date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22123           .      22123      22123
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P2D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S02V07 if date == DayDeaMeRaA03S02V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~2V07 {c |}{res}          1      197.48           .     197.48     197.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S02V07P2V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S02V07 if date == DayDeaMeRaA03S02V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~2V07 {c |}{res}          1      311.05           .     311.05     311.05
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S02V07P2V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S02V07P2V "DayDeaMeRaA03S02V07 Peak 2 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S02V07P2D "DayDeaMeRaA03S02V07 Peak 2 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S02V07P2V "DayDeaLoRaA03S02V07 Peak 2 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S02V07P2V "DayDeaUpRaA03S02V07 Peak 2 Value"
+{txt}
+{com}. format DayDeaMeRaA03S02V07P2D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S02V07P2V DayDeaLoRaA03S02V07P2V DayDeaUpRaA03S02V07P2V DayDeaMeRaA03S02V07P2D
+
+{res}-> tabulation of DayDeaMeRaA03S02V07P2V  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     254.81 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S02V07P2V  
+
+{txt}DayDeaLoRaA {c |}
+   03S02V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     197.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S02V07P2V  
+
+{txt}DayDeaUpRaA {c |}
+   03S02V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     311.05 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S02V07P2D  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+Peak 2 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27Jul2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * third peak 
+. 
+. summ DayDeaMeRaA03S02V07 if date > td(01oct2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~2V07 {c |}{res}         59    324.4232    94.01519     202.49     460.09
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P3V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S02V07 == DayDeaMeRaA03S02V07P3V & date > td(01nov2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22230           .      22230      22230
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P3D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S02V07 if date == DayDeaMeRaA03S02V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~2V07 {c |}{res}          1      365.48           .     365.48     365.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S02V07P3V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S02V07 if date == DayDeaMeRaA03S02V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~2V07 {c |}{res}          1      569.52           .     569.52     569.52
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S02V07P3V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S02V07P3V "DayDeaMeRaA03S02V07 Peak 3 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S02V07P3D "DayDeaMeRaA03S02V07 Peak 3 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S02V07P3V "DayDeaLoRaA03S02V07 Peak 3 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S02V07P3V "DayDeaUpRaA03S02V07 Peak 3 Value"
+{txt}
+{com}. format DayDeaMeRaA03S02V07P3D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S02V07P3V DayDeaLoRaA03S02V07P3V DayDeaUpRaA03S02V07P3V DayDeaMeRaA03S02V07P3D
+
+{res}-> tabulation of DayDeaMeRaA03S02V07P3V  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     460.09 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S02V07P3V  
+
+{txt}DayDeaLoRaA {c |}
+   03S02V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     365.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S02V07P3V  
+
+{txt}DayDeaUpRaA {c |}
+   03S02V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     569.52 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S02V07P3D  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  11Nov2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * end date avialable 
+. 
+. summ date if DayDeaMeRaA03S02V07 != . 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}        524     22185.5      151.41      21924      22447
+{txt}
+{com}. 
+. gen A03DZ = r(max)
+{txt}
+{com}. 
+. label var A03DZ "A03 End date"
+{txt}
+{com}. 
+. format A03DZ %tdDDMonCCYY
+{txt}
+{com}. 
+. summ DayDeaMeRaA03S02V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~2V07 {c |}{res}          1      109.15           .     109.15     109.15
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S02V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S02V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~2V07 {c |}{res}          1        2.48           .       2.48       2.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S02V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S02V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~2V07 {c |}{res}          1      864.52           .     864.52     864.52
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S02V07P8V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S02V07P8V "DayDeaMeRaA03S02V07 End Value"
+{txt}
+{com}. label var DayDeaLoRaA03S02V07P8V "DayDeaLoRaA03S02V07 End Value"
+{txt}
+{com}. label var DayDeaUpRaA03S02V07P8V "DayDeaUpRaA03S02V07 End Value"
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S02V07P8V DayDeaLoRaA03S02V07P8V DayDeaUpRaA03S02V07P8V A03DZ
+
+{res}-> tabulation of DayDeaMeRaA03S02V07P8V  
+
+{txt}DayDeaMeRaA {c |}
+   03S02V07 {c |}
+  End Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     109.15 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S02V07P8V  
+
+{txt}DayDeaLoRaA {c |}
+   03S02V07 {c |}
+  End Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+       2.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S02V07P8V  
+
+{txt}DayDeaUpRaA {c |}
+   03S02V07 {c |}
+  End Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     864.52 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of A03DZ  
+
+    {txt}A03 End {c |}
+       date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  16Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * S1 = best scenario
+. 
+. 
+. * first peak
+. 
+. summ DayDeaMeRaA03S01V07 if date > td(15mar2020) & date < td(15apr2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~1V07 {c |}{res}         30    139.5457    27.58156      82.17     170.57
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P1V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S01V07 == DayDeaMeRaA03S01V07P1V & date > td(15mar2020) & date < td(15apr2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22011           .      22011      22011
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P1D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S01V07 if date == DayDeaMeRaA03S01V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~1V07 {c |}{res}          1       136.9           .      136.9      136.9
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S01V07P1V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S01V07 if date == DayDeaMeRaA03S01V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~1V07 {c |}{res}          1      214.57           .     214.57     214.57
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S01V07P1V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S01V07P1V "DayDeaMeRaA03S01V07 Peak 1 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S01V07P1D "DayDeaMeRaA03S01V07 Peak 1 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S01V07P1V "DayDeaLoRaA03S01V07 Peak 1 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S01V07P1V "DayDeaUpRaA03S01V07 Peak 1 Value"
+{txt}
+{com}. format DayDeaMeRaA03S01V07P1D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S01V07P1V DayDeaLoRaA03S01V07P1V DayDeaUpRaA03S01V07P1V DayDeaMeRaA03S01V07P1D
+
+{res}-> tabulation of DayDeaMeRaA03S01V07P1V  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     170.57 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S01V07P1V  
+
+{txt}DayDeaLoRaA {c |}
+   03S01V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      136.9 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S01V07P1V  
+
+{txt}DayDeaUpRaA {c |}
+   03S01V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     214.57 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S01V07P1D  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+Peak 1 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  06Apr2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * second peak 
+. 
+. summ DayDeaMeRaA03S01V07 if date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~1V07 {c |}{res}         28    217.0511    27.33943     175.38     254.81
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P2V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S01V07 == DayDeaMeRaA03S01V07P2V & date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22123           .      22123      22123
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P2D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S01V07 if date == DayDeaMeRaA03S01V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~1V07 {c |}{res}          1      197.48           .     197.48     197.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S01V07P2V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S01V07 if date == DayDeaMeRaA03S01V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~1V07 {c |}{res}          1      311.05           .     311.05     311.05
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S01V07P2V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S01V07P2V "DayDeaMeRaA03S01V07 Peak 2 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S01V07P2D "DayDeaMeRaA03S01V07 Peak 2 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S01V07P2V "DayDeaLoRaA03S01V07 Peak 2 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S01V07P2V "DayDeaUpRaA03S01V07 Peak 2 Value"
+{txt}
+{com}. format DayDeaMeRaA03S01V07P2D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S01V07P2V DayDeaLoRaA03S01V07P2V DayDeaUpRaA03S01V07P2V DayDeaMeRaA03S01V07P2D
+
+{res}-> tabulation of DayDeaMeRaA03S01V07P2V  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     254.81 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S01V07P2V  
+
+{txt}DayDeaLoRaA {c |}
+   03S01V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     197.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S01V07P2V  
+
+{txt}DayDeaUpRaA {c |}
+   03S01V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     311.05 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S01V07P2D  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+Peak 2 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27Jul2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * third peak 
+. 
+. summ DayDeaMeRaA03S01V07 if date > td(01oct2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~1V07 {c |}{res}         59    324.4232    94.01519     202.49     460.09
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P3V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S01V07 == DayDeaMeRaA03S01V07P3V & date > td(01nov2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22230           .      22230      22230
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P3D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S01V07 if date == DayDeaMeRaA03S01V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~1V07 {c |}{res}          1      365.48           .     365.48     365.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S01V07P3V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S01V07 if date == DayDeaMeRaA03S01V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~1V07 {c |}{res}          1      569.52           .     569.52     569.52
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S01V07P3V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S01V07P3V "DayDeaMeRaA03S01V07 Peak 3 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S01V07P3D "DayDeaMeRaA03S01V07 Peak 3 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S01V07P3V "DayDeaLoRaA03S01V07 Peak 3 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S01V07P3V "DayDeaUpRaA03S01V07 Peak 3 Value"
+{txt}
+{com}. format DayDeaMeRaA03S01V07P3D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S01V07P3V DayDeaLoRaA03S01V07P3V DayDeaUpRaA03S01V07P3V DayDeaMeRaA03S01V07P3D
+
+{res}-> tabulation of DayDeaMeRaA03S01V07P3V  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     460.09 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S01V07P3V  
+
+{txt}DayDeaLoRaA {c |}
+   03S01V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     365.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S01V07P3V  
+
+{txt}DayDeaUpRaA {c |}
+   03S01V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     569.52 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S01V07P3D  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  11Nov2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * end date avialable 
+. 
+. summ DayDeaMeRaA03S01V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~1V07 {c |}{res}          1         .14           .        .14        .14
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S01V07P8 = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S01V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~1V07 {c |}{res}          1           0           .          0          0
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S01V07P8 = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S01V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~1V07 {c |}{res}          1           1           .          1          1
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S01V07P8 = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S01V07P8 "DayDeaMeRaA03S01V07 End date Value"
+{txt}
+{com}. label var DayDeaLoRaA03S01V07P8 "DayDeaLoRaA03S01V07 End date Value"
+{txt}
+{com}. label var DayDeaUpRaA03S01V07P8 "DayDeaUpRaA03S01V07 End date Value"
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S01V07P8 DayDeaLoRaA03S01V07P8 DayDeaUpRaA03S01V07P8 A03DZ
+
+{res}-> tabulation of DayDeaMeRaA03S01V07P8  
+
+{txt}DayDeaMeRaA {c |}
+   03S01V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+        .14 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S01V07P8  
+
+{txt}DayDeaLoRaA {c |}
+   03S01V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S01V07P8  
+
+{txt}DayDeaUpRaA {c |}
+   03S01V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of A03DZ  
+
+    {txt}A03 End {c |}
+       date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  16Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. * S3 = worst scenario
+. 
+. 
+. * first peak
+. 
+. summ DayDeaMeRaA03S03V07 if date > td(15mar2020) & date < td(15apr2020)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~3V07 {c |}{res}         30    139.5457    27.58156      82.17     170.57
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P1V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S03V07 == DayDeaMeRaA03S03V07P1V & date > td(15mar2020) & date < td(15apr2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22011           .      22011      22011
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P1D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S03V07 if date == DayDeaMeRaA03S03V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~3V07 {c |}{res}          1       136.9           .      136.9      136.9
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S03V07P1V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S03V07 if date == DayDeaMeRaA03S03V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~3V07 {c |}{res}          1      214.57           .     214.57     214.57
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S03V07P1V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S03V07P1V "DayDeaMeRaA03S03V07 Peak 1 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S03V07P1D "DayDeaMeRaA03S03V07 Peak 1 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S03V07P1V "DayDeaLoRaA03S03V07 Peak 1 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S03V07P1V "DayDeaUpRaA03S03V07 Peak 1 Value"
+{txt}
+{com}. format DayDeaMeRaA03S03V07P1D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S03V07P1V DayDeaLoRaA03S03V07P1V DayDeaUpRaA03S03V07P1V DayDeaMeRaA03S03V07P1D
+
+{res}-> tabulation of DayDeaMeRaA03S03V07P1V  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     170.57 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S03V07P1V  
+
+{txt}DayDeaLoRaA {c |}
+   03S03V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      136.9 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S03V07P1V  
+
+{txt}DayDeaUpRaA {c |}
+   03S03V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     214.57 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S03V07P1D  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+Peak 1 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  06Apr2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * second peak 
+. 
+. summ DayDeaMeRaA03S03V07 if date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~3V07 {c |}{res}         28    217.0511    27.33943     175.38     254.81
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P2V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S03V07 == DayDeaMeRaA03S03V07P2V & date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22123           .      22123      22123
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P2D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S03V07 if date == DayDeaMeRaA03S03V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~3V07 {c |}{res}          1      197.48           .     197.48     197.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S03V07P2V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S03V07 if date == DayDeaMeRaA03S03V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~3V07 {c |}{res}          1      311.05           .     311.05     311.05
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S03V07P2V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S03V07P2V "DayDeaMeRaA03S03V07 Peak 2 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S03V07P2D "DayDeaMeRaA03S03V07 Peak 2 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S03V07P2V "DayDeaLoRaA03S03V07 Peak 2 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S03V07P2V "DayDeaUpRaA03S03V07 Peak 2 Value"
+{txt}
+{com}. format DayDeaMeRaA03S03V07P2D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S03V07P2V DayDeaLoRaA03S03V07P2V DayDeaUpRaA03S03V07P2V DayDeaMeRaA03S03V07P2D
+
+{res}-> tabulation of DayDeaMeRaA03S03V07P2V  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     254.81 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S03V07P2V  
+
+{txt}DayDeaLoRaA {c |}
+   03S03V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     197.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S03V07P2V  
+
+{txt}DayDeaUpRaA {c |}
+   03S03V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     311.05 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S03V07P2D  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+Peak 2 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27Jul2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * third peak 
+. 
+. summ DayDeaMeRaA03S03V07 if date > td(01oct2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~3V07 {c |}{res}         59    324.4232    94.01519     202.49     460.09
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P3V = r(max)
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S03V07 == DayDeaMeRaA03S03V07P3V & date > td(01nov2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22230           .      22230      22230
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P3D = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S03V07 if date == DayDeaMeRaA03S03V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~3V07 {c |}{res}          1      365.48           .     365.48     365.48
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S03V07P3V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S03V07 if date == DayDeaMeRaA03S03V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~3V07 {c |}{res}          1      569.52           .     569.52     569.52
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S03V07P3V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S03V07P3V "DayDeaMeRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S03V07P3D "DayDeaMeRaA03S03V07 Peak 3 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S03V07P3V "DayDeaLoRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S03V07P3V "DayDeaUpRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. format DayDeaMeRaA03S03V07P3D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S03V07P3V DayDeaLoRaA03S03V07P3V DayDeaUpRaA03S03V07P3V DayDeaMeRaA03S03V07P3D
+
+{res}-> tabulation of DayDeaMeRaA03S03V07P3V  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     460.09 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S03V07P3V  
+
+{txt}DayDeaLoRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     365.48 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S03V07P3V  
+
+{txt}DayDeaUpRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     569.52 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S03V07P3D  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  11Nov2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * fourth peak 
+. 
+. 
+. summ DayDeaMeRaA03S03V07 if date >  td(01apr2021)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~3V07 {c |}{res}         76    1171.781    778.5245      80.81    2110.21
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P5V = r(max) 
+{txt}
+{com}. 
+. summ date if DayDeaMeRaA03S03V07 == DayDeaMeRaA03S03V07P5V & date >  td(01apr2021)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22437           .      22437      22437
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P5D = r(max) 
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S03V07 if date == DayDeaMeRaA03S03V07P5D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~3V07 {c |}{res}          1      146.93           .     146.93     146.93
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S03V07P5V = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S03V07 if date == DayDeaMeRaA03S03V07P5D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~3V07 {c |}{res}          1      3882.3           .     3882.3     3882.3
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S03V07P5V = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S03V07P5V "DayDeaMeRaA03S03V07 Peak 4 Value"
+{txt}
+{com}. label var DayDeaMeRaA03S03V07P5D "DayDeaMeRaA03S03V07 Peak 4 Date"
+{txt}
+{com}. label var DayDeaLoRaA03S03V07P5V "DayDeaLoRaA03S03V07 Peak 4 Value"
+{txt}
+{com}. label var DayDeaUpRaA03S03V07P5V "DayDeaUpRaA03S03V07 Peak 4 Value"
+{txt}
+{com}. format DayDeaMeRaA03S03V07P5D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S03V07P5V DayDeaLoRaA03S03V07P5V DayDeaUpRaA03S03V07P5V DayDeaMeRaA03S03V07P5D
+
+{res}-> tabulation of DayDeaMeRaA03S03V07P5V  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+     Peak 4 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    2110.21 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S03V07P5V  
+
+{txt}DayDeaLoRaA {c |}
+   03S03V07 {c |}
+     Peak 4 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     146.93 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S03V07P5V  
+
+{txt}DayDeaUpRaA {c |}
+   03S03V07 {c |}
+     Peak 4 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     3882.3 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaMeRaA03S03V07P5D  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+Peak 4 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  06Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * end date avialable 
+. 
+. summ DayDeaMeRaA03S03V07 if date == A03DZ 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaM~3V07 {c |}{res}          1     1982.15           .    1982.15    1982.15
+{txt}
+{com}. 
+. gen DayDeaMeRaA03S03V07P8 = r(max)
+{txt}
+{com}. 
+. summ DayDeaLoRaA03S03V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaL~3V07 {c |}{res}          1      200.85           .     200.85     200.85
+{txt}
+{com}. 
+. gen DayDeaLoRaA03S03V07P8 = r(max)
+{txt}
+{com}. 
+. summ DayDeaUpRaA03S03V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaU~3V07 {c |}{res}          1     3198.62           .    3198.62    3198.62
+{txt}
+{com}. 
+. gen DayDeaUpRaA03S03V07P8 = r(max)
+{txt}
+{com}. 
+. label var DayDeaMeRaA03S03V07P8 "DayDeaMeRaA03S03V07 End date Value"
+{txt}
+{com}. label var DayDeaLoRaA03S03V07P8 "DayDeaLoRaA03S03V07 End date Value"
+{txt}
+{com}. label var DayDeaUpRaA03S03V07P8 "DayDeaUpRaA03S03V07 End date Value"
+{txt}
+{com}. 
+. tab1 DayDeaMeRaA03S03V07P8 DayDeaLoRaA03S03V07P8 DayDeaUpRaA03S03V07P8 A03DZ
+
+{res}-> tabulation of DayDeaMeRaA03S03V07P8  
+
+{txt}DayDeaMeRaA {c |}
+   03S03V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    1982.15 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaLoRaA03S03V07P8  
+
+{txt}DayDeaLoRaA {c |}
+   03S03V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     200.85 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayDeaUpRaA03S03V07P8  
+
+{txt}DayDeaUpRaA {c |}
+   03S03V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    3198.62 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of A03DZ  
+
+    {txt}A03 End {c |}
+       date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  16Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************
+.   
+.   
+. * Locate peak dates and values - cases 
+. 
+. 
+. * S2 = median scenario 
+. 
+. 
+. * first peak
+. 
+. summ DayCasMeRaA03S02V07 if date > td(01mar2020) & date < td(30mar2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~2V07 {c |}{res}         28    48502.58    11450.74   26428.61    64472.3
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P1V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S02V07 == DayCasMeRaA03S02V07P1V & date > td(01mar2020) & date < td(30mar2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22001           .      22001      22001
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P1D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S02V07 if date == DayCasMeRaA03S02V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~2V07 {c |}{res}          1     53268.4           .    53268.4    53268.4
+{txt}
+{com}. 
+. gen DayCasLoRaA03S02V07P1V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S02V07 if date == DayCasMeRaA03S02V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~2V07 {c |}{res}          1    77660.95           .   77660.95   77660.95
+{txt}
+{com}. 
+. gen DayCasUpRaA03S02V07P1V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S02V07P1V "DayCasMeRaA03S02V07 Peak 1 Value"
+{txt}
+{com}. label var DayCasMeRaA03S02V07P1D "DayCasMeRaA03S02V07 Peak 1 Date"
+{txt}
+{com}. label var DayCasLoRaA03S02V07P1V "DayCasLoRaA03S02V07 Peak 1 Value"
+{txt}
+{com}. label var DayCasUpRaA03S02V07P1V "DayCasUpRaA03S02V07 Peak 1 Value"
+{txt}
+{com}. format DayCasMeRaA03S02V07P1D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S02V07P1V DayCasLoRaA03S02V07P1V DayCasUpRaA03S02V07P1V DayCasMeRaA03S02V07P1D
+
+{res}-> tabulation of DayCasMeRaA03S02V07P1V  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    64472.3 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S02V07P1V  
+
+{txt}DayCasLoRaA {c |}
+   03S02V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    53268.4 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S02V07P1V  
+
+{txt}DayCasUpRaA {c |}
+   03S02V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   77660.95 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S02V07P1D  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+Peak 1 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27Mar2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * second peak
+. 
+. summ DayCasMeRaA03S02V07 if date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~2V07 {c |}{res}         28    79392.16    4630.907   69745.68   85301.35
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P2V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S02V07 == DayCasMeRaA03S02V07P2V & date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22117           .      22117      22117
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P2D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S02V07 if date == DayCasMeRaA03S02V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~2V07 {c |}{res}          1    68791.73           .   68791.73   68791.73
+{txt}
+{com}. 
+. gen DayCasLoRaA03S02V07P2V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S02V07 if date == DayCasMeRaA03S02V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~2V07 {c |}{res}          1    103231.6           .   103231.6   103231.6
+{txt}
+{com}. 
+. gen DayCasUpRaA03S02V07P2V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S02V07P2V "DayCasMeRaA03S02V07 Peak 2 Value"
+{txt}
+{com}. label var DayCasMeRaA03S02V07P2D "DayCasMeRaA03S02V07 Peak 2 Date"
+{txt}
+{com}. label var DayCasLoRaA03S02V07P2V "DayCasLoRaA03S02V07 Peak 2 Value"
+{txt}
+{com}. label var DayCasUpRaA03S02V07P2V "DayCasUpRaA03S02V07 Peak 2 Value"
+{txt}
+{com}. format DayCasMeRaA03S02V07P2D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S02V07P2V DayCasLoRaA03S02V07P2V DayCasUpRaA03S02V07P2V DayCasMeRaA03S02V07P2D
+
+{res}-> tabulation of DayCasMeRaA03S02V07P2V  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   85301.35 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S02V07P2V  
+
+{txt}DayCasLoRaA {c |}
+   03S02V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   68791.73 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S02V07P2V  
+
+{txt}DayCasUpRaA {c |}
+   03S02V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   103231.6 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S02V07P2D  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+Peak 2 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  21Jul2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * third peak
+. 
+. summ DayCasMeRaA03S02V07 if date > td(01oct2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~2V07 {c |}{res}         59    100783.8    22702.81   58621.15   132379.5
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P3V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S02V07 == DayCasMeRaA03S02V07P3V & date > td(01oct2020) & date < td(30nov2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22216           .      22216      22216
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P3D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S02V07 if date == DayCasMeRaA03S02V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~2V07 {c |}{res}          1    110426.4           .   110426.4   110426.4
+{txt}
+{com}. 
+. gen DayCasLoRaA03S02V07P3V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S02V07 if date == DayCasMeRaA03S02V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~2V07 {c |}{res}          1    156300.5           .   156300.5   156300.5
+{txt}
+{com}. 
+. gen DayCasUpRaA03S02V07P3V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S02V07P3V "DayCasMeRaA03S02V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasMeRaA03S02V07P3D "DayCasMeRaA03S02V07 Peak 3 Date"
+{txt}
+{com}. label var DayCasLoRaA03S02V07P3V "DayCasLoRaA03S02V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasUpRaA03S02V07P3V "DayCasUpRaA03S02V07 Peak 3 Value"
+{txt}
+{com}. format DayCasMeRaA03S02V07P3D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S02V07P3V DayCasLoRaA03S02V07P3V DayCasUpRaA03S02V07P3V DayCasMeRaA03S02V07P3D
+
+{res}-> tabulation of DayCasMeRaA03S02V07P3V  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   132379.5 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S02V07P3V  
+
+{txt}DayCasLoRaA {c |}
+   03S02V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   110426.4 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S02V07P3V  
+
+{txt}DayCasUpRaA {c |}
+   03S02V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   156300.5 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S02V07P3D  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  28Oct2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. * end date avialable 
+. 
+. summ DayCasMeRaA03S02V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~2V07 {c |}{res}          1    31407.54           .   31407.54   31407.54
+{txt}
+{com}. 
+. gen DayCasMeRaA03S02V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S02V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~2V07 {c |}{res}          1      587.55           .     587.55     587.55
+{txt}
+{com}. 
+. gen DayCasLoRaA03S02V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S02V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~2V07 {c |}{res}          1    207472.9           .   207472.9   207472.9
+{txt}
+{com}. 
+. gen DayCasUpRaA03S02V07P8V = r(max)
+{txt}
+{com}. 
+. 
+. label var DayCasMeRaA03S02V07P8V "DayCasMeRaA03S02V07 End date Value"
+{txt}
+{com}. label var DayCasLoRaA03S02V07P8V "DayCasLoRaA03S02V07 End date Value"
+{txt}
+{com}. label var DayCasUpRaA03S02V07P8V "DayCasUpRaA03S02V07 End date Value"
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S02V07P8V DayCasLoRaA03S02V07P8V DayCasUpRaA03S02V07P8V A03DZ
+
+{res}-> tabulation of DayCasMeRaA03S02V07P8V  
+
+{txt}DayCasMeRaA {c |}
+   03S02V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   31407.54 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S02V07P8V  
+
+{txt}DayCasLoRaA {c |}
+   03S02V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     587.55 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S02V07P8V  
+
+{txt}DayCasUpRaA {c |}
+   03S02V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   207472.9 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of A03DZ  
+
+    {txt}A03 End {c |}
+       date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  16Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * S1 = best scenario
+. 
+. * first peak
+. 
+. summ DayCasMeRaA03S01V07 if date > td(01mar2020) & date < td(30mar2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~1V07 {c |}{res}         28    48502.58    11450.74   26428.61    64472.3
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P1V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S01V07 == DayCasMeRaA03S01V07P1V & date > td(01mar2020) & date < td(30mar2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22001           .      22001      22001
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P1D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S01V07 if date == DayCasMeRaA03S01V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~1V07 {c |}{res}          1     53268.4           .    53268.4    53268.4
+{txt}
+{com}. 
+. gen DayCasLoRaA03S01V07P1V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S01V07 if date == DayCasMeRaA03S01V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~1V07 {c |}{res}          1    77660.95           .   77660.95   77660.95
+{txt}
+{com}. 
+. gen DayCasUpRaA03S01V07P1V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S01V07P1V "DayCasMeRaA03S01V07 Peak 1 Value"
+{txt}
+{com}. label var DayCasMeRaA03S01V07P1D "DayCasMeRaA03S01V07 Peak 1 Date"
+{txt}
+{com}. label var DayCasLoRaA03S01V07P1V "DayCasLoRaA03S01V07 Peak 1 Value"
+{txt}
+{com}. label var DayCasUpRaA03S01V07P1V "DayCasUpRaA03S01V07 Peak 1 Value"
+{txt}
+{com}. format DayCasMeRaA03S01V07P1D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S01V07P1V DayCasLoRaA03S01V07P1V DayCasUpRaA03S01V07P1V DayCasMeRaA03S01V07P1D
+
+{res}-> tabulation of DayCasMeRaA03S01V07P1V  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    64472.3 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S01V07P1V  
+
+{txt}DayCasLoRaA {c |}
+   03S01V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    53268.4 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S01V07P1V  
+
+{txt}DayCasUpRaA {c |}
+   03S01V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   77660.95 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S01V07P1D  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+Peak 1 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27Mar2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. * second peak
+. 
+. summ DayCasMeRaA03S01V07 if date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~1V07 {c |}{res}         28    79392.16    4630.907   69745.68   85301.35
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P2V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S01V07 == DayCasMeRaA03S01V07P2V & date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22117           .      22117      22117
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P2D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S01V07 if date == DayCasMeRaA03S01V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~1V07 {c |}{res}          1    68791.73           .   68791.73   68791.73
+{txt}
+{com}. 
+. gen DayCasLoRaA03S01V07P2V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S01V07 if date == DayCasMeRaA03S01V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~1V07 {c |}{res}          1    103231.6           .   103231.6   103231.6
+{txt}
+{com}. 
+. gen DayCasUpRaA03S01V07P2V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S01V07P2V "DayCasMeRaA03S01V07 Peak 2 Value"
+{txt}
+{com}. label var DayCasMeRaA03S01V07P2D "DayCasMeRaA03S01V07 Peak 2 Date"
+{txt}
+{com}. label var DayCasLoRaA03S01V07P2V "DayCasLoRaA03S01V07 Peak 2 Value"
+{txt}
+{com}. label var DayCasUpRaA03S01V07P2V "DayCasUpRaA03S01V07 Peak 2 Value"
+{txt}
+{com}. format DayCasMeRaA03S01V07P2D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S01V07P2V DayCasLoRaA03S01V07P2V DayCasUpRaA03S01V07P2V DayCasMeRaA03S01V07P2D
+
+{res}-> tabulation of DayCasMeRaA03S01V07P2V  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   85301.35 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S01V07P2V  
+
+{txt}DayCasLoRaA {c |}
+   03S01V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   68791.73 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S01V07P2V  
+
+{txt}DayCasUpRaA {c |}
+   03S01V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   103231.6 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S01V07P2D  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+Peak 2 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  21Jul2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * third peak
+. 
+. summ DayCasMeRaA03S01V07 if date > td(01oct2020) & date < td(30dec2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~1V07 {c |}{res}         89    77388.06    38096.08    22831.6   132379.5
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P3V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S01V07 == DayCasMeRaA03S01V07P3V & date > td(01oct2020) & date < td(30dec2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22216           .      22216      22216
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P3D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S01V07 if date == DayCasMeRaA03S01V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~1V07 {c |}{res}          1    110426.4           .   110426.4   110426.4
+{txt}
+{com}. 
+. gen DayCasLoRaA03S01V07P3V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S01V07 if date == DayCasMeRaA03S01V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~1V07 {c |}{res}          1    156300.5           .   156300.5   156300.5
+{txt}
+{com}. 
+. gen DayCasUpRaA03S01V07P3V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S01V07P3V "DayCasMeRaA03S01V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasMeRaA03S01V07P3D "DayCasMeRaA03S01V07 Peak 3 Date"
+{txt}
+{com}. label var DayCasLoRaA03S01V07P3V "DayCasLoRaA03S01V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasUpRaA03S01V07P3V "DayCasUpRaA03S01V07 Peak 3 Value"
+{txt}
+{com}. format DayCasMeRaA03S01V07P3D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S01V07P3V DayCasLoRaA03S01V07P3V DayCasUpRaA03S01V07P3V DayCasMeRaA03S01V07P3D
+
+{res}-> tabulation of DayCasMeRaA03S01V07P3V  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   132379.5 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S01V07P3V  
+
+{txt}DayCasLoRaA {c |}
+   03S01V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   110426.4 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S01V07P3V  
+
+{txt}DayCasUpRaA {c |}
+   03S01V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   156300.5 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S01V07P3D  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  28Oct2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. * end date avialable 
+. 
+. summ DayCasMeRaA03S01V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~1V07 {c |}{res}          1       12.95           .      12.95      12.95
+{txt}
+{com}. 
+. gen DayCasMeRaA03S01V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S01V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~1V07 {c |}{res}          1           0           .          0          0
+{txt}
+{com}. 
+. gen DayCasLoRaA03S01V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S01V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~1V07 {c |}{res}          1       94.65           .      94.65      94.65
+{txt}
+{com}. 
+. gen DayCasUpRaA03S01V07P8V = r(max)
+{txt}
+{com}. 
+. 
+. label var DayCasMeRaA03S01V07P8V "DayCasMeRaA03S01V07 End date Value"
+{txt}
+{com}. label var DayCasLoRaA03S01V07P8V "DayCasLoRaA03S01V07 End date Value"
+{txt}
+{com}. label var DayCasUpRaA03S01V07P8V "DayCasUpRaA03S01V07 End date Value"
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S01V07P8V DayCasLoRaA03S01V07P8V DayCasUpRaA03S01V07P8V A03DZ
+
+{res}-> tabulation of DayCasMeRaA03S01V07P8V  
+
+{txt}DayCasMeRaA {c |}
+   03S01V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      12.95 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S01V07P8V  
+
+{txt}DayCasLoRaA {c |}
+   03S01V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S01V07P8V  
+
+{txt}DayCasUpRaA {c |}
+   03S01V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      94.65 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of A03DZ  
+
+    {txt}A03 End {c |}
+       date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  16Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * S3 = worst scenario
+. 
+. 
+. * first peak
+. 
+. summ DayCasMeRaA03S03V07 if date > td(01mar2020) & date < td(30mar2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~3V07 {c |}{res}         28    48502.58    11450.74   26428.61    64472.3
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P1V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S03V07 == DayCasMeRaA03S03V07P1V & date > td(01mar2020) & date < td(30mar2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22001           .      22001      22001
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P1D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S03V07 if date == DayCasMeRaA03S03V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~3V07 {c |}{res}          1     53268.4           .    53268.4    53268.4
+{txt}
+{com}. 
+. gen DayCasLoRaA03S03V07P1V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S03V07 if date == DayCasMeRaA03S03V07P1D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~3V07 {c |}{res}          1    77660.95           .   77660.95   77660.95
+{txt}
+{com}. 
+. gen DayCasUpRaA03S03V07P1V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S03V07P1V "DayCasMeRaA03S03V07 Peak 1 Value"
+{txt}
+{com}. label var DayCasMeRaA03S03V07P1D "DayCasMeRaA03S03V07 Peak 1 Date"
+{txt}
+{com}. label var DayCasLoRaA03S03V07P1V "DayCasLoRaA03S03V07 Peak 1 Value"
+{txt}
+{com}. label var DayCasUpRaA03S03V07P1V "DayCasUpRaA03S03V07 Peak 1 Value"
+{txt}
+{com}. format DayCasMeRaA03S03V07P1D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S03V07P1V DayCasLoRaA03S03V07P1V DayCasUpRaA03S03V07P1V DayCasMeRaA03S03V07P1D
+
+{res}-> tabulation of DayCasMeRaA03S03V07P1V  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    64472.3 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S03V07P1V  
+
+{txt}DayCasLoRaA {c |}
+   03S03V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    53268.4 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S03V07P1V  
+
+{txt}DayCasUpRaA {c |}
+   03S03V07 {c |}
+     Peak 1 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   77660.95 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S03V07P1D  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+Peak 1 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27Mar2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * second peak
+. 
+. summ DayCasMeRaA03S03V07 if date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~3V07 {c |}{res}         28    79392.16    4630.907   69745.68   85301.35
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P2V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S03V07 == DayCasMeRaA03S03V07P2V & date > td(01jul2020) & date < td(30jul2020) 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22117           .      22117      22117
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P2D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S03V07 if date == DayCasMeRaA03S03V07P2D 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~3V07 {c |}{res}          1    68791.73           .   68791.73   68791.73
+{txt}
+{com}. 
+. gen DayCasLoRaA03S03V07P2V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S03V07 if date == DayCasMeRaA03S03V07P2D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~3V07 {c |}{res}          1    103231.6           .   103231.6   103231.6
+{txt}
+{com}. 
+. gen DayCasUpRaA03S03V07P2V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S03V07P2V "DayCasMeRaA03S03V07 Peak 2 Value"
+{txt}
+{com}. label var DayCasMeRaA03S03V07P2D "DayCasMeRaA03S03V07 Peak 2 Date"
+{txt}
+{com}. label var DayCasLoRaA03S03V07P2V "DayCasLoRaA03S03V07 Peak 2 Value"
+{txt}
+{com}. label var DayCasUpRaA03S03V07P2V "DayCasUpRaA03S03V07 Peak 2 Value"
+{txt}
+{com}. format DayCasMeRaA03S03V07P2D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S03V07P2V DayCasLoRaA03S03V07P2V DayCasUpRaA03S03V07P2V DayCasMeRaA03S03V07P2D
+
+{res}-> tabulation of DayCasMeRaA03S03V07P2V  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   85301.35 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S03V07P2V  
+
+{txt}DayCasLoRaA {c |}
+   03S03V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   68791.73 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S03V07P2V  
+
+{txt}DayCasUpRaA {c |}
+   03S03V07 {c |}
+     Peak 2 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   103231.6 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S03V07P2D  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+Peak 2 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  21Jul2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * third peak
+. 
+. summ DayCasMeRaA03S03V07 if date > td(01nov2020) & date < td(30nov2020)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~3V07 {c |}{res}         28    103548.6    21805.28   58621.15   128914.2
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P3V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S03V07 == DayCasMeRaA03S03V07P3V & date > td(01nov2020) & date < td(30nov2020)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22221           .      22221      22221
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P3D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S03V07 if date == DayCasMeRaA03S03V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~3V07 {c |}{res}          1    109586.7           .   109586.7   109586.7
+{txt}
+{com}. 
+. gen DayCasLoRaA03S03V07P3V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S03V07 if date == DayCasMeRaA03S03V07P3D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~3V07 {c |}{res}          1    151983.5           .   151983.5   151983.5
+{txt}
+{com}. 
+. gen DayCasUpRaA03S03V07P3V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S03V07P3V "DayCasMeRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasMeRaA03S03V07P3D "DayCasMeRaA03S03V07 Peak 3 Date"
+{txt}
+{com}. label var DayCasLoRaA03S03V07P3V "DayCasLoRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasUpRaA03S03V07P3V "DayCasUpRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. format DayCasMeRaA03S03V07P3D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S03V07P3V DayCasLoRaA03S03V07P3V DayCasUpRaA03S03V07P3V DayCasMeRaA03S03V07P3D
+
+{res}-> tabulation of DayCasMeRaA03S03V07P3V  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   128914.2 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S03V07P3V  
+
+{txt}DayCasLoRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   109586.7 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S03V07P3V  
+
+{txt}DayCasUpRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   151983.5 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S03V07P3D  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  02Nov2020 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * fourth peak
+. 
+. summ DayCasMeRaA03S03V07 if date >  td(01apr2021)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~3V07 {c |}{res}         76      301539    143990.7   49097.92   454144.3
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P4V = r(max)
+{txt}
+{com}. 
+. summ date if DayCasMeRaA03S03V07 == DayCasMeRaA03S03V07P4V & date >  td(01apr2021)
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}date {c |}{res}          1       22427           .      22427      22427
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P4D = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S03V07 if date == DayCasMeRaA03S03V07P4D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~3V07 {c |}{res}          1    54408.68           .   54408.68   54408.68
+{txt}
+{com}. 
+. gen DayCasLoRaA03S03V07P4V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S03V07 if date == DayCasMeRaA03S03V07P4D
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~3V07 {c |}{res}          1    854208.1           .   854208.1   854208.1
+{txt}
+{com}. 
+. gen DayCasUpRaA03S03V07P4V = r(max)
+{txt}
+{com}. 
+. label var DayCasMeRaA03S03V07P4V "DayCasMeRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasMeRaA03S03V07P4D "DayCasMeRaA03S03V07 Peak 3 Date"
+{txt}
+{com}. label var DayCasLoRaA03S03V07P4V "DayCasLoRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. label var DayCasUpRaA03S03V07P4V "DayCasUpRaA03S03V07 Peak 3 Value"
+{txt}
+{com}. format DayCasMeRaA03S03V07P4D %tdDDMonCCYY
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S03V07P4V DayCasLoRaA03S03V07P4V DayCasUpRaA03S03V07P4V DayCasMeRaA03S03V07P4D
+
+{res}-> tabulation of DayCasMeRaA03S03V07P4V  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   454144.3 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S03V07P4V  
+
+{txt}DayCasLoRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   54408.68 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S03V07P4V  
+
+{txt}DayCasUpRaA {c |}
+   03S03V07 {c |}
+     Peak 3 {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   854208.1 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasMeRaA03S03V07P4D  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+Peak 3 Date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  27May2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. * end date avialable 
+. 
+. summ DayCasMeRaA03S03V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasM~3V07 {c |}{res}          1    384037.6           .   384037.6   384037.6
+{txt}
+{com}. 
+. gen DayCasMeRaA03S03V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayCasLoRaA03S03V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasL~3V07 {c |}{res}          1    80441.45           .   80441.45   80441.45
+{txt}
+{com}. 
+. gen DayCasLoRaA03S03V07P8V = r(max)
+{txt}
+{com}. 
+. summ DayCasUpRaA03S03V07 if date == A03DZ
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasU~3V07 {c |}{res}          1    555821.3           .   555821.3   555821.3
+{txt}
+{com}. 
+. gen DayCasUpRaA03S03V07P8V = r(max)
+{txt}
+{com}. 
+. 
+. label var DayCasMeRaA03S03V07P8V "DayCasMeRaA03S03V07 End date Value"
+{txt}
+{com}. label var DayCasLoRaA03S03V07P8V "DayCasLoRaA03S03V07 End date Value"
+{txt}
+{com}. label var DayCasUpRaA03S03V07P8V "DayCasUpRaA03S03V07 End date Value"
+{txt}
+{com}. 
+. tab1 DayCasMeRaA03S03V07P8V DayCasLoRaA03S03V07P8V DayCasUpRaA03S03V07P8V A03DZ
+
+{res}-> tabulation of DayCasMeRaA03S03V07P8V  
+
+{txt}DayCasMeRaA {c |}
+   03S03V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   384037.6 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasLoRaA03S03V07P8V  
+
+{txt}DayCasLoRaA {c |}
+   03S03V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   80441.45 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of DayCasUpRaA03S03V07P8V  
+
+{txt}DayCasUpRaA {c |}
+   03S03V07 {c |}
+   End date {c |}
+      Value {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   555821.3 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+
+-> tabulation of A03DZ  
+
+    {txt}A03 End {c |}
+       date {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  16Jun2021 {c |}{res}        524      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        524      100.00
+{txt}
+{com}. 
+. 
+. 
+. sort date
+{txt}
+{com}. 
+. compress
+  {txt}variable {bf}date{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S02V07P1D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S02V07P2D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S02V07P3D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}A03DZ{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S01V07P1D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S01V07P2D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S01V07P3D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaLoRaA03S01V07P8{sf} was {bf}{res}float{sf}{txt} now {bf}{res}byte{sf}
+  {txt}variable {bf}DayDeaUpRaA03S01V07P8{sf} was {bf}{res}float{sf}{txt} now {bf}{res}byte{sf}
+  {txt}variable {bf}DayDeaMeRaA03S03V07P1D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S03V07P2D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S03V07P3D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayDeaMeRaA03S03V07P5D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S02V07P1D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S02V07P2D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S02V07P3D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S01V07P1D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S01V07P2D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S01V07P3D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasLoRaA03S01V07P8V{sf} was {bf}{res}float{sf}{txt} now {bf}{res}byte{sf}
+  {txt}variable {bf}DayCasMeRaA03S03V07P1D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S03V07P2D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S03V07P3D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA03S03V07P4D{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+{txt}  (27,772 bytes saved)
+
+{com}. 
+. save "Iran IMPE.dta", replace
+{txt}file Iran IMPE.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. view "log Iran IMPE.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210405/code/IMPE/log Iran IMPE.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}15 Apr 2021, 09:47:47
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
