@@ -18,9 +18,11 @@
 
 Graphs from latest update 20210416
 
+
 [COVID-19 daily deaths, Iran, reference scenarios, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/115595403-ba9df500-a28b-11eb-8e47-7241a8862766.png)
+
 
 
 [COVID-19 daily deaths, Iran, reference scenarios, 2020-12-01 on without SRIV](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2012a2%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%20wo%20SRIV.pdf)
