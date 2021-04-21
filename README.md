@@ -36,6 +36,9 @@ Graphs from latest update 20210416
 ![image](https://user-images.githubusercontent.com/30849720/115596892-79a6e000-a28d-11eb-88dd-7f0c1ab883af.png)
 
 *
+[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/115597540-38630000-a28e-11eb-9a09-737a645f92c7.png)
 
 
 ********************************************************************************************************************************************
