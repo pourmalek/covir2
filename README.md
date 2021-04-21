@@ -14,6 +14,20 @@
 
 <br/><br/>
 
+********************************************************************************************************************************************
+
+Graphs from latest update 20210416
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************
+
+<br/><br/>
 
 * Details: This is a review study of estimates of COVID-19 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare them, locate peak dates and values, and produce graphs using `Stata`. This repo can be used to replicate the results of the review study ('Computational reproducibility').
 
