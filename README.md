@@ -22,6 +22,8 @@ Graphs from latest update 20210416
 
 ![image](https://user-images.githubusercontent.com/30849720/115594893-20d64800-a28b-11eb-89d4-8216678cb397.png)
 
+![image](https://user-images.githubusercontent.com/30849720/115595275-94785500-a28b-11eb-858b-f6eda09cfcfb.png)
+
 
 
 
