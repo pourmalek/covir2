@@ -14,14 +14,15 @@
 ![image](https://user-images.githubusercontent.com/30849720/115600436-8decdc00-a291-11eb-9e9f-ccf0f643c033.png)
 
 *
-[COVID-19 daily cases, Iran, reference scenarios, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+[COVID-19 daily active cases without GHAN](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/115600880-00f65280-a292-11eb-91be-251a25da9069.png)
+
+*
+
 
 
 *
-[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-
-*
-[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
 
