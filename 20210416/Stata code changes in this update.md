@@ -1,6 +1,7 @@
-Stata code changes in this update
+* Stata code changes in this update
 
-code for IHME bypasses Operating Command determination by using -change directory-
+Code for IHME bypasses Operating Command determination by using -cd- change directory.
 
-identification of peak dates and values are retired 
+Identification of peak dates and values are retired.
 
+Do Farsi graphs are retired; selected English graphs do show Hijri dates.
