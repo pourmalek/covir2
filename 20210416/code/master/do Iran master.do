@@ -56,7 +56,7 @@ if regexm(c(os),"Mac") == 1 {
 	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20210416/code" 
 }
 else if regexm(c(os),"Windows") {
-	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20210413\code"
+	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20210416\code"
 }
 *
 
