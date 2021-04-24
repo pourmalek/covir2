@@ -24,7 +24,7 @@
 ![image](https://user-images.githubusercontent.com/30849720/115964277-88cd9e00-a4d8-11eb-8131-6e50d1e6f773.png)
 
 *
-[COVID-19 daily cases estimated to reported, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2093.1%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf)
+[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/115601879-26d02700-a293-11eb-8e0a-26c75ba094e4.png)
+![image](https://user-images.githubusercontent.com/30849720/115964346-e661ea80-a4d8-11eb-9674-7bd77a70ca0e.png)
 
