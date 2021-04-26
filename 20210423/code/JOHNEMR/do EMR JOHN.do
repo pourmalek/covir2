@@ -616,7 +616,7 @@ if date > td(01jan2020) & loc_grand_name == "`l'" ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, `l', Johns Hopkins", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(4)) legend(region(lcolor(none)))  ///
-legend(order(1 "Raw" 2 "Smoothed") size(small)) ///
+legend(order(1 "Raw" 2 "Smoothed") size(small)) 
 
 qui graph save "graph 3 COVID-19 daily deaths `l' Johns Hopkins.gph", replace
 qui graph export "graph 3 COVID-19 daily deaths `l' Johns Hopkins.pdf", replace
