@@ -23,8 +23,14 @@ Farsi README for covir2
 برآوردهای پنج مطالعه بین المللی به صورت دوره ای به روز می شوند. در (سایت covir2) نیز نتایج این به روز-رسانی ها به صورت دوره ای به سایت اضافه می شود. به روز رسانی نتایج مدل ها در این بررسی تا کنون چهار مرتبه صورت گرفته است، در تاریخ های
 <br/><br/>
 
-[20210405](https://github.com/pourmalek/covir2/tree/main/20210423)
+[20210405](https://github.com/pourmalek/covir2/tree/main/20210405)
 <br/><br/>
+[20210413](https://github.com/pourmalek/covir2/tree/main/20210413)
+<br/><br/>
+[20210416](https://github.com/pourmalek/covir2/tree/main/20210416)
+<br/><br/>
+[20210423](https://github.com/pourmalek/covir2/tree/main/20210423)
+
 
 ، (20210413)، (20210416)، (20210423). هر بار یک دایرکتوری با نام تاریخ به روز رسانی ایجاد می گردد. 
 
