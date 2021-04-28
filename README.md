@@ -110,7 +110,7 @@
 #### نمودار های منتخب
 
 (همه نمودارها در
-  (https://github.com/pourmalek/covir2/tree/main/20210423/ouput/merge)[اینجا] 
+  [اینجا](https://github.com/pourmalek/covir2/tree/main/20210423/ouput/merge) 
 قرار دارند)
 
 *
