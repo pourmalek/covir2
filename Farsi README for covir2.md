@@ -37,6 +37,8 @@ Farsi README for covir2
 
 "Users\local-user-name\Downloads\covir2-main\20210423\code\master\do Iran master.do"
  
+ <br/><br/>
+
 توضیحات: 
 در بالا و سمت راست صفحه اصلی (سایت covir2) یک مستطیل سبز رنگ وجود دارد ![image](https://user-images.githubusercontent.com/30849720/116341281-759b2680-a795-11eb-8dff-3d9d19271aa3.png)
  
