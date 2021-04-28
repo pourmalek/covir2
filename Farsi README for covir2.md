@@ -33,6 +33,7 @@ Farsi README for covir2
 
 خلاصه: 
 کل ریپوزیتوری covir2 را داونلود نموده و فایل زیر را در استیتا اجرا نمایید:
+
 "Users\local-user-name\Downloads\covir2-main\20210423\code\master\do Iran master.do"
  
 توضیحات: 
