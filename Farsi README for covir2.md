@@ -2,6 +2,7 @@ Farsi README for covir2
 <div dir="rtl">
 
 ## نحوه داونلود و استفاده از کد های نرم افزار استیتا 
+<br/><br/>
 
 در تارنمای گیت هاب (https://github.com/pourmalek/covir2) 
 که در زیر با نام (سایت covir2) به آن اشاره می شود. 
