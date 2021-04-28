@@ -8,6 +8,264 @@
 
 ## Farsi README for covir2
 <div dir="rtl">
+ 
+ 
+# مرور برآوردهای مطالعات بین المللی برای همه گیری کووید-۱۹ در ایران، نسخه دوم
+
+
+فرشاد پورملک
+
+داوری توسط همگنان (peer review) صورت نگرفته است.
+
+#### خلاصه
+برآوردهای هفت مطالعه برای مرگ های روزانه
+(Daily deaths)، موارد روزانه جدید بیماری (Daily cases)، مرگ های تجمعی (Total deaths)، و موارد تجمعی جدید بیماری (Total cases)‌ کووید-۱۹ در ایران به صورت نمودار نشان داده شده اند و فایل های استیتا و (csv) آن ها نیز وجود دارند. نمودار موارد روزانه موجود بیماری (Prevalent daily cases) و برآوردهای مربوط به بستری و بیمارستان (Hospital-related) نیز وجود دارند.
+
+#### روش
+روش بررسی مطابق با مقاله 
+[Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3) می باشد (نسخه اول این مرور)، با این تفاوت که مطالعات جستجوی مطالعات برای برآوردهای دی ماه ۱۳۹۹ به بعد و در هفت پایگاه مقالات و از ۲۶ تا ۲۸ اسفند ۱۳۹۹ صورت گرفت: پابمد، گوگل اسکالر، مقالات فارسی در
+[پایگاه مرکز اطلاعات علمی جهاد دانشگاهی](https://www.sid.ir)،
+و در [بانک اطلاعات نشریات کشور](https://www.magiran.com)، و مقالات داوری نشده در پایگاه های [medRxiv](https://www.medrxiv.org) [arXiv](https://arxiv.org) و [Research Square](https://www.researchsquare.com).
+
+#### مطالعات
+مطالعات با علایم اختصاری نشان داده شده اند:
+
+مطالعه [ دلفی](https://www.covidanalytics.io/projections) 
+انستیتوی فناوری ماساچوست کمبریج، با نام اختصاری 
+[DELP](https://github.com/pourmalek/covir2/tree/main/20210423/ouput/DELP)
+،
+محقق اصلی مایکل لی،
+ [مقاله اصلی اینجا](https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1)
+
+
+مطالعه موسسه [ آی اچ ام ای]( http://www.healthdata.org/covid) 
+ دانشگاه واشنگتن سیاتل، با نام اختصاری 
+[IHME]( https://github.com/pourmalek/covir2/tree/main/20210423/ouput/IHME/2021_04_22)
+،
+محقق اصلی کریستوفر موری،
+ [مقاله اصلی اینجا]( https://www.nature.com/articles/s41591-020-1132-9)
+
+
+مطالعه [ایمپریال]( https://mrc-ide.github.io/global-lmic-reports/)
+کالج لندن
+  ، با نام اختصاری 
+[IMPE]( https://github.com/pourmalek/covir2/tree/main/20210423/ouput/IMPE)
+،
+محقق اصلی نیل فرگوسن،
+ [مقاله اصلی اینجا]( https://science.sciencemag.org/content/369/6502/413)
+
+
+مطالعه آزمایشگاه [لس آلاموس]( https://covid-19.bsvgateway.org/) 
+نیو مکزیکو
+ ، با نام اختصاری 
+[LANL]( https://github.com/pourmalek/covir2/tree/main/20210423/ouput/LANL)
+،
+محقق اصلی لارن کاسترو،
+ [نوشته اصلی اینجا]( https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf)
+
+
+مطالعه [اسریواستاوا]( https://scc-usc.github.io/ReCOVER-COVID-19/#//) 
+در دانشگاه کالیفرنیای جنوبی
+ ، با نام اختصاری 
+[SRIV]( https://github.com/pourmalek/covir2/tree/main/20210423/ouput/SRIV)
+،
+محقق اصلی آجیتش اسریواستاوا،
+ [مقاله اصلی اینجا]( https://arxiv.org/abs/2007.05180)
+ 
+ 
+مطالعه [قنبری]( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/pdf/main.pdf) 
+در دانشگاه صنعتی کرمانشاه
+ ، با نام اختصاری 
+[GHAN]( https://github.com/pourmalek/covir2/tree/main/20210423/ouput/SRIV)
+،
+محقق بهزاد قنبری ،
+ [مقاله اینجا]( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/pdf/main.pdf)
+
+
+مطالعه [سلطانی]( https://arxiv.org/abs/2008.11716) 
+در دانشگاه ارومیه
+ ، با نام اختصاری 
+[SOLT]( https://github.com/pourmalek/covir2/tree/main/20210416/output/SOLT)
+،
+نویسنده اول کامران سلطانی ،
+ [مقاله اینجا]( https://arxiv.org/abs/2008.11716)
+
+
+
+و همچنین پایگاه داده های
+[دانشگاه جانز هاپکینز](https://coronavirus.jhu.edu/map.html)، 
+منبع مورد استفاده برای گزارش های رسمی، جهت مقایسه.
+
+. جزییات مطالعات: متغیرهای آن ها، منابع، و سناریوهای مطالعات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.pdf) توضیح داده شده اند. 
+
+#### نتایج
+نمودارها و خروجی ها، کد های نر افزار استیتا، و توضیحات روش مدیریت داده ها (واژه نامه داده ها و سناریوهای مطالعه ها) در تارنمای گیت هاب قرار دارند (https://github.com/pourmalek/covir2). همه داده های مورد استفاده (و نتایج حاصله) در سطح غیر فردی، در دسترس عموم در اینترنت، و دارای مجوز به کار گیری و باز-انتشار غیر تجاری می باشند.  همه نمودارها در تارنمای گیت هاب، و چند نمودار منتخب در ادامه این متن قرار دارند. نمودارهای به روز-رسانی های اخیر مطالعات بررسی شده در این تارنما قرار خواهد گرفت: (https://github.com/pourmalek/covir3).
+
+#### موضوعات مهم
+(۱) به روز رسانی برآوردها توسط مدل ها: برآوردهای مدل ها حتی برای یک دوره زمانی خاص در به روز رسانی های متوالی مدل ها، مستعد تغییر هستند. به همین جهت لازم است در تفسیر نتایج این موضوع را در نظر گرفت. به روز رسانی نتایج مدل ها در این بررسی تا کنون چهار مرتبه صورت گرفته است، در تاریخ های (20210405)، (20210413)، (20210416)، (20210423). به عنوان نمونه، در توجه به نمودار برآوردهای مرگ های روزانه برای بهار ۱۴۰۰، علاوه بر متأخر ترین به روز رسانی (اینجا)،‌ لازم است به به-روز رسانی های قبلی نیز توجه نمود: (20210416)، (20210413)، و (20210405). (۲) نقاط ضعف و قوت مدل ها: هر مدلی نقاط قوت و ضعفی دارد که باید در تفسیر نتایج این موضوع را در نظر گرفت. مدل های کاملا صحیح یا کاملا غلط نادر هستند.
+
+#### نمودار های منتخب
+
+*
+
+ نمودار ۱ الف - برآورد مرگ های روزانه،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116429888-2982cd00-a7fb-11eb-97d9-a67ab695ca19.png)
+
+*
+
+نمودار ۱ ب - برآورد مرگ های روزانه،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210413/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116435125-e414ce80-a7ff-11eb-8b8d-f672173c1aed.png)
+
+*
+
+نمودار ۱ پ - برآورد مرگ های روزانه،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116437150-fe4fac00-a801-11eb-8623-aff2744d753c.png)
+
+* 
+
+نمودار ۱ ت - برآورد مرگ های روزانه،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116438965-dbbe9280-a803-11eb-8fd6-403db26dff90.png)
+
+*
+
+نمودار ۲ الف - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
+
+ ![image](https://user-images.githubusercontent.com/30849720/116430105-5e8f1f80-a7fb-11eb-9ecc-adcaf2de9ce9.png)
+
+*
+
+نمودار ۲ ب - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
+
+![image](https://user-images.githubusercontent.com/30849720/116436313-24c11780-a801-11eb-8020-ff8dc0a4e2bd.png)
+
+*
+
+نمودار ۲ پ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
+
+![image](https://user-images.githubusercontent.com/30849720/116437248-1cb5a780-a802-11eb-8d3d-64a4705bcc8a.png)
+
+*
+
+نمودار ۲ ت - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
+
+![image](https://user-images.githubusercontent.com/30849720/116439084-027cc900-a804-11eb-9da3-6c70087b21b7.png)
+
+*
+
+نمودار ۳ الف - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
+
+![image](https://user-images.githubusercontent.com/30849720/116430941-23d9b700-a7fc-11eb-971a-f1f86ba24672.png)
+
+*
+
+نمودار ۳ ب - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
+
+![image](https://user-images.githubusercontent.com/30849720/116436479-4b7f4e00-a801-11eb-99eb-c955a3a644a8.png)
+
+*
+
+نمودار ۳ پ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
+
+![image](https://user-images.githubusercontent.com/30849720/116437360-3ce56680-a802-11eb-9289-31a0d9ffcf68.png)
+
+*
+
+نمودار ۳ ت - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
+
+![image](https://user-images.githubusercontent.com/30849720/116439193-217b5b00-a804-11eb-8046-8fd0dc0d9ce3.png)
+
+*
+
+نمودار ۴ الف ۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
+
+![image](https://user-images.githubusercontent.com/30849720/116431195-6602f880-a7fc-11eb-9d7c-78d7ec1e54e8.png)
+
+*
+
+نمودار ۴ الف ۲ - برآورد موارد مربوط به بیمارستان و بستری،‌ از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
+
+![image](https://user-images.githubusercontent.com/30849720/116431431-a4001c80-a7fc-11eb-9ddc-4aafcdcee3d5.png)
+
+*
+
+نمودار ۴ ب ۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
+
+![image](https://user-images.githubusercontent.com/30849720/116436629-6fdb2a80-a801-11eb-938d-5796f9d9b52f.png)
+
+*
+
+نمودار ۴ ب ۲ - برآورد موارد مربوط به بیمارستان و بستری،‌ از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
+
+![image](https://user-images.githubusercontent.com/30849720/116436735-8aad9f00-a801-11eb-8c39-25d8f9065aa8.png)
+
+*
+
+نمودار ۴ پ ۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
+
+![image](https://user-images.githubusercontent.com/30849720/116437492-59819e80-a802-11eb-9657-2411c0890b46.png)
+
+*
+
+نمودار ۴ پ ۲ - برآورد موارد مربوط به بیمارستان و بستری،‌ از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
+
+![image](https://user-images.githubusercontent.com/30849720/116438446-4de2a780-a803-11eb-84fa-89f4e396acbe.png)
+
+*
+ 
+نمودار ۴ پ ۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
+
+![image](https://user-images.githubusercontent.com/30849720/116439372-51c2f980-a804-11eb-8699-a3b2e92497b8.png)
+
+*
+
+نمودار ۴ پ ۲ - برآورد موارد مربوط به بیمارستان و بستری،‌  از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
+
+![image](https://user-images.githubusercontent.com/30849720/116439476-728b4f00-a804-11eb-97d5-c77645d6bb8d.png)
+
+*
+
+نمودار ۵ الف - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶ 
+
+![image](https://user-images.githubusercontent.com/30849720/116434717-841e2800-a7ff-11eb-813b-5dc61926ff54.png)
+
+*
+
+نمودار ۵ ب - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
+
+![image](https://user-images.githubusercontent.com/30849720/116436862-ab75f480-a801-11eb-81df-767c257fac91.png)
+
+*
+
+نمودار ۵ پ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
+
+![image](https://user-images.githubusercontent.com/30849720/116438581-6eaafd00-a803-11eb-9e05-5bf6e431ed36.png)
+
+*
+
+نمودار ۵ ت - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
+
+![image](https://user-images.githubusercontent.com/30849720/116439567-8d5dc380-a804-11eb-8eb0-59666da07869.png)
+
+*
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 ## نحوه داونلود و استفاده از کد های نرم افزار استیتا 
 در تارنمای گیت هاب (https://github.com/pourmalek/covir2) 
