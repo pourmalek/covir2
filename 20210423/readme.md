@@ -22,7 +22,6 @@
 *
 [COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/115951799-931b7800-a497-11eb-94bb-cb4f9f6114f0.png)
 
 *
 [COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
