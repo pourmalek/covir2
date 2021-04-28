@@ -62,7 +62,8 @@ Farsi README for covir2
 
 با کلیک کردن روی سطر آخر منو (DOWNLOAD ZIP)،‌ کل محتوی (سایت covir2) بر روی کامپیوتر کاربر داونلود می شود. کلیک کردن روی لینک [اینجا](https://codeload.github.com/pourmalek/covir2/zip/refs/heads/main) نیز همان کار را می کند. بسته به تنظیمات و سیستم کامل کامپیوتر کاربر،‌ حاصل داونلود دو نوع ممکن است باشد: یک فایل زیپ به نام covir2-main.zip یا یک دیرکتوری به نام covir2-main. فایل زیپ به نام covir2-main.zip را باید unzip کرد به قراری که دیرکتوری حاصله در ریشه Downloads باشد. 
 
-پس از داونلود، فایل "Iran master.do" را اجرا کنید،‌که در مسیر زیر قرار دارد: 
+پس از داونلود، فایل "Iran master.do" را اجرا کنید،‌که در مسیر زیر قرار دارد:
+
 "Users\local-user-name\Downloads\covir2-main\20210423\code\master\do Iran master.do"
 
 نام کاربر جایگزین (local-user-name) خواهد شد. علامت / برای کاربران مک اینتاش جایگزین علامت \ می گردد. 
