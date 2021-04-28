@@ -148,7 +148,7 @@
 نمودار ۱ ت - برآورد مرگ های روزانه،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
 [`link`](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/116438965-dbbe9280-a803-11eb-8fd6-403db26dff90.png)
+![image](https://user-images.githubusercontent.com/30849720/116486308-252dd280-a842-11eb-9888-fcb29a0468a8.png)
 
 *
 
@@ -172,7 +172,6 @@
 
 نمودار ۲ ت - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
 
-![image](https://user-images.githubusercontent.com/30849720/116439084-027cc900-a804-11eb-9da3-6c70087b21b7.png)
 
 *
 
