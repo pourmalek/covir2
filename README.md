@@ -89,7 +89,7 @@
 <br/><br/>
 
 ## English README for covir2
-
+<div dir="ltr">
 
 
 
