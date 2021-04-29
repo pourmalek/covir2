@@ -74,7 +74,7 @@
  [نوشته اصلی اینجا]( https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf)
 
 
-مطالعه [اسریواستاوا]( https://scc-usc.github.io/ReCOVER-COVID-19/#//) 
+مطالعه [اسریواستاوا]( https://scc-usc.github.io/ReCOVER-COVID-19/#/) 
 در دانشگاه کالیفرنیای جنوبی
  ، با نام اختصاری 
 [SRIV]( https://github.com/pourmalek/covir2/tree/main/20210423/ouput/SRIV)
