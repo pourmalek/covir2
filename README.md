@@ -455,11 +455,6 @@ on the dropdown menu.
 
 4. Go to your local directory |Downloads|covir2-main|20210405|code|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
 
-## * Farsi-dated graphs:
-
-Files "graph 1a" to "graph 5b" stored in "Users|local-user-name|Downloads|covir2-main|20210405|code|merge|" of the local machine (your computer) will be the final graphs that use Farsi (Hijri Solar) dates. 
-
-
 
 5. If `Stata` returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
