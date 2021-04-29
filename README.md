@@ -33,7 +33,7 @@
 
 #### روش
 روش بررسی مطابق با مقاله 
-[Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3) می باشد (نسخه اول این مرور)، با این تفاوت که مطالعات جستجوی مطالعات برای برآوردهای دی ماه ۱۳۹۹ به بعد و در هفت پایگاه مقالات و از ۲۶ تا ۲۸ اسفند ۱۳۹۹ صورت گرفت: پابمد، گوگل اسکالر، مقالات فارسی در
+[Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3) می باشد (نسخه اول این مرور)، با این تفاوت که جستجوی مطالعات برای برآوردهای دی ماه ۱۳۹۹ به بعد و در هفت پایگاه مقالات و از ۲۶ تا ۲۸ اسفند ۱۳۹۹ صورت گرفت: پابمد، گوگل اسکالر، مقالات فارسی در
 [پایگاه مرکز اطلاعات علمی جهاد دانشگاهی](https://www.sid.ir)،
 و در [بانک اطلاعات نشریات کشور](https://www.magiran.com)، و مقالات داوری نشده در پایگاه های [medRxiv](https://www.medrxiv.org) ، [arXiv](https://arxiv.org) و [Research Square](https://www.researchsquare.com).
 
