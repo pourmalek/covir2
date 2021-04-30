@@ -351,7 +351,9 @@
 نام کاربر، جایگزین (local-user-name) خواهد شد. علامت / برای کاربران مک اینتاش جایگزین علامت \ می گردد. 
 قسمت \20210423\ در مسیر فوق برای به روز رسانی مربوط به این تاریخ میلادی می باشد. 
 
-در صورت مواجهه با اشکال در اجرای کد،‌ به قسمت رفع مشکلات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.pdf) مراجعه شود. در صورت رفع نشدن اشکال، و همچنین در صورت مشاهده اشتباه (bug) در کد ها، می توان به [اینجا](https://github.com/pourmalek/covir2/tree/main/.github/ISSUE_TEMPLATE) مراجعه نمود، یا به پدید آورنده (pourmalek_farshad@yahoo.com) ای-میل زد. 
+در صورت مواجهه با اشکال در اجرای کد،‌ به قسمت رفع مشکلات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.pdf) مراجعه شود. در صورت رفع نشدن اشکال، و همچنین در صورت مشاهده اشتباه (bug) در کد ها، می توان به [اینجا](https://github.com/pourmalek/covir2/tree/main/.github/ISSUE_TEMPLATE) مراجعه نمود، یا به پدید آورنده (pourmalek_farshad@yahoo.com) ای-میل زد.
+
+[`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 <br/><br/>
 <br/><br/>
