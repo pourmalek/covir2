@@ -497,6 +497,8 @@ Updates and directory structure:
 <br/><br/>
 3- Level 3 of directories || component studies, master, and merge:
 
+Level-3 directories include codes if level 2 is code, and outputs if level 2 is outputs. 
+
 [`DELP`](https://github.com/pourmalek/covir2/tree/main/20210405/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210405/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SOLT) 
 [`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SRIV)
 
