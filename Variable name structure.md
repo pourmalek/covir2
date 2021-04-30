@@ -48,7 +48,7 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 * Positions 17-19: V??: Version of the model in component study (see details below)
 
 
-Version of the model in component study is the only part that is fixed within each component study in this review. 
+Version of the model in component study is the only part that is fixed within each component study in this review, within each update. That is not the case within [`longitudinal`](https://github.com/pourmalek/covir2/tree/main/longitudinal) assessment. 
 
 
 The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, mean, raw, DELPHI, single scenario, model version 3. 
