@@ -25,7 +25,7 @@
 
 This code is set up to work from "Users\local-user-name\Downloads\covir2-main\20210405\code\master\do Iran master.do". Sometimes users chose destinations other than \Downloads\ folder. Before editing the code, it will not work from anywhere else. 
 
-* If a directory named \covir2-main\ shows up in \Downloads\ folder, go inside \covir2-main\ and open \Data\ , then \merge\ , and find and run the "do Iran master.do". 
+* If a directory named \covir2-main\ shows up in \Downloads\ folder, go inside \covir2-main\ and open \20210405\, then \code\, then \merge\ , and find and run the "do Iran master.do". 
 
 * If a zip file named covir2-main.zip shows up in \Downloads\ folder, unzip it, and make sure the resultant \covir2-main\ is directly in the root of in \Downloads\ folder. Go inside \covir2-main\ and open \20210405\, then \code\ , then \merge\ , and find and run the "do Iran master.do". 
 
