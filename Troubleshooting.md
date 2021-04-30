@@ -23,6 +23,11 @@ Manually rearrange the directories so that the expected file path leading to |co
 This code is set up to work from "|Users|local-user-name|Downloads|covir2-main|20210405|code|master|do Iran master.do". Sometimes users chose destinations other than |Downloads| folder. Before editing the code, it will not work from anywhere else.
 <br/><br/>
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data|master|do Iran master.do"   
+
+A relatively frequent problem with unzipping in Windows is that the file path might become something like:
+
+"C:\Users\local-user-name\Downloads\covir2-main\covir2-main\20210405\code\master\do Iran master.do"
+
 <br/><br/>
 
 Note: |20210413| or other later updates an be similary used instead of original |20210405|. For instance, run "|Users|local-user-name|Downloads|covir2-main|20210413|code|master|do Iran master.do" on local machine for the 20210413 update.
