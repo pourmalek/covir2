@@ -497,7 +497,7 @@ Updates and directory structure:
 <br/><br/>
 3- Level 3 of directories || component studies, master, and merge:
 
-Level-3 directories include codes if level 2 is code, and outputs if level 2 is outputs. 
+Level-3 directories include codes if level 2 is code, and outputs if level 2 is outputs. The follwoing are codes.
 
 [`DELP`](https://github.com/pourmalek/covir2/tree/main/20210405/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210405/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SOLT) 
 [`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SRIV)
@@ -507,6 +507,9 @@ Level-3 directories include codes if level 2 is code, and outputs if level 2 is 
 [`merge`](https://github.com/pourmalek/covir2/tree/main/20210405/code/merge) contains the combined estimates and graphs from component studies
 
 component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/output/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
+
+Level-3 directory [`output/merge`](https://github.com/pourmalek/covir2/tree/main/20210405/output/merge) includes combined estimates [`Iran.dta`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/Iran.dta) and [`Iran.csv`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/Iran.csv) and combined graphs, e.g., [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
 
 
 <br/><br/>
