@@ -510,7 +510,7 @@ component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/m
 
 Level-3 directory [`output/merge`](https://github.com/pourmalek/covir2/tree/main/20210405/output/merge) includes combined estimates [`Iran.dta`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/Iran.dta) and [`Iran.csv`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/Iran.csv) and combined graphs, e.g., [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-
+Output level-3 directories for component studies, e.g., [`output/IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/output/IHME/2021_04_01) contains data files and graphs form each study, e.g., [COVID-19 daily deaths, Iran, IHME, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20210405/output/IHME/2021_04_01/graph%202%20COVID-19%20daily%20deaths%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
 
 <br/><br/>
 
