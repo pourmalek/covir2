@@ -355,6 +355,8 @@
 
 [`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
+[`bug report or feature request`](https://github.com/pourmalek/covir2/issues/new/choose)
+
 <br/><br/>
 <br/><br/>
 
