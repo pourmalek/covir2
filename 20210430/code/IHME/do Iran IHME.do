@@ -54,7 +54,7 @@ save Best_masks_hospitalization_all_locs.dta, replace
 import delimited using worse_hospitalization_all_locs.csv, clear varnames(1)
 save Worse_hospitalization_all_locs.dta, replace
 
-
+* "reference_hospitalization_all_locs.csv" of IHME 20210430 is empty. Once IHME amends it the code will be executable.
 
 ******************************
 
