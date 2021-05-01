@@ -4,7 +4,9 @@
 
 <br/><br/>
 
-* English text located below, after the Farsi text.
+Note: English text located below, after the Farsi text.
+
+<br/><br/>
 
 
 ### Farsi README for covir2
