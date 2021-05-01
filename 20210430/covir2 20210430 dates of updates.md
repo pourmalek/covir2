@@ -1,0 +1,12 @@
+
+covir2 20210430 dates of updates
+
+DELP 30apr2021
+
+IHME 30apr2021
+
+IMPE 24apr2021
+
+LANL 28apr2021
+
+SRIV 30apr2021
