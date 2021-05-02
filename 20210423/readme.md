@@ -5,7 +5,7 @@
 
 *
 
-[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116485719-be5be980-a840-11eb-913d-23780ea0a352.png)
 
