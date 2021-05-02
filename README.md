@@ -149,9 +149,9 @@ Note: English text located below, after the Farsi text.
 * 
 
 نمودار ۱۴ - برآورد مرگ های روزانه،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/116486308-252dd280-a842-11eb-9888-fcb29a0468a8.png)
+![image](https://user-images.githubusercontent.com/30849720/116823135-a41f5580-ab37-11eb-8b3f-d20acba37c44.png)
 
 *
 
