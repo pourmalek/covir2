@@ -105,14 +105,11 @@ Note: English text located below, after the Farsi text.
 
 
 مطالعه یویانگ گو (YYGU)، مطالعه ایست که در سال ۲۰۲۰ انجام شد، مشتمل بر یک مدل (SEIR) و (Machine Learning). تارنمای مطالعه
-[اینجا]
-(https://covid19-projections.com)
+[اینجا](https://covid19-projections.com)
  و گیت هاب مطالعه
-[اینجا]
-(https://github.com/youyanggu/covid19_projections)
+[اینجا](https://github.com/youyanggu/covid19_projections)
 . توضیحات مدل 
-[اینجا]
-(https://covid19-projections.com/about/#table-of-contents-death-forecasting-model)
+[اینجا](https://covid19-projections.com/about/#table-of-contents-death-forecasting-model)
 . مقاله ندارد. به صورت (test-dose) به بروز-رسانی (20210423) اضافه شد. 
 
 
