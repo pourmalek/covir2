@@ -1,0 +1,9 @@
+YYGU model, model by Youyang Gu, is a SEIR model + Machine Learning, conducted in 2020. 
+
+Study web site, "COVID-19 Projections Using Machine Learning" (https://covid19-projections.com). 
+
+Model described here: https://covid19-projections.com/about/#table-of-contents-death-forecasting-model
+
+YYGU estimates file available here: https://github.com/youyanggu/covid19_projections
+
+YYGU was added to 20210423 update of covir2. 
