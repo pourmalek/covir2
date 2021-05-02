@@ -163,7 +163,7 @@ Note: English text located below, after the Farsi text.
 
 نمودار ۲۲ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
 
-![image](https://user-images.githubusercontent.com/30849720/116823180-eb0d4b00-ab37-11eb-9936-4c5e9139ed53.png)
+![image](https://user-images.githubusercontent.com/30849720/115966967-d18b5400-a4e4-11eb-8574-cbfa74748545.png)
 
 *
 
