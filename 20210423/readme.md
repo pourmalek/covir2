@@ -10,7 +10,7 @@
 ![image](https://user-images.githubusercontent.com/30849720/116822867-20189e00-ab36-11eb-97f5-fe8632dd62d9.png)
 
 *
-[COVID-19 daily cases, Iran, reference scenarios]https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+[COVID-19 daily cases, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116822935-6ec63800-ab36-11eb-8f32-d5a1cf466721.png)
 
