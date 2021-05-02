@@ -175,7 +175,7 @@ Note: English text located below, after the Farsi text.
 
 نمودار ۲۴ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
 
-![image](https://user-images.githubusercontent.com/30849720/116486601-e2b8c580-a842-11eb-87b9-226df286e0c2.png)
+![image](https://user-images.githubusercontent.com/30849720/116822935-6ec63800-ab36-11eb-8f32-d5a1cf466721.png)
 
 *
 
