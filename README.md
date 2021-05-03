@@ -454,13 +454,16 @@ Study web site: https://www.covidanalytics.io/projections
 
 Estimates web site: https://www.covidanalytics.io/projections, down the page, link that reads, "Download Most Recent Predictions"
 
+License: https://github.com/COVIDAnalytics/DELPHI/blob/master/LICENSE
+
 Institution: Operations Research Center, Massachusetts Institute of Technology, Cambridge
 
-Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1
+Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.covidanalytics.io/DELPHI_documentation_pdf, https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1
 
 Periodically updating: Yes 
 
 Periodical updates accessible: No
+
 
 
 
@@ -471,6 +474,8 @@ IHME: Institute for Health Metrics and Evaluation
 Study web site: http://www.healthdata.org/covid
 
 Estimates web site: http://www.healthdata.org/covid/data-downloads
+
+License: http://www.healthdata.org/about/terms-and-conditions
 
 Institution: IHME, University of Washington, Seattle 
 
@@ -489,6 +494,8 @@ Study web site: https://mrc-ide.github.io/global-lmic-reports/
 
 Estimates web site: https://github.com/mrc-ide/global-lmic-reports/tree/master/data
 
+License: https://github.com/mrc-ide/global-lmic-reports
+
 Institution: Imperial College, London
 
 Among articles: https://science.sciencemag.org/content/369/6502/413
@@ -505,6 +512,8 @@ Los Alamos National Laboratories
 Study web site: https://covid-19.bsvgateway.org
 
 Estimates web site: https://covid-19.bsvgateway.org, Model Outputs, Global
+
+License: https://covid-19.bsvgateway.org
 
 Institution: Los Alamos National Laboratories, Los Alamos
 
@@ -523,6 +532,8 @@ Srivastava, Ajitesh
 Study web site: https://scc-usc.github.io/ReCOVER-COVID-19/
 
 Estimates web site: https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
+
+License: https://github.com/scc-usc/ReCOVER-COVID-19/blob/master/LICENSE
 
 Institution: University of Southern California, Los Angeles
 
@@ -578,6 +589,8 @@ Study web site: https://covid19-projections.com
 
 Estimates web site: https://github.com/youyanggu/covid19_projections/tree/master/projections/combined
 
+License: https://github.com/youyanggu/covid19_projections/blob/master/LICENSE
+
 Institution: 
 
 Among articles: 
@@ -586,7 +599,7 @@ Periodically updating: Yes, until 2020-10-04
 
 Periodical updates accessible: Yes
 
-Note: included in 20210423 update
+Note: included in 20210423 update, (here)[https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU]
 
 
   <br/><br/>
