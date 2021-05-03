@@ -458,7 +458,7 @@ License: https://github.com/COVIDAnalytics/DELPHI/blob/master/LICENSE
 
 Institution: Operations Research Center, Massachusetts Institute of Technology, Cambridge
 
-Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.covidanalytics.io/DELPHI_documentation_pdf, https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1
+Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.covidanalytics.io/DELPHI_documentation_pdf , https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1
 
 Periodically updating: Yes 
 
