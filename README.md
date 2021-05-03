@@ -444,6 +444,90 @@ Note: English text located below, after the Farsi text.
 <br/><br/>
 
 
+* Studies / models:
+
+DELP 
+DELPHI: Differential Equations Lead to Predictions of Hospitalizations and Infections
+Study web site: https://www.covidanalytics.io/projections
+Estimates web site: https://www.covidanalytics.io/projections, down the page, link that reads, "Download Most Recent Predictions"
+Institution: Operations Research Center, Massachusetts Institute of Technology, Cambridge
+Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1
+Periodically updating: Yes 
+Periodical updates accessible: No
+
+
+IHME 
+IHME: Institute for Health Metrics and Evaluation 
+Study web site: http://www.healthdata.org/covid
+Estimates web site: http://www.healthdata.org/covid/data-downloads
+Institution: IHME, University of Washington, Seattle 
+Among articles: https://www.nature.com/articles/s41591-020-1132-9
+Periodically updating: Yes 
+Periodical updates accessible: Yes
+
+
+IMPE
+Imperial College 
+Study web site: https://mrc-ide.github.io/global-lmic-reports/
+Estimates web site: https://github.com/mrc-ide/global-lmic-reports/tree/master/data
+Institution: Imperial College, London
+Among articles: https://science.sciencemag.org/content/369/6502/413
+Periodically updating: Yes 
+Periodical updates accessible: Yes
+
+
+LANL
+Los Alamos National Laboratories
+Study web site: https://covid-19.bsvgateway.org
+Estimates web site: https://covid-19.bsvgateway.org, Model Outputs, Global
+Institution: Los Alamos National Laboratories, Los Alamos
+Among documents: https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf
+Periodically updating: Yes 
+Periodical updates accessible: Yes
+
+
+SRIV
+Srivastava, Ajitesh
+Study web site: https://scc-usc.github.io/ReCOVER-COVID-19/
+Estimates web site: https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
+Institution: University of Southern California, Los Angeles
+Among articles: https://arxiv.org/abs/2007.05180
+Periodically updating: Yes 
+Periodical updates accessible: Yes
+
+
+GHAN
+Ghanbari, Behzad 
+Study web site: Not applicable 
+Estimates web site: Not applicable 
+Institution: Kermanshah University of Technology, Kermanshah
+Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/
+Periodically updating: No 
+Periodical updates accessible: Not applicable 
+
+
+SOLT
+Soltani, Kamran
+Study web site: Not applicable
+Estimates web site: Not applicable
+Institution: Urmia University, Urmia
+Among articles: https://arxiv.org/abs/2008.11716
+Periodically updating: No 
+Periodical updates accessible: Not applicable 
+
+
+YYGU
+Gu, Youyang
+Study web site: https://covid19-projections.com
+Estimates web site: https://github.com/youyanggu/covid19_projections/tree/master/projections/combined
+Institution: 
+Among articles: 
+Periodically updating: Yes, until 2020-10-04
+Periodical updates accessible: Yes
+
+  <br/><br/>
+
+
 ### SUMMARY of how to use the codes in this repo
 
 0. Save all unsaved works and files on your local machine and exit all open programs and applications. This is a cautionary measure for not losing unsaved parts of files in case the local machine stops responding or restarts due to oversaturation of RAM, CPU. Even better: Restarting the local machine (to empty the cache), invoking no program, and running the code can be more efficient than running the code on the local machine even with closing all running programs.
