@@ -446,7 +446,7 @@ Note: English text located below, after the Farsi text.
 
 * Studies / models:
 
-DELP 
+* DELP 
 
 DELPHI: Differential Equations Lead to Predictions of Hospitalizations and Infections
 
@@ -464,7 +464,7 @@ Periodical updates accessible: No
 
 
 
-IHME 
+* IHME 
 
 IHME: Institute for Health Metrics and Evaluation 
 
@@ -481,7 +481,7 @@ Periodically updating: Yes
 Periodical updates accessible: Yes
 
 
-IMPE
+* IMPE
 
 Imperial College 
 
@@ -498,7 +498,7 @@ Periodically updating: Yes
 Periodical updates accessible: Yes
 
 
-LANL
+* LANL
 
 Los Alamos National Laboratories
 
@@ -516,7 +516,7 @@ Periodical updates accessible: Yes
 
 
 
-SRIV
+* SRIV
 
 Srivastava, Ajitesh
 
@@ -534,7 +534,7 @@ Periodical updates accessible: Yes
 
 
 
-GHAN
+* GHAN
 
 Ghanbari, Behzad 
 
@@ -552,7 +552,7 @@ Periodical updates accessible: Not applicable
 
 
 
-SOLT
+* SOLT
 
 Soltani, Kamran
 
@@ -570,7 +570,7 @@ Periodical updates accessible: Not applicable
 
 
 
-YYGU
+* YYGU
 
 Gu, Youyang
 
