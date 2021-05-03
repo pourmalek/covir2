@@ -444,7 +444,7 @@ Note: English text located below, after the Farsi text.
 <br/><br/>
 
 
-* Studies / models:
+### * Studies / models:
 
 * DELP 
 
