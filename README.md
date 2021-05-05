@@ -484,7 +484,9 @@
 
 [Summary](https://github.com/pourmalek/covir2/blob/main/README.md#summary)
 
-[Methods]()
+[Methods](https://github.com/pourmalek/covir2/blob/main/README.md#methods)
+
+[Limitations]()
 
 [Results]()
 
@@ -512,6 +514,12 @@ Estimates of seven studies, including international periodically updating studie
 ### Methods
 
 Methods generally follow the first iteration of this review, i.e., [Rapid review of COVID-19 epidemic estimation studies for Iran](Rapid review of COVID-19 epidemic estimation studies for Iran), with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Goggle Scholar, [Iranian Scientific Information Database](https://www.sid.ir), (Iranian National Periodicals Information Bank)[https://www.magiran.com], and pre-prints in (medRxiv)[https://www.medrxiv.org/], (arXiv)[ https://arxiv.org/], and (Research Square)[ Research Square.]. 
+
+### Limitations 
+
+(1) The search for international periodically updating studies is performed as "Additional records identified through other sources" and not performed in a replicable method. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a propriety software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
+I am willing for suggestions, collaboration, and help regarding overcoming the above-mentioned, and other limitations of this work. Please e-mail me (pourmalek_farshad@yahoo.com) 
+
 
 
 ********************************************************************************************************************************************
