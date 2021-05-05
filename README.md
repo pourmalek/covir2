@@ -580,22 +580,9 @@ I am willing for suggestions, collaboration, and help regarding overcoming the a
 
 ********************************************************************************************************************************************
 
-<br/><br/>
-
 
 <br/><br/>
-*
 
-
-
-
-
-* Details: This is a review study of estimates of COVID-19 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare and combine them, and produce output files and graphs using `Stata`. This repo can be used to replicate the results of the review study ('Computational reproducibility').
-
-
-* Journal article for iteration one, here: [Rapid review of COVID-19 epidemic estimation studies for Iran]( https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)
-* Journal article for iteration two (this iteration), here: (time-to-event)
-<br/><br/>
 
 
 ### * Studies / models:
