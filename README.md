@@ -542,7 +542,7 @@
 
 [Updates and directory structure](https://github.com/pourmalek/covir2/blob/main/README.md#updates-and-directory-structure)
 
-[Important considerations]()
+[Important considerations](https://github.com/pourmalek/covir2/blob/main/README.md#important-considerations)
 
 [Limitations](https://github.com/pourmalek/covir2/blob/main/README.md#limitations)
 
