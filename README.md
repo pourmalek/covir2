@@ -542,7 +542,7 @@
 
 [Studies](https://github.com/pourmalek/covir2/blob/main/README.md#-studies--models)
 
-[Selected graphs](https://github.com/pourmalek/covir2/blob/main/README.md#selected-graphs-from-latest-update-20210423)
+[Selected graphs](https://github.com/pourmalek/covir2#selected-graphs)
 
 [Important considerations]()
 
@@ -583,7 +583,7 @@ I am willing for suggestions, collaboration, and help regarding overcoming the a
 
 ### Selected graphs 
 
-## Selected graph from latest update 20210430
+### Selected graph from latest update 20210430
 
 [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
@@ -592,7 +592,7 @@ I am willing for suggestions, collaboration, and help regarding overcoming the a
 
 *
 
-## Selected graphs from update 20210423
+### Selected graphs from update 20210423
 
 *
 
