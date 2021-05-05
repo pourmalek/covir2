@@ -139,8 +139,13 @@
 [اینجا](https://github.com/youyanggu/covid19_projections)
 . توضیحات مدل 
 [اینجا](https://covid19-projections.com/about/#table-of-contents-death-forecasting-model)
+. مقاله ندارد. به صورت (test-dose) به بروز-رسانی (https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU)[20210423] اضافه شد. 
+
+
 . مقاله ندارد. به صورت (test-dose) به بروز-رسانی (20210423) اضافه شد. 
 
+
+https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU
 
 و همچنین پایگاه داده های
 [دانشگاه جانز هاپکینز](https://coronavirus.jhu.edu/map.html)، 
