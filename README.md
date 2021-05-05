@@ -482,6 +482,20 @@
 
 <br/><br/>
 
+[Executive summary]()
+
+[Summary]()
+
+[Methods]()
+
+[Results]()
+
+[Important considerations]()
+
+[Using Stata codes]()
+
+[Troubleshooting, bug reporting, suggestions and feedback]()
+
 ********************************************************************************************************************************************
 
 ## Selected graphs from latest update 20210423
