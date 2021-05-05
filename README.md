@@ -507,7 +507,7 @@
 
 Estimates of five international periodically updating models or studies of COVID-19 epidemic for Iran are gathered and combined, and graphs, data files and Stata codes are produced and are accessible here. Guide for use of Stata codes is provided. A longitudinal treatment of periodically updating models will be added. 
 
-Similar work for the GLOBAL level will to be presented in [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize)
+Similar work for the _GLOBAL_ level are being prepared to be presented in [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize)
 
 ### Summary
 
