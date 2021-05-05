@@ -25,6 +25,27 @@
 
 <br/><br/>
 
+[خلاصه اجرایی](https://github.com/pourmalek/covir2/blob/main/README.md#خلاصه-اجرایی)
+
+[خلاصه](https://github.com/pourmalek/covir2/blob/main/README.md#خلاصه)
+
+[روش](https://github.com/pourmalek/covir2/blob/main/README.md#روش)
+
+[مطالعات](https://github.com/pourmalek/covir2/blob/main/README.md#مطالعات)
+
+[نتایج](https://github.com/pourmalek/covir2/blob/main/README.md#نتایج)
+
+[موضوعات مهم](https://github.com/pourmalek/covir2/blob/main/README.md#موضوعات-مهم)
+
+[نمودار های منتخب](https://github.com/pourmalek/covir2/blob/main/README.md#نمودار-های-منتخب)
+
+[نحوه داونلود و استفاده از کد های نرم افزار استیتا](https://github.com/pourmalek/covir2/blob/main/README.md#نحوه-داونلود-و-استفاده-از-کد-های-نرم-افزار-استیتا)
+
+[رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها](https://github.com/pourmalek/covir2/blob/main/README.md#رفع-مشکلات-گزارش-اشتباهات-ارایه-پیشنهادات-و-بازخوردها)
+
+<br/><br/>
+
+
 #### خلاصه اجرایی:  
 
 برآوردهای پنج مطالعه بین المللی برای همه گیری کووید-۱۹ در ایران به صورت نمودار، فایل و کد نرم افزار در سایت گیت هاب قابل دیدن و دانلود هستند. نحوه داونلود و استفاده از کد های نرم افزار استیتا در زیر آمده است. به روز-رسانی های متوالی مدل ها به صورت دوره ای به این سایت اضافه خواهند شد. 
