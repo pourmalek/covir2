@@ -178,7 +178,7 @@
 مثال نوع اول در
 [اینجا](https://github.com/mrc-ide/global-lmic-reports/tree/master/data)
 و نمایش آن در این تارنما در 
-[اینجا] (https://github.com/pourmalek/covir2/blob/main/20210430/covir2%2020210430%20dates%20of%20updates.md)
+[اینجا](https://github.com/pourmalek/covir2/blob/main/20210430/covir2%2020210430%20dates%20of%20updates.md)
 
 
 
