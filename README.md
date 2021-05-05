@@ -817,7 +817,7 @@ on the dropdown menu.
 #### Updates and directory structure
 
 <br/><br/>
-1- Level 1 of directories || dates on which the current codes were updated:
+1- Level 1 of directories || dates on which a new uptake of studies estimates were created in this repo
 
 [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405) 
 
@@ -826,6 +826,8 @@ on the dropdown menu.
 [`20210416`](https://github.com/pourmalek/covir2/tree/main/20210416)
 
 [`20210423`](https://github.com/pourmalek/covir2/tree/main/20210423)
+
+[`20210430`](https://github.com/pourmalek/covir2/tree/main/20210430)
 
 <br/><br/>
 2- Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
