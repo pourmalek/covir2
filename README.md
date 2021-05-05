@@ -118,7 +118,7 @@
 مطالعه [قنبری]( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/pdf/main.pdf) 
 در دانشگاه صنعتی کرمانشاه
  ، با نام اختصاری 
-[GHAN](https://github.com/pourmalek/covir2/tree/main/20210430/output/SRIV)
+[GHAN](https://github.com/pourmalek/covir2/tree/main/20210430/output/GHAN)
 ،
 محقق بهزاد قنبری ،
  [مقاله اینجا]( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/pdf/main.pdf)
