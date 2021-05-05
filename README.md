@@ -538,7 +538,7 @@
 
 [Results](https://github.com/pourmalek/covir2/blob/main/README.md#results)
 
-[Studies](https://github.com/pourmalek/covir2/blob/main/README.md#-studies--models)
+[Studies](https://github.com/pourmalek/covir2/blob/main/README.md#studies--models)
 
 [Updates and directory structure](https://github.com/pourmalek/covir2/blob/main/README.md#updates-and-directory-structure)
 
