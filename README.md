@@ -4,7 +4,10 @@
 
 <br/><br/>
 
-Note: English text located below, after the Farsi text.
+[Farsi](https://github.com/pourmalek/covir2#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم)
+https://github.com/pourmalek/covir2#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم
+
+English
 
 <br/><br/>
 
