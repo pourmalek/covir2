@@ -486,7 +486,7 @@
 
 [Methods](https://github.com/pourmalek/covir2/blob/main/README.md#methods)
 
-[Limitations]()
+[Limitations](https://github.com/pourmalek/covir2/blob/main/README.md#limitations)
 
 [Results]()
 
