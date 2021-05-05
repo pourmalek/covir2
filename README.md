@@ -490,13 +490,15 @@
 
 [Results]()
 
-[Se;ected graphs]()
+[Studies](https://github.com/pourmalek/covir2/blob/main/README.md#-studies--models)
+
+[Selected graphs](https://github.com/pourmalek/covir2/blob/main/README.md#selected-graphs-from-latest-update-20210423)
 
 [Important considerations]()
 
-[Using Stata codes]()
+[Using Stata codes](https://github.com/pourmalek/covir2/blob/main/README.md#summary-of-how-to-use-the-codes-in-this-repo)
 
-[Troubleshooting, bug reporting, suggestions and feedback]()
+[Troubleshooting, bug reporting, suggestions and feedback](https://github.com/pourmalek/covir2/blob/main/README.md#troubleshooting-errors-bugs-and-vulnerabilities)
 
 ********************************************************************************************************************************************
 
