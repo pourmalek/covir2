@@ -167,6 +167,13 @@ Note: English text located below, after the Farsi text.
 
 *
 
+نمودار ۱۵ - برآورد مرگ های روزانه،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117085775-8e5c8c80-acff-11eb-8491-cbe1fdf6ed94.png)
+
+*
+
 نمودار ۲۱ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
 
  ![image](https://user-images.githubusercontent.com/30849720/116430105-5e8f1f80-a7fb-11eb-9ecc-adcaf2de9ce9.png)
@@ -188,6 +195,12 @@ Note: English text located below, after the Farsi text.
 نمودار ۲۴ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
 
 ![image](https://user-images.githubusercontent.com/30849720/116822935-6ec63800-ab36-11eb-8f32-d5a1cf466721.png)
+
+*
+
+نمودار ۲۵ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
+
+![image](https://user-images.githubusercontent.com/30849720/117085917-fb702200-acff-11eb-9ebb-932456161ab7.png)
 
 *
 
@@ -260,6 +273,12 @@ Note: English text located below, after the Farsi text.
 نمودار ۴۴۲ - برآورد موارد مربوط به بیمارستان و بستری،‌  از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
 
 ![image](https://user-images.githubusercontent.com/30849720/116486713-18f64500-a843-11eb-844a-47b50194e253.png)
+
+*
+
+نمودار ۴۴۵ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
+
+![image](https://user-images.githubusercontent.com/30849720/117086044-56a21480-ad00-11eb-8852-b0c65fde62ad.png)
 
 *
 
