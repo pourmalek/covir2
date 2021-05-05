@@ -52,7 +52,12 @@
 
 برآوردهای پنج مطالعه بین المللی بروز-شونده برای همه گیری کووید-۱۹ در ایران به صورت نمودار، فایل و کد نرم افزار در این سایت گیت هاب قابل دیدن و دانلود هستند. نحوه داونلود و استفاده از کد های نرم افزار استیتا در زیر آمده است. به روز-رسانی های متوالی مدل ها به صورت دوره ای به این سایت اضافه خواهند شد.
 
-مشابه این کار برای سطح جهانی در حال آماده سازی جهت ارایه در 
+مشابه این کار برای سطح جهانی در حال آماده سازی جهت ارایه در [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize) می باشد.
+ 
+
+
+
+مشابه این کار برای سطح جهانی در حال آماده سازی جهت ارایه در  
 [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize)
 می باشد. 
 
