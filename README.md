@@ -538,6 +538,8 @@
 
 [Using Stata codes](https://github.com/pourmalek/covir2/blob/main/README.md#summary-of-how-to-use-the-codes-in-this-repo)
 
+[Updates and directory structure](https://github.com/pourmalek/covir2/blob/main/README.md#updates-and-directory-structure)
+
 [Troubleshooting, bug reporting, suggestions and feedback](https://github.com/pourmalek/covir2/blob/main/README.md#troubleshooting-errors-bugs-and-vulnerabilities)
 
 ********************************************************************************************************************************************
@@ -812,7 +814,7 @@ on the dropdown menu.
 
 
 
-#### Updates and directory structure:
+#### Updates and directory structure
 
 <br/><br/>
 1- Level 1 of directories || dates on which the current codes were updated:
