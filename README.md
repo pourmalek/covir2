@@ -812,11 +812,8 @@ on the dropdown menu.
 
 
 
-* Updates and directory structure:
+#### Updates and directory structure:
 
-
-
-Updates and directory structure:
 <br/><br/>
 1- Level 1 of directories || dates on which the current codes were updated:
 
