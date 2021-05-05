@@ -228,6 +228,12 @@ Note: English text located below, after the Farsi text.
 
 *
 
+نمودار ۳۵ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
+
+![image](https://user-images.githubusercontent.com/30849720/117086240-e5169600-ad00-11eb-9154-e48c239011d8.png)
+
+*
+
 نمودار ۴۱۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
 
 ![image](https://user-images.githubusercontent.com/30849720/116431195-6602f880-a7fc-11eb-9d7c-78d7ec1e54e8.png)
@@ -276,7 +282,7 @@ Note: English text located below, after the Farsi text.
 
 *
 
-نمودار ۴۴۵ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
+نمودار ۴۴۵ - برآورد موارد مربوط به بیمارستان و بستری،‌از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
 
 ![image](https://user-images.githubusercontent.com/30849720/117086044-56a21480-ad00-11eb-8852-b0c65fde62ad.png)
 
