@@ -74,7 +74,7 @@
 
 مطالعه [ دلفی](https://www.covidanalytics.io/projections) 
 انستیتوی فناوری ماساچوست کمبریج، با نام اختصاری 
-[DELP](https://github.com/pourmalek/covir2/tree/main/20210423/ouput/DELP)
+[DELP](https://github.com/pourmalek/covir2/tree/main/20210430/output/DELP)
 ،
 محقق اصلی مایکل لی،
  [مقاله اصلی اینجا](https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1)
