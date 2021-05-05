@@ -421,9 +421,14 @@ English
 "Users\local-user-name\Downloads\covir2-main\20210423\code\master\do Iran master.do"
 
 نام کاربر، جایگزین (local-user-name) خواهد شد. علامت / برای کاربران مک اینتاش جایگزین علامت \ می گردد. 
-قسمت \20210423\ در مسیر فوق برای به روز رسانی مربوط به این تاریخ میلادی می باشد. 
+قسمت \20210423\ در مسیر فوق برای به روز رسانی مربوط به این تاریخ میلادی می باشد.
+
+
+رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها###
 
 در صورت مواجهه با اشکال در اجرای کد،‌ به قسمت رفع مشکلات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.pdf) مراجعه شود. در صورت رفع نشدن اشکال، و همچنین در صورت مشاهده اشتباه (bug) در کد ها، می توان به [اینجا](https://github.com/pourmalek/covir2/tree/main/.github/ISSUE_TEMPLATE) مراجعه نمود، یا به پدید آورنده (pourmalek_farshad@yahoo.com) ای-میل زد.
+
+لطفا برای ارایه پیشنهادات و بازخوردها از پست الکترونیک استفاده فرمایید.
 
 [`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
