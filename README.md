@@ -323,7 +323,14 @@ Note: English text located below, after the Farsi text.
 
 *
 
+نمودار ۵۵ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
 
+![image](https://user-images.githubusercontent.com/30849720/117086786-6c183e00-ad02-11eb-9dc9-ba4c0eca49de.png)
+
+
+*
+ 
+ 
  
  
  
