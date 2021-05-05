@@ -732,7 +732,7 @@ Periodically updating: Yes, until 2020-10-04
 
 Periodical updates accessible: Yes
 
-Note: included in 20210423 update, (here)[https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU]
+Note: included in 20210423 update, [here](https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU)
 
 
   <br/><br/>
