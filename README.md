@@ -536,17 +536,17 @@
 
 [Methods](https://github.com/pourmalek/covir2/blob/main/README.md#methods)
 
-[Limitations](https://github.com/pourmalek/covir2/blob/main/README.md#limitations)
-
-[Results]()
+[Results](https://github.com/pourmalek/covir2/blob/main/README.md#results)
 
 [Studies](https://github.com/pourmalek/covir2/blob/main/README.md#-studies--models)
 
-[Selected graphs](https://github.com/pourmalek/covir2#selected-graphs)
+[Updates and directory structure](https://github.com/pourmalek/covir2/blob/main/README.md#updates-and-directory-structure)
 
 [Important considerations]()
 
-[Updates and directory structure](https://github.com/pourmalek/covir2/blob/main/README.md#updates-and-directory-structure)
+[Limitations](https://github.com/pourmalek/covir2/blob/main/README.md#limitations)
+
+[Selected graphs](https://github.com/pourmalek/covir2#selected-graphs)
 
 [Using Stata codes](https://github.com/pourmalek/covir2/blob/main/README.md#summary-of-how-to-use-the-codes-in-this-repo)
 
