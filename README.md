@@ -788,6 +788,9 @@ Note: included in 20210423 update, (here)[https://github.com/pourmalek/covir2/tr
 [`20210430`](https://github.com/pourmalek/covir2/tree/main/20210430)
 
 <br/><br/>
+
+Example links below are relate to update [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405)
+
 2- Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
 
 [`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
