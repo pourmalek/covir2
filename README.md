@@ -127,20 +127,15 @@ Note: English text located below, after the Farsi text.
 
 شماره، تاریخ خورشیدی، تاریخ میلادی، پیوند
 
-(۵) (20210430) (۱۴۰۰/۲/۱۰)
-[پیوند](https://github.com/pourmalek/covir2/tree/main/20210430)
+(۵) (20210430)    (۱۴۰۰/۲/۱۰)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210430)
 
-(۴) (20210423) (۱۴۰۰/۲/۳)
-[پیوند](https://github.com/pourmalek/covir2/tree/main/20210423)
+(۴) (20210423)    (۱۴۰۰/۲/۳)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210423)
 
-(۳) (20210416) (۱۴۰۰/۱/۲۷)
-[پیوند](https://github.com/pourmalek/covir2/tree/main/20210416)
+(۳) (20210416)    (۱۴۰۰/۱/۲۷)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210416)
 
-(۲) (20210413) (۱۴۰۰/۱/۲۴)
-[پیوند](https://github.com/pourmalek/covir2/tree/main/20210413)
+(۲) (20210413)    (۱۴۰۰/۱/۲۴)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210413)
 
-(۱) (20210405) (۱۴۰۰/۱/۱۶)
-[پیوند](https://github.com/pourmalek/covir2/tree/main/20210405)
+(۱) (20210405)    (۱۴۰۰/۱/۱۶)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210405)
 
 
 #### موضوعات مهم
