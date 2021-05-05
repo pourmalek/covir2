@@ -571,68 +571,13 @@ Eligibility for target (component) studies (models) of COVID-19 epidemic in Iran
 
 Methods generally follow the first iteration of this review, i.e., [Rapid review of COVID-19 epidemic estimation studies for Iran](Rapid review of COVID-19 epidemic estimation studies for Iran), with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Google Scholar, [Iranian Scientific Information Database](https://www.sid.ir), [Iranian National Periodicals Information Bank](https://www.magiran.com), and pre-prints in [medRxiv](https://www.medrxiv.org/), [arXiv](https://arxiv.org/), and [Research Square](https://www.researchsquare.com). 
 
-### Limitations 
+### Results
 
-(1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
-
-I am willing for suggestions, collaboration, and help regarding overcoming the above-mentioned, and other limitations of this work. Please e-mail me (pourmalek_farshad@yahoo.com) 
+Graphs, Stata codes (do files) and outputs, estimates’ data files (Stata and csv), and explanation of data management procedures (including data dictionary and studies’ scenarios) are presented here (https://github.com/pourmalek/covir2). All the data, used and combined, are at non-individual level, publicly available on the internet, and licensed for non-commercial use and redistribution. Graphs and all other details of recent updates of models’ estimates are stored in this repository.
 
 
 
-********************************************************************************************************************************************
-
-### Selected graphs 
-
-#### Selected graph from latest update 20210430
-
-[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117084756-e776f100-acfc-11eb-81d8-568691fcf4d0.png)
-
-
-*
-
-#### Selected graphs from update 20210423
-
-*
-
-[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487649-51971e00-a845-11eb-954a-f431a5ae4f1c.png)
-
-*
-[COVID-19 daily cases, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487640-4b08a680-a845-11eb-9b7d-1cf35727cb42.png)
-
-*
-[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487631-42b06b80-a845-11eb-9236-b1d389ca9ede.png)
-
-*
-[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487586-29a7ba80-a845-11eb-8ed1-29e06dcb0331.png)
-
-*
-[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487570-20b6e900-a845-11eb-88ca-da08d7f907ce.png)
-
-*
-[COVID-19 daily deaths estimated to reported, Iran, reference scenarios, 19feb2021 1399-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf)
-![image](https://user-images.githubusercontent.com/30849720/116487555-1694ea80-a845-11eb-864f-613a1b14d145.png)
-
-
-********************************************************************************************************************************************
-
-
-<br/><br/>
-
-
-
-### * Studies / models:
+###  Studies / models
 
 * DELP 
 
@@ -792,6 +737,7 @@ Note: included in 20210423 update, (here)[https://github.com/pourmalek/covir2/tr
 
   <br/><br/>
   
+  
 
 ### Updates and directory structure
 
@@ -835,7 +781,66 @@ Output level-3 directories for component studies, e.g., [`output/IHME`](https://
 
 <br/><br/>
 
-  
+
+### Limitations 
+
+(1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
+
+I am willing for suggestions, collaboration, and help regarding overcoming the above-mentioned, and other limitations of this work. Please e-mail me (pourmalek_farshad@yahoo.com) 
+
+
+
+********************************************************************************************************************************************
+
+### Selected graphs 
+
+#### Selected graph from latest update 20210430
+
+[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117084756-e776f100-acfc-11eb-81d8-568691fcf4d0.png)
+
+
+*
+
+#### Selected graphs from update 20210423
+
+*
+
+[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116487649-51971e00-a845-11eb-954a-f431a5ae4f1c.png)
+
+*
+[COVID-19 daily cases, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116487640-4b08a680-a845-11eb-9b7d-1cf35727cb42.png)
+
+*
+[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116487631-42b06b80-a845-11eb-9236-b1d389ca9ede.png)
+
+*
+[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116487586-29a7ba80-a845-11eb-8ed1-29e06dcb0331.png)
+
+*
+[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/116487570-20b6e900-a845-11eb-88ca-da08d7f907ce.png)
+
+*
+[COVID-19 daily deaths estimated to reported, Iran, reference scenarios, 19feb2021 1399-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf)
+![image](https://user-images.githubusercontent.com/30849720/116487555-1694ea80-a845-11eb-864f-613a1b14d145.png)
+
+
+********************************************************************************************************************************************
+
+
+<br/><br/>
+
 
 
 ### SUMMARY of how to use the codes in this repo
