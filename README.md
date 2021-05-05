@@ -812,9 +812,7 @@ on the dropdown menu.
 <br/><br/>
 
 
-
-
-#### Updates and directory structure
+### Updates and directory structure
 
 <br/><br/>
 1- Level 1 of directories || dates on which a new uptake of studies estimates were created in this repo
