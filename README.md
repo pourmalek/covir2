@@ -782,6 +782,20 @@ Output level-3 directories for component studies, e.g., [`output/IHME`](https://
 <br/><br/>
 
 
+### Important considerations
+
+(1) Updates of models’ estimates
+
+Models’ estimates for any given calendar time period tend to vary across consecutive updates releases for models’ estimates updates. This should be taken into consideration in interpretation of results. 
+
+For instance, in examining estimates’ graphs for summer 2021 in Iran, while it is important to consider the very latest models estimates update, it is also important to examine the previous models estimates updates. 
+
+(2) Strengths and limitations of models
+
+Any model has strengths and limitations that should be taken into consideration while examining the model’s results. Completely correct and completely wrong models are rare. 
+
+
+
 ### Limitations 
 
 (1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
