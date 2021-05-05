@@ -507,6 +507,8 @@
 
 Estimates of five international periodically updating models or studies of COVID-19 epidemic for Iran are gathered and combined, and graphs, data files and Stata codes are produced and are accessible here. Guide for use of Stata codes is provided. A longitudinal treatment of periodically updating models will be added. 
 
+Similar work for the GLOBAL level will to be presented in [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize)
+
 ### Summary
 
 Estimates of seven studies, including international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
