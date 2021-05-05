@@ -509,6 +509,11 @@ Estimates of five international periodically updating models or studies of COVID
 
 Estimates of seven studies, including international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
 
+### Methods
+
+Methods generally follow the first iteration of this review, i.e., [Rapid review of COVID-19 epidemic estimation studies for Iran](Rapid review of COVID-19 epidemic estimation studies for Iran), with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Goggle Scholar, [Iranian Scientific Information Database](https://www.sid.ir), (Iranian National Periodicals Information Bank)[https://www.magiran.com], and pre-prints in (medRxiv)[https://www.medrxiv.org/], (arXiv)[ https://arxiv.org/], and (Research Square)[ Research Square.]. 
+
+
 ********************************************************************************************************************************************
 
 ## Selected graphs from latest update 20210423
