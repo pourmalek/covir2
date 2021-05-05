@@ -475,15 +475,14 @@
 * Project: Rapid review of estimates of COVID-19 Iran - No 2
 * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
 * Time (initial): 2021-02-10
-* **OBJECTIVE** of these `Stata` codes: Get and prepare component studies' estimates for Iran, combine them, 
-* and produce data files and graphs of combined estimates
+* **OBJECTIVE** Get and prepare component studies' estimates for Iran, combine them, and produce data files and graphs of combined estimates
 ********************************************************************************************************************************************
 
 <br/><br/>
 
 [Executive summary](https://github.com/pourmalek/covir2/blob/main/README.md#executive-summary)
 
-[Summary]()
+[Summary](https://github.com/pourmalek/covir2/blob/main/README.md#summary)
 
 [Methods]()
 
