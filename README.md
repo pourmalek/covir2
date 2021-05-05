@@ -581,7 +581,9 @@ I am willing for suggestions, collaboration, and help regarding overcoming the a
 
 ********************************************************************************************************************************************
 
-## Selected graph from latest update 202104۳۰
+### Selected graphs 
+
+## Selected graph from latest update 20210430
 
 [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
