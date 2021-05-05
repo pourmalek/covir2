@@ -178,13 +178,18 @@
 مثال نوع اول به روز رسانی در
 [اینجا](https://github.com/mrc-ide/global-lmic-reports/tree/master/data)
 و نمایش آن در این تارنما در 
-[اینجا](https://github.com/pourmalek/covir2/blob/main/20210430/covir2%2020210430%20dates%20of%20updates.md).
+[اینجا](https://github.com/pourmalek/covir2/blob/main/20210430/covir2%2020210430%20dates%20of%20updates.md)
+(محل ذخیره در ریشه دیرکتوری هر به روز رسانی نوع سوم).
+
 مثال نوع دوم به روز رسانی در
 [اینجا](https://github.com/mrc-ide/global-lmic-reports/tree/master/data)
 به صورت نسخه (ورژن) های مدل (v1 تا v7) 
 و نمایش آن در این تارنما در
 و نمایش آن در این تارنما به صورت V?? در نام متغیرها می باشد. توضیحات بیشتر در 
-[اینجا](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.pdf)
+[اینجا](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.pdf).
+
+
+
 
 
 (۲) نقاط قوت و ضعف مدل ها: هر مدلی نقاط قوت و ضعفی دارد که باید در تفسیر نتایج این موضوع را در نظر گرفت. مدل های کاملا صحیح یا کاملا غلط نادر هستند.
