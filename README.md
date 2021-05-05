@@ -811,6 +811,15 @@ Any model has strengths and limitations that should be taken into consideration 
 
 I am willing for suggestions, collaboration, and help regarding overcoming the above-mentioned, and other limitations of this work. Please e-mail me (pourmalek_farshad@yahoo.com) 
 
+*
+
+
+Although "viruses move fast… data can move even faster", the WHO chief insisted, adding that "with the right information, countries and communities can stay one step ahead of an emerging risk and save lives. Modern technologies give us unprecedented tools for collecting, analysing and disseminating data in real time around the world. That’s what the WHO Hub for Pandemic and Epidemic Intelligence aims to do."  (5 May 2021) 
+
+[Early-warning ‘pandemic hub’ plan unveiled by WHO’s Tedros and Germany’s Merkel](https://news.un.org/en/story/2021/05/1091332)
+
+In practice, it becomes evident that whether the progression of viruses and emerging and re-emerging diseases act faster, or wiseness and collaboration of human beings – at the global, regional, and national levels. Regarding the COVID-19 pandemic, has the SARS-CoV-2 acted faster or the _Homo sapiens_? 
+
 
 
 ********************************************************************************************************************************************
