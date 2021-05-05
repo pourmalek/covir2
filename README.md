@@ -129,11 +129,15 @@ Note: English text located below, after the Farsi text.
 
 #### نمودار های منتخب
 
-(همه نمودارها در
-  [اینجا](https://github.com/pourmalek/covir2/tree/main/20210423/ouput/merge) 
-قرار دارند)
+نمودار برآورد مرگ های روزانه، آخرین به روز رسانی، (20210430) یا (۱۴۰۰۰۲۱۰)
 
-*
+[`link`](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117084756-e776f100-acfc-11eb-81d8-568691fcf4d0.png)
+
+
+
+*******
 
  نمودار ۱۱ - برآورد مرگ های روزانه،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
 [`link`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
