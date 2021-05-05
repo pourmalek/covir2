@@ -501,6 +501,17 @@
 
 ********************************************************************************************************************************************
 
+
+### Executive summary
+
+Estimates of five international periodically updating models or studies of COVID-19 epidemic for Iran are gathered and combined, and graphs, data files and Stata codes are produced and are accessible here. Guide for use of Stata codes is provided. A longitudinal treatment of periodically updating models will be added. 
+
+### Summary
+
+Estimates of seven studies, including international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
+
+********************************************************************************************************************************************
+
 ## Selected graphs from latest update 20210423
 
 *
@@ -542,9 +553,8 @@
 <br/><br/>
 *
 
-### Executive summary
 
-Estimates of five international periodically updating models or studies of COVID-19 epidemic for Iran are gathered and combined, and graphs, data files and Stata codes are produced and are accessible here. Guide for use of Stata codes is provided. A longitudinal treatment of periodically updating models will be added. 
+
 
 
 * Details: This is a review study of estimates of COVID-19 in Iran for time period December 2020 onwards. The codes in this repository get the estimations performed by the component studies, prepare and combine them, and produce output files and graphs using `Stata`. This repo can be used to replicate the results of the review study ('Computational reproducibility').
