@@ -31,7 +31,7 @@
 
 [روش](https://github.com/pourmalek/covir2/blob/main/README.md#روش)
 
-[مطالعات](https://github.com/pourmalek/covir2/blob/main/README.md#مطالعات)
+[مطالعات](https://github.com/pourmalek/covir2#مطالعات)
 
 [نتایج](https://github.com/pourmalek/covir2/blob/main/README.md#نتایج)
 
