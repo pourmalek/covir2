@@ -25,25 +25,25 @@
 
 <br/><br/>
 
-[خلاصه اجرایی](https://github.com/pourmalek/covir2/blob/main/README.md#خلاصه-اجرایی)
+[خلاصه اجرایی](https://github.com/pourmalek/covir2#خلاصه-اجرایی)
 
-[خلاصه](https://github.com/pourmalek/covir2/blob/main/README.md#خلاصه)
+[خلاصه](https://github.com/pourmalek/covir2#خلاصه)
 
-[روش](https://github.com/pourmalek/covir2/blob/main/README.md#روش)
+[روش](https://github.com/pourmalek/covir2/#روش)
 
 [مطالعات](https://github.com/pourmalek/covir2#مطالعات)
 
-[نتایج](https://github.com/pourmalek/covir2/blob/main/README.md#نتایج)
+[نتایج](https://github.com/pourmalek/covir2#نتایج)
 
-[موضوعات مهم](https://github.com/pourmalek/covir2/blob/main/README.md#موضوعات-مهم)
+[موضوعات مهم](https://github.com/pourmalek/covir2#موضوعات-مهم)
 
-[محدودیت ها](https://github.com/pourmalek/covir2/blob/main/README.md#محدودیت-ها)
+[محدودیت ها](https://github.com/pourmalek/covir2#محدودیت-ها)
 
-[نمودار های منتخب](https://github.com/pourmalek/covir2/blob/main/README.md#نمودار-های-منتخب)
+[نمودار های منتخب](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 
-[نحوه داونلود و استفاده از کد های نرم افزار استیتا](https://github.com/pourmalek/covir2/blob/main/README.md#نحوه-داونلود-و-استفاده-از-کد-های-نرم-افزار-استیتا)
+[نحوه داونلود و استفاده از کد های نرم افزار استیتا](https://github.com/pourmalek/covir2#نحوه-داونلود-و-استفاده-از-کد-های-نرم-افزار-استیتا)
 
-[رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها](https://github.com/pourmalek/covir2/blob/main/README.md#رفع-مشکلات-گزارش-اشتباهات-ارایه-پیشنهادات-و-بازخوردها)
+[رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها](https://github.com/pourmalek/covir2#رفع-مشکلات-گزارش-اشتباهات-ارایه-پیشنهادات-و-بازخوردها)
 
 <br/><br/>
 
