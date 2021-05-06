@@ -860,17 +860,17 @@ In practice, it becomes evident that whether the progression of viruses and emer
 ![image](https://user-images.githubusercontent.com/30849720/116487631-42b06b80-a845-11eb-9236-b1d389ca9ede.png)
 
 *
-[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116487586-29a7ba80-a845-11eb-8ed1-29e06dcb0331.png)
 
 *
-[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116487570-20b6e900-a845-11eb-88ca-da08d7f907ce.png)
 
 *
-[COVID-19 daily deaths estimated to reported, Iran, reference scenarios, 19feb2021 1399-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf)
+[COVID-19 daily deaths estimated to reported, Iran, reference scenarios, 19feb2021 1399-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf
 ![image](https://user-images.githubusercontent.com/30849720/116487555-1694ea80-a845-11eb-864f-613a1b14d145.png)
 
 
