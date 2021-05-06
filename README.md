@@ -855,7 +855,7 @@ In practice, it becomes evident that whether the progression of viruses and emer
 ![image](https://user-images.githubusercontent.com/30849720/117247999-1623c300-adf4-11eb-8273-c33cff51c530.png)
 
 *
-[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423/ouput/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116487631-42b06b80-a845-11eb-9236-b1d389ca9ede.png)
 
