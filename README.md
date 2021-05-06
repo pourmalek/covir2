@@ -539,27 +539,27 @@
 
 <br/><br/>
 
-[Executive summary](https://github.com/pourmalek/covir2/blob/main/README.md#executive-summary)
+[Executive summary](https://github.com/pourmalek/covir2#executive-summary)
 
-[Summary](https://github.com/pourmalek/covir2/blob/main/README.md#summary)
+[Summary](https://github.com/pourmalek/covir2#summary)
 
-[Methods](https://github.com/pourmalek/covir2/blob/main/README.md#methods)
+[Methods](https://github.com/pourmalek/covir2#methods)
 
-[Results](https://github.com/pourmalek/covir2/blob/main/README.md#results)
+[Results](https://github.com/pourmalek/covir2#results)
 
-[Studies](https://github.com/pourmalek/covir2/blob/main/README.md#studies--models)
+[Studies](https://github.com/pourmalek/covir2#studies--models)
 
-[Updates and directory structure](https://github.com/pourmalek/covir2/blob/main/README.md#updates-and-directory-structure)
+[Updates and directory structure](https://github.com/pourmalek/covir2#updates-and-directory-structure)
 
-[Important considerations](https://github.com/pourmalek/covir2/blob/main/README.md#important-considerations)
+[Important considerations](https://github.com/pourmalek/covir2#important-considerations)
 
-[Limitations](https://github.com/pourmalek/covir2/blob/main/README.md#limitations)
+[Limitations](https://github.com/pourmalek/covir2#limitations)
 
 [Selected graphs](https://github.com/pourmalek/covir2#selected-graphs)
 
-[Using Stata codes](https://github.com/pourmalek/covir2/blob/main/README.md#summary-of-how-to-use-the-codes-in-this-repo)
+[Using Stata codes](https://github.com/pourmalek/covir2#summary-of-how-to-use-the-codes-in-this-repo)
 
-[Troubleshooting, bug reporting, suggestions and feedback](https://github.com/pourmalek/covir2/blob/main/README.md#troubleshooting-errors-bugs-and-vulnerabilities)
+[Troubleshooting, bug reporting, suggestions and feedback](https://github.com/pourmalek/covir2#troubleshooting-errors-bugs-and-vulnerabilities)
 
 ********************************************************************************************************************************************
 
