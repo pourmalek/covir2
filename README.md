@@ -746,6 +746,8 @@ Note: included in 20210423 update, [here](https://github.com/pourmalek/covir2/tr
 
   <br/><br/>
   
+  [back](https://github.com/pourmalek/covir2#english-readme-for-covir2)
+
   
 
 ### Updates and directory structure
@@ -790,6 +792,8 @@ Output level-3 directories for component studies, e.g., [`output/IHME`](https://
 
 <br/><br/>
 
+  [back](https://github.com/pourmalek/covir2#english-readme-for-covir2)
+
 
 ### Important considerations
 
@@ -821,6 +825,7 @@ Although "viruses move fast… data can move even faster", the WHO chief insiste
 In practice, it becomes evident that whether the progression of viruses and emerging and re-emerging diseases act faster, or wiseness and collaboration of human beings – at the global, regional, and national levels. Regarding the COVID-19 pandemic, has the SARS-CoV-2 acted faster or the _Homo sapiens_? 
 
 
+  [back](https://github.com/pourmalek/covir2#english-readme-for-covir2)
 
 ********************************************************************************************************************************************
 
@@ -873,6 +878,7 @@ In practice, it becomes evident that whether the progression of viruses and emer
 
 <br/><br/>
 
+  [back](https://github.com/pourmalek/covir2#english-readme-for-covir2)
 
 
 ### SUMMARY of how to use the codes in this repo
