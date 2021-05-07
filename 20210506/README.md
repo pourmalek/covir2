@@ -1,6 +1,6 @@
 ### Selected graphs uptake 20210506
 
-
+****
 
 [Daily deaths](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
@@ -21,6 +21,7 @@
 ****
 
 [Daily cases](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
 ![image](https://user-images.githubusercontent.com/30849720/117506097-e383e280-af39-11eb-8f99-d26016f8dcf5.png)
 
 ****
@@ -53,5 +54,5 @@
 
 ![image](https://user-images.githubusercontent.com/30849720/117506957-47f37180-af3b-11eb-8670-64a94a412be4.png)
 
-
+****
 
