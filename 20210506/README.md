@@ -1,3 +1,8 @@
+### News
+
+IHME now explicitly adjusts for under-reporting. 
+
+
 ### Selected graphs uptake 20210506
 
 ****
