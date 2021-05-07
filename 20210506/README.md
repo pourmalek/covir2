@@ -1,6 +1,9 @@
-### News
+### News uptake 20210506
 
-IHME now explicitly adjusts for under-reporting. 
+IHME now explicitly adjusts for under-reporting. A major improvement. Next improvement could be accounting for asymptomatic transmission. 
+
+Hospital-related outcomes that were absent in one previous update of IHME are now back.
+
 
 <br/><br/>
 
