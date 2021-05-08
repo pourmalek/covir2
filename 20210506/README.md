@@ -5,7 +5,7 @@
 - IHME correction factors for under-reporting of deaths and cases in Iran are about **2.5** and **9** (6-17), the latter in first five months of 2021. 
 
 - IHME correction factor for under-reporting of deaths in Iran = 2.4. 
-
+<br/><br/>
 - IHME correction factor for under-reporting of cases in Iran (during 21-01-01 to 21-05-06), mean = 8.9, min = 5.7, max = 17.2. 
 
 
