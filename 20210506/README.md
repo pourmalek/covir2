@@ -1,4 +1,4 @@
-### News, uptake 20210506
+### What is new, uptake 20210506
  
 
 * IHME now explicitly adjusts for under-reporting. A major improvement. Next improvement could be accounting for asymptomatic transmission. 
