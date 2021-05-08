@@ -1,9 +1,7 @@
 ### Study update dates in uptake 20210506
 
 DELPHI 20210507, IHME 20210506, IMPE 20210427, LANL 20210505, SRIV 20210506
-
 <br/><br/>
-
 
 ### What is new, uptake 20210506
  
