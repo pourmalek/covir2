@@ -1,0 +1,532 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/log Iran YYGU.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 May 2021, 09:37:30
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Iran YYGU win.do"
+. 
+. * Project: Rapid review of estimates of COVID Iran - No 2
+. * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare YYGU data for Iran, Locate peak dates and values
+. ***************************************************************************
+. 
+. 
+. /*
+> YYGU model, model by Youyang Gu, is a SEIR model + Machine Learning, conducted in 2020. 
+> Study web site, "COVID-19 Projections Using Machine Learning" (https://covid19-projections.com).
+> Model described here: https://covid19-projections.com/about/#table-of-contents-death-forecasting-model
+> */
+. 
+. 
+. * Get YYGU estimates 
+. 
+. copy https://raw.githubusercontent.com/youyanggu/covid19_projections/master/projections/combined/latest_global.csv latest_global.csv
+{txt}
+{com}. 
+. import delimited "latest_global.csv", clear varnames(1)
+{res}{text}(24 vars, 18,037 obs)
+
+{com}. 
+. keep if strpos(country, "Iran")
+{txt}(17,756 observations deleted)
+
+{com}.         
+. 
+. * gen date
+. 
+. rename date date_original
+{res}{txt}
+{com}. 
+. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21940{txt},{res}22220{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}26jan2020{txt},{res}01nov2020{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}281{col 51}{txt}missing .:  {res}0{txt}/{res}281
+
+{txt}{col 19}mean:{res}{col 26}   22080{txt} = {res}14jun2020{txt}
+{col 15}std. dev:{res}{col 26} 81.2619
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21968{col 37}   22010{col 47}   22080{col 57}   22150{col 67}   22192
+{col 26}23feb2020{col 36}05apr2020{col 46}14jun2020{col 56}23aug2020{col 66}04oct2020
+{txt}
+{com}. 
+. drop year month day date2
+{txt}
+{com}. 
+. 
+. rename predicted_deaths_mean  DayDeaMeRaA08S00V99 
+{res}{txt}
+{com}. rename predicted_deaths_lower DayDeaLoRaA08S00V99 
+{res}{txt}
+{com}. rename predicted_deaths_upper DayDeaUpRaA08S00V99 
+{res}{txt}
+{com}. 
+. label var DayDeaMeRaA08S00V99 "Daily deaths mean YYGU"
+{txt}
+{com}. label var DayDeaLoRaA08S00V99 "Daily deaths lower YYGU"
+{txt}
+{com}. label var DayDeaUpRaA08S00V99 "Daily deaths upper YYGU"
+{txt}
+{com}.         
+. rename predicted_total_deaths_mean  TotDeaMeRaA08S00V99
+{res}{txt}
+{com}. rename predicted_total_deaths_lower TotDeaLoRaA08S00V99
+{res}{txt}
+{com}. rename predicted_total_deaths_upper TotDeaUpRaA08S00V99
+{res}{txt}
+{com}.         
+. label var TotDeaMeRaA08S00V99 "Total deaths mean YYGU"
+{txt}
+{com}. label var TotDeaLoRaA08S00V99 "Total deaths lower YYGU"
+{txt}
+{com}. label var TotDeaUpRaA08S00V99 "Total deaths upper YYGU"
+{txt}
+{com}.         
+. rename predicted_new_infected_mean  DayCasMeRaA08S00V99
+{res}{txt}
+{com}. rename predicted_new_infected_lower DayCasLoRaA08S00V99
+{res}{txt}
+{com}. rename predicted_new_infected_upper DayCasUpRaA08S00V99
+{res}{txt}
+{com}.         
+. label var DayCasMeRaA08S00V99 "Daily cases mean YYGU"
+{txt}
+{com}. label var DayCasLoRaA08S00V99 "Daily cases lower YYGU"
+{txt}
+{com}. label var DayCasUpRaA08S00V99 "Daily cases upper YYGU"
+{txt}
+{com}. 
+. rename predicted_current_infected_mean  DayActMeRaA08S00V99
+{res}{txt}
+{com}. rename predicted_current_infected_lower DayActLoRaA08S00V99
+{res}{txt}
+{com}. rename predicted_current_infected_upper DayActUpRaA08S00V99
+{res}{txt}
+{com}. 
+. label var DayActMeRaA08S00V99 "Daily active cases mean YYGU"    
+{txt}
+{com}. label var DayActLoRaA08S00V99 "Daily active cases lower YYGU"   
+{txt}
+{com}. label var DayActUpRaA08S00V99 "Daily active cases upper YYGU"   
+{txt}
+{com}.         
+. rename predicted_total_infected_mean  TotCasMeRaA08S00V99
+{res}{txt}
+{com}. rename predicted_total_infected_lower TotCasLoRaA08S00V99
+{res}{txt}
+{com}. rename predicted_total_infected_upper TotCasUpRaA08S00V99
+{res}{txt}
+{com}. 
+. label var TotCasMeRaA08S00V99 "Total cases mean YYGU"
+{txt}
+{com}. label var TotCasLoRaA08S00V99 "Total cases lower YYGU"
+{txt}
+{com}. label var TotCasUpRaA08S00V99 "Total cases upper YYGU"
+{txt}
+{com}. 
+. rename r_values_mean  DayRttMeRaA08S00V99       
+{res}{txt}
+{com}. rename r_values_lower DayRttLoRaA08S00V99       
+{res}{txt}
+{com}. rename r_values_upper DayRttUpRaA08S00V99       
+{res}{txt}
+{com}. 
+. label var DayRttMeRaA08S00V99 "Daily R mean YYGU"
+{txt}
+{com}. label var DayRttLoRaA08S00V99 "Daily R lower YYGU"
+{txt}
+{com}. label var DayRttUpRaA08S00V99 "Daily R upper YYGU"
+{txt}
+{com}.         
+. rename country loc_grand_name 
+{res}{txt}
+{com}. 
+. drop region subregion actual_deaths total_deaths
+{txt}
+{com}. 
+. order date loc_grand_name
+{txt}
+{com}. 
+. 
+. * gen cfr 
+. 
+. gen DayCfrMeRaA08S00V99= 100 * DayDeaMeRaA08S00V99 / DayCasMeRaA08S00V99
+{txt}(253 missing values generated)
+
+{com}. gen DayCfrLoRaA08S00V99= 100 * DayDeaLoRaA08S00V99 / DayCasLoRaA08S00V99
+{txt}(253 missing values generated)
+
+{com}. gen DayCfrUpRaA08S00V99= 100 * DayDeaUpRaA08S00V99/  DayCasUpRaA08S00V99
+{txt}(253 missing values generated)
+
+{com}. 
+. label var DayCfrMeRaA08S00V99 "Daily CFR Mean YYGU"
+{txt}
+{com}. label var DayCfrLoRaA08S00V99 "Daily CFR Lower YYGU"
+{txt}
+{com}. label var DayCfrUpRaA08S00V99 "Daily CFR Upper YYGU"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. * gen "Daily cases mean div by daily deaths mean YYGU  DayCbD" for visulization of temporal relation of deaths and cases peaks 
+. 
+. 
+.         summ DayDeaMeRaA08S00V99
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaMeR~99 {c |}{res}         28    185.5807     4.75947   179.1901   196.5198
+{txt}
+{com}.         gen DayDeMMeRaA08S00V99  = r(mean)
+{txt}
+{com}.         label var DayDeMMeRaA08S00V99  "Daily deaths mean YYGU  DayDeM"
+{txt}
+{com}. 
+.         summ DayCasMeRaA08S00V99  
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasMeR~99 {c |}{res}        281    64468.84    35891.36        284     132090
+{txt}
+{com}.         gen DayCaMMeRaA08S00V99  = r(mean)
+{txt}
+{com}.         label var DayCaMMeRaA08S00V99  "Daily cases mean YYGU  DayCaM"
+{txt}
+{com}.                            
+.         gen DayCbDMeRaA08S00V99  = DayCaMMeRaA08S00V99  / DayDeMMeRaA08S00V99 
+{txt}
+{com}.         label var DayCbDMeRaA08S00V99  "Daily cases mean div by daily deaths mean YYGU  DayCbD"
+{txt}
+{com}.         summ DayCbDMeRaA08S00V99 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCbDMeR~99 {c |}{res}        281    347.3898           0   347.3898   347.3898
+{txt}
+{com}.                                               
+.         gen DayDMuMeRaA08S00V99  = DayDeaMeRaA08S00V99  * DayCbDMeRaA08S00V99 
+{txt}(253 missing values generated)
+
+{com}.     label var DayDMuMeRaA08S00V99  "Daily deaths scaled (times means of cases by deaths) YYGU "
+{txt}
+{com}.         summ DayDMuMeRaA08S00V99 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDMuMeR~99 {c |}{res}         28    64468.84    1653.391   62248.83   68268.98
+{txt}
+{com}.         
+. 
+. 
+. 
+. 
+. ****************************
+. 
+. * graphs 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. * daily deaths 
+. 
+. twoway ///
+> (line DayDeaMeRaA08S00V99 date, sort lcolor(black)) ///
+> if DayDeaMeRaA08S00V99 != . ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 1 COVID-19 daily deaths, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 1 COVID-19 daily deaths, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 1 COVID-19 daily deaths, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 1 COVID-19 daily deaths, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 1 COVID-19 daily deaths, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. * daily deaths CI
+. 
+. twoway ///
+> (rarea DayDeaLoRaA08S00V99 DayDeaUpRaA08S00V99 date, sort color(black*.2)) ///
+> (line DayDeaMeRaA08S00V99 date, sort lcolor(black)) ///
+> if DayDeaMeRaA08S00V99 != . ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 2 COVID-19 daily deaths, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 2 COVID-19 daily deaths, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 2 COVID-19 daily deaths, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 2 COVID-19 daily deaths, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 2 COVID-19 daily deaths, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases 
+. 
+. twoway ///
+> (line DayCasMeRaA08S00V99 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 3 COVID-19 daily cases, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 3 COVID-19 daily cases, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 3 COVID-19 daily cases, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 3 COVID-19 daily cases, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 3 COVID-19 daily cases, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. * daily cases CI
+. 
+. twoway ///
+> (rarea DayCasLoRaA08S00V99 DayCasUpRaA08S00V99 date, sort color(black*.2)) ///
+> (line DayCasMeRaA08S00V99 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 4 COVID-19 daily cases, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 4 COVID-19 daily cases, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 4 COVID-19 daily cases, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 4 COVID-19 daily cases, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 4 COVID-19 daily cases, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * total deaths 
+. 
+. twoway ///
+> (line TotDeaMeRaA08S00V99 date, sort lcolor(black)) ///
+> if TotDeaMeRaA08S00V99 != . ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 5 COVID-19 total deaths, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 5 COVID-19 total deaths, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 5 COVID-19 total deaths, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 5 COVID-19 total deaths, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 5 COVID-19 total deaths, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. * total deaths CI
+. 
+. twoway ///
+> (rarea TotDeaLoRaA08S00V99 TotDeaUpRaA08S00V99 date, sort color(black*.2)) ///
+> (line TotDeaMeRaA08S00V99 date, sort lcolor(black)) ///
+> if TotDeaMeRaA08S00V99 != . ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 6 COVID-19 total deaths, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 6 COVID-19 total deaths, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 6 COVID-19 total deaths, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 6 COVID-19 total deaths, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 6 COVID-19 total deaths, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases 
+. 
+. twoway ///
+> (line TotCasMeRaA08S00V99 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 7 COVID-19 total cases, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 7 COVID-19 total cases, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 7 COVID-19 total cases, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 7 COVID-19 total cases, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 7 COVID-19 total cases, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. * total cases CI
+. 
+. twoway ///
+> (rarea TotCasLoRaA08S00V99 TotCasUpRaA08S00V99 date, sort color(black*.2)) ///
+> (line TotCasMeRaA08S00V99 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 8 COVID-19 total cases, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 8 COVID-19 total cases, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 8 COVID-19 total cases, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 8 COVID-19 total cases, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 8 COVID-19 total cases, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. * daily CFR 
+. 
+. twoway ///
+> (line DayCfrMeRaA08S00V99 date, sort lcolor(black)) ///
+> if DayCfrMeRaA08S00V99 !=. ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 9 COVID-19 daily CFR, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 9 COVID-19 daily CFR, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 9 COVID-19 daily CFR, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 9 COVID-19 daily CFR, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 9 COVID-19 daily CFR, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. * daily CFR CI
+. 
+. twoway ///
+> (rarea DayCfrLoRaA08S00V99 DayCfrUpRaA08S00V99 date, sort color(black*.2)) ///
+> (line DayCfrMeRaA08S00V99 date, sort lcolor(black)) ///
+> if DayCfrMeRaA08S00V99 !=. ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, Iran, YYGU, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 10 COVID-19 daily CFR, default scenario, Iran, YYGU.gph", replace
+{txt}(note: file graph 10 COVID-19 daily CFR, default scenario, Iran, YYGU.gph not found)
+{res}{txt}(file graph 10 COVID-19 daily CFR, default scenario, Iran, YYGU.gph saved)
+
+{com}. graph export "graph 10 COVID-19 daily CFR, default scenario, Iran, YYGU.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/graph 10 COVID-19 daily CFR, default scenario, Iran, YYGU.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * DayCas DayDeaDay Dea_multip
+. 
+. twoway ///
+> (line DayCasMeRaA08S00V99 date, sort lcolor(blue)) ///
+> (line DayDeaMeRaA08S00V99 date, sort lcolor(red)) ///
+> (line DayDMuMeRaA08S00V99 date, sort lpattern(dot) lcolor(red)) ///
+> if date > td(01jan2020) ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases and deaths) title("COVID-19 daily cases and deaths, Iran, YYGU ", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(4)) legend(region(lcolor(none)))  ///
+> legend(order(1 "Daily cases" 2 "Daily deaths" 3 "Daily deaths scaled for visualization") size(small)) ///
+> subtitle("Daily deaths, scaled = times (means of cases divided by deaths) for visualization only", size(small)) ///
+> note("Current scenario, mean estimate")
+{res}{txt}
+{com}. 
+. qui graph save "graph 10 COVID-19 daily deaths and cases Iran, YYGU .gph", replace
+{txt}
+{com}. qui graph export "graph 10 COVID-19 daily deaths and cases Iran, YYGU .pdf", replace
+{txt}
+{com}. 
+. ***
+. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. sort date
+{txt}
+{com}. 
+. save "Iran YYGU.dta", replace
+{txt}(note: file Iran YYGU.dta not found)
+file Iran YYGU.dta saved
+
+{com}.  
+. 
+. 
+. view "log Iran YYGU.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210423/code/YYGU/log Iran YYGU.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 2 May 2021, 09:37:41
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
