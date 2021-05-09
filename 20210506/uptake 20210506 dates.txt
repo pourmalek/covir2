@@ -1,20 +1,4 @@
 uptake 20210506 dates
 
-uptake_date	      06-May-21
-uptake_no	        101
-
-DELP_uptake_no	  Not applicable
-DELP_uptake_date	07-May-21
-
-IHME_uptake_no	  70
-IHME_uptake_date	06-May-21
-
-IMPE_uptake_no	  116
-IMPE_uptake_date	24-Apr-21
-
-LANL_uptake_no	  105
-LANL_uptake_date	05-May-21
-
-SRIV_uptake_no	  368
-SRIV_uptake_date	06-May-21
+DELP 20210507, IHME 20210506, IMPE 20210427, LANL 20210505, SRIV 20210506 
 
