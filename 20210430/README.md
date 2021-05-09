@@ -9,10 +9,11 @@ DELPHI 20210430, IHME 20210430, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 * Note on IHME update 20210430 and covir2 (historical) uptake 20210430
 
-IHME had their update number 69 on 30-Ar-2021. Later, on May 9, their estimates file for the reference scenario, i.e., (reference_hospitalization_all_locs.csv) has become empty (i.e. has one line for variable names but contains no data) when downloaded from https://ihmecovid19storage.blob.core.windows.net/archive/2021-04-30/ihme-covid19.zip Here is the file [reference_hospitalization_all_locs.csv](https://github.com/pourmalek/covir2/blob/main/20210430/reference_hospitalization_all_locs.csv)
+. IHME had their update number 69 on 30-Ar-2021. Later, on May 9, their estimates file for the reference scenario, i.e., (reference_hospitalization_all_locs.csv) has become empty (i.e. has one line for variable names but contains no data) when downloaded from https://ihmecovid19storage.blob.core.windows.net/archive/2021-04-30/ihme-covid19.zip Here is the file [reference_hospitalization_all_locs.csv](https://github.com/pourmalek/covir2/blob/main/20210430/reference_hospitalization_all_locs.csv)
 
-Therefore, the codes for "uptake 20210430" do not work anymore, because they rely on codes for IHME update 20210430, and IHME update 20210430 does not exist (at least on May 9). For historical records, the codes are left here without any change, but the outputs are available here (https://github.com/pourmalek/covir2/tree/main/20210430/output/IHME/2021-04-30) for IHME update 20210430 when it existed, and for the combined studies (https://github.com/pourmalek/covir2/tree/main/20210430/output/merge).  
+. Therefore, the codes for "uptake 20210430" do not work anymore, because they rely on codes for IHME update 20210430, and IHME update 20210430 does not exist (at least on May 9). For historical records, the codes are left here without any change, but the outputs are available here (https://github.com/pourmalek/covir2/tree/main/20210430/output/IHME/2021-04-30) for IHME update 20210430 when it existed, and for the combined studies (https://github.com/pourmalek/covir2/tree/main/20210430/output/merge).  
 
+. Estimates of hospital-related outcomes were not available in IHME update 20210430, when IHME update 20210430 existed. That is why graphs below for hospital-related outcomes do not contain estimates from IHME. 
 
 <br/><br/>
 
@@ -38,39 +39,39 @@ Therefore, the codes for "uptake 20210430" do not work anymore, because they rel
 
 ****
 
-[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117506097-e383e280-af39-11eb-8f99-d26016f8dcf5.png)
-
-****
-
-[Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117506272-2cd43200-af3a-11eb-85ac-27914629e797.png)
+![image](https://user-images.githubusercontent.com/30849720/117582134-5b2a4c80-b0b5-11eb-9718-be003a11df9c.png)
 
 ****
 
-[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+[Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117506395-6016c100-af3a-11eb-9ccc-bd6a8e2bc250.png)
-
-****
-
-[Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117506520-92282300-af3a-11eb-94ea-5e0bc80b00fe.png)
+![image](https://user-images.githubusercontent.com/30849720/117582160-857c0a00-b0b5-11eb-81e3-f7561f6a861d.png)
 
 ****
 
-[Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
+[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117506719-ec28e880-af3a-11eb-95f5-a44bb2268ba7.png)
+![image](https://user-images.githubusercontent.com/30849720/117582207-b8be9900-b0b5-11eb-9094-8af9f5a236ac.png)
 
 ****
 
-[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
+[Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117506957-47f37180-af3b-11eb-8670-64a94a412be4.png)
+![image](https://user-images.githubusercontent.com/30849720/117582337-6762d980-b0b6-11eb-8ede-7a35f036df98.png)
+
+****
+
+[Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117582380-97aa7800-b0b6-11eb-9f19-07b175e5583b.png)
+
+****
+
+[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/117582431-d2acab80-b0b6-11eb-8f6d-b4d4c7cb1ab0.png)
 
 ****
 
