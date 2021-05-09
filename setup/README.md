@@ -1,0 +1,33 @@
+### Description of rule for uptakes of covir2
+
+This is description of rule of adding uptakes to covir2 repository, either prospectively, i.e., uptakes with new calendar time dates, or retrospectively, i.e., uptakes with calendar time dates in the past. 
+
+Uptake is a term used here to differentiate from updates. Updates belong to models. Uptake belongs to covir2 repository. Updates are released by studies. Uptakes are added to this repository by its creator. 
+
+The old rule for adding uptakes to covir2 repository lacked documentation. The present rule for adding uptakes to covir2 repository is documented here. 
+
+The overarching principle is to create a new uptake in covir2 for each calendar date on which either IHME or IMPE releases a new update, and use the most recent update for the other study for that uptake. 
+
+The rationale for not including every new update by LANL or SRIV in the overarching principle is that it would lead to too frequent uptakes, which would defy the purpose of gaining new insight with each uptake in covir2. 
+
+Algorithmic details of the rule for adding uptakes to covir2 repository are as follows. 
+
+
+For every single calendar date, 
+
+(1) Check for new updates by IHME.
+(2) If a new update by IHME is available, start a new uptake with today's date, and use this new update by IHME.
+(3) Look for latest available update by IMPE, and include that in this uptake.
+(4) Look for the latest available update by LANL, and include that in this uptake.
+(5) Look for update by SRIV for which the date is equal to date for IHME. 
+
+(6) If no new update by IHME is available (from step 1), check for new updates by IMPE. If a new update by IMPE is available, start a new uptake with today's date, and use this new update by IMPE.
+
+(7) Look for the latest available update by IHME, and include that in this uptake.
+(8) Look for the latest available update by LANL, and include that in this uptake. 
+(9) Look for update by SRIV for which the date is equal to date for IMPE.
+
+(10) If no new update by IMPE is available (from step 6), there is no new uptake for this calendar date. End. 
+
+
+
