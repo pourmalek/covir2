@@ -6,7 +6,7 @@ Uptake is a term used here to differentiate from updates. Updates belong to mode
 
 The old rule for adding uptakes to covir2 repository lacked documentation. The present rule for adding uptakes to covir2 repository is documented here. 
 
-**The overarching principle is to create a new uptake in covir2 for each calendar date on which either IHME or IMPE releases a new update, and use the most recent update for the other study for that uptake.**
+**The overarching principle for creation of uptakes in covir2, is creation of an uptake for each calendar date on which an uptake is available for either _IHME or IMPE_, and using the most recent update for the other study (IMPE or IHME) for that uptake. **
 
 The rationale for not including every new update by LANL or SRIV in the overarching principle is that it would lead to too frequent uptakes, which would defy the purpose of gaining new insight with each uptake in covir2. 
 
