@@ -22,11 +22,9 @@ For every single calendar date,
 (5) Look for update by SRIV for which the date is equal to date for IHME. 
 
 (6) If no new update by IHME is available (from step 1), check for new updates by IMPE. If a new update by IMPE is available, start a new uptake with today's date, and use this new update by IMPE.
-
 (7) Look for the latest available update by IHME, and include that in this uptake.
 (8) Look for the latest available update by LANL, and include that in this uptake. 
 (9) Look for update by SRIV for which the date is equal to date for IMPE.
-
 (10) If no new update by IMPE is available (from step 6), there is no new uptake for this calendar date. End. 
 
 
