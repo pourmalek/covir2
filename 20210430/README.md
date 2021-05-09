@@ -15,6 +15,8 @@ DELPHI 20210430, IHME 20210430, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 . Estimates of hospital-related outcomes were not available in IHME update 20210430, when IHME update 20210430 existed. That is why graphs below for hospital-related outcomes do not contain estimates from IHME. 
 
+. Calendar timewise, the above changes in IHME updates were precedent to the upsurge in India, and IHME model's major change of explicit accounting for under-reporting in their update 20210506.
+
 <br/><br/>
 
 ### Selected graphs, (historical) uptake 20210430
