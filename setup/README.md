@@ -31,5 +31,5 @@ For every single calendar date,
 
 ### Application of the rule for uptakes of covir2
 
-Application of the rule for uptakes of covir2 is peformed by running ["do Studies models update dates Iran.do"](https://github.com/pourmalek/covir2/blob/main/setup/do%20Studies%20models%20update%20dates%20Iran.do) and the results are stored in [Uptakes table Iran] (https://github.com/pourmalek/covir2/blob/main/setup/Uptakes%20table%20Iran.csv).
+Application of the rule for uptakes of covir2 is peformed by running ["do Studies models update dates Iran.do"](https://github.com/pourmalek/covir2/blob/main/setup/do%20Studies%20models%20update%20dates%20Iran.do) and the results are stored in [Uptakes table Iran](https://github.com/pourmalek/covir2/blob/main/setup/Uptakes%20table%20Iran.csv).
 
