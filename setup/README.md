@@ -29,11 +29,8 @@ For every single calendar date,
 
 
 date	uptake_date	uptake_no	IHME_uptake_no	IHME_uptake_date	IMPE_uptake_no	IMPE_uptake_date	LANL_uptake_no	LANL_uptake_date	SRIV_uptake_no	SRIV_uptake_date	sdate
-
 25-Jun-20	25-Jun-20	1	30	25-Jun-20			18	23-Jun-20	55	25-Jun-20	20200625
-
 29-Jun-20	29-Jun-20	2	31	29-Jun-20			19	28-Jun-20	59	29-Jun-20	20200629
-
 02-Jul-20	02-Jul-20	3	31	29-Jun-20	53	02-Jul-20	20	01-Jul-20	62	02-Jul-20	20200702
 03-Jul-20	03-Jul-20	4	31	29-Jun-20	54	03-Jul-20	20	01-Jul-20	63	03-Jul-20	20200703
 04-Jul-20	04-Jul-20	5	31	29-Jun-20	55	04-Jul-20	20	01-Jul-20	64	04-Jul-20	20200704
@@ -133,5 +130,4 @@ date	uptake_date	uptake_no	IHME_uptake_no	IHME_uptake_date	IMPE_uptake_no	IMPE_u
 24-Apr-21	24-Apr-21	99	68	22-Apr-21	116	24-Apr-21	101	21-Apr-21	356	24-Apr-21	20210424
 06-May-21	06-May-21	100	69	06-May-21	116	24-Apr-21	105	05-May-21	368	06-May-21	20210506
 
-
-
+![image](https://user-images.githubusercontent.com/30849720/117590002-42845b80-b0e2-11eb-9eff-a13d768632fa.png)
