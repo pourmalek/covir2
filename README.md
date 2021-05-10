@@ -1161,40 +1161,47 @@ Note: included in 20210423 update, [here](https://github.com/pourmalek/covir2/tr
 <br/><br/>
 1- Level 1 of directories || dates on which a new uptake of studies estimates were created in this repo
 
-[`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405) 
+[`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506) 
 
-[`20210413`](https://github.com/pourmalek/covir2/tree/main/20210413)
+[`20210430`](https://github.com/pourmalek/covir2/tree/main/20210430%20(archived))
+
+[`20210424`](https://github.com/pourmalek/covir2/tree/main/20210424)
+
+[`20210422`](https://github.com/pourmalek/covir2/tree/main/20210422)
+
+[`20210417`](https://github.com/pourmalek/covir2/tree/main/20210417)
 
 [`20210416`](https://github.com/pourmalek/covir2/tree/main/20210416)
 
-[`20210423`](https://github.com/pourmalek/covir2/tree/main/20210423)
+[`20210409`](https://github.com/pourmalek/covir2/tree/main/20210409)
 
-[`20210430`](https://github.com/pourmalek/covir2/tree/main/20210430)
+[`20210401`](https://github.com/pourmalek/covir2/tree/main/20210401)
+
 
 <br/><br/>
 
-Example links below are relate to update [`20210405`](https://github.com/pourmalek/covir2/tree/main/20210405)
+Example links below are relate to update [`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506)
 
 2- Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
 
-[`code`](https://github.com/pourmalek/covir2/tree/main/20210405/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) 
+[`code`](https://github.com/pourmalek/covir2/tree/main/20210506/code) and [`output`](https://github.com/pourmalek/covir2/tree/main/20210506/output) 
 <br/><br/>
 3- Level 3 of directories || component studies, master, and merge:
 
 Level-3 directories include codes if level 2 is code, and outputs if level 2 is outputs. The follwoing are codes.
 
-[`DELP`](https://github.com/pourmalek/covir2/tree/main/20210405/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210405/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210405/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SOLT) 
-[`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210405/code/SRIV)
+[`DELP`](https://github.com/pourmalek/covir2/tree/main/20210506/code/DELP)  [`GHAN`](https://github.com/pourmalek/covir2/tree/main/20210506/code/GHAN)  [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210506/code/IHME)  [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210506/code/IMPE)  [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210506/code/JOHN)  [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210506/code/JOHNEMR) [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210506/code/LANL)  [`SOLT`](https://github.com/pourmalek/covir2/tree/main/20210506/code/SOLT) 
+[`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210506/code/SRIV)
 
-[`master`](https://github.com/pourmalek/covir2/tree/main/20210405/code/master) contains the master code (i.e. "do Iran master.do") to run the whole codes 
+[`master`](https://github.com/pourmalek/covir2/tree/main/20210506/code/master) contains the master code (i.e. "do Iran master.do") to run the whole codes 
 
-[`merge`](https://github.com/pourmalek/covir2/tree/main/20210405/code/merge) contains the combined estimates and graphs from component studies
+[`merge`](https://github.com/pourmalek/covir2/tree/main/20210506/code/merge) contains the combined estimates and graphs from component studies
 
-component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210405/output/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
+component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210506/output/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
 
-Level-3 directory [`output/merge`](https://github.com/pourmalek/covir2/tree/main/20210405/output/merge) includes combined estimates [`Iran.dta`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/Iran.dta) and [`Iran.csv`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/Iran.csv) and combined graphs, e.g., [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+Level-3 directory [`output/merge`](https://github.com/pourmalek/covir2/tree/main/20210506/output/merge) includes combined estimates [`Iran.dta`](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/Iran.dta) and [`Iran.csv`](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/Iran.csv) and combined graphs, e.g., [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-Output level-3 directories for component studies, e.g., [`output/IHME`](https://github.com/pourmalek/covir2/tree/main/20210405/output/IHME/2021_04_01) contains data files and graphs form each study, e.g., [COVID-19 daily deaths, Iran, IHME, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20210405/output/IHME/2021_04_01/graph%202%20COVID-19%20daily%20deaths%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
+Output level-3 directories for component studies, e.g., [`output/IHME`](https://github.com/pourmalek/covir2/tree/main/20210506/output/IHME/2021-05-06) contains data files and graphs form each study, e.g., [COVID-19 daily deaths, Iran, IHME, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20210506/output/IHME/2021_04_01/graph%202%20COVID-19%20daily%20deaths%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
 
 <br/><br/>
 
