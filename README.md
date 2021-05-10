@@ -1281,23 +1281,23 @@ Order of graphs:
 
 (A) Outcome type, and time:
 
-(1) Estimates of daily deaths, all time 
+(1) Estimates of daily deaths, all time [link](https://github.com/pourmalek/covir2#۱-برآورد-مرگ-های-روزانه-از-دی-۱۳۹۸-به-بعد)
 
-(2) Estimates of daily deaths, 2021 on 
+(2) Estimates of daily deaths, 2021 on [link](https://github.com/pourmalek/covir2#۲-برآورد-مرگ-های-روزانه-از-آذر-۱۳۹۹-به-بعد)
 
-(3) Estimates of daily incident cases, all time
+(3) Estimates of daily incident cases, all time [link](https://github.com/pourmalek/covir2#۳-برآورد-موارد-جدید-روزانه-بیماری-از-دی-۱۳۹۸-به-بعد)
 
-(4) Estimates of daily incident cases, 2021 on 
+(4) Estimates of daily incident cases, 2021 on [link](https://github.com/pourmalek/covir2#۴-برآورد-موارد-جدید-روزانه-بیماری-از-آذر-۱۳۹۹-به-بعد)
 
-(5) Estimates of daily prevalent cases, all time
+(5) Estimates of daily prevalent cases, all time [link](https://github.com/pourmalek/covir2#۵-برآورد-موارد-موجود-روزانه-بیماری-از-دی-۱۳۹۸-به-بعد)
 
-(6) Estimates hospital-related outcomes, 2020 on
+(6) Estimates hospital-related outcomes, 2020 on [link](https://github.com/pourmalek/covir2#۶-برآورد-پیامدهای-مربوط-به-بیمارستان-و-بستری-از-دی-۱۳۹۸-به-بعد)
 
-(7) Estimates hospital-related outcomes, all time 
+(7) Estimates hospital-related outcomes, all time [link](https://github.com/pourmalek/covir2#۷-برآورد-پیامدهای-مربوط-به-بیمارستان-و-بستری-از-آذر-۱۳۹۹-به-بعد)
 
-(8) Daily deaths estimated to reported, all time
+(8) Daily deaths estimated to reported, all time [link](https://github.com/pourmalek/covir2#۸-نسبت-برآورد-مرگ-های-روزانه-به-گزارش-رسمی-از-دی-۱۳۹۸-به-بعد)
 
-(9) Daily cases estimated to reported, 2020 on
+(9) Daily cases estimated to reported, 2020 on [link](https://github.com/pourmalek/covir2#۹-نسبت-برآورد-موارد-جدید-روزانه-بیماری-به-گزارش-رسمی-از-دی-۱۳۹۹-به-بعد)
 
 .
 
