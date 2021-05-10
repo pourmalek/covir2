@@ -15,7 +15,7 @@
 ![image](https://user-images.githubusercontent.com/30849720/116822935-6ec63800-ab36-11eb-8f32-d5a1cf466721.png)
 
 *
-[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423%20(archived)/ouput/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423%20(archived)/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116485878-2e6a6f80-a841-11eb-92f9-bcdef38c1013.png)
 
