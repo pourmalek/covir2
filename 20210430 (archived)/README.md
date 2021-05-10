@@ -78,9 +78,9 @@ DELPHI 20210430, IHME 20210430, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 ****
 
-[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf) 
+[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-03-01%20on.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/117582431-d2acab80-b0b6-11eb-8f6d-b4d4c7cb1ab0.png)
+![image](https://user-images.githubusercontent.com/30849720/117718316-c8f77680-b190-11eb-859f-45ab8429f12a.png)
 
 ****
 
