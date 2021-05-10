@@ -38,10 +38,12 @@
 [موضوعات مهم](https://github.com/pourmalek/covir2#موضوعات-مهم)
 
 [محدودیت ها](https://github.com/pourmalek/covir2#محدودیت-ها)
-<br/><br/>
 
+<br/><br/>
+^^^^
 [نمودار های منتخب](https://github.com/pourmalek/covir2#نمودار-های-منتخب) (ماحصل کار، نمای بصری)
 <br/><br/>
+^^^^
 
 [نحوه داونلود و استفاده از کد های نرم افزار استیتا](https://github.com/pourmalek/covir2#نحوه-داونلود-و-استفاده-از-کد-های-نرم-افزار-استیتا)
 
