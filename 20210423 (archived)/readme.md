@@ -20,12 +20,12 @@
 ![image](https://user-images.githubusercontent.com/30849720/116485878-2e6a6f80-a841-11eb-92f9-bcdef38c1013.png)
 
 *
-[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423%20(archived)/ouput/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423%20(archived)/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116485990-72f60b00-a841-11eb-9c25-bab4f2faf13a.png)
 
 *
-[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423%20(archived)/ouput/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423%20(archived)/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/116486035-915c0680-a841-11eb-9f00-88d3719032ca.png)
 
