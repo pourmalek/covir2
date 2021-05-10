@@ -39,7 +39,7 @@
 
 [محدودیت ها](https://github.com/pourmalek/covir2#محدودیت-ها)
 
-## [نمودار های منتخب](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
+[نمودار های منتخب](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 
 [نحوه داونلود و استفاده از کد های نرم افزار استیتا](https://github.com/pourmalek/covir2#نحوه-داونلود-و-استفاده-از-کد-های-نرم-افزار-استیتا)
 
