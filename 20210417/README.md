@@ -13,6 +13,7 @@ DELP: this uptake was created retrospectively and dated or previous updates of D
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/117618376-b34b6800-b122-11eb-9fb9-110005f0ee04.png)
 
 ****
 
