@@ -606,6 +606,60 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 ****
 
+uptake 20210506 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117506520-92282300-af3a-11eb-94ea-5e0bc80b00fe.png)
+
+****
+
+uptake 20210430 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117582337-6762d980-b0b6-11eb-8ede-7a35f036df98.png)
+
+****
+
+uptake 20210424 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117587602-a4899480-b0d3-11eb-94dc-83875fd072e8.png)
+
+****
+
+uptake 20210422 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117606692-3cf13a80-b10f-11eb-83df-87ca55cd1cb6.png)
+
+****
+
+uptake 20210417 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117618980-8b103900-b123-11eb-82fb-38847e250242.png)
+
+****
+
+uptake 20210416 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117625619-0de8c200-b12b-11eb-9727-dbc296cfa851.png)
+
+****
+
+uptake 20210409 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117633507-f6153c00-b132-11eb-8784-28a9fd7dc538.png)
+
+****
+
+uptake 20210406 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117642106-cd457480-b13b-11eb-9a32-a2547c5e7657.png)
+
+****
+
+uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117649659-a17abc80-b144-11eb-9d8a-040ad9f951ff.png)
+
+****
+
 
 
 
