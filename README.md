@@ -440,11 +440,116 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 ![image](https://user-images.githubusercontent.com/30849720/117649067-ece09b00-b143-11eb-9a9f-8854f471a918.png)
 
 ****
+****
  
+### (۴)‌ برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد
+
+****
+
+uptake 20210506 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117506097-e383e280-af39-11eb-8f99-d26016f8dcf5.png)
+
+****
+
+uptake 20210430 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117587520-3349e180-b0d3-11eb-965d-da64250c2d83.png)
+
+****
+
+uptake 20210424 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117587520-3349e180-b0d3-11eb-965d-da64250c2d83.png)
  
- 
- 
- 
+****
+
+uptake 20210416 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117625265-b34f6600-b12a-11eb-9c81-5c71421d7c50.png)
+
+****
+
+uptake 20210409 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117633119-9585ff00-b132-11eb-955b-d2a91913a7db.png)
+
+****
+
+uptake 20210406 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117641802-6fb12800-b13b-11eb-9d1e-7638095e39e4.png)
+
+****
+
+uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117649205-17caef00-b144-11eb-9fdb-cd9a9b2cbb72.png)
+
+****
+****
+
+### (۵)‌ برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
+
+****
+
+uptake 20210506 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117506272-2cd43200-af3a-11eb-85ac-27914629e797.png)
+
+****
+
+uptake 20210430 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117582160-857c0a00-b0b5-11eb-81e3-f7561f6a861d.png)
+
+****
+
+uptake 20210424 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117587547-58d6eb00-b0d3-11eb-90bf-91e7692f7e91.png)
+
+****
+
+uptake 20210422 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117606441-b9374e00-b10e-11eb-81aa-717ceaafc247.png)
+
+****
+
+uptake 20210417 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117618768-484e6100-b123-11eb-9945-2664107c0334.png)
+
+****
+
+uptake 20210416 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117625390-d5e17f00-b12a-11eb-9697-749c81ed23ae.png)
+
+****
+
+uptake 20210409 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117633231-b4849100-b132-11eb-9756-f04a21585a6d.png)
+
+****
+
+uptake 20210406 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117641889-8bb4c980-b13b-11eb-8087-aa980305c286.png)
+
+****
+
+uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117649357-45179d00-b144-11eb-9369-ef689a883cb2.png)
+
+****
+
+
+
+
  
  
 ****************
