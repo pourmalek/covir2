@@ -142,9 +142,10 @@
 [اینجا](https://github.com/youyanggu/covid19_projections)
 . توضیحات مدل 
 [اینجا](https://covid19-projections.com/about/#table-of-contents-death-forecasting-model)
-. مقاله ندارد. به صورت (test-dose) به بروز-رسانی 
-[20210423](https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU) 
-اضافه شد. 
+. مقاله ندارد. به صورت (test-dose) به برداشت 
+[20210423] 
+اضافه شد.
+این برداشت (uptake) بعدا در اعمال قاعده کنونی ایجاد برداشت ها حذف شد. 
 
 و همچنین پایگاه داده های
 [دانشگاه جانز هاپکینز](https://coronavirus.jhu.edu/map.html)، 
