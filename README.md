@@ -975,21 +975,25 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 Estimates of five international periodically updating models or studies of COVID-19 epidemic for Iran are gathered and combined, and graphs, data files and Stata codes are produced and are accessible here. Guide for use of Stata codes is provided. A longitudinal treatment of periodically updating models will be added. 
 
 Similar work for the _GLOBAL_ level are being prepared to be presented in [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize)
+<br/><br/>
 
 ### Summary
 
 Estimates of seven studies, including international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
+<br/><br/>
 
 ### Methods
 
 Eligibility for target (component) studies (models) of COVID-19 epidemic in Iran, are were as those that (1) provide estimates for at least one of the four outcomes of interests, i.e., daily deaths, daily cases, cumulative (total) deaths, and cumulative (total) cases, (2) at national or subnational level for Iran, (3) covering December 2020 onwards, (4) provide a list of input data and their sources, and (5) provide explanation on methods of using input data and generation of model outputs.
 
 Methods generally follow the first iteration of this review, i.e., [Rapid review of COVID-19 epidemic estimation studies for Iran](Rapid review of COVID-19 epidemic estimation studies for Iran), with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Google Scholar, [Iranian Scientific Information Database](https://www.sid.ir), [Iranian National Periodicals Information Bank](https://www.magiran.com), and pre-prints in [medRxiv](https://www.medrxiv.org/), [arXiv](https://arxiv.org/), and [Research Square](https://www.researchsquare.com). 
+<br/><br/>
 
 ### Results
 
 Graphs, Stata codes (do files) and outputs, estimates’ data files (Stata and csv), and explanation of data management procedures (including data dictionary and studies’ scenarios) are presented here (https://github.com/pourmalek/covir2). All the data, used and combined, are at non-individual level, publicly available on the internet, and licensed for non-commercial use and redistribution. Graphs and all other details of recent updates of models’ estimates are stored in this repository.
 
+<br/><br/>
 
 
 ###  Studies / models
@@ -1147,7 +1151,7 @@ Periodically updating: Yes, until 2020-10-04
 
 Periodical updates accessible: Yes
 
-Note: included in 20210423 update, [here](https://github.com/pourmalek/covir2/tree/main/20210423/output/YYGU)
+Note: Was included in uptake 20210423. This uptake was later omitted in conforming to the current rule for creation of uptake in this repository - the rule described (here)[https://github.com/pourmalek/covir2/blob/main/setup/README.md].
 
 
   <br/><br/>
@@ -1156,10 +1160,21 @@ Note: included in 20210423 update, [here](https://github.com/pourmalek/covir2/tr
 
   
 
-### Updates and directory structure
+### Updates, uptakes, and directory structure
 
 <br/><br/>
-1- Level 1 of directories || dates on which a new uptake of studies estimates were created in this repo
+
+The term _uptake_ is used to denote gathering and processing in this repository of component studies' updated estimates. Frequency and dates of creation of uptakes are determined by the convention or rule defined (here)[https://github.com/pourmalek/covir2/blob/main/setup/README.md].
+
+The term _update_ is used to denote releases of outcomes' estimates by the component studies. Frequency and dates of release of updates are determined by each component study's convention or rule. Besides the early updates in 2020, IHME and IMPE has least frequent update frequencies. LANL generally follows a 3–4-day cycle. SRIV follows a daily frequency with few exceptions. 
+
+The following graph shows dates of update releases by component studies into early April 2021.
+
+![image](https://user-images.githubusercontent.com/30849720/117734332-14694f00-b1a8-11eb-8806-9c9b2a7656ed.png)
+
+.
+
+1- Level 1 of directories || dates on which a new uptake of studies updates were created in this repo
 
 [`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506) 
 
@@ -1180,7 +1195,7 @@ Note: included in 20210423 update, [here](https://github.com/pourmalek/covir2/tr
 
 <br/><br/>
 
-Example links below are relate to update [`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506)
+Example links below are relate to uptake [`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506)
 
 2- Level 2 of directories || The direcory named 'code' contains Stata codes, and 'output' contains codes' output (see the output w/o running the code):
 
