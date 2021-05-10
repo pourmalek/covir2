@@ -260,12 +260,38 @@
 
 از متأخر ترین بروز-رسانی،‌ به متقدّم ترین بروز-رسانی
 
+****************
+****************
 
-*
+### برآورد مرگ های روزانه
+
+****************
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210506
 
 ![image](https://user-images.githubusercontent.com/30849720/117502737-ca2c6780-af34-11eb-9bbe-808d624a60ff.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210430
+
+![image](https://user-images.githubusercontent.com/30849720/117581811-97f54400-b0b3-11eb-9224-8d149b4a0271.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210424
+
+![image](https://user-images.githubusercontent.com/30849720/117587342-57f18980-b0d2-11eb-847e-c491a859fc95.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)  uptake 20210422
+
+![image](https://user-images.githubusercontent.com/30849720/117605928-a96b3a00-b10d-11eb-81d6-b228057b99af.png)
+
+****************
+
+
 
 
 
