@@ -529,34 +529,17 @@ uptake 20210422 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 ****
 
-uptake 20210417 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد، از (uptake 20210422) و به قبل، فاقد نتایج مطالعه دلفی (DELP) هستند زیرا این برداشت ها (uptakes) به صورت گذشته نگر (retrospective) انجام شده اند و مطالعه دلفی نتایج بروز-رسانی های قبلی خود را ارایه نمی دهد و راهی برای لحاظ کردن نتایج قبلی مطالعه دلفی وجود ندارد. در نتیجه نمودارهای برآورد موارد موجود روزانه بیماری از (uptake 20210422) و به قبل مانند یکدیگر هستند و نمودارهای قبل از (uptake 20210422) به همین دلیل در زیر قرار داده نشده اند چون مانند (uptake 20210422) هستند. 
 
-![image](https://user-images.githubusercontent.com/30849720/117618768-484e6100-b123-11eb-9945-2664107c0334.png)
+uptake 20210417 
 
-****
+uptake 20210416 
 
-uptake 20210416 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+uptake 20210409 
 
-![image](https://user-images.githubusercontent.com/30849720/117625390-d5e17f00-b12a-11eb-9697-749c81ed23ae.png)
+uptake 20210406 
 
-****
-
-uptake 20210409 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117633231-b4849100-b132-11eb-9756-f04a21585a6d.png)
-
-****
-
-uptake 20210406 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117641889-8bb4c980-b13b-11eb-8087-aa980305c286.png)
-
-****
-
-uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117649357-45179d00-b144-11eb-9369-ef689a883cb2.png)
-
+uptake 20210401 
 ****
 
 
