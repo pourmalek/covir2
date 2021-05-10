@@ -188,7 +188,9 @@ DELP 20210423, IHME 20210422, IMPE 20210424, LANL 20210421, SRIV 20210424
 
 DELP N/A, IHME 20210422, IMPE 2010417, LANL 20210421, SRIV 20210422
 
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent. 
+DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent 
+
+برداشت های (20210422) و به قبل فاقد نتایج مطالعه دلفی هستند چون این مطالعه نتایج برآوردهای قبلی خود را به صورت ذخیره شده و قابل دسترس عمومی در اینترنت نگهداری نمی کند و این برداشت ها به صورت گذشته نگر انجام شده اند و نتایج قبلی دلفی برای آن تاریخ ها در دسترس نیست. 
 
 ****
 
@@ -196,15 +198,11 @@ DELP: this uptake was created retrospectively and dated or previous updates of D
 
 DELP N/A, IHME 20210416, IMPE 20210417, LANL 20210414, SRIV 20210417
 
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent. 
-
 ****
 
 (۴) (20210416)    (۱۴۰۰/۱/۲۷)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210416)
 
 DELP N/A, IHME 20210416, IMPE 20210406, LANL 20210414, SRIV 20210416
-
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent. 
 
 ****
 
@@ -212,23 +210,17 @@ DELP: this uptake was created retrospectively and dated or previous updates of D
 
 DELP N/A, IHME 20210409, IMPE 20210406, LANL 20210407, SRIV 20210409
 
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent. 
-
 ****
 
 (۲) (20210406)    (۱۴۰۰/۱/۱۷)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210406)
 
 DELP N/A, IHME 20210401, IMPE 20210406, LANL 20210404, SRIV 20210406
 
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent. 
-
 ****
 
 (۱) (20210401)    (۱۴۰۰/۱/۱۲)   [پیوند](https://github.com/pourmalek/covir2/tree/main/20210401)
 
 DELP N/A, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
-
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent. 
 
 ****
 
