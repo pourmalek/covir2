@@ -96,11 +96,11 @@ grstyle color background white
 
 List of component studies:
 JOHN
-DELP
+DELP // this uptake was created retrospectively and dated or previous updates of DELP are not existent.
 IHME
 IMPE
 LANL
-SRIV // this uptake was created retrospectively and dated or previous updates of DELP are not existent.
+SRIV 
 SOLT
 GHAN
 
