@@ -534,21 +534,69 @@ uptake 20210422 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد، از (uptake 20210422) و به قبل، فاقد نتایج مطالعه دلفی (DELP) هستند زیرا این برداشت ها (uptakes) به صورت گذشته نگر (retrospective) انجام شده اند و مطالعه دلفی نتایج بروز-رسانی های قبلی خود را ارایه نمی دهد و راهی برای لحاظ کردن نتایج قبلی مطالعه دلفی وجود ندارد. در نتیجه نمودارهای برآورد موارد موجود روزانه بیماری از (uptake 20210422) و به قبل مانند یکدیگر هستند و نمودارهای قبل از (uptake 20210422) به همین دلیل در زیر قرار داده نشده اند چون مانند (uptake 20210422) هستند. 
 
-uptake 20210417 
+****
+****
 
-uptake 20210416 
+### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
 
-uptake 20210409 
+****
 
-uptake 20210406 
+uptake 20210506 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-uptake 20210401 
+![image](https://user-images.githubusercontent.com/30849720/117506395-6016c100-af3a-11eb-9ccc-bd6a8e2bc250.png)
+
+****
+
+uptake 20210430 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117582207-b8be9900-b0b5-11eb-9094-8af9f5a236ac.png)
+
+**** 
+
+uptake 20210424 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117587571-7efc8b00-b0d3-11eb-8033-dcf64b30e079.png)
+ 
+****
+
+uptake 20210422 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117606692-3cf13a80-b10f-11eb-83df-87ca55cd1cb6.png)
+ 
+****
+
+uptake 20210417 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117618852-64ea9900-b123-11eb-99f0-fd26ad0ee40a.png)
+
+****
+
+uptake 20210416 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117625515-f3164d80-b12a-11eb-8f3e-3acc904a6aa1.png)
+
+****
+
+uptake 20210409 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117633346-d251f600-b132-11eb-92b2-0a1124583c73.png)
+
+****
+
+uptake 20210406 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117641991-aa1ac500-b13b-11eb-9a78-ce7be811c856.png)
+
+****
+
+uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117649490-6e382d80-b144-11eb-8a2e-3c292ff0860f.png)
+ 
 ****
 
 
 
-
- 
  
 ****************
 ****************
