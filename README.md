@@ -1275,47 +1275,9 @@ In practice, it becomes evident that whether the progression of viruses and emer
 
 ### Selected graphs 
 
-#### Selected graph from latest update 20210430
+Selected graphs are placed within the Farsi moiety of this page. See [above](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 
-[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117084756-e776f100-acfc-11eb-81d8-568691fcf4d0.png)
-
-
-*
-
-#### Selected graphs from update 20210423
-
-*
-
-[COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487649-51971e00-a845-11eb-954a-f431a5ae4f1c.png)
-
-*
-[COVID-19 daily cases, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117247999-1623c300-adf4-11eb-8273-c33cff51c530.png)
-
-*
-[COVID-19 daily active cases, Iran](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487631-42b06b80-a845-11eb-9236-b1d389ca9ede.png)
-
-*
-[COVID-19 daily hospital-related outcomes Iran, median scenarios](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487586-29a7ba80-a845-11eb-8ed1-29e06dcb0331.png)
-
-*
-[COVID-19 hospital-related outcomes, without extremes, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116487570-20b6e900-a845-11eb-88ca-da08d7f907ce.png)
-
-*
-[COVID-19 daily deaths estimated to reported, Iran, reference scenarios, 19feb2021 1399-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2092.1%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%2019feb2021%201399-12-01%20on.pdf)
-![image](https://user-images.githubusercontent.com/30849720/116487555-1694ea80-a845-11eb-864f-613a1b14d145.png)
-
+<br/><br/>
 
 ********************************************************************************************************************************************
 
