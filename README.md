@@ -563,13 +563,13 @@ uptake 20210424 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 ![image](https://user-images.githubusercontent.com/30849720/117587571-7efc8b00-b0d3-11eb-8033-dcf64b30e079.png)
 
-این بروز-رسانی مطالعه آی اچ ام ای فاقد رآورد پیامدهای مربوط به بیمارستان و بستری هستند.
+این بروز-رسانی مطالعه آی اچ ام ای فاقد برآورد پیامدهای مربوط به بیمارستان و بستری هستند.
  
 ****
 
-uptake 20210422 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+uptake 20210422 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117606692-3cf13a80-b10f-11eb-83df-87ca55cd1cb6.png)
+![image](https://user-images.githubusercontent.com/30849720/117606511-dbc96700-b10e-11eb-9e9e-4eb7805f0334.png)
  
 ****
 
