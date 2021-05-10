@@ -59,9 +59,9 @@ DELP: this uptake was created retrospectively and dated or previous updates of D
 
 ****
 
-[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2092%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
+[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117619200-cf9bd480-b123-11eb-8aba-eb52e72ea939.png)
+![image](https://user-images.githubusercontent.com/30849720/117719787-ac5c3e00-b192-11eb-965e-10949346ffa6.png)
 
 ****
 
