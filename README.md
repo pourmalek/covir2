@@ -201,9 +201,8 @@
 به عنوان نمونه، در توجه به نمودار برآوردهای مرگ های روزانه برای بهار ۱۴۰۰، علاوه بر متأخر ترین به روز رسانی،‌ لازم است به به-روز رسانی های قبلی نیز توجه نمود.
 
 (۲) نقاط قوت و ضعف مدل ها: هر مدلی نقاط قوت و ضعفی دارد که باید در تفسیر نتایج این موضوع را در نظر گرفت. مدل های کاملا صحیح یا کاملا غلط نادر هستند.
-
 نقاط قوت و ضعف مدل ها در مقاله 
-[Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3) می باشد (نسخه اول این مرور)،ذکر شده اند. 
+[Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)  (نسخه اول این مرور)،ذکر شده اند. 
 
 
 
