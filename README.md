@@ -1277,6 +1277,33 @@ In practice, it becomes evident that whether the progression of viruses and emer
 
 Selected graphs are placed within the Farsi moiety of this page. See [above](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 
+Order of graphs:
+
+(A) Outcome type, and time:
+
+(1) Estimates of daily deaths, all time 
+
+(2) Estimates of daily deaths, 2021 on 
+
+(3) Estimates of daily incident cases, all time
+
+(4) Estimates of daily incident cases, 2021 on 
+
+(5) Estimates of daily prevalent cases, all time
+
+(6) Estimates hospital-related outcomes, 2020 on
+
+(7) Estimates hospital-related outcomes, all time 
+
+(8) Daily deaths estimated to reported, all time
+
+(9) Daily cases estimated to reported, 2020 on
+
+.
+
+(B) Order of uptakes, starting from latest uptake
+
+
 <br/><br/>
 
 ********************************************************************************************************************************************
