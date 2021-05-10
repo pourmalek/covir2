@@ -961,7 +961,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 [Limitations](https://github.com/pourmalek/covir2#limitations)
 
->>>> [Selected graphs](https://github.com/pourmalek/covir2#selected-graphs) <<<<
+<<<< [Selected graphs](https://github.com/pourmalek/covir2#selected-graphs) >>>>
 
 [Using Stata codes](https://github.com/pourmalek/covir2#summary-of-how-to-use-the-codes-in-this-repo)
 
