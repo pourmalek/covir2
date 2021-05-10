@@ -1214,9 +1214,25 @@ Level-3 directories include codes if level 2 is code, and outputs if level 2 is 
 
 component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210506/output/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
 
+.
+[Iran](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%20Iran%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117735027-88582700-b1a9-11eb-9ac5-5363b1f6cc3d.png)
+
+.
+[EMR](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%202_EMR%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117735147-c48b8780-b1a9-11eb-9e55-e98eadfaa52f.png)
+
+.
+[Global](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%201_Global%20Johns%20Hopkins.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/117735247-f3a1f900-b1a9-11eb-90c0-e572d1c6c1a4.png)
+
+.
 Level-3 directory [`output/merge`](https://github.com/pourmalek/covir2/tree/main/20210506/output/merge) includes combined estimates [`Iran.dta`](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/Iran.dta) and [`Iran.csv`](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/Iran.csv) and combined graphs, e.g., [COVID-19 daily deaths, Iran, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-Output level-3 directories for component studies, e.g., [`output/IHME`](https://github.com/pourmalek/covir2/tree/main/20210506/output/IHME/2021-05-06) contains data files and graphs form each study, e.g., [COVID-19 daily deaths, Iran, IHME, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20210506/output/IHME/2021_04_01/graph%202%20COVID-19%20daily%20deaths%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
+Output level-3 directories for component studies, e.g., [`output/IHME`](https://github.com/pourmalek/covir2/tree/main/20210506/output/IHME/2021-05-06) contains data files and graphs form each study, e.g., [COVID-19 daily deaths, Iran, IHME, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20210506/output/IHME/2021-05-06/graph%202%20COVID-19%20daily%20deaths%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
 
 <br/><br/>
 
