@@ -1215,17 +1215,17 @@ Level-3 directories include codes if level 2 is code, and outputs if level 2 is 
 component study directory [`JOHNEMR`](https://github.com/pourmalek/covir2/tree/main/20210506/output/JOHNEMR) looks at temporal succession of daily cases and daily deaths peaks in individual countries in Eastern Mediterranean Region (EMR), EMR as a whole, and the Global level
 
 .
-[Iran](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%20Iran%20Johns%20Hopkins.pdf)
+Temporal succession of daily cases and daily deaths peaks [Iran](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%20Iran%20Johns%20Hopkins.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/117735027-88582700-b1a9-11eb-9ac5-5363b1f6cc3d.png)
 
 .
-[EMR](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%202_EMR%20Johns%20Hopkins.pdf)
+Temporal succession of daily cases and daily deaths peaks [EMR](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%202_EMR%20Johns%20Hopkins.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/117735147-c48b8780-b1a9-11eb-9e55-e98eadfaa52f.png)
 
 .
-[Global](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%201_Global%20Johns%20Hopkins.pdf) 
+Temporal succession of daily cases and daily deaths peaks [Global](https://github.com/pourmalek/covir2/blob/main/20210506/output/JOHNEMR/graph%201%20COVID-19%20daily%20deaths%20and%20cases%201_Global%20Johns%20Hopkins.pdf) 
 
 ![image](https://user-images.githubusercontent.com/30849720/117735247-f3a1f900-b1a9-11eb-90c0-e572d1c6c1a4.png)
 
