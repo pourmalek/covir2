@@ -263,7 +263,7 @@
 ****************
 ****************
 
-### برآورد مرگ های روزانه
+### (۱) برآورد مرگ های روزانه، ‌از دی ۱۳۹۸ به بعد 
 
 ****************
 
@@ -285,228 +285,50 @@
 
 ****************
 
-[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)  uptake 20210422
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210422
 
 ![image](https://user-images.githubusercontent.com/30849720/117605928-a96b3a00-b10d-11eb-81d6-b228057b99af.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210417
+
+![image](https://user-images.githubusercontent.com/30849720/117618376-b34b6800-b122-11eb-9fb9-110005f0ee04.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210416
+
+![image](https://user-images.githubusercontent.com/30849720/117624928-52c02900-b12a-11eb-98fb-8cca7731d780.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210409
+
+![image](https://user-images.githubusercontent.com/30849720/117632702-3627ef00-b132-11eb-826c-ae12c014f67e.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210416
+
+![image](https://user-images.githubusercontent.com/30849720/117641457-06311980-b13b-11eb-8457-1ad8d98760d9.png)
+
+****************
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) uptake 20210401
+
+![image](https://user-images.githubusercontent.com/30849720/117648832-92473f00-b143-11eb-99b8-965597837d50.png)
+
+****************
+****************
+
+### (۲) برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد
 
 ****************
 
 
 
 
-
-
-
-
-*********
-******
-****
-**
-*
-نمودار برآورد مرگ های روزانه، آخرین به روز رسانی، (20210430) یا (۱۴۰۰۰۲۱۰)
-
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117084756-e776f100-acfc-11eb-81d8-568691fcf4d0.png)
-
-
-
-*******
-
- نمودار ۱۱ - برآورد مرگ های روزانه،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210405/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116429888-2982cd00-a7fb-11eb-97d9-a67ab695ca19.png)
-
-*
-
-نمودار ۱۲ - برآورد مرگ های روزانه،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210413/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116435125-e414ce80-a7ff-11eb-8b8d-f672173c1aed.png)
-
-*
-
-نمودار ۱۳ - برآورد مرگ های روزانه،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116437150-fe4fac00-a801-11eb-8623-aff2744d753c.png)
-
-* 
-
-نمودار ۱۴ - برآورد مرگ های روزانه،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210423/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/116823135-a41f5580-ab37-11eb-8b3f-d20acba37c44.png)
-
-*
-
-نمودار ۱۵ - برآورد مرگ های روزانه،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
-[`link`](https://github.com/pourmalek/covir2/blob/main/20210430/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/117085775-8e5c8c80-acff-11eb-8491-cbe1fdf6ed94.png)
-
-*
-
-نمودار ۲۱ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
-
- ![image](https://user-images.githubusercontent.com/30849720/116430105-5e8f1f80-a7fb-11eb-9ecc-adcaf2de9ce9.png)
-
-*
-
-نمودار ۲۲ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
-
-![image](https://user-images.githubusercontent.com/30849720/115966967-d18b5400-a4e4-11eb-8574-cbfa74748545.png)
-
-*
-
-نمودار ۲۳ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
-
-![image](https://user-images.githubusercontent.com/30849720/116437248-1cb5a780-a802-11eb-8d3d-64a4705bcc8a.png)
-
-*
-
-نمودار ۲۴ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-
-![image](https://user-images.githubusercontent.com/30849720/116822935-6ec63800-ab36-11eb-8f32-d5a1cf466721.png)
-
-*
-
-نمودار ۲۵ - برآورد موارد جدید روزانه بیماری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
-
-![image](https://user-images.githubusercontent.com/30849720/117085917-fb702200-acff-11eb-9ebb-932456161ab7.png)
-
-*
-
-نمودار ۳۱ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
-
-![image](https://user-images.githubusercontent.com/30849720/116430941-23d9b700-a7fc-11eb-971a-f1f86ba24672.png)
-
-*
-
-نمودار ۳۲ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
-
-![image](https://user-images.githubusercontent.com/30849720/116436479-4b7f4e00-a801-11eb-99eb-c955a3a644a8.png)
-
-*
-
-نمودار ۳۳ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
-
-![image](https://user-images.githubusercontent.com/30849720/116437360-3ce56680-a802-11eb-9289-31a0d9ffcf68.png)
-
-*
-
-نمودار ۳۴ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-
-![image](https://user-images.githubusercontent.com/30849720/116486661-f9f7b300-a842-11eb-9db7-353900e0abf1.png)
-
-*
-
-نمودار ۳۵ - برآورد موارد موجود روزانه بیماری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
-
-![image](https://user-images.githubusercontent.com/30849720/117086240-e5169600-ad00-11eb-9154-e48c239011d8.png)
-
-*
-
-نمودار ۴۱۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
-
-![image](https://user-images.githubusercontent.com/30849720/116431195-6602f880-a7fc-11eb-9d7c-78d7ec1e54e8.png)
-
-*
-
-نمودار ۴۱۲ - برآورد موارد مربوط به بیمارستان و بستری،‌ از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶
-
-![image](https://user-images.githubusercontent.com/30849720/116431431-a4001c80-a7fc-11eb-9ddc-4aafcdcee3d5.png)
-
-*
-
-نمودار ۴۲۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
-
-![image](https://user-images.githubusercontent.com/30849720/116436629-6fdb2a80-a801-11eb-938d-5796f9d9b52f.png)
-
-*
-
-نمودار ۴۲۲ - برآورد موارد مربوط به بیمارستان و بستری،‌ از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
-
-![image](https://user-images.githubusercontent.com/30849720/116436735-8aad9f00-a801-11eb-8c39-25d8f9065aa8.png)
-
-*
-
-نمودار ۴۳۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
-
-![image](https://user-images.githubusercontent.com/30849720/116437492-59819e80-a802-11eb-9657-2411c0890b46.png)
-
-*
-
-نمودار ۴۳۲ - برآورد موارد مربوط به بیمارستان و بستری،‌ از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
-
-![image](https://user-images.githubusercontent.com/30849720/116438446-4de2a780-a803-11eb-84fa-89f4e396acbe.png)
-
-*
- 
-نمودار ۴۴۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-
-![image](https://user-images.githubusercontent.com/30849720/116486699-109e0a00-a843-11eb-8acf-60aaa86f7f4a.png)
-
-*
-
-نمودار ۴۴۲ - برآورد موارد مربوط به بیمارستان و بستری،‌  از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-
-![image](https://user-images.githubusercontent.com/30849720/116486713-18f64500-a843-11eb-844a-47b50194e253.png)
-
-*
-
-نمودار ۴۵۱ - برآورد موارد مربوط به بیمارستان و بستری،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
-
-توضیح: مطالعه آی اچ ام ای در این تاریخ برآورد های موارد مربوط به بیمارستان و بستری ارایه نکرده است
-
-![image](https://user-images.githubusercontent.com/30849720/117086044-56a21480-ad00-11eb-8852-b0c65fde62ad.png)
-
-*
-
-نمودار ۴۵۲ - برآورد موارد مربوط به بیمارستان و بستری،‌از آذر ۱۳۹۹ به بعد،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
-
-توضیح: مطالعه آی اچ ام ای در این تاریخ برآورد های موارد مربوط به بیمارستان و بستری ارایه نکرده است
-
-![image](https://user-images.githubusercontent.com/30849720/117086567-b9e07680-ad01-11eb-9fa0-63027b0232fe.png)
-
-
-*
-
-نمودار ۵۱ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی اول در 20210405 یا ۱۴۰۰/۱/۱۶ 
-
-![image](https://user-images.githubusercontent.com/30849720/116434717-841e2800-a7ff-11eb-813b-5dc61926ff54.png)
-
-*
-
-نمودار ۵۲ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی دوم در 20210413 یا ۱۴۰۰/۱/۲۴
-
-![image](https://user-images.githubusercontent.com/30849720/116436862-ab75f480-a801-11eb-81df-767c257fac91.png)
-
-*
-
-نمودار ۵۳ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی سوم در 20210416 یا ۱۴۰۰/۱/۲۷
-
-![image](https://user-images.githubusercontent.com/30849720/116438581-6eaafd00-a803-11eb-9e05-5bf6e431ed36.png)
-
-*
-
-نمودار ۵۴ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی چهارم در 20210423 یا ۱۴۰۰/۲/۳
-
-![image](https://user-images.githubusercontent.com/30849720/116486779-3e834e80-a843-11eb-8845-7046013de2d5.png)
-
-*
-
-نمودار ۵۵ - نسبت برآورد مرگ های روزانه به گزارش رسمی،‌ به روز-رسانی پنجم در 20210430 یا ۱۴۰۰/۲/۱۰
-
-![image](https://user-images.githubusercontent.com/30849720/117086786-6c183e00-ad02-11eb-9dc9-ba4c0eca49de.png)
-
-
-*
- 
-[بازگشت](https://github.com/pourmalek/covir2#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم)
- 
- 
  
  
  
