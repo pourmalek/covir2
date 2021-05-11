@@ -53,8 +53,13 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 * **Problem** (4): With less expected frequency, your local machine (OS) might stop responding or *RESTART*, due to oversaturation of RAM, CPU. Fan noise might be heard. 
 
 * **Treatment**: (1) If this happens during running the code while all programs except `Stata` and the web browser are NOT already closed, you may want to retry after all other programs and applications except `Stata` and the web browser are closed. (2) If this happens during running the code while all programs except `Stata` and the web browser ARE closed, the RAM and CPU of the local machine cannot afford running the code. You may want to try running the code on another computer with better RAM, CPU.
+<br/><br/>
 
+********************************************************************************************************************************************
+* **Problem** (5): Occasionally, some studies might (change / alter rename / omit) the (file names, directory names, variables variable names, etc.) in one or more of their released updates after the updates were release. In such cases, the codes in this repository that use the original release of such updates will stop working and when executed, return error messages about non-existence of a variable or inability to -change directory- to a non-existent directory. 
 
+* **Treatment**: (If the creator of these codes encounters such incidents during rerun of the previously created codes, the codes will be amended, or the update directory will be archived. If you encounter incidents you might create an Issue, mention is Discussions or email (pourmalek_farshad@yahoo.com). 
+********************************************************************************************************************************************
 
 <br/><br/>
 <br/><br/>
