@@ -45,12 +45,6 @@
 
 ![image](https://user-images.githubusercontent.com/30849720/117861320-2699ca80-b246-11eb-94bd-901db697e9c1.png)
 
-[PDF](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
-
-
-<br/><br/>
-
-
 ### مطالعاتی که کاهش موارد جدید روزانه بیماری را پیشبینی کرده اند: دلفی، آی اچ ام ای، اسریواستاوا
 
 ### مطالعاتی که افزایش موارد جدید روزانه بیماری را پیشبینی کرده اند: ایمپریال،‌ لس آلاموس
