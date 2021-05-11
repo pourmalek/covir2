@@ -14,23 +14,23 @@ Déjà diagnostiqué
 
 * **Treatment**: Make sure the file path to directory |code| on the local machine is: 
 
-"/Users/local-user-name/Downloads/covir2-main/20210405/code" [for Mac]
+"/Users/local-user-name/Downloads/covir2-main/20210506/code" [for Mac]
 
-"C:\Users\local-user-name\Downloads\covir2-main\20210405\code" [for Windows].
+"C:\Users\local-user-name\Downloads\covir2-main\20210506\code" [for Windows].
 
 Manually rearrange the directories so that the expected file path leading to |code| reads as mentioned above. 
 <br/><br/>
-This code is set up to work from "|Users|local-user-name|Downloads|covir2-main|20210405|code|master|do Iran master.do". Sometimes users chose destinations other than |Downloads| folder. Before editing the code, it will not work from anywhere else.
+This code is set up to work from "|Users|local-user-name|Downloads|covir2-main|20210506|code|master|do Iran master.do". Sometimes users chose destinations other than |Downloads| folder. Before editing the code, it will not work from anywhere else.
 <br/><br/>
 Sometime, if the downloaded zip file is unzipped manually (in Windows), there might be a possibility that the file path is not identical to the correct path, that is created after auto-inflation of the zip file and shown above. In any case, rearrange the directories so that the expected file path mentioned above leads to |Data|master|do Iran master.do"   
 
 A relatively frequent problem with unzipping in Windows is that the file path might become something like:
 
-"C:\Users\local-user-name\Downloads\covir2-main\covir2-main\20210405\code\master\do Iran master.do"
+"C:\Users\local-user-name\Downloads\covir2-main\covir2-main\20210506\code\master\do Iran master.do"
 
 <br/><br/>
 
-Note: |20210413| or other later updates an be similary used instead of original |20210405|. For instance, run "|Users|local-user-name|Downloads|covir2-main|20210413|code|master|do Iran master.do" on local machine for the 20210413 update.
+Note: |20210401| or other later updates an be similary used instead of original |20210506|. For instance, run "|Users|local-user-name|Downloads|covir2-main|20210424|code|master|do Iran master.do" on local machine for the 20210424 update.
 
 ********************************************************************************************************************************************
 * **Problem** (2): If the *ERROR* message is about unavailability / unresponsiveness of a component study site server, or less frequently, web server unresponsiveness might occur during downloading `-renvars-` `Stata` command. For instance, the error message might be -r(691); I/O error- that is usually an internet connection issue. See -r(691) I/O error- on [statalist](https://www.statalist.org/forums/forum/general-stata-discussion/general/1475517-update-all-r-691-i-o-error). For other errors regarding connecting to the Internet from within `Stata`, e.g., error -r(610);- see [common-connection-error-messages](https://www.stata.com/support/faqs/web/common-connection-error-messages/)
@@ -39,7 +39,7 @@ Note: |20210413| or other later updates an be similary used instead of original 
 In cases where one or more component study files have been downloaded but then the internet connection fails to download a next component study file in the row of files to be downloaded, see _(4) Palliative treatment_  below.
 
 * **Treatment**: (1) Close all running programs / applications except `Stata` and try again. (2) Try a better internet connection. (3) Try again later. 
-Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`20210405 output`](https://github.com/pourmalek/covir2/tree/main/20210405/output) or [`20210413 output`](https://github.com/pourmalek/covir2/tree/main/20210413/output) or later outputs. _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
+Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`20210506 output`](https://github.com/pourmalek/covir2/tree/main/20210506/output) or [`20210506 output`](https://github.com/pourmalek/covir2/tree/main/20210506/output) or later outputs. _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
 
 <br/><br/>
 
