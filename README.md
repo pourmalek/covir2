@@ -55,7 +55,6 @@
 به روز-رسانی های متوالی مدل ها به صورت دوره ای به این سایت اضافه خواهند شد.
 
 هدف از این کار، گرد هم آوردن برآوردهای آینده همه گیری در یک جا برای کمک بیشتر به تصمیم گیری به موقع جهت اقدامات پیشگیرانه می باشد. 
-بازخوردها، پیشنهادات، و مشخص نمودن مشکلات، اشتباهات، و محدودیت ها، و رفع نواقص، موجب بهبود خواهد شد. 
 
 مشابه این کار برای سطح جهانی در حال آماده سازی جهت ارایه در [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize) می باشد.
  
@@ -285,8 +284,6 @@ DELP N/A, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 (۱) جستجوی مطالعات بین المللی بروز-شونده به صورت "سایر مطالعات مشخص شده از طریق سایر منابع" 
 [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951),
 انجام شده و بنابراین تکرار پذیری مستقل از جستجوگر برای آن کامل نیست. یک مرور منظم ممکن است تعداد بیشتری از مطالعات بین المللی بروز-شونده که واجد شرایط انتخاب باشند را مشخص نماید. (۲) نرم افزار استفاده شده از نوع تجاری است. استفاده از نرم افزار (R) یا (Phyton) از نظر سهولت دسترسی کاربران مرجح است. حتی ممکن است یک بسته (R package) برای این منظور تدوین نمود. (۳) وارسی و انجام  بروز رسانی ها در این ریپوزیتوری به صورت خودکار انجام نمی شود. استفاده از (Phyton)، ‌به عنوان مثال،‌ می تواند برای خودکار نمودن وارسی و انجام  بروز رسانی ها به کار برده شود. (۴) ارایه نتایج در این تارنما فقط قسمت محدودی از مخاطبین را پوشش می دهد. محل های دیگر و راهبردهای بهتر می توانند بهتر به مخاطبین برسند. 
-
-برای پیشنهادات، همکاری، و دریافت کمک آمادگی دارم (pourmalek_farshad@yahoo.com) .
   
   <br/><br/>
 
@@ -858,27 +855,11 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 ****************
 
 ## نحوه داونلود و استفاده از کد های نرم افزار استیتا 
-در تارنمای گیت هاب (https://github.com/pourmalek/covir2) 
-که در زیر با نام (سایت covir2) به آن اشاره می شود. 
 <br/><br/>
 
-### مرور برآوردهای مطالعات بین المللی برای همه گیری کووید-۱۹ در ایران، نسخه دوم
-<br/><br/>
+ساختار دیرکتوری های موجود در این ریپوزیتوری
 
- (الف)‌ کلیات،‌ (ب) نحوه داونلود و استفاده از کد های نرم افزار
-<br/><br/>
-
-
-### (الف)‌ کلیات
-
-کلیاتی از مطالعه در بالای همین صفحه توضیح داده شده است. 
-
-نمودارهای برآوردهای پیامدها در هر یک از مطالعات بررسی شده در (سایت covir2) قابل دیدن هستند.
-نمودارهای برآوردهای پیامدها در مجموعه مطالعات بررسی شده به صورت یکجا نیز قابل دیدن هستند.
-
-برآوردهای پنج مطالعه بین المللی به صورت دوره ای به روز می شوند. در (سایت covir2) نیز نتایج این به روز-رسانی ها به صورت دوره ای به سایت اضافه می شود.
-
- هر بار یک دایرکتوری با نام تاریخ برداشت (uptake) ایجاد می گردد. 
+برآوردهای پنج مطالعه بین المللی به صورت دوره ای به روز می شوند. نتایج این به روز-رسانی ها به صورت دوره ای به این سایت (covir2) اضافه می شود و هر بار یک دیرکتوری با نام تاریخ برداشت (uptake) ایجاد می گردد.
 
 در داخل دایرکتوری هر یک از به روز رسانی ها،‌ دو دایرکتوری [code](https://github.com/pourmalek/covir2/tree/main/20210506/code) و
 [output](https://github.com/pourmalek/covir2/tree/main/20210506/output) که به ترتیب حاوی کد های نرم افزار استیتا و خروجی کد ها می باشند. در داخل هر یک از این دو دایرکتوری،‌ دایرکتوری هایی برای هر مطالعه وجود دارد (اسامی اختصاری در [اینجا](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.pdf) توضیح داده شده اند) و دو دایرکتوری دیگر به نام های [master](https://github.com/pourmalek/covir2/tree/main/20210506/code/master) ‌و [merge](https://github.com/pourmalek/covir2/tree/main/20210506/code/merge). دایرکتوری [master](https://github.com/pourmalek/covir2/tree/main/20210506/code/master) حاوی یک کد استیتا است به نام [do Iran master.do](https://github.com/pourmalek/covir2/blob/main/20210506/code/master/do%20Iran%20master.do) که اجرای آن روی کامپیوتر کاربر،‌ بعد از داونلود به کامپیوتر کاربر، ‌باعث اجرای سایر کدها و تولید نمودارها و سایر خروجی ها می گردد. دایرکتوری [merge](https://github.com/pourmalek/covir2/tree/main/20210506/code/merge) حاوی کدی است که نتایج حاصل شده از کدهای مربوط به هر یک از مطالعات را گردآوری کرده و برای هر پیامد (مثلا مرگ های روزانه) نمودار حاصل از همه مطالعات را ترسیم می کند. 
@@ -891,7 +872,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 <br/><br/>
 
-### (ب) نحوه داونلود و استفاده از کد های نرم افزار
+### نحوه داونلود و استفاده از کد های نرم افزار
 
 خلاصه: 
 کل ریپوزیتوری covir2 را داونلود نموده و فایل زیر را در استیتا اجرا نمایید:
@@ -1175,7 +1156,7 @@ Note: Was included in uptake 20210423. This uptake was later omitted in conformi
 
 <br/><br/>
 
-The term _uptake_ is used to denote gathering and processing in this repository of component studies' updated estimates. Frequency and dates of creation of uptakes are determined by the convention or rule defined (here)[https://github.com/pourmalek/covir2/blob/main/setup/README.md].
+The term _uptake_ is used to denote gathering and processing in this repository of component studies' updated estimates. Frequency and dates of creation of uptakes are determined by the convention or rule defined [here](https://github.com/pourmalek/covir2/blob/main/setup/README.md).
 
 The term _update_ is used to denote releases of outcomes' estimates by the component studies. Frequency and dates of release of updates are determined by each component study's convention or rule. Besides the early updates in 2020, IHME and IMPE has least frequent update frequencies. LANL generally follows a 3–4-day cycle. SRIV follows a daily frequency with few exceptions. 
 
@@ -1268,10 +1249,9 @@ Any model has strengths and limitations that should be taken into consideration 
 
 (1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
 
-I am willing for suggestions, collaboration, and help regarding overcoming the above-mentioned, and other limitations of this work. Please e-mail me (pourmalek_farshad@yahoo.com) 
-
 *
 
+Note 
 
 Although "viruses move fast… data can move even faster", the WHO chief insisted, adding that "with the right information, countries and communities can stay one step ahead of an emerging risk and save lives. Modern technologies give us unprecedented tools for collecting, analysing and disseminating data in real time around the world. That’s what the WHO Hub for Pandemic and Epidemic Intelligence aims to do."  (5 May 2021) 
 
@@ -1332,7 +1312,7 @@ Order of graphs:
 
 The whole code can be executed with less than ten clicks. 
 
-#### Express: Run "Users\local-user-name\Downloads\covir2-main\20210405\code\master\do Iran master.do" on local machine after the directory \covir2-main\ is downloaded into and is located in the root of \Downloads\ folder of your local machine, for original update.
+#### Express: Run "Users\local-user-name\Downloads\covir2-main\20210506\code\master\do Iran master.do" on local machine after the directory \covir2-main\ is downloaded into and is located in the root of \Downloads\ folder of your local machine; for uptake 20210506.
 
 #### Use "Users\local-user-name\Downloads\covir2-main\202YMMDD\code\master\do Iran master.do" for other updates.
 
@@ -1351,11 +1331,11 @@ on the dropdown menu.
 
 2. Locate the file covir2-main.zip or directory covir2-main on your local machine - by default in the Downloads folder. File or directory depends on zip-file auto-inflation setting of the local machine. If it is the file covir2-main.zip, unzip and move the unzipped covir2-main directory to the root of Downloads folder. If the unzipped covir2-main directory is not located at the root of the Downloads folder, running the code will return error. Cl 2-4.
 
-3. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|20210405|code|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows. Cl 5-6.
+3. Locate file *"do Iran master.do"* in your local directory |Downloads|covir2-main|20210506|code|master| and run this do file. This "do Iran master.do" initiates all other codes. | denotes / for Mac or \ for Windows. Cl 5-6.
 
-- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/20210405/code/merge/ (Mac) or Downloads\covir2-main\20210405\code\merge\ (Windows).
+- Once all the codes have run, the final outputs would show up: "log Iran merge.smcl", and the last graph. This signifies the end of the code implementation. Graph files are stored in your local system's directory Downloads/covir2-main/20210506/code/merge/ (Mac) or Downloads\covir2-main\20210506\code\merge\ (Windows).
 
-4. Go to your local directory |Downloads|covir2-main|20210405|code|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
+4. Go to your local directory |Downloads|covir2-main|20210506|code|merge|. Files "Iran.dta" and "Iran.csv" contain all the combined data. The combined graphs are stored in this directory. 
 
 
 5. If `Stata` returns error codes, check the [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
