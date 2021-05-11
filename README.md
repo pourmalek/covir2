@@ -12,7 +12,7 @@
 
 پاسخ: نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210506)
 
-https://user-images.githubusercontent.com/30849720/117581811-97f54400-b0b3-11eb-9224-8d149b4a0271.png
+![image](https://user-images.githubusercontent.com/30849720/117854363-44fbc800-b23e-11eb-98c0-848482cef89c.png)
 
 
 <div dir="ltr">
