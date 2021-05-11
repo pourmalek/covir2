@@ -161,9 +161,9 @@
 
 .
 
-(date converter)[https://www.taghvim.com/converter]
+[date converter](https://www.taghvim.com/converter)
 
-(تبدیل تاریخ)[https://www.taghvim.com/converter]
+[تبدیل تاریخ](https://www.taghvim.com/converter)
 
 .
 
