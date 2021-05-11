@@ -40,30 +40,24 @@ In cases where one or more component study files have been downloaded but then t
 
 * **Treatment**: (1) Close all running programs / applications except `Stata` and try again. (2) Try a better internet connection. (3) Try again later. 
 Unresponsiveness of a component study site server (or `-renvars-` ) should be temporary, and is usually resolved in about a day. In the meanwhile, one can check the previously created results in [`20210506 output`](https://github.com/pourmalek/covir2/tree/main/20210506/output) or [`20210506 output`](https://github.com/pourmalek/covir2/tree/main/20210506/output) or later outputs. _(4) Palliative treatment_ for Intermittent good and bad internet connection: one can -// comment out- the code lines that read from internet and the files have already been successfully downloaded and then rerun the code. 
-
 <br/><br/>
-
 ********************************************************************************************************************************************
 * **Problem** (3): `Stata` spontaneously *RESTARTs* and shows start logo - on a local machine using Mac OS Big Sur - this is due to a change in behavior Apple made in Big Sur, not a bug in `Stata`.
 
 * **Treatment**: (1) Quit all other open applications / programs until `Stata` runs the codes and the last output, that is "log Iran merge.smcl" is shown up. Even better: Restarting the local machine (to empty the cache), invoking no program, and running the code can be more efficient than running the code on the local machine even with closing all running programs. (2) Provide more memory available for older `Stata`s: In older versions of `Stata`, manually set a higher memory, e.g., `-set mem 1000m`-. In modern `Statas`, memory is no longer needed to be manually set, as memory adjustments are automatically performed.
 <br/><br/>
-
 ********************************************************************************************************************************************
 * **Problem** (4): With less expected frequency, your local machine (OS) might stop responding or *RESTART*, due to oversaturation of RAM, CPU. Fan noise might be heard. 
 
 * **Treatment**: (1) If this happens during running the code while all programs except `Stata` and the web browser are NOT already closed, you may want to retry after all other programs and applications except `Stata` and the web browser are closed. (2) If this happens during running the code while all programs except `Stata` and the web browser ARE closed, the RAM and CPU of the local machine cannot afford running the code. You may want to try running the code on another computer with better RAM, CPU.
 <br/><br/>
-
 ********************************************************************************************************************************************
 * **Problem** (5): Occasionally, some studies might (change / alter rename / omit) the (file names, directory names, variables variable names, etc.) in one or more of their released updates after the updates were release. In such cases, the codes in this repository that use the original release of such updates will stop working and when executed, return error messages about non-existence of a variable or inability to -change directory- to a non-existent directory. 
 
 * **Treatment**: (If the creator of these codes encounters such incidents during rerun of the previously created codes, the codes will be amended, or the update directory will be archived. If you encounter incidents you might create an Issue, mention is Discussions or email (pourmalek_farshad@yahoo.com). 
+<br/><br/>
 ********************************************************************************************************************************************
-
 <br/><br/>
-<br/><br/>
-
 
 ## INCIDENT ISSUES
 Jamais diagnostiqué
