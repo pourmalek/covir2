@@ -4,6 +4,10 @@
 
 <br/><br/>
 
+<div dir="ltr">
+
+[English](https://github.com/pourmalek/covir2#english-readme-for-covir2)
+
 <div dir="rtl">
 
 [Farsi](https://github.com/pourmalek/covir2#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم)
@@ -37,10 +41,7 @@
 
 
 
-<div dir="ltr">
 
-
-[English](https://github.com/pourmalek/covir2#english-readme-for-covir2)
 
 <br/><br/>
 
