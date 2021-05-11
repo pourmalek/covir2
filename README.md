@@ -2,6 +2,8 @@
 
 # COVID-19 Iran Review No 2
 
+### Note: corrections for codes in this repository are being made for the DELPHI study. 
+
 <br/><br/>
 
 <div dir="ltr">
