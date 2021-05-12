@@ -412,7 +412,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 uptake 20210506 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/117502737-ca2c6780-af34-11eb-9bbe-808d624a60ff.png)
+![image](https://user-images.githubusercontent.com/30849720/117995334-16d9bf00-b2f6-11eb-8cdb-00b4d12cd73a.png)
 
 در این بروز-رسانی، مطالعه آی اچ ام ای کم-گزارش دهی مرگ و موارد بیماری کووید-۱۹ را به صورت عیان و آشکار (explicit) در مدل خود برآورد و اصلاح می کند. ضرایب تصحیح کم شماری مرگ و موارد بیماری در ایران در مطالعه آی اچ ام ای، عبارتند از حدود **۲/۵** و **۹** (۱۷-۶)، مورد اخیر در پنج ماه اول سال ۲۰۲۱. جزییات بیشتر 
 [اینجا](https://github.com/pourmalek/covir2/blob/main/20210506/README.md)
