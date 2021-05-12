@@ -30,7 +30,7 @@ DELP 20210406, IHME 20210401, IMPE 20210406, LANL 20210404, SRIV 20210406
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117641802-6fb12800-b13b-11eb-9d1e-7638095e39e4.png)
+![image](https://user-images.githubusercontent.com/30849720/117932341-140aaa00-b2b5-11eb-94e0-d702dbe1570d.png)
 
 ****
 
