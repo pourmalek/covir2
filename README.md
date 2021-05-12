@@ -673,7 +673,35 @@ uptake 20210422 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 ****
 
-برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد، از (uptake 20210422) و به قبل، فاقد نتایج مطالعه دلفی (DELP) هستند زیرا این برداشت ها (uptakes) به صورت گذشته نگر (retrospective) انجام شده اند و مطالعه دلفی نتایج بروز-رسانی های قبلی خود را ارایه نمی دهد و راهی برای لحاظ کردن نتایج قبلی مطالعه دلفی وجود ندارد. در نتیجه نمودارهای برآورد موارد موجود روزانه بیماری از (uptake 20210422) و به قبل مانند یکدیگر هستند و نمودارهای قبل از (uptake 20210422) به همین دلیل در زیر قرار داده نشده اند چون مانند (uptake 20210422) هستند. 
+uptake 20210417 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117917937-fdf1ef00-b29e-11eb-86a1-c03cb90a3cca.png)
+
+
+****
+
+uptake 20210416 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117921492-a86d1080-b2a5-11eb-9425-33799e31a979.png)
+
+****
+
+uptake 20210409 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117633231-b4849100-b132-11eb-9756-f04a21585a6d.png)
+
+****
+
+uptake 20210406 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117932461-40262b00-b2b5-11eb-9741-f42f7f3e329e.png)
+
+****
+
+uptake 20210401 [[Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/117986862-d9bdfe80-b2ee-11eb-961f-163966c3eccb.png)
+
 
 ****
 ****
