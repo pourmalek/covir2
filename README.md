@@ -681,7 +681,7 @@ uptake 20210417 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 uptake 20210416 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117921492-a86d1080-b2a5-11eb-9425-33799e31a979.png)
+![image](https://user-images.githubusercontent.com/30849720/118025965-2ddbd980-b315-11eb-885d-67940bf8b8ce.png)
 
 ****
 
