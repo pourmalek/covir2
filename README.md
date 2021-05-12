@@ -458,7 +458,7 @@ uptake 20210409 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 uptake 20210406 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/117641457-06311980-b13b-11eb-8457-1ad8d98760d9.png)
+![image](https://user-images.githubusercontent.com/30849720/118000225-7afe8200-b2fa-11eb-8ed4-b9eacf77196f.png)
 
 ****************
 
