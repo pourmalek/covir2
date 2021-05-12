@@ -10,7 +10,7 @@
 
 <div dir="rtl">
  
- [Farsi](https://github.com/pourmalek/covir2/blob/main/README.md#farsi-readme-for-covir2)
+ [فارسی](https://github.com/pourmalek/covir2/blob/main/README.md#farsi-readme-for-covir2)
 
 
 ##  پرسش فوری: آخرین پیش بینی روند همه گیری کووید-۱۹ در ایران برای ماه های آینده چیست؟
