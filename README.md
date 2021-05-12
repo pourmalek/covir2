@@ -256,7 +256,7 @@ DELP 20210507, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 (۸) (20210430)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210430%20(archived))
 
-DELPHI 20210430, **IHME 20210430**, IMPE 20210424, LANL 20210428, SRIV 20210430
+DELP 20210430, **IHME 20210430**, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 ****
 
@@ -268,41 +268,37 @@ DELP 20210423, IHME 20210422, **IMPE 20210424**, LANL 20210421, SRIV 20210424
 
 (۶) (20210422)    (۱۴۰۰/۲/۲)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210422)
 
-DELP N/A, **IHME 20210422**, IMPE 2010417, LANL 20210421, SRIV 20210422
-
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent 
-
-برداشت های (20210422) و به قبل فاقد نتایج مطالعه دلفی هستند چون این مطالعه نتایج برآوردهای قبلی خود را به صورت ذخیره شده و قابل دسترس عمومی در اینترنت نگهداری نمی کند و این برداشت ها به صورت گذشته نگر انجام شده اند و نتایج قبلی دلفی برای آن تاریخ ها در دسترس نیست. 
+DELP 20210422, **IHME 20210422**, IMPE 2010417, LANL 20210421, SRIV 20210422
 
 ****
 
 (۵) (20210417)    (۱۴۰۰/۱/۲۸)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210417)
 
-DELP N/A, IHME 20210416, **IMPE 20210417**, LANL 20210414, SRIV 20210417
+DELP 20210417, IHME 20210416, **IMPE 20210417**, LANL 20210414, SRIV 20210417
 
 ****
 
 (۴) (20210416)    (۱۴۰۰/۱/۲۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210416)
 
-DELP N/A, **IHME 20210416**, IMPE 20210406, LANL 20210414, SRIV 20210416
+DELP 20210416, **IHME 20210416**, IMPE 20210406, LANL 20210414, SRIV 20210416
 
 ****
 
 (۳) (20210409)    (۱۴۰۰/۱/۲۰)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210409)
 
-DELP N/A, **IHME 20210409**, IMPE 20210406, LANL 20210407, SRIV 20210409
+DELP 20210409, **IHME 20210409**, IMPE 20210406, LANL 20210407, SRIV 20210409
 
 ****
 
 (۲) (20210406)    (۱۴۰۰/۱/۱۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210406)
 
-DELP N/A, IHME 20210401, **IMPE 20210406**, LANL 20210404, SRIV 20210406
+DELP 20210406, IHME 20210401, **IMPE 20210406**, LANL 20210404, SRIV 20210406
 
 ****
 
 (۱) (20210401)    (۱۴۰۰/۱/۱۲)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210401)
 
-DELP N/A, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
+DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 ****
 
