@@ -540,7 +540,7 @@ uptake 20210506 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 uptake 20210430 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118015239-e94a4100-b308-11eb-9461-bb17f8120117.png)
+![image](https://user-images.githubusercontent.com/30849720/118016436-3b3f9680-b30a-11eb-923e-52541de8cc90.png)
 
 ****************
 
