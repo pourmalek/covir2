@@ -8,7 +8,7 @@ The old rule for adding uptakes to covir2 repository lacked documentation. The p
 
 **The overarching principle for creation of uptakes in covir2, is creation of an uptake for each calendar date on which an uptake is available for either _IHME or IMPE_, and using the most recent update for the other study (IMPE or IHME) for that uptake.**
 
-The rationale for not including every new update by LANL or SRIV in the overarching principle is that it would lead to too frequent uptakes, which would defy the purpose of gaining new insight with each uptake in covir2. 
+The rationale for not including every new update by DELP, LANL, or SRIV in the overarching principle is that it would lead to too frequent uptakes, which would defy the purpose of gaining new insight with each uptake in covir2. 
 
 Algorithmic details of the rule for adding uptakes to covir2 repository are as follows. 
 
@@ -19,12 +19,12 @@ For every single calendar date,
 (2) If a new update by IHME is available, start a new uptake with today's date, and use this new update by IHME.
 (3) Look for latest available update by IMPE, and include that in this uptake.
 (4) Look for the latest available update by LANL, and include that in this uptake.
-(5) Look for update by SRIV for which the date is equal to date for IHME. 
+(5) Look for updates by DELP amd SRIV for which the date is equal to date for IHME. 
 
 (6) If no new update by IHME is available (from step 1), check for new updates by IMPE. If a new update by IMPE is available, start a new uptake with today's date, and use this new update by IMPE.
 (7) Look for the latest available update by IHME, and include that in this uptake.
 (8) Look for the latest available update by LANL, and include that in this uptake. 
-(9) Look for update by SRIV for which the date is equal to date for IMPE.
+(9) Look for updates by DELP amd SRIV for which the date is equal to date for IMPE.
 (10) If no new update by IMPE is available (from step 6), there is no new uptake for this calendar date. End. 
 
 
