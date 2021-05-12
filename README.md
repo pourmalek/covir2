@@ -915,6 +915,7 @@ uptake 20210409 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 uptake 20210406 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118044537-a51c6800-b32b-11eb-875f-bd7c5c3d7383.png)
 
 ****
 
