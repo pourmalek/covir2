@@ -8,7 +8,7 @@
 
 <div dir="ltr">
 
-[English](https://github.com/pourmalek/covir2#english-readme-for-covir2)
+[English](https://github.com/pourmalek/covir2#english-readme-for-covir2)  [Farsi](https://github.com/pourmalek/covir2/blob/main/README.md#farsi-readme-for-covir2)
 
 <div dir="rtl">
 
