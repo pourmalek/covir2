@@ -12,7 +12,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117648832-92473f00-b143-11eb-99b8-965597837d50.png)
+![image](https://user-images.githubusercontent.com/30849720/117986210-408ee800-b2ee-11eb-8e73-b198064dc4ca.png)
 
 ****
 
