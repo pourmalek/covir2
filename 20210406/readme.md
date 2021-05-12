@@ -1,9 +1,7 @@
 
 ### Study update dates in uptake 20210406
 
-DELP N/A, IHME 20210401, IMPE 20210406, LANL 20210404, SRIV 20210406
-
-DELP: this uptake was created retrospectively and dated or previous updates of DELP are not existent.
+DELP 20210406, IHME 20210401, IMPE 20210406, LANL 20210404, SRIV 20210406
 <br/><br/>
 
 
