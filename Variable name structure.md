@@ -92,32 +92,10 @@ Variable names and short description for hospital-related outcomes by IHME, are 
 						
 #### Secondary variable names:
 
-Secondary variables have 2 subtypes: (1) store values and dates of peaks, (2) store a calculated daily CFR, (3) store values created for visualization of temporal succession of daily cases and daily deaths peaks.
+Secondary variables have 2 subtypes: (1) store a calculated daily CFR, (1) store values created for visualization of temporal succession of daily cases and daily deaths peaks.
 
 
-_(1) store values and dates of peaks_
-
-Positions 20-22 are related to values and dates of peaks (or other time points) of daily deaths and daily cases, ending in the following three characters: P?? 
-
-* Positions 20-22: P??
-
-* Position 20 P: Peak (or other time point) 
-
-* Position 21 ?: Number of peak (or other time point). 0: One peak (only one peak shown), 1: Peak 1, 2: Peak 2, 3: Peak 3, 4: Peak 4, 5: Start of plateau after peak three (in JOHN), 6: Start of increase after peak three (in JOHN), 7: Start time (of provided estimates), 8: End time (of provided estimates)
-
-* Position 22: V or D: Value or Date (of estimate)
-
-
-Example:
-
-In DayDeaMeRaA01S00V03P0D, P0D denotes "One peak, Date", and the whole variable name DayDeaMeRaA01S00V03P0D denotes Date of one peak shown in DayDeaMeRaA01S00V03. 
-
-Example:
-
-In DayDeaMeRaA01S00V03P0V, P0V denotes "One peak, Value", and the whole variable name DayDeaMeRaA01S00V03P0V denotes Value of one peak shown in DayDeaMeRaA01S00V03.
-
-
-_(2) store a calculated daily CFR_
+_(1) store a calculated daily CFR_
 
 * Positions 4-6 read as CFR. 
 
@@ -126,7 +104,7 @@ Example:
 DayCfrMeRaA00S00V00 "Daily CFR JOHN"
 
 
-_(3) store values created for visualization of temporal succession of daily cases and daily deaths peaks_
+_(2) store values created for visualization of temporal succession of daily cases and daily deaths peaks_
 
 * CaM: (Cases Mean) Daily Cases Mean (within each country in EMR) [JOHNEMR]
 * CbD (Cases by Deaths) "Daily cases mean div by daily deaths mean JOHN" [JOHNEMR]
@@ -156,7 +134,7 @@ A06 SOLT Soltani
 
 A07 GHAN Ghanbari
 	 
-A08 YYGU Youyang	Gu (included in 20210423 update)
+A08 YYGU Youyang Gu (was included in a 20210423 uptake; this uptake was later omitted in conformation to the [rule for creating uptakes](https://github.com/pourmalek/covir2/tree/main/setup))
 <br/><br/>
 
 
