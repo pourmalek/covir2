@@ -614,7 +614,7 @@ uptake 20210506 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 uptake 20210430 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-placeholder
+![image](https://user-images.githubusercontent.com/30849720/118054621-71493e80-b33b-11eb-9fb5-cff5ed91a263.png)
 
 ****
 
@@ -655,7 +655,7 @@ uptake 20210406 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-placeholder
+![image](https://user-images.githubusercontent.com/30849720/118054707-9dfd5600-b33b-11eb-8c67-ee509fd06710.png)
 
 ****
 ****
@@ -672,7 +672,7 @@ uptake 20210506 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 uptake 20210430 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
-placeholder
+![image](https://user-images.githubusercontent.com/30849720/118054798-c5542300-b33b-11eb-82a8-b5d351841d7b.png)
 
 ****
 
