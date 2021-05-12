@@ -882,6 +882,7 @@ uptake 20210416 [Daily deaths estimated to reported, all time](https://github.co
 
 uptake 20210409 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118056355-a4d99800-b33e-11eb-9bbe-c70b371d7758.png)
 
 ****
 
