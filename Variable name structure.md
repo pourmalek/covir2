@@ -84,6 +84,10 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand Mean A03 S01 V07". It is the daily ICU demand, mean estimate, in study A03 (IMPE), scenario 1, model version 7. 
 
+Variable names and short description for hospital-related outcomes by IHME, are mentioned in "IHME_COVID_19_Data_Release_Information_Sheet.pdf" released with each estimated update. This Data_Release_Information_Sheet files are stored in covir2 repository in "covir2/202YMMDD/output/IHME/202Y_MM_DD/ IHME_COVID_19_Data_Release_Information_Sheet.pdf", where "202YMMDD" is the uptake date by covir2 and "202Y_MM_DD" is the update directory name created by downloading the zip file of IHME estimates update. [example](https://github.com/pourmalek/covir2/blob/main/20210401/output/IHME/2021_04_01/IHME_COVID_19_Data_Release_Information_Sheet.pdf) for IHME update 20210401 in [covir2/20210401/output/IHME/2021_04_01/](https://github.com/pourmalek/covir2/tree/main/20210401/output/IHME/2021_04_01)
+
+
+
 <br/><br/>
 						
 #### Secondary variable names:
