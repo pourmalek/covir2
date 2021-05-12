@@ -784,7 +784,7 @@ uptake 20210430 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 
 uptake 20210424 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117587602-a4899480-b0d3-11eb-94dc-83875fd072e8.png)
+![image](https://user-images.githubusercontent.com/30849720/118031564-8a41f780-b31b-11eb-9330-0d05b114a274.png)
 
 ****
 
