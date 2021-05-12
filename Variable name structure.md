@@ -165,7 +165,7 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 **A07 GHAN**
 Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. Chaos Solitons Fractals. 2020 Nov;140:110176. doi: 10.1016/j.chaos.2020.110176. Epub 2020 Jul 28. [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/)
 <br/><br/>
-* YYGU [study web site](https://covid19-projections.com)
+YYGU [study web site](https://covid19-projections.com)
 
 <br/><br/>
 
