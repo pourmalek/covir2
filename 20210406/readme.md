@@ -42,7 +42,7 @@ DELP 20210406, IHME 20210401, IMPE 20210406, LANL 20210404, SRIV 20210406
 
 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117641991-aa1ac500-b13b-11eb-9a78-ce7be811c856.png)
+![image](https://user-images.githubusercontent.com/30849720/117932645-78c60480-b2b5-11eb-8d4d-8b8fe60547c7.png)
 
 ****
 
