@@ -24,7 +24,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117649067-ece09b00-b143-11eb-9a9f-8854f471a918.png)
+![image](https://user-images.githubusercontent.com/30849720/117986494-89df3780-b2ee-11eb-83b8-bcf185be1d60.png)
 
 ****
 
