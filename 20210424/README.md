@@ -47,19 +47,19 @@ DELP 20210424, IHME 20210422, IMPE 20210424, LANL 20210421, SRIV 20210424
 
 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117587602-a4899480-b0d3-11eb-94dc-83875fd072e8.png)
+![image](https://user-images.githubusercontent.com/30849720/117901946-4995a000-b281-11eb-8994-90e214689303.png)
 
 ****
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117587625-c7b44400-b0d3-11eb-9fe6-4c36be55bbd9.png)
+![image](https://user-images.githubusercontent.com/30849720/117902036-7c3f9880-b281-11eb-8555-22943b684809.png)
 
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117587695-ffbb8700-b0d3-11eb-92ff-dc67da951458.png)
+![image](https://user-images.githubusercontent.com/30849720/117902126-ac873700-b281-11eb-9582-a0bd3be7d91e.png)
 
 ****
 
