@@ -35,7 +35,7 @@ DELP 20210424, IHME 20210422, IMPE 20210424, LANL 20210421, SRIV 20210424
 
 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117587547-58d6eb00-b0d3-11eb-90bf-91e7692f7e91.png)
+![image](https://user-images.githubusercontent.com/30849720/117900465-143b8300-b27e-11eb-958a-ebefbaba6828.png)
 
 ****
 
