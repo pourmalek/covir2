@@ -776,6 +776,7 @@ uptake 20210406 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118056214-5c21df00-b33e-11eb-8d7b-85d3803e435a.png)
 
 ****
 ****
