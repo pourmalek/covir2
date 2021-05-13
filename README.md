@@ -980,8 +980,12 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 خلاصه: 
 کل ریپوزیتوری covir2 را داونلود نموده و فایل زیر را در استیتا اجرا نمایید:
 
+<div dir="ltr">
+
 "Users\local-user-name\Downloads\covir2-main\20210506\code\master\do Iran master.do"
  
+ <div dir="rtl">
+
  <br/><br/>
 
 توضیحات: 
