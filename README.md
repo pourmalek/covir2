@@ -1271,7 +1271,7 @@ Note: Was included in uptake 20210423. This uptake was later omitted in conformi
 
 The term _uptake_ is used to denote gathering and processing in this repository of component studies' updated estimates. Frequency and dates of creation of uptakes are determined by the convention or rule defined [here](https://github.com/pourmalek/covir2/blob/main/setup/README.md).
 
-The term _update_ is used to denote releases of outcomes' estimates by the component studies. Frequency and dates of release of updates are determined by each component study's convention or rule. Besides the early updates in 2020, IHME and IMPE has least frequent update frequencies. LANL generally follows a 3–4-day cycle. SRIV follows a daily frequency with few exceptions. 
+The term _update_ is used to denote releases of outcomes' estimates by the component studies. Frequency and dates of release of updates are determined by each component study's convention or rule. Besides the early updates in 2020, IHME and IMPE have the least frequent update frequencies. DELP follows a daily frequency, in 2021 - frequency was less in 2020. LANL generally follows a 3–4-day cycle. SRIV follows a daily frequency with few exceptions. 
 
 
 .
