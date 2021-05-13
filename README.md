@@ -39,11 +39,6 @@
 
 نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210506) [PDF](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-
-![image](https://user-images.githubusercontent.com/30849720/117860395-1a613d80-b245-11eb-9c0a-0f002c16256f.png)
-
-* tem
-
 ![image](https://user-images.githubusercontent.com/30849720/118103022-4cca8200-b38e-11eb-817e-94c98a189ffe.png)
 
 
