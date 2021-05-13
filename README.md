@@ -1089,7 +1089,9 @@ Estimates of seven studies, including five international periodically updating s
 
 Eligibility for target (component) studies (models) of COVID-19 epidemic in Iran, were studies that (1) provided estimates for at least one of the four primary outcomes of interests, i.e., daily deaths, daily (incident) cases, cumulative (total) deaths, and cumulative cases, (2) at national and/or subnational level for Iran, (3) covering December 2020 onwards (after the third peak had declined), (4) provided a list of input data and their sources, and (5) provided explanation on methods of using input data and generation of model outputs.
 
-Methods generally follow the first iteration of this review, i.e., [Rapid review of COVID-19 epidemic estimation studies for Iran](Rapid review of COVID-19 epidemic estimation studies for Iran), with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Google Scholar, [Iranian Scientific Information Database](https://www.sid.ir), [Iranian National Periodicals Information Bank](https://www.magiran.com), and pre-prints in [medRxiv](https://www.medrxiv.org/), [arXiv](https://arxiv.org/), and [Research Square](https://www.researchsquare.com). 
+Methods generally follow the first iteration of this review, i.e.,
+[Rapid review of COVID-19 epidemic estimation studies for Iran](Rapid review of COVID-19 epidemic estimation studies for Iran)
+, with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Google Scholar, [Iranian Scientific Information Database](https://www.sid.ir), [Iranian National Periodicals Information Bank](https://www.magiran.com), and pre-prints in [medRxiv](https://www.medrxiv.org/), [arXiv](https://arxiv.org/), and [Research Square](https://www.researchsquare.com). 
 <br/><br/>
 
 ### Results
