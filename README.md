@@ -1345,13 +1345,11 @@ Output level-3 directories for component studies, e.g., [`output/IHME`](https://
 
 (1) Updates of models’ estimates
 
-Models’ estimates for any given calendar time period tend to vary across consecutive updates releases for models’ estimates updates. This should be taken into consideration in interpretation of results. 
-
-For instance, in examining estimates’ graphs for summer 2021 in Iran, while it is important to consider the very latest models estimates update, it is also important to examine the previous models estimates updates. 
+Models’ estimates for any given calendar time period tend to vary across consecutive updates releases for models’ estimates updates. This should be taken into consideration in interpretation of results. For instance, in examining estimates’ graphs for spring 2021 in Iran, while it is important to consider the very latest models estimates update, it is also important to examine the previous models estimates updates. 
 
 (2) Strengths and limitations of models
 
-Any model has strengths and limitations that should be taken into consideration while examining the model’s results. Completely correct and completely wrong models are rare. 
+Any model has strengths and limitations that should be taken into consideration while examining the model’s results. Completely correct and completely wrong models are rare.
 
 
 
