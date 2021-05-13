@@ -1273,9 +1273,6 @@ The term _uptake_ is used to denote gathering and processing in this repository 
 
 The term _update_ is used to denote releases of outcomes' estimates by the component studies. Frequency and dates of release of updates are determined by each component study's convention or rule. Besides the early updates in 2020, IHME and IMPE has least frequent update frequencies. LANL generally follows a 3–4-day cycle. SRIV follows a daily frequency with few exceptions. 
 
-The following graph shows dates of update releases by component studies into early April 2021.
-
-![image](https://user-images.githubusercontent.com/30849720/117734332-14694f00-b1a8-11eb-8806-9c9b2a7656ed.png)
 
 .
 
