@@ -155,7 +155,7 @@
 
 مطالعه [ دلفی](https://www.covidanalytics.io/projections) 
 انستیتوی فناوری ماساچوست کمبریج، با نام اختصاری 
-[DELP](https://github.com/pourmalek/covir2/tree/main/20210430/output/DELP)
+[DELP](https://github.com/pourmalek/covir2/tree/main/20210506/output/DELP)
 ،
 محقق اصلی مایکل لی،
  [مقاله اصلی اینجا](https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1)
@@ -163,7 +163,7 @@
 
 مطالعه موسسه [ آی اچ ام ای]( http://www.healthdata.org/covid) 
  دانشگاه واشنگتن سیاتل، با نام اختصاری 
-[IHME](https://github.com/pourmalek/covir2/tree/main/20210430/output/IHME/2021-04-30)
+[IHME](https://github.com/pourmalek/covir2/tree/main/20210506/output/IHME/2021-04-30)
 ،
 محقق اصلی کریستوفر موری،
  [مقاله اصلی اینجا]( https://www.nature.com/articles/s41591-020-1132-9)
@@ -172,7 +172,7 @@
 مطالعه [ایمپریال]( https://mrc-ide.github.io/global-lmic-reports/)
 کالج لندن
   ، با نام اختصاری 
-[IMPE](https://github.com/pourmalek/covir2/tree/main/20210430/output/IMPE)
+[IMPE](https://github.com/pourmalek/covir2/tree/main/20210506/output/IMPE)
 ،
 محقق اصلی نیل فرگوسن،
  [مقاله اصلی اینجا]( https://science.sciencemag.org/content/369/6502/413)
@@ -181,7 +181,7 @@
 مطالعه آزمایشگاه [لس آلاموس]( https://covid-19.bsvgateway.org/) 
 نیو مکزیکو
  ، با نام اختصاری 
-[LANL](https://github.com/pourmalek/covir2/tree/main/20210430/output/LANL)
+[LANL](https://github.com/pourmalek/covir2/tree/main/20210506/output/LANL)
 ،
 محقق اصلی لارن کاسترو،
  [نوشته اصلی اینجا]( https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf)
@@ -190,7 +190,7 @@
 مطالعه [اسریواستاوا]( https://scc-usc.github.io/ReCOVER-COVID-19/#/) 
 در دانشگاه کالیفرنیای جنوبی
  ، با نام اختصاری 
-[SRIV](https://github.com/pourmalek/covir2/tree/main/20210430/output/SRIV)
+[SRIV](https://github.com/pourmalek/covir2/tree/main/20210506/output/SRIV)
 ،
 محقق اصلی آجیتش اسریواستاوا،
  [مقاله اصلی اینجا]( https://arxiv.org/abs/2007.05180)
@@ -199,7 +199,7 @@
 مطالعه [قنبری]( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/pdf/main.pdf) 
 در دانشگاه صنعتی کرمانشاه
  ، با نام اختصاری 
-[GHAN](https://github.com/pourmalek/covir2/tree/main/20210430/output/GHAN)
+[GHAN](https://github.com/pourmalek/covir2/tree/main/20210506/output/GHAN)
 ،
 محقق بهزاد قنبری ،
  [مقاله اینجا]( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/pdf/main.pdf)
@@ -208,7 +208,7 @@
 مطالعه [سلطانی]( https://arxiv.org/abs/2008.11716) 
 در دانشگاه ارومیه
  ، با نام اختصاری 
-[SOLT](https://github.com/pourmalek/covir2/tree/main/20210430/output/SOLT)
+[SOLT](https://github.com/pourmalek/covir2/tree/main/20210506/output/SOLT)
 ،
 نویسنده اول کامران سلطانی ،
  [مقاله اینجا]( https://arxiv.org/abs/2008.11716)
