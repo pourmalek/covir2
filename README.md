@@ -1109,7 +1109,7 @@ DELPHI: Differential Equations Lead to Predictions of Hospitalizations and Infec
 
 Study web site: https://www.covidanalytics.io/projections
 
-Estimates web site: https://www.covidanalytics.io/projections, down the page, link that reads, "Download Most Recent Predictions"
+Estimates web site: https://github.com/COVIDAnalytics/website/tree/master/data/predicted
 
 License: https://github.com/COVIDAnalytics/DELPHI/blob/master/LICENSE
 
