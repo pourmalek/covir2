@@ -89,7 +89,6 @@
 ************** 
 ************** 
 
-### Farsi README for covir2
 <div dir="rtl">
  
  
