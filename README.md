@@ -1096,6 +1096,8 @@ Methods generally follow the first iteration of this review, i.e., [Rapid review
 
 Graphs, Stata codes (do files) and outputs, estimates’ data files (Stata and csv), and explanation of data management procedures (including data dictionary and studies’ scenarios) are presented here (https://github.com/pourmalek/covir2). All the data, used and combined, are at non-individual level, publicly available on the internet, and licensed for non-commercial use and redistribution. Graphs and all other details of recent updates of models’ estimates are stored in this repository.
 
+[link to selected graphs](https://github.com/pourmalek/covir2#selected-graphs)
+
 <br/><br/>
 
 
@@ -1117,7 +1119,7 @@ Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://
 
 Periodically updating: Yes 
 
-Periodical updates accessible: No
+Periodical updates accessible: Yes
 
 
 
