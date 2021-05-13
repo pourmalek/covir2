@@ -215,9 +215,9 @@ YYGU [study web site](https://covid19-projections.com)
 
 * A00 JOHN = V00 [Version Not Applicable; updates daily]
 
-* A01 DELP = V03
+* A01 DELP = V04 // Note: needs change from V03 to V04 in codes.
 
-* A02 IHME = V03
+* A02 IHME = V03 // IHME model version needs update in codes.
 
 * A03 IMPE = V07	
 
