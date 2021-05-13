@@ -367,7 +367,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 [Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)  (نسخه اول این مرور)، ذکر شده اند.
 تغییر عمده ای که در نقاط قوت و ضعف مدل ها از زمان انتشار مقاله فوق رخ داده و راقم این سطور از آن آگاهی یافته این است که مطالعه آی اچ ام ای از (20210506) یا ۱۴۰۰/۲/۱۶ برآورد و اصلاح کم شماری مرگ و موارد بیماری را به صورت آشکار و عیان انجام می دهد. 
 
-
+هنوز هیچ مدلی نقش واریانت ها و واکسن ها را در نظر نگرفته است. البته مطالعه آی اچ ام ای در چند نوبت واریانت ها و واکسن ها را به مدل خود اضافه کرد ولی بعدا آن ها را حذف کرد. 
 
 <br/><br/>
 
@@ -1418,8 +1418,9 @@ Models’ estimates for any given calendar time period tend to vary across conse
 
 (2) Strengths and limitations of models
 
-Any model has strengths and limitations that should be taken into consideration while examining the model’s results. Completely correct and completely wrong models are rare.
+Any model has strengths and limitations that should be taken into consideration while examining the model’s results. Completely correct and completely wrong models are rare. Component studies' strengths and limitations are discussed in [Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3), and IHME model now explicitly estimates and adjusts for under-reporting of deaths and cases. [Estimation of total mortality due to COVID-19](http://www.healthdata.org/special-analysis/estimation-excess-mortality-due-covid-19-and-scalars-reported-covid-19-deaths)
 
+None of the studies account for variants and vaccines yet. IHME included variants and vaccines in their model a few times but later omitted them. 
 
 
 ### Limitations 
