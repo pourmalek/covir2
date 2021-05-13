@@ -95,6 +95,7 @@ DELP 20210506, IHME 20210506, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/118102763-0a08aa00-b38e-11eb-822b-98129b93c245.png)
 
 ****
 
