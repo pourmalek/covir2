@@ -1074,7 +1074,7 @@ Similar work for the _GLOBAL_ level are being prepared to be presented in [https
 
 ### Summary
 
-Estimates of seven studies, including international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
+Estimates of seven studies, including five international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
 <br/><br/>
 
 ### Methods
@@ -1480,6 +1480,13 @@ on the dropdown menu.
 * All codes are copyrighted by the author under Apache License 2.0.
 
 * See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
+
+<div dir="rtl">
+ 
+ ### این نمودارها و کد های نرم افزار ممکن است حاوی اشتباهاتی باشند و به صورت ("as is") به اشتراک گذاشته شده اند و هر گونه عواقب هر گونه تصمیم گیری بر مبنای کد ها و نمودارهای موجود در این سایت (سایت covir2) بر عهده تصمیم گیرنده یا تصمیم گیرندگان است و نه بر عهده پدید آورنده یا عهده پدید آورندگان این سایت (سایت covir2).
+
+
+<div dir="ltr">
 
 <br/><br/>
 
