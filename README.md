@@ -1256,7 +1256,7 @@ Periodically updating: Yes, until 2020-10-04
 
 Periodical updates accessible: Yes
 
-Note: Was included in uptake 20210423. This uptake was later omitted in conforming to the current rule for creation of uptake in this repository - the rule described (here)[https://github.com/pourmalek/covir2/blob/main/setup/README.md].
+Note: Was included in uptake 20210423. This uptake was later omitted in conforming to the current rule for creation of uptake in this repository - the rule described [here](https://github.com/pourmalek/covir2/blob/main/setup/README.md).
 
 
   <br/><br/>
