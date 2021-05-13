@@ -42,6 +42,10 @@
 
 ![image](https://user-images.githubusercontent.com/30849720/117860395-1a613d80-b245-11eb-9c0a-0f002c16256f.png)
 
+* tem
+
+![image](https://user-images.githubusercontent.com/30849720/118103022-4cca8200-b38e-11eb-817e-94c98a189ffe.png)
+
 
 (JOHN) دانشگاه جانز هاپکینز، انعکاس گزارش های رسمی کشور ها به سازمان جهانی بهداشت (منحنی آبی رنگ)
 
