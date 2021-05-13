@@ -441,7 +441,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 uptake 20210507 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-https://user-images.githubusercontent.com/30849720/118109703-6374d700-b396-11eb-9d6a-59c76548c3dd.png
+https://user-images.githubusercontent.com/30849720/118109703-6374d700-b396-11eb-9d6a-59c76548c3dd.png![image](https://user-images.githubusercontent.com/30849720/118111422-86a08600-b398-11eb-8b9b-126fc6ac2fd9.png)
 
 ****************
 
