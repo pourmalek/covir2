@@ -6,6 +6,8 @@ Software:
 
 WebPlotDigitizer 4.2. Web-based plot digitizer, WebPlotDigitizer - extract data from plots, images, and maps. https://automeris.io/WebPlotDigitizer/
 
+https://apps.automeris.io/wpd/
+
 
 Settings:
 
