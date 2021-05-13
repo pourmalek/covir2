@@ -637,6 +637,12 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 ****
 
+uptake 20210507 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118112514-f6634080-b399-11eb-94b5-9f14eb8f8b1e.png)
+
+****
+
 uptake 20210506 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118014261-dc791d80-b307-11eb-80eb-73e8e8fd81eb.png)
@@ -696,6 +702,12 @@ uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 ****
 
+uptake 20210507 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118112720-3aeedc00-b39a-11eb-8cca-e0b6873c0fc9.png)
+
+****
+
 uptake 20210506 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118023170-164f2180-b312-11eb-969a-3be6a008db53.png)
@@ -752,6 +764,12 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 ****
 
 ### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
+
+****
+
+uptake 20210507 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118112947-86a18580-b39a-11eb-80af-39f0e43d41cc.png)
 
 ****
 
@@ -817,6 +835,12 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 ****
 
+uptake 20210507 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118113244-e730c280-b39a-11eb-9a10-80d9bd85bfc5.png)
+
+****
+
 uptake 20210506 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118030954-d17bb880-b31a-11eb-8af4-2649220a7b72.png)
@@ -876,6 +900,12 @@ uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 
 ****
 
+uptake 20210507 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118113486-3c6cd400-b39b-11eb-8780-9d821689dbb7.png)
+
+****
+
 uptake 20210506 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118046088-ac447580-b32d-11eb-875b-dc2915064516.png)
@@ -932,6 +962,12 @@ uptake 20210401 [Daily deaths estimated to reported, all time](https://github.co
 ****
 
 ### (۹) نسبت برآورد موارد جدید روزانه بیماری به گزارش رسمی، از دی ۱۳۹۹ به بعد  
+
+****
+
+uptake 20210507 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/118113696-75a54400-b39b-11eb-805d-168cd507730c.png)
 
 ****
 
