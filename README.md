@@ -37,7 +37,7 @@
 
 <br/><br/>
 
-نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210506) [PDF](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210507) [PDF](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118103022-4cca8200-b38e-11eb-817e-94c98a189ffe.png)
 
@@ -65,7 +65,7 @@
 <br/><br/>
 
 
- نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210506) [PDF](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+ نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210507) [PDF](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/117861320-2699ca80-b246-11eb-94bd-901db697e9c1.png)
 
