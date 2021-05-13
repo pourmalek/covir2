@@ -1524,7 +1524,7 @@ on the dropdown menu.
 
 * Details of do files:
 
-`Stata` do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files - studies "SOLT" and "GHAN" graphs digitized. The file "do Iran master.do" is the only file that needs to be run. 
+`Stata` do files get and prepare component studies' estimates for Iran, using the component studies' web pages that contain their estimates’ files - studies "SOLT" and "GHAN" graphs digitized (see [graph digitization settings](https://github.com/pourmalek/covir2/blob/main/graph%20digitization%20settings.md)). The file "do Iran master.do" is the only file that needs to be run. 
 
 <br/><br/>
 
