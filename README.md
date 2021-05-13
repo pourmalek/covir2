@@ -8,7 +8,7 @@
 
 <div dir="rtl">
  
- [فارسی](https://github.com/pourmalek/covir2/blob/main/README.md#farsi-readme-for-covir2)
+ [فارسی](https://github.com/pourmalek/covir2/blob/main/README.md#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم-1)
  <br/><br/>
  
 ## مرور برآوردهای مطالعات بین المللی برای همه گیری کووید-۱۹ در ایران، نسخه دوم
