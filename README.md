@@ -1374,7 +1374,7 @@ In practice, it becomes evident that whether the progression of viruses and emer
 
 ### Selected graphs 
 
-Selected graphs are placed within the Farsi moiety of this page. See [above](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
+#### Selected graphs are placed within the Farsi moiety of this page. See [above](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 
 Order of graphs:
 
