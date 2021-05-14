@@ -43,8 +43,6 @@ erase ihme-covid19.zip */
 * import csv files
 
 cd 2021_05_07
-// the (as of March 11, 2021) "2021_05_07", used to be "2021-05-06" (on 7 May 2021, 12:08:43 PST) 
-// please do not change after the original release; harms backward compatibility 
 
 import delimited using reference_hospitalization_all_locs.csv, clear varnames(1)
 save Reference_hospitalization_all_locs.dta, replace
