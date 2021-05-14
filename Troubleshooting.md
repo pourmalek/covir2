@@ -54,7 +54,7 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 ********************************************************************************************************************************************
 * **Problem** (5): Occasionally, some studies might (change / alter rename / omit) the (file names, directory names, variables variable names, etc.) in one or more of their released updates after the updates were release. In such cases, the codes in this repository that use the original release of such updates will stop working and when executed, return error messages about non-existence of a variable or inability to -change directory- to a non-existent directory. 
 
-* **Treatment**: (If the creator of these codes encounters such incidents during rerun of the previously created codes, the codes will be amended, or the update directory will be archived. If you encounter incidents you might create an Issue, mention is Discussions or email (pourmalek_farshad@yahoo.com). 
+* **Treatment**: If the creator of these codes encounters such incidents during rerun of the previously created codes, the codes will be amended, or the update directory will be archived. If you encounter incidents you might create an Issue, mention is Discussions or email (pourmalek_farshad@yahoo.com). 
 <br/><br/>
 ********************************************************************************************************************************************
 <br/><br/>
