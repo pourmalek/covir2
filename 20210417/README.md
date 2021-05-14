@@ -6,11 +6,11 @@ DELP 20210417, IHME 20210416, IMPE 20210417, LANL 20210414, SRIV 20210417
 
 ****
 
-### Merged graphs of uptake 20210417 [here](https://github.com/pourmalek/covir2/blob/main/20210417/graphs%20merged%20uptake%20210417.pdf)
+### Merged graphs of uptake 20210417 [here](https://github.com/pourmalek/covir2/blob/main/20210417/graphs%20merged%20uptake%2020210417.pdf)
 
 <div dir="rtl">
   
-###  همه نمودارهای برداشت ۱۴۰۰۰۱۲۸ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210417/graphs%20merged%20uptake%20210417.pdf)
+###  همه نمودارهای برداشت ۱۴۰۰۰۱۲۸ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210417/graphs%20merged%20uptake%2020210417.pdf)
   
 <div dir="ltr">
 
