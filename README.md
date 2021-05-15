@@ -347,6 +347,12 @@ Note: IHME has provided description of how the variants and vaccines are reintro
 
 ****
 
+(۱۱) (20210514)    (۱۴۰۰/۲/۲۴)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210514)
+
+DELP 20210514, IHME 20210514, IMPE 20210424, LANL 20210512, SRIV 20210513 
+
+****
+
 (۱۰) (20210507)    (۱۴۰۰/۲/۱۷)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210507)
 
 DELP 20210507, **IHME 20210507**, IMPE 20210424, LANL 20210505, SRIV 20210507 
