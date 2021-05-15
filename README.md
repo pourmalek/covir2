@@ -1448,7 +1448,7 @@ None of the studies account for variants and vaccines yet. IHME included variant
 
 ****
 
-* Levels of changes that might affect the _uptakes_ here:
+#### * Levels of changes that might affect the _uptakes_ here:
 
 * Virus - Behaviour of the virus, including emergence and propagation of Variants of Concern (VOC), Vaccine Escapes, and not-yet-known other items
 
