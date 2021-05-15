@@ -1,4 +1,4 @@
-### Why uptake 20210507 is being archived?
+### Why uptake 20210507 is archived?
 
 There was an update 20210507 released by IHME that was uptaken here and the codes worked. Now there seems to be no update 20210507 (previously released by) IHME in existence.
 
