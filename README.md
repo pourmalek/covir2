@@ -99,6 +99,7 @@
 
 *****
 
+[IHME, COVID-19 Results Briefing, The Eastern Mediterranean Region, May 13, 2021](http://www.healthdata.org/sites/default/files/files/Projects/COVID/2021/44567_briefing_Eastern_Mediterranean_Region_16.pdf)
 
 ************** 
 ************** 
