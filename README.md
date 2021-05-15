@@ -1446,9 +1446,37 @@ None of the studies account for variants and vaccines yet. IHME included variant
 
 (1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
 
-*
+****
 
-Note 
+* Levels of changes that might affect the _uptakes_ here:
+
+* Virus - Behaviour of the virus, including emergence and propagation of Variants of Concern (VOC), Vaccine Escapes, and not-yet-known other items
+
+* Ecosystem - Changes in inanimate environment and the ecosystem
+
+* Individuals - Behavior of individual people
+
+* Pharma - Behavior of the Pharma that develop, sell, produce, and ship vaccines and medications 
+
+* Researchers - Behavior of researchers that produce scientific evidence 
+
+* Health decision makers - policy Behavior of health policy and decision makers 
+
+* Governmental decision makers - Behavior of governments regarding timing, modalities, intensity, and enforcement of Non-Pharmaceutical (NPI) restrictions and loosening of restrictions  
+
+* Model developers - Behavior of epidemic model developers 
+
+* Me - Behavior of the person who maintains and update this repository
+
+* Interaction - Cross-level interaction of above terms
+
+* WHO and CDC – probably the residual error 
+
+* ?
+
+****
+
+. Note 
 
 Although "viruses move fast… data can move even faster", the WHO chief insisted, adding that "with the right information, countries and communities can stay one step ahead of an emerging risk and save lives. Modern technologies give us unprecedented tools for collecting, analysing and disseminating data in real time around the world. That’s what the WHO Hub for Pandemic and Epidemic Intelligence aims to do."  (5 May 2021) 
 
