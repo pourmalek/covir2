@@ -12,8 +12,6 @@
 <br/><br/>
 *****
 
-## Note: (2) Uptake 20210507 [here](https://github.com/pourmalek/covir2/tree/main/20210507) codes have stopped working. It will be archived.
-
 <div dir="rtl">
  
  [فارسی](https://github.com/pourmalek/covir2/blob/main/README.md#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم-1)
