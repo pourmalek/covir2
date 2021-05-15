@@ -1468,7 +1468,7 @@ None of the studies account for variants and vaccines yet. IHME included variant
 
 * Model developers - Behavior of epidemic model developers 
 
-* Me - Behavior of the person who maintains and update this repository
+* Me - Behavior of the person who maintains and updates this repository
 
 * Interaction - Cross-level interaction of above terms
 
