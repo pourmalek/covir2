@@ -1,14 +1,14 @@
-### Study update dates in uptake 20210507
+### Study update dates in uptake 20210514
 
-DELP 20210507, IHME 20210507, IMPE 20210424, LANL 20210505, SRIV 20210507
+DELP 20210514, IHME 20210514, IMPE 20210424, LANL 20210512, SRIV 20210513
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210507 [here](https://github.com/pourmalek/covir2/blob/main/20210507/graphs%20merged%20uptake%2020210507.pdf)
+### Merged graphs of uptake 20210424 [here](https://github.com/pourmalek/covir2/blob/main/20210424/graphs%20merged%20uptake%2020210424.pdf)
 
 <div dir="rtl">
   
-###  همه نمودارهای برداشت ۱۴۰۰۰۲۱۷ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210507/graphs%20merged%20uptake%2020210507.pdf)
+###  همه نمودارهای برداشت ۱۴۰۰۰۲۲۴ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210424/graphs%20merged%20uptake%2020210424.pdf)
   
 <div dir="ltr">
 
