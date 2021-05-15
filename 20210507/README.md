@@ -6,7 +6,7 @@ The following are error codes returned by Stata while running the previously wor
 <br/><br/>
 
 --
- * get IHME estimates
+get IHME estimates
 
 . copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip ihme-covid19.zip
 file https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip not found
@@ -18,6 +18,7 @@ The previous outputs are available [here](https://github.com/pourmalek/covir2/tr
 
 <br/><br/>
 
+***********
 
 ### Study update dates in uptake 20210507
 
