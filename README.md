@@ -6,7 +6,7 @@
 
 [English](https://github.com/pourmalek/covir2#english-readme-for-covir2)  
 
-## Note: (1) Uptake 20210514 is currently being added, after IHME release of update 20210514. 
+## Note: (1) Uptake 20210514 is currently being added, after IHME release of update 20210514. 10-minute-read summary is made, the rest to be added ...
 ![image](https://user-images.githubusercontent.com/30849720/118344511-43066300-b4e3-11eb-8d3f-627a54eed873.png) UPDATE WORK IN PROGRESS ...
 
 <br/><br/>
