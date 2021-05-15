@@ -51,7 +51,7 @@ Note: IHME has provided description of how the variants and vaccines are reintro
 <br/><br/>
 
 
-نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار مورخ ۲۴ اردیبهشت ۱۴۰۰ (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین بروز-رسانی مورخ ۲۴ اردیبهشت ۱۴۰۰ (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118347597-5de3d200-b4f9-11eb-91d1-c59e4455b30c.png)
 
@@ -80,7 +80,7 @@ Note: IHME has provided description of how the variants and vaccines are reintro
 
 <br/><br/>
 
- نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+ نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ جدید ترین بروز-رسانی (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 
 ![image](https://user-images.githubusercontent.com/30849720/118348071-9933d000-b4fc-11eb-9e20-aec97227c71a.png)
@@ -117,7 +117,7 @@ Note: IHME has provided description of how the variants and vaccines are reintro
 
 <br/><br/>
 
-نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210507) [PDF](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ بروز-رسانی مورخ ۱۷ اردیبهشت ۱۴۰۰ (20210507) [PDF](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118114377-5955d700-b39c-11eb-80c7-e67c9d2620e5.png)
 
@@ -134,7 +134,7 @@ Note: IHME has provided description of how the variants and vaccines are reintro
 <br/><br/>
 
 
- نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210507) [PDF](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+ نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ بروز-رسانی مورخ ۱۷ اردیبهشت ۱۴۰۰ (20210507) [PDF](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118114514-8a360c00-b39c-11eb-94e7-e3c8ae3d76be.png)
 
