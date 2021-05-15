@@ -5,13 +5,14 @@ There was an update 20210507 released by IHME that was uptaken here and the code
 The following are error codes returned by Stata while running the previously working code, on Fri May 14, 2021.
 <br/><br/>
 
---
+++++++++++
 get IHME estimates
 
 copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip ihme-covid19.zip
 file https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip not found
 r(601);
---
+++++++++++
+
 <br/><br/>
 
 The previous outputs are available [here](https://github.com/pourmalek/covir2/tree/main/20210507/output/IHME/2021_05_07)
