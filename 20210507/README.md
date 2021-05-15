@@ -15,12 +15,11 @@ r(601);
 
 ++++++++++
 
-<br/><br/>
 
 The previous outputs are available [here](https://github.com/pourmalek/covir2/tree/main/20210507/output/IHME/2021_05_07)
 
-<br/><br/>
 
+***********
 ***********
 
 ### Study update dates in uptake 20210507
