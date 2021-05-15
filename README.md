@@ -1458,7 +1458,7 @@ None of the studies account for variants and vaccines yet. IHME included variant
 
 * Communities - Behavior and mass action of large groups of people 
 
-* Pharma - Behavior of the Pharma that develop, sell, produce, and ship vaccines and medications 
+* Pharma - Behavior of Pharma stockholders that determine development, production, and shipment of vaccines and medications 
 
 * Researchers - Behavior of researchers that produce scientific evidence 
 
