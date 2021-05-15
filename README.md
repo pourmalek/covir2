@@ -78,7 +78,8 @@
 
 
 
-[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+ نمودار برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
 
 ![image](https://user-images.githubusercontent.com/30849720/118348071-9933d000-b4fc-11eb-9e20-aec97227c71a.png)
 
