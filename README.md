@@ -882,6 +882,12 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 uptake 20210514 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118369735-5d7b2380-b559-11eb-8e4e-9cd6f2b9d473.png)
+
+****
+
+uptake 20210514 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
 ![image](https://user-images.githubusercontent.com/30849720/118368191-a087c780-b556-11eb-8232-ed51fdfadc60.png)
 
 ****
