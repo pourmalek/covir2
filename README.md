@@ -8,7 +8,9 @@
 
 ## Note: (1) Uptake 20210514 is currently being added, after IHME release of update 20210514. 
 
-![image](https://user-images.githubusercontent.com/30849720/118344511-43066300-b4e3-11eb-8d3f-627a54eed873.png)
+![image](https://user-images.githubusercontent.com/30849720/118344511-43066300-b4e3-11eb-8d3f-627a54eed873.png) WORK IN PROGRESS ...
+
+<br/><br/>
 
 
 ## Note: (2) Uptake 20210507 [here](https://github.com/pourmalek/covir2/tree/main/20210507) codes have stopped working. It will be archived.
