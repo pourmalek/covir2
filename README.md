@@ -31,6 +31,13 @@
 به نمودارهای منتخب)
 
 # توجه: آخرین پیش بینی مورخ ۱۷ اردیبهشت ۱۴۰۰، در حال جایگزین شده با آخرین پیش بینی مورخ ۲۴ اردیبهشت ۱۴۰۰ می باشد.
+
+
+نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار مورخ ۲۴ اردیبهشت ۱۴۰۰ (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210524/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118344250-1dc52500-b4e2-11eb-8c4b-d321b3512051.png)
+
+
 <br/><br/>
 
 # پرسش فوری:
