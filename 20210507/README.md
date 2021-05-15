@@ -10,7 +10,9 @@ The following are error codes returned by Stata while running the previously wor
 get IHME estimates
 
 copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip ihme-covid19.zip
+
 file https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip not found
+
 r(601);
 
 ++++++++++
