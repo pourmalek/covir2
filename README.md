@@ -7,7 +7,7 @@
 [English](https://github.com/pourmalek/covir2#english-readme-for-covir2)  
 
 ## Note: (1) Uptake 20210514 is currently being added, after IHME release of update 20210514. 
-![image](https://user-images.githubusercontent.com/30849720/118344511-43066300-b4e3-11eb-8d3f-627a54eed873.png) WORK IN PROGRESS ...
+![image](https://user-images.githubusercontent.com/30849720/118344511-43066300-b4e3-11eb-8d3f-627a54eed873.png) UPDATE WORK IN PROGRESS ...
 
 <br/><br/>
 *****
@@ -40,6 +40,11 @@
 نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ جدید ترین نمودار مورخ ۲۴ اردیبهشت ۱۴۰۰ (20210524) [PDF](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/118344720-a775f200-b4e4-11eb-9d63-99db536f8dee.png)
+
+
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118344846-5dd9d700-b4e5-11eb-9cae-7b25f123d06a.png)
 
 
 <br/><br/>
