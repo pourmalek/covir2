@@ -1,15 +1,18 @@
 ### Why uptake 20210507 is being archived?
 
-There was an update 20210507 released by IHME that was uptaken here and the codes worked. Now ther seems to be no update 20210507 (previously released) by IHME.
+There was an update 20210507 released by IHME that was uptaken here and the codes worked. Now there seems to be no update 20210507 (previously released by) IHME in existence.
 
 The following are error codes returned by Stata while running the previously working code, on Fri May 14, 2021.
- * get IHME estimates
+<br/><br/>
 
 --
+ * get IHME estimates
+
 . copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip ihme-covid19.zip
 file https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip not found
 r(601);
 --
+<br/><br/>
 
 The previous outputs are available [here](https://github.com/pourmalek/covir2/tree/main/20210507/output/IHME/2021_05_07)
 
