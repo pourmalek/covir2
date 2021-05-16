@@ -102,6 +102,11 @@
 ![image](https://user-images.githubusercontent.com/30849720/118391588-d924b100-b5e9-11eb-8a73-b30a222d4c5b.png)
 
 
+
+[IHME hospitalization Iran 20200516](https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources)
+
+![image](https://user-images.githubusercontent.com/30849720/118404897-c16d1d00-b629-11eb-9dd9-ab943806434d.png)
+
 <br/><br/>
 
 ************** 
