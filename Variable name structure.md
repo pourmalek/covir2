@@ -180,7 +180,7 @@ YYGU [study web site](https://covid19-projections.com)
 * **A01 DELP** 
 * S00 = [Single scenario]
 <br/><br/>
-* **A02 IHME** **(see more details below)**
+* **A02 IHME**       **(see more details below)**
 * S01 = Reference scenario [Status Quo] 
 * S02 = Best scenario (Universal masks) [Best]
 * S03 = Worse scenario (Mandates easing) [Worst] 
