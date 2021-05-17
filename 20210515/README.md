@@ -38,6 +38,7 @@ Note: IMPE 20210424 released on 20210515.
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118418010-81c72500-b66b-11eb-844e-d719591b6c95.png)
 
 ****
 
