@@ -1626,6 +1626,10 @@ The term _update_ is used to denote releases of outcomes' estimates by the compo
 1- Level 1 of directories || dates on which a new uptake of studies updates were created in this repo
 
 
+[`20210525`](https://github.com/pourmalek/covir2/tree/main/20210525) 
+
+[`20210524`](https://github.com/pourmalek/covir2/tree/main/20210524) 
+
 [`20210507`](https://github.com/pourmalek/covir2/tree/main/20210507) 
 
 [`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506) 
