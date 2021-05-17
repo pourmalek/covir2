@@ -180,7 +180,7 @@ YYGU [study web site](https://covid19-projections.com)
 * **A01 DELP** 
 * S00 = [Single scenario]
 <br/><br/>
-* **A02 IHME** 
+* **A02 IHME** **(see more details below)**
 * S01 = Reference scenario [Status Quo] 
 * S02 = Best scenario (Universal masks) [Best]
 * S03 = Worse scenario (Mandates easing) [Worst] 
@@ -207,6 +207,32 @@ YYGU [study web site](https://covid19-projections.com)
 * Ghanbari has two subtypes of Daily Cases, “Density of the infected population with a strong immunity system”, and “Density of the infected population with a weak immunity system or with a historical medical illness as diabetic, blood pressure, heart issue, and others.” [*verbatim*] Each subtype is presented with 18 different values (aka model subtypes) based on different values of three parameters in their model. The median scenario, first subtype was selected for digitalization. It is the model subtype number 9 out of 18 subtypes [named S09 here], with the following details. Model subtype parameter: γ1 = 0.09, where γ1 is recovery rate in population subtype 1. Time point: Second peak. Estimate type: Mean. Peak value mentioned: 897,264. Peak date Solar: 1399-11-30. Peak date Gregorian: 2021-02-18. Source: Fig 4a, green curve. 
 
 
+**Details about IHME scenarios:**
+
+[IHME. COVID-19 Results Briefing, The Eastern Mediterranean Region. May 13, 2021. Page 19, Projections and scenarios]( http://www.healthdata.org/sites/default/files/files/Projects/COVID/2021/44567_briefing_Eastern_Mediterranean_Region_16.pdf) “The model was run on May 12, 2021.”
+
+(S1) The reference scenario is our forecast of what we think is most likely to happen: 
+
+1- Vaccines are distributed at the expected pace. 
+
+2- Governments adapt their response by re-imposing social distancing mandates for 6 weeks whenever daily deaths reach 8 per million, unless a location has already spent at least 7 of the last 14 days with daily deaths above this rate and not yet re-imposed social distancing mandates. In this case, the scenario assumes that mandates are re-imposed when daily deaths reach 15 per million. 
+
+3- Variants B.1.1.7 (first identified in the UK), B.1.351 (first identified in South Africa), and P1 (first identified in Brazil) continue to spread from locations with (a) more than 5 sequenced variants, and (b) reports of community transmission, to adjacent locations following the speed of variant scale-up observed in the regions of the UK.
+
+4- In one-quarter of those vaccinated, mobility increases toward pre-COVID-19 levels.
+
+(S2) The universal masks scenario makes all the same assumptions as the reference scenario but also assumes 95% of the population wear masks in public in every location. 
+
+(S3) The worse scenario modifies the reference scenario assumptions in three ways: 
+
+1- First, it assumes that variants B.1.351 or P1 begin to spread within 3 weeks in adjacent locations that do not already have B.1.351 or P1 community transmission. 
+
+2- Second, it assumes that all those vaccinated increase their mobility toward pre-COVID-19 levels. 
+
+3- Third, it assumes that among those vaccinated, mask use starts to decline exponentially one month after completed vaccination. 
+
+
+
 <br/><br/>
 
 
@@ -217,7 +243,7 @@ YYGU [study web site](https://covid19-projections.com)
 
 * A01 DELP = V04 // Note: needs change from V03 to V04 in codes.
 
-* A02 IHME = V03 // IHME model version needs update in codes.
+* A02 IHME = V03 // IHME model version needs update in codes. // Model version needs upate according to recent [Total COVID-19 moratlity analysis](http://www.healthdata.org/special-analysis/estimation-excess-mortality-due-covid-19-and-scalars-reported-covid-19-deaths) 
 
 * A03 IMPE = V07	
 
