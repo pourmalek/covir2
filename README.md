@@ -99,6 +99,17 @@
 <br/><br/>
 
 
+
+
+نمودار برآورد  موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد،‌ بروز-رسانی مورخ ۲۵ اردیبهشت ۱۴۰۰ (20210515) [PDF](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118428120-957e8580-b683-11eb-8adc-fda06c63cef3.png)
+
+
+
+<br/><br/>
+
+
 ************** 
 ************** 
 
