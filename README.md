@@ -4,7 +4,19 @@
 
 <br/><br/>
 
-[English](https://github.com/pourmalek/covir2#english-readme-for-covir2)  
+[English](https://github.com/pourmalek/covir2#english-readme-for-covir2) 
+
+
+******
+******
+******
+![image](https://user-images.githubusercontent.com/30849720/118345353-b9599400-b4e8-11eb-9489-d4153f26bd63.png)
+
+
+# UPDATE WORK IN PROGRESS ...
+******
+******
+******
 
 ******
 ## Note: IHME has provided description of how the variants and vaccines are reintroduced to their model. This needs to be incorporated in write-up here. See:
@@ -38,6 +50,25 @@
 
 
 <br/><br/>
+
+
+### Selected graphs, uptake 20210515
+
+****
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118417558-6e1abf00-b669-11eb-9875-9d3dbb648ee1.png)
+
+
+
+************** 
+************** 
+
+
+************** 
+************** 
+
 
 # پرسش فوری:
 ##   متاخرترین پیش بینی روند همه گیری کووید-۱۹ در ایران برای ماه های آینده چیست؟
