@@ -8,17 +8,6 @@
 
 
 ******
-******
-******
-![image](https://user-images.githubusercontent.com/30849720/118345353-b9599400-b4e8-11eb-9489-d4153f26bd63.png)
-
-
-# UPDATE WORK IN PROGRESS ...
-******
-******
-******
-
-******
 ## Note: IHME has provided description of how the variants and vaccines are reintroduced to their model. This needs to be incorporated in write-up here. See:
 
 [IHME, COVID-19 Results Briefing, The Eastern Mediterranean Region, May 13, 2021](http://www.healthdata.org/sites/default/files/files/Projects/COVID/2021/44567_briefing_Eastern_Mediterranean_Region_16.pdf)
@@ -60,8 +49,6 @@
 
 ************** 
 ************** 
-
-# برداشت جدید مورخ ۲۰۲۱۰۲۱۵ در حال افزوده شدن به تار نما می باشد...
 
 #     پیش بینی های مورخ ۲۵ اردیبهشت ۱۴۰۰
 
