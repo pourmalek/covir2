@@ -62,6 +62,7 @@ Note: IMPE 20210424 released on 20210515.
 
 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118418230-6e688980-b66c-11eb-9ffd-ac628ed6dc74.png)
 
 ****
 
