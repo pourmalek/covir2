@@ -961,7 +961,11 @@ uptake 20210515 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 ![image](https://user-images.githubusercontent.com/30849720/118418492-8096f780-b66d-11eb-955c-a0fe16d1c3d5.png)
 
+<div dir="ltr">
+
 مدل ایمپریال در این بروز-رسانی فاقد پیامدهای (Hospital incidence) و (ICU incidence) می باشد. 
+
+<div dir="rtl">
 
 ****
 
@@ -996,7 +1000,7 @@ uptake 20210430 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 <div dir="ltr">
 
-این بروز-رسانی مطالعه آی اچ ام ای فاقد برآورد پیامدهای مربوط به بیمارستان و بستری هستند.
+این بروز-رسانی مطالعه آی اچ ام ای فاقد برآورد پیامدهای مربوط به بیمارستان و بستری می باشد.
  
  <div dir="rtl">
 
@@ -1055,9 +1059,9 @@ uptake 20210515 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 
 <div dir="ltr">
 
-این بروز-رسانی مطالعه آی اچ ام ای فاقد برآورد پیامدهای مربوط به بیمارستان و بستری هستند.
- 
- <div dir="rtl">
+مدل ایمپریال در این بروز-رسانی فاقد پیامدهای (Hospital incidence) و (ICU incidence) می باشد. 
+
+<div dir="rtl">
  
 ****
 
