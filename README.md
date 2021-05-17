@@ -998,11 +998,11 @@ uptake 20210430 [Hospital-related outcomes, all time](https://github.com/pourmal
 ![image](https://user-images.githubusercontent.com/30849720/118028594-1b16d400-b318-11eb-9050-0e6c1e780ca8.png)
 
 
-<div dir="ltr">
+ <div dir="rtl">
 
 این بروز-رسانی مطالعه آی اچ ام ای فاقد برآورد پیامدهای مربوط به بیمارستان و بستری می باشد.
  
- <div dir="rtl">
+<div dir="ltr">
 
 
 **** 
