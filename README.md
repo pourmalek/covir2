@@ -421,7 +421,7 @@
 
 (۱۲) (20210515)    (۱۴۰۰/۲/۲۵)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210515)
 
-DELP 20210515, IHME 20210510, **IMPE 20210424**, LANL 20210512, SRIV 20210513
+DELP 20210515, IHME 20210510, **IMPE 20210510**, LANL 20210512, SRIV 20210513 
 
 ****
 
