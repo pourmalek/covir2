@@ -971,13 +971,6 @@ uptake 20210515 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 مدل ایمپریال در این بروز-رسانی فاقد پیامدهای (Hospital incidence) و (ICU incidence) می باشد. 
 
-
-****
-
-uptake 20210515 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/118418467-5e9d7500-b66d-11eb-9647-4fa2645f5a19.png)
-
 ****
 
 uptake 20210514 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
