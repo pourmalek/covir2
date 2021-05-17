@@ -1136,6 +1136,8 @@ uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 
 uptake 20210515 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118421354-e2f3f600-b675-11eb-89a2-e92aa0f7c70c.png)
+
 ****
 
 uptake 20210514 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
