@@ -388,6 +388,8 @@
 
 (تاریخ بروز-رسانی استفاده شده) (نام اختصاری مطالعه)
 
+<br/><br/>
+
 (link to page for this uptake) (Gregorian date) (Hijri solar date) (uptake number)
 
 (date of study update used in this uptake) (study name abbreviated) 
