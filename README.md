@@ -967,8 +967,7 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 uptake 20210515 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118418492-8096f780-b66d-11eb-955c-a0fe16d1c3d5.png)
-
+[use the blue link](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
 مدل ایمپریال در این بروز-رسانی فاقد پیامدهای (Hospital incidence) و (ICU incidence) می باشد. 
 
