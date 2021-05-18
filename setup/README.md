@@ -1,3 +1,16 @@
+Study || URL for estimates files
+
+DELP https://github.com/COVIDAnalytics/website/tree/master/data/predicted
+
+IHME http://www.healthdata.org/covid/data-downloads
+
+IMPE https://github.com/mrc-ide/global-lmic-reports/tree/master/data
+
+LANL https://covid-19.bsvgateway.org
+
+SRIV https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
+
+
 ### Description of rule for uptakes of covir2
 
 This is description of rule of adding uptakes to covir2 repository, either prospectively, i.e., uptakes with new calendar time dates, or retrospectively, i.e., uptakes with calendar time dates in the past. 
