@@ -6,6 +6,16 @@
 
 [English](https://github.com/pourmalek/covir2#english-readme-for-covir2) 
 
+Oxford model is intended to be added to COVID-19 epidemic model for Iran in this repository. 
+
+[CoMo Consortium, the COVID-19 pandemic modelling in context]( https://www.tropicalmedicine.ox.ac.uk/news/como-consortium-the-covid-19-pandemic-modelling-in-context)
+
+[CoMo Consortium, About the model]( https://como.bmj.com/about-the-model/)
+
+[CoMo Consortium App](https://comomodel.net)
+
+
+[COVID-19 modelling and use of Oxford model for prediction of epidemic situation in Iran]( https://github.com/pourmalek/covir2/blob/main/sandbox/OXFO/Covid19_Modeling_Ahmadi.pdf)
 
 ******
 
