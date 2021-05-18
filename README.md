@@ -19,7 +19,7 @@ Announcement
 [CoMo Consortium App](https://comomodel.net)
 
 
-[COVID-19 modelling and use of Oxford model for prediction of epidemic situation in Iran]( https://github.com/pourmalek/covir2/blob/main/sandbox/OXFO/Covid19_Modeling_Ahmadi.pdf)
+
 
 ******
 
@@ -41,7 +41,6 @@ Announcement
 #### در نظر است **مدل آکسفورد** به مجموعه مدل های موجود در این تارنما برای همه گیری کووید-۱۹ در ایران اضافه شود.
 
 
-[مدل سازی کووید- ۱۹ و استفاده از مدل اکسفورد برای پیش بینی وضعیت اپیدمی در ایران]( https://github.com/pourmalek/covir2/blob/main/sandbox/OXFO/Covid19_Modeling_Ahmadi.pdf)
 
 ************** 
  # سوال اساسی: فایده این نمودار ها چیست؟      
