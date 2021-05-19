@@ -325,6 +325,7 @@ SRIV source for model versions: https://github.com/scc-usc/ReCOVER-COVID-19#our-
 
 *
 
+Note: A known issue is existence of some discrepancies about the model version numbers currently used in variable names in the State codes and file here, and the above [Studies / models' versions](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md#studies--models-versions). This is in pipeline for correction. Evidently, this does not affect anything but the punctuation accuracy in variable name assignment in data management. 
 
 *****************
 
