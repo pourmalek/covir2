@@ -1344,7 +1344,8 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 [output](https://github.com/pourmalek/covir2/tree/main/20210506/output) که به ترتیب حاوی کد های نرم افزار استیتا و خروجی کد ها می باشند. در داخل هر یک از این دو دایرکتوری،‌ دایرکتوری هایی برای هر مطالعه وجود دارد (اسامی اختصاری در [اینجا](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.pdf) توضیح داده شده اند) و دو دایرکتوری دیگر به نام های [master](https://github.com/pourmalek/covir2/tree/main/20210506/code/master) ‌و [merge](https://github.com/pourmalek/covir2/tree/main/20210506/code/merge). دایرکتوری [master](https://github.com/pourmalek/covir2/tree/main/20210506/code/master) حاوی یک کد استیتا است به نام [do Iran master.do](https://github.com/pourmalek/covir2/blob/main/20210506/code/master/do%20Iran%20master.do) که اجرای آن روی کامپیوتر کاربر،‌ بعد از داونلود به کامپیوتر کاربر، ‌باعث اجرای سایر کدها و تولید نمودارها و سایر خروجی ها می گردد. دایرکتوری [merge](https://github.com/pourmalek/covir2/tree/main/20210506/code/merge) حاوی کدی است که نتایج حاصل شده از کدهای مربوط به هر یک از مطالعات را گردآوری کرده و برای هر پیامد (مثلا مرگ های روزانه) نمودار حاصل از همه مطالعات را ترسیم می کند. 
 
 تفاوتی که این ریپوزیتوری حاضر در (سایت covir2) با ریپوزیتوری های  مشابه دارد این است که کد های استیتا در (سایت covir2)، برآوردهای مطالعات بین المللی را تارنمای مربوط به هر مطالعه داونلود و آماده می کند.
-"so called batteries included, works right off the box" "با نصب مجانی در محل و خدمات بعد از فروش. این ریپوزیتوری شعبه دیگری ندارد"
+ "با نصب مجانی در محل و خدمات بعد از فروش. این ریپوزیتوری شعبه دیگری ندارد"
+ "so called batteries included, works right off the box"
 
 
 
