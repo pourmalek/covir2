@@ -40,6 +40,7 @@ Application of the rule for uptakes of covir2 is peformed by running ["do Studie
 ## Note:
 Note: I may forget to update the [Uptakes table Iran](https://github.com/pourmalek/covir2/blob/main/setup/Uptakes%20table%20Iran.csv) after performing the actual uptake, but the list of uptakes [here]( https://github.com/pourmalek/covir2#نتایج) is always up-to-date.
 
+*****************
 
 ### Study || URL for estimates files
 
