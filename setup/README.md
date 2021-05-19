@@ -30,7 +30,7 @@ For every single calendar date,
 (9) Look for updates by DELP amd SRIV for which the date is equal to date for IMPE.
 (10) If no new update by IMPE is available (from step 6), there is no new uptake for this calendar date. End. 
 
-
+Internal Note: If a new update by IHME is available (step 2), the URL for previous latest update needs to be changed from -copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip- to -https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip- where 2021-05-07 denotes the previous latest update.
 
 ### Application of the rule for uptakes of covir2
 
