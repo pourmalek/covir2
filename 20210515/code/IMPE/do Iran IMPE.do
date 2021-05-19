@@ -193,8 +193,6 @@ http://www.stata-journal.com/software/sj5-4/ either
   2)  could not be contacted, or
   3)  is not a Stata download site (has no stata.toc file).
 
-current site is still http://fmwww.bc.edu/repec/bocode/g/
-
 * Bad internet connetion is the issue. Try again / later. 
 
 
