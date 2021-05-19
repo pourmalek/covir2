@@ -19,7 +19,11 @@ Announcement
 [CoMo Consortium App](https://comomodel.net)
 
 
+**UCLA model** is intended to be added to COVID-19 epidemic model for Iran in this repository. 
 
+https://github.com/uclaml/ucla-covid19-forecasts
+
+https://covid19.uclaml.org
 
 ******
 
@@ -38,7 +42,7 @@ Announcement
 
 برنامه آینده
 
-#### در نظر است **مدل آکسفورد** به مجموعه مدل های موجود در این تارنما برای همه گیری کووید-۱۹ در ایران اضافه شود.
+## در نظر است **مدل آکسفورد** و **مدل یو سی ال ای** به مجموعه مدل های موجود در این تارنما برای همه گیری کووید-۱۹ در ایران اضافه شود.
 
 
 
