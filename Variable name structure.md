@@ -13,9 +13,9 @@ All the variables have descriptive var `-label-`s that show what the variable st
 
 ### Variable names
 
+## NOTE: Starting from re-run on 20210519 of uptake 20210515, incuding model version in variable names and labels is retired. 
+
 <br/><br/>
-
-
 #### Primary outcome variable names:
 
 
