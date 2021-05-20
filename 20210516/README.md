@@ -68,6 +68,7 @@ Note: IMPE 20210516 released on 20210519.
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210516/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118917985-dcb88080-b8e6-11eb-9bf7-3925c475a804.png)
 
 ****
 
