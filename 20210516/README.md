@@ -7,11 +7,11 @@ Note: IMPE 20210516 released on 20210519.
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210516 [here](https://github.com/pourmalek/covir2/blob/main/20210516/graphs%20merged%20uptake%2020210515.pdf)
+### Merged graphs of uptake 20210516 [here](https://github.com/pourmalek/covir2/blob/main/20210516/graphs%20merged%20uptake%2020210516.pdf)
 
 <div dir="rtl">
   
-###  همه نمودارهای برداشت ۱۴۰۰۰۲۲۶ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210516/graphs%20merged%20uptake%2020210515.pdf)
+###  همه نمودارهای برداشت ۱۴۰۰۰۲۲۶ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210516/graphs%20merged%20uptake%2020210516.pdf)
   
 <div dir="ltr">
 
