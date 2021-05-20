@@ -117,6 +117,7 @@ https://covid19.uclaml.org
 (SRIV) مطالعه اسریواستاوا در دانشگاه کالیفرنیای جنوبی (منحنی سبز رنگ)
 
 
+<br/><br/>
 
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210516/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
