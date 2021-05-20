@@ -50,6 +50,7 @@ Note: IMPE 20210516 released on 20210519.
 
 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210516/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/118917714-5603a380-b8e6-11eb-90d6-a83df39f4496.png)
 
 ****
 
