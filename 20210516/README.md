@@ -20,7 +20,7 @@ Note: IMPE 20210516 released on 20210519.
 <br/><br/>
 
 
-### Selected graphs, uptake 20210515
+### Selected graphs
 
 ****
 
