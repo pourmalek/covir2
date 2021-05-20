@@ -8,6 +8,14 @@
 
 ******
 
+Note: Uptake 20210516 is currently being added, after IMPE release of update 20210516 on 20210519.
+
+![image](https://user-images.githubusercontent.com/30849720/118899600-f0062480-b8c3-11eb-8ade-94a7a7618075.png)
+
+UPDATE WORK IN PROGRESS ...
+
+******
+
 Announcement 
 
 **Oxford model** is intended to be added to COVID-19 epidemic model for Iran in this repository. 
