@@ -124,6 +124,13 @@ https://covid19.uclaml.org
 
 ![image](https://user-images.githubusercontent.com/30849720/118917641-294f8c00-b8e6-11eb-9ee6-a9849f6414a5.png)
 
+<br/><br/>
+
+
+[Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210516/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/118917876-ab3fb500-b8e6-11eb-9848-0c73ccc3784d.png)
+
 
 ************** 
 ************** 
@@ -555,6 +562,12 @@ https://covid19.uclaml.org
 (link to page for this uptake) (Gregorian date) (Hijri solar date) (uptake number)
 
 (date of study update used in this uptake) (study name abbreviated) 
+
+****
+
+(۱۳) (20210515)    (۱۴۰۰/۲/۲۶)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210516)
+
+DELP 20210516, IHME 20210510, **IMPE 20210516**, LANL 20210516, SRIV 20210516
 
 ****
 
