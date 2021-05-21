@@ -1,13 +1,13 @@
 
 ### Why uptake 20210430 is archived
 
-Uptake 20210430 used IHME update 20210430. IHME update 20210430 is non-existent as of May 9, 2021. See below.
+Uptake 20210430 used **IHME update 20210430**. IHME update 20210430 is non-existent as of May 9, 2021. See below.
 
 <br/><br/>
 
 ### Study update dates in uptake 20210430
 
-DELPHI 20210430, IHME 20210430, IMPE 20210424, LANL 20210428, SRIV 20210430
+DELPHI 20210430, **IHME 20210430**, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 <br/><br/>
 
