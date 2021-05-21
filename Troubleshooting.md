@@ -52,12 +52,11 @@ Unresponsiveness of a component study site server (or `-renvars-` ) should be te
 * **Treatment**: (1) If this happens during running the code while all programs except `Stata` and the web browser are NOT already closed, you may want to retry after all other programs and applications except `Stata` and the web browser are closed. (2) If this happens during running the code while all programs except `Stata` and the web browser ARE closed, the RAM and CPU of the local machine cannot afford running the code. You may want to try running the code on another computer with better RAM, CPU.
 <br/><br/>
 ********************************************************************************************************************************************
-* **Problem** (5): Occasionally, some studies might (change / alter rename / omit) the (file names, directory names, variables variable names, etc.) in one or more of their released updates after the updates were release. In such cases, the codes in this repository that use the original release of such updates will stop working and when executed, return error messages about non-existence of a variable or inability to -change directory- to a non-existent directory. 
+* **Problem** (5): Occasionally, some studies (e.g. IHME) might (change / alter rename / omit) the (file names, directory names, variables variable names, etc.) in one or more of their released updates after the updates were release. Occasionally, some studies (e.g. IMPE) might change the directory and files (structure / configuration) of their estimates release web pages.  
 
-The codes in this repo work as long as the updates released by component studies are not altered (not in value, but in format) or revoked. 
+The codes in this repo work as long as the updates released by component studies are not altered (not in value, but in format) or revoked, and the directory and files structure of study estimates release web pages are not altered. 
 
-
-* **Treatment**: If the creator of these codes encounters such incidents during rerun of the previously created codes, the codes will be amended, or the update directory will be archived. If you encounter incidents you might create an Issue, mention is Discussions or email (pourmalek_farshad@yahoo.com). 
+* **Treatment**: If the creator of these codes encounters such incidents during rerun of the previously created codes, the codes will be amended, or the update directory will be archived if necessary. If you encounter incidents you might create an Issue, mention is Discussions or email (pourmalek_farshad@yahoo.com). 
 <br/><br/>
 ********************************************************************************************************************************************
 <br/><br/>
