@@ -1896,9 +1896,9 @@ None of the studies account for variants and vaccines yet. IHME included variant
 
 * Interaction - Cross-level interaction of above terms
 
-* WHO and CDC – probably the residual error 
+* WHO and US CDC – probably the residual error 
 
-* ?
+* Other factors ?
 
 ****
 
