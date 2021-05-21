@@ -13,7 +13,10 @@ All the variables have descriptive var `-label-`s that show what the variable st
 
 ### Variable names
 
-## NOTE: Starting from re-run on 20210519 of uptake 20210515, incuding model version in variable names and labels is retired. 
+## NOTE: (1) Starting from re-run on 20210519 of uptake 20210515, including model version in variable names and labels is retired. 
+
+## NOTE: (2) Retirement of inclusion of model version in variable names and labels is being also extended to all previous uptakes, stating from uptake 20210401. 
+
 
 <br/><br/>
 #### Primary outcome variable names:
