@@ -90,7 +90,32 @@ https://covid19.uclaml.org
 به نمودارهای منتخب)
 
 
+mmmmmm
 
+#     پیش بینی های مورخ ۳۱ اردیبهشت ۱۴۰۰
+
+****
+
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119235705-b4986f80-bae8-11eb-80b0-615e17b42957.png)
+
+****
+
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119235943-b0208680-bae9-11eb-918d-22d83757f369.png)
+
+****
+
+[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119236416-2c1bce00-baec-11eb-9034-bd14fa8a929b.png)
+
+****
+
+
+mmmmmmm
 
 
 <br/><br/>
