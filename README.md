@@ -51,6 +51,7 @@ https://covid19.uclaml.org
 # uptake 20210521 is currently being added 
 
 
+جمعه ۳۱ اردیبهشت ۱۴۰۰
 
 ![image](https://user-images.githubusercontent.com/30849720/119231711-1bad2880-bad7-11eb-8899-fb40ba9291f2.png)
 
