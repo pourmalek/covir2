@@ -1281,10 +1281,27 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 ![image](https://user-images.githubusercontent.com/30849720/118026850-279a2d00-b316-11eb-81c1-7298f4955a75.png)
 
+
+
+
+
+
+
+
+
+
+
+
 ****
 ****
 
 ### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
+
+****
+
+update 20210521 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119236416-2c1bce00-baec-11eb-9034-bd14fa8a929b.png)
 
 ****
 
