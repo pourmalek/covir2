@@ -1188,10 +1188,26 @@ uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 ![image](https://user-images.githubusercontent.com/30849720/118054707-9dfd5600-b33b-11eb-8c67-ee509fd06710.png)
 
+
+
+
+
+
+
+
+
+
+
 ****
 ****
 
 ### (۵)‌ برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
+
+****
+
+update 20210521 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119236343-badc1b00-baeb-11eb-9d32-e7c77405b318.png)
 
 ****
 
