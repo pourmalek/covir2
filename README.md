@@ -1570,10 +1570,27 @@ uptake 20210401 [Daily deaths estimated to reported, all time](https://github.co
 
 ![image](https://user-images.githubusercontent.com/30849720/118046800-b024c780-b32e-11eb-9182-ee43260698c2.png)
 
+
+
+
+
+
+
+
+
+
+
+
 ****
 ****
 
 ### (۹) نسبت برآورد موارد جدید روزانه بیماری به گزارش رسمی، از دی ۱۳۹۹ به بعد  
+
+****
+
+[Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/119236746-f677e480-baed-11eb-9e76-3cc11eb682e3.png)
 
 ****
 
