@@ -1381,10 +1381,25 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 ![image](https://user-images.githubusercontent.com/30849720/118056214-5c21df00-b33e-11eb-8d7b-85d3803e435a.png)
 
+
+
+
+
+
+
+
+
+
 ****
 ****
 
 ### (۷)‌ برآورد پیامدهای مربوط به بیمارستان و بستری، از آذر ۱۳۹۹ به بعد
+
+****
+
+update 20210521 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119236588-0f33ca80-baed-11eb-939f-2feaab8732fe.png)
 
 ****
 
