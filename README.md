@@ -94,13 +94,15 @@ mmmmmm
 
 #     پیش بینی های مورخ ۳۱ اردیبهشت ۱۴۰۰
 
+# پرسش فوری:
+##   متاخرترین پیش بینی روند همه گیری کووید-۱۹ در ایران برای ماه های آینده چیست؟
+# پاسخ فوری:
+
+###   همه مطالعات، کاهش مرگ ها و موارد بیماری را پیشبینی کرده اند.
+
 ****
 
-[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/119235705-b4986f80-bae8-11eb-80b0-615e17b42957.png)
-
-****
+نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
@@ -108,6 +110,16 @@ mmmmmm
 
 ****
 
+نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
+
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119236250-35586b00-baeb-11eb-80ca-2563899811d4.png)
+
+****
+
+نمودار برآورد پیامدهای مربوط به بیمارستان و بستری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
+ 
 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119236416-2c1bce00-baec-11eb-9034-bd14fa8a929b.png)
@@ -124,10 +136,6 @@ mmmmmmm
 ************** 
 
 #     پیش بینی های مورخ ۲۶ اردیبهشت ۱۴۰۰
-
-# پرسش فوری:
-##   متاخرترین پیش بینی روند همه گیری کووید-۱۹ در ایران برای ماه های آینده چیست؟
-# پاسخ فوری:
 
 ###   همه مطالعات، کاهش مرگ ها و موارد بیماری را پیشبینی کرده اند.
 
