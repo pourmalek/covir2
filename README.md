@@ -633,79 +633,85 @@ https://covid19.uclaml.org
 
 ****
 
-(۱۳) (20210515)    (۱۴۰۰/۲/۲۶)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210516)
+(14) (20210521)    (۱۴۰۰/۲/۳۱)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210521)
+
+DELP 20210521, **IHME 20210521**, IMPE 20210516, LANL 20210519, SRIV 20210521
+
+****
+
+(13) (20210515)    (۱۴۰۰/۲/۲۶)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210516)
 
 DELP 20210516, IHME 20210510, **IMPE 20210516**, LANL 20210516, SRIV 20210516
 
 ****
 
-(۱۲) (20210515)    (۱۴۰۰/۲/۲۵)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210515)
+(12) (20210515)    (۱۴۰۰/۲/۲۵)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210515)
 
 DELP 20210515, IHME 20210510, **IMPE 20210510**, LANL 20210512, SRIV 20210513 
 
 ****
 
-(۱۱) (20210514)    (۱۴۰۰/۲/۲۴)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210514)
+(11) (20210514)    (۱۴۰۰/۲/۲۴)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210514)
 
 DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512, SRIV 20210513 
 
 ****
 
-(۱۰) (20210507)    (۱۴۰۰/۲/۱۷)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210507)
+(10) (20210507)    (۱۴۰۰/۲/۱۷)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210507)
 
 DELP 20210507, **IHME 20210507**, IMPE 20210424, LANL 20210505, SRIV 20210507 
 
 ****
 
-(۹) (20210506)    (۱۴۰۰/۲/۱۶)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210506)
+(9) (20210506)    (۱۴۰۰/۲/۱۶)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210506)
 
 DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506 
 
 ****
 
-(۸) (20210430)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210430%20(archived))
+(8) (20210430)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210430%20(archived))
 
 DELP 20210430, **IHME 20210430**, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 ****
 
-(۷) (20210424)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210424)
+(7) (20210424)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210424)
 
 DELP 20210424, IHME 20210422, **IMPE 20210424**, LANL 20210421, SRIV 20210424 
 
 ****
 
-(۶) (20210422)    (۱۴۰۰/۲/۲)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210422)
+(6) (20210422)    (۱۴۰۰/۲/۲)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210422)
 
 DELP 20210422, **IHME 20210422**, IMPE 2010417, LANL 20210421, SRIV 20210422
 
 ****
 
-(۵) (20210417)    (۱۴۰۰/۱/۲۸)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210417)
+(5) (20210417)    (۱۴۰۰/۱/۲۸)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210417)
 
 DELP 20210417, IHME 20210416, **IMPE 20210417**, LANL 20210414, SRIV 20210417
 
 ****
 
-(۴) (20210416)    (۱۴۰۰/۱/۲۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210416)
+(4) (20210416)    (۱۴۰۰/۱/۲۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210416)
 
 DELP 20210416, **IHME 20210416**, IMPE 20210406, LANL 20210414, SRIV 20210416
 
 ****
 
-(۳) (20210409)    (۱۴۰۰/۱/۲۰)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210409)
+(3) (20210409)    (۱۴۰۰/۱/۲۰)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210409)
 
 DELP 20210409, **IHME 20210409**, IMPE 20210406, LANL 20210407, SRIV 20210409
 
 ****
 
-(۲) (20210406)    (۱۴۰۰/۱/۱۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210406)
+(2) (20210406)    (۱۴۰۰/۱/۱۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210406)
 
 DELP 20210406, IHME 20210401, **IMPE 20210406**, LANL 20210404, SRIV 20210406
 
 ****
 
-(۱) (20210401)    (۱۴۰۰/۱/۱۲)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210401)
+(1) (20210401)    (۱۴۰۰/۱/۱۲)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210401)
 
 DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
@@ -2044,6 +2050,7 @@ The term _update_ is used to denote releases of outcomes' estimates by the compo
 
 1- Level 1 of directories || dates on which a new uptake of studies updates were created in this repo
 
+[`20210521`](https://github.com/pourmalek/covir2/tree/main/20210521) 
 
 [`20210515`](https://github.com/pourmalek/covir2/tree/main/20210515) 
 
