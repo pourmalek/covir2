@@ -8,6 +8,9 @@
 ![image](https://user-images.githubusercontent.com/30849720/119270266-b9c0f180-bbb0-11eb-942e-856ce94dc376.png)
 
 
+********
+********
+
 * Text from [European CDC Forecast Hub || background](https://covid19forecasthub.eu/background.html)
 
 
@@ -36,6 +39,8 @@ Model outputs are collected up to four weeks into the future and generally decre
 Individual models that constitute the ensemble are shown for transparency but should not be taken on their own without fully acknowledging the limitations and engaging with the listed authors. Information on authorship and the underlying methodology is shown when hovering the mouse over the model names in the legend.
 We constantly monitor the performance of forecasts. In the evaluation section we provide, among other measures, the empirical coverage proportions of forecast intervals for different targets and forecast horizons. This makes it possible to assess whether past prediction intervals of the ensemble have been reliable for a given target.
 
+********
+********
 
 * Weekly reports || Ensemble or Evluation || Overall or each country
 
