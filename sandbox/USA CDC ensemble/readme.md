@@ -2,6 +2,26 @@
 USA CDC ensemble
 
 ********
+
+## ForecastHub and Ensemble
+
+[COVID-19 ForecastHub](https://covid19forecasthub.org/doc/ensemble/)
+
+* Text from 
+
+Ensemble model
+
+We have one pre-print manuscript that describes the performance of the ensemble forecasts through July 2020, as well as a second pre-print that evaluates the predictive performance of the ensemble and dozens of other models through all of 2020.
+
+[Ensemble Forecasts of Coronavirus Disease 2019 (COVID-19) in the U.S.](https://www.medrxiv.org/content/10.1101/2020.08.19.20177493v1) [here](https://github.com/pourmalek/covir2/blob/main/sandbox/USA%20CDC%20ensemble/Ray%20-%20Ensemble%20Forecasts%20of%20Coronavirus%20Disease%202019%20(COVID-19)%20in%20the%20U.S..pdf)
+
+[Evaluation of individual and ensemble probabilistic forecasts of COVID-19 mortality in the US](https://www.medrxiv.org/content/10.1101/2021.02.03.21250974v1)
+
+********
+********
+
+## CDC
+
 [covid19-forecast-hub](https://github.com/reichlab/covid19-forecast-hub) Projections of COVID-19, in standardized format
 
 ********
