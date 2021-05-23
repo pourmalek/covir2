@@ -15,7 +15,7 @@ We have one pre-print manuscript that describes the performance of the ensemble 
 
 [Ensemble Forecasts of Coronavirus Disease 2019 (COVID-19) in the U.S.](https://www.medrxiv.org/content/10.1101/2020.08.19.20177493v1) // [here](https://github.com/pourmalek/covir2/blob/main/sandbox/USA%20CDC%20ensemble/Ray%20-%20Ensemble%20Forecasts%20of%20Coronavirus%20Disease%202019%20(COVID-19)%20in%20the%20U.S..pdf)
 
-[Evaluation of individual and ensemble probabilistic forecasts of COVID-19 mortality in the US](https://www.medrxiv.org/content/10.1101/2021.02.03.21250974v1) // [here]()
+[Evaluation of individual and ensemble probabilistic forecasts of COVID-19 mortality in the US](https://www.medrxiv.org/content/10.1101/2021.02.03.21250974v1) // [here](https://github.com/pourmalek/covir2/blob/main/sandbox/USA%20CDC%20ensemble/Cramer%20-%20Evaluation%20of%20individual%20and%20ensemble%20probabilistic%20forecasts%20of%20COVID-19%20mortality%20in%20the%20US.pdf)
 
 ********
 ********
