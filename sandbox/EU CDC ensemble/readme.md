@@ -45,3 +45,32 @@ We constantly monitor the performance of forecasts. In the evaluation section we
 * Weekly reports || Ensemble or Evluation || Overall or each country
 
 ![image](https://user-images.githubusercontent.com/30849720/119270448-93e81c80-bbb1-11eb-9b93-bd4c5a1a4ea2.png)
+
+
+********
+********
+
+[GitHub / epiforecasts / covid19-forecast-hub-europe](https://github.com/epiforecasts/covid19-forecast-hub-europe)
+
+*
+
+[GitHub / epiforecasts / covid19-forecast-hub-europe / Targets and horizons](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Targets-and-horizons)
+
+*
+
+[GitHub / epiforecasts / covid19-forecast-hub-europe / scenarios](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki/Scenarios)
+
+With the ECDC, we are developing scenarios around transmission, interventions, strategies, vaccination and immunity.
+
+When submitting using a scenario, use the scenario_id column to label which scenario you are using.
+
+We will post more details here soon.
+
+*
+
+[GitHub / epiforecasts / covid19-forecast-hub-europe / wiki](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki)
+
+*
+
+********
+
