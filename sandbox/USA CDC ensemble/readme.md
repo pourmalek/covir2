@@ -19,7 +19,7 @@ We have one pre-print manuscript that describes the performance of the ensemble 
 
 *
 
- (see Technical README)[https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/README.md#quantile]  
+[see Technical README](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/README.md#quantile) 
 
 ********
 ********
