@@ -175,6 +175,21 @@ https://covid19.uclaml.org
 [IHME. COVID-19 Results Briefing. Iran (Islamic Republic of). May 21, 2021.](https://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf) 
 
 <br/><br/>
+******************************
+
+<div dir="ltr">
+ 
+### Note: Variants, Vaccines, and IHME model
+
+Page 17 of document [IHME. COVID-19 Results Briefing. Iran (Islamic Republic of). May 21, 2021.](https://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf), Table 3 is about vaccine efficacy and variants. We have it in our slides. 
+
+There is a link in the table title to this web page [COVID-19 vaccine efficacy summary](http://www.healthdata.org/node/8584), in which again there is link to [Vaccine-Efficacy-Table_05142021_1](http://www.healthdata.org/sites/default/files/files/Projects/COVID/2021/Vaccine-Efficacy-Table_05142021_1.pdf). This latter table shows details about IHME meta-analysis-like model for estimation of different vaccines' efficacy against different variants. This scheme intakes new studies and updates the table and the model's estimates results. 
+
+The newest study to be added to this model is [Effectiveness of COVID-19 vaccines against the B.1.617.2 variant](https://khub.net/documents/135939561/430986542/Effectiveness+of+COVID-19+vaccines+against+the+B.1.617.2+variant.pdf/204c11a4-e02e-11f2-db19-b3664107ac42) by Public Health England, and this is the [Press release](https://www.gov.uk/government/news/vaccines-highly-effective-against-b-1-617-2-variant-after-2-doses) published 22 May 2021. 
+
+The new evidence to be evaluated is about efficacy of Pfizer-BioNTech and efficacy of AstraZeneca against B.1.1.7 (Kent) variant and B.1.617.2 variant. The B.1.1.7 is called Kent variant in UK, and UK variant elsewhere. The B.1.617 was first seen in India, and includes B.1.617.1, B.1.617.2, and B.1.617.3 as explained here [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/variant-surveillance/variant-info.html)
+
+<div dir="rtl">
 
 ************** 
 ************** 
