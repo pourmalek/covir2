@@ -192,7 +192,7 @@ The newest study to be added to this model is [Effectiveness of COVID-19 vaccine
 The new evidence to be evaluated is about efficacy of Pfizer-BioNTech and efficacy of AstraZeneca against B.1.1.7 (Kent) variant and B.1.617.2 variant. The B.1.1.7 is called Kent variant in UK, and UK variant elsewhere. The B.1.617 was first seen in India, and includes B.1.617.1, B.1.617.2, and B.1.617.3 as explained here [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/variant-surveillance/variant-info.html)
 
 
-Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/five%20models/IHME/Vaccines%2C%20Variants%2C%20IHME%20model.pdf)
+Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/five%20models/IHME/Vaccines%2C%20Variants%2C%20IHME.pdf)
 
 <div dir="rtl">
 
