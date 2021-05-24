@@ -32,6 +32,7 @@ For every single calendar date,
 
 Internal Note: If a new update by IHME is available (step 2), the URL for previous latest update needs to be changed from -copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip- to -https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip- where 2021-05-07 denotes the previous latest update.
 
+
 ### Application of the rule for uptakes of covir2
 
 Application of the rule for uptakes of covir2 is peformed by running ["do Studies models update dates Iran.do"](https://github.com/pourmalek/covir2/blob/main/setup/do%20Studies%20models%20update%20dates%20Iran.do) and the results are stored in [Uptakes table Iran](https://github.com/pourmalek/covir2/blob/main/setup/Uptakes%20table%20Iran.csv).
