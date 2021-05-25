@@ -77,7 +77,7 @@ https://covid19.uclaml.org
 
 به مجموعه مدل های موجود در این تارنما برای همه گیری کووید-۱۹ در ایران اضافه شود.
 
-
+Note about [SIKJalpha model]( https://arxiv.org/abs/2007.05180) and [SRIV model]( https://arxiv.org/abs/2007.05180). See: [here] (https://www.microbiologyresearch.org/content/journal/ijsem/10.1099/00207713-37-3-222)
 
 ![image](https://user-images.githubusercontent.com/30849720/118752282-a4963c80-b817-11eb-9428-3b84fb05fa72.png)
 
