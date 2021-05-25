@@ -21,11 +21,17 @@ keep if region == "Iran"
 rename date date_original
 
 gen year = substr(date_original,1,4) 
+
 gen month = substr(date_original,6,2) 
+
 gen day = substr(date_original,9,2) 
+
 egen date2 = concat(day month year)
+
 gen date = date(date2, "DMY", 2050)
+
 format date %tdDDMonCCYY
+
 codebook date
 
 drop year month day date2
