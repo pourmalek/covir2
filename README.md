@@ -163,9 +163,9 @@ uptake 20210521 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 نمودار برآورد پیامدهای مربوط به بیمارستان و بستری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
  
-uptake 20210521 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+uptake 20210521 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/119761120-1a298a80-be60-11eb-935d-78a1f83063a1.png)
+![image](https://user-images.githubusercontent.com/30849720/119761000-e64e6500-be5f-11eb-8f86-32489264a37d.png)
 
 ****
 
