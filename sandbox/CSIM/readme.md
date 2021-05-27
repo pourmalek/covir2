@@ -2,6 +2,24 @@
 
 ## COVID-19 Scenario Analysis Tool - https://covidsim.org/
 
+*******
+
+* Pluses:
+
+Accepts different input types for vaccines
+
+* Minuses:
+
+First impression to be verified: 
+
+NPIs cannot be fed into model directly, but the model can intake different values of R for different time intervals
+
+Visitants seem to not be present  
+
+
+
+*******
+
 Default page for Iran
 
 
