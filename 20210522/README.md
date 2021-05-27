@@ -125,14 +125,34 @@ IMPE update 20210522 released on 2021-05-25
 ![image](https://user-images.githubusercontent.com/30849720/119847173-9acba380-bebf-11eb-9ba2-0ad2d944cf1d.png)
 
 ****
-
+****
 ****
 
 ### Check with component studies' graphs
 
-IHME Hospital resource use
+****
+****
 
-https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources
+IHME
 
+****
+
+IHME Daily deaths https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
+
+![image](https://user-images.githubusercontent.com/30849720/119891762-383dcc00-beee-11eb-9563-270299e9ea1b.png)
+
+****
+
+IHME Hospital resource use https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources
 
 ![image](https://user-images.githubusercontent.com/30849720/119891335-b352b280-beed-11eb-9a4f-d3e5f8387bba.png)
+
+****
+
+
+
+
+
+
+
+
