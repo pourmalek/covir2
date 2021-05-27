@@ -126,3 +126,13 @@ IMPE update 20210522 released on 2021-05-25
 
 ****
 
+****
+
+### Check with component studies' graphs
+
+IHME Hospital resource use
+
+https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources
+
+
+![image](https://user-images.githubusercontent.com/30849720/119891335-b352b280-beed-11eb-9a4f-d3e5f8387bba.png)
