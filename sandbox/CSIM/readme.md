@@ -9,7 +9,7 @@ Note: Simulation outputs should not be interpreted as predictions
 
 *******
 
-Assessment initiale
+### Assessment initiale
 
 
 * Pluses:
@@ -34,10 +34,27 @@ NPIs cannot be fed into model directly, but the model can intake different value
 Variants seem to not be present - inputs
 
 
+*******
+
+### Use CSIM COVIDSIM 
+
+(1) In home page of covidsim.org, change current country to desired country
+
+https://covidsim.org/v4.20210430/?place=ca
+
+https://covidsim.org/v4.20210430/?place=ir
+
+(2) Change inputs on the left panel, or leave as is for default settings.
+
+(3) Tick on "counterfactual current infections" and "current infections" on the right side.
+
+(4) Beneath the "Rt" on the right side, click on "Generate Reff".
+
+(5) Click "Data Export" on top left, downloads "ir_g169169_c4879.csv".
 
 *******
 
-Default page for Iran
+## Default page for Iran
 
 
 https://covidsim.org/v4.20210430/?place=ir
@@ -63,7 +80,7 @@ Generate Reff
 *****
 
 
-Documentation:
+### Documentation:
 
 https://covidsim.org/v4.20210430/User%20guide%20covidsim%2004-02-2021.pdf
 
