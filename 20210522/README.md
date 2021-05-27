@@ -26,11 +26,13 @@ IMPE update 20210522 released on 2021-05-25
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/119836290-79b28500-beb6-11eb-8686-30dab3365493.png)
 
 ****
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/119836538-a9fa2380-beb6-11eb-8007-fa0a7fd79999.png)
 
 ****
 
@@ -39,8 +41,9 @@ IMPE update 20210522 released on 2021-05-25
 
 ****
 
-[Daily deaths, after Ordibeshet 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+[Daily deaths, after Ordibeshet 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/119836782-db72ef00-beb6-11eb-812b-6bc74bd0a23b.png)
 
 ****
 
