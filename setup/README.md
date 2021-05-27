@@ -63,7 +63,7 @@ DELP https://covidanalytics.io/projections
 
 IHME https://covid19.healthdata.org/iran-(islamic-republic-of)?view=cumulative-deaths&tab=trend
 
-IMPE
+IMPE https://github.com/mrc-ide/global-lmic-reports/blob/master/combined_reports.pdf
 
 LANL 
 
