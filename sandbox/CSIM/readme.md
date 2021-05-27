@@ -52,6 +52,17 @@ https://covidsim.org/v4.20210430/?place=ir
 
 (5) Click "Data Export" on top left, downloads "ir_g169169_c4879.csv".
 
+
+*******
+
+## Codes: nimue, squire
+
+Researchers who are familiar with modelling should consider the equivalent R package “nimue” which is available here (https://github.com/mrc-ide/nimue). Please note that this package is under active development.
+
+
+Nimue is an extension to the [squire package](https://mrc-ide.github.io/squire/) that allows vaccination to be included. For detailed information on the base model structure and parameterisation please visit the [squire webpage](https://mrc-ide.github.io/squire/).
+
+
 *******
 
 ## Default page for Iran
