@@ -64,8 +64,98 @@
 [لینک سریع](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 به نمودارهای منتخب)
 
-
 *******************
+
+#     پیش بینی های مورخ ۱ خرداد ۱۴۰۰
+
+
+
+# پرسش فوری:
+##   متاخرترین پیش بینی روند همه گیری کووید-۱۹ در ایران برای ماه های آینده چیست؟
+# پاسخ فوری:
+
+![image](https://user-images.githubusercontent.com/30849720/119796378-2e847c00-be8e-11eb-87b6-db3b0c045c3e.png)
+
+#  همه مطالعات، در سناریوی ادامه روند کنونی مداخلات، کاهش مرگ ها و موارد بیماری را پیشبینی کرده اند. مطالعه ایمپریال در سناریوی ۵۰٪  کاهش مداخلات، ثابت ماندن مرگ های روزانه از نیمه دوم خرداد تا نیمه دوم شهریور، و افزایش موارد جدید روزانه بیماری از اواخر اردیبهشت تا اوایل مرداد را پیشبینی کرده است.
+
+# ممکن است در بروز-رسانی های بعدی مدل ها، این وضعیت تغییر ب نماید یا ن نماید.
+
+
+ [نقاط قوت و ضعف مدل های به روز شونده همه گیری کووید-۱۹ در ایران ](https://github.com/pourmalek/covir2#نقاط-قوت-و-ضعف-مدل-های-به-روز-شونده-همه-گیری-کووید-۱۹-در-ایران)
+ 
+****
+
+نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۱ خرداد ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
+
+uptake 20210522 [Daily cases, after Ordibeshet 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119839902-5c32ea80-beb9-11eb-892a-fdc445db5a4e.png)
+
+
+****
+
+نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۱ خرداد ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
+
+uptake 20210522 [Daily cases, after Ordibeshet 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119792716-c6806680-be8a-11eb-8bb9-411043e15b14.png)
+
+
+****
+
+نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۱ خرداد ۱۴۰۰ 
+
+uptake 20210522 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119760478-eef26b80-be5e-11eb-8bcd-62eb3e3ef86f.png)
+
+****
+
+
+
+
+(JOHN) دانشگاه جانز هاپکینز، انعکاس گزارش های رسمی کشور ها به سازمان جهانی بهداشت (منحنی آبی رنگ)
+
+(DELP) مطالعه دلفی، انستیتوی فناوری ماساچوست کمبریج (منحنی قرمز رنگ)
+
+(IHME) مطالعه موسسه آی اچ ام ای، دانشگاه واشنگتن سیاتل (منحنی سیاه رنگ) 
+
+(IMPE) مطالعه ایمپریال کالج لندن (منحنی صورتی رنگ)
+
+(LANL) مطالعه آزمایشگاه لس آلاموس نیو مکزیکو (منحنی طلایی رنگ)
+
+(SRIV) مطالعه اسریواستاوا در دانشگاه کالیفرنیای جنوبی (منحنی سبز رنگ)
+
+
+*****
+
+نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۱ خرداد ۱۴۰۰ 
+
+uptake 20210522 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119760790-80fa7400-be5f-11eb-8a31-6da78a0613bf.png)
+
+****
+
+نمودار برآورد پیامدهای مربوط به بیمارستان و بستری - بروز-رسانی مورخ ۱ خرداد ۱۴۰۰ 
+ 
+uptake 20210522 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119761000-e64e6500-be5f-11eb-8f86-32489264a37d.png)
+
+****
+
+
+
+************** 
+************** 
+
+پایان خلاصه ۱۰ دقیقه ای مربوط به پیش بینی های مورخ ۱ خرداد ۱۴۰۰
+
+************** 
+**************
+************** 
+************** 
 
 #     پیش بینی های مورخ ۳۱ اردیبهشت ۱۴۰۰
 
@@ -95,7 +185,7 @@ uptake 20210521 [Daily deaths, after Ordibeshet 1400, 3 scenarios, IMPE](https:/
 
 نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
 
-[Daily cases, after Ordibeshet 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+uptake 20210521 [Daily cases, after Ordibeshet 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119792716-c6806680-be8a-11eb-8bb9-411043e15b14.png)
 
