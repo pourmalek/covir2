@@ -129,9 +129,9 @@ https://covid19.uclaml.org
 
 نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
 
-[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+uptake 20210521 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/119235943-b0208680-bae9-11eb-918d-22d83757f369.png)
+![image](https://user-images.githubusercontent.com/30849720/119760478-eef26b80-be5e-11eb-8bcd-62eb3e3ef86f.png)
 
 ****
 
