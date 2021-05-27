@@ -89,6 +89,24 @@
  
 ****
 
+نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
+
+uptake 20210521 [Daily deaths, after Ordibeshet 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119791518-c03dba80-be89-11eb-92f5-89f5c9ac69f0.png)
+
+
+****
+
+نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
+
+[Daily cases, after Ordibeshet 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/119792539-9f299980-be8a-11eb-9bf7-3454584e1deb.png)
+
+
+****
+
 نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
 
 uptake 20210521 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
