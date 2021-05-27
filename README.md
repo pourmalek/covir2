@@ -18,23 +18,6 @@
 
 ******
 
-Announcement 
-
-**Oxford model** is intended to be added to COVID-19 epidemic model for Iran in this repository. 
-
-[CoMo Consortium, the COVID-19 pandemic modelling in context]( https://www.tropicalmedicine.ox.ac.uk/news/como-consortium-the-covid-19-pandemic-modelling-in-context)
-
-[CoMo Consortium, About the model]( https://como.bmj.com/about-the-model/)
-
-[CoMo Consortium App](https://comomodel.net)
-
-
-**UCLA model** is intended to be added to COVID-19 epidemic model for Iran in this repository. 
-
-https://github.com/uclaml/ucla-covid19-forecasts
-
-https://covid19.uclaml.org
-
 ******
 
 
@@ -66,28 +49,7 @@ https://covid19.uclaml.org
 ، سپس کلیک روی هر یک از ۹ نوع نموداری که لینک آبی رنگ آن ها در زیر تیتر"ترتیب نمودارها" آمده است. 
 
 
-
 **************
-
-برنامه آینده
-
-## در نظر است 
-
-**مدل آکسفورد** و 
-
-**مدل یو سی ال ای** و
-
-**مدل SIKJalpha**،  
-
-به مجموعه مدل های موجود در این تارنما برای همه گیری کووید-۱۹ در ایران اضافه شود.
-
-
-
-![image](https://user-images.githubusercontent.com/30849720/118752282-a4963c80-b817-11eb-9428-3b84fb05fa72.png)
-
-
-![image](https://user-images.githubusercontent.com/30849720/118752111-61d46480-b817-11eb-85bd-ef86c69cd2c3.png)
-
 ************** 
  # سوال اساسی: فایده این نمودار ها چیست؟      
 ###    هنگامی که مدل ها پیشبینی می کنند که تعداد موارد و مرگ ها درچند ماه آینده بالا خواهد رفت (**_زنگ خطر_**)، زمانی است که تصمیم گیران می توانند با در نظر گرفتن موضوعات مختلف، و از جمله نقاط قوت و ضعف مدل ها و صحت و دقت برآوردهای آن ها،‌ _افزایش_ اقدامات پیشگیری کننده و محدود کننده گسترش همه گیری را به طور جدی مد نظر قرار دهند. 
