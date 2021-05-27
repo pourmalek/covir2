@@ -155,17 +155,17 @@ uptake 20210521 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
 
-[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+uptake 20210521 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/119236250-35586b00-baeb-11eb-80ca-2563899811d4.png)
+![image](https://user-images.githubusercontent.com/30849720/119760790-80fa7400-be5f-11eb-8a31-6da78a0613bf.png)
 
 ****
 
 نمودار برآورد پیامدهای مربوط به بیمارستان و بستری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ 
  
-[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+uptake 20210521 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/119236416-2c1bce00-baec-11eb-9034-bd14fa8a929b.png)
+![image](https://user-images.githubusercontent.com/30849720/119761120-1a298a80-be60-11eb-935d-78a1f83063a1.png)
 
 ****
 
