@@ -1,4 +1,4 @@
-# CSIM = COVID-19 Simulation
+# CSIM = COVID-19 Simulation (label CSIM in this repo)
 
 ## COVID-19 Scenario Analysis Tool - https://covidsim.org/
 
