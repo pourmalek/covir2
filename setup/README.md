@@ -59,7 +59,7 @@ SRIV https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_
 
 ### Study || URL for graphs
 
-DELP
+DELP https://covidanalytics.io/projections
 
 IHME https://covid19.healthdata.org/iran-(islamic-republic-of)?view=cumulative-deaths&tab=trend
 
