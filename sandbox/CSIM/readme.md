@@ -1,4 +1,9 @@
-# CSIM = COVID-19 Simulation (label CSIM in this repo)
+# CSIM = COVID-19 Simulation (label CSIM in this repo) 
+
+MRC Centre for Global Infectious Disease Analysis, Imperial College London
+
+Note: Simulation outputs should not be interpreted as predictions
+
 
 ## COVID-19 Scenario Analysis Tool - https://covidsim.org/
 
@@ -9,7 +14,9 @@ Assessment initiale
 
 * Pluses:
 
-Accepts different input types for vaccines - inputs
+Potentially usable for **subnational** locations - inputs 
+
+Accepts different input types for **vaccines** - inputs
 
 Health care demand - outputs
 
