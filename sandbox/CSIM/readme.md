@@ -6,15 +6,19 @@
 
 * Pluses:
 
-Accepts different input types for vaccines
+Accepts different input types for vaccines - inputs
+
+Health care demand - outputs
+
+Vaccine allocation (according to the selected strategy) - outputs (graphs)
 
 * Minuses:
 
 First impression to be verified: 
 
-NPIs cannot be fed into model directly, but the model can intake different values of R for different time intervals
+NPIs cannot be fed into model directly, but the model can intake different values of R for different time intervals - inputs
 
-Visitants seem to not be present  
+Visitants seem to not be present - inputs
 
 
 
