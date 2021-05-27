@@ -4,6 +4,9 @@
 
 *******
 
+Assessment initiale
+
+
 * Pluses:
 
 Accepts different input types for vaccines - inputs
@@ -11,6 +14,9 @@ Accepts different input types for vaccines - inputs
 Health care demand - outputs
 
 Vaccine allocation (according to the selected strategy) - outputs (graphs)
+
+Different combinations of input settings ('scenarios') can be chosen and model executed, and the model outputs exported in csv file; then different scenarios can be created and compared
+
 
 * Minuses:
 
@@ -57,6 +63,13 @@ https://covidsim.org/v4.20210430/User%20guide%20covidsim%2004-02-2021.pdf
 https://www.youtube.com/watch?v=v3-rQU2qf00&t=4s 
 
 https://covidsim.org/v4.20210430/research.html
+
+https://covidsim.org/v4.20210430/faq.html
+
+https://covidsim.org/v4.20210430/contact.html
+
+*
+
 
 *
 
