@@ -24,7 +24,7 @@ First impression to be verified:
 
 NPIs cannot be fed into model directly, but the model can intake different values of R for different time intervals - inputs
 
-Visitants seem to not be present - inputs
+Variants seem to not be present - inputs
 
 
 
