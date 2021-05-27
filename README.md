@@ -93,7 +93,7 @@
 
 نمودار برآورد مرگ های روزانه - بروز-رسانی مورخ ۱ خرداد ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
 
-uptake 20210522 [[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+uptake 20210522 [Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119838064-f5f99800-beb7-11eb-851f-c9db33506364.png)
 
