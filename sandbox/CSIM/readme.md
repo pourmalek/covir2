@@ -24,3 +24,14 @@ Documentation:
 https://covidsim.org/v4.20210430/User%20guide%20covidsim%2004-02-2021.pdf
 
 https://www.youtube.com/watch?v=v3-rQU2qf00&t=4s 
+
+https://covidsim.org/v4.20210430/research.html
+
+*
+
+https://spiral.imperial.ac.uk:8443/bitstream/10044/1/77735/10/2020-03-26-COVID19-Report-12.pdf
+
+https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/15-09-2020-COVID19-Report-31.pdf
+
+https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2020-09-25-COVID19-Report-33.pdf
+
