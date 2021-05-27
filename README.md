@@ -100,9 +100,9 @@ uptake 20210521 [Daily deaths, after Ordibeshet 1400, 3 scenarios, IMPE](https:/
 
 نمودار برآورد موارد جدید روزانه بیماری - بروز-رسانی مورخ ۳۱ اردیبهشت ۱۴۰۰ ، مطالعه ایمپریال، سناریوی ادامه روند کنونی مداخلات (منحنی سیاه)، سناریوی ۵۰٪ افزایش مداخلات (منحنی سبز)، سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز)، و حد بالای عدم قطعیت سناریوی ۵۰٪ کاهش مداخلات (منحنی قرمز خط چین)
 
-[Daily cases, after Ordibeshet 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+[Daily cases, after Ordibeshet 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/119792539-9f299980-be8a-11eb-9bf7-3454584e1deb.png)
+![image](https://user-images.githubusercontent.com/30849720/119792716-c6806680-be8a-11eb-8bb9-411043e15b14.png)
 
 
 ****
