@@ -995,6 +995,10 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 ****************
 
+uptake 20210522 
+
+****************
+
 uptake 20210521 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119760368-b783bf00-be5e-11eb-80e7-3e98c620e117.png)
@@ -1095,6 +1099,10 @@ uptake 20210401 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 ****************
 
 ### (۲) برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد
+
+****************
+
+uptake 20210522 
 
 ****************
 
@@ -1202,6 +1210,10 @@ uptake 20210401 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 ****************
 
+uptake 20210522 
+
+****************
+
 update 20210521 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119760684-485a9a80-be5f-11eb-8b5d-3babb81378a0.png)
@@ -1304,6 +1316,10 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 ****
 
+uptake 20210522 
+
+****
+
 update 20210521 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210521/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119760790-80fa7400-be5f-11eb-8a31-6da78a0613bf.png)
@@ -1400,6 +1416,10 @@ uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 ****
 
 ### (۵)‌ برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
+
+****
+
+uptake 20210522 
 
 ****
 
@@ -1500,6 +1520,10 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 ****
 
 ### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
+
+****
+
+uptake 20210522 
 
 ****
 
