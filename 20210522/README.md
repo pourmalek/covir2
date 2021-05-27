@@ -36,7 +36,7 @@ IMPE update 20210522 released on 2021-05-25
 
 ****
 
-[Daily deaths, after Ordibeshet 1400, reference scenario with uncertainty, IHME]https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+[Daily deaths, after Ordibeshet 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/119836782-db72ef00-beb6-11eb-812b-6bc74bd0a23b.png)
 
