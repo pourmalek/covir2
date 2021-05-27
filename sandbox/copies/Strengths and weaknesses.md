@@ -1,6 +1,8 @@
 
 Strengths and weaknesses of international periodically updating studies COVID-19 epidemic Iran 
 
+<div dir="rtl">
+ 
 ### نقاط قوت و ضعف مدل های به روز شونده همه گیری کووید-۱۹ در ایران 
 
 - نقاط قوت مشترک:
