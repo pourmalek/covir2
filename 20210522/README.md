@@ -130,6 +130,8 @@ IMPE update 20210522 released on 2021-05-25
 
 ### Check with component studies' graphs
 
+(Note: links lead to periodically updating graphs)
+
 ****
 ****
 
@@ -141,11 +143,31 @@ IHME Daily deaths https://covid19.healthdata.org/iran-(islamic-republic-of)?view
 
 ![image](https://user-images.githubusercontent.com/30849720/119891762-383dcc00-beee-11eb-9563-270299e9ea1b.png)
 
+![image](https://user-images.githubusercontent.com/30849720/119892051-86eb6600-beee-11eb-8b21-c7a1b1223104.png)
+
+****
+
+IHME Cumulative deaths https://covid19.healthdata.org/iran-(islamic-republic-of)?view=cumulative-deaths&tab=trend
+
+![image](https://user-images.githubusercontent.com/30849720/119892650-4213ff00-beef-11eb-90fa-fc69c8c9b6d4.png)
+
+![image](https://user-images.githubusercontent.com/30849720/119892767-640d8180-beef-11eb-8f7f-495197916817.png)
+
+****
+
+IHME Daily infections https://covid19.healthdata.org/iran-(islamic-republic-of)?view=infections-testing&tab=trend&test=infections
+
+![image](https://user-images.githubusercontent.com/30849720/119892265-d336a600-beee-11eb-8fd7-8da8f89d23e9.png)
+
+![image](https://user-images.githubusercontent.com/30849720/119892327-e184c200-beee-11eb-90f1-62e3377c72e5.png)
+
 ****
 
 IHME Hospital resource use https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources
 
 ![image](https://user-images.githubusercontent.com/30849720/119891335-b352b280-beed-11eb-9a4f-d3e5f8387bba.png)
+
+![image](https://user-images.githubusercontent.com/30849720/119892118-a2567100-beee-11eb-93ff-f8a0a605b173.png)
 
 ****
 
