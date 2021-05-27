@@ -116,11 +116,13 @@ IMPE update 20210522 released on 2021-05-25
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/119840762-1e829180-beba-11eb-9f0a-9c0cdc51741d.png)
 
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2082%20COVID-19%20daily%20cases%20to%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/119840938-3fe37d80-beba-11eb-86eb-1470b3bcd848.png)
 
 ****
 
