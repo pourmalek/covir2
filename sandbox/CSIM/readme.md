@@ -27,7 +27,7 @@ Different combinations of input settings ('scenarios') can be chosen and model e
 
 * Minuses:
 
-First impression to be verified: 
+No uncertainty estimates - outputs
 
 NPIs cannot be fed into model directly, but the model can intake different values of R for different time intervals - inputs
 
