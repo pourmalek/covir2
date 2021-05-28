@@ -541,7 +541,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 **********************************************************************************************
 
-### خلاصه اجرایی:  
+## خلاصه اجرایی:  
 
 برآوردهای پنج مطالعه بین المللی بروز-شونده برای همه گیری کووید-۱۹ در ایران به صورت نمودار، فایل و کد نرم افزار در این سایت گیت هاب (https://github.com/pourmalek/covir2) قابل مشاهده، داونلود، و اجرای مجدد در استیتا توسط دیگران هستند.
 
@@ -555,14 +555,14 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 **********************************************************************************************
 
-### خلاصه
+## خلاصه
 برآوردهای هفت مطالعه (شامل پنج مطالعه بین المللی بروز-شونده) برای مرگ های روزانه
 (Daily deaths)، موارد روزانه بیماری (Daily cases)، مرگ های تجمعی (Total deaths)، و موارد تجمعی بیماری (Total cases)‌ کووید-۱۹ در ایران به صورت نمودار نشان داده شده اند و فایل های استیتا و (csv) آن ها نیز وجود دارند. نمودار موارد روزانه موجود بیماری (Prevalent daily cases) و برآوردهای مربوط به بستری و بیمارستان (Hospital-related) نیز وجود دارند.
 <br/><br/>
 
 **********************************************************************************************
 
-### روش
+## روش
 روش بررسی مطابق با مقاله 
 [Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3) می باشد (نسخه اول این مرور)، با این تفاوت که جستجوی مطالعات برای برآوردهای دی ماه ۱۳۹۹ به بعد و در هفت پایگاه مقالات و از ۲۶ تا ۲۸ اسفند ۱۳۹۹ صورت گرفت: پابمد، گوگل اسکالر، مقالات فارسی در
 [پایگاه مرکز اطلاعات علمی جهاد دانشگاهی](https://www.sid.ir)،
@@ -571,7 +571,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 **********************************************************************************************
 
-### مطالعات
+## مطالعات
 مطالعات با علایم اختصاری نشان داده شده اند:
 
 مطالعه [ دلفی](https://www.covidanalytics.io/projections) 
@@ -646,7 +646,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 **********************************************************************************************
 
-#### سایر مطالعات / مدل ها:
+## سایر مطالعات / مدل ها:
 
 
 (الف) مدل های قابل افزوده شدن:
@@ -776,7 +776,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 **********************************************************************************************
 
-### نتایج
+## نتایج
 نمودارها و خروجی ها، کد های نرم افزار استیتا، فایل های داده ها (استیتا و csv) و توضیحات روش مدیریت داده ها (از جمله واژه نامه داده ها و سناریوهای مطالعه ها) در همین تارنمای گیت هاب قرار دارند (https://github.com/pourmalek/covir2). همه داده های مورد استفاده (و نتایج حاصله) در سطح غیر فردی، در دسترس عموم در اینترنت، و دارای مجوز به کار گیری و باز-انتشار غیر تجاری می باشند. همه نمودارها در تارنمای گیت هاب، و چند نمودار منتخب در ادامه این متن قرار دارند. نمودارهای به روز-رسانی های اخیر مطالعات بررسی شده در این تارنما قرار خواهد گرفت.
 
 نمودار های منتخب در
@@ -928,7 +928,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 **********************************************************************************************
 
-#### موضوعات مهم
+## موضوعات مهم
 (۱) به روز رسانی برآوردها توسط مدل ها: برآوردهای مدل ها حتی برای یک دوره زمانی خاص در به روز رسانی های متوالی مدل ها، مستعد تغییر هستند. به همین جهت لازم است در تفسیر نتایج این موضوع را در نظر گرفت.
 
 به عنوان نمونه، در توجه به نمودار برآوردهای مرگ های روزانه برای بهار ۱۴۰۰، علاوه بر متأخر ترین به روز رسانی،‌ لازم است به به-روز رسانی های قبلی نیز توجه نمود.
@@ -947,7 +947,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 **********************************************************************************************
 
-### محدودیت ها
+## محدودیت ها
 (۱) جستجوی مطالعات بین المللی بروز-شونده به صورت "سایر مطالعات مشخص شده از طریق سایر منابع" 
 [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951),
 انجام شده و بنابراین تکرار پذیری مستقل از جستجوگر برای آن کامل نیست. یک مرور منظم ممکن است تعداد بیشتری از مطالعات بین المللی بروز-شونده که واجد شرایط انتخاب باشند را مشخص نماید. (۲) نرم افزار استفاده شده از نوع تجاری است. استفاده از نرم افزار (R) یا (Phyton) از نظر سهولت دسترسی کاربران مرجح است. حتی ممکن است یک بسته (R package) برای این منظور تدوین نمود. (۳) وارسی و انجام  بروز رسانی ها در این ریپوزیتوری به صورت خودکار انجام نمی شود. استفاده از (Phyton)، ‌به عنوان مثال،‌ می تواند برای خودکار نمودن وارسی و انجام  بروز رسانی ها به کار برده شود. (۴) ارایه نتایج در این تارنما فقط قسمت محدودی از مخاطبین را پوشش می دهد. محل های دیگر و راهبردهای بهتر می توانند بهتر به مخاطبین برسند. 
@@ -979,7 +979,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 **********************************************************************************************
 **********************************************************************************************
 
-### نمودار های منتخب
+## نمودار های منتخب
 
 *
 
@@ -2077,7 +2077,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 **********************************************************************************************
 
-### رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها
+## رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها
 
 
 در صورت مواجهه با اشکال در اجرای کد،‌ به قسمت رفع مشکلات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.pdf) مراجعه شود. در صورت رفع نشدن اشکال، و همچنین در صورت مشاهده اشتباه (bug) در کد ها، می توان به [اینجا](https://github.com/pourmalek/covir2/tree/main/.github/ISSUE_TEMPLATE) مراجعه نمود، یا به پدید آورنده (pourmalek_farshad@yahoo.com) ای-میل زد.
@@ -2138,7 +2138,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 ********************************************************************************************************************************************
 
 
-### Executive summary
+## Executive summary
 
 Estimates of five international periodically updating models or studies of COVID-19 epidemic for Iran are gathered and combined, and graphs, data files and Stata codes are produced and are accessible here. Guide for use of Stata codes is provided. A longitudinal treatment of periodically updating models will be added. 
 
@@ -2147,14 +2147,14 @@ Similar work for the _GLOBAL_ level are being prepared to be presented in [https
 
 ****************************************************************************
 
-### Summary
+## Summary
 
 Estimates of seven studies, including five international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
 <br/><br/>
 
 ****************************************************************************
 
-### Methods
+## Methods
 
 Eligibility for target (component) studies (models) of COVID-19 epidemic in Iran, were studies that (1) provided estimates for at least one of the four primary outcomes of interests, i.e., daily deaths, daily (incident) cases, cumulative (total) deaths, and cumulative cases, (2) at national and/or subnational level for Iran, (3) covering December 2020 onwards (after the third peak had declined), (4) provided a list of input data and their sources, and (5) provided explanation on methods of using input data and generation of model outputs.
 
@@ -2163,7 +2163,7 @@ Methods generally follow the first iteration of this review, i.e., [Rapid review
 
 ****************************************************************************
 
-### Results
+## Results
 
 Graphs, Stata codes (do files) and outputs, estimates’ data files (Stata and csv), and explanation of data management procedures (including data dictionary and studies’ scenarios) are presented here (https://github.com/pourmalek/covir2). All the data, used and combined, are at non-individual level, publicly available on the internet, and licensed for non-commercial use and redistribution. Graphs and all other details of recent updates of models’ estimates are stored in this repository.
 
@@ -2173,7 +2173,7 @@ Graphs, Stata codes (do files) and outputs, estimates’ data files (Stata and c
 
 ****************************************************************************
 
-###  Studies / models
+##  Studies / models
 
 * DELP 
 
@@ -2339,7 +2339,7 @@ Note: Was included in uptake 20210423. This uptake was later omitted in conformi
 
 ****************************************************************************
 
-### Updates, uptakes, and directory structure
+## Updates, uptakes, and directory structure
 
 <br/><br/>
 
@@ -2427,7 +2427,7 @@ Output level-3 directories for component studies, e.g., [`output/IHME`](https://
 
 ****************************************************************************
 
-### Important considerations
+## Important considerations
 
 (1) Updates of models’ estimates
 
@@ -2442,7 +2442,7 @@ None of the studies account for variants and vaccines yet. IHME included variant
 
 ****************************************************************************
 
-### Limitations 
+## Limitations 
 
 (1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
 
@@ -2493,7 +2493,7 @@ In practice, it becomes evident that whether the progression of viruses and emer
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-### Selected graphs 
+## Selected graphs 
 
 #### Selected graphs are placed within the Farsi moiety of this page. See [above](https://github.com/pourmalek/covir2#نمودار-های-منتخب)
 
@@ -2535,7 +2535,7 @@ Order of graphs:
 
 
 
-### SUMMARY of how to use the codes in this repo
+## SUMMARY of how to use the codes in this repo
 
 0. Save all unsaved works and files on your local machine and exit all open programs and applications. This is a cautionary measure for not losing unsaved parts of files in case the local machine stops responding or restarts due to oversaturation of RAM, CPU. Even better: Restarting the local machine (to empty the cache), invoking no program, and running the code can be more efficient than running the code on the local machine even with closing all running programs.
 
@@ -2590,7 +2590,7 @@ on the dropdown menu.
 
 <br/><br/>
 
-### Troubleshooting, Errors, Bugs, and Vulnerabilities
+## Troubleshooting, Errors, Bugs, and Vulnerabilities
 
 * For Troubleshooting and Errors, see [`troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
@@ -2609,7 +2609,7 @@ on the dropdown menu.
 
 <div dir="rtl">
  
- ### این نمودارها و کد های نرم افزار ممکن است حاوی اشتباهاتی باشند و به صورت ("as is") به اشتراک گذاشته شده اند و هر گونه عواقب هر گونه تصمیم گیری بر مبنای کد ها و نمودارهای موجود در این سایت (سایت covir2) بر عهده تصمیم گیرنده یا تصمیم گیرندگان است و نه بر عهده پدید آورنده یا عهده پدید آورندگان این سایت (سایت covir2).
+ ## این نمودارها و کد های نرم افزار ممکن است حاوی اشتباهاتی باشند و به صورت ("as is") به اشتراک گذاشته شده اند و هر گونه عواقب هر گونه تصمیم گیری بر مبنای کد ها و نمودارهای موجود در این سایت (سایت covir2) بر عهده تصمیم گیرنده یا تصمیم گیرندگان است و نه بر عهده پدید آورنده یا عهده پدید آورندگان این سایت (سایت covir2).
 
 
 <div dir="ltr">
