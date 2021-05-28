@@ -647,6 +647,47 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 <br/><br/>
 
 
+#### سایر مدل ها:
+
+
+(الف) مدل های قابل افزوده شدن:
+
+(۱)‌ مدل آکسفورد 
+
+[Oxford model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/OXFO)
+
+
+(۲) مدل کووید سیمولیشن (COVIDSIM) (از ایمپریال کالج)
+
+[COVIDSIM model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/CSIM)
+
+مثال مدل کووید سیمولیشن 
+
+
+(ب)‌ مدل های قابل بررسی:
+
+(۱) مدل پلی کرونیس 
+
+[Polychronis model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/Polychronis)
+
+
+(۲) مدلی که در نمودار آی اچ ام ای برای ایران 
+
+
+
+(ج) مدل های بررسی شده که پوشش زمانی آن ها سال ۱۴۰۰ را در بر نمی گیرد  و اضافه نمودن آن ها برای پیشبینی آینده کاربرد ندارد:
+
+(۱) مدل یو سی ال ای (UCLA)
+
+[UCLA model web site](https://github.com/uclaml/ucla-covid19-forecasts)
+
+
+(۲) مدل (Youyang Gu) (YYGU)
+
+[Youyang Gu model web site](https://covid19-projections.com)
+
+
+
 ### نقاط قوت و ضعف مدل های به روز شونده همه گیری کووید-۱۹ در ایران 
 
 - نقاط قوت مشترک:
