@@ -9,11 +9,11 @@ Similar to the Oxford model, CSIM website contains some static old default data 
 
 The default placeholder data and specifics need to be updated and fine-tuned indeed. That being taken into consideration, the default placeholder data and specifics on CSIM web site for Iran are cured here in a test-dose:
 
-Graphs of CSIM are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20CSIM%2020210522.pdf)
+### Graphs of CSIM are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20CSIM%2020210522.pdf)
 
-Merged graphs of the five available models, plus a newly merged CSIM model, are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20merged%2020210522%20plus%20CSIM.pdf)
+### Merged graphs of the five available models, plus a newly merged CSIM model, are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20merged%2020210522%20plus%20CSIM.pdf)
 
-
+************
 
 * The following are the default CSIM model specifics for Iran (mentioned in the first 3 lines of csv file exported from the model website).
 
