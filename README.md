@@ -539,6 +539,8 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 <br/><br/>
 
 
+**********************************************************************************************
+
 ### خلاصه اجرایی:  
 
 برآوردهای پنج مطالعه بین المللی بروز-شونده برای همه گیری کووید-۱۹ در ایران به صورت نمودار، فایل و کد نرم افزار در این سایت گیت هاب (https://github.com/pourmalek/covir2) قابل مشاهده، داونلود، و اجرای مجدد در استیتا توسط دیگران هستند.
@@ -551,11 +553,14 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
  
 <br/><br/>
 
+**********************************************************************************************
 
 ### خلاصه
 برآوردهای هفت مطالعه (شامل پنج مطالعه بین المللی بروز-شونده) برای مرگ های روزانه
 (Daily deaths)، موارد روزانه بیماری (Daily cases)، مرگ های تجمعی (Total deaths)، و موارد تجمعی بیماری (Total cases)‌ کووید-۱۹ در ایران به صورت نمودار نشان داده شده اند و فایل های استیتا و (csv) آن ها نیز وجود دارند. نمودار موارد روزانه موجود بیماری (Prevalent daily cases) و برآوردهای مربوط به بستری و بیمارستان (Hospital-related) نیز وجود دارند.
 <br/><br/>
+
+**********************************************************************************************
 
 ### روش
 روش بررسی مطابق با مقاله 
@@ -563,6 +568,8 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 [پایگاه مرکز اطلاعات علمی جهاد دانشگاهی](https://www.sid.ir)،
 و در [بانک اطلاعات نشریات کشور](https://www.magiran.com)، و مقالات داوری نشده در پایگاه های [medRxiv](https://www.medrxiv.org) ، [arXiv](https://arxiv.org) و [Research Square](https://www.researchsquare.com).
 <br/><br/>
+
+**********************************************************************************************
 
 ### مطالعات
 مطالعات با علایم اختصاری نشان داده شده اند:
@@ -647,6 +654,8 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 <br/><br/>
 
 
+**********************************************************************************************
+
 #### سایر مدل ها:
 
 
@@ -686,7 +695,10 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 [Youyang Gu model web site](https://covid19-projections.com)
 
+<br/><br/>
 
+
+**********************************************************************************************
 
 ### نقاط قوت و ضعف مدل های به روز شونده همه گیری کووید-۱۹ در ایران 
 
@@ -759,6 +771,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 ## بدتر: اسریواستاوا، دلفی، لس آلاموس
 
 
+**********************************************************************************************
 
 ### نتایج
 نمودارها و خروجی ها، کد های نرم افزار استیتا، فایل های داده ها (استیتا و csv) و توضیحات روش مدیریت داده ها (از جمله واژه نامه داده ها و سناریوهای مطالعه ها) در همین تارنمای گیت هاب قرار دارند (https://github.com/pourmalek/covir2). همه داده های مورد استفاده (و نتایج حاصله) در سطح غیر فردی، در دسترس عموم در اینترنت، و دارای مجوز به کار گیری و باز-انتشار غیر تجاری می باشند. همه نمودارها در تارنمای گیت هاب، و چند نمودار منتخب در ادامه این متن قرار دارند. نمودارهای به روز-رسانی های اخیر مطالعات بررسی شده در این تارنما قرار خواهد گرفت.
@@ -910,6 +923,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 <br/><br/>
 
 
+**********************************************************************************************
 
 #### موضوعات مهم
 (۱) به روز رسانی برآوردها توسط مدل ها: برآوردهای مدل ها حتی برای یک دوره زمانی خاص در به روز رسانی های متوالی مدل ها، مستعد تغییر هستند. به همین جهت لازم است در تفسیر نتایج این موضوع را در نظر گرفت.
@@ -928,6 +942,8 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 <br/><br/>
 
 
+**********************************************************************************************
+
 ### محدودیت ها
 (۱) جستجوی مطالعات بین المللی بروز-شونده به صورت "سایر مطالعات مشخص شده از طریق سایر منابع" 
 [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951),
@@ -935,6 +951,7 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
   
   <br/><br/>
 
+**********************************************************************************************
 
 ### - جمله معترضه در مورد محدودیت نتایج مدل ها برای همه گیری در سطح کشوری بدون تجمیع نتایج استانی
 
@@ -955,6 +972,9 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 [بازگشت](https://github.com/pourmalek/covir2#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم)
 
 <br/><br/>
+
+**********************************************************************************************
+**********************************************************************************************
 
 ### نمودار های منتخب
 
@@ -2017,6 +2037,8 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 <br/><br/>
 
+**********************************************************************************************
+
 ### نحوه داونلود و استفاده از کد های نرم افزار
 
 خلاصه: 
@@ -2050,6 +2072,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 <br/><br/>
 
+**********************************************************************************************
 
 ### رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها
 
@@ -2066,6 +2089,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 <br/><br/>
 
 
+********************************************************************************************************************************************
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
@@ -2118,10 +2142,14 @@ Estimates of five international periodically updating models or studies of COVID
 Similar work for the _GLOBAL_ level are being prepared to be presented in [https://github.com/pourmalek/GlobalCovidCombineVisualize](https://github.com/pourmalek/GlobalCovidCombineVisualize)
 <br/><br/>
 
+****************************************************************************
+
 ### Summary
 
 Estimates of seven studies, including five international periodically updating studies of COVID-19 epidemic for Iran, for daily deaths, daily incident (new) cases, total (cumulative) deaths, and total (cumulative) incident cases are graphed, and Stata and csv data files are provided. Estimates of daily prevalent cases and hospital-related outcomes are also provided. 
 <br/><br/>
+
+****************************************************************************
 
 ### Methods
 
@@ -2129,6 +2157,8 @@ Eligibility for target (component) studies (models) of COVID-19 epidemic in Iran
 
 Methods generally follow the first iteration of this review, i.e., [Rapid review of COVID-19 epidemic estimation studies for Iran](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3), with the following differences. Search was performed for studies covering December 2020 onwards, was conducted in 16-18 March 2021, and was in seven databases: PubMed, Google Scholar, [Iranian Scientific Information Database](https://www.sid.ir), [Iranian National Periodicals Information Bank](https://www.magiran.com), and pre-prints in [medRxiv](https://www.medrxiv.org/), [arXiv](https://arxiv.org/), and [Research Square](https://www.researchsquare.com). 
 <br/><br/>
+
+****************************************************************************
 
 ### Results
 
@@ -2138,6 +2168,7 @@ Graphs, Stata codes (do files) and outputs, estimates’ data files (Stata and c
 
 <br/><br/>
 
+****************************************************************************
 
 ###  Studies / models
 
@@ -2303,6 +2334,8 @@ Note: Was included in uptake 20210423. This uptake was later omitted in conformi
 
   
 
+****************************************************************************
+
 ### Updates, uptakes, and directory structure
 
 <br/><br/>
@@ -2315,6 +2348,8 @@ The term _update_ is used to denote releases of outcomes' estimates by the compo
 .
 
 1- Level 1 of directories || dates on which a new uptake of studies updates were created in this repo
+
+Note: After uptake 20210521, new uptakes are not listed below; they are visible as dated directories in the beginning of this page.
 
 [`20210521`](https://github.com/pourmalek/covir2/tree/main/20210521) 
 
@@ -2387,6 +2422,8 @@ Output level-3 directories for component studies, e.g., [`output/IHME`](https://
   [back](https://github.com/pourmalek/covir2#english-readme-for-covir2)
 
 
+****************************************************************************
+
 ### Important considerations
 
 (1) Updates of models’ estimates
@@ -2400,11 +2437,14 @@ Any model has strengths and limitations that should be taken into consideration 
 None of the studies account for variants and vaccines yet. IHME included variants and vaccines in their model a few times but later omitted them. 
 
 
+****************************************************************************
+
 ### Limitations 
 
 (1) The search for international periodically updating studies is performed as "Additional records identified through other sources" [PRISMA checklist](https://figshare.com/articles/journal_contribution/Additional_file_1_of_Rapid_review_of_COVID-19_epidemic_estimation_studies_for_Iran/13684951), and therefore, its searcher-independent replicability is not perfect. A systematic review might reveal more international periodically updating studies that meet the eligibility criteria. (2) Software codes use a commercial software package. Use of R or Phyton are preferable in terms of user accessibility. Even a R package might be produced for this purpose. (3) Checking and performing updates in this repository are not automated. Use of Phyton, for instance, can make the process automated. (4) Communication of results on GitHub covers a relatively limited proportion of audience. Alternative communication venues and strategies can broaden the outreach to the audience.
 
-****
+
+****************************************************************************
 
 #### * Levels of changes that might affect the _uptakes_ here:
 
@@ -2447,6 +2487,7 @@ In practice, it becomes evident that whether the progression of viruses and emer
 
   [back](https://github.com/pourmalek/covir2#english-readme-for-covir2)
 
+********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
 ### Selected graphs 
