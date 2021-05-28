@@ -2135,6 +2135,12 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 [Troubleshooting, bug reporting, suggestions and feedback](https://github.com/pourmalek/covir2#troubleshooting-errors-bugs-and-vulnerabilities)
 
+
+## News and new additions – this repository:
+
+* The default specifics of COVIDSIM model for Iran are test-dose added (2021-05-28). See [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md)
+
+
 ********************************************************************************************************************************************
 
 
