@@ -11,6 +11,8 @@ All the variables have descriptive var `-label-`s that show what the variable st
 `Stata` commands are displayed as `-command-` and `Stata` non-command syntax as -syntax-.
 <br/><br/>
 
+***********************
+
 ### Variable names
 
 ## NOTE: (1) Starting from re-run on 20210519 of uptake 20210515, including model version in variable names and labels is retired. 
@@ -58,6 +60,8 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 
 <br/><br/>
 
+***********************
+
 #### Secondary outcome variable names:
 
 * Positions 4-6 in variable name can be, for instance,  *Act*, that means *Active cases* [in study *DELP*]
@@ -68,11 +72,15 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Adm: Admissions (hospital admissions by day) [IHME]				
 * Bed: Bed need (covid beds needed by day) [IHME]					
 * Beo: Bed over ( [covid all beds needed] - ([total bed capacity] - [average all bed usage]) ) [IHME]
+* Cax: Cases AVERTED [CSIM]
+* CaY: Cases COUNTERFACTUAL [CSIM]
+* DeY: Deaths COUNTERFACTUAL [CSIM]
+* DeZ: Deaths REPORTED [CSIM] 
 * Hod: Hospital Demand [IMPE]									
-* Hos: Hospitalized [DELP]										
+* Hos: Hospitalized [DELP], Hospitalisations [CSIM]										
 * Hoi: Hospital incidence [IMPE]									
 * Icd: ICU Demand [IMPE]										
-* Ici: ICU incidence [IMPE]									
+* Ici: ICU incidence [IMPE], Critical care  [CSIM]								
 * Icn: ICU new (number of new people going to the ICU by day) [IHME]		
 * Ico: ICU over ( [covid ICU beds needed] - ([total ICU capacity] - [average ICU bed usage]) ) [IHME]
 * Icu: ICU need (ICU covid beds needed by day) [IHME]					
@@ -80,7 +88,8 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Ref: R effective [IMPE]										
 * Rtt : R t [IMPE]											
 * Ser: Seroprevalence (seroprevalence) [IHME]						
-* Tes: Tests (total tests) [IHME]							
+* Tes: Tests (total tests) [IHME]		
+* Vax: Fully vaccinated persons [CSIM]					
 * Ven: Ventilated [DELP]									
 * Ven: Vent need (invasive Ventilation needed by day) [IHME]
 
@@ -92,7 +101,9 @@ Variable names and short description for hospital-related outcomes by IHME, are 
 
 
 <br/><br/>
-						
+			
+***********************
+
 #### Secondary variable names:
 
 Secondary variables have 2 subtypes: (1) store a calculated daily CFR, (1) store values created for visualization of temporal succession of daily cases and daily deaths peaks.
@@ -118,6 +129,8 @@ _(2) store values created for visualization of temporal succession of daily case
 
 <br/><br/>
 
+***********************
+
 #### Component study number:
 
 
@@ -140,6 +153,12 @@ A07 GHAN Ghanbari
 A08 YYGU Youyang Gu (was included in a 20210423 uptake; this uptake was later omitted in conformation to the [rule for creating uptakes](https://github.com/pourmalek/covir2/tree/main/setup))
 <br/><br/>
 
+(Additional international studies’ number starting from 16, to represent 6th international study and onwards.)
+
+A16 CSIM COVID-19 Simulation
+
+
+***********************
 
 ### References for component studies
 
@@ -172,8 +191,9 @@ YYGU [study web site](https://covid19-projections.com)
 
 <br/><br/>
 
-### Scenario number within component study
+***********************
 
+### Scenario number within component study
 
 [Names within brackets assigned by this review study.]
 
@@ -239,6 +259,7 @@ YYGU [study web site](https://covid19-projections.com)
 
 <br/><br/>
 
+***********************
 
 ### Version of the model in component studies
 
