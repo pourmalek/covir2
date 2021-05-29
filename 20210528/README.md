@@ -28,7 +28,7 @@ DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526, SRIV 20210528
 
 *
 
-[Daily deaths, all time, without DELP for this uptake](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2011%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
+[Daily deaths, all time, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2011%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/120054636-ec6e4e00-bfe5-11eb-864b-dfb0681a1d83.png)
 
@@ -40,7 +40,7 @@ DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526, SRIV 20210528
 
 *
 
-[Daily deaths, 2020-12 on, without DELP for this uptake](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
+[Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/120054681-26d7eb00-bfe6-11eb-9a07-5d3afa744f5d.png)
 
@@ -74,11 +74,23 @@ DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526, SRIV 20210528
 
 ![image](https://user-images.githubusercontent.com/30849720/120052495-757f8800-bfda-11eb-81e3-e6ae9c9a633a.png)
 
+*
+
+[Daily cases, all time, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2021%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120054814-15431300-bfe7-11eb-8ab1-91b37ab298f7.png)
+
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/120052518-92b45680-bfda-11eb-81d1-c75778a66131.png)
+
+*
+
+[Daily cases, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2023%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120054849-59ceae80-bfe7-11eb-843f-69a83a3544ce.png)
 
 ****
 
