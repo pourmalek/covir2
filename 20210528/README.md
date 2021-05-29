@@ -162,22 +162,27 @@ IHME Daily deaths https://covid19.healthdata.org/iran-(islamic-republic-of)?view
 
 IHME Cumulative deaths https://covid19.healthdata.org/iran-(islamic-republic-of)?view=cumulative-deaths&tab=trend
 
+![image](https://user-images.githubusercontent.com/30849720/120052844-2f2b2880-bfdc-11eb-84d4-c464891e4c82.png)
 
 *
 
+![image](https://user-images.githubusercontent.com/30849720/120052863-4833d980-bfdc-11eb-8cf1-2db9cd82c9a0.png)
 
 ****
 
 IHME Daily infections https://covid19.healthdata.org/iran-(islamic-republic-of)?view=infections-testing&tab=trend&test=infections
 
+![image](https://user-images.githubusercontent.com/30849720/120052892-68fc2f00-bfdc-11eb-8695-56a374d23af3.png)
 
 *
 
+![image](https://user-images.githubusercontent.com/30849720/120052916-774a4b00-bfdc-11eb-90fa-2730109e8631.png)
 
 ****
 
 IHME Hospital resource use https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources
 
+![image](https://user-images.githubusercontent.com/30849720/120052939-8df0a200-bfdc-11eb-91ae-915a50632051.png)
 
 *
 
