@@ -115,10 +115,6 @@
 
 *
 
-[Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/120054681-26d7eb00-bfe6-11eb-9a07-5d3afa744f5d.png)
-
 
 *
 
@@ -133,6 +129,14 @@
 (LANL) مطالعه آزمایشگاه لس آلاموس نیو مکزیکو (منحنی طلایی رنگ)
 
 (SRIV) مطالعه اسریواستاوا در دانشگاه کالیفرنیای جنوبی (منحنی سبز رنگ)
+
+*
+
+
+[Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120054681-26d7eb00-bfe6-11eb-9a07-5d3afa744f5d.png)
+
 
 ****
 
