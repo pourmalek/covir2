@@ -240,8 +240,200 @@ IMPE
 
 *
 
+*****
+*****
+
+LANL
+
+As of 2021-05-26, Iran has recorded 2,865,864 confirmed cases and 79,219 deaths.
+
+![image](https://user-images.githubusercontent.com/30849720/120080595-92fe3180-c06e-11eb-9181-6465c2dcf5d7.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080611-a8735b80-c06e-11eb-88fb-7c7e9ea29b39.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080619-b45f1d80-c06e-11eb-826b-af9b2679cab0.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080629-be811c00-c06e-11eb-9f3f-2f9b63565997.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080635-ca6cde00-c06e-11eb-81ec-8a89199e725e.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080648-d789cd00-c06e-11eb-844b-c8aebf08e724.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080664-e4a6bc00-c06e-11eb-9f8c-61c32d87d4fe.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080680-f2f4d800-c06e-11eb-8605-5bbf9db1bd6a.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080699-030cb780-c06f-11eb-8756-437af4ee74d5.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080715-1029a680-c06f-11eb-8695-1a9c3aa060fa.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080728-1c156880-c06f-11eb-96d8-9fb627317111.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080742-28012a80-c06f-11eb-9e46-ccbceaced778.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080750-33545600-c06f-11eb-8224-d2918593ad3e.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080790-4e26ca80-c06f-11eb-8b83-ba27bd5dde64.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080811-5c74e680-c06f-11eb-8eb8-a235153fef15.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080826-6bf42f80-c06f-11eb-9e8a-c30827a3baa7.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080846-7b737880-c06f-11eb-9e00-21f19cbf7319.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080862-862e0d80-c06f-11eb-9572-024515de78ea.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080881-9e059180-c06f-11eb-986f-7813b1971876.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080895-a6f66300-c06f-11eb-9b45-f2a639a22000.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080907-b07fcb00-c06f-11eb-860f-7eec7a86e7eb.png)
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/120080919-bd042380-c06f-11eb-91c5-26457f97b80b.png)
+
+*
+
+*
+
+We highly suggest understanding the assumptions of the model and consulting with epidemiologists or public health professionals before using the results of our forecasts for long-term decision making. 
+
+In the text, the forecasted number of confirmed cases and deaths are rounded to two significant figures when less than 10,000 and three significant figures when greater than or equal to 10,000. For exact numbers, please refer to the Six-Week Forecast tables or the Model Output tab.
 
 
 
 
+Executive Summary
+Situational Update
+As of 2021-05-26, Iran has recorded 2,865,864 confirmed cases and 79,219 deaths.
+Short-Term Forecast
+In one week from 2021-05-26, the model forecasts about 2,920,000 total confirmed cases (90% Prediction Interval: 2,900,000 - 2,940,000).
+
+In one week from 2021-05-26, the model forecasts about 80,300 total deaths (90% Prediction Interval: 80,200 - 80,400).
+
+Model Performance
+The Best Case (5th percentile) forecast has most closely tracked with observations of cases in Iran.
+
+The Best Case (5th percentile) forecast has most closely tracked with observations of deaths in Iran.
+
+Six-Week Forecast
+By 2021-07-07, the model forecasts about 3,140,000 total confirmed cases (90% Prediction Interval: 3,020,000 - 3,360,000).
+
+By 2021-07-07, the model forecasts about 82,900 total deaths (90% Prediction Interval: 82,000 - 84,600).
+
+Peak Timing
+Starting 2020-06-22, we will no longer be providing a Peak Timing Forecast. Please refer to the Model Description Tab for further explanation.
+Situational Update
+Top
+
+Cases
+Through 2021-05-26, there have been 2,865,864 confirmed cases in Iran. Over the past week, the total number of confirmed cases has been increasing by an average of 0.37% per day, or 10,523 confirmed cases a day.
+
+current confirmed cases
+
+Deaths
+Through 2021-05-26, there have been 79,219 deaths in Iran.
+
+Over the past week, the total number of deaths has been increasing by an average of 0.26% per day.
+
+current deaths
+
+
+
+Short-Term Forecast
+Top
+
+Cases
+According to the model, in one week from 2021-05-26 there could be about 2,920,000 total confirmed cases, corresponding to an average daily growth rate of 0.27%. However, the model predicts at the 95th percentile (a worst case forecast) that there could be as many as 2,940,000 confirmed cases (0.38% average daily growth rate). At the 5th percentile (a best case forecast), there could be 2,900,000 confirmed cases (0.19% average daily growth rate).
+
+short-term cumulative cases forecast
+
+Deaths
+According to the model, in one week from 2021-05-26 there could be about 80,300 total deaths. However, the model predicts at the 95th percentile (a worst case forecast) that there could be as many as 80,400 deaths. At the 5th percentile (a best case forecast), there could be 80,200 deaths.
+
+short-term deaths forecast
+
+
+
+Model Performance
+Top
+
+We compare the observed data (points) as of 2021-05-26 to three scenarios – Best Case (5th percentile), the Middle Case (50th percentile), and the Worst Case (95th percentile) – from the past six weeks of forecasts. Providing a near real-time assessment of our forecasts is crucial for transparency and for decision makers to know how to appropriately weight them. Forecasting now and in the future will only get better by understanding what is and is not working. We assess forecast performance using the mean absolute percent error.
+
+Cases
+The model scenario that has most often had the smallest mean absolute percent error in forecasting cases for Iran has been the Best Case. Below we show the model’s recent forecast performance of cumulative confirmed cases based on observed data through 2021-05-26.
+
+confirmed cases model performance
+
+
+Deaths
+The model scenario that has most often had the smallest mean absolute percent error in forecasting deaths for Iran has been the Best Case. Below we show the model’s recent forecast performance of deaths based on observations through 2021-05-26.
+
+
+
+deaths model performance
+
+
+Six-Week Forecast
+Top
+
+Given small changes in the forecasted growth rate and the model’s flexibility to account for different situations on the ground, the model’s six-week forecasts provide vastly different outlooks. Although the level of uncertainty is high, we hope these forecasts can still provide a guide for where Iran might be in six weeks time.
+
+Cases
+Based on the model performance since 2021-04-14, the model’s forecast of confirmed cumulative cases for Iran most closely matches on average with the Best Case.
+
+6-week cumulative cases forecast
+
+Deaths
+Based on the model performance since 2021-04-14, the model’s forecast of deaths for Iran most closely matches on average with the Best Case.
+
+6-week deaths forecast
+
+Forecasted Growth Rate
+We provide the expected growth rate in the cumulative number of confirmed cases for the next six weeks under different forecasted scenarios. The table reports the weekly average of the forecasted daily growth rates. Note that if the epidemic is slowing down, the growth rate should decrease.
+
+growth rate forecast
+
+*
 
