@@ -11,7 +11,7 @@ The default placeholder data and specifics need to be updated and fine-tuned ind
 
 ************
 
-### Graphs of the nwely add CSIM are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20CSIM%2020210522.pdf)
+### Graphs of the newly add CSIM are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20CSIM%2020210522.pdf)
 
 ### Merged graphs of the five available models, plus the newly added CSIM, merged with five available models, are [here]( https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/graphs%20merged%2020210522%20plus%20CSIM.pdf)
 
