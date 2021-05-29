@@ -746,7 +746,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 [COVIDSIM model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/CSIM)
 
 مثال مدل کووید سیمولیشن 
-
+[اینجا](https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md)
 
 (ب)‌ مدل های قابل بررسی:
 
