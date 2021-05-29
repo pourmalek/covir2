@@ -152,9 +152,11 @@ IHME
 
 IHME Daily deaths https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
 
+![image](https://user-images.githubusercontent.com/30849720/120052782-d8255380-bfdb-11eb-8b86-2b57b93d1e68.png)
 
 *
 
+![image](https://user-images.githubusercontent.com/30849720/120052795-e70c0600-bfdb-11eb-8084-e0122bbd0204.png)
 
 ****
 
