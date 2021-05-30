@@ -3,7 +3,9 @@ https://github.com/pyliu47/covidcompare Used and mentioned in [Friedman - Predic
 
 https://covidcompare.io Mentioned in https://github.com/pyliu47/covidcompare : "Please check out our new online Viz Tool at covidcompare.io, which will be updated regularly going forward. This was produced by Samir Akre (Github, Twitter)."
 
-This is a wonderful website by Joseph Friedman, Patrick Liu, Samir Akre. Its "Analysis Code" goes to https://github.com/pyliu47/covidcompare, and its "Website Code" goes to https://github.com/akre96/CovidCompare that displays estimates for:
+https://covidcompare.io is a wonderful website by © 2021 Joseph Friedman, Patrick Liu, Samir Akre. Its "Analysis Code" goes to https://github.com/pyliu47/covidcompare, and its "Website Code" goes to https://github.com/akre96/CovidCompare 
+
+that displays in **"Current Forecasts"** tab, estimates for:
 
 
 // cf. a sample variable name in this covir2 repository: **DayDeaMeRaA02S01**, i.e. Daily Deaths Mean, Raw, Study 2 (IHME), Scenario 1 //
@@ -29,9 +31,13 @@ This is a wonderful website by Joseph Friedman, Patrick Liu, Samir Akre. Its "An
 
 (H) Update version: Most recent update release (assumed) + Model version: Most recent model version (assumed)
 
+****
 
+Plus, "Model Performance" and "Historical Forecasts", each in its own tab. 
 
+"Model Performance" for Wolrd or one of the 6 [GBD-defined regions](http://www.healthdata.org/gbd/faq#What%20countries%20are%20in%20each%20region?) 
 
+"Historical Forecasts" for each of the six models mentioned above, or previous model versions of IHME. Current model version for IHME "" 
 
 
 
