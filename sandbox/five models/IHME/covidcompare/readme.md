@@ -21,7 +21,7 @@ This is a wonderful website by Joseph Friedman, Patrick Liu, Samir Akre. Its "An
     
 (E) Study (A??): CovidCompare name [covir2 name]  : UCLA-ML [UCLA], Delphi [DELP], IHME-MS-SEIR [IHME], Imperial [IMPE], LANL [LANL], and SIKJalpha [SRIV] 
     
-&ensp;    and / or among studies i.e., from zero to all of them
+   &ensp;  and / or among studies i.e., from zero to all of them
 
 (F) Scenario: Reference scenario (assumed)
 
