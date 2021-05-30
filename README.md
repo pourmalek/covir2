@@ -24,9 +24,7 @@
 ## مرور برآوردهای مطالعات بین المللی برای همه گیری کووید-۱۹ در ایران، نسخه دوم
  
  فرشاد پورملک
- 
- [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
- 
+  
 <br/><br/>
 
 
