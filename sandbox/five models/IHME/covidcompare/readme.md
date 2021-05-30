@@ -1,4 +1,4 @@
-About covidcompare by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
+### About covidcompare by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
 
 https://github.com/pyliu47/covidcompare Used and mentioned in article [Friedman - Predictive performance of international COVID-19 mortality forecasting models](https://www.nature.com/articles/s41467-021-22457-w)
 
