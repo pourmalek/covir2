@@ -40,7 +40,7 @@ Plus, **"Model Performance"** and **"Historical Forecasts"**, each in its own ta
 
 "Model Performance" for World or one of the 6 [GBD-defined regions](http://www.healthdata.org/gbd/faq#What%20countries%20are%20in%20each%20region?) 
 
-"Historical Forecasts" for each of the six models mentioned above, or previous model versions of IHME. 
+"Historical Forecasts" for each of the six models mentioned above and previous model versions of IHME, one at a time. For Iran, only the current version of IHME model. 
 
 
 
