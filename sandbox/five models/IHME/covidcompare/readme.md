@@ -17,7 +17,7 @@ This is a wonderful website by Joseph Friedman, Patrick Liu, Samir Akre. Its "An
 
 (D) Raw or Smooth: Raw "Unsmooth" (or) "Smooth"                                       // Ra | SM
 
-  7 day moving average filter used for smoothing
+&ensp;  7 day moving average filter used for smoothing
     
 (E) Study (A??): CovidCompare name [covir2 name]  : UCLA-ML [UCLA], Delphi [DELP], IHME-MS-SEIR [IHME], Imperial [IMPE], LANL [LANL], and SIKJalpha [SRIV] 
     
