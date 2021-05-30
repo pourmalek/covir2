@@ -55,7 +55,7 @@ LANL https://covid-19.bsvgateway.org
 
 SRIV https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
 
-UCLA 
+UCLA https://github.com/uclaml/ucla-covid19-forecasts
 
 *****************
 
