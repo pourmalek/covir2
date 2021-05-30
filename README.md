@@ -867,8 +867,12 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 ## بدتر: اسریواستاوا، دلفی، لس آلاموس
 
-## عملکرد مدل های بین المللی برگرفته شده از 
- [covidcompare](https://covidcompare.io)
+*****
+*****
+
+<br/><br/>
+
+##   [covidcompare](https://covidcompare.io) عملکرد مدل های بین المللی برگرفته شده از
 
 ## Performance of models, historical forecasts, Iran
 , from [covidcompare](https://covidcompare.io) by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
