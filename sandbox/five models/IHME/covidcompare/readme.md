@@ -43,7 +43,9 @@ Plus, **"Model Performance"** and **"Historical Forecasts"**, each in its own ta
 "Historical Forecasts" for each of the six models mentioned above and previous model versions of IHME, one at a time. For Iran, only the current version of IHME model. 
 
 
+<div dir="rtl">
 
+هنگام بروز-رسانی روزانه سایت کووید-کامپیر، برآوردهای مرگ های روزانه به طور موقت نمایش داده نمی شوند. 
 
 
 
