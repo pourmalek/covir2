@@ -30,13 +30,15 @@ https://covidcompare.io displays in **"Current Forecasts"** tab, estimates for:
 
 (G) Locations: Country, US state (or)
 
-(H) Update version: Most recent update release (assumed) + Model version: Most recent model version (assumed)
+(H) Update version: Most recent update release + Model version: Most recent model version (assumed)
+
+"Predictions Last Updated" [date] is shown for each study, with links to studies' pertinent web sites. 
 
 ****
 
 Plus, **"Model Performance"** and **"Historical Forecasts"**, each in its own tab. 
 
-"Model Performance" for Wolrd or one of the 6 [GBD-defined regions](http://www.healthdata.org/gbd/faq#What%20countries%20are%20in%20each%20region?) 
+"Model Performance" for World or one of the 6 [GBD-defined regions](http://www.healthdata.org/gbd/faq#What%20countries%20are%20in%20each%20region?) 
 
 "Historical Forecasts" for each of the six models mentioned above, or previous model versions of IHME. 
 
