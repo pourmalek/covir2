@@ -867,6 +867,50 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 ## بدتر: اسریواستاوا، دلفی، لس آلاموس
 
+## عملکرد مدل های بین المللی برگرفته شده از 
+ [covidcompare](https://covidcompare.io)
+
+## Performance of models, historical forecasts, Iran
+, from [covidcompare](https://covidcompare.io) by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
+
+About [covidcompare](https://covidcompare.io), summary in this covir2 repo, [here](https://github.com/pourmalek/covir2/tree/main/sandbox/five%20models/IHME/covidcompare)
+
+
+DELPHI
+
+![image](https://user-images.githubusercontent.com/30849720/120105622-8af5ce80-c10e-11eb-8fd4-b85832221772.png)
+
+*
+
+IHME
+
+![image](https://user-images.githubusercontent.com/30849720/120105737-1f603100-c10f-11eb-9bd8-1c188f69c657.png)
+
+*
+
+IMPE
+
+![image](https://user-images.githubusercontent.com/30849720/120105759-3c94ff80-c10f-11eb-8e32-dc30963a58e6.png)
+
+*
+
+LANL
+
+![image](https://user-images.githubusercontent.com/30849720/120105786-50d8fc80-c10f-11eb-96c3-892d079d201e.png)
+
+*
+
+SRIV
+
+![image](https://user-images.githubusercontent.com/30849720/120105806-63533600-c10f-11eb-8542-d110bd7cba5f.png)
+
+*
+
+UCLA
+
+![image](https://user-images.githubusercontent.com/30849720/120105828-782fc980-c10f-11eb-812e-fb395aba74f1.png)
+
+*
 
 **********************************************************************************************
 
