@@ -6,7 +6,7 @@ https://covidcompare.io Mentioned in https://github.com/pyliu47/covidcompare : "
 This is a wonderful website by Joseph Friedman, Patrick Liu, Samir Akre. Its "Analysis Code" goes to https://github.com/pyliu47/covidcompare, and its "Website Code" goes to https://github.com/akre96/CovidCompare that displays estimates for:
 
 
-// cf. a sample variable name in this covir2 repository: **DayDeaMeRaA02S01**, i.e. Daily Deaths Mean, Raw, Study 2 (IHME), Scenario 1 (reference) //
+// cf. a sample variable name in this covir2 repository: **DayDeaMeRaA02S01**, i.e. Daily Deaths Mean, Raw, Study 2 (IHME), Scenario 1 //
 
 
 (A) Total or Daily: Total "Cumulative Deaths" (or) Daily "Deaths Per Day"             // Tot | Day 
