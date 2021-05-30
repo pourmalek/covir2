@@ -871,14 +871,15 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 <br/><br/>
 
-##    عملکرد مدل های بین المللی برگرفته شده از
+##    عملکرد مدل های بین المللی برگرفته شده از: 
 ## [covidcompare](https://covidcompare.io)
 
-## Performance of models, historical forecasts, Iran
-, from [covidcompare](https://covidcompare.io) by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
+## Performance of models, historical forecasts, Iran:
+## from [covidcompare](https://covidcompare.io) by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
 
 About [covidcompare](https://covidcompare.io), summary in this covir2 repo, [here](https://github.com/pourmalek/covir2/tree/main/sandbox/five%20models/IHME/covidcompare)
 
+*
 
 DELPHI
 
