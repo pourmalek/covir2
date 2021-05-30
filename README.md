@@ -742,12 +742,16 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 (الف) مدل های قابل افزوده شدن:
 
-(۱)‌ مدل آکسفورد 
+(۱) مدل یو سی ال ای (UCLA)
+
+[UCLA model web site](https://github.com/uclaml/ucla-covid19-forecasts)
+
+(۲)‌ مدل آکسفورد 
 
 [Oxford model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/OXFO)
 
 
-(۲) مدل کووید سیمولیشن (COVIDSIM) (از ایمپریال کالج)
+(۳) مدل کووید سیمولیشن (COVIDSIM) (از ایمپریال کالج)
 
 [COVIDSIM model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/CSIM)
 
@@ -761,18 +765,13 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 [Polychronis model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/Polychronis)
 
 
-(۲) مدلی که در نمودار آی اچ ام ای برای ایران 
 
 
 
 (ج) مدل های بررسی شده که پوشش زمانی آن ها سال ۱۴۰۰ را در بر نمی گیرد  و اضافه نمودن آن ها برای پیشبینی آینده کاربرد ندارد:
 
-(۱) مدل یو سی ال ای (UCLA)
 
-[UCLA model web site](https://github.com/uclaml/ucla-covid19-forecasts)
-
-
-(۲) مدل (Youyang Gu) (YYGU)
+(۱) مدل (Youyang Gu) (YYGU)
 
 
 مطالعه یویانگ گو (YYGU)، مطالعه ایست که در سال ۲۰۲۰ انجام شد، مشتمل بر یک مدل (SEIR) و (Machine Learning). تارنمای مطالعه
