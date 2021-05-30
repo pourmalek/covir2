@@ -2266,7 +2266,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 ## رفع مشکلات، گزارش اشتباهات، ارایه پیشنهادات و بازخوردها
 
 
-در صورت مواجهه با اشکال در اجرای کد،‌ به قسمت رفع مشکلات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.pdf) مراجعه شود. در صورت رفع نشدن اشکال، و همچنین در صورت مشاهده اشتباه (bug) در کد ها، می توان به [اینجا](https://github.com/pourmalek/covir2/tree/main/.github/ISSUE_TEMPLATE) مراجعه نمود، یا به پدید آورنده (pourmalek_farshad@yahoo.com) ای-میل زد.
+در صورت مواجهه با اشکال در اجرای کد،‌ به قسمت رفع مشکلات در [اینجا](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.pdf) مراجعه شود. در صورت رفع نشدن اشکال، و همچنین در صورت مشاهده اشتباه (bug) در کد ها، می توان به [اینجا](https://github.com/pourmalek/covir2/tree/main/.github/ISSUE_TEMPLATE) مراجعه نمود، یا به پدید آورنده (pourmalek_farshad at yahoo dot com) ای-میل زد.
 
 لطفا برای ارایه پیشنهادات و بازخوردها از پست الکترونیک استفاده فرمایید.
 
