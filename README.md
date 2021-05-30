@@ -6,6 +6,8 @@
 
 <br/><br/>
 
+[English](https://github.com/pourmalek/covir2/blob/main/README.md#english-readme-for-covir2)
+
 ******
 
 
@@ -2290,7 +2292,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 ********************************************************************************************************************************************
 * Project: Rapid review of estimates of COVID-19 Iran - No 2
-* Person: Farshad Pourmalek pourmalek_farshad@yahoo.com    [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
+* Person: Farshad Pourmalek // pourmalek_farshad@yahoo.com // [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
 * Time (initial): 2021-02-10
 * **OBJECTIVE** Get and prepare component studies' estimates for Iran, combine them, and produce data files and graphs of combined estimates
 ********************************************************************************************************************************************
