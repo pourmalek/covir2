@@ -55,6 +55,8 @@ LANL https://covid-19.bsvgateway.org
 
 SRIV https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
 
+UCLA 
+
 *****************
 
 ### Study || URL for graphs
@@ -68,6 +70,8 @@ IMPE https://covid-19.bsvgateway.orghttps://github.com/mrc-ide/global-lmic-repor
 LANL https://covid-19.bsvgateway.org Click on "Global Forecasts", the second line in top left menu. Click on the country in the map, twice. This brings up a panel titled "Iran Forecast" containing text and graphs. 
 
 SRIV https://scc-usc.github.io/ReCOVER-COVID-19/
+
+UCLA https://covid19.uclaml.org
 
 *****************
 
