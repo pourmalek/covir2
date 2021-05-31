@@ -734,7 +734,19 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 نویسنده اول کامران سلطانی ،
  [مقاله اینجا]( https://arxiv.org/abs/2008.11716)
 
+
+
+
+مطالعه [ یو سی ال ای](https://covid19.uclaml.org) 
+دانشگاه کالیفرنیا، لس آنجلس، با نام اختصاری 
+[UCLA](https://github.com/pourmalek/covir2/tree/main/20210528/output/UCLA)
+،
+نویسنده اول دیفان زو ،
+ [مقاله اصلی اینجا](https://www.medrxiv.org/content/10.1101/2020.05.24.20111989v1)
+
+مطالعه یو سی ال ای از برداشت مورخ (20210528) (۱۴۰۰۰۳۰۱) اضافه شده است.
  
+
 
 و همچنین پایگاه داده های
 [دانشگاه جانز هاپکینز](https://coronavirus.jhu.edu/map.html)، 
