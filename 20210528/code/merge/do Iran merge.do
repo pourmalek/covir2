@@ -1002,7 +1002,7 @@ ttext(0 21apr2021  "Ord" 0 22may2021  "Kho" ///
 0 22jun2021  "Tir"  0 23jul2021  "Mor" 0 23Aug2021  "Sha" ///
 0 23Sep2021  "Meh"  , size(small) color(black) placement(south))
 
-graph save "graph 16 b COVID-19 daily deaths, Iran, reference scenarios, 2020-12-01 on, CI., wo DELP for this uptake.gph", replace
+graph save "graph 16 b COVID-19 daily deaths, Iran, reference scenarios, 2020-12-01 on, CI, wo DELP for this uptake.gph", replace
 graph export "graph 16 b COVID-19 daily deaths, Iran, reference scenarios, 2020-12-01 on, CI, wo DELP for this uptake.pdf", replace
 
 
