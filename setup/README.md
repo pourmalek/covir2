@@ -71,7 +71,7 @@ LANL https://covid-19.bsvgateway.org Click on "Global Forecasts", the second lin
 
 SRIV https://scc-usc.github.io/ReCOVER-COVID-19/
 
-UCLA https://covid19.uclaml.org Click on word "World" in top left, then clivk of the country Iran in the map.
+UCLA https://covid19.uclaml.org Click on word "World" in top left, then click on the country in the map.
 
 *****************
 
