@@ -52,9 +52,9 @@
 ## اخبار و مطالب جدید –ریپوزیتری کوویر-۲
 
 * تنظیمات پیش فرض مدل کووید-سیمولیشن (COVIDSIM) مربوط به ایمپریال کالج به صورت تست-دوز به پنج مدل موجود در این ریپوزیتری اضافه شد (جمعه ۷ خرداد ۱۴۰۰).
-[اینجا](https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md) 
+[اینجا](https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md) و [اینجا](https://github.com/pourmalek/covir2/tree/main/20210522/output/CSIM) 
 
-[اینجا](https://github.com/pourmalek/covir2/tree/main/20210522/output/CSIM)
+
 
 * وضعیت همه مدل ها / مطالعات قابل اضافه شدن به مجموعه پنج مدل موجود در این ریپوزیتری، در 
 [اینجا](https://github.com/pourmalek/covir2#سایر-مطالعات--مدل-ها) 
