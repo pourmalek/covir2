@@ -742,7 +742,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 [UCLA](https://github.com/pourmalek/covir2/tree/main/20210528/output/UCLA)
 ،
 نویسنده اول دیفان زو ،
- [مقاله اصلی اینجا](https://www.medrxiv.org/content/10.1101/2020.05.24.20111989v1)
+ .[مقاله اصلی اینجا](https://www.medrxiv.org/content/10.1101/2020.05.24.20111989v1)
 مطالعه یو سی ال ای از برداشت مورخ (20210528) (۱۴۰۰۰۳۰۱) به این مجموعه اضافه شده است. 
 
 
