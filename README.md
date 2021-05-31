@@ -1368,7 +1368,7 @@ uptake 20210528 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 uptake 20210528 [Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120134208-7c48ff00-c182-11eb-9156-72a90ac17d57.png)
+![image](https://user-images.githubusercontent.com/30849720/120135039-3db44400-c184-11eb-8cc5-f4eb2e0202e1.png)
 
 ****************
 
