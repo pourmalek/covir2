@@ -54,9 +54,16 @@
 * تنظیمات پیش فرض مدل کووید-سیمولیشن (COVIDSIM) مربوط به ایمپریال کالج به صورت تست-دوز به پنج مدل موجود در این ریپوزیتری اضافه شد (جمعه ۷ خرداد ۱۴۰۰).
 [اینجا](https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md) 
 
+[اینجا](https://github.com/pourmalek/covir2/tree/main/20210522/output/CSIM)
+
 * وضعیت همه مدل ها / مطالعات قابل اضافه شدن به مجموعه پنج مدل موجود در این ریپوزیتری، در 
 [اینجا](https://github.com/pourmalek/covir2#سایر-مطالعات--مدل-ها) 
 شرح داده شده است. 
+
+* مدل یو سی ال ای (UCLA) به پنج مدلی که تا کنون در این ریپو وجود داشتند اضافه شد (۹ خرداد ۱۴۰۰).
+برداشت مورخ (20210528) (۱۴۰۰۰۳۰۱) 
+[اینجا](https://github.com/pourmalek/covir2/tree/main/20210528/output/UCLA)
+
 
 
 **************
@@ -742,21 +749,19 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 (الف) مدل های قابل افزوده شدن:
 
-(۱) مدل یو سی ال ای (UCLA)
 
-[UCLA model web site](https://github.com/uclaml/ucla-covid19-forecasts)
-
-(۲)‌ مدل آکسفورد 
+(۱)‌ مدل آکسفورد 
 
 [Oxford model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/OXFO)
 
 
-(۳) مدل کووید سیمولیشن (COVIDSIM) (از ایمپریال کالج)
+(۲) مدل کووید سیمولیشن (COVIDSIM) (از ایمپریال کالج)
 
 [COVIDSIM model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/CSIM)
 
 مثال مدل کووید سیمولیشن 
 [اینجا](https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md)
+
 
 (ب)‌ مدل های قابل بررسی:
 
@@ -765,6 +770,12 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 [Polychronis model web site](https://github.com/pourmalek/covir2/tree/main/sandbox/Polychronis)
 
 
+(ج)‌ مدل های جدیدا اضافه شده:
+
+(۱)  مدل یو سی ال ای (UCLA)
+
+
+[UCLA model web site](https://github.com/uclaml/ucla-covid19-forecasts)
 
 
 
