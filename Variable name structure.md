@@ -188,8 +188,14 @@ Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Government
 <br/><br/>
 **A07 GHAN**
 Ghanbari B. On forecasting the spread of the COVID-19 in Iran: The second wave. Chaos Solitons Fractals. 2020 Nov;140:110176. doi: 10.1016/j.chaos.2020.110176. Epub 2020 Jul 28. [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386426/)
+
 <br/><br/>
 YYGU [study web site](https://covid19-projections.com)
+<br/><br/>
+
+**A17 UCLA**
+Zou D, Wang L, Xu P, Chen J, Zhang W, Gu Q. Epidemic Model Guided Machine Learning for
+COVID-19 Forecasts in the United States. medRxiv per-print. Posted May 25, 2020. doi: https://doi.org/10.1101/2020.05.24.20111989 https://www.medrxiv.org/content/10.1101/2020.05.24.20111989v1
 
 <br/><br/>
 
