@@ -488,3 +488,12 @@ ULCA
 https://covidcompare.io
 
 ![image](https://user-images.githubusercontent.com/30849720/120122705-3b8bbe80-c15f-11eb-9de6-c8d3c9abc22f.png)
+
+
+* _cf._
+
+[Total deaths, 2020-12-01 on](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2033%20COVID-19%20total%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120126409-fec8c300-c170-11eb-8942-2313f21b3a57.png)
+
+* 
