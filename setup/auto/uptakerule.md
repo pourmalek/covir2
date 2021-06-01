@@ -33,7 +33,7 @@ every day, today,
 
 (12) identify last date in text block "Previous data", e.g., "May 21, 2021", change format to 2021-05-21, name it ihme_date_web
 
-(13) identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_vocir2
+(13) identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_covir2
 
 (14) if ihme_date_web > ihme_date_vocir2, create a new uptake, and modify in the latest previous uptake, the IHME download estimates path path from 
 
@@ -43,7 +43,7 @@ to
 
 copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-28/ihme-covid19.zip ihme-covid19.zip
 
-with 2021-05-28 taken from ihme_date_vocir2
+with 2021-05-28 taken from ihme_date_covir2 (and run the code to make sure it works and produce new logs)
 
 (15) 
 
