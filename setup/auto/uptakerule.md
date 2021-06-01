@@ -38,7 +38,7 @@ LANL https://covid-19.bsvgateway.org
 
 SRIV https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
 
-UCLA https://github.com/uclaml/ucla-covid19-forecasts
+UCLA https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection
 
 **********
 **********
@@ -50,11 +50,13 @@ every day, today, name today's date today_date
 
 * (A) check IHME
 
+* expected update relases frequency for IHME: weekly
+
 (11) check IHME estimates site http://www.healthdata.org/covid/data-downloads
 
 (12) identify last date in text block "Previous data", e.g., "May 21, 2021", change format to 2021-05-21, name it ihme_date_web
 
-(13) identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_covir2
+(13) **identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_covir2**
 
 (14) if ihme_date_web > ihme_date_vocir2, create a new uptake, and modify in the latest previous uptake, for the latter, open:
 
@@ -82,6 +84,8 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 
 * (B) check IMPE for latest update relative to this new uptake, where this new uptake is triggered by the new IHME update
 
+* expected update relases frequency for IMPE: almost weekly
+
 (21) check IMPE estimates site http://www.healthdata.org/covid/data-downloads
 
 (22) **identify latest update in this format: 2021-05-22_v8.csv.zip**, change format to 2021-05-22, name it impe_date_web 
@@ -93,21 +97,48 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 
 * (C) check other studies 
 
-DELP
+* DELP
+
+* expected update relases frequency for DELP: daily
 
 (31) check DELP estimates site https://github.com/COVIDAnalytics/website/tree/master/data/predicted
 
-(32) **identify largest impe_date_web from this format: Global_V4_20210601.csv, where today_date >= impe_date_web**, i.e. DELP update for today or if no DELP update for today, the latest DELP update before today
+(32) **identify largest impe_date_web from this format: Global_V4_20210601.csv, where today_date >= impe_date_web**, i.e. DELP update for today or if no DELP update for today, the latest DELP update before today. expected update relases frequency for DELP: daily
 
 (33) replace delp_date[new_line] with delp_date_web, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
-LANL
+
+* LANL
+
+* expected update relases frequency for LANL: every 3-4 days
 
 (34) check LANL estimates site https://covid-19.bsvgateway.org, tab "Model Outputs", tab "Global"
 
 (35) **identify first "Forecast Date", e.g., 2021-05-26, name it lanl_date_web, identify largest lanl_date_web where today_date >= lanl_date_web**, i.e. LANL update for today or if no LANL update for today, the latest DELP update before today
 
 (36) replace lanl_date[new_line] with lanl_date_web, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
+
+
+* SRIV
+
+* expected update relases frequency for SRIV: daily
+
+(37) check SRIV estimates site https://covid-19.bsvgateway.org
+
+(38) **identify latest update in this format: 2021-06-01, name it sriv_date_web, identify largest sriv_date_web where today_date >= sriv_date_web**, i.e. SRIV update for today or if no SRIV update for today, the latest SRIV update before today
+
+(39) replace sriv_date[new_line] with sriv_date_web, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
+
+
+* UCLA
+
+* expected update relases frequency for UCLA: ?
+
+(40) check UCLA estimates site https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection, 
+
+(41) identify pred_world_new.csv, identify the value in this row in third columns, under col heading "History", e.g., 26 days ago, name it ucla_days_ago
+
+(42) replace ucla_date[new_line] = today_date - ucla_days_ago, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
 
 
