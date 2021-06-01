@@ -22,6 +22,9 @@ For every single calendar date,
 
 Internal Note: If a new update by IHME is available (step 2), the URL for previous latest update needs to be changed from -copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip- to -https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip- where 2021-05-07 denotes the previous latest update.
 
+**********
+**********
+
 details
 
 every day, today,
@@ -30,7 +33,7 @@ every day, today,
 
 (12) identify last date in text block "Previous data", e.g., "May 21, 2021", change format to 2021-05-21, name it ihme_date_web
 
-(13) identify last row of ihme_date in uptakes_table.csv, e.g., 2021-05-28, name it ihme_date_vocir2
+(13) identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_vocir2
 
 (14) if ihme_date_web > ihme_date_vocir2,
 
