@@ -25,7 +25,7 @@ Internal Note: If a new update by IHME is available (step 2), the URL for previo
 **********
 **********
 
-details
+details for auto-uptake
 
 every day, today,
 
@@ -35,6 +35,16 @@ every day, today,
 
 (13) identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_vocir2
 
-(14) if ihme_date_web > ihme_date_vocir2,
+(14) if ihme_date_web > ihme_date_vocir2, create a new uptake, and modify in the latest previous uptake, the IHME download estimates path path from 
+
+copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip
+
+to 
+
+copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-28/ihme-covid19.zip ihme-covid19.zip
+
+with 2021-05-28 taken from ihme_date_vocir2
+
+(15) 
 
 .
