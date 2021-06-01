@@ -82,13 +82,22 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 
 * (B) check IMPE for latest update relative to this new uptake, where this new uptake is triggered by the new IHME update
 
-(19) check IMPE estimates site http://www.healthdata.org/covid/data-downloads
+(21) check IMPE estimates site http://www.healthdata.org/covid/data-downloads
 
-(20) identify latest update in this format: 2021-05-22_v8.csv.zip, change format to 2021-05-22, name it impe_date_web 
+(22) **identify latest update in this format: 2021-05-22_v8.csv.zip**, change format to 2021-05-22, name it impe_date_web 
 
-(21) identify impe_date[previuos_line] and name it impe_date_covir2
+(23) identify impe_date[previuos_line] and name it impe_date_covir2
 
-(22) replace impe_date[new_line] with impe_date_web. IMPE and IHME usually do not release updates in the same day. if they do, replace uptake_trigger[new_line] with value ihme to value both 
+(24) replace impe_date[new_line] with impe_date_web. IMPE and IHME usually do not release updates in the same day. if they do, replace uptake_trigger[new_line] with value ihme to value both 
+
+
+* (C) check other studies 
+
+(31) check DELP estimates site https://github.com/COVIDAnalytics/website/tree/master/data/predicted
+
+(32) **identify impe_date_web from this format: Global_V4_20210601.csv, where today_date >= impe_date_web**, i.e. DELP update for today or if no DELP update for today, the latest DELP update before today. 
+
+(33) replace delp_date[new_line] with delp_date_web.
 
 
 
