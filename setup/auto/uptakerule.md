@@ -72,11 +72,11 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 
 (15) for creation of THE new uptake, add a new line (new_line) to [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv) by replacing the empty uptake_date[new_line] with today_date, 
 
-(16) replace the empty uptake_no[new_line] with uptake_no[previous_line]
+(16) replace the empty uptake_no[new_line] with uptake_no[previous_line], in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
-(17) replace the empty ihme_date[new_line] with today_date
+(17) replace the empty ihme_date[new_line] with today_date, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
-(18) replace the empty uptake_trigger[new_line] with ihme
+(18) replace the empty uptake_trigger[new_line] with ihme, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
 
 
@@ -86,18 +86,28 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 
 (22) **identify latest update in this format: 2021-05-22_v8.csv.zip**, change format to 2021-05-22, name it impe_date_web 
 
-(23) identify impe_date[previuos_line] and name it impe_date_covir2
+(23) identify impe_date[previuos_line] and name it impe_date_covir2, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
-(24) replace impe_date[new_line] with impe_date_web. IMPE and IHME usually do not release updates in the same day. if they do, replace uptake_trigger[new_line] with value ihme to value both 
+(24) replace impe_date[new_line] with impe_date_web, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv). IMPE and IHME usually do not release updates in the same day. if they do, replace uptake_trigger[new_line] with value ihme to value both 
 
 
 * (C) check other studies 
 
+DELP
+
 (31) check DELP estimates site https://github.com/COVIDAnalytics/website/tree/master/data/predicted
 
-(32) **identify impe_date_web from this format: Global_V4_20210601.csv, where today_date >= impe_date_web**, i.e. DELP update for today or if no DELP update for today, the latest DELP update before today. 
+(32) **identify largest impe_date_web from this format: Global_V4_20210601.csv, where today_date >= impe_date_web**, i.e. DELP update for today or if no DELP update for today, the latest DELP update before today
 
-(33) replace delp_date[new_line] with delp_date_web.
+(33) replace delp_date[new_line] with delp_date_web, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
+
+LANL
+
+(34) check LANL estimates site https://covid-19.bsvgateway.org, tab "Model Outputs", tab "Global"
+
+(35) **identify first "Forecast Date", e.g., 2021-05-26, name it lanl_date_web, identify largest lanl_date_web where today_date >= lanl_date_web**, i.e. LANL update for today or if no LANL update for today, the latest DELP update before today
+
+(36) replace lanl_date[new_line] with lanl_date_web, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
 
 
