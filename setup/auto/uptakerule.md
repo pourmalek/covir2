@@ -1,6 +1,6 @@
-uptakerule.md for covir2
+### uptakerule.md for covir2
 
-Description of rule for uptakes of covir2
+#### Description of rule for uptakes of covir2
 
 This is description of rule of adding uptakes to covir2 repository, either prospectively, i.e., uptakes with new calendar time dates, or retrospectively, i.e., uptakes with calendar time dates in the past.
 
@@ -25,7 +25,7 @@ Internal Note: If a new update by IHME is available (step 2), the URL for previo
 **********
 **********
 
-details for auto-uptake
+### details for auto-uptake
 
 every day, today,
 
