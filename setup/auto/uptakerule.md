@@ -22,6 +22,24 @@ For every single calendar date,
 
 Internal Note: If a new update by IHME is available (step 2), the URL for previous latest update needs to be changed from -copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip- to -https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip- where 2021-05-07 denotes the previous latest update.
 
+
+**********
+**********
+
+### Study || URL for estimates files
+
+DELP https://github.com/COVIDAnalytics/website/tree/master/data/predicted
+
+IHME http://www.healthdata.org/covid/data-downloads
+
+IMPE https://github.com/mrc-ide/global-lmic-reports/tree/master/data
+
+LANL https://covid-19.bsvgateway.org
+
+SRIV https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
+
+UCLA https://github.com/uclaml/ucla-covid19-forecasts
+
 **********
 **********
 
@@ -29,13 +47,20 @@ Internal Note: If a new update by IHME is available (step 2), the URL for previo
 
 every day, today, name today's date today_date
 
+
+* (A) check IHME
+
 (11) check IHME estimates site http://www.healthdata.org/covid/data-downloads
 
 (12) identify last date in text block "Previous data", e.g., "May 21, 2021", change format to 2021-05-21, name it ihme_date_web
 
 (13) identify last row of ihme_date in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv), e.g., 2021-05-28, name it ihme_date_covir2
 
-(14) if ihme_date_web > ihme_date_vocir2, create a new uptake, and modify in the latest previous uptake, the IHME download estimates path path from: 
+(14) if ihme_date_web > ihme_date_vocir2, create a new uptake, and modify in the latest previous uptake, for the latter, open:
+
+https://github.com/pourmalek/covir2/blob/main/20210528/code/IHME/do%20Iran%20IHME.do
+
+and change the IHME download estimates path from: 
 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip
 
@@ -43,7 +68,7 @@ to:
 
 copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-28/ihme-covid19.zip ihme-covid19.zip
 
-with 2021-05-28 taken from ihme_date_covir2 (and run the code to make sure it works and produce new logs)
+where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure it works and produce new logs)
 
 (15) for creation of THE new uptake, add a new line (new_line) to [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv) by replacing the empty uptake_date[new_line] with today_date, 
 
@@ -51,7 +76,15 @@ with 2021-05-28 taken from ihme_date_covir2 (and run the code to make sure it wo
 
 (17) replace the empty ihme_date[new_line] with today_date
 
-.
+
+
+* (B) check IMPE for latest update relative to this new uptake, where this new uptake is triggered by the new IHME update
+
+(18) check IMPE estimates site http://www.healthdata.org/covid/data-downloads
+
+(19) identify latest update in this format: 2021-05-22_v8.csv.zip, change format to 2021-05-22, name it ihpe_date_web
+
+
 
 
 
