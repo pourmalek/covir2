@@ -76,13 +76,19 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 
 (17) replace the empty ihme_date[new_line] with today_date
 
+(18) replace the empty uptake_trigger[new_line] with ihme
+
 
 
 * (B) check IMPE for latest update relative to this new uptake, where this new uptake is triggered by the new IHME update
 
-(18) check IMPE estimates site http://www.healthdata.org/covid/data-downloads
+(19) check IMPE estimates site http://www.healthdata.org/covid/data-downloads
 
-(19) identify latest update in this format: 2021-05-22_v8.csv.zip, change format to 2021-05-22, name it ihpe_date_web
+(20) identify latest update in this format: 2021-05-22_v8.csv.zip, change format to 2021-05-22, name it impe_date_web 
+
+(21) identify impe_date[previuos_line] and name it impe_date_covir2
+
+(22) replace impe_date[new_line] with impe_date_web. IMPE and IHME usually do not release updates in the same day. if they do, replace uptake_trigger[new_line] with value ihme to value both 
 
 
 
