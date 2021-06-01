@@ -27,6 +27,18 @@ Internal Note: If a new update by IHME is available (step 2), the URL for previo
 
 details
 
+every day, today,
+
+(11) check IHME estimates site http://www.healthdata.org/covid/data-downloads
+
+(12) identify last date in text block "Previous data", e.g., "May 21, 2021", change format to 2021-05-21, name it ihme_date_web
+
+(13) identify last row of ihme_date in uptakes_table.csv, e.g., 2021-05-28, name it ihme_date_vocir2
+
+(14) if ihme_date_web > ihme_date_vocir2, 
+
+
+
 
 
 
