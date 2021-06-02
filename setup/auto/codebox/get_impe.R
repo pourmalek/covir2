@@ -24,3 +24,4 @@ tmp %>%                           # return date of the latest link
   substr(1, 10) %>%
   as.Date() %>% max()
 
+write.csv(tmp, file = "get_impe.csv")
