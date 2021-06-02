@@ -15,7 +15,7 @@ page <- read_html("https://github.com/mrc-ide/global-lmic-reports/tree/master/da
 page %>%
   html_nodes("a") %>%       # find all links
   html_attr("href") %>%     # get the url
-  str_subset("\\.csv.zip") %>% # find those that end in xlsx
+  str_subset("\\.csv.zip") %>% # find those that end in .csv.zip
   .[[1]]                    # look at the first one
 
 
