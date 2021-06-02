@@ -1,7 +1,6 @@
-# get_ihme.R 
+# get_ihme.R
 
-# get date of te latest IHME update 
-
+# get date of the latest IHME update 
 
 library(rvest)
 library(stringr)
@@ -12,18 +11,11 @@ page <- read_html("http://www.healthdata.org/covid/data-downloads")
 page %>%
   html_nodes("a") %>%       # find all links
   html_attr("href") %>%     # get the url
-  str_subset("\\.zip") %>%  # find those that end in .zip
-  .[[1]]                    # return url of the first link
+  str_subset("\\.zip") -> tmp # find those that end in .csv.zip
+  # print.default()         # return all
 
+tail(tmp, 2)                # return url of the two latest links
 
-tmp[tmp %>%                 # return url of the latest link
-      basename() %>%
-      substr(1, 10) %>%
-      as.Date() %>% which.max()]
+tail(tmp, 1)                # return url of the latest link
 
-tmp %>%                     # return date of the latest link
-  basename() %>%
-  substr(1, 10) %>%
-  as.Date() %>% max()
-
-
+write.csv(tmp, file = "get_ihme.csv")
