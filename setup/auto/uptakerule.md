@@ -141,10 +141,21 @@ where 2021-05-28 is replaced by ihme_date_covir2 (and run the code to make sure 
 (42) replace ucla_date[new_line] = today_date - ucla_days_ago, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv)
 
 
+*
 
+(D) check IMPE for latest update relative to this new uptake, where IHME does not trigger a new uptake today
 
+(101) If from step (14), ihme_date_web <= ihme_date_vocir2, IHME does not trigger a new uptake today, so it is time for checjing if IMPE triggers a new uptake today
 
+(102) check IMPE estimates site http://www.healthdata.org/covid/data-downloads ; aka step (21)
 
+(103) **identify latest update in this format: 2021-05-22_v8.csv.zip**, change format to 2021-05-22, name it impe_date_web ; aka step (22)
+
+(104) if impe_date_web <= today, IMPE does not trigger a new uptake today, end of uptake procedure for today. 
+
+(105)  if impe_date_web >= today, IMPE does trigger a new uptake today, replace the empty uptake_trigger[new_line] with impe, in [uptakes_table.csv](https://github.com/pourmalek/covir2/blob/main/setup/auto/uptakes_table.csv) ; aka step (18)
+
+(106) repeat the steps above, from step (23) to step (42), and then it is the end of uptake procedure for today. 
 
 
 
