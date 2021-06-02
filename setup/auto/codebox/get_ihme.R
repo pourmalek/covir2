@@ -11,7 +11,7 @@ page <- read_html("http://www.healthdata.org/covid/data-downloads")
 page %>%
   html_nodes("a") %>%       # find all links
   html_attr("href") %>%     # get the url
-  str_subset("\\.zip") -> tmp # find those that end in .csv.zip
+  str_subset("\\.zip") -> tmp # find those that end in .zip
   # print.default()         # return all
 
 tail(tmp, 2)                # return url of the two latest links
