@@ -2,6 +2,7 @@
 
 # get date of te latest IMPE update 
 
+
 library(rvest)
 library(stringr)
 library(xml2)
@@ -13,12 +14,12 @@ page %>%
   html_attr("href") %>%     # get the url
   str_subset("\\.csv.zip") -> tmp # find those that end in .csv.zip
 
-tmp[tmp %>%
+tmp[tmp %>%                 # find url of the latest link
       basename() %>%
       substr(1, 10) %>%
       as.Date() %>% which.max()]
 
-tmp %>%
+tmp %>%                     # find date of the latest link
   basename() %>%
   substr(1, 10) %>%
   as.Date() %>% max()
