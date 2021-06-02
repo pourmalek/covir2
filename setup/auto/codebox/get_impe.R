@@ -21,7 +21,7 @@ tmp[tmp %>%                 # return url of the latest link
       substr(1, 10) %>%
       as.Date() %>% which.max()]
 
-tmp %>%                    # return date of the latest link
+tmp %>%                     # return date of the latest link
   basename() %>%
   substr(1, 10) %>%
   as.Date() %>% max()
