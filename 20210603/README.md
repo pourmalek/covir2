@@ -29,19 +29,9 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 
-*
-
-[Daily deaths, all time, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2011%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
-
-
 ****
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
-
-
-*
-
-[Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
 
 ****
@@ -69,19 +59,9 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 
-*
-
-[Daily cases, all time, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2021%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
-
-
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
-
-
-*
-
-[Daily cases, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2023%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
 
 ****
