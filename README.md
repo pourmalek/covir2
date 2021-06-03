@@ -27,6 +27,8 @@
  
  فرشاد پورملک
   
+  [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
+  
 <br/><br/>
 
 
@@ -632,6 +634,7 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 فرشاد پورملک
 
+[PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
 
 <br/><br/>
 
