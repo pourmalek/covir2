@@ -1084,6 +1084,12 @@ UCLA
 
 ****
 
+(17) (20210603)    (۱۴۰۰/۳/۱۳)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210603)
+
+DELP 20210602, IHME 20210528, **IMPE 20210527**, LANL 20210526, SRIV 20210603, UCLA 20210507
+
+****
+
 (16) (20210522)    (۱۴۰۰/۳/۷)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210528)
 
 DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526, SRIV 20210528
@@ -1360,6 +1366,12 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 ****************
 
+uptake 20210603 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120676717-2eb2e780-c44b-11eb-853d-d3742762c4e9.png)
+
+****************
+
 uptake 20210528 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/120133980-02b11100-c182-11eb-88e0-cb7eeb8a2df6.png)
@@ -1478,6 +1490,13 @@ uptake 20210401 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 ****************
 
 ### (۲) برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد
+
+
+****************
+
+uptake 20210603 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120676830-49855c00-c44b-11eb-9d54-7d0ed2b5915c.png)
 
 ****************
 
@@ -1601,6 +1620,13 @@ uptake 20210401 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 ### (۳) برآورد موارد جدید روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
 
+
+****************
+
+uptake 20210603 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677352-d4feed00-c44b-11eb-899b-8541a646f80a.png)
+
 ****************
 
 uptake 20210528 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -1721,6 +1747,13 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
  
 ### (۴)‌ برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد
 
+****************
+
+uptake 20210603 
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677434-ecd67100-c44b-11eb-9469-dc43e63b8a0d.png)
+
 ****
 
 uptake 20210528 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
@@ -1839,6 +1872,12 @@ uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 ### (۵)‌ برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
 
 
+****************
+
+uptake 20210603
+
+
+
 ****
 
 uptake 20210528 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2063%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
@@ -1951,6 +1990,12 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 ### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
 
+
+****************
+
+uptake 20210603 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120678074-96b5fd80-c44c-11eb-8ad0-65d57288b75a.png)
 
 ****
 
@@ -2071,6 +2116,12 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 ### (۷)‌ برآورد پیامدهای مربوط به بیمارستان و بستری، از آذر ۱۳۹۹ به بعد
 
 
+****************
+
+uptake 20210603 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120678175-afbeae80-c44c-11eb-815b-c69f7b00f518.png)
+
 ****
 
 uptake 20210528 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
@@ -2187,6 +2238,12 @@ uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 ### (۸) نسبت برآورد مرگ های روزانه به گزارش رسمی، ‌از دی ۱۳۹۸ به بعد
 
 
+****************
+
+uptake 20210603 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120678281-c9f88c80-c44c-11eb-9a1e-85e525a62cdd.png)
+
 ****
 
 uptake 20210528 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -2293,6 +2350,12 @@ uptake 20210401 [Daily deaths estimated to reported, all time](https://github.co
 
 ### (۹) نسبت برآورد موارد جدید روزانه بیماری به گزارش رسمی، از دی ۱۳۹۹ به بعد  
 
+
+****************
+
+uptake 20210603 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/120678396-e4326a80-c44c-11eb-9243-cb2cf3f2984a.png)
 
 ****
 
