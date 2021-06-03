@@ -1009,7 +1009,7 @@ Note internale: Add retro accuracy to assessment framework
 
 <div dir="ltr">
 
-## [covidcompare](https://covidcompare.io)
+## taken from: 
 
 ## Performance of models, historical forecasts, Iran:
 ## from [covidcompare](https://covidcompare.io) by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
