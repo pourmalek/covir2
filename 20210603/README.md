@@ -130,7 +130,8 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 ****
 ****
 
-### Check with component studies' graphs
+### Check with component studies' graphs 
+# this (Check with component studies' graphs) still needs update, to be done
 
 (Note: links lead to periodically updating graphs)
 
