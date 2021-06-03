@@ -116,10 +116,87 @@
 
 *
 
-### همه نمودارهای برداشت ۱۴۰۰۰۳۱۳ اینجا
+###  همه نمودارهای برداشت ۱۴۰۰۰۳۱۳ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210603/graphs%20merged%2020210603.pdf)
 
 *
 
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120676830-49855c00-c44b-11eb-9d54-7d0ed2b5915c.png)
+
+*
+
+
+(JOHN) دانشگاه جانز هاپکینز، انعکاس گزارش های رسمی کشور ها به سازمان جهانی بهداشت (منحنی آبی رنگ)
+
+(DELP) مطالعه دلفی، انستیتوی فناوری ماساچوست کمبریج (منحنی قرمز رنگ)
+
+(IHME) مطالعه موسسه آی اچ ام ای، دانشگاه واشنگتن سیاتل (منحنی سیاه رنگ) 
+
+(IMPE) مطالعه ایمپریال کالج لندن (منحنی صورتی رنگ)
+
+(LANL) مطالعه آزمایشگاه لس آلاموس نیو مکزیکو (منحنی طلایی رنگ)
+
+(SRIV) مطالعه اسریواستاوا در دانشگاه کالیفرنیای جنوبی (منحنی سبز رنگ)
+
+(UCLA) مطالعه یو سی ال ای در دانشگاه کالیفرنیا، لس آنجلس (منحنی قهوه ای رنگ)
+
+
+*
+
+[Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120676942-6a4db180-c44b-11eb-8542-dcd57e236380.png)
+
+*
+
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677053-87828000-c44b-11eb-888d-e7ab15e69657.png)
+
+*
+
+
+[Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2019%20c%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677141-a2ed8b00-c44b-11eb-809c-44a50d6c84c3.png)
+
+*
+
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677250-bbf63c00-c44b-11eb-8d2a-56c85458d9a3.png)
+
+*
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677434-ecd67100-c44b-11eb-9469-dc43e63b8a0d.png)
+
+*
+
+[Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2029%20a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677526-05df2200-c44c-11eb-90b1-158112f00fd5.png)
+
+*
+
+[Daily cases, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2029%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677626-21e2c380-c44c-11eb-8d7c-60e6bb66a11e.png)
+
+*
+
+[Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677726-3e7efb80-c44c-11eb-9b08-eb86a87439c5.png)
+
+*
+
+[Daily cases, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210603/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/120677831-58b8d980-c44c-11eb-8136-59628193e048.png)
+
+*
 
 
 *******************
