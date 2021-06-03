@@ -1006,12 +1006,17 @@ Note internale: Add retro accuracy to assessment framework
 <br/><br/>
 
 ##    عملکرد مدل های بین المللی برگرفته شده از: 
+
+<div dir="ltr">
+
 ## [covidcompare](https://covidcompare.io)
 
 ## Performance of models, historical forecasts, Iran:
 ## from [covidcompare](https://covidcompare.io) by © 2021 Joseph Friedman, Patrick Liu, Samir Akre
 
 About [covidcompare](https://covidcompare.io), summary in this covir2 repo, [here](https://github.com/pourmalek/covir2/tree/main/sandbox/five%20models/IHME/covidcompare)
+
+<div dir="rtl">
 
 *
 
