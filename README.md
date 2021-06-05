@@ -111,7 +111,11 @@ DELP 20210603, **IHME 20210604**, IMPE 20210527, LANL 20210602, SRIV 20210604, U
 # پاسخ فوری:
 
 
+# ممکن است در بروز-رسانی های بعدی مدل ها، این وضعیت تغییر ب نماید یا ن نماید.
 
+*
+
+###  همه نمودارهای برداشت ۱۴۰۰۰۳۱۵ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210603/graphs%20merged%2020210604.pdf)
 
 *
 
@@ -121,6 +125,21 @@ DELP 20210603, **IHME 20210604**, IMPE 20210527, LANL 20210602, SRIV 20210604, U
 
 *
 
+(JOHN) دانشگاه جانز هاپکینز، انعکاس گزارش های رسمی کشور ها به سازمان جهانی بهداشت (منحنی آبی رنگ)
+
+(DELP) مطالعه دلفی، انستیتوی فناوری ماساچوست کمبریج (منحنی قرمز رنگ)
+
+(IHME) مطالعه موسسه آی اچ ام ای، دانشگاه واشنگتن سیاتل (منحنی سیاه رنگ) 
+
+(IMPE) مطالعه ایمپریال کالج لندن (منحنی صورتی رنگ)
+
+(LANL) مطالعه آزمایشگاه لس آلاموس نیو مکزیکو (منحنی طلایی رنگ)
+
+(SRIV) مطالعه اسریواستاوا در دانشگاه کالیفرنیای جنوبی (منحنی سبز رنگ)
+
+(UCLA) مطالعه یو سی ال ای در دانشگاه کالیفرنیا، لس آنجلس (منحنی قهوه ای رنگ)
+
+*
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/120896237-8e3cfe80-c5d5-11eb-93f8-404ebdbae546.png)
