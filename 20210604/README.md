@@ -50,7 +50,7 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2019%20c%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120896296-c7756e80-c5d5-11eb-8d4c-e7d2c2a712c7.png)
+![image](https://user-images.githubusercontent.com/30849720/120897855-0c50d380-c5dd-11eb-958e-c461ec9f0c5c.png)
 
 ****
 
