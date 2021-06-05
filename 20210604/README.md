@@ -92,31 +92,37 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 [Daily cases, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/120898258-e88e8d00-c5de-11eb-84c4-463069a36255.png)
 
 ****
 
 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2063%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/120898278-0cea6980-c5df-11eb-896a-f44fdd1d7cf0.png)
 
 ****
 
 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/120898304-2be8fb80-c5df-11eb-8ea4-fe89af44dd79.png)
 
 ****
 
 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/120898339-4a4ef700-c5df-11eb-9865-2ebc57de2494.png)
 
 ****
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/120898370-6ce11000-c5df-11eb-8186-883d9a4f77e2.png)
 
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/120898393-8b470b80-c5df-11eb-824a-4fde03d3b81c.png)
 
 ****
 
