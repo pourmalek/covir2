@@ -1,0 +1,195 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210604/code/SOLT/log Iran SOLT.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 Jun 2021, 07:46:03
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Iran SOLT.do"
+. 
+. * Project: COVID-19 Iran Review No 2
+. * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare SOLT data for Iran
+. ***************************************************************************
+. 
+. 
+. * Get SOLT estimates 
+. 
+. clear 
+{txt}
+{com}. 
+. import excel using "SOLT dig data.xlsx", clear 
+{res}{txt}
+{com}. 
+. 
+. rename D DayActMeRaA06S01
+{res}{txt}
+{com}. 
+. label var DayActMeRaA06S01 "Daily Active cases SOLT S1"
+{txt}
+{com}. 
+. rename E DayActMeRaA06S02
+{res}{txt}
+{com}. 
+. label var DayActMeRaA06S02 "Daily Active cases SOLT S2"
+{txt}
+{com}. 
+. keep DayActMeRaA06S01 DayActMeRaA06S02
+{txt}
+{com}. 
+. drop in 1 
+{txt}(1 observation deleted)
+
+{com}. 
+. destring DayActMeRaA06S01, replace
+{txt}DayActMeRaA06S01: all characters numeric; {res}replaced {txt}as {res}long
+{txt}
+{com}. 
+. destring DayActMeRaA06S02, replace
+{txt}DayActMeRaA06S02: all characters numeric; {res}replaced {txt}as {res}long
+{txt}
+{com}. 
+. 
+. di td(15feb2020) // 21960
+{res}21960
+{txt}
+{com}. 
+. gen date2 = .
+{txt}(610 missing values generated)
+
+{com}. 
+. replace date2 = 21960 in 1
+{txt}(1 real change made)
+
+{com}. 
+. replace date2 = date2[_n-1] + 1 in 2/l
+{txt}(609 real changes made)
+
+{com}. 
+. gen date = date2
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date 
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21960{txt},{res}22569{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15feb2020{txt},{res}16oct2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}610{col 51}{txt}missing .:  {res}0{txt}/{res}610
+
+{txt}{col 19}mean:{res}{col 26} 22264.5{txt} = {res}15dec2020{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 176.236
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 22020.5{col 37}   22112{col 47} 22264.5{col 57}   22417{col 67} 22508.5
+{col 26}15apr2020{col 36}16jul2020{col 46}15dec2020{col 56}17may2021{col 66}16aug2021
+{txt}
+{com}. 
+. drop date2
+{txt}
+{com}. 
+. gen loc_grand_name = "Iran"
+{txt}
+{com}. 
+. sort date
+{txt}
+{com}. 
+. compress
+  {txt}variable {bf}date{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+{txt}  (1,220 bytes saved)
+
+{com}. 
+. save "Iran SOLT.dta", replace 
+{txt}(note: file Iran SOLT.dta not found)
+file Iran SOLT.dta saved
+
+{com}. 
+. 
+. 
+. *********
+. 
+. /*
+> * Scenarios
+> 
+> S1 = Reopening scenario 1 = Percentage of population "free from quarantine" upon reopening 
+> at lowest point between second and third peaks (about 2020-09-01) is 35% and at lowest point between third and fourth peaks (about 2021-03-01 )is 20%. 
+> 
+> 
+> S2 = Reopening scenario 2 = Percentage of population "free from quarantine" upon reopening 
+> at lowest point between second and third peaks (about 2020-09-01) is 32% and at lowest point between third and fourth peaks (about 2021-03-01 )is 22%. 
+> 
+> */
+. 
+. 
+. 
+. *************************************************************************
+. 
+. * graphs
+. 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. twoway /// 
+> (line DayActMeRaA06S01 date, sort lcolor(red)) ///
+> (line DayActMeRaA06S02 date, sort lcolor(blue)) ///
+> , xtitle(Date) xlabel(#19, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily Active cases) title("COVID-19 daily Active cases, Iran, SOLT, 2 scenarios", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "S1" 2 "S2"))
+{res}{txt}
+{com}. 
+. graph save "graph COVID-19 daily Active cases a, Iran, SOLT.gph", replace
+{txt}(note: file graph COVID-19 daily Active cases a, Iran, SOLT.gph not found)
+{res}{txt}(file graph COVID-19 daily Active cases a, Iran, SOLT.gph saved)
+
+{com}. graph export "graph COVID-19 daily Active cases, Iran, SOLT.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210604/code/SOLT/graph COVID-19 daily Active cases, Iran, SOLT.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. sort date loc_grand_name
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Iran SOLT.dta", replace 
+{txt}file Iran SOLT.dta saved
+
+{com}. 
+. 
+. 
+.  
+.  
+. 
+. view "log Iran SOLT.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210604/code/SOLT/log Iran SOLT.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 5 Jun 2021, 07:46:05
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
