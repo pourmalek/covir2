@@ -1143,7 +1143,7 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 ****
 
-(8) (20210430)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210430%20(archived))
+(8) (20210430)    (۱۴۰۰/۲/۴)    [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210430%20)
 
 DELP 20210430, **IHME 20210430**, IMPE 20210424, LANL 20210428, SRIV 20210430
 
