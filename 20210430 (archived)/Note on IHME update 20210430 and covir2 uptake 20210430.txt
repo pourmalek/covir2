@@ -1,6 +1,0 @@
-
-Note on IHME update 20210430 and covir2 uptake 20210430
-
-IHME had their update number 69 on 30-Ar-2021. Later, on May 9, their estimates file for the reference scenario, i.e., (reference_hospitalization_all_locs.csv) has become empty (i.e. has one line for variable names but contains no data) when downloaded from https://ihmecovid19storage.blob.core.windows.net/archive/2021-04-30/ihme-covid19.zip
-
-Therefore, the codes for "uptake 20210430" do not work anymore, because they rely on codes for IHME update 20210430, and IHME update 20210430 does not exist (at least on May 9). For historical records, the codes are left here without any change, but the outputs are available here (https://github.com/pourmalek/covir2/tree/main/20210430/output/IHME/2021-04-30) for IHME update 20210430 when it existed, and for the combined studies (https://github.com/pourmalek/covir2/tree/main/20210430/output/merge).  
