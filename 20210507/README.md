@@ -28,7 +28,7 @@ The previous outputs are available [here](https://github.com/pourmalek/covir2/tr
 
 ### Study update dates in uptake 20210507
 
-DELP 20210507, IHME 20210507, IMPE 20210424, LANL 20210505, SRIV 20210507
+DELP 20210507, **IHME 20210507**, IMPE 20210424, LANL 20210505, SRIV 20210507
 <br/><br/>
 ****
 
