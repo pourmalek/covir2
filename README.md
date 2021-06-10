@@ -37,9 +37,9 @@
  
 <div dir="ltr"> 
 
-### uptake 20210605: 
+### [uptake 20210605](https://github.com/pourmalek/covir2/tree/main/20210605)
  
-### DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+     DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
  
 *
  
