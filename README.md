@@ -1504,6 +1504,12 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 ### (۱) برآورد مرگ های روزانه، ‌از دی ۱۳۹۸ به بعد 
 
 ****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
+****************
 
 uptake 20210604 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
@@ -1637,6 +1643,12 @@ uptake 20210401 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 ### (۲) برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد
 
 
+****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
 ****************
 
 uptake 20210604 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
@@ -1773,6 +1785,12 @@ uptake 20210401 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 
 ****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
+****************
 
 uptake 20210604 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
@@ -1905,6 +1923,12 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 ### (۴)‌ برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد
 
 ****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
+****************
 
 uptake 20210604 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
@@ -2036,6 +2060,12 @@ uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 
 ****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
+****************
 
 uptake 20210604 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2063%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
 
@@ -2160,6 +2190,12 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 ### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
 
 
+****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
 ****************
 
 uptake 20210604 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
@@ -2292,6 +2328,12 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 
 ****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
+****************
 
 uptake 20210604 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
@@ -2420,6 +2462,12 @@ uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 
 
 ****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
+****************
 
 uptake 20210604 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
@@ -2538,6 +2586,12 @@ uptake 20210401 [Daily deaths estimated to reported, all time](https://github.co
 ### (۹) نسبت برآورد موارد جدید روزانه بیماری به گزارش رسمی، از دی ۱۳۹۹ به بعد  
 
 
+****************
+ 
+**uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+. 
+ 
 ****************
 
 uptake 20210604 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210604/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
