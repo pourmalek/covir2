@@ -33,41 +33,30 @@
 
 
 **************
-
-
-مسیر میانبر برای دیدن همه نمودار های منتخب:
-
- کلیک روی لینک آبی رنگ زیر
- 
-[فارسی](https://github.com/pourmalek/covir2/blob/main/README.md#مرور-برآوردهای-مطالعات-بین-المللی-برای-همه-گیری-کووید-۱۹-در-ایران-نسخه-دوم-1)
-
-سپس، کلیک روی لینک آبی رنگ زیر
-
- <<<< [نمودار های منتخب](https://github.com/pourmalek/covir2#نمودار-های-منتخب) (ماحصل کار، نمای بصری) <<<<
- 
-، سپس کلیک روی هر یک از ۹ نوع نموداری که لینک آبی رنگ آن ها در زیر تیتر"ترتیب نمودارها" آمده است. 
-
-
 **************
-************** 
 
-## اخبار و مطالب جدید –ریپوزیتری کوویر-۲
+### uptake 20210605: DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+*
+ 
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-* تنظیمات پیش فرض مدل کووید-سیمولیشن (COVIDSIM) مربوط به ایمپریال کالج به صورت تست-دوز به پنج مدل موجود در این ریپوزیتری اضافه شد (جمعه ۷ خرداد ۱۴۰۰).
-[اینجا](https://github.com/pourmalek/covir2/blob/main/20210522/output/CSIM/readme.md) و [اینجا](https://github.com/pourmalek/covir2/tree/main/20210522/output/CSIM) 
+![image](https://user-images.githubusercontent.com/30849720/121446972-8cfb3100-c949-11eb-999b-60187ab1eab3.png)
+ 
+* 
+ 
+[Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121447022-aac89600-c949-11eb-99fc-7175536daeea.png)
 
+*
 
-* وضعیت همه مدل ها / مطالعات قابل اضافه شدن به مجموعه پنج مدل موجود در این ریپوزیتری، در 
-[اینجا](https://github.com/pourmalek/covir2#سایر-مطالعات--مدل-ها) 
-شرح داده شده است. 
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-* مدل یو سی ال ای (UCLA) به پنج مدلی که تا کنون در این ریپو وجود داشتند اضافه شد (۹ خرداد ۱۴۰۰).
-برداشت مورخ (20210528) (۱۴۰۰۰۳۰۱) 
-[اینجا](https://github.com/pourmalek/covir2/tree/main/20210528/output/UCLA)
-
-
-
+![image](https://user-images.githubusercontent.com/30849720/121447215-13177780-c94a-11eb-9176-09f4cbacf2c7.png)
+ 
+*
+ 
 **************
 ************** 
 
