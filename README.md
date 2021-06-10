@@ -1206,6 +1206,12 @@ UCLA
 
 ****
 
+(19) (20210605)    (۱۴۰۰/۳/۱۶)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210605)
+
+DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+ 
+****
+
 (18) (20210604)    (۱۴۰۰/۳/۱۵)   [-پیوند-](https://github.com/pourmalek/covir2/tree/main/20210604)
 
 DELP 20210603, **IHME 20210604**, IMPE 20210527, LANL 20210602, SRIV 20210604, UCLA 20210507
