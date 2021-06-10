@@ -34,8 +34,12 @@
 
 **************
 **************
+ 
+<div dir="ltr"> 
 
-### uptake 20210605: DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+### uptake 20210605: 
+ 
+### DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
  
 *
  
@@ -56,6 +60,8 @@
 ![image](https://user-images.githubusercontent.com/30849720/121447215-13177780-c94a-11eb-9176-09f4cbacf2c7.png)
  
 *
+ 
+<div dir="rtl">
  
 **************
 ************** 
