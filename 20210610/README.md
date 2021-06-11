@@ -2,10 +2,6 @@
 
 DELP 20210610, **IHME 20210610)), IMPE 20210604, LANL 20210606, SRIV 20210610, UCLA 20210507
 
-This uptake is actually uptake 20210604 number 2, because IMPE update 20210604 (2021-06-04_v8.csv.zip) was released on 20210608. 
-
-UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection, 28 days ago (relative to 20210610), i.e. 20210507
-
 <br/><br/>
 ****
 
@@ -13,7 +9,7 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 <div dir="rtl">
   
-###  همه نمودارهای برداشت ۱۴۰۰۰۳۱۵ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210610/graphs%20merged%2020210610.pdf)
+###  همه نمودارهای برداشت ۱۴۰۰۰۳۲۰ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210610/graphs%20merged%2020210610.pdf)
   
 <div dir="ltr">
 
