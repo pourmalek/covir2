@@ -54,31 +54,37 @@ DELP 20210610, **IHME 20210610)), IMPE 20210604, LANL 20210606, SRIV 20210610, U
 
 [Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121758146-11c68600-cad5-11eb-81c0-6f273e295626.png)
 
 ****
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121758172-2c006400-cad5-11eb-9545-75408f6085c9.png)
 
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121758192-49353280-cad5-11eb-8aea-a6d5b317091a.png)
 
 ****
 
 [Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2029%20a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121758220-623de380-cad5-11eb-9c49-42c97593f767.png)
 
 ****
 
 [Daily cases, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2029%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121758249-7e418500-cad5-11eb-8173-d9fafbea4154.png)
 
 ****
 
 [Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121758270-95807280-cad5-11eb-8a08-89afcacbe1f1.png)
 
 ****
 
