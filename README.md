@@ -30,6 +30,35 @@
   [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
   
 <br/><br/>
+ 
+**************
+************** 
+ 
+ <div dir="ltr"> 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+  
+*
+  
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/121757997-76351580-cad4-11eb-8c48-df10ea94eb0c.png)
+
+*
+  
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/121758059-ae3c5880-cad4-11eb-9622-8d9483237f41.png)
+  
+*
+  
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210610/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/121758146-11c68600-cad5-11eb-81c0-6f273e295626.png)
+  
+*
+  
+ <div dir="rtl">
 
 
 **************
