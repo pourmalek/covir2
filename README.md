@@ -78,9 +78,9 @@ DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, U
  
 * 
  
-[Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/121447022-aac89600-c949-11eb-99fc-7175536daeea.png)
+![image](https://user-images.githubusercontent.com/30849720/121447078-cf247280-c949-11eb-9835-a57abcba51d1.png)
 
 *
 
