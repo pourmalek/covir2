@@ -1232,6 +1232,13 @@ UCLA
 
 (date of study update used in this uptake) (study name abbreviated) 
 
+ 
+****
+ 
+(20) (20210610)    (۱۴۰۰/۳/۲۰)
+ 
+DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
 
 ****
 
@@ -1532,6 +1539,12 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 ### (۱) برآورد مرگ های روزانه، ‌از دی ۱۳۹۸ به بعد 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -1674,6 +1687,12 @@ uptake 20210401 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 ### (۲) برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد
 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -1817,6 +1836,12 @@ uptake 20210401 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 ### (۳) برآورد موارد جدید روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -1957,6 +1982,12 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
  
 ### (۴)‌ برآورد موارد جدید روزانه بیماری، از آذر ۱۳۹۹ به بعد
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -2096,6 +2127,10 @@ uptake 20210401 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 ### (۵)‌ برآورد موارد موجود روزانه بیماری، ‌از دی ۱۳۹۸ به بعد
 
 
+**************** 
+ 
+graph of Daily active cases retired starting from uptake 20210610
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -2229,6 +2264,12 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 ### (۶) برآورد پیامدهای مربوط به بیمارستان و بستری، ‌از دی ۱۳۹۸ به بعد
 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -2368,6 +2409,12 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 ### (۷)‌ برآورد پیامدهای مربوط به بیمارستان و بستری، از آذر ۱۳۹۹ به بعد
 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -2504,6 +2551,12 @@ uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 ### (۸) نسبت برآورد مرگ های روزانه به گزارش رسمی، ‌از دی ۱۳۹۸ به بعد
 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
@@ -2631,6 +2684,12 @@ uptake 20210401 [Daily deaths estimated to reported, all time](https://github.co
 ### (۹) نسبت برآورد موارد جدید روزانه بیماری به گزارش رسمی، از دی ۱۳۹۹ به بعد  
 
 
+**************** 
+ 
+**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+ 
+.
+ 
 ****************
  
 **uptake 20210605**: DELP 20210603, IHME 20210604, **IMPE 20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
