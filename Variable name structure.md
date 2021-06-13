@@ -1,4 +1,4 @@
-## Variable name structure
+## Variable name structure :book:
 
 Estimates of (1) Daily Deaths, (2) Total Deaths, (3) Daily Cases (incident or prevalent), and (4) Total Cases (incident) from component studies, are the primary outcome variables of interest in this review. Hospital-related and other outcomes from component studies are the secondary outcome variables.
 
