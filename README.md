@@ -1,8 +1,8 @@
 # covir2
 
-## Up-to-date curation of periodically updating models for COVID-19 epidemic in Iran
+## Up-to-date curation of periodically updating models for COVID-19 epidemic in Iran :iran:
 
-# COVID-19 Iran Review No 2
+# <div align="center"> COVID-19 Iran Review No 2
 
 <br/><br/>
 
