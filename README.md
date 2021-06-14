@@ -1613,9 +1613,9 @@ uptake 20210507 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 ****************
 
-uptake 20210506 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117995334-16d9bf00-b2f6-11eb-8cdb-00b4d12cd73a.png)
+![image](https://user-images.githubusercontent.com/30849720/121971869-9f50e280-cd2e-11eb-9b5a-6b781ebd80dd.png)
 
 در این بروز-رسانی، مطالعه آی اچ ام ای کم-گزارش دهی مرگ و موارد بیماری کووید-۱۹ را به صورت عیان و آشکار (explicit) در مدل خود برآورد و اصلاح می کند. ضرایب تصحیح کم شماری مرگ و موارد بیماری در ایران در مطالعه آی اچ ام ای، عبارتند از حدود **۲/۵** و **۹** (۱۷-۶)، مورد اخیر در پنج ماه اول سال ۲۰۲۱. جزییات بیشتر 
 [اینجا](https://github.com/pourmalek/covir2/blob/main/20210506/README.md)
@@ -1757,9 +1757,9 @@ uptake 20210507 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 ****************
 
-uptake 20210506 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118000793-f8c28d80-b2fa-11eb-872b-4d92adbbbe85.png)
+![image](https://user-images.githubusercontent.com/30849720/121971907-b7286680-cd2e-11eb-9065-213069af6fe0.png)
 
 ****************
 
@@ -1902,9 +1902,9 @@ uptake 20210507 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 ****************
 
-uptake 20210506 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+[Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118006146-df701000-b2ff-11eb-9d5f-1e870abbbff7.png)
+![image](https://user-images.githubusercontent.com/30849720/121971958-d0c9ae00-cd2e-11eb-8cd0-89e5a16f1f38.png)
 
 ****************
 
@@ -2045,9 +2045,9 @@ uptake 20210507 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 ****
 
-uptake 20210506 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118014261-dc791d80-b307-11eb-80eb-73e8e8fd81eb.png)
+![image](https://user-images.githubusercontent.com/30849720/121972004-ed65e600-cd2e-11eb-8807-b670e3be5907.png)
 
 ****
 
@@ -2581,7 +2581,7 @@ uptake 20210507 [Daily deaths estimated to reported, all time](https://github.co
 
 uptake 20210506 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118046088-ac447580-b32d-11eb-875b-dc2915064516.png)
+![image](https://user-images.githubusercontent.com/30849720/121972056-0bcbe180-cd2f-11eb-8803-1624e6953f81.png)
 
 ****
 
@@ -2716,7 +2716,7 @@ uptake 20210507 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 uptake 20210506 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/118045793-3fc97680-b32d-11eb-9167-4fb08dbea752.png)
+![image](https://user-images.githubusercontent.com/30849720/121972104-24d49280-cd2f-11eb-990e-a3ddc2d5d053.png)
 
 ****
 
