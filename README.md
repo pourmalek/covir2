@@ -1664,9 +1664,9 @@ uptake 20210409 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 ****************
 
-uptake 20210406 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
+uptake 20210406 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118000225-7afe8200-b2fa-11eb-8ed4-b9eacf77196f.png)
+![image](https://user-images.githubusercontent.com/30849720/121929197-ca6b1000-ccf5-11eb-9a8f-ecce36bb8b30.png)
 
 ****************
 
@@ -1813,7 +1813,7 @@ uptake 20210409 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 uptake 20210406 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118005261-172a8800-b2ff-11eb-9b40-7bbd714ede5c.png)
+![image](https://user-images.githubusercontent.com/30849720/121929296-e8387500-ccf5-11eb-92a3-3ad1e10591c9.png)
 
 ****************
 
@@ -1964,7 +1964,7 @@ uptake 20210409 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
  
 uptake 20210406 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118013847-696fa700-b307-11eb-813f-7c4916b98687.png)
+![image](https://user-images.githubusercontent.com/30849720/121929390-02725300-ccf6-11eb-9d4e-6c81b2365884.png)
 
 ****************
 
@@ -2113,7 +2113,7 @@ uptake 20210409 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 uptake 20210406 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210406/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118022758-90cb7180-b311-11eb-9335-9d29a9a1dd81.png)
+![image](https://user-images.githubusercontent.com/30849720/121929500-1fa72180-ccf6-11eb-96c2-832cba630a20.png)
 
 ****
 
