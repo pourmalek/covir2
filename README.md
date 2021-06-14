@@ -1640,9 +1640,9 @@ uptake 20210424 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 ****************
 
-uptake 20210422 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
+uptake 20210422 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117997406-c6fbf780-b2f7-11eb-8761-aa32900a7fb2.png)
+![image](https://user-images.githubusercontent.com/30849720/121951318-a1f00f80-cd0f-11eb-9c39-479c8849321c.png)
 
 ****************
 
@@ -1789,8 +1789,8 @@ uptake 20210424 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 uptake 20210422 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118004154-11807280-b2fe-11eb-9184-eb97c4fa9e6e.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121951427-c2b86500-cd0f-11eb-8f53-0d23bb406594.png)
+ 
 ****************
 
 uptake 20210417 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210417/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
@@ -1940,7 +1940,7 @@ uptake 20210424 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 uptake 20210422 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210422/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118006957-8f457d80-b300-11eb-919e-94769bf06e10.png)
+![image](https://user-images.githubusercontent.com/30849720/121951494-da8fe900-cd0f-11eb-936f-056152893410.png)
 
 ****************
 
