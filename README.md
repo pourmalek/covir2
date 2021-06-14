@@ -1634,9 +1634,9 @@ uptake 20210430 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 ****************
 
-uptake 20210424 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
+uptake 20210424 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117997014-7a182100-b2f7-11eb-89f4-46493b29bd2e.png)
+![image](https://user-images.githubusercontent.com/30849720/121968613-7c6f0000-cd27-11eb-94a3-35dadd73c346.png)
 
 ****************
 
@@ -1781,9 +1781,9 @@ uptake 20210430 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 ****************
 
-uptake 20210424 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+uptake [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118001352-856d4b80-b2fb-11eb-893b-f213665dd642.png)
+![image](https://user-images.githubusercontent.com/30849720/121968684-99a3ce80-cd27-11eb-8087-3620850b7100.png)
 
 ****************
 
@@ -1932,9 +1932,9 @@ uptake 20210430 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 ****************
 
-uptake 20210424 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+[Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118006681-53aab380-b300-11eb-88cf-233f437c2a55.png)
+![image](https://user-images.githubusercontent.com/30849720/121968735-b7713380-cd27-11eb-9bf3-5fbb68eaf698.png)
 
 ****************
 
@@ -2081,9 +2081,9 @@ uptake 20210430 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 ****
 
-uptake 20210424 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118017255-3fb87f00-b30b-11eb-9e66-6ad9c0908f0c.png)
+![image](https://user-images.githubusercontent.com/30849720/121968800-d1ab1180-cd27-11eb-97f8-b6b6de55bf33.png)
 
 ****
 
@@ -2645,7 +2645,7 @@ uptake 20210430 [Daily deaths estimated to reported, all time](https://github.co
 
 uptake 20210424 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118047057-0e51aa80-b32f-11eb-9a7f-93fd1b097bff.png)
+![image](https://user-images.githubusercontent.com/30849720/121968851-edaeb300-cd27-11eb-93b0-3ac204363407.png)
 
 ****
 
@@ -2786,7 +2786,7 @@ uptake 20210430 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 uptake 20210424 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118045477-cdf12d00-b32c-11eb-82ba-380ab9adf855.png)
+![image](https://user-images.githubusercontent.com/30849720/121968902-074ffa80-cd28-11eb-9cd4-4c5c08a445a7.png)
 
 ****
 
