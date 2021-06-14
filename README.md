@@ -1908,12 +1908,6 @@ uptake 20210506 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 ****************
 
-uptake 20210430 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/118055674-61caf500-b33d-11eb-9763-65f721b5d016.png)
-
-****************
-
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210424/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/121968735-b7713380-cd27-11eb-9bf3-5fbb68eaf698.png)
@@ -3136,8 +3130,6 @@ Note: After uptake 20210521, new uptakes are not listed below; they are visible 
 [`20210507`](https://github.com/pourmalek/covir2/tree/main/20210507) 
 
 [`20210506`](https://github.com/pourmalek/covir2/tree/main/20210506) 
-
-[`20210430`](https://github.com/pourmalek/covir2/tree/main/20210430%20(archived))
 
 [`20210424`](https://github.com/pourmalek/covir2/tree/main/20210424)
 
