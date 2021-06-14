@@ -26,8 +26,9 @@ clear all
 
 * get IMPE estimates
 
-
-copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/IRN/2021-04-24/projections.csv projections.csv
+copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2021-04-24_v7.csv.zip 2021-04-24_v7.csv.zip
+unzipfile 2021-04-24_v7.csv.zip, replace
+erase 2021-04-24_v7.csv.zip
 
  
 ******************************
@@ -35,7 +36,8 @@ copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/IRN/20
 * import csv file
 
 
-import delimited "projections.csv", clear varnames(1)
+import delimited "2021-04-24_v7.csv", clear varnames(1)
+keep if country == "Iran"
 
 
 * gen date 
