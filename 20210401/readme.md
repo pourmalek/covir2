@@ -34,13 +34,14 @@ DELP 20210401, **IHME 20210401**, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/121923664-00a59100-ccf0-11eb-9a5b-76ef855a703d.png)
   
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117986675-b004d780-b2ee-11eb-9493-9340b2d289b3.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121923913-3ea2b500-ccf0-11eb-8ea1-672d16b1ca9b.png)
+  
 ****
 
 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
@@ -63,13 +64,13 @@ DELP 20210401, **IHME 20210401**, IMPE 20210329, LANL 20210331, SRIV 20210401
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117987585-75e80580-b2ef-11eb-9ff3-99416c55e787.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121924748-06e83d00-ccf1-11eb-86c0-68d0b6b0e3b2.png)
+  
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210401/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/117987731-9dd76900-b2ef-11eb-8748-00748d367b21.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121924954-444cca80-ccf1-11eb-99bf-adc1ee075f48.png)
+  
 ****
 
