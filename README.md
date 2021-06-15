@@ -669,13 +669,13 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-From: Farshad Pourmalek <pourmalek_farshad@yahoo.com>
+From: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
 
 Subject: question about COVID-19 estimates for Iran
 
 Date: May 17, 2021 at 7:09:24 PM PDT
 
-To: GBD Secretariat <gbdsec@uw.edu>
+To: GBD Secretariat gbdsec at uw dot edu
 
 Dear GBD Secretariat,
 
