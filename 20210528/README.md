@@ -52,6 +52,7 @@ SRIV shows a flat bump (like lichen planus) in the last week of May, lasting for
 [Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/121996390-5fedba80-cd5d-11eb-9991-448ee374510d.png)
+  
 ****
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
