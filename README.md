@@ -658,6 +658,38 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
 
 
 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210516/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+ 
+ 
+ 
+ 
+* The following graph is from the original release of IHME 20210516 update, with the internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+From: Farshad Pourmalek <pourmalek_farshad@yahoo.com>
+
+Subject: question about COVID-19 estimates for Iran
+
+Date: May 17, 2021 at 7:09:24 PM PDT
+
+To: GBD Secretariat <gbdsec@uw.edu>
+
+Dear GBD Secretariat,
+
+I have two questions about IHME COVID-19 model for Iran, and would highly appreciate if I could be advised regarding the answers.
+
+There is an increase in estimated Bed Need and ICU Need in early July 2021, whereas there is no increase estimated in daily cases or deaths after May 2021. What could be the interpretation of this increase in bed and ICU need without increase in cases or deaths.
+
+Vaccines and variants in the model are explained in “COVID-19 Results Briefing, The Eastern Mediterranean Region. May 13, 2021”. Page 19 and elsewhere. I am trying to understand whether data about vaccines and variants at the country level goes into the model, or the overall assumptions about excepted levels of vaccine coverage and type and propagation of variants does the work and no vaccines and variants from country level does not go the model.
+
+Thank you very much for your help in this regard.
+
+Farshad Pourmalek
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 
 ![image](https://user-images.githubusercontent.com/30849720/118917804-7f243400-b8e6-11eb-91df-c06f21e58764.png)
 
