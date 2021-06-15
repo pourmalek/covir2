@@ -2334,7 +2334,7 @@ uptake 20210515 [Hospital-related outcomes, all time](https://github.com/pourmal
  
 * 
  
-* The following graph is from the original release of IHME 20210516 update, with an internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
+* The following graph is from the original release of IHME 20210515 update, with an internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
 
 <div dir="rtl"> 
  
@@ -2353,7 +2353,7 @@ uptake 20210514 [Hospital-related outcomes, all time](https://github.com/pourmal
  
 <div dir="ltr">
  
-* The following graph is from the original release of IHME 20210516 update, with an internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
+* The following graph is from the original release of IHME 20210514 update, with an internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
 
 <div dir="rtl">  
 
