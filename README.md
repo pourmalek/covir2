@@ -834,7 +834,7 @@ use the PDF link
  *
  
  
- * The following graph is the corrected version:
+ * The following graph is the corrected version
 
 [uptake 20210514 Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
  
