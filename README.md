@@ -817,16 +817,30 @@ use the PDF link
 
 مدل آی اچ ام ای برای اولین مرتبه است که در -  بروز-رسانی 20210514 یا ۱۴۰۰۰۲۲۴ ، بروز **موج پنجم** را در اوایل ژوییه یا تیر ماه به صورت افزایش نیاز به تخت معمولی و نیز تخت آی سی یو و با ۲۵٪ افزایش نسبت به موج چهارم پیشبینی کرده است. این در حالی است که همین بروز-رسانی آی اچ ام ای افزایشی در موارد روزانه بیماری و مرگ از اردیبهشت به بعد نشان نمی دهد. به نظر می رسد شاید این نوعی ناسازگاری درونی مابین برآوردهای پیامدهای مختلف مدل باشد، و یا تفسیر دیگری وجود دارد که بر راقم این سطور معلوم نیست. 
 
-[uptake 20210514 Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+ 
+ 
+ * The following graph is from the original release of IHME 20210516 update, with the internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
+
 
 ![image](https://user-images.githubusercontent.com/30849720/118391588-d924b100-b5e9-11eb-8a73-b30a222d4c5b.png)
 
-
+*
 
 [IHME hospitalization Iran 20200516](https://covid19.healthdata.org/iran-(islamic-republic-of)?view=resource-use&tab=trend&resource=all_resources)
 
 ![image](https://user-images.githubusercontent.com/30849720/118404897-c16d1d00-b629-11eb-9dd9-ab943806434d.png)
 
+ 
+ *
+ 
+ 
+ * The following graph is the corrected version:
+
+[uptake 20210514 Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
+ 
+ ![image](https://user-images.githubusercontent.com/30849720/122100759-606f6b00-cdc8-11eb-9f7a-341bfa06afc0.png)
+ 
+ *
 <br/><br/>
 
 ************** 
