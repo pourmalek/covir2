@@ -33,26 +33,25 @@ SRIV shows a flat bump (like lichen planus) in the last week of May, lasting for
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125198-97a90f80-c16c-11eb-83af-931fc68b4b7c.png)
+![image](https://user-images.githubusercontent.com/30849720/121996235-10a78a00-cd5d-11eb-9f4d-5e09a2e0df56.png)
 
 *
 
 [Daily deaths, all time, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2011%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125218-b7403800-c16c-11eb-991b-331cafe33e71.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121996283-2b79fe80-cd5d-11eb-8ea1-e5b08cf5b622.png)
+  
 ****
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125256-e191f580-c16c-11eb-9d8d-2bfa78f93a86.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121996348-45b3dc80-cd5d-11eb-94d2-2677b33b5302.png)
+  
 *
 
 [Daily deaths, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2013%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125305-1b62fc00-c16d-11eb-91aa-730a3888863b.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121996390-5fedba80-cd5d-11eb-9991-448ee374510d.png)
 ****
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
