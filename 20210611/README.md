@@ -27,6 +27,7 @@ IMPE update 20210611 (2021-06-11_v8.csv.zip) released on 20210615
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/122122563-d46a3d00-cde1-11eb-922e-fe5e1c9b4eae.png)
 
 ****
 
