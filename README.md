@@ -1601,9 +1601,9 @@ uptake 20210515 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 ****************
 
-uptake 20210514 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf) 
+uptake 20210514 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118366830-518d6280-b555-11eb-9410-5e5bf4280ce5.png)
+![image](https://user-images.githubusercontent.com/30849720/121976864-87cb2700-cd39-11eb-89e0-e95339086ed5.png)
 
 ****************
 
@@ -1747,7 +1747,7 @@ uptake 20210515 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 uptake 20210514 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118367062-b34dcc80-b555-11eb-955a-ad9a0400f1b1.png)
+![image](https://user-images.githubusercontent.com/30849720/121976911-a3cec880-cd39-11eb-956d-c7b5b3bc480f.png)
 
 ****************
 
@@ -1892,7 +1892,7 @@ uptake 20210515 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
 uptake 20210514 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118368107-40912100-b556-11eb-9a07-9e57661182c3.png)
+![image](https://user-images.githubusercontent.com/30849720/121976952-bcd77980-cd39-11eb-80f6-221a6674794b.png)
 
 ****************
 
@@ -2035,7 +2035,7 @@ uptake 20210515 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/bl
 
 uptake 20210514 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118347144-b6b16b80-b4f5-11eb-8998-745da25aa5fd.png)
+![image](https://user-images.githubusercontent.com/30849720/121976996-d5e02a80-cd39-11eb-8716-849b8cb6f1df.png)
 
 ****
 
@@ -2569,8 +2569,8 @@ uptake 20210515 [Daily deaths estimated to reported, all time](https://github.co
 
 uptake 20210514 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118384692-05760880-b5bd-11eb-881a-484d2d466d2e.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121977063-f3ad8f80-cd39-11eb-8dcc-36464015e8c5.png)
+ 
 ****
 
 uptake 20210507 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210507/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -2702,9 +2702,9 @@ uptake 20210515 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 ****
 
-uptake 20210514 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf)
+uptake 20210514 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210514/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/118384710-38200100-b5bd-11eb-836e-f378aec4020a.png)
+![image](https://user-images.githubusercontent.com/30849720/121977119-0b851380-cd3a-11eb-80ce-e31f7ec48f33.png)
 
 ****
 
