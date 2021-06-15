@@ -80,26 +80,26 @@ SRIV shows a flat bump (like lichen planus) in the last week of May, lasting for
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125555-32561e00-c16e-11eb-8ca2-6155353bf81c.png)
+![image](https://user-images.githubusercontent.com/30849720/121996760-0c2fa100-cd5e-11eb-8fec-87dd1fe76d3e.png)
 
 *
 
 [Daily cases, all time, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2021%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20wo%20DELP%20for%20this%20uptake.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125592-5ade1800-c16e-11eb-836a-480adff32443.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121996838-2e292380-cd5e-11eb-984e-4877709efba9.png)
+  
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125640-79441380-c16e-11eb-9a9b-84a92ce733c2.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121996900-4f8a0f80-cd5e-11eb-9a16-e0afbe54cee6.png)
+  
 *
 
 [Daily cases, 2020-12 on, without DELP in this graph](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2023%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120125696-a5f82b00-c16e-11eb-8feb-699af1d7f374.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121996999-6fb9ce80-cd5e-11eb-95e7-738702b1153f.png)
+  
 ****
 
 [Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2029%20a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
@@ -146,14 +146,14 @@ SRIV shows a flat bump (like lichen planus) in the last week of May, lasting for
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/120126169-371bd180-c170-11eb-9284-1bbeeaba92e3.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121997099-9d9f1300-cd5e-11eb-98f2-813ec00e2ca5.png)
+  
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/120126200-5450a000-c170-11eb-8d2f-a17fb9b6374c.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121997163-bc9da500-cd5e-11eb-9fa4-b787444cf334.png)
+  
 ****
 ****
 ****
