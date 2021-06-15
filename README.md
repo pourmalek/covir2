@@ -2387,8 +2387,8 @@ uptake 20210417 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 uptake 20210416 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210416/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
  
-![image](https://user-images.githubusercontent.com/30849720/122107373-d7f4c880-cdcf-11eb-817d-a6302842ca6b.png)
-
+use the blue link
+ 
 ****
 
 uptake 20210409 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210409/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
