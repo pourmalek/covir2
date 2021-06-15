@@ -118,12 +118,13 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/122066318-81739400-cda7-11eb-92ec-6a493cbdd441.png)
 
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/121447739-21b25e80-c94b-11eb-9257-f12ba7ccb5f8.png)
-
+![image](https://user-images.githubusercontent.com/30849720/122066460-9c460880-cda7-11eb-9674-04911d3e2382.png)
+  
 ****
 
