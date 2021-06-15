@@ -33,11 +33,13 @@ IMPE update 20210611 (2021-06-11_v8.csv.zip) released on 20210615
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/122122805-227f4080-cde2-11eb-8769-ab5b40ac1307.png)
 
 ****
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/122122914-43479600-cde2-11eb-8fd6-fed548708da8.png)
 
 ****
 
