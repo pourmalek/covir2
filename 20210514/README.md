@@ -1,6 +1,9 @@
 ### Study update dates in uptake 20210514
 
 DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512, SRIV 20210514
+
+IHME removed their originally released seroprevalence variable (seroprev_mean seroprev_lower seroprev_upper), as of 20210614
+
 <br/><br/>
 ****
 
