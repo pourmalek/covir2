@@ -28,14 +28,14 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/121446888-6806be00-c949-11eb-83f4-e0914816395b.png)
-
+![image](https://user-images.githubusercontent.com/30849720/122065682-fc887a80-cda6-11eb-99f2-e37db8d86167.png)
+  
 ****
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/121446972-8cfb3100-c949-11eb-999b-60187ab1eab3.png)
-
+![image](https://user-images.githubusercontent.com/30849720/122065817-175aef00-cda7-11eb-8bcc-49a159ab19b7.png)
+  
 ****
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
@@ -64,14 +64,14 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/121447260-2f1b1900-c94a-11eb-91a5-b070e5e79aea.png)
-
+![image](https://user-images.githubusercontent.com/30849720/122066002-3bb6cb80-cda7-11eb-831d-10fa8e4f3789.png)
+  
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/121447304-4528d980-c94a-11eb-99a5-322882e3e524.png)
-
+![image](https://user-images.githubusercontent.com/30849720/122066129-538e4f80-cda7-11eb-932d-939b06f505d1.png)
+  
 ****
 
 [Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2029%20a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
@@ -118,7 +118,6 @@ UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/ucla
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/121447696-0a737100-c94b-11eb-92fb-c3b8b8a0d7d9.png)
 
 ****
 
