@@ -28,26 +28,26 @@ IHME removed their originally released seroprevalence variable (seroprev_mean se
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118417558-6e1abf00-b669-11eb-9875-9d3dbb648ee1.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121983326-00d07b80-cd46-11eb-88e7-3d8811d40c1e.png)
+  
 ****
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118417676-103aa700-b66a-11eb-8872-ab61a8229f91.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121983399-1fcf0d80-cd46-11eb-8b7f-cbc58a3beff5.png)
+  
 ****
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118418010-81c72500-b66b-11eb-844e-d719591b6c95.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121983461-383f2800-cd46-11eb-9fb3-e08260144d7c.png)
+  
 ****
 
 [Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118418068-c488fd00-b66b-11eb-8b4d-bca2f418f140.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121983530-5016ac00-cd46-11eb-8e2b-68423f18c240.png)
+  
 ****
 
 [Daily active cases](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2062.1%20COVID-19%20daily%20active%20cases%20wo%20GHAN%20Hijri.pdf)
@@ -70,13 +70,13 @@ IHME removed their originally released seroprevalence variable (seroprev_mean se
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/118418256-9952dd80-b66c-11eb-9c9c-6f2ade45ad05.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121983603-6e7ca780-cd46-11eb-88eb-de960ef3593f.png)
+  
 ****
 
 [Daily cases estimated to reported, 2021](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2093%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/118418296-bc7d8d00-b66c-11eb-97a6-f40dc6d0a7f0.png)
-
+![image](https://user-images.githubusercontent.com/30849720/121983670-894f1c00-cd46-11eb-948a-58711dd8da08.png)
+  
 ****
 
