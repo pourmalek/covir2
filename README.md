@@ -661,7 +661,9 @@ Also, a summary [here](https://github.com/pourmalek/covir2/blob/main/sandbox/fiv
  
  
  
- 
+ <div dir="ltr">
+
+  
 * The following graph is from the original release of IHME 20210516 update, with the internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
 
 
@@ -688,6 +690,8 @@ Thank you very much for your help in this regard.
 Farshad Pourmalek
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  <div dir="rtl">
 
 
 
