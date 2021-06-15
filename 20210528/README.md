@@ -4,6 +4,13 @@ DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526, SRIV 20210528, U
 
 UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection, 25 days ago (relative to 20210531), i.e. 20210507
 
+* New phenomena in this updtake:
+
+DELP estimates a hugely catastrophic upshoot at the country and global levels, not seen in previous updates, and not shown in later updates. 
+
+SRIV shows a flat bump (like lichen planus) in the last week of May, lasting for about a week. 
+
+
 <br/><br/>
 ****
 
