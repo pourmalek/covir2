@@ -722,8 +722,7 @@ Farshad Pourmalek
 
 نمودار برآورد مرگ های روزانه، از آذر ۱۳۹۹ به بعد،‌ بروز-رسانی مورخ ۲۵ اردیبهشت ۱۴۰۰ (20210515) [PDF](https://github.com/pourmalek/covir2/blob/main/20210515/output/merge/graph%2012a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/122092341-a7f0f980-cdbe-11eb-8e64-869f35507be5.png)
-
+![image](https://user-images.githubusercontent.com/30849720/122096359-54cd7580-cdc3-11eb-9241-bca98d0df6ea.png)
 
 <br/><br/>
 
