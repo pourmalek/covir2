@@ -2440,6 +2440,12 @@ update 20210521 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 ****
 
 uptake 20210516 [Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210516/output/merge/graph%2073%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+ 
+![image](https://user-images.githubusercontent.com/30849720/122102967-e2f92a00-cdca-11eb-9464-3fb440059018.png)
+
+ 
+* The following graph is from the original release of IHME 20210516 update, with the internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
+
 
 ![image](https://user-images.githubusercontent.com/30849720/118917876-ab3fb500-b8e6-11eb-9848-0c73ccc3784d.png)
 
