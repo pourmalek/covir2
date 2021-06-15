@@ -37,6 +37,31 @@
 ************** 
  
  <div dir="ltr"> 
+  
+uptake 20210611: DELP 20210611, IHME 20210610, IMPE 20210611, LANL 20210606, SRIV 20210611 
+  
+*  
+  
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/122122805-227f4080-cde2-11eb-8769-ab5b40ac1307.png) 
+  
+*
+  
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/122123684-1e075780-cde3-11eb-99a2-f7b5221e26af.png)  
+  
+*
+  
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/122123849-61fa5c80-cde3-11eb-9847-f5f3ea6238e2.png)  
+  
+*  
+  
+**************
+**************   
  
 **uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
   
