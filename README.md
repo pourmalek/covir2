@@ -36,9 +36,35 @@
 **************
 ************** 
  
+**uptake 20210618**: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+* 
+ 
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/122659512-c132d680-d12d-11eb-8a52-d266cbc83fd4.png) 
+ 
+*
+ 
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/122659535-01925480-d12e-11eb-8251-ba7282b3a49e.png)
+ 
+*
+ 
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/122659568-4322ff80-d12e-11eb-8764-b6a1394e1955.png)
+ 
+* 
+ 
+**************
+************** 
+ 
+ 
  <div dir="ltr"> 
   
-uptake 20210611: DELP 20210611, IHME 20210610, IMPE 20210611, LANL 20210606, SRIV 20210611 
+**uptake 20210611**: DELP 20210611, IHME 20210610, **_IMPE 20210611_**, LANL 20210606, SRIV 20210611 
   
 *  
   
@@ -63,7 +89,7 @@ uptake 20210611: DELP 20210611, IHME 20210610, IMPE 20210611, LANL 20210606, SRI
 **************
 **************   
  
-**uptake 20210610**: DELP 20210610, **IHME 20210610**, IMPE 20210604, LANL 20210606, SRIV 20210610
+**uptake 20210610**: DELP 20210610, **_IHME 20210610_**, IMPE 20210604, LANL 20210606, SRIV 20210610
   
 *
   
@@ -95,7 +121,7 @@ uptake 20210611: DELP 20210611, IHME 20210610, IMPE 20210611, LANL 20210606, SRI
 
 ### [uptake 20210605](https://github.com/pourmalek/covir2/tree/main/20210605)
  
-DELP 20210603, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, UCLA 20210507
+DELP 20210603, IHME 20210604, IMPE **_20210604_**, LANL 20210602, SRIV 20210604, UCLA 20210507
  
 *
  
