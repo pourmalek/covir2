@@ -1326,6 +1326,13 @@ UCLA
  
 ****
  
+(۲۰) (20210618)    (۱۴۰۰/۳/۲۸)
+ 
+DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+ 
+****
+ 
 (19) (20210611)    (۱۴۰۰/۳/۲۱)
  
 DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611 
@@ -1628,6 +1635,12 @@ DELP 20210401, IHME 20210401, IMPE 20210329, LANL 20210331, SRIV 20210401
  
 ****************
  
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
+ 
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -1773,6 +1786,12 @@ uptake 20210401 [Daily deaths, all time](https://github.com/pourmalek/covir2/blo
 
 
 ****************
+ 
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
  
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
@@ -1921,6 +1940,12 @@ uptake 20210401 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/b
 
 ****************
  
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
+ 
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
 [Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -2065,6 +2090,12 @@ uptake 20210401 [Daily cases, all time](https://github.com/pourmalek/covir2/blob
 
  
 ****************
+ 
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
  
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
@@ -2333,6 +2364,12 @@ uptake 20210401 [Daily active cases](https://github.com/pourmalek/covir2/blob/ma
 
 ****************
  
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
+ 
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
 [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
@@ -2502,6 +2539,12 @@ uptake 20210401 [Hospital-related outcomes, all time](https://github.com/pourmal
 
 
 ****************
+ 
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
  
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
@@ -2675,6 +2718,12 @@ uptake 20210401 [Hospital-related outcomes, 2020-12 on](https://github.com/pourm
 
 ****************
  
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
+ 
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
 [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -2811,6 +2860,12 @@ uptake 20210401 [Daily deaths estimated to reported, all time](https://github.co
 
 
 ****************
+ 
+**uptake 20210618**: DELP 20210618, **IHME 20210618**, IMPE 20210611, LANL 20210613, SRIV 20210618
+ 
+.
+ 
+**************** 
  
 **uptake 20210611**: DELP 20210611, IHME 20210610, **IMPE 20210611**, LANL 20210606, SRIV 20210611
 
