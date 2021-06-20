@@ -46,7 +46,7 @@
  
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/122659512-c132d680-d12d-11eb-8a52-d266cbc83fd4.png) 
+![image](https://user-images.githubusercontent.com/30849720/122660781-e416b800-d138-11eb-8c32-08ba2ba8bc67.png)
  
 *
  
