@@ -4,9 +4,11 @@
 
 Estimates of (1) Daily Deaths, (2) Total Deaths, (3) Daily Cases (incident or prevalent), and (4) Total Cases (incident) from component studies, are the primary outcome variables of interest in this review. Hospital-related and other outcomes from component studies are the secondary outcome variables.
 
-Primary variables were taken from component studies. Secondary variables were calculated in this review. In order to facilitate data management, the primary variables were `-rename-`d or `-renvar-`ed using the variables from component studies according to following conventions. The same set of conventions were adhered to in naming all outcome variables. 
+**Primary variables** were taken from component studies. **Secondary variables** were calculated in this review. In order to facilitate data management, the primary variables were `-rename-`d or `-renvar-`ed using the variables from component studies according to following conventions. The same set of conventions were adhered to in naming all outcome variables. 
 
-As described below through an example, primary variable names have 7 parts, each part denoting one piece of info about the variable. 
+**Primary variables** include **primary outcome** variables, i.e., deaths and cases, and **secondary outcome** variables, e.g. hospital demand.
+
+As described below through examples, primary variable names have 6 parts, each part denoting one piece of info about the variable. 
 
 All the variables have descriptive var `-label-`s that show what the variable stores. 
 
@@ -17,27 +19,22 @@ All the variables have descriptive var `-label-`s that show what the variable st
 
 ### Variable names
 
-## NOTE: (1) Starting from re-run on 20210519 of uptake 20210515, including model version in variable names and labels is retired. 
-
-## NOTE: (2) Retirement of inclusion of model version in variable names and labels is being also extended to previous uptakes, starting from uptake 20210401. 
-
-
 <br/><br/>
 #### Primary outcome variable names:
 
 
 Example:
 
-TotDeaMeRaA01S00V03
+TotDeaMeRaA01S00
 
-1234567890123456789
+1234567890123456
 
--varname- has 19 positions. 
+-varname- has 16 positions. 
 
 
-Tot...Dea...Me....Ra.....A01.....S00......V03
+Tot...Dea...Me....Ra.....A01.....S00
 
-1-3...4-6...7-8...9-10...11-13...14-16..17-19
+1-3...4-6...7-8...9-10...11-13...14-16
 <br/><br/>
 
 * Positions 1-3: Tot or Day: Total (cumulative) or Daily 
@@ -52,13 +49,8 @@ Tot...Dea...Me....Ra.....A01.....S00......V03
 
 * Positions 14-16 S??: Scenario number within component study (see details below)
 
-* Positions 17-19: V??: Version of the model in component study (see details below)
 
-
-Version of the model in component study is the only part that is fixed within each component study in this review, within each update. That is not the case within [`longitudinal`](https://github.com/pourmalek/covir2/tree/main/longitudinal) assessment. 
-
-
-The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, mean, raw, DELPHI, single scenario, model version 3. 
+The example primary variable name, TotDeaMeRaA01S00, denotes Total Deaths, mean, raw, DELPHI, single scenario. 
 
 <br/><br/>
 
@@ -88,7 +80,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Icu: ICU need (ICU covid beds needed by day) [IHME]					
 * Pre: Prevalence [IMPE]										
 * Ref: R effective [IMPE]										
-* Rtt : R t [IMPE]											
+* Rtt: R t [IMPE]											
 * Ser: Seroprevalence (seroprevalence) [IHME]						
 * Tes: Tests (total tests) [IHME]		
 * Vax: Fully vaccinated persons [CSIM]					
@@ -96,7 +88,7 @@ The example primary variable name, TotDeaMeRaA01S00V03, denotes Total Deaths, me
 * Ven: Vent need (invasive Ventilation needed by day) [IHME]
 
 
-Example: The -varname- DayIcdMeRaA03S01V07 carries -varlabel- "Daily ICU demand Mean A03 S01 V07". It is the daily ICU demand, mean estimate, in study A03 (IMPE), scenario 1, model version 7. 
+Example: The -varname- DayIcdMeRaA03S01 carries -varlabel- "Daily ICU demand Mean A03 S01". It is the daily ICU demand, mean estimate, in study A03 (IMPE), scenario 1. 
 
 Variable names and short description for hospital-related outcomes by IHME, are mentioned in "IHME_COVID_19_Data_Release_Information_Sheet.pdf" released with each estimates update of IHME. These Data_Release_Information_Sheet files are stored in covir2 repository in "covir2/202YMMDD/output/IHME/202Y_MM_DD/ IHME_COVID_19_Data_Release_Information_Sheet.pdf", where "202YMMDD" is the uptake date by covir2 and "202Y_MM_DD" is the update directory name created by downloading the zip file of IHME estimates update. [Example](https://github.com/pourmalek/covir2/blob/main/20210401/output/IHME/2021_04_01/IHME_COVID_19_Data_Release_Information_Sheet.pdf) for IHME update 20210401 in [covir2/20210401/output/IHME/2021_04_01/](https://github.com/pourmalek/covir2/tree/main/20210401/output/IHME/2021_04_01)
 
@@ -148,6 +140,8 @@ A04 LANL Los Alamos National Laboratory
 
 A05 SRIV Srivastava
 
+.
+
 A06 SOLT Soltani
 
 A07 GHAN Ghanbari
@@ -185,6 +179,9 @@ Los Alamos National Laboratory (LANL). COVID-19 cases and deaths forecasts. Los 
 **A05 SRIV**
 University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19
 <br/><br/>
+
+.
+
 **A06 SOLT**
 Soltani K, Rezazadeh G. A New Dynamic Model to Predict the Effects of Governmental Decisions on the Progress of the CoViD-19 Epidemic. arxiv preprint. Submitted on 15 Aug 2020. https://arxiv.org/abs/2008.11716
 <br/><br/>
