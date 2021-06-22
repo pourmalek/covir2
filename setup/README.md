@@ -65,7 +65,7 @@ DELP https://covidanalytics.io/projections
 
 IHME https://covid19.healthdata.org/iran-(islamic-republic-of)?view=cumulative-deaths&tab=trend
 
-IMPE https://covid-19.bsvgateway.orghttps://github.com/mrc-ide/global-lmic-reports/tree/master/IRN
+IMPE https://covid-19.bsvgateway.org https://github.com/mrc-ide/global-lmic-reports/tree/master/IRN
 
 LANL https://covid-19.bsvgateway.org Click on "Global Forecasts", the second line in top left menu. Click on the country in the map, twice. This brings up a panel titled "Iran Forecast" containing text and graphs. 
 
