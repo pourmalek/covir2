@@ -1,4 +1,4 @@
-# CSIM = COVID-19 Simulation (label CSIM in this repo) 
+# CSIM = COVID-19 Simulation (labeled CSIM in this repo) 
 
 MRC Centre for Global Infectious Disease Analysis, Imperial College London
 
