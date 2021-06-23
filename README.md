@@ -1,10 +1,14 @@
 # covir2
 
-## Up-to-date curation of periodically updating models for COVID-19 epidemic 
+### Combine and visualize international periodically updating estimates of COVID-19 
 
-## <div align="center">  in Iran :iran:
+### <div align="center"> at the country level 
+ 
+## <div align="center"> :iran: Iran 
 
-# <div align="center"> COVID-19 Iran Review No 2
+## <div align="center"> covir2 : COVID Iran review number 2
+ 
+
 
 <br/><br/>
 
