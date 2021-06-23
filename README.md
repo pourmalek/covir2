@@ -1,5 +1,9 @@
 # covir2
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
+
+
 ### Combine and visualize international periodically updating estimates of COVID-19 
 
 ### <div align="center"> at the country level 
