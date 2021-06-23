@@ -3643,25 +3643,37 @@ on the dropdown menu.
 
 <br/><br/>
 
+********************************************************************************************************************************************
+********************************************************************************************************************************************
 
+#### License, DOI, Citation  
+  
 * All codes are copyrighted by the author under Apache License 2.0.
 
 * See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
-
+ 
 <div dir="rtl">
  
  ## این نمودارها و کد های نرم افزار ممکن است حاوی اشتباهاتی باشند و به صورت ("as is") به اشتراک گذاشته شده اند و هر گونه عواقب هر گونه تصمیم گیری بر مبنای کد ها و نمودارهای موجود در این سایت (سایت covir2) بر عهده تصمیم گیرنده یا تصمیم گیرندگان است و نه بر عهده پدید آورنده یا عهده پدید آورندگان این سایت (سایت covir2).
 
 
-<div dir="ltr">
+<div dir="ltr"> 
 
 <br/><br/>
-
-[![DOI](https://zenodo.org/badge/344389637.svg)](https://zenodo.org/badge/latestdoi/344389637)
-
-
+  
+  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4584122.svg)](https://doi.org/10.5281/zenodo.4584122)
+ 
 
 [`DOI`](https://zenodo.org/record/4584122#.YGPaTi295O0)
+  
+<br/><br/>
+  
+  
+Pourmalek, F. covir2: Combine and visualize international periodically updating estimates of COVID-19 at the country level: Canada, national level, provinces, and territories. Version 1.1, Released June 23, 2021.http://doi.org/10.5281/zenodo.5019482 https://github.com/pourmalek/covir2
+  
+  
+ 
 
 
 
