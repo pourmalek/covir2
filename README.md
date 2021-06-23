@@ -10,7 +10,12 @@
 
 [English](https://github.com/pourmalek/covir2/blob/main/README.md#english-readme-for-covir2)
  
-#### CORRECTION to be applied: Case Fatality Ratio (CFR) applies to symptomatic cases, Infection Fatality ratio (CFR) applies to all infections, comprised of symptomatic and asymptomatic cases. 
+********************************************************************************************************************************************  
+  *
+#### Nomenclature CORRECTION to be applied: Case Fatality Ratio (CFR) applies to symptomatic cases, Infection Fatality ratio (CFR) applies to all infections, comprised of symptomatic and asymptomatic cases. 
+  *
+******************************************************************************************************************************************** 
+ 
 
 ******
 
