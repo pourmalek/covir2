@@ -3665,17 +3665,12 @@ on the dropdown menu.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
  
 
-[`DOI`](https://zenodo.org/record/4584122#.YGPaTi295O0)
+[`DOI`](https://zenodo.org/record/5020797#.YNOP5C297-Y)
   
 <br/><br/>
   
   
-Pourmalek, F. covir2: Combine and visualize international periodically updating estimates of COVID-19 at the country level: Canada, national level, provinces, and territories. Version 1.1, Released June 23, 2021. http://doi.org/10.5281/zenodo.5019482 https://github.com/pourmalek/covir2
+Pourmalek, F. covir2: Combine and visualize international periodically updating estimates of COVID-19 at the country level: Canada, national level, provinces, and territories. Version 1.1, Released June 23, 2021. http://doi.org/10.5281/zenodo.5020797 https://github.com/pourmalek/covir2
+   
  
- http://doi.org/10.5281/zenodo.5020797 new
-  
-  
- 
-
-
 
