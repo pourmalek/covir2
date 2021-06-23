@@ -3678,7 +3678,8 @@ on the dropdown menu.
 <br/><br/>
   
   
-Pourmalek, F. covir2: Combine and visualize international periodically updating estimates of COVID-19 at the country level: Canada, national level, provinces, and territories. Version 1.1, Released June 23, 2021. http://doi.org/10.5281/zenodo.5020797 https://github.com/pourmalek/covir2
-   
+Pourmalek, F. GitHub repository “covid2”: Combine and visualize international periodically updating estimates of COVID-19 at the country level, countries without subnational level estimates: Iran. Version 2.2, Released June 23, 2021. http://doi.org/10.5281/zenodo.5020797 https://github.com/pourmalek/covir2 
+ 
+ 
  
 
