@@ -3174,7 +3174,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 <br/><br/>
 <div dir="ltr">
  
-## English README for covir2
+## English README 
 
 
 
@@ -3182,7 +3182,7 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 ********************************************************************************************************************************************
 * Project: Combine and visualize international periodically updating estimates of COVID-19 at the country level (CovidVisualizedCountry) Countries without subnational estimates: Iran
 * Project name at conception: Rapid review of estimates of COVID-19 Iran - No 2
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
+* Person: Farshad Pourmalek (pourmalek_farshad at yahoo dot com)   [![Orcid](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0002-2134-0771)    [`PubMed`](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
 * Time (initial): 2021-02-10
 ********************************************************************************************************************************************
 
