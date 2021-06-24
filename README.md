@@ -3658,7 +3658,7 @@ on the dropdown menu.
 ********************************************************************************************************************************************
  
  
-## Licences / Copyrights of data and / or graphs used in this repository:
+## Licenses / Copyrights of data and / or graphs used in this repository:
 
 .
 
