@@ -13,6 +13,25 @@
 
 ## <div align="center"> covir2 : COVID Iran review number 2
  
+ 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ 
+### Related repositories:
+
+THREE “CovidVisualized” repositories, use a common template and logic for visualization of the results of estimates of FIVE international and periodically updating COVID-19 models for the future of the epidemic:
+
+[`CovidVisualizedGlobal`]( https://github.com/pourmalek/CovidVisualizedGlobal) for the global level
+
+[`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) for countries with subnational estimates: Canada
+
+[`covir2`](https://github.com/pourmalek/covir2) for countries without subnational estimates: Iran
+
+Results are periodically updated. 
+
+The codes in these repositories can be adapted for use for any country or region in the world. 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ 
 
 
 <br/><br/>
