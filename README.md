@@ -3651,6 +3651,106 @@ on the dropdown menu.
 * To report a Vulnerability, create an [`issue`](https://github.com/pourmalek/covir2/issues), use [`covir2 Discussions`](https://github.com/pourmalek/covir2/discussions), or email repo owner via pourmalek_farshad at yahoo dot com
 
 <br/><br/>
+ 
+ 
+ 
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+ 
+ 
+ #### Licences of data / graphs used in this repository:
+
+.
+
+(1) ABBREVIATED NAME IN THIS REPOSITORY: DELP
+
+CITATION: COVID Analytics. DELPHI epidemiological case predictions. Cambridge: Operations Research Center, Massachusetts Institute of Technology. https://www.covidanalytics.io/projections and https://github.com/COVIDAnalytics/website/tree/master/data/predicted
+
+SOURCE REPOSITORY: https://github.com/COVIDAnalytics/DELPHI
+
+SOURCE REPOSITORY LICENCE: https://github.com/COVIDAnalytics/website/blob/master/LICENSE
+
+.
+
+(2) ABBREVIATED NAME IN THIS REPOSITORY: IHME
+
+CITATION: Institute for Health Metrics and Evaluation (IHME). COVID-19 mortality, infection, testing, hospital resource use, and social distancing projections. Seattle: Institute for Health Metrics and Evaluation (IHME), University of Washington. http://www.healthdata.org/covid/ and http://www.healthdata.org/covid/data-downloads
+
+SOURCE REPOSITORY: http://www.healthdata.org/covid/data-downloads
+
+SOURCE REPOSITORY LICENCE: http://www.healthdata.org/about/terms-and-conditions
+
+.
+
+(3) ABBREVIATED NAME IN THIS REPOSITORY: IMPE
+
+CITATION: MRC Centre for Global Infectious Disease Analysis (MRC GIDA). Future scenarios of the healthcare burden of COVID-19 in low- or middle-income countries. London: MRC Centre for Global Infectious Disease Analysis, Imperial College London. https://mrc-ide.github.io/global-lmic-reports/ and https://github.com/mrc-ide/global-lmic-reports/tree/master/data
+
+SOURCE REPOSITORY: https://github.com/mrc-ide/global-lmic-reports/tree/master/data
+
+SOURCE REPOSITORY LICENCE: https://mrc-ide.github.io/global-lmic-reports/
+
+.
+
+(4) ABBREVIATED NAME IN THIS REPOSITORY: LANL
+
+CITATION: Los Alamos National Laboratory (LANL). COVID-19 cases and deaths forecasts. Los Alamos: Los Alamos National Laboratory (LANL). https://covid-19.bsvgateway.org
+
+SOURCE REPOSITORY: https://covid-19.bsvgateway.org
+
+SOURCE REPOSITORY LICENCE: https://covid-19.bsvgateway.org
+.
+
+(5) ABBREVIATED NAME IN THIS REPOSITORY: SRIV
+
+CITATION: Srivastava, Ajitesh. University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19 and https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
+
+SOURCE REPOSITORY: https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
+
+SOURCE REPOSITORY LICENCE: https://github.com/scc-usc/ReCOVER-COVID-19/blob/master/LICENSE
+
+.
+
+(6) ABBREVIATED NAME IN THIS REPOSITORY: JOHN
+
+CITATION: "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University" https://coronavirus. jhu.edu/map.html and https://github.com/CSSEGISandData/COVID-19
+
+SOURCE REPOSITORY: https://github.com/CSSEGISandData/COVID-19
+
+SOURCE REPOSITORY LICENCE: https://github.com/CSSEGISandData/COVID-19
+
+.
+
+(7) ABBREVIATED NAME IN THIS REPOSITORY: YYGU
+
+CITATION: Gu, Youyang. COVID-19 Projections Using Machine Learning. https://covid19-projections.com and https://github.com/youyanggu/covid19_projections
+
+SOURCE REPOSITORY: https://github.com/youyanggu/covid19_projections
+
+SOURCE REPOSITORY LICENCE: https://github.com/youyanggu/covid19_projections/blob/master/LICENSE
+
+.
+
+(8) ABBREVIATED NAME IN THIS REPOSITORY: UCLA
+
+CITATION: Statistical Machine Learning Lab, Computer Science Department, University of California, Los Angeles.   Combating COVID-19. https://covid19.uclaml.org/info.html and https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection
+
+SOURCE REPOSITORY: https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection
+
+SOURCE REPOSITORY LICENCE: https://www.uclaml.org
+
+.
+
+(9) ABBREVIATED NAME IN THIS REPOSITORY: covidcompare
+
+CITATION: Friedman J, Liu P, Akre S. The covidcompare tool. https://covidcompare.io/about
+
+SOURCE REPOSITORY: https://covidcompare.io/
+
+SOURCE REPOSITORY LICENCE: https://covidcompare.io/about
+
+.
+
 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
