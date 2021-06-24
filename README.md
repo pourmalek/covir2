@@ -3658,7 +3658,7 @@ on the dropdown menu.
 ********************************************************************************************************************************************
  
  
- #### Licences of data / graphs used in this repository:
+## Licences of data and / or graphs used in this repository:
 
 .
 
@@ -3755,7 +3755,7 @@ SOURCE REPOSITORY LICENCE: https://covidcompare.io/about
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### License, DOI, Citation  
+## License, DOI, and suggested Citation of this reposirory 
   
 * All codes are copyrighted by the author under Apache License 2.0.
 
