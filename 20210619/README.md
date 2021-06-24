@@ -2,7 +2,7 @@
 
 DELP 20210618, IHME 20210618, **_IMPE 20210618_**, LANL 20210613, SRIV 20210618
 
-This is actually uptake 20210618 number 2 because IMPE updae 20210611 (2021-06-18_v8.csv.zip) was released on 2021-06-24.
+This is actually uptake 20210618 number 2 because IMPE updae 20210618 (2021-06-18_v8.csv.zip) was released on 2021-06-24.
 
 <br/><br/>
 ****
