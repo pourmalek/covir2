@@ -14,6 +14,14 @@
 ## <div align="center"> covir2 : COVID Iran review number 2
  
  
+********************************************************************************************************************************************
+* Project: Combine and visualize international periodically updating estimates of COVID-19 at the country level (CovidVisualizedCountry) Countries without subnational estimates: Iran
+* Project name at conception: Rapid review of estimates of COVID-19 Iran - No 2
+* Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
+* Time (initial): 2021-02-10
+********************************************************************************************************************************************
+ 
+ 
  <br/><br/>
 
  
@@ -42,7 +50,7 @@ The codes in these repositories can be adapted for use for any country or region
  
 ********************************************************************************************************************************************  
   *
-#### Nomenclature CORRECTION to be applied: Case Fatality Ratio (CFR) applies to symptomatic cases, Infection Fatality ratio (CFR) applies to all infections, comprised of symptomatic and asymptomatic cases. 
+#### Notice: Nomenclature CORRECTION to be applied: Case Fatality Ratio (CFR) applies to symptomatic cases, Infection Fatality ratio (CFR) applies to all infections, comprised of symptomatic and asymptomatic cases. 
   *
 ******************************************************************************************************************************************** 
  
@@ -3172,10 +3180,10 @@ uptake 20210401 [Daily cases estimated to reported, 2021](https://github.com/pou
 
 
 ********************************************************************************************************************************************
-* Project: Rapid review of estimates of COVID-19 Iran - No 2
-* Person: Farshad Pourmalek // pourmalek_farshad at yahoo dot com // [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
+* Project: Combine and visualize international periodically updating estimates of COVID-19 at the country level (CovidVisualizedCountry) Countries without subnational estimates: Iran
+* Project name at conception: Rapid review of estimates of COVID-19 Iran - No 2
+* Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
 * Time (initial): 2021-02-10
-* **OBJECTIVE** Get and prepare component studies' estimates for Iran, combine them, and produce data files and graphs of combined estimates
 ********************************************************************************************************************************************
 
 <br/><br/>
