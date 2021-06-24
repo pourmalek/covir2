@@ -3659,6 +3659,8 @@ on the dropdown menu.
  
  
 ## Licenses / Copyrights of data and / or graphs used in this repository:
+ 
+All the data and / or graphs used in this repository are at non-individual and aggregate level, publicly available on the Internet, and under pertinent licenses and copyrights for non-commercial use, reproduction, and distribution for scientific research, provided that the conditions mentioned in the respective licenses and copyrights are met, as provided below.   
 
 .
 
@@ -3758,6 +3760,8 @@ SOURCE REPOSITORY LICENCE: https://covidcompare.io/about
 ## License, DOI, and suggested Citation of this reposirory 
   
 * All codes are copyrighted by the author under Apache License 2.0.
+ 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)  
 
 * See [`LICENSE`](https://github.com/pourmalek/covir2/blob/main/LICENSE)
  
