@@ -92,6 +92,32 @@ The codes in these repositories can be adapted for use for any country or region
   
   
  
+**uptake 20210624**: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 20210613, SRIV 20210624
+ 
+* 
+ 
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/123472012-742a8680-d5ab-11eb-9964-85133dfe729f.png)
+ 
+*
+ 
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/123472171-ad62f680-d5ab-11eb-9e9b-8337ee11f086.png)
+ 
+*
+ 
+[Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/123472313-e00cef00-d5ab-11eb-8091-5bf96d29cc14.png)
+ 
+* 
+ 
+**************
+************** 
+ 
+ 
 **uptake 20210618**: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618
  
 * 
