@@ -928,7 +928,7 @@ use the PDF link
 
  
  
- * The following graph is from the original release of IHME 20210516 update, with the internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
+* The following graph is from the original release of IHME 20210516 update, with the internally inconsistent increase in BED NEED and ICU NEED on about 21-07-01 without any increase in cases or deaths. This anomaly was present at country and at global level. IHME rectified this anomaly later. 
 
 
 ![image](https://user-images.githubusercontent.com/30849720/118391588-d924b100-b5e9-11eb-8a73-b30a222d4c5b.png)
@@ -1406,14 +1406,14 @@ UCLA
  
 ****
  
-(۲۰) (20210624)    (۱۴۰۰/۴/۴)
+(21) (20210624)    (۱۴۰۰/۴/۴)
  
 DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 20210613, SRIV 20210624
  
- 
+
 ****
  
-(۲۰) (20210618)    (۱۴۰۰/۳/۲۸)
+(20) (20210618)    (۱۴۰۰/۳/۲۸)
  
 DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
@@ -1719,6 +1719,11 @@ DELP 20210401, IHME 20210401, **_IMPE 20210329_**, LANL 20210331, SRIV 20210401
 
 ### (۱) برآورد مرگ های روزانه، ‌از دی ۱۳۹۸ به بعد 
 
+ 
+****************
+ 
+**uptake 20210624**: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 20210613, SRIV 20210624
+ 
  
 ****************
  
