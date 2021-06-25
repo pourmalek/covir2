@@ -29,60 +29,67 @@ Recently (for the recent few updates), IMPE releases its update, dated equal to 
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123471880-4ba28c80-d5ab-11eb-94c3-24ec7f370496.png)
   
 ****
 
 [Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123472012-742a8680-d5ab-11eb-9964-85133dfe729f.png)
 
 ****
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2019%20a%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/122659522-de67a500-d12d-11eb-8e64-0aa5f81707fb.png)
+![image](https://user-images.githubusercontent.com/30849720/123472108-945a4580-d5ab-11eb-8901-7e59bf043427.png)
+  
 ****
 
 [Daily deaths, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2019%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123472171-ad62f680-d5ab-11eb-9e9b-8337ee11f086.png)
 
 ****
 
 [Daily deaths, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2019%20c%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123472253-c79cd480-d5ab-11eb-9d12-7066621f912e.png)
 
 ****
 
 [Daily deaths, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2019%20d%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123472313-e00cef00-d5ab-11eb-8091-5bf96d29cc14.png)
 
 ****
 
-[Daily cases, all time](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+[Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/123472413-fdda5400-d5ab-11eb-8f15-a1b229871134.png)
+  
+****
+
+[Daily cases or infections, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
 
   
 ****
 
-[Daily cases, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2023%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
-
-  
-****
-
-[Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+[Daily cases or infections, after Ordibehesht 1400, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20a%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
 
 ****
 
-[Daily cases, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+[Daily cases or infections, after Ordibehesht 1400, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
 
 ****
 
-[Daily cases, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+[Daily cases or infections, after Ordibehesht 1400, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
 
 ****
 
-[Daily cases, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+[Daily cases or infections, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
 
 ****
