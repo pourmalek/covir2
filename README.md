@@ -48,13 +48,20 @@ The codes in these repositories can be adapted for use for any country or region
 
 [English](https://github.com/pourmalek/covir2/blob/main/README.md#english-readme-for-covir2)
  
+   
 ********************************************************************************************************************************************  
   *
-#### Notice: Nomenclature CORRECTION to be applied: Case Fatality Ratio (CFR) applies to symptomatic cases, Infection Fatality ratio (CFR) applies to all infections, comprised of symptomatic and asymptomatic cases. 
-  *
-******************************************************************************************************************************************** 
- 
+## Notice: Nomenclature CORRECTION is being applied: 
+  
+### IHME and IMPE estimate INFECTIONS (not CASES). 
+  
+#### Their Case Fatality Ratio (CFR) -> Infection Fatality ratio (IFR).
 
+  *
+********************************************************************************************************************************************   
+  
+ 
+ 
 ******
 
 
