@@ -14,7 +14,7 @@ Recently (for the recent few updates), IMPE releases its update, dated equal to 
 
 <div dir="rtl">
   
-###  همه نمودارهای برداشت ۱۴۰۰۰۳۲۹ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210624/graphs%20merged%2020210624.pdf)
+###  همه نمودارهای برداشت ۱۴۰۰۰۴۰۴ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210624/graphs%20merged%2020210624.pdf)
   
 <div dir="ltr">
 
