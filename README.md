@@ -40,6 +40,8 @@ THREE “CovidVisualized” repositories, use a common template and logic for vi
 Results are periodically updated. 
 
 The codes in these repositories can be adapted for use for any country or region in the world. 
+ 
+* For a sample application of “covir2” to a country without subnational estimates – Afghanistan 20210625 – see https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/README.md 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
