@@ -91,7 +91,6 @@ DELP 20210625, **_IHME 20210625_**, IMPE 20210618, LANL 20210613, SRIV 20210624
 
 [Daily cases or infections, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/123497345-e0c07800-d5e1-11eb-945a-0882e95fa68a.png)
 
 ****
 
