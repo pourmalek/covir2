@@ -24,11 +24,13 @@ Note: Hijri Solar dates need to be removed to improve the graphs.
 
 [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123521724-4a399880-d66d-11eb-899c-703f9313763b.png)
   
 ****
 
-[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2013%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenarios%2C%202020-12-01%20on.pdf)
+[Daily deaths, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123521753-7ce39100-d66d-11eb-9aaf-d127f7a82bda.png)
 
 ****
 
