@@ -76,39 +76,45 @@ Note: Hijri Solar dates need to be removed to improve the graphs.
 
 ****
 
-[Daily cases or infections, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2026%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+[Daily cases or infections, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2025%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/123522031-5fafc200-d66f-11eb-87a0-97961c79fec3.png)
-
-****
-
-[Daily cases or infections, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2029%20c%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
-
+![image](https://user-images.githubusercontent.com/30849720/123522126-41969180-d670-11eb-8002-fa8aba443cf5.png)
 
 ****
 
-[Daily cases or infections, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2029%20d%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IMPE.pdf)
+[Daily cases or infections, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2026%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
-
-****
-
-[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes.pdf)
-
+![image](https://user-images.githubusercontent.com/30849720/123522170-8a4e4a80-d670-11eb-9c5c-61b629b6d762.png)
 
 ****
 
-[Hospital-related outcomes, 2020-12 on](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2074%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%20Ordibehesht%201400%20on.pdf)
+[Daily cases or infections, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2027%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123522185-abaf3680-d670-11eb-91a0-3bc19e3eadb2.png)
 
 ****
 
-[Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Afghanistan%2C%20reference%20scenarios.pdf)
+[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/123522211-cc778c00-d670-11eb-8115-f364a2e6fe3f.png)
+
+****
+
+[Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/123522235-ee710e80-d670-11eb-8760-3c921d63751d.png)
+
+****
+
+[Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Afghanistan%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/123522257-18c2cc00-d671-11eb-8419-f9cac936a120.png)
   
 ****
 
-[Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2098%20COVID-19%20total%20cases%20estimated%20to%20reported%2C%20Afghanistan%2C%20reference%20scenarios%2C%202021-01-01%20on.pdf) 
+[Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2082%20COVID-19%20daily%20cases%20to%20deaths%2C%20Afghanistan%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/123522287-46a81080-d671-11eb-8720-b8d4e963526b.png)
   
 ****
 
