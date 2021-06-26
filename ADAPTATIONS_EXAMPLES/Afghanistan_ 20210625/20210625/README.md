@@ -88,7 +88,7 @@ Note: Hijri Solar dates need to be removed to improve the graphs.
 
 ****
 
-[Daily cases or infections, after Ordibehesht 1400, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2027%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IMPE.pdf)
+[Daily cases or infections, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2027%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IMPE.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/123522185-abaf3680-d670-11eb-91a0-3bc19e3eadb2.png)
 
