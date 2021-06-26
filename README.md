@@ -31,17 +31,17 @@
 
 THREE “CovidVisualized” repositories, use a common template and logic for visualization of the results of estimates of FIVE international and periodically updating COVID-19 models for the future of the epidemic:
 
-[`CovidVisualizedGlobal`]( https://github.com/pourmalek/CovidVisualizedGlobal) for the global level
+[`CovidVisualizedGlobal`]( https://github.com/pourmalek/CovidVisualizedGlobal) for the **_GLOBAL_** level
 
-[`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) for countries with subnational estimates: Canada
+[`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) for countries with subnational estimates: **_CANADA_**
 
-[`covir2`](https://github.com/pourmalek/covir2) for countries without subnational estimates: Iran
+[`covir2`](https://github.com/pourmalek/covir2) for countries without subnational estimates: **_IRAN_**
 
 Results are periodically updated. 
 
 The codes in these repositories can be adapted for use for any country or region in the world. 
  
-* For a sample application of “covir2” to a country without subnational estimates – Afghanistan 20210625 – see https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/README.md 
+* For a sample application of “covir2” to a country without subnational estimates – **_AFGHANISTAN_** 20210625 – see https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/README.md 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
