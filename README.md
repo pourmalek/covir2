@@ -37,7 +37,7 @@ THREE “CovidVisualized” repositories, use a common template and logic for vi
 
 [`covir2`](https://github.com/pourmalek/covir2) for countries without subnational estimates: [`IRAN`](https://github.com/pourmalek/covir2#covir2)
 
-These results are periodically updated. 
+These results in these three repositories get periodically updated. 
 
 The codes in these repositories can be adapted for use for any country or region in the world. 
  
