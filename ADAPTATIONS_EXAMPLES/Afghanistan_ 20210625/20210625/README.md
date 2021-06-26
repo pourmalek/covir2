@@ -1,7 +1,10 @@
-### Study update dates in uptake 20210625
+## COUNTRY = Afghanistan 
+
+### Study update dates in uptake 20210625, 
 
 DELP 20210625, **_IHME 20210625_**, IMPE 20210618, LANL 20210613, SRIV 20210624
 
+Note: Hijri Solar dates need to be removed to improve the graphs.
 
 <br/><br/>
 ****
