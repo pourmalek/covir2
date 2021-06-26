@@ -41,8 +41,8 @@ Results are periodically updated.
 
 The codes in these repositories can be adapted for use for any country or region in the world. 
  
-* For a sample application of “covir2” to a country without subnational estimates – **_AFGHANISTAN_** 20210625 – see https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/README.md 
-
+* For a sample application of “covir2” to a country without subnational estimates see [`Afghanistan 20210625`](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/README.md)
+ 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
 
