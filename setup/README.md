@@ -45,6 +45,8 @@ Note: I may forget to update the [Uptakes table Iran](https://github.com/pourmal
 
 ### Study || URL for estimates files
 
+JOHN https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
+
 DELP https://github.com/COVIDAnalytics/website/tree/master/data/predicted
 
 IHME http://www.healthdata.org/covid/data-downloads
@@ -61,6 +63,8 @@ UCLA https://github.com/uclaml/ucla-covid19-forecasts
 
 ### Study || URL for graphs
 
+JOHN https://www.arcgis.com/apps/dashboards/bda7594740fd40299423467b48e9ecf6
+
 DELP https://covidanalytics.io/projections
 
 IHME https://covid19.healthdata.org/iran-(islamic-republic-of)?view=cumulative-deaths&tab=trend
@@ -72,6 +76,8 @@ LANL https://covid-19.bsvgateway.org Click on "Global Forecasts", the second lin
 SRIV https://scc-usc.github.io/ReCOVER-COVID-19/
 
 UCLA https://covid19.uclaml.org Click on word "World" in top left, then click on the country in the map.
+
+Worldometer https://www.worldometers.info/coronavirus/
 
 *****************
 
