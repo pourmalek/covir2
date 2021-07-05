@@ -1,6 +1,6 @@
 ### Study update dates in uptake 20210604
 
-DELP 20210603, **IHME 20210604**, IMPE 20210527, LANL 20210602, SRIV 20210604, UCLA 20210507
+DELP 20210603 [correct to DELP 20210604], **IHME 20210604**, IMPE 20210527, LANL 20210602, SRIV 20210604, UCLA 20210507
 
 UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection, 28 days ago (relative to 20210604), i.e. 20210507
 
