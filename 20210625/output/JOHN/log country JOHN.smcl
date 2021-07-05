@@ -1,0 +1,1329 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/log country JOHN.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Jul 2021, 21:30:51
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country JOHN.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare Johns Hopkins data for country
+. ***************************************************************************
+. 
+. 
+. 
+. * get Johns Hopkins data for deaths
+. 
+. 
+. import delimited ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv" ///
+> , clear varnames(1) colrange(2:2)
+{res}{text}(1 var, 279 obs)
+
+{com}. 
+. save "time_series_covid19_deaths_global col 2.dta", replace
+{txt}(note: file time_series_covid19_deaths_global col 2.dta not found)
+file time_series_covid19_deaths_global col 2.dta saved
+
+{com}. 
+. 
+. import delimited ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv" ///
+> , clear varnames(1) colrange(5)
+{res}{text}(529 vars, 279 obs)
+
+{com}. 
+. 
+. save "time_series_covid19_deaths_global col 5 on.dta", replace
+{txt}(note: file time_series_covid19_deaths_global col 5 on.dta not found)
+file time_series_covid19_deaths_global col 5 on.dta saved
+
+{com}. 
+. 
+. use "time_series_covid19_deaths_global col 2.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 _n using "time_series_covid19_deaths_global col 5 on.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             279{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. 
+. rename countryregion loc_grand_name
+{res}{txt}
+{com}. 
+. label var loc_grand_name "location grand name"
+{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(278 observations deleted)
+
+{com}. 
+. order loc_grand_name, last
+{txt}
+{com}. 
+. gen counter = _n
+{txt}
+{com}. 
+. reshape long v, i(counter) 
+{txt}(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     529
+{txt}Number of variables            {res}     532   {txt}->{res}       5
+{txt}j variable (529 values)                   ->   {res}_j
+{txt}xij variables:
+                         {res}v1 v2 ... v529   {txt}->   {res}v
+{txt}{hline 77}
+
+{com}. 
+. drop counter 
+{txt}
+{com}. 
+. codebook _j
+
+{txt}{hline}
+{res}_j{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1{txt},{res}529{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}529{col 51}{txt}missing .:  {res}0{txt}/{res}529
+
+{txt}{col 19}mean:{res}{col 26}     265
+{txt}{col 15}std. dev:{res}{col 26} 152.853
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      53{col 37}     133{col 47}     265{col 57}     397{col 67}     477
+{txt}
+{com}. 
+. // replace _j = _j - 4 // compensate for first vars in the original file
+. 
+. gen date = date("22 Jan 2020", "DMY")
+{txt}
+{com}. 
+. replace date = date + _j - 1
+{txt}(528 real changes made)
+
+{com}. 
+. format date %td
+{txt}
+{com}. 
+. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21936{txt},{res}22464{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}22jan2020{txt},{res}03jul2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}529{col 51}{txt}missing .:  {res}0{txt}/{res}529
+
+{txt}{col 19}mean:{res}{col 26}   22200{txt} = {res}12oct2020{txt}
+{col 15}std. dev:{res}{col 26} 152.853
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21988{col 37}   22068{col 47}   22200{col 57}   22332{col 67}   22412
+{col 26}14mar2020{col 36}02jun2020{col 46}12oct2020{col 56}21feb2021{col 66}12may2021
+{txt}
+{com}. 
+. order date 
+{txt}
+{com}. 
+. rename v TotDeaMeRaA00S00
+{res}{txt}
+{com}. 
+. label var TotDeaMeRaA00S00 "Total Deaths JOHN"
+{txt}
+{com}. 
+. destring TotDeaMeRaA00S00, replace
+{txt}TotDeaMeRaA00S00: all characters numeric; {res}replaced {txt}as {res}long
+{txt}
+{com}. 
+. list TotDeaMeRaA00S00 if date == td(19feb2020) // Shoule be 2
+{txt}
+     {c TLC}{hline 10}{c TRC}
+     {c |} {res}TotDe~00 {txt}{c |}
+     {c LT}{hline 10}{c RT}
+ 29. {c |} {res}       2 {txt}{c |}
+     {c BLC}{hline 10}{c BRC}
+
+{com}. 
+. gen DayDeaMeRaA00S00 =  TotDeaMeRaA00S00[_n] - TotDeaMeRaA00S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayDeaMeRaA00S00 "Daily Deaths JOHN"
+{txt}
+{com}. 
+. replace DayDeaMeRaA00S00 = TotDeaMeRaA00S00 if _j == 1
+{txt}(1 real change made)
+
+{com}. 
+. replace TotDeaMeRaA00S00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. replace DayDeaMeRaA00S00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. drop _j _merge
+{txt}
+{com}. 
+. 
+. 
+. gen DayDeaMeRaA00S00_CF2 = DayDeaMeRaA00S00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayDeaMeRaA00S00_CF2 "Daily Deaths JOHN correction factor 2"
+{txt}
+{com}. 
+. gen DayDeaMeRaA00S00_CF5 = DayDeaMeRaA00S00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayDeaMeRaA00S00_CF5 "Daily Deaths JOHN correction factor 5"
+{txt}
+{com}. 
+. gen TotDeaMeRaA00S00_CF2 = TotDeaMeRaA00S00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotDeaMeRaA00S00_CF2 "Total Deaths JOHN correction factor 2"
+{txt}
+{com}. 
+. gen TotDeaMeRaA00S00_CF5 = TotDeaMeRaA00S00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotDeaMeRaA00S00_CF5 "Total Deaths JOHN correction factor 5"
+{txt}
+{com}. 
+. 
+. 
+. order date loc_grand_name DayDeaMeRaA00S00 TotDeaMeRaA00S00 DayDeaMeRaA00S00_CF2 DayDeaMeRaA00S00_CF5 TotDeaMeRaA00S00_CF2 TotDeaMeRaA00S00_CF5
+{txt}
+{com}.                                         
+. 
+. sort date
+{txt}
+{com}. 
+. save "country JOHN deaths.dta", replace
+{txt}(note: file country JOHN deaths.dta not found)
+file country JOHN deaths.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * get Johns Hopkins data for cases
+. 
+. 
+. import delimited using ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv" ///
+> , clear varnames(1) colrange(2:2)
+{res}{text}(1 var, 279 obs)
+
+{com}. 
+. save "time_series_covid19_confirmed_global col 2.dta", replace
+{txt}(note: file time_series_covid19_confirmed_global col 2.dta not found)
+file time_series_covid19_confirmed_global col 2.dta saved
+
+{com}. 
+. 
+. import delimited using ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv" ///
+> , clear varnames(1) colrange(5)
+{res}{text}(529 vars, 279 obs)
+
+{com}. 
+. save "time_series_covid19_confirmed_global col 5 on.dta", replace
+{txt}(note: file time_series_covid19_confirmed_global col 5 on.dta not found)
+file time_series_covid19_confirmed_global col 5 on.dta saved
+
+{com}. 
+. 
+. use "time_series_covid19_confirmed_global col 2.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 _n using "time_series_covid19_confirmed_global col 5 on.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             279{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. 
+. rename countryregion loc_grand_name
+{res}{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(278 observations deleted)
+
+{com}. 
+. order loc_grand_name, last
+{txt}
+{com}. 
+. gen counter = _n
+{txt}
+{com}. 
+. reshape long v, i(counter) 
+{txt}(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     529
+{txt}Number of variables            {res}     532   {txt}->{res}       5
+{txt}j variable (529 values)                   ->   {res}_j
+{txt}xij variables:
+                         {res}v1 v2 ... v529   {txt}->   {res}v
+{txt}{hline 77}
+
+{com}. 
+. drop counter 
+{txt}
+{com}. 
+. codebook _j
+
+{txt}{hline}
+{res}_j{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1{txt},{res}529{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}529{col 51}{txt}missing .:  {res}0{txt}/{res}529
+
+{txt}{col 19}mean:{res}{col 26}     265
+{txt}{col 15}std. dev:{res}{col 26} 152.853
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      53{col 37}     133{col 47}     265{col 57}     397{col 67}     477
+{txt}
+{com}. 
+. gen date = date("22 Jan 2020", "DMY")
+{txt}
+{com}. 
+. replace date = date + _j - 1
+{txt}(528 real changes made)
+
+{com}. 
+. format date %td
+{txt}
+{com}. 
+. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21936{txt},{res}22464{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}22jan2020{txt},{res}03jul2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}529{col 51}{txt}missing .:  {res}0{txt}/{res}529
+
+{txt}{col 19}mean:{res}{col 26}   22200{txt} = {res}12oct2020{txt}
+{col 15}std. dev:{res}{col 26} 152.853
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21988{col 37}   22068{col 47}   22200{col 57}   22332{col 67}   22412
+{col 26}14mar2020{col 36}02jun2020{col 46}12oct2020{col 56}21feb2021{col 66}12may2021
+{txt}
+{com}. 
+. order date 
+{txt}
+{com}. 
+. rename v TotCasMeRaA00S00
+{res}{txt}
+{com}. 
+. label var TotCasMeRaA00S00 "Total Cases JOHN"
+{txt}
+{com}. 
+. destring TotCasMeRaA00S00, replace
+{txt}TotCasMeRaA00S00: all characters numeric; {res}replaced {txt}as {res}long
+{txt}
+{com}. 
+. gen DayCasMeRaA00S00 =  TotCasMeRaA00S00[_n] - TotCasMeRaA00S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayCasMeRaA00S00 "Daily Cases JOHN"
+{txt}
+{com}. 
+. replace DayCasMeRaA00S00 = TotCasMeRaA00S00 if _j == 1
+{txt}(1 real change made)
+
+{com}. 
+. replace TotCasMeRaA00S00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. replace DayCasMeRaA00S00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. drop _j _merge
+{txt}
+{com}. 
+. 
+. gen DayCasMeRaA00S00_CF2 = DayCasMeRaA00S00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayCasMeRaA00S00_CF2 "Daily Cases JOHN correction factor 2"
+{txt}
+{com}. 
+. gen DayCasMeRaA00S00_CF5 = DayCasMeRaA00S00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayCasMeRaA00S00_CF5 "Daily Cases JOHN correction factor 5"
+{txt}
+{com}. 
+. gen TotCasMeRaA00S00_CF2 = TotCasMeRaA00S00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotCasMeRaA00S00_CF2 "Total Cases JOHN correction factor 2"
+{txt}
+{com}. 
+. gen TotCasMeRaA00S00_CF5 = TotCasMeRaA00S00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotCasMeRaA00S00_CF5 "Total Cases JOHN correction factor 5"
+{txt}
+{com}. 
+. 
+. order date loc_grand_name DayCasMeRaA00S00 TotCasMeRaA00S00 DayCasMeRaA00S00_CF2 DayCasMeRaA00S00_CF5 TotCasMeRaA00S00_CF2 TotCasMeRaA00S00_CF5
+{txt}
+{com}. 
+. sort date
+{txt}
+{com}. 
+. compress
+  {txt}variable {bf}date{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}DayCasMeRaA00S00{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}loc_grand_name{sf} was {bf}{res}str32{sf}{txt} now {bf}{res}str4{sf}
+{txt}  (16,928 bytes saved)
+
+{com}. 
+. save "country JOHN Cases.dta", replace
+{txt}(note: file country JOHN Cases.dta not found)
+file country JOHN Cases.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * get Johns Hopkins data for recovered
+. 
+. import delimited ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv" ///
+> , clear varnames(1) colrange(2:2)
+{res}{text}(1 var, 264 obs)
+
+{com}. 
+. save "time_series_covid19_recovered_global col 2.dta", replace
+{txt}(note: file time_series_covid19_recovered_global col 2.dta not found)
+file time_series_covid19_recovered_global col 2.dta saved
+
+{com}. 
+. 
+. import delimited ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv" ///
+> , clear varnames(1) colrange(5)
+{res}{text}(529 vars, 264 obs)
+
+{com}. 
+. save "time_series_covid19_recovered_global col 5 on.dta", replace
+{txt}(note: file time_series_covid19_recovered_global col 5 on.dta not found)
+file time_series_covid19_recovered_global col 5 on.dta saved
+
+{com}. 
+. 
+. use "time_series_covid19_recovered_global col 2.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 _n using "time_series_covid19_recovered_global col 5 on.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             264{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. 
+. rename countryregion loc_grand_name
+{res}{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(263 observations deleted)
+
+{com}. 
+. order loc_grand_name, last
+{txt}
+{com}. 
+. 
+. gen counter = _n
+{txt}
+{com}. 
+. reshape long v, i(counter) 
+{txt}(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     529
+{txt}Number of variables            {res}     532   {txt}->{res}       5
+{txt}j variable (529 values)                   ->   {res}_j
+{txt}xij variables:
+                         {res}v1 v2 ... v529   {txt}->   {res}v
+{txt}{hline 77}
+
+{com}. 
+. drop counter 
+{txt}
+{com}. 
+. codebook _j
+
+{txt}{hline}
+{res}_j{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1{txt},{res}529{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}529{col 51}{txt}missing .:  {res}0{txt}/{res}529
+
+{txt}{col 19}mean:{res}{col 26}     265
+{txt}{col 15}std. dev:{res}{col 26} 152.853
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      53{col 37}     133{col 47}     265{col 57}     397{col 67}     477
+{txt}
+{com}. 
+. 
+. gen date = date("22 Jan 2020", "DMY")
+{txt}
+{com}. 
+. replace date = date + _j - 1
+{txt}(528 real changes made)
+
+{com}. 
+. format date %td
+{txt}
+{com}. 
+. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21936{txt},{res}22464{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}22jan2020{txt},{res}03jul2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}529{col 51}{txt}missing .:  {res}0{txt}/{res}529
+
+{txt}{col 19}mean:{res}{col 26}   22200{txt} = {res}12oct2020{txt}
+{col 15}std. dev:{res}{col 26} 152.853
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21988{col 37}   22068{col 47}   22200{col 57}   22332{col 67}   22412
+{col 26}14mar2020{col 36}02jun2020{col 46}12oct2020{col 56}21feb2021{col 66}12may2021
+{txt}
+{com}. 
+. order date 
+{txt}
+{com}. 
+. rename v TotRecMeRaA00S00
+{res}{txt}
+{com}. 
+. label var TotRecMeRaA00S00 "Total RECovered JOHN"
+{txt}
+{com}. 
+. destring TotRecMeRaA00S00, replace
+{txt}TotRecMeRaA00S00: all characters numeric; {res}replaced {txt}as {res}long
+{txt}
+{com}. 
+. list TotRecMeRaA00S00 if date == td(19feb2020) // Shoule be 2
+{txt}
+     {c TLC}{hline 10}{c TRC}
+     {c |} {res}TotRe~00 {txt}{c |}
+     {c LT}{hline 10}{c RT}
+ 29. {c |} {res}       0 {txt}{c |}
+     {c BLC}{hline 10}{c BRC}
+
+{com}. 
+. gen DayRecMeRaA00S00 =  TotRecMeRaA00S00[_n] - TotRecMeRaA00S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayRecMeRaA00S00 "Daily RECovered JOHN"
+{txt}
+{com}. 
+. replace DayRecMeRaA00S00 = TotRecMeRaA00S00 if _j == 1
+{txt}(1 real change made)
+
+{com}. 
+. replace TotRecMeRaA00S00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. replace DayRecMeRaA00S00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. drop _j _merge
+{txt}
+{com}.                                         
+. 
+. sort date
+{txt}
+{com}. 
+. save "country JOHN recovered.dta", replace
+{txt}(note: file country JOHN recovered.dta not found)
+file country JOHN recovered.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * merge deaths and cases and recovered
+. 
+. use "country JOHN deaths.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 date using "country JOHN Cases.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             529{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. merge 1:1 date using "country JOHN recovered.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             529{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. *
+. 
+. * gen cfr
+. 
+. gen DayCfrMeRaA00S00 = 100 * DayDeaMeRaA00S00 / DayCasMeRaA00S00
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayCfrMeRaA00S00 "Daily CFR JOHN"
+{txt}
+{com}. 
+. *
+. 
+. 
+. ****** add obs 01 Jan 2020 to 21 Jan 2020 for better graphing
+. 
+. 
+. expand 22 in 1
+{txt}(21 observations created)
+
+{com}. 
+. sort date
+{txt}
+{com}. 
+. rename date date_original 
+{res}{txt}
+{com}. 
+. gen date = .
+{txt}(550 missing values generated)
+
+{com}. 
+. replace date = td(01Jan2020) in 1
+{txt}(1 real change made)
+
+{com}. 
+. replace date = date[_n-1] + 1 in 2/l
+{txt}(549 real changes made)
+
+{com}. 
+. format date %tdDDMonCCYY
+{txt}
+{com}. 
+. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21915{txt},{res}22464{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}01jan2020{txt},{res}03jul2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}550{col 51}{txt}missing .:  {res}0{txt}/{res}550
+
+{txt}{col 19}mean:{res}{col 26} 22189.5{txt} = {res}01oct2020{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 158.916
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 21969.5{col 37}   22052{col 47} 22189.5{col 57}   22327{col 67} 22409.5
+{col 26}24feb2020{col 36}17may2020{col 46}01oct2020{col 56}16feb2021{col 66}09may2021
+{txt}
+{com}. 
+. drop date_original
+{txt}
+{com}. 
+. order date
+{txt}
+{com}. 
+. 
+. * gen prevalent case
+. 
+. * Daily prevalent cases = Total Cases - (Total Deaths + Total recovered)
+. 
+. gen DayActMeRaA00S00 = TotCasMeRaA00S00 - TotDeaMeRaA00S00 - TotRecMeRaA00S00
+{txt}(49 missing values generated)
+
+{com}. 
+. label var DayActMeRaA00S00 "Daily Active JOHN"
+{txt}
+{com}. 
+. 
+. 
+. **************
+. 
+. * graphs
+. 
+. ssc install grstyle, replace
+{txt}checking {hilite:grstyle} consistency and verifying not already installed...
+all files already exist and are up to date.
+
+{com}. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. 
+. * daily deaths
+. 
+. 
+. * adjust x axis ticks from Jan 2020 to this month and avoid globals
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. twoway ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 1 COVID-19 daily deaths, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 1 COVID-19 daily deaths, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 1 COVID-19 daily deaths, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. * daily deaths w correction factors
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. twoway ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(black)) ///
+> (rarea DayDeaMeRaA00S00_CF2 DayDeaMeRaA00S00_CF5 date, sort color(black*0.2)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Johns Hopkins" 2 "CF 2-5")) ///
+> subtitle("with correction factors", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 2 COVID-19 daily deaths, $country, Johns Hopkins, w correction factors.gph", replace
+{txt}(note: file graph 2 COVID-19 daily deaths, Iran, Johns Hopkins, w correction factors.gph not found)
+{res}{txt}(file graph 2 COVID-19 daily deaths, Iran, Johns Hopkins, w correction factors.gph saved)
+
+{com}. graph export "graph 2 COVID-19 daily deaths, $country, Johns Hopkins, w correction factors.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 2 COVID-19 daily deaths, Iran, Johns Hopkins, w correction factors.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * daily cases 
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 3 COVID-19 daily cases, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 3 COVID-19 daily cases, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 3 COVID-19 daily cases, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 3 COVID-19 daily cases, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 3 COVID-19 daily cases, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * daily cases w correction factors
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(black)) ///
+> (rarea DayCasMeRaA00S00_CF2 DayCasMeRaA00S00_CF5 date, sort color(black*0.2)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Johns Hopkins" 2 "CF 2-5")) ///
+> subtitle("with correction factors", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 4 COVID-19 daily cases, $country, Johns Hopkins, w correction factors.gph", replace
+{txt}(note: file graph 4 COVID-19 daily cases, Iran, Johns Hopkins, w correction factors.gph not found)
+{res}{txt}(file graph 4 COVID-19 daily cases, Iran, Johns Hopkins, w correction factors.gph saved)
+
+{com}. graph export "graph 4 COVID-19 daily cases, $country, Johns Hopkins, w correction factors.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 4 COVID-19 daily cases, Iran, Johns Hopkins, w correction factors.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * total deaths
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. twoway ///
+> (line TotDeaMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 5 COVID-19 total deaths, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 5 COVID-19 total deaths, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 5 COVID-19 total deaths, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 5 COVID-19 total deaths, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 5 COVID-19 total deaths, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * total deaths w correction factors
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. twoway ///
+> (line TotDeaMeRaA00S00 date, sort lcolor(black)) ///
+> (rarea TotDeaMeRaA00S00_CF2 TotDeaMeRaA00S00_CF5 date, sort color(black*0.2)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Johns Hopkins" 2 "CF 2-5")) ///
+> subtitle("with correction factors", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 6 COVID-19 total deaths, $country, Johns Hopkins, w correction factors.gph", replace
+{txt}(note: file graph 6 COVID-19 total deaths, Iran, Johns Hopkins, w correction factors.gph not found)
+{res}{txt}(file graph 6 COVID-19 total deaths, Iran, Johns Hopkins, w correction factors.gph saved)
+
+{com}. graph export "graph 6 COVID-19 total deaths, $country, Johns Hopkins, w correction factors.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 6 COVID-19 total deaths, Iran, Johns Hopkins, w correction factors.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * total cases 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. twoway ///
+> (line TotCasMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 7 COVID-19 total cases, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 7 COVID-19 total cases, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 7 COVID-19 total cases, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 7 COVID-19 total cases, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 7 COVID-19 total cases, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * total cases w correction factors
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. twoway ///
+> (line TotCasMeRaA00S00 date, sort lcolor(black)) ///
+> (rarea TotCasMeRaA00S00_CF2 TotCasMeRaA00S00_CF5 date, sort color(black*0.2)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Johns Hopkins" 2 "CF 2-5")) ///
+> subtitle("with correction factors", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 8 COVID-19 total cases, $country, Johns Hopkins, w correction factors.gph", replace
+{txt}(note: file graph 8 COVID-19 total cases, Iran, Johns Hopkins, w correction factors.gph not found)
+{res}{txt}(file graph 8 COVID-19 total cases, Iran, Johns Hopkins, w correction factors.gph saved)
+
+{com}. graph export "graph 8 COVID-19 total cases, $country, Johns Hopkins, w correction factors.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 8 COVID-19 total cases, Iran, Johns Hopkins, w correction factors.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * daily cfr 
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. twoway ///
+> (line DayCfrMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 9 COVID-19 daily CFR, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 9 COVID-19 daily CFR, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 9 COVID-19 daily CFR, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 9 COVID-19 daily CFR, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 9 COVID-19 daily CFR, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * daily cfr after 01dec2020
+. 
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. twoway ///
+> (line DayCfrMeRaA00S00 date, sort lcolor(black)) ///
+> if date > td(01dec2020) ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> subtitle("after 2020-12-01", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 10 COVID-19 daily CFR, $country, Johns Hopkins, 01dec2020 on.gph", replace
+{txt}(note: file graph 10 COVID-19 daily CFR, Iran, Johns Hopkins, 01dec2020 on.gph not found)
+{res}{txt}(file graph 10 COVID-19 daily CFR, Iran, Johns Hopkins, 01dec2020 on.gph saved)
+
+{com}. graph export "graph 10 COVID-19 daily CFR, $country, Johns Hopkins, 01dec2020 on.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 10 COVID-19 daily CFR, Iran, Johns Hopkins, 01dec2020 on.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * visualize timing of deaths and cases peaks
+. 
+. summ DayDeaMeRaA00S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaMeR~00 {c |}{res}        501    168.9162    115.7717          0        496
+{txt}
+{com}. gen DayDeMMeRaA00S00 = r(mean)
+{txt}
+{com}. label var DayDeMMeRaA00S00 "Daily deaths mean JOHN DayDeM"
+{txt}
+{com}. 
+. summ DayCasMeRaA00S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasMeR~00 {c |}{res}        501    6469.136    5486.687          2      25582
+{txt}
+{com}. gen DayCaMMeRaA00S00 = r(mean)
+{txt}
+{com}. label var DayCaMMeRaA00S00 "Daily cases mean JOHN DayCaM"
+{txt}
+{com}. 
+. gen DayCbDMeRaA00S00 = DayCaMMeRaA00S00 / DayDeMMeRaA00S00
+{txt}
+{com}. label var DayCbDMeRaA00S00 "Daily cases mean div by daily deaths mean JOHN DayCbD"
+{txt}
+{com}. summ DayCbDMeRaA00S00
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCbDMeR~00 {c |}{res}        550    38.29791           0   38.29791   38.29791
+{txt}
+{com}. 
+. gen DayDeaMeRaA00multip = DayDeaMeRaA00S00 * DayCbDMeRaA00S00 
+{txt}(49 missing values generated)
+
+{com}. label var DayDeaMeRaA00multip "Daily deaths scaled (times means of cases by deaths) only for visualization JOHN"
+{txt}
+{com}. summ DayDeaMeRaA00multip
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaMeRa~p {c |}{res}        501    6469.136    4433.814          0   18995.76
+{txt}
+{com}. 
+. 
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(blue)) ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA00multip date, sort lpattern(tight_dot) lcolor(red)) ///
+> if date > td(01jan2020)  /// & date < td(28feb2021) & loc_grand_name == "$country"
+> , xtitle(Date) xlabel(#14, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases and deaths) title("COVID-19 daily cases and deaths, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none)))  ///
+> legend(order(1 "Daily cases" 2 "Daily deaths" 3 "Daily deaths scaled for visualization only")) ///
+> note("Daily deaths scaled (times means of cases by deaths) only for visualization JOHN") ///
+> subtitle("comparison of timing of peaks", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 11 COVID-19 daily deaths and cases timing, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 11 COVID-19 daily deaths and cases timing, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 11 COVID-19 daily deaths and cases timing, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 11 COVID-19 daily deaths and cases timing, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 11 COVID-19 daily deaths and cases timing, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. * daily recovered
+. 
+. 
+. * adjust x axis ticks from Jan 2020 to this month and avoid globals
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. twoway ///
+> (line DayRecMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily recovered) title("COVID-19 daily recovered, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 12 COVID-19 daily recovered, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 12 COVID-19 daily recovered, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 12 COVID-19 daily recovered, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 12 COVID-19 daily recovered, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 12 COVID-19 daily recovered, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily active
+. 
+. 
+. * adjust x axis ticks from Jan 2020 to this month and avoid globals
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. local wanted : di %tdNN daily("$S_DATE", "DMY")
+{res}{txt}
+{com}. forval i = 1(1)`wanted' {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. twoway ///
+> (line DayActMeRaA00S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily active) title("COVID-19 daily active cases, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) 
+{res}{txt}
+{com}. 
+. graph save "graph 13 COVID-19 daily active, $country, Johns Hopkins.gph", replace
+{txt}(note: file graph 13 COVID-19 daily active, Iran, Johns Hopkins.gph not found)
+{res}{txt}(file graph 13 COVID-19 daily active, Iran, Johns Hopkins.gph saved)
+
+{com}. graph export "graph 13 COVID-19 daily active, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/graph 13 COVID-19 daily active, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. ***
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. sort date loc_grand_name
+{txt}
+{com}. 
+. 
+. save "country JOHN.dta", replace
+{txt}(note: file country JOHN.dta not found)
+file country JOHN.dta saved
+
+{com}. 
+. 
+. 
+. view "log country JOHN.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210625/code/JOHN/log country JOHN.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Jul 2021, 21:31:20
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
