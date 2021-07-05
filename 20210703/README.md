@@ -65,13 +65,15 @@ DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703
   
 ****
 
-(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/124512004-418f4380-dd8c-11eb-8062-8ae36fae5676.png)
 
 ****
 
-(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210703/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
+(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/124511926-10af0e80-dd8c-11eb-9073-a862d211b3d4.png)
 
 ****
 
