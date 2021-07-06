@@ -575,6 +575,13 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 *
  
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
+ 
+ 
  
  
  
@@ -616,6 +623,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210624/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/124546269-3a455580-dddf-11eb-9535-4c5bd39b3d22.png)
+ 
+*
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
  
 * 
  
@@ -664,6 +677,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 ![image](https://user-images.githubusercontent.com/30849720/124546328-4fba7f80-dddf-11eb-97a8-e7deaf1a6328.png)
  
 *
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
 
  
  
@@ -710,6 +729,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 ![image](https://user-images.githubusercontent.com/30849720/124546377-652fa980-dddf-11eb-839e-24985fe28a19.png)
  
 *
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
 
  
  
@@ -756,6 +781,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 ![image](https://user-images.githubusercontent.com/30849720/124546424-7aa4d380-dddf-11eb-9df2-67d536c5db3d.png)
  
 *
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
 
  
  
@@ -804,6 +835,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 *
  
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
+ 
  
  
  
@@ -849,6 +886,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 ![image](https://user-images.githubusercontent.com/30849720/124546561-aaec7200-dddf-11eb-870c-cc627c4a6bf6.png)
  
 *
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
  
  
  
@@ -897,6 +940,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 *
  
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
+ 
  
  
  
@@ -943,6 +992,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 *
  
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
+ 
  
  
  
@@ -958,7 +1013,6 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
  
 #### graph (10) Iran - Hospital-related outcomes, 2021
- 
  
  
  
@@ -988,6 +1042,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 ![image](https://user-images.githubusercontent.com/30849720/124546861-19c9cb00-dde0-11eb-8123-f4d89c22934b.png)
  
 *
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
  
  
  
@@ -1035,6 +1095,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 *
  
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
+ 
  
  
  
@@ -1080,6 +1146,12 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
 ![image](https://user-images.githubusercontent.com/30849720/124546976-4a116980-dde0-11eb-96e5-7de83998ff08.png)
  
 *
+ 
+uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
+ 
+.
+ 
+* 
  
  
  
