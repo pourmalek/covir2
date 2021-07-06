@@ -1,5 +1,4 @@
 # covir2
-### Study update dates in uptake 20210618
 
 
 
