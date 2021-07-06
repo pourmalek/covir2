@@ -536,6 +536,7 @@ _Component studies and their scenarios_ are mentioned below after the selected _
 **** 
 ****  
   
+********************************************************************************************************************************************
 
 #### graph (1) Iran - Daily deaths, reference scenarios, all time 
 
@@ -589,6 +590,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (2) Iran - Daily deaths, reference scenarios, 2021
 
@@ -624,7 +626,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673338-8a6af900-de6d-11eb-8f0d-4d95b3ffb0b5.png)
  
 * 
  
@@ -641,6 +645,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (3) Iran - Daily deaths, 2021, reference scenario with uncertainty, IHME
  
@@ -676,7 +681,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673397-a1115000-de6d-11eb-9b73-4e5bee805936.png)
  
 * 
 
@@ -693,6 +700,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
   
 #### graph (4) Iran - Daily deaths, 2021, reference scenario with uncertainty, IHME
  
@@ -728,7 +736,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673478-bd14f180-de6d-11eb-92d5-6e21d57bcd77.png)
  
 * 
 
@@ -745,6 +755,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (5) Iran - Daily deaths, 2021, reference scenario with uncertainty, IMPE
 
@@ -780,7 +791,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673543-d7e76600-de6d-11eb-9eba-6a51ee3798bd.png)
  
 * 
 
@@ -797,12 +810,11 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (6) Iran - Daily deaths, 2021, 3 scenarios, IMPE
   
 
- 
- 
  
  
 *
@@ -833,7 +845,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673588-efbeea00-de6d-11eb-811d-9f147dd24d43.png)
  
 * 
  
@@ -850,6 +864,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (7) Iran - Daily cases or infections, all time
  
@@ -885,7 +900,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673612-06fdd780-de6e-11eb-974f-757af0505396.png)
  
 * 
  
@@ -903,6 +920,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (8) Iran - Daily cases or infections, 2021
  
@@ -938,7 +956,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673653-1da42e80-de6e-11eb-96b0-d51627062df2.png)
  
 * 
  
@@ -954,7 +974,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
- 
+******************************************************************************************************************************************** 
  
 #### graph (9) Iran - Hospital-related outcomes, all time
  
@@ -990,7 +1010,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673845-7a9fe480-de6e-11eb-88cd-3598504f8206.png)
  
 * 
  
@@ -1007,6 +1029,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (10) Iran - Hospital-related outcomes, 2021
  
@@ -1041,7 +1064,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673972-b6d34500-de6e-11eb-8fd1-2d799745f4e6.png)
  
 * 
  
@@ -1058,7 +1083,8 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
- 
+********************************************************************************************************************************************
+
 #### graph (11) Iran - Daily deaths estimated to reported, all time
  
  
@@ -1093,7 +1119,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124674127-031e8500-de6f-11eb-9bb2-8bc6ee24e104.png)
  
 * 
  
@@ -1110,6 +1138,7 @@ uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 2021061
  
  
  
+********************************************************************************************************************************************
  
 #### graph (12) Iran - Daily cases or infections estimated to reported cases, 2021
  
@@ -1145,7 +1174,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/124674180-19c4dc00-de6f-11eb-88a4-9b176e9d5c63.png)
  
 * 
  
