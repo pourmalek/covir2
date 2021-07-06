@@ -11,7 +11,7 @@
  
 ## <div align="center"> :iran: Iran 
 
-## <div align="center"> covir2 : COVID Iran review number 2
+## <div align="center"> covir2 = COVID Iran review number 2
  
  
   *****************************
