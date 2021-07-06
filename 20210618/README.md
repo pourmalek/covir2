@@ -50,43 +50,36 @@ DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618
 
 (6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/124627521-7b1b8980-de34-11eb-8a6d-f5ac4a33f0cb.png)
 
 ****
 
 (7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/124627639-95edfe00-de34-11eb-9c87-256e5fb15b37.png)
   
 ****
 
 (8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/124627805-b453f980-de34-11eb-8984-d1a4adb3dd82.png)
   
 ****
 
 (9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/124627912-cc2b7d80-de34-11eb-900a-b184d5eb49bf.png)
 
 ****
 
-(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/124628255-23315280-de35-11eb-92bb-4a82b277caec.png)
 
 ****
 
 (11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/124628368-41974e00-de35-11eb-8054-c02198e98477.png)
   
 ****
 
 (12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/124628480-5b389580-de35-11eb-9bc9-f9e53266252c.png)
   
 ****
 
