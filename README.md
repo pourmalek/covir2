@@ -1,4 +1,3 @@
-@@ -1,1209 +1,80 @@
 # covir2
 ### Study update dates in uptake 20210618
 
@@ -577,7 +576,9 @@ uptake 20210624: DELP 20210624, IHME 20210618, **_IMPE 20210618_**, LANL 2021061
  
 uptake 20210618: DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618 
  
-.
+(1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210618/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124673288-70311b00-de6d-11eb-8859-a47c519fc157.png)
  
 * 
  
