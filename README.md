@@ -524,11 +524,11 @@ _Component studies and their scenarios_ are mentioned below after the selected _
   
 
 #### graph (1) Iran - Daily deaths, reference scenarios, all time 
-1
- 2
- 3
- 4
- 5
+
+ 
+ 
+ 
+ 
 *
  
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -538,27 +538,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501527-92943d00-dd76-11eb-8d04-9f7c314d96ff.png)
  
 * 
-1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (2) Iran - Daily deaths, reference scenarios, 2021
-1
- 2
- 3
- 4
- 5
+
+ 
+ 
+ 
+ 
 * 
  
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703   
@@ -568,27 +568,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501564-a8096700-dd76-11eb-9864-058c5eb14c44.png)
  
 *
-1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (3) Iran - Daily deaths, 2021, reference scenario with uncertainty, IHME
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
 *
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -598,27 +598,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501617-c1aaae80-dd76-11eb-8eaf-231cc8eb1839.png)
 
 *
-1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
 #### graph (4) Iran - Daily deaths, 2021, reference scenario with uncertainty, IHME
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
 * 
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -628,28 +628,28 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501667-d7b86f00-dd76-11eb-86c0-5608bae6aea1.png)
  
 *
-1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (5) Iran - Daily deaths, 2021, reference scenario with uncertainty, IMPE
  *
-1
- 2
- 3
- 4
- 5
+
+ 
+ 
+ 
+ 
 *
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -659,28 +659,28 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501716-ed2d9900-dd76-11eb-9262-d7426149d026.png)
 
 *
-1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (6) Iran - Daily deaths, 2021, 3 scenarios, IMPE
   *
-1
- 2
- 3
- 4
- 5
+
+ 
+ 
+ 
+ 
 *
  
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -690,27 +690,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501762-059db380-dd77-11eb-91dd-c3b7f967f25a.png)
  
 *
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (7) Iran - Daily cases or infections, all time
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
  *
  
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -721,27 +721,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
   
 *
  *
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (8) Iran - Daily cases or infections, 2021
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
  *
  
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -751,22 +751,21 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501868-3382f800-dd77-11eb-8400-e647dea08794.png)
  
 *
- *
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (9) Iran - Hospital-related outcomes, all time
  1
  2
