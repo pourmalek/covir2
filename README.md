@@ -20,11 +20,11 @@
   
 #### [Delphi](https://covidanalytics.io/projections), [IHME](https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend), [Imperial college](https://github.com/mrc-ide/global-lmic-reports/blob/master/CAN/2021-06-18/index.pdf), [Los Alamos](https://covid-19.bsvgateway.org), and [Srivastava](https://scc-usc.github.io/ReCOVER-COVID-19/#/), 
   
-#### for daily (and total) [deaths](https://github.com/pourmalek/CovidVisualizedCountry#graph-3-canada---daily-deaths-3-scenarios-2021), [cases](https://github.com/pourmalek/CovidVisualizedCountry/blob/main/README.md#graph-5-canada---daily-cases-or-infections-reference-scenarios-2021), [infections](https://github.com/pourmalek/CovidVisualizedCountry/blob/main/README.md#graph-4-canada---daily-cases-or-infections-reference-scenarios-all-time), and [hospitalizations](https://github.com/pourmalek/CovidVisualizedCountry/blob/main/README.md#graph-8-canada---hospital-related-outcomes-2021-without-ihme-bed-need-and-impe-hospital-demand),
+#### for daily (and total) [deaths](https://github.com/pourmalek/covir2#graph-4-iran---daily-deaths-2021-reference-scenario-with-uncertainty-ihme), [cases](https://github.com/pourmalek/covir2#graph-8-iran---daily-cases-or-infections-2021), [infections](https://github.com/pourmalek/covir2#graph-7-iran---daily-cases-or-infections-all-time), and [hospitalizations](https://github.com/pourmalek/covir2#graph-10-iran---hospital-related-outcomes-2021),
   
 #### for Iran
  
-#### or [other countries via code adjustment]()  
+#### or [other countries via code adjustment, e.g., Afghanistan](https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625)  
 
  
  
