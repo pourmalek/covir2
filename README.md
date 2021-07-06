@@ -720,7 +720,7 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124501821-1cdca100-dd77-11eb-8ea2-dbd12671295b.png)
   
 *
- *
+ 
  
  
  
@@ -767,11 +767,11 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
  
  
 #### graph (9) Iran - Hospital-related outcomes, all time
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
  *
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -781,28 +781,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124512004-418f4380-dd8c-11eb-8062-8ae36fae5676.png)
 
 *
- *
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (10) Iran - Hospital-related outcomes, 2021
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
  *
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -812,28 +811,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124511926-10af0e80-dd8c-11eb-9073-a862d211b3d4.png)
 
 *
- *
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (11) Iran - Daily deaths estimated to reported, all time
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
  *
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
@@ -843,28 +841,27 @@ uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 2021062
 ![image](https://user-images.githubusercontent.com/30849720/124502044-88bf0980-dd77-11eb-97d0-dea3170d8de7.png)
   
 *
- *
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
- 1
- 2
- 3
- 4
- 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### graph (12) Iran - Daily cases or infections estimated to reported cases, 2021
- 1
- 2
- 3
- 4
- 5
+ 
+ 
+ 
+ 
+ 
  *
 
 uptake 20210703: DELP 20210703, **_IHME 20210702_**, IMPE 20210618, LANL 20210627, SRIV 20210703  
