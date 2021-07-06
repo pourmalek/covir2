@@ -1,10 +1,6 @@
 # covir2
 ### Study update dates in uptake 20210618
 
-DELP 20210618, **_IHME 20210618_**, IMPE 20210611, LANL 20210613, SRIV 20210618
-
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
 
 
 ### Combine and visualize international periodically updating estimates of COVID-19 
