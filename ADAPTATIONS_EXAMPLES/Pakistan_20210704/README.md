@@ -19,62 +19,64 @@ IMPE update 20210626 (2021-06-26_v8.csv.zip) released on 20210704.
 
 ****
 
-(1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Pakistan_20210704/20210704/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Pakistan%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124691776-41c53700-de91-11eb-98d0-237ce4e6b02c.png)
+
+****
+
+(2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Pakistan_20210704/20210704/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Pakistan%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124691833-5e616f00-de91-11eb-9694-538e6c7bee9f.png)
+
+****
+
+(3) [Daily deaths, 2021, reference scenario with uncertainty, IHME]()
 
 
 ****
 
-(2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+(4) [Daily deaths, 2021, 3 scenarios, IHME]()
 
 
 ****
 
-(3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+(5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE]()
 
 
 ****
 
-(4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+(6) [Daily deaths, 2021, 3 scenarios, IMPE]()
 
 
 ****
 
-(5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
-
-
-****
-
-(6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
-
-
-****
-
-(7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(7) [Daily cases or infections, all time]()
 
   
 ****
 
-(8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+(8) [Daily cases or infections, 2021]()
 
   
 ****
 
-(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
+(9) [Hospital-related outcomes, all time]()
 
 
 ****
 
-(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+(10) [Hospital-related outcomes, 2021]()
 
 
 ****
 
-(11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(11) [Daily deaths estimated to reported, all time]()
 
   
 ****
 
-(12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
+(12) [Daily cases or infections estimated to reported cases, 2021]() 
 
   
 ****
