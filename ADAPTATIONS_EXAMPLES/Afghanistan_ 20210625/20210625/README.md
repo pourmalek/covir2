@@ -8,7 +8,7 @@ DELP 20210625, **_IHME 20210625_**, IMPE 20210618, LANL 20210613, SRIV 20210624
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210625 [here](https://github.com/pourmalek/covir2/blob/main/20210625/graphs%20merged%2020210625.pdf)
+### Merged graphs of uptake 20210625 [here](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/graphs%20merged%2020210625.pdf)
     
 <div dir="ltr">
 
