@@ -21,99 +21,74 @@ DELP 20210625, **_IHME 20210625_**, IMPE 20210618, LANL 20210613, SRIV 20210624
 
 ****
 
-[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/123521724-4a399880-d66d-11eb-899c-703f9313763b.png)
+![image](https://user-images.githubusercontent.com/30849720/124677648-c43ffd80-de75-11eb-9454-64cd4a06b67f.png)
+
+****
+
+(2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124677690-da4dbe00-de75-11eb-8c45-c92e7a1e30d9.png)
+
+****
+
+(3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124677735-ee91bb00-de75-11eb-84b5-04841d1cfd0a.png)
+
+****
+
+(4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124677793-0701d580-de76-11eb-8680-15eee5bedb39.png)
+
+****
+
+(5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124677827-1bde6900-de76-11eb-8aa8-04e33bd6b8ab.png)
+
+****
+
+(6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124677876-34e71a00-de76-11eb-87b9-2657c903d8ed.png)
+
+****
+
+(7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/124677915-4b8d7100-de76-11eb-9643-148227f8efc7.png)
   
 ****
 
-[Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenarios.pdf)
+(8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/123521753-7ce39100-d66d-11eb-9aaf-d127f7a82bda.png)
-
-****
-
-[Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123521816-e9f72680-d66d-11eb-9a58-8728733646bd.png)
+![image](https://user-images.githubusercontent.com/30849720/124677956-6233c800-de76-11eb-9566-45df7d8d3f25.png)
   
 ****
 
-[Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%203%20scenarios%2C%20IHME.pdf)
+(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/123521866-304c8580-d66e-11eb-8f9f-e13d0c47d936.png)
-
-****
-
-[Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123521899-5a05ac80-d66e-11eb-87e4-0707a3f4f8ef.png)
+![image](https://user-images.githubusercontent.com/30849720/124677986-77105b80-de76-11eb-921e-67f9d0f27004.png)
 
 ****
 
-[Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Afghanistan%2C%203%20scenarios%2C%20IMPE.pdf)
+(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/123521924-93d6b300-d66e-11eb-8240-5e0c6e13817c.png)
+![image](https://user-images.githubusercontent.com/30849720/124678012-8b545880-de76-11eb-8c86-35d258573497.png)
 
 ****
 
-[Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
- ![image](https://user-images.githubusercontent.com/30849720/123521940-b5d03580-d66e-11eb-98b8-3a34653373d5.png)
- 
-****
-
-[Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123521960-def0c600-d66e-11eb-866e-46a8601429cd.png)
+![image](https://user-images.githubusercontent.com/30849720/124678053-a2934600-de76-11eb-99d4-f63f37beba0b.png)
   
 ****
 
-[Daily cases or infections, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2024%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+(12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20210704/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/123522001-2b3c0600-d66f-11eb-930c-b85874735ae4.png)
-
-****
-
-[Daily cases or infections, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2025%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IHME.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123522126-41969180-d670-11eb-8002-fa8aba443cf5.png)
-
-****
-
-[Daily cases or infections, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2026%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123522170-8a4e4a80-d670-11eb-9c5c-61b629b6d762.png)
-
-****
-
-[Daily cases or infections, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2027%20COVID-19%20daily%20cases%2C%20Afghanistan%2C%203%20scenarios%2C%20IMPE.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123522185-abaf3680-d670-11eb-91a0-3bc19e3eadb2.png)
-
-****
-
-[Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123522211-cc778c00-d670-11eb-8115-f364a2e6fe3f.png)
-
-****
-
-[Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202020-12-01%20on.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123522235-ee710e80-d670-11eb-8760-3c921d63751d.png)
-
-****
-
-[Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Afghanistan%2C%20reference%20scenarios%2C%20all%20time.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/123522257-18c2cc00-d671-11eb-8419-f9cac936a120.png)
+![image](https://user-images.githubusercontent.com/30849720/124678088-b8087000-de76-11eb-8952-8b97e4088f6d.png)
   
 ****
-
-[Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/output/merge/graph%2082%20COVID-19%20daily%20cases%20to%20deaths%2C%20Afghanistan%2C%20reference%20scenarios.pdf) 
-
-![image](https://user-images.githubusercontent.com/30849720/123522287-46a81080-d671-11eb-8720-b8d4e963526b.png)
-  
-****
-
