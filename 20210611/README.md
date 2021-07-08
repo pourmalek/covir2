@@ -34,6 +34,7 @@ IMPE update 20210611 (2021-06-11_v8.csv.zip) released on 20210615
 
 (3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210611/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/124968787-c7083300-dfda-11eb-8e59-b4aceff632ce.png)
 
 ****
 
