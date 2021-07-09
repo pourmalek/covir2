@@ -46,21 +46,25 @@ This uptake is actually uptake 20210604 number 2, because IMPE update 20210604 (
 
 (5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125026420-678d4000-e039-11eb-98e0-749051718561.png)
 
 ****
 
 (6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125026592-c94daa00-e039-11eb-8766-68ec33b1e2a9.png)
 
 ****
 
 (7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125026638-e1252e00-e039-11eb-8fe6-7f0b1f2050aa.png)
   
 ****
 
 (8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125026730-0b76eb80-e03a-11eb-832e-7cce6eb7d04b.png)
   
 ****
 
