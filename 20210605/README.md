@@ -4,8 +4,6 @@ DELP 20210604, IHME 20210604, IMPE **20210604**, LANL 20210602, SRIV 20210604, U
 
 This uptake is actually uptake 20210604 number 2, because IMPE update 20210604 (2021-06-04_v8.csv.zip) was released on 20210608. 
 
-UCLA estimates file "pred_world_new.csv" was uploaded to https://github.com/uclaml/ucla-covid19-forecasts/tree/master/current_projection, 28 days ago (relative to 20210605), i.e. 20210507
-
 
 
 <br/><br/>
