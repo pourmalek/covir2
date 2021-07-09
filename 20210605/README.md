@@ -22,11 +22,13 @@ This uptake is actually uptake 20210604 number 2, because IMPE update 20210604 (
 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125025932-6e678300-e038-11eb-97e8-caf3952d13b4.png)
 
 ****
 
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125025976-850dda00-e038-11eb-9f5f-50fb5f79862e.png)
 
 ****
 
