@@ -70,21 +70,25 @@ This uptake is actually uptake 20210604 number 2, because IMPE update 20210604 (
 
 (9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125107618-df895380-e095-11eb-93ce-6bc3335ec738.png)
 
 ****
 
 (10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125107713-f9c33180-e095-11eb-80c6-731cd4515c95.png)
 
 ****
 
 (11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/125107793-119ab580-e096-11eb-9988-688801daa495.png)
   
 ****
 
 (12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/125107884-2aa36680-e096-11eb-92a6-11e173babc5b.png)
   
 ****
 
