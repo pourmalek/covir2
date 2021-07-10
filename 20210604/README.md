@@ -64,19 +64,16 @@ DELP 20210604, **IHME 20210604**, IMPE 20210527, LANL 20210602, SRIV 20210604
 
 (8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/125152277-6a069d00-e100-11eb-9440-6f8e6b852c78.png)
   
 ****
 
 (9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/125152289-830f4e00-e100-11eb-9ad4-0b9f4e144d24.png)
 
 ****
 
 (10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210605/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/125152293-99b5a500-e100-11eb-9ec1-d727684ae134.png)
 
 ****
 
