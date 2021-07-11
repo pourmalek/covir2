@@ -3,13 +3,13 @@
 
 IHME update 20210430 Spirited Away
 
-Uptake 20210430 used **IHME update 20210430**. IHME update 20210430 is non-existent as of May 9, 2021. See below.
+Uptake 20210430 used **_IHME update 20210430_**. IHME update 20210430 is non-existent as of May 9, 2021. See below.
 
 <br/><br/>
 
 ### Study update dates in uptake 20210430
 
-DELPHI 20210430, **_IHME 2021043_0**, IMPE 20210424, LANL 20210428, SRIV 20210430
+DELPHI 20210430, **_IHME 20210430_**, IMPE 20210424, LANL 20210428, SRIV 20210430
 
 <br/><br/>
 
@@ -39,6 +39,16 @@ DELPHI 20210430, **_IHME 2021043_0**, IMPE 20210424, LANL 20210428, SRIV 2021043
 . Calendar timewise, the above changes in IHME updates were precedent to the upsurge in India, and IHME model's major change of explicit accounting for under-reporting in their update 20210506.
 
 <br/><br/>
+  
+****
+  
+Notice: Nomenclature CORRECTION:
+
+IHME and IMPE estimate INFECTIONS (not CASES).
+
+Their Case Fatality Ratio (CFR) -> Infection Fatality ratio (IFR).  
+  
+****  
 
 ### Selected graphs, (historical) uptake 20210430
 
