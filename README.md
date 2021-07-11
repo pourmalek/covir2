@@ -643,6 +643,16 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  
 *
  
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -781,6 +791,12 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  
 *
  
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
 
  
  
@@ -910,6 +926,12 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
 (3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125183417-69870880-e1cb-11eb-9e2d-e8987b76292e.png)
+ 
+*
+ 
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
  
 *
  
@@ -1045,6 +1067,12 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  
 *
  
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
  
  
 
@@ -1173,6 +1201,12 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
 (5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125183457-963b2000-e1cb-11eb-9f98-7ccae1ecf534.png)
+ 
+*
+ 
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
  
 *
  
@@ -1307,6 +1341,15 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  
 *
  
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
  
  
  
@@ -1437,6 +1480,16 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
 ![image](https://user-images.githubusercontent.com/30849720/125183500-c97daf00-e1cb-11eb-9f3f-d3f00b2aa9ca.png)
  
 *
+ 
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
  
  
  
@@ -1569,6 +1622,18 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  
 *
  
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -1699,6 +1764,18 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
 ![image](https://user-images.githubusercontent.com/30849720/125183523-faf67a80-e1cb-11eb-947e-6813598ba0d9.png)
  
 *
+ 
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -1833,6 +1910,17 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  
 *
  
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -1962,6 +2050,15 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
  ![image](https://user-images.githubusercontent.com/30849720/125183541-29745580-e1cc-11eb-8e2c-98c736657575.png)
  
 *
+ 
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
  
  
  
@@ -2094,6 +2191,18 @@ uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 2021051
 ![image](https://user-images.githubusercontent.com/30849720/125183557-46108d80-e1cc-11eb-88d7-dca9d1ae8893.png)
  
 *
+ 
+uptake 20210521: DELP 20210521, **_IHME 20210521_**, IMPE 20210516, LANL 20210519, SRIV 20210521 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
