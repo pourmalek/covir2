@@ -2601,7 +2601,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
+(12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/125209073-3f752b00-e24b-11eb-8e1f-47fc650a2466.png)
  
 *
  
