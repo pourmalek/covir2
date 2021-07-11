@@ -317,12 +317,6 @@ The search for target studies is not performed in a replicable method. A systema
 
 <br/><br/>
   
-**FUTURE DIRECTIONS AND COLLABOATIONS** 
-<br/><br/>
-
-The idea of this work originated from looking at estimates for COVID-19 epidemic in one location, Iran, in repository covir2. Then I thought about creating a template that can be used for any location and its sub-locations – from global level, to regional (e.g., continents, WHO regions, GBD regions, etc.), national, and subnational levels (where available). Also thought about a visualization hub, that creates (combined results and) graphs for all locations for which COVID-19 estimates are available via the international periodically updating models. For writing the code, I lack the knowledge and experience with Python to do the job. I am looking for suggestions, collaboration, and help; please e-mail me (pourmalek_farshad@yahoo.com)
-<br/><br/>
-
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
@@ -330,11 +324,11 @@ The idea of this work originated from looking at estimates for COVID-19 epidemic
 
 The Stata _codes_ can be executed on local machines:
 
-Run in Stata "Users|local-user-name|Downloads|GlobalCovidCombineVisualizeCombineVisualize-main|20210428|code|master|do GlobalCovidCombineVisualizeCombineVisualizemaster.do" on local machine after the directory |GlobalCovidCombineVisualizeCombineVisualize-main| is downloaded into and is located in the root of |Downloads| folder of your local machine, for update 20210428; and later instances of 202YMMDD for later updates.  
+Run in Stata "Users/local-user-name/Downloads/covir2-main/20210709/code/master/do country master.do" on your local machine after the directory /covir2-main/ is downloaded into and is located in the root of /Downloads/ folder of your local machine, for uptake 20210709; and other instances of 202YMMDD for other uptake dates. 
 
-Preproduced _outputs_ are stored for each update, e.g., [`20210428`](https://github.com/pourmalek/ GlobalCovidCombineVisualizeCombineVisualize /tree/main/20210428), in folder [`output`](https://github.com/pourmalek/ GlobalCovidCombineVisualizeCombineVisualize /tree/main/20210428/output), for each component study, i.e. [`DELP`](https://github.com/pourmalek/ GlobalCovidCombineVisualizeCombineVisualize /tree/main/20210428/output/DELP), [`IHME`](https://github.com/pourmalek/GlobalCovidCombineVisualize/tree/main/20210428/output/IHME), [`IMPE`](https://github.com/pourmalek/ GlobalCovidCombineVisualizeCombineVisualize /tree/main/20210428/output/IMPE), [`LANL`](https://github.com/pourmalek/GlobalCovidCombineVisualize/tree/main/20210428/output/LANL), and [`SRIV`](https://github.com/pourmalek/GlobalCovidCombineVisualize/tree/main/20210428/output/SRIV), plus [`JOHN`](https://github.com/pourmalek/GlobalCovidCombineVisualize/tree/main/20210428/output/JOHN) as benchmark. Combined results stored in [`merge`](https://github.com/pourmalek/GlobalCovidCombineVisualize/tree/main/20210428/output/merge). 
+Preproduced _outputs_ are stored for each uptake, e.g., [`20210709`](https://github.com/pourmalek/covir2/tree/main/20210709/), in folder [`output`](https://github.com/pourmalek/covir2/tree/main/20210709/output), for each component study, i.e., [`DELP`](https://github.com/pourmalek/covir2/tree/main/20210709/output/DELP), [`IHME`](https://github.com/pourmalek/covir2/tree/main/20210709/output/IHME), [`IMPE`](https://github.com/pourmalek/covir2/tree/main/20210709/output/IMPE), [`LANL`](https://github.com/pourmalek/covir2/tree/main/20210709/output/LANL), and [`SRIV`](https://github.com/pourmalek/covir2/tree/main/20210709/output/SRIV), plus [`JOHN`](https://github.com/pourmalek/covir2/tree/main/20210709/output/JOHN) as benchmark. Combined results are stored in [`merge`](https://github.com/pourmalek/covir2/tree/main/20210709/output/merge). All merged graphs for each uptake are accessible via main page of each uptake date, e.g., https://github.com/pourmalek/covir2/tree/main/20210709/ and the link is placed in front of **Merged graphs of uptake 20210709** [here]( https://github.com/pourmalek/covir2/blob/main/20210709/graphs%20merged%2020210709.pdf)
 
-[`longitudinal`](https://github.com/pourmalek/GlobalCovidCombineVisualize/tree/main/longitudinal) assessment of models will be added later. 
+
 
 Selected _graphs_ are shown below. 
 
