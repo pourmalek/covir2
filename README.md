@@ -333,9 +333,9 @@ Selected _graphs_ are shown below.
 
 _Component studies and their scenarios_ are mentioned below after the selected _graphs_.
 
-[`Variable name structure`](https://github.com/pourmalek/GlobalCovidCombineVisualize/blob/main/Variable%20name%20structure.md)
+[`Variable name structure`](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
 
-[`Troubleshooting`](https://github.com/pourmalek/GlobalCovidCombineVisualize/blob/main/Troubleshooting.md)
+[`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
 
 
@@ -391,7 +391,7 @@ _Component studies and their scenarios_ are mentioned below after the selected _
  
  
  
-(25) uptake 20210709: DELP 20210708, IHME 20210702, **_IMPE 20210702_**, LANL 20210704, SRIV 20210709 
+(25) uptake [`20210709`](https://github.com/pourmalek/covir2/tree/main/20210709): DELP 20210708, IHME 20210702, **_IMPE 20210702_**, LANL 20210704, SRIV 20210709 
  
 (24) uptake 20210704: DELP 20210704, IHME 20210702, **_IMPE 20210626_**, LANL 20210704, SRIV 20210704 
  
