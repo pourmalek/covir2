@@ -697,7 +697,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208900-2a4bcc80-e24a-11eb-91dd-81f046c0296d.png)
  
 * 
  
@@ -865,7 +867,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208912-418aba00-e24a-11eb-8479-8aa282dacaa2.png)
  
 *
  
@@ -1035,7 +1039,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208929-5b2c0180-e24a-11eb-8dc3-195a65d932cd.png)
  
 *
  
@@ -1205,7 +1211,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208939-726aef00-e24a-11eb-9893-6256ebbc6ed7.png)
  
 *
  
@@ -1374,7 +1382,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208959-8dd5fa00-e24a-11eb-84d3-559e69415d4d.png)
  
 *
  
@@ -1543,7 +1553,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208978-a514e780-e24a-11eb-9218-8a439de48362.png)
  
 *
  
@@ -1715,7 +1727,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125208984-c2e24c80-e24a-11eb-995b-44d14c60f119.png)
  
 *
  
@@ -1888,7 +1902,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125209010-dbeafd80-e24a-11eb-8c84-fbbf1bd505b2.png)
  
 *
  
@@ -2063,7 +2079,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125209028-f4f3ae80-e24a-11eb-8b1f-ee5a04cc3555.png)
  
 *
  
@@ -2240,7 +2258,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125209041-0c329c00-e24b-11eb-9cfd-90fdf0c24ebe.png)
  
 *
  
@@ -2409,7 +2429,9 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
  
 uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
  
-.
+(11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20210506/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/125209056-24a2b680-e24b-11eb-8fce-d62e1630a73b.png)
  
 *
  
@@ -2576,6 +2598,12 @@ uptake 20210514: DELP 20210514, **IHME 20210514**, IMPE 20210424, LANL 20210512,
 ![image](https://user-images.githubusercontent.com/30849720/125206585-e3a3a580-e23c-11eb-9f05-7620bf871d0e.png)
  
 * 
+ 
+uptake 20210506: DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
+ 
+
+ 
+*
  
  
  
