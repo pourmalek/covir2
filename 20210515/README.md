@@ -6,8 +6,8 @@ correct to DELP 20210515, IHME 20210514, **_IMPE 20210510_**, LANL 20210512, SRI
 
 Note: IMPE 20210510 (2021-05-10_v8.csv.zip) released on 20210515.
 
+IHME removed their originally released seroprevalence variable (seroprev_mean seroprev_lower seroprev_upper), as of 20210614.
 
-IHME removed their originally released seroprevalence variable (seroprev_mean seroprev_lower seroprev_upper), as of 20210614
 <br/><br/>
 ****
 
