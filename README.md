@@ -484,6 +484,9 @@ _Component studies and their scenarios_ are mentioned below after the selected _
  
 [graph (12) Iran - Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2#graph-12-iran---daily-cases-or-infections-estimated-to-reported-cases-2021) 
 
+ 
+ 
+ 
 ****
     
 ### Logical order of graphs
@@ -632,6 +635,20 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 *
  
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/121991630-e9e55580-cd54-11eb-9daa-b397e01cd899.png)
+ 
+*
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -753,6 +770,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125178721-3d07c800-e19c-11eb-9e28-a34292520788.png)
+ 
+*
+ 
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+
  
 *
  
@@ -880,6 +903,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 *
  
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
+ 
+*
+ 
 
  
  
@@ -1001,6 +1030,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
 (4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125178737-6cb6d000-e19c-11eb-9243-439730cb4c39.png)
+ 
+*
+ 
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
  
 *
  
@@ -1126,6 +1161,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 *
  
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
+ 
+*
+ 
  
  
 
@@ -1244,6 +1285,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
 (6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125178763-a12a8c00-e19c-11eb-8166-b74e7f7fa776.png)
+ 
+*
+ 
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
  
 *
  
@@ -1370,6 +1417,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 *
  
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
+ 
+*
+ 
  
  
  
@@ -1490,6 +1543,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
 (8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125178780-d20ac100-e19c-11eb-8f8c-077088dc0d73.png)
+ 
+*
+ 
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
  
 *
  
@@ -1616,6 +1675,13 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 *
  
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
+ 
+*
+ 
+ 
  
  
  
@@ -1737,6 +1803,12 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
 (10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210528/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125178812-14cc9900-e19d-11eb-88b7-8b1a9091fbf5.png)
+ 
+*
+ 
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
  
 *
  
@@ -1862,6 +1934,14 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 *
  
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
+ 
+*
+ 
+ 
+ 
  
  
  
@@ -1983,6 +2063,16 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
 ![image](https://user-images.githubusercontent.com/30849720/125178842-480f2800-e19d-11eb-98ea-df2773e9f11e.png)
  
 *
+ 
+uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
+ 
+.
+ 
+*
+ 
+ 
+ 
+ 
  
  
  
