@@ -106,7 +106,7 @@ Has been performed for [`Iran 20210625`](https://github.com/pourmalek/covir2/tre
 ********************************************************************************************************************************************
 
  
-#### LATEST UPTAKE: uptake 20210709
+#### LATEST UPTAKE: uptake [`20210709`](https://github.com/pourmalek/covir2/tree/main/20210709)
  
 #### DELP 20210708, IHME 20210702, **_IMPE 20210702_**, LANL 20210704, SRIV 20210709
  
