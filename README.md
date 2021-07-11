@@ -637,9 +637,7 @@ uptake 20210528: DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526,
  
 uptake 20210522: DELP 20210522, IHME 20210521, **_IMPE 20210522_**, LANL 20210519, SRIV 20210522 
  
-[Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210522/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/121991630-e9e55580-cd54-11eb-9daa-b397e01cd899.png)
+.
  
 *
  
