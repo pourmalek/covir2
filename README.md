@@ -452,10 +452,10 @@ _Component studies and their scenarios_ are mentioned below after the selected _
  DELP 20210430, **_IHME 20210430_**, IMPE 20210424, LANL 20210428, SRIV 20210430. IHME update 20210430 vanished after release. 
  
 (07) uptake [`20210424`](https://github.com/pourmalek/covir2/tree/main/20210424): 
- DELP 20210424, IHME 20210422, **_IMPE 20210424_**, LANL 20210421, SRIV 20210424 
+ DELP 20210424, IHME 20210423, **_IMPE 20210424_**, LANL 20210421, SRIV 20210424 
  
-(06) uptake [`20210422`](https://github.com/pourmalek/covir2/tree/main/20210422): 
- DELP N20210422, **_IHME 20210422_**, IMPE 2010417, LANL 20210421, SRIV 20210422
+(06) uptake [`20210423`](https://github.com/pourmalek/covir2/tree/main/20210422): 
+ DELP N20210422, **_IHME 20210423_**, IMPE 2010417, LANL 20210421, SRIV 20210422
  
 (05) uptake [`20210417`](https://github.com/pourmalek/covir2/tree/main/20210417): 
  DELP 20210417, IHME 20210416, **_IMPE 20210417_**, LANL 20210414, SRIV 20210417 
