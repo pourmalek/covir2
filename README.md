@@ -944,6 +944,12 @@ uptake 20210416: DELP 20210416, **_IHME 20210416_**, IMPE 20210406, LANL 2021041
 
 ![image](https://user-images.githubusercontent.com/30849720/125364617-a9fb9900-e327-11eb-82a1-10d1bcbb7560.png)
  
+*
+ 
+uptake 20210406: DELP 20210406, IHME 20210401, **_IMPE 20210406_**, LANL 20210404, SRIV 20210406 
+ 
+
+ 
 * 
  
 
