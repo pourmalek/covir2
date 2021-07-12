@@ -10,48 +10,6 @@ DELP N20210423, **_IHME 20210423_**, IMPE 2010417, LANL 20210421, SRIV 20210
 
 ****
 
-<br/><br/>
-
-****
-
-### What is new, uptake 20210423
- 
-
-* IHME now explicitly adjusts for under-reporting. A major improvement. Next improvement could be accounting for asymptomatic transmission. 
-
-. IHME correction factors for under-reporting of deaths and cases in Iran are about **2.5** and **9** (6-17), the latter in first five months of 2021. 
-
-. IHME correction factor for under-reporting of deaths in Iran = 2.4. 
-
-. IHME correction factor for under-reporting of cases in Iran (during 21-01-01 to 21-05-06), mean = 8.9, min = 5.7, max = 17.2. 
-<br/><br/>
-* Hospital-related outcomes that were absent in one previous update of IHME are now back.
-
-
-<br/><br/>
-
-<div dir="rtl">
-
-### تغییرات جدید، برداشت (20210423) 
-
-* مطالعه آی اچ ام ای اکنون برآورد و اصلاح کم شماری مرگ و موارد بیماری را به صورت آشکار و عیان انجام می دهد. این یک بهبود عمده است. بهبود بعدی می تواند لحاظ نمودن آشکار و عیان انتقال بیماری از موارد بدون علامت باشد. 
-
-.‌ ضرایب تصحیح کم شماری مرگ و موارد بیماری در ایران در مطالعه آی اچ ام ای، عبارتند از حدود **۲/۵** و **۹** (۶-۱۷)، مورد اخیر در پنج ماه اول سال ۲۰۲۱.
-
-. ضریب تصحیح کم شماری مرگ در ایران در مطالعه آی اچ ام ای، ۲/۴.
-
-.‌ ضریب تصحیح کم شماری موارد بیماری در ایران در مطالعه آی اچ ام ای، در فاصله اول ژانویه تا ششم می ۲۰۲۱، میانگین ۸/۹، حداقل ۵/۷، حداکثر ۱۷/۲.
-
- <br/><br/>
-* برآوردهای پیامد های مربوط به بستری و بیمارستان که در به روز رسانی قبلی مطالعه آی اچ ام ای حذف شده بودند، دوباره اضافه شده اند.
-
-
-
-<div dir="ltr">
-
-<br/><br/>
-
-
 
 ### Selected graphs
 
