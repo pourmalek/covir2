@@ -62,21 +62,7 @@ The codes in these repositories can be adapted for use for any country or region
 
 <br/><br/>
  
-   
-********************************************************************************************************************************************  
-  *
-## Notice: Nomenclature CORRECTION is being applied: 
   
-### IHME and IMPE estimate INFECTIONS (not CASES). 
-  
-#### Their Case Fatality Ratio (CFR) -> Infection Fatality ratio (IFR).
- 
-Has been performed for [`Iran 20210625`](https://github.com/pourmalek/covir2/tree/main/20210625) and [`Afghanistan 20210625`](https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625)
-
-  *
-********************************************************************************************************************************************   
-  
- 
  
  
 # TOC
