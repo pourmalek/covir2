@@ -130,7 +130,7 @@ The codes in these repositories can be adapted for use for any country or region
 
 ****
 
-(6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210714/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+# (6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210714/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125684660-6598baa2-7a01-4e05-b186-f79c5fa78d29.png)
 
