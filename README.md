@@ -106,6 +106,7 @@ The codes in these repositories can be adapted for use for any country or region
 
 ****
 
+![image](https://user-images.githubusercontent.com/30849720/125985230-0702ed98-ef6d-4d75-afe8-a838a7395f5a.png)
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210715/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/125984169-e1718dd8-047a-442f-b96f-7ecffc7aad9f.png)
