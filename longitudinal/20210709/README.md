@@ -33,6 +33,9 @@ Up to and including covir2 uptake 20210514, IMPE model is version 7. Uptake 2021
 
 Starting from covir2 uptake 20210515, IMPE model is version 7. Uptake 20210515 uses IMPE update 20210510, the first IMPE update with model version 8.
 
+.
+
+Change of other models' versions is not present in this longitudinal visualization of uptakes 20210401 to 20210709.
 
 <br/><br/>
 ****
