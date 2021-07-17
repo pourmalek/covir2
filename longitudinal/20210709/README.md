@@ -75,6 +75,18 @@ Merged graphs of this longitudinal visualization [here](https://github.com/pourm
 
 (5) [COVID-19 daily cases or infections (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021b%20COVID-19%20daily%20cases%2C%20Iran%2C%20wo%20extremes.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/126045064-dc3735b3-70b1-4ff4-b3d5-deec8f974bf1.png)
+
+****
+
+(6) [COVID-19 total deaths (with the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031a%20COVID-19%20total%20deaths%2C%20Iran.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126045106-d0d29170-c2e6-4e4c-a52c-389446e2a679.png)
+
+****
+
+(7) [COVID-19 total deaths (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031b%20COVID-19%20total%20deaths%2C%20Iran%2C%20wo%20extremes.pdf)
+
 
 ****
 
