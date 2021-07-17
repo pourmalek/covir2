@@ -8,6 +8,26 @@
 20210604 20210605 20210610 20210611 20210618 
 20210624 20210625 20210703 20210704 20210709
 
+
+
+### Model’s versions
+
+IHME model versions 3 and 4:
+
+Up to and including covir2 uptake 20210424, IHME model is version 3. Uptake 20210424 uses IHME update 20210423, the last IHME update with model version 3.
+
+Starting from covir2 uptake 20210506, IHME model is version 4. Uptake 20210506 uses IHME update 20210506, the first IHME update with model version 4.
+
+IHME model version “4” is not assigned by IHME; it is assigned in this repository. Model version 4 _explicitly_ adjusts for under-reporting of deaths. IHME correction factor for under-reporting of deaths in Iran = **2.4**.
+
+
+IMPE model versions 7 and 8:
+
+Up to and including covir2 uptake 20210514, IMPE model is version 7. Uptake 20210514 uses IMPE update 20210424, the last IMPE update with model version 7.
+
+Starting from covir2 uptake 20210515, IMPE model is version 7. Uptake 20210515 uses IMPE update 20210510, the first IMPE update with model version 8.
+
+
 <br/><br/>
 ****
 
