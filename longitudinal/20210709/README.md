@@ -67,7 +67,13 @@ Merged graphs of this longitudinal visualization [here](https://github.com/pourm
 
 ****
 
-(4) [COVID-19 daily cases or infections]()
+(4) [COVID-19 daily cases or infections](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126045018-774693d6-23e4-4a71-8ff4-e35c1fd74229.png)
+
+****
+
+(5) [COVID-19 daily cases or infections (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021b%20COVID-19%20daily%20cases%2C%20Iran%2C%20wo%20extremes.pdf)
 
 
 ****
