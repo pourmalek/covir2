@@ -20,13 +20,11 @@ Note: In this uptake, and uptakes before this, IHME zip file creates a directory
 ### What is new, uptake 20210506
  
 
-* IHME now explicitly adjusts for under-reporting. A major improvement. Next improvement could be accounting for asymptomatic transmission. 
+* IHME now explicitly adjusts for under-reporting of deaths. A major improvement. Next improvement could be accounting for asymptomatic transmission. 
 
-. IHME correction factors for under-reporting of deaths and cases in Iran are about **2.5** and **9** (6-17), the latter in first five months of 2021. 
+. IHME correction factor for under-reporting of deaths in Iran = **2.4** 
 
-. IHME correction factor for under-reporting of deaths in Iran = 2.4. 
 
-. IHME correction factor for under-reporting of cases in Iran (during 21-01-01 to 21-05-06), mean = 8.9, min = 5.7, max = 17.2. 
 <br/><br/>
 * Hospital-related outcomes that were absent in one previous update of IHME are now back.
 
