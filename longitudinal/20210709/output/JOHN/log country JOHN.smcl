@@ -1,0 +1,354 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/longitudinal/20210709/code/JOHN/log country JOHN.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2021, 09:09:55
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country JOHN.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare Johns Hopkins data for country
+. ***************************************************************************
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. local uptakedatelist ///
+> 20210401 20210406 20210409 20210416 20210417 ///
+> 20210423 20210424 20210506 20210514 20210515 ///
+> 20210516 20210521 20210522 20210528 20210603 ///
+> 20210604 20210605 20210610 20210611 20210618 ///
+> 20210624 20210625 20210703 20210704 20210709
+{txt}
+{com}. 
+. 
+. foreach l of local uptakedatelist {c -(}
+{txt}  2{com}. 
+. qui {c -(}
+{txt}  3{com}. 
+. cd "$pathcovir2" // "/Users/`usrnam'/Downloads/covir2-main/longitudinal/20210709/code"
+{txt}  4{com}. 
+. cd .. // 20210709
+{txt}  5{com}. 
+. cd .. // longitudinal
+{txt}  6{com}. 
+. cd .. //  covir2-main
+{txt}  7{com}. 
+. cd `l'
+{txt}  8{com}. 
+. cd output
+{txt}  9{com}. 
+. cd merge
+{txt} 10{com}. 
+. use "country.dta", clear 
+{txt} 11{com}. 
+. keep date loc_grand_name DayDeaMeRaA00S00 DayDeaMeSmA00S00 TotDeaMeRaA00S00 DayCasMeRaA00S00 DayCasMeSmA00S00 TotCasMeRaA00S00
+{txt} 12{com}. 
+. 
+. local varlist DayDeaMeRaA00S00 DayDeaMeSmA00S00 TotDeaMeRaA00S00 DayCasMeRaA00S00 DayCasMeSmA00S00 TotCasMeRaA00S00
+{txt} 13{com}. 
+.         foreach v of local varlist {c -(}
+{txt} 14{com}.         
+.         rename `v' `v'U`l'
+{txt} 15{com}. 
+.         {c )-}
+{txt} 16{com}.         *
+. 
+.   
+. 
+. qui compress
+{txt} 17{com}. 
+. cd .. // merge
+{txt} 18{com}. 
+. cd .. // output
+{txt} 19{com}. 
+. cd .. // `l'
+{txt} 20{com}. 
+. cd longitudinal 
+{txt} 21{com}. 
+. cd 20210709
+{txt} 22{com}. 
+. cd code
+{txt} 23{com}. 
+. cd JOHN
+{txt} 24{com}. 
+. save "`l'.dta", replace
+{txt} 25{com}. 
+. {c )-}
+{txt} 26{com}. 
+. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. 
+. local uptakedatelist ///
+> 20210401 20210406 20210409 20210416 20210417 ///
+> 20210423 20210424 20210506 20210514 20210515 ///
+> 20210516 20210521 20210522 20210528 20210603 ///
+> 20210604 20210605 20210610 20210611 20210618 ///
+> 20210624 20210625 20210703 20210704 20210709
+{txt}
+{com}. 
+. 
+. foreach l of local uptakedatelist {c -(}
+{txt}  2{com}. 
+. merge 1:1 date loc_grand_name using "`l'.dta"
+{txt}  3{com}. 
+. drop _merge
+{txt}  4{com}. 
+. {c )-}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              98
+{txt}{col 9}from master{col 30}{res}              98{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             558{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              94
+{txt}{col 9}from master{col 30}{res}              94{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             562{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              76
+{txt}{col 9}from master{col 30}{res}              76{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             580{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              42
+{txt}{col 9}from master{col 30}{res}              42{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             614{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              36
+{txt}{col 9}from master{col 30}{res}              36{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             620{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              35
+{txt}{col 9}from master{col 30}{res}              35{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             621{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              35
+{txt}{col 9}from master{col 30}{res}              35{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             621{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             640{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             640{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             640{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              15
+{txt}{col 9}from master{col 30}{res}              15{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             641{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              15
+{txt}{col 9}from master{col 30}{res}              15{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             641{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               6
+{txt}{col 9}from master{col 30}{res}               6{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             650{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               5
+{txt}{col 9}from master{col 30}{res}               5{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             651{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             656{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. view "log country JOHN.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/longitudinal/20210709/code/JOHN/log country JOHN.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2021, 09:09:56
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
