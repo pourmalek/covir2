@@ -87,6 +87,13 @@ Merged graphs of this longitudinal visualization [here](https://github.com/pourm
 
 (7) [COVID-19 total deaths (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031b%20COVID-19%20total%20deaths%2C%20Iran%2C%20wo%20extremes.pdf)
 
+.
+
+****
+
+(8) [COVID-19 total cases or infections](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2041a%20COVID-19%20total%20cases%2C%20Iran.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126045239-182d90be-b85a-43d5-8115-ba5995f3158e.png)
 
 ****
 
