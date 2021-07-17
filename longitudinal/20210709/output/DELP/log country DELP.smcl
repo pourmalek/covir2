@@ -1,0 +1,2301 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/longitudinal/20210709/code/DELP/log country DELP.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2021, 09:09:56
+{txt}
+{com}. 
+. ******************************************************************************
+. * This is "do country DELP.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare DELPHI data for country
+. ******************************************************************************
+. 
+. 
+. 
+. * read model estimates from each uptake
+. 
+. 
+. local uptakedatelist ///
+> 20210401 20210406 20210409 20210416 20210417 ///
+> 20210423 20210424 20210506 20210514 20210515 ///
+> 20210516 20210521 20210522 20210528 20210603 ///
+> 20210604 20210605 20210610 20210611 20210618 ///
+> 20210624 20210625 20210703 20210704 20210709
+{txt}
+{com}. 
+. 
+. foreach l of local uptakedatelist {c -(}
+{txt}  2{com}. 
+. qui {c -(}
+{txt}  3{com}. 
+. cd "$pathcovir2" // "/Users/`usrnam'/Downloads/covir2-main/longitudinal/20210709/code"
+{txt}  4{com}. 
+. cd .. // 20210709
+{txt}  5{com}. 
+. cd .. // longitudinal
+{txt}  6{com}. 
+. cd .. //  covir2-main
+{txt}  7{com}. 
+. cd `l'
+{txt}  8{com}. 
+. cd output
+{txt}  9{com}. 
+. cd merge
+{txt} 10{com}. 
+. use "country.dta", clear 
+{txt} 11{com}. 
+. * keep model estimates
+. 
+. keep date loc_grand_name ///
+> DayDeaMeRaA01S00 DayCasMeRaA01S00 TotDeaMeRaA01S00 TotCasMeRaA01S00
+{txt} 12{com}. 
+. 
+. * add uptake dte to the end of varname
+. 
+. local varlist ///
+> DayDeaMeRaA01S00 DayCasMeRaA01S00 TotDeaMeRaA01S00 TotCasMeRaA01S00
+{txt} 13{com}. 
+.         foreach v of local varlist {c -(}
+{txt} 14{com}.         
+.         rename `v' `v'U`l'
+{txt} 15{com}. 
+.         {c )-}
+{txt} 16{com}.         *
+. 
+.   
+. 
+. qui compress
+{txt} 17{com}. 
+. cd .. // merge
+{txt} 18{com}. 
+. cd .. // output
+{txt} 19{com}. 
+. cd .. // `l'
+{txt} 20{com}. 
+. cd longitudinal 
+{txt} 21{com}. 
+. cd 20210709
+{txt} 22{com}. 
+. cd code
+{txt} 23{com}. 
+. cd DELP
+{txt} 24{com}. 
+. save "`l'.dta", replace
+{txt} 25{com}. 
+. {c )-}
+{txt} 26{com}. 
+. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. * merge individual uptake files
+. 
+. local uptakedatelist ///
+> 20210401 20210406 20210409 20210416 20210417 ///
+> 20210423 20210424 20210506 20210514 20210515 ///
+> 20210516 20210521 20210522 20210528 20210603 ///
+> 20210604 20210605 20210610 20210611 20210618 ///
+> 20210624 20210625 20210703 20210704 20210709
+{txt}
+{com}. 
+. 
+. foreach l of local uptakedatelist {c -(}
+{txt}  2{com}. 
+. merge 1:1 date loc_grand_name using "`l'.dta"
+{txt}  3{com}. 
+. drop _merge
+{txt}  4{com}. 
+. {c )-}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              98
+{txt}{col 9}from master{col 30}{res}              98{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             558{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              94
+{txt}{col 9}from master{col 30}{res}              94{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             562{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              77
+{txt}{col 9}from master{col 30}{res}              77{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             579{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              76
+{txt}{col 9}from master{col 30}{res}              76{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             580{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              46
+{txt}{col 9}from master{col 30}{res}              46{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             610{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              42
+{txt}{col 9}from master{col 30}{res}              42{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             614{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              36
+{txt}{col 9}from master{col 30}{res}              36{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             620{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              35
+{txt}{col 9}from master{col 30}{res}              35{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             621{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              35
+{txt}{col 9}from master{col 30}{res}              35{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             621{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             640{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             640{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             640{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              15
+{txt}{col 9}from master{col 30}{res}              15{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             641{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              15
+{txt}{col 9}from master{col 30}{res}              15{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             641{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               6
+{txt}{col 9}from master{col 30}{res}               6{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             650{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               5
+{txt}{col 9}from master{col 30}{res}               5{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             651{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             656{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. *
+. 
+. sort date loc_grand_name
+{txt}
+{com}. 
+. save "country DELP.dta", replace
+{txt}(note: file country DELP.dta not found)
+file country DELP.dta saved
+
+{com}. 
+. 
+. 
+. 
+. * read JOHN from latest uptake
+. 
+. 
+. qui {c -(}
+{txt}
+{com}. *
+. 
+. 
+. merge date loc_grand_name using "country DELP.dta"
+{txt}{p}
+(note: you are using old
+{bf:merge} syntax; see
+{bf:{help merge:[D] merge}} for new syntax)
+{p_end}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. local uptakedatelist ///
+> 20210401 20210406 20210409 20210416 20210417 ///
+> 20210423 20210424 20210506 20210514 20210515 ///
+> 20210516 20210521 20210522 20210528 20210603 ///
+> 20210604 20210605 20210610 20210611 20210618 ///
+> 20210624 20210625 20210703 20210704 20210709
+{txt}
+{com}. 
+. 
+. foreach l of local uptakedatelist {c -(}
+{txt}  2{com}. 
+. gen DayDeaMeRaA01S00U`l'D = DayDeaMeRaA01S00U`l' - DayDeaMeSmA00S00 // D Difference 
+{txt}  3{com}. gen DayDeaMeRaA01S00U`l'T = DayDeaMeRaA01S00U`l' / DayDeaMeSmA00S00 // T Times (more or less)
+{txt}  4{com}. gen DayDeaMeRaA01S00U`l'P = 100 * (DayDeaMeRaA01S00U`l' - DayDeaMeSmA00S00) / DayDeaMeSmA00S00 // P Percent
+{txt}  5{com}. 
+. gen DayCasMeRaA01S00U`l'D = DayCasMeRaA01S00U`l' - DayCasMeSmA00S00 // D Difference 
+{txt}  6{com}. gen DayCasMeRaA01S00U`l'T = DayCasMeRaA01S00U`l' / DayCasMeSmA00S00 // T Times (more or less)
+{txt}  7{com}. gen DayCasMeRaA01S00U`l'P = 100 * (DayCasMeRaA01S00U`l' - DayCasMeSmA00S00) / DayCasMeSmA00S00 // P Percent
+{txt}  8{com}. 
+. gen TotDeaMeRaA01S00U`l'D = TotDeaMeRaA01S00U`l' - TotDeaMeRaA00S00 // D Difference 
+{txt}  9{com}. gen TotDeaMeRaA01S00U`l'T = TotDeaMeRaA01S00U`l' / TotDeaMeRaA00S00 // T Times (more or less)
+{txt} 10{com}. gen TotDeaMeRaA01S00U`l'P = 100 * (TotDeaMeRaA01S00U`l' - TotDeaMeRaA00S00) / TotDeaMeRaA00S00 // P Percent
+{txt} 11{com}. 
+. gen TotCasMeRaA01S00U`l'D = TotCasMeRaA01S00U`l' - TotCasMeRaA00S00 // D Difference 
+{txt} 12{com}. gen TotCasMeRaA01S00U`l'T = TotCasMeRaA01S00U`l' / TotCasMeRaA00S00 // T Times (more or less)
+{txt} 13{com}. gen TotCasMeRaA01S00U`l'P = 100 * (TotCasMeRaA01S00U`l' - TotCasMeRaA00S00) / TotCasMeRaA00S00 // P Percent 
+{txt} 14{com}. 
+. {c )-}
+{txt}(612 missing values generated)
+(612 missing values generated)
+(612 missing values generated)
+(612 missing values generated)
+(612 missing values generated)
+(612 missing values generated)
+(611 missing values generated)
+(611 missing values generated)
+(611 missing values generated)
+(611 missing values generated)
+(611 missing values generated)
+(611 missing values generated)
+(617 missing values generated)
+(617 missing values generated)
+(617 missing values generated)
+(617 missing values generated)
+(617 missing values generated)
+(617 missing values generated)
+(616 missing values generated)
+(616 missing values generated)
+(616 missing values generated)
+(616 missing values generated)
+(616 missing values generated)
+(616 missing values generated)
+(566 missing values generated)
+(566 missing values generated)
+(566 missing values generated)
+(566 missing values generated)
+(566 missing values generated)
+(566 missing values generated)
+(565 missing values generated)
+(565 missing values generated)
+(565 missing values generated)
+(565 missing values generated)
+(565 missing values generated)
+(565 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(572 missing values generated)
+(572 missing values generated)
+(572 missing values generated)
+(572 missing values generated)
+(572 missing values generated)
+(572 missing values generated)
+(574 missing values generated)
+(574 missing values generated)
+(574 missing values generated)
+(574 missing values generated)
+(574 missing values generated)
+(574 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(573 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(579 missing values generated)
+(579 missing values generated)
+(579 missing values generated)
+(579 missing values generated)
+(579 missing values generated)
+(579 missing values generated)
+(581 missing values generated)
+(581 missing values generated)
+(581 missing values generated)
+(581 missing values generated)
+(581 missing values generated)
+(581 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(580 missing values generated)
+(593 missing values generated)
+(593 missing values generated)
+(593 missing values generated)
+(593 missing values generated)
+(593 missing values generated)
+(593 missing values generated)
+(592 missing values generated)
+(592 missing values generated)
+(592 missing values generated)
+(592 missing values generated)
+(592 missing values generated)
+(592 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(600 missing values generated)
+(600 missing values generated)
+(600 missing values generated)
+(600 missing values generated)
+(600 missing values generated)
+(600 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(601 missing values generated)
+(603 missing values generated)
+(603 missing values generated)
+(603 missing values generated)
+(603 missing values generated)
+(603 missing values generated)
+(603 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(602 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(607 missing values generated)
+(607 missing values generated)
+(607 missing values generated)
+(607 missing values generated)
+(607 missing values generated)
+(607 missing values generated)
+(609 missing values generated)
+(609 missing values generated)
+(609 missing values generated)
+(609 missing values generated)
+(609 missing values generated)
+(609 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(608 missing values generated)
+(615 missing values generated)
+(615 missing values generated)
+(615 missing values generated)
+(615 missing values generated)
+(615 missing values generated)
+(615 missing values generated)
+(614 missing values generated)
+(614 missing values generated)
+(614 missing values generated)
+(614 missing values generated)
+(614 missing values generated)
+(614 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(620 missing values generated)
+(620 missing values generated)
+(620 missing values generated)
+(620 missing values generated)
+(620 missing values generated)
+(620 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(622 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(621 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(627 missing values generated)
+(627 missing values generated)
+(627 missing values generated)
+(627 missing values generated)
+(627 missing values generated)
+(627 missing values generated)
+(629 missing values generated)
+(629 missing values generated)
+(629 missing values generated)
+(629 missing values generated)
+(629 missing values generated)
+(629 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(628 missing values generated)
+(636 missing values generated)
+(636 missing values generated)
+(636 missing values generated)
+(636 missing values generated)
+(636 missing values generated)
+(636 missing values generated)
+(635 missing values generated)
+(635 missing values generated)
+(635 missing values generated)
+(635 missing values generated)
+(635 missing values generated)
+(635 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(641 missing values generated)
+(641 missing values generated)
+(641 missing values generated)
+(641 missing values generated)
+(641 missing values generated)
+(641 missing values generated)
+(643 missing values generated)
+(643 missing values generated)
+(643 missing values generated)
+(643 missing values generated)
+(643 missing values generated)
+(643 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(642 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(650 missing values generated)
+(650 missing values generated)
+(650 missing values generated)
+(650 missing values generated)
+(650 missing values generated)
+(650 missing values generated)
+(652 missing values generated)
+(652 missing values generated)
+(652 missing values generated)
+(652 missing values generated)
+(652 missing values generated)
+(652 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(651 missing values generated)
+(656 missing values generated)
+(656 missing values generated)
+(656 missing values generated)
+(656 missing values generated)
+(656 missing values generated)
+(656 missing values generated)
+(655 missing values generated)
+(655 missing values generated)
+(655 missing values generated)
+(655 missing values generated)
+(655 missing values generated)
+(655 missing values generated)
+
+{com}. *
+. 
+. 
+. 
+. save "country DELP.dta", replace
+{txt}file country DELP.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. **********************************************************
+. 
+. * graphs
+. 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. 
+. * daily deaths
+. 
+. **************************************
+. 
+. * daily deaths, Absolute value
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210528 date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210603 date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210604 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618 date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210624 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709 date, sort lcolor(red)) /// 25
+> (line DayDeaMeSmA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 26
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(25 "DELP" 26 "JOHN raw") size(small))      
+{res}{txt}
+{com}.            
+. qui graph save "graph 11a COVID-19 daily deaths, $country, DELP.gph", replace
+{txt}
+{com}. qui graph export "graph 11a COVID-19 daily deaths, $country, DELP.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily deaths, wo extreme 20210528, Absolute value
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210603 date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210604 date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618 date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210624 date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709 date, sort lcolor(red)) /// 24
+> (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 25
+> (line DayDeaMeSmA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 26
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(24 "DELP" 25 "JOHN raw" 26 "JOHN smooth") size(small) rows(1))             
+{res}{txt}
+{com}.            
+. qui graph save "graph 11b COVID-19 daily deaths, $country, DELP, wo extreme.gph", replace
+{txt}
+{com}. qui graph export "graph 11b COVID-19 daily deaths, $country, DELP, wo extreme.pdf", replace
+{txt}
+{com}. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * daily deaths, Difference
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210528D date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210603D date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210604D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618D date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210624D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709D date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths DELP minus JOHN smooth) title("COVID-19 daily deaths, $country, DELP minus JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 12a COVID-19 daily deaths, $country, DELP, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 12a COVID-19 daily deaths, $country, DELP, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily deaths, wo extreme 20210528, Difference
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210603D date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210604D date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618D date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210624D date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709D date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths DELP divided by JOHN smooth) title("COVID-19 daily deaths, $country, DELP minus JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 12b COVID-19 daily deaths, $country, DELP, wo extreme, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 12b COVID-19 daily deaths, $country, DELP, wo extreme, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * daily deaths, Times
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210528T date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210603T date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210604T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618T date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210624T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709T date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths DELP divided by JOHN smooth) title("COVID-19 daily deaths, $country, DELP divided by JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 13a COVID-19 daily deaths, $country, DELP, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 13a COVID-19 daily deaths, $country, DELP, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily deaths, wo extreme 20210528, Times
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210603T date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210604T date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618T date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210624T date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709T date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths DELP divided by JOHN smooth) title("COVID-19 daily deaths, $country, DELP divided by JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 13b COVID-19 daily deaths, $country, DELP, wo extreme, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 13b COVID-19 daily deaths, $country, DELP, wo extreme, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * daily deaths, Percent
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210528P date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210603P date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210604P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618P date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210624P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709P date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths DELP percent JOHN smooth) title("COVID-19 daily deaths, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 14a COVID-19 daily deaths, $country, DELP, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 14a COVID-19 daily deaths, $country, DELP, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily deaths, wo extreme 20210528, Percent
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line DayDeaMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line DayDeaMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line DayDeaMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210603P date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210604P date, sort lcolor(red)) /// 15
+> (line DayDeaMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210618P date, sort lcolor(red)) /// 
+> (line DayDeaMeRaA01S00U20210624P date, sort lcolor(red)) /// 20
+> (line DayDeaMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line DayDeaMeRaA01S00U20210709P date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths DELP percent JOHN smooth) title("COVID-19 daily deaths, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 14b COVID-19 daily deaths, $country, DELP, wo extreme, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 14b COVID-19 daily deaths, $country, DELP, wo extreme, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * daily cases
+. 
+. **************************************
+. 
+. 
+. 
+. * daily cases, Absolute value
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210528 date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210603 date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210604 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618 date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210624 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709 date, sort lcolor(red)) /// 25
+> (line DayCasMeSmA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 26
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(25 "DELP" 26 "JOHN raw") size(small))      
+{res}{txt}
+{com}.            
+. qui graph save "graph 21a COVID-19 daily cases, $country, DELP.gph", replace
+{txt}
+{com}. qui graph export "graph 21a COVID-19 daily cases, $country, DELP.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily cases, wo extreme 20210528, Absolute value
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210603 date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210604 date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618 date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210624 date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709 date, sort lcolor(red)) /// 24
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 25
+> (line DayCasMeSmA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 26
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(24 "DELP" 25 "JOHN raw" 26 "JOHN smooth") size(small) rows(1))             
+{res}{txt}
+{com}.            
+. qui graph save "graph 21b COVID-19 daily cases, $country, DELP, wo extreme.gph", replace
+{txt}
+{com}. qui graph export "graph 21b COVID-19 daily cases, $country, DELP, wo extreme.pdf", replace
+{txt}
+{com}. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * daily cases, Difference
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210528D date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210603D date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210604D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618D date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210624D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709D date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases DELP minus JOHN smooth) title("COVID-19 daily cases, $country, DELP minus JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 22a COVID-19 daily cases, $country, DELP, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 22a COVID-19 daily cases, $country, DELP, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily cases, wo extreme 20210528, Difference
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210603D date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210604D date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618D date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210624D date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709D date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases DELP divided by JOHN smooth) title("COVID-19 daily cases, $country, DELP minus JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 22b COVID-19 daily cases, $country, DELP, wo extreme, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 22b COVID-19 daily cases, $country, DELP, wo extreme, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * daily cases, Times
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210528T date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210603T date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210604T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618T date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210624T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709T date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases DELP divided by JOHN smooth) title("COVID-19 daily cases, $country, DELP divided by JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 23a COVID-19 daily cases, $country, DELP, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 23a COVID-19 daily cases, $country, DELP, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily cases, wo extreme 20210528, Times
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210603T date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210604T date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618T date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210624T date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709T date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases DELP divided by JOHN smooth) title("COVID-19 daily cases, $country, DELP divided by JOHN smooth", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 23b COVID-19 daily cases, $country, DELP, wo extreme, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 23b COVID-19 daily cases, $country, DELP, wo extreme, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily cases, Percent
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210528P date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210603P date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210604P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618P date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210624P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709P date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases DELP percent JOHN smooth) title("COVID-19 daily cases, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 24a COVID-19 daily cases, $country, DELP, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 24a COVID-19 daily cases, $country, DELP, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * daily cases, wo extreme 20210528, Percent
+. 
+. twoway  ///
+> (line DayCasMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line DayCasMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line DayCasMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line DayCasMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210603P date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210604P date, sort lcolor(red)) /// 15
+> (line DayCasMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210618P date, sort lcolor(red)) /// 
+> (line DayCasMeRaA01S00U20210624P date, sort lcolor(red)) /// 20
+> (line DayCasMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line DayCasMeRaA01S00U20210709P date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases DELP percent JOHN smooth) title("COVID-19 daily cases, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 24b COVID-19 daily cases, $country, DELP, wo extreme, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 24b COVID-19 daily cases, $country, DELP, wo extreme, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * total deaths
+. 
+. **************************************
+. 
+. * total deaths, Absolute value
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210528 date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210603 date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210604 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618 date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210624 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709 date, sort lcolor(red)) /// 25
+> (line TotDeaMeRaA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 26
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(25 "DELP" 26 "JOHN") size(small))  
+{res}{txt}
+{com}.            
+. qui graph save "graph 31a COVID-19 total deaths, $country, DELP.gph", replace
+{txt}
+{com}. qui graph export "graph 31a COVID-19 total deaths, $country, DELP.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total deaths, wo extreme 20210528, Absolute value
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210603 date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210604 date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618 date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210624 date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709 date, sort lcolor(red)) /// 24
+> (line TotDeaMeRaA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(24 "DELP" 25 "JOHN") size(small) rows(1))          
+{res}{txt}
+{com}.            
+. qui graph save "graph 31b COVID-19 total deaths, $country, DELP, wo extreme.gph", replace
+{txt}
+{com}. qui graph export "graph 31b COVID-19 total deaths, $country, DELP, wo extreme.pdf", replace
+{txt}
+{com}. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * total deaths, Difference
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210528D date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210603D date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210604D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618D date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210624D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709D date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths DELP minus JOHN) title("COVID-19 total deaths, $country, DELP minus JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 32a COVID-19 total deaths, $country, DELP, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 32a COVID-19 total deaths, $country, DELP, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total deaths, wo extreme 20210528, Difference
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210603D date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210604D date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618D date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210624D date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709D date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths DELP divided by JOHN) title("COVID-19 total deaths, $country, DELP minus JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 32b COVID-19 total deaths, $country, DELP, wo extreme, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 32b COVID-19 total deaths, $country, DELP, wo extreme, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * total deaths, Times
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210528T date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210603T date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210604T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618T date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210624T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709T date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths DELP divided by JOHN) title("COVID-19 total deaths, $country, DELP divided by JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 33a COVID-19 total deaths, $country, DELP, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 33a COVID-19 total deaths, $country, DELP, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total deaths, wo extreme 20210528, Times
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210603T date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210604T date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618T date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210624T date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709T date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths DELP divided by JOHN) title("COVID-19 total deaths, $country, DELP divided by JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 33b COVID-19 total deaths, $country, DELP, wo extreme, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 33b COVID-19 total deaths, $country, DELP, wo extreme, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * total deaths, Percent
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210528P date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210603P date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210604P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618P date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210624P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709P date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths DELP percent JOHN) title("COVID-19 total deaths, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 34a COVID-19 total deaths, $country, DELP, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 34a COVID-19 total deaths, $country, DELP, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total deaths, wo extreme 20210528, Percent
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line TotDeaMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line TotDeaMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line TotDeaMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210603P date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210604P date, sort lcolor(red)) /// 15
+> (line TotDeaMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210618P date, sort lcolor(red)) /// 
+> (line TotDeaMeRaA01S00U20210624P date, sort lcolor(red)) /// 20
+> (line TotDeaMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line TotDeaMeRaA01S00U20210709P date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths DELP percent JOHN) title("COVID-19 total deaths, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 34b COVID-19 total deaths, $country, DELP, wo extreme, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 34b COVID-19 total deaths, $country, DELP, wo extreme, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * total cases
+. 
+. **************************************
+. 
+. 
+. 
+. * total cases, Absolute value
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210528 date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210603 date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210604 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618 date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210624 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709 date, sort lcolor(red)) /// 25
+> (line TotCasMeRaA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 26
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(25 "DELP" 26 "JOHN") size(small))  
+{res}{txt}
+{com}.            
+. qui graph save "graph 41a COVID-19 total cases, $country, DELP.gph", replace
+{txt}
+{com}. qui graph export "graph 41a COVID-19 total cases, $country, DELP.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total cases, wo extreme 20210528, Absolute value
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401 date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417 date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515 date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210603 date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210604 date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210605 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618 date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210624 date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210625 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704 date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709 date, sort lcolor(red)) /// 24
+> (line TotCasMeRaA00S00 date, lcolor(cyan*1.2) lwidth(thick)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(24 "DELP" 25 "JOHN") size(small) rows(1))          
+{res}{txt}
+{com}.            
+. qui graph save "graph 41b COVID-19 total cases, $country, DELP, wo extreme.gph", replace
+{txt}
+{com}. qui graph export "graph 41b COVID-19 total cases, $country, DELP, wo extreme.pdf", replace
+{txt}
+{com}. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * total cases, Difference
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210528D date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210603D date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210604D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618D date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210624D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709D date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases DELP minus JOHN) title("COVID-19 total cases, $country, DELP minus JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 42a COVID-19 total cases, $country, DELP, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 42a COVID-19 total cases, $country, DELP, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total cases, wo extreme 20210528, Difference
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401D date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417D date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515D date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210603D date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210604D date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210605D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618D date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210624D date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210625D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704D date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709D date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases DELP divided by JOHN) title("COVID-19 total cases, $country, DELP minus JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 42b COVID-19 total cases, $country, DELP, wo extreme, Difference.gph", replace
+{txt}
+{com}. qui graph export "graph 42b COVID-19 total cases, $country, DELP, wo extreme, Difference.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. *********
+. 
+. * total cases, Times
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210528T date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210603T date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210604T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618T date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210624T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709T date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases DELP divided by JOHN) title("COVID-19 total cases, $country, DELP divided by JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 43a COVID-19 total cases, $country, DELP, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 43a COVID-19 total cases, $country, DELP, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total cases, wo extreme 20210528, Times
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401T date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417T date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515T date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210603T date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210604T date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210605T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618T date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210624T date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210625T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704T date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709T date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases DELP divided by JOHN) title("COVID-19 total cases, $country, DELP divided by JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 43b COVID-19 total cases, $country, DELP, wo extreme, Times.gph", replace
+{txt}
+{com}. qui graph export "graph 43b COVID-19 total cases, $country, DELP, wo extreme, Times.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total cases, Percent
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210528P date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210603P date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210604P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618P date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210624P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709P date, sort lcolor(red)) /// 25
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases DELP percent JOHN) title("COVID-19 total cases, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("single scenario; with extreme uptake 20210528", size(small))
+{res}{txt}
+{com}.            
+. qui graph save "graph 44a COVID-19 total cases, $country, DELP, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 44a COVID-19 total cases, $country, DELP, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. *********
+. 
+. * total cases, wo extreme 20210528, Percent
+. 
+. twoway  ///
+> (line TotCasMeRaA01S00U20210401P date, sort lcolor(red)) /// 1
+> (line TotCasMeRaA01S00U20210406P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210409P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210416P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210417P date, sort lcolor(red)) /// 5
+> (line TotCasMeRaA01S00U20210423P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210424P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210506P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210514P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210515P date, sort lcolor(red)) /// 10
+> (line TotCasMeRaA01S00U20210516P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210521P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210522P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210603P date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210604P date, sort lcolor(red)) /// 15
+> (line TotCasMeRaA01S00U20210605P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210610P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210611P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210618P date, sort lcolor(red)) /// 
+> (line TotCasMeRaA01S00U20210624P date, sort lcolor(red)) /// 20
+> (line TotCasMeRaA01S00U20210625P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210703P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210704P date, sort lcolor(red)) ///
+> (line TotCasMeRaA01S00U20210709P date, sort lcolor(red)) /// 24
+> if date >= td(01apr2021) & date <= td(01sep2021), ///      
+> xtitle(Date) xlabel(#6, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases DELP percent JOHN) title("COVID-19 total cases, $country, % (DELP minus JOHN) / JOHN", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
+> subtitle("single scenario; without extreme uptake 20210528", size(small)) legend(off) ///
+>            
+{res}{txt}
+{com}. qui graph save "graph 44b COVID-19 total cases, $country, DELP, wo extreme, Percent.gph", replace
+{txt}
+{com}. qui graph export "graph 44b COVID-19 total cases, $country, DELP, wo extreme, Percent.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. view "log country DELP.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/longitudinal/20210709/code/DELP/log country DELP.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2021, 09:10:38
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
