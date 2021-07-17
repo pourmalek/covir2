@@ -20,8 +20,18 @@ Merged graphs of this longitudinal visualization [here](https://github.com/pourm
 
 ****
 
-(1) [COVID-19 daily deaths (with the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/graphs%20merged%2020210709.pdf)
+(1) [COVID-19 daily deaths (with the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/126043719-02fa4ccb-d461-43a3-90fe-1e5db45b4cb3.png)
 
 ****
+
+(2) [COVID-19 daily deaths (without the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011b%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
+
+
+****
+
+
+
+
+
