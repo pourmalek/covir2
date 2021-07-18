@@ -91,44 +91,42 @@ Order of graphs:
 
 ****
 
-(6) [COVID-19 daily deaths, difference with reported values, without extreme values]()
+(6) [COVID-19 daily deaths, difference with reported values, without extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2012c%20COVID-19%20daily%20deaths%2C%20Iran%2C%20wo%20extremes%2C%20minus.pdf)
 
-
-****
-
-
-() [COVID-19 daily cases or infections](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/126045018-774693d6-23e4-4a71-8ff4-e35c1fd74229.png)
+![image](https://user-images.githubusercontent.com/30849720/126068280-c90d9ccb-93f1-4dc5-bf54-517845fb41d6.png)
 
 ****
 
-() [COVID-19 daily cases or infections (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021b%20COVID-19%20daily%20cases%2C%20Iran%2C%20wo%20extremes.pdf)
+(7) [COVID-19 daily cases or infections, absolute values, with extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021a%20COVID-19%20daily%20cases%2C%20Iran.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/126045064-dc3735b3-70b1-4ff4-b3d5-deec8f974bf1.png)
-
-****
-
-() [COVID-19 total deaths (with the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031a%20COVID-19%20total%20deaths%2C%20Iran.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/126045106-d0d29170-c2e6-4e4c-a52c-389446e2a679.png)
+![image](https://user-images.githubusercontent.com/30849720/126068376-cd1a2f1c-ca61-41ae-9b89-d83177d603d0.png)
 
 ****
 
-() [COVID-19 total deaths (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031b%20COVID-19%20total%20deaths%2C%20Iran%2C%20wo%20extremes.pdf)
+(8) [COVID-19 daily cases or infections, absolute values, without extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2021b%20COVID-19%20daily%20cases%2C%20Iran%2C%20wo%20extremes.pdf)
 
-.
-
-****
-
-(8) [COVID-19 total cases or infections](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2041a%20COVID-19%20total%20cases%2C%20Iran.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/126045239-182d90be-b85a-43d5-8115-ba5995f3158e.png)
+![image](https://user-images.githubusercontent.com/30849720/126068442-a61d6a05-e2ca-454c-bb61-2fbf2872a62c.png)
 
 ****
 
+(9) [COVID-19 daily cases or infections, difference with reported values, with extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2022a%20COVID-19%20daily%20cases%2C%20Iran%2C%20minus.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/126068512-361783d0-358d-4199-b4de-68178519361f.png)
 
+****
+
+(10) [COVID-19 daily cases or infections, difference with reported values, without extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20wo%20extremes%2C%20minus.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126068552-06d5bad7-d94b-4331-8938-031dbefadcf1.png)
+
+****
+
+(11) [COVID-19 total deaths, absolute values, with all extreme values, including the greatest extreme value, i.e., DELP 20210528]
+(https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031a%20COVID-19%20total%20deaths%2C%20Iran.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126068654-0faa5688-fe1a-42f0-b404-50eae9e3a250.png)
+
+****
 
 
 
