@@ -61,7 +61,7 @@ Order of graphs:
 ****
 ****
 
-daily deaths
+daily deaths:
 
 ****
 
@@ -102,7 +102,7 @@ daily deaths
 ****
 ****
 
-daily cases or infections
+daily cases or infections:
 
 ****
 
@@ -131,12 +131,11 @@ daily cases or infections
 ****
 ****
 
-total deaths
+total deaths:
 
 ****
 
-(11) [COVID-19 total deaths, absolute values, with all extreme values, including the greatest extreme value, i.e., DELP 20210528]
-(https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031a%20COVID-19%20total%20deaths%2C%20Iran.pdf)
+(11) [COVID-19 total deaths, absolute values, with all extreme values, including the greatest extreme value, i.e., DELP 20210528](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2031a%20COVID-19%20total%20deaths%2C%20Iran.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/126068654-0faa5688-fe1a-42f0-b404-50eae9e3a250.png)
 
@@ -161,7 +160,7 @@ total deaths
 ****
 ****
 
-total cases or infections
+total cases or infections:
 
 ****
 
