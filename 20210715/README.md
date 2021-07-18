@@ -2,7 +2,9 @@
 
 DELP 20210715, **_IHME 20210715_**, IMPE 20210709, LANL 20210711, SRIV 20210715
 
+.
 
+[IHME COVID-19 estimate downloads](http://www.healthdata.org/covid/data-downloads) This page was last updated at 7:00 p.m. Pacific, July 15, 2021. IHME will not produce forecasts next week as we will be implementing some changes to our modeling framework. Our next weekly forecasts will be the week of July 12th.
 
 <br/><br/>
 ****
