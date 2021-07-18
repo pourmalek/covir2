@@ -61,7 +61,7 @@ Order of graphs:
 ****
 ****
 
-(1) [COVID-19 daily deaths, absolute values, with all extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
+(1) [COVID-19 daily deaths, absolute values, with all extreme values, including the greatest extreme value, i.e., DELP 20210528](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/126067737-5b840b56-3694-4ffe-b54c-3061219eaf68.png)
 
