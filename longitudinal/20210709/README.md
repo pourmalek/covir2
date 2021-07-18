@@ -52,7 +52,7 @@ Merged graphs of this longitudinal visualization [here](https://github.com/pourm
 
 Order of graphs:
 
-(a) Outcomes: daily deaths, daily cases or infections, total deaths, total cases or infections
+(a) Outcome types: daily deaths, daily cases or infections, total deaths, total cases or infections
 
 (b) Absolute value of estimated outcome, or difference of estimated outcome with reported value (JOHN)
 
@@ -67,13 +67,13 @@ Order of graphs:
 
 ****
 
-(2) [COVID-19 daily deaths (without the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011b%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
+(2) [COVID-19 daily deaths, absolute values, without the greatest extreme value, i.e., DELP 20210528](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011b%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/126067781-e5e83917-8bb0-4a4e-840d-a799a0f6074d.png)
 
 ****
 
-(3) [COVID-19 daily deaths (without extremes)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011c%20COVID-19%20daily%20deaths%2C%20Iran%2C%20wo%20extremes.pdf)
+(3) [COVID-19 daily deaths, absolute values, without extreme values](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011c%20COVID-19%20daily%20deaths%2C%20Iran%2C%20wo%20extremes.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/126067794-7fbe73af-8090-4d6e-ae46-ef1750061d3e.png)
 
