@@ -43,10 +43,22 @@ Change of other models' versions is not present in this longitudinal visualizati
 Merged graphs of this longitudinal visualization [here](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/graphs%20merged%2020210709.pdf)
 
 ****
-
+****
 
 ### Selected graphs
 
+****
+****
+
+Order of graphs:
+
+(1) Outcomes: daily deaths, daily cases or infections, total deaths, total cases or infections
+
+(2) Absolute value of estimated outcome, or difference of estimated outcome with reported value (JOHN)
+
+(3) With all extreme values of estimates, without extreme values of estimates
+
+****
 ****
 
 (1) [COVID-19 daily deaths (with the greatest extreme estimate, i.e., DELP 20210528)](https://github.com/pourmalek/covir2/blob/main/longitudinal/20210709/output/merge/graph%2011a%20COVID-19%20daily%20deaths%2C%20Iran.pdf)
