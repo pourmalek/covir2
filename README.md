@@ -98,7 +98,7 @@ The codes in these repositories can be adapted for use for any country or region
 
  
  
-****
+******
 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210715/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
