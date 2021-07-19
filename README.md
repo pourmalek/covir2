@@ -97,10 +97,9 @@ The codes in these repositories can be adapted for use for any country or region
 #### DELP 20210715, **_IHME 20210715_**, IMPE 20210709, LANL 20210711, SRIV 20210715
 
  
- ![image](https://user-images.githubusercontent.com/30849720/125985230-0702ed98-ef6d-4d75-afe8-a838a7395f5a.png)
 
 ****
-
+ 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210715/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/126107917-60b25a10-981c-4999-a2a4-8f84267d7b4a.png)
