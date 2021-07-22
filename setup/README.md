@@ -100,16 +100,35 @@ DELP source for model versions: https://github.com/COVIDAnalytics/website/tree/m
 
 IHME model versions
 
-IHME V1 2999-99-99 to 2999-99-99
+IHME V1 20200325 to 20200429: Curve Fit (CF)
 
-IHME V2 2999-99-99 to 2999-99-99
+IHME V2 20200504 to 20200526: Curve Fit & SEIR (CF-SEIR)
 
-IHME V3 2999-99-99 to 2021-04-30 
+IHME V3 20200529 to 20210430: Spline Fit & SEIR (SF-SEIR)
 
-IHME V4 2021-05-06 to when specified otherwise
+IHME V4 20210506 to when specified otherwise: SF-SEIR & excess mortality
 
 
-IHME source for model versions: IHME had 3 versions before (reference here). Since the release on May 6th 2021 (http://www.healthdata.org/special-analysis/estimation-excess-mortality-due-covid-19-and-scalars-reported-covid-19-deaths), they  changed their key metric from reported deaths to the total number of COVID-19 deaths. This included estimation of ratio of total number of COVID-19 death to reported deaths from COVID-19. Hence, IHME model is labeled V4, HERE, starting from May 6, 2021.
+IHME V1 20200325 to 20200429: Curve Fit (CF)
+
+Beginning March 25, IHME initially produced COVID forecasts using a statistical curve fit model (IHME-CF), which was used through April 29 for publicly released forecasts. 
+
+IHME V2 20200504 to 20200526: Curve Fit & SEIR (CF-SEIR)
+
+On May 4, IHME switched to using a hybrid model, drawing on a statistical curve fit the first stage, followed a second-stage epidemiological model with susceptible, exposed, infectious, recovered compartments (SEIR). This model was used through May 26. 
+
+IHME V3 20200529 to 20210430: Spline Fit & SEIR (SF-SEIR)
+
+On May 29, the curve fit stage was replaced by a spline fit to the relationship between log cumulative deaths and log cumulative cases, while the second-stage SEIR model remained the same.
+
+Reference: [Friedman, J., Liu, P., Troeger, C.E. et al. Predictive performance of international COVID-19 mortality forecasting models. Nat Commun 12, 2609 (2021).]( https://www.nature.com/articles/s41467-021-22457-w)
+
+IHME V4 20210506 to : SF-SEIR & excess mortality
+
+V4 is not a label used by IHME; it is used here. 
+
+Reference: [Estimation of excess mortality due to COVID-19]( http://www.healthdata.org/special-analysis/estimation-excess-mortality-due-covid-19-and-scalars-reported-covid-19-deaths)
+
 
 * 
 
