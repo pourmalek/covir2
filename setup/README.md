@@ -104,22 +104,23 @@ IHME V3 20200529 to 20210430: Spline Fit & SEIR (SF-SEIR)
 
 IHME V4 20210506 to when specified otherwise: SF-SEIR & excess mortality
 
+.
 
-IHME V1 20200325 to 20200429: Curve Fit (CF)
+. IHME V1 20200325 to 20200429: Curve Fit (CF)
 
 Beginning March 25, IHME initially produced COVID forecasts using a statistical curve fit model (IHME-CF), which was used through April 29 for publicly released forecasts. 
 
-IHME V2 20200504 to 20200526: Curve Fit & SEIR (CF-SEIR)
+. IHME V2 20200504 to 20200526: Curve Fit & SEIR (CF-SEIR)
 
 On May 4, IHME switched to using a hybrid model, drawing on a statistical curve fit the first stage, followed a second-stage epidemiological model with susceptible, exposed, infectious, recovered compartments (SEIR). This model was used through May 26. 
 
-IHME V3 20200529 to 20210430: Spline Fit & SEIR (SF-SEIR)
+. IHME V3 20200529 to 20210430: Spline Fit & SEIR (SF-SEIR)
 
 On May 29, the curve fit stage was replaced by a spline fit to the relationship between log cumulative deaths and log cumulative cases, while the second-stage SEIR model remained the same.
 
 Reference: [Friedman, J., Liu, P., Troeger, C.E. et al. Predictive performance of international COVID-19 mortality forecasting models. Nat Commun 12, 2609 (2021).]( https://www.nature.com/articles/s41467-021-22457-w)
 
-IHME V4 20210506 to : SF-SEIR & excess mortality
+. IHME V4 20210506 to : SF-SEIR & excess mortality
 
 V4 is not a label used by IHME; it is used here. 
 
