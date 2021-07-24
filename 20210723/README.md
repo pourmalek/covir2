@@ -2,6 +2,13 @@
 
 DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 
+### IHME estimates for Iran in update 20210723 and in update 20210715 are identical , with  numerical value difference of zero. 
+
+<br/><br/>
+
+[COVID-19 daily infections, Iran, IHME, reference scenario, C O M P A R I S O N of UPDATES 20210715 & 20210723](https://github.com/pourmalek/covir2/blob/main/20210723/output/IHME/graph%20A1%20COVID-19%20daily%20deaths%20raw%2C%20reference%20scenario%2C%20Iran%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126856538-85d81e95-8963-4f5b-8c6c-bda506f1a18c.png)
 
 
 <br/><br/>
