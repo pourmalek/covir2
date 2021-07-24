@@ -96,7 +96,7 @@ The codes in these repositories can be adapted for use for any country or region
  
 #### DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 
-### IHME estimates for Iran in update 20210723 and in update 20210715 are identical, with numerical value difference of zero. See https://github.com/pourmalek/covir2/blob/main/20210723/README.md
+### IHME estimates for Iran in update 20210723 and in update 20210715 are identical, with numerical value difference of zero. See uptake [`20210723`](https://github.com/pourmalek/covir2/tree/main/20210723)
  
 
 ****
