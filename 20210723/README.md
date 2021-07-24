@@ -2,7 +2,9 @@
 
 DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 
-### IHME estimates for Iran in update 20210723 and in update 20210715 are identical , with  numerical value difference of zero. 
+<br/><br/>
+
+### IHME estimates for Iran in update 20210723 and in update 20210715 are identical, with numerical value difference of zero. 
 
 <br/><br/>
 
@@ -28,6 +30,16 @@ DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 ![image](https://user-images.githubusercontent.com/30849720/126856620-abbe8785-2bc6-4d92-b775-ad61def43176.png)
 
 *
+
+[COVID-19 total deaths, Iran, IHME, reference scenario, C O M P A R I S O N of UPDATES 20210715 & 20210723](https://github.com/pourmalek/covir2/blob/main/20210723/output/IHME/graph%20A4%20COVID-19%20total%20deaths%2C%20reference%20scenario%2C%20Iran%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126856658-46c44932-ee39-4334-9fd1-e100793bdaa4.png)
+
+*
+
+[COVID-19 total deaths, Iran, IHME, reference scenario, C O M P A R I S O N of UPDATES 20210715 & 20210723](https://github.com/pourmalek/covir2/blob/main/20210723/output/IHME/graph%20A5%20COVID-19%20total%20infections%2C%20reference%20scenario%2C%20Iran%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/126856677-2c963fe5-de4d-4c4e-befe-d38b17676a1b.png)
 
 
 <br/><br/>
