@@ -8,11 +8,6 @@ DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 
 See code [here](https://github.com/pourmalek/covir2/blob/main/20210723/code/IHME/do%20country%20IHME.do)
 
-<br/><br/>
-
-
-![image](https://user-images.githubusercontent.com/30849720/126908711-828c7492-e182-4b9f-9a89-9688c5211c16.png)
-
 
 <br/><br/>
 
