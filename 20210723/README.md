@@ -4,7 +4,10 @@ DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 
 <br/><br/>
 
-### IHME estimates for Iran in update 20210723 and in update 20210715 are identical, with numerical value difference of zero. 
+### 20210723: IHME estimates for Iran in update 20210723 and in update 20210715 are identical, with numerical value difference of zero. 
+
+### 20210726: IHME estimates for Iran in update 20210723 and in update 20210715 WERE identical UPON FIRST RELEASE OF update 20210723, with numerical value difference of zero. As of 20210726, update 20210723 has been replaced by IHME and is not identical with update 20210715. See [`20210723`](https://github.com/pourmalek/covir2/tree/main/20210723)
+
 
 See code [here](https://github.com/pourmalek/covir2/blob/main/20210723/code/IHME/do%20country%20IHME.do)
 
