@@ -95,8 +95,10 @@ The codes in these repositories can be adapted for use for any country or region
 #### LATEST UPTAKE: uptake [`20210727`](https://github.com/pourmalek/covir2/tree/main/20210727)
  
 #### DELP 20210726, IHME 20210723 version 2, **_IMPE 20210719_**, LANL 20210725, SRIV 20210727
+ 
+  <br/><br/>
 
-:eyes: SEE: [Iran COVID-19 epidemic models situation report No 11 on 14000505 202107027](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2011%20on%2014000505%20202107027.pdf)
+:eyes: **SEE: [Iran COVID-19 epidemic models situation report No 11 on 14000505 202107027](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2011%20on%2014000505%20202107027.pdf)**
 
 ****
 
