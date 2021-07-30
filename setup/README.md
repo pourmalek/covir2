@@ -1,8 +1,13 @@
-## Description of rule for uptakes in this repository, covir2; and repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) and repository [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal)
+## Description of rule for uptakes in this repository, covir2
+
+## and in repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) 
+
+## and in repository [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal)
 
 
+***************
 
-This is description of rule of adding uptakes to covir2 repository, either prospectively, i.e., uptakes with new calendar time dates, or retrospectively, i.e., uptakes with calendar time dates in the past. 
+This is description of rule of adding uptakes to repositories covir2 , [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry), and [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal), either prospectively, i.e., uptakes with new calendar time dates, or retrospectively, i.e., uptakes with calendar time dates in the past. 
 
 Uptake is a term used here to differentiate from updates. Updates belong to models. Uptake belongs to covir2 repository. Updates are released by studies. Uptakes are added to this repository by its creator. 
 
