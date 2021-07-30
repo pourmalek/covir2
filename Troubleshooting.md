@@ -1,5 +1,13 @@
 # Troubleshooting
 
+### for this repository, covir2, and related repositories:
+
+### repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) 
+
+### repository [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal)
+
+**********
+
 
 Once you have started executing the downloaded code that is expected to be located in your local machine's |Downloads|covir2-main|20210405|code|master|do Iran merge.do, `Stata` may return *ERRORs*, or may *RESTART*. The following are among possible causes and treatments. | denotes / or \ for Mac or Windows respectively. 
 <br/><br/>
