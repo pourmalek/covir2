@@ -1,8 +1,8 @@
-## Description of rule for uptakes in this repository, covir2
+## Description of rule for uptakes in this repository, covir2, and related repositories:
 
-## and in repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) 
+## repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) 
 
-## and in repository [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal)
+## repository [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal)
 
 
 ***************
