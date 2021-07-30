@@ -1,7 +1,6 @@
-## Study / model versions, updates, and their uptakes here
+## Description of rule for uptakes in this repository, covir2; and repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) and repository [`CovidVisualizedGlobal`](https://github.com/pourmalek/CovidVisualizedGlobal)
 
 
-### Description of rule for uptakes of covir2
 
 This is description of rule of adding uptakes to covir2 repository, either prospectively, i.e., uptakes with new calendar time dates, or retrospectively, i.e., uptakes with calendar time dates in the past. 
 
