@@ -95,6 +95,8 @@ The codes in these repositories can be adapted for use for any country or region
  
 #### DELP 20210730, **_IHME 20210730_**, IMPE 20210719, LANL 20210725, SRIV 20210730
  
+### Note: IHME update 20210730 is the same as or identical with IHME update 20210727. Therefore, this uptake is redundant until after IHME update 20210730 released on 20210730 is replaced with its version 2 that is not identical with the prvious update relases. 
+ 
  
   <br/><br/>
 
