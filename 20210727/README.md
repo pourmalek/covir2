@@ -7,9 +7,10 @@ IMPE update 20210719 (2021-07-19_v8.csv.zip) released on 20210727.
 
 <br/><br/>
 
+
+As of July 30, 2021, IHME 20210723 version 2 is not accessible. The codes in thie uptake will not work.
+
 ![image](https://user-images.githubusercontent.com/30849720/127723795-90834b8c-7b1b-4b2a-a91a-08a2260ddb9d.png)
-
-
 
 
 <br/><br/>
