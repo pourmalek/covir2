@@ -5,9 +5,9 @@ DELP 20210730, **_IHME 20210730_**, IMPE 20210719, LANL 20210725, SRIV 20210730
 <br/><br/>
 
 
-IHME update 20210730 (original release on 20210730) was identical with prvious update, i.e., update 20210723 version 2.
+IHME update 20210730 (original release on 20210730) was identical with previous update, i.e., update 20210723 version 2.
 
-As of 20210801, the replaced (or version 2) of the IHME update 20210730 has changed and is not identical with the prvious update. 
+As of 20210801, the replaced (or version 2) of the IHME update 20210730 has changed and is not identical with the previous update. 
 
 
 <br/><br/>
