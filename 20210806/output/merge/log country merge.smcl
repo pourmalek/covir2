@@ -1,0 +1,3351 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/log country merge.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Aug 2021, 17:34:43
+{txt}
+{com}. 
+. 
+. ***************************************************************************
+. * This is "do country merge.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Merge component studies' estimates for country, graphs
+. ***************************************************************************
+. 
+. 
+. /* 
+> 
+> List of component studies:
+> 
+> JOHN A00
+> 
+> DELP A01
+> IHME A02
+> IMPE A03
+> LANL A04
+> SRIV A05
+> 
+> */
+. 
+. 
+. 
+. * JOHN
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         use "$pathcovir2/JOHN/country JOHN.dta", clear 
+. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 use "$pathcovir2\JOHN\country JOHN.dta", clear 
+{txt}
+{com}. 
+. 
+. 
+. * DELP 
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         merge 1:1 date using "$pathcovir2/DELP/country DELP.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             557
+{txt}{col 9}from master{col 30}{res}             486{txt}  (_merge==1)
+{col 9}from using{col 30}{res}              71{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              97{txt}  (_merge==3)
+{col 5}{hline 41}
+{com}. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\DELP\country DELP.dta"
+{txt}
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. 
+. * IHME
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         merge 1:1 date using "$pathcovir2/IHME/country IHME.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              51
+{txt}{col 9}from master{col 30}{res}              34{txt}  (_merge==1)
+{col 9}from using{col 30}{res}              17{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             620{txt}  (_merge==3)
+{col 5}{hline 41}
+{com}. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IHME\country IHME.dta"
+{txt}
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. 
+. * IMPE
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         merge 1:1 date using "$pathcovir2/IMPE/country IMPE.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              16
+{txt}{col 9}from master{col 30}{res}              16{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             655{txt}  (_merge==3)
+{col 5}{hline 41}
+{com}. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IMPE\country IMPE.dta"
+{txt}
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. 
+. * LANL
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         merge 1:1 date using "$pathcovir2/LANL/country LANL.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}              65
+{txt}{col 9}from master{col 30}{res}              65{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             606{txt}  (_merge==3)
+{col 5}{hline 41}
+{com}. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\LANL\country LANL.dta"
+{txt}
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. * SRIV
+. 
+. 
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         merge 1:1 date using "$pathcovir2/SRIV/country SRIV.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             584
+{txt}{col 9}from master{col 30}{res}             577{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               7{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              94{txt}  (_merge==3)
+{col 5}{hline 41}
+{com}. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\SRIV\country SRIV.dta"
+{txt}
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. 
+. 
+. * 
+. 
+. label var loc_grand_name "Location"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. *************************************
+. 
+. 
+. * cases or infections to deaths ratio
+. 
+. 
+. gen DayCTDMeRaA00S00 =  DayCasMeRaA00S00 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayCTDMeRaA00S00  "Daily Cases to Deaths S0 JOHN"
+{txt}
+{com}. 
+. gen TotCTDMeRaA00S00 =  TotCasMeRaA00S00 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotCTDMeRaA00S00  "Total Cases to Deaths S0 JOHN"
+{txt}
+{com}. 
+. 
+. 
+. 
+. gen DayCTDMeRaA01S00 =  DayCasMeRaA01S00 / DayDeaMeRaA01S00
+{txt}(511 missing values generated)
+
+{com}. 
+. label var DayCTDMeRaA01S00  "Daily Cases to Deaths S0 DELP"
+{txt}
+{com}. 
+. gen TotCTDMeRaA01S00 =  TotCasMeRaA01S00 / TotDeaMeRaA01S00
+{txt}(510 missing values generated)
+
+{com}. 
+. label var TotCTDMeRaA01S00  "Total Cases to Deaths S0 DELP"  
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. gen DayITDMeRaA02S01  =  DayINFMeRaA02S01  / DayDeaMeRaA02S01 
+{txt}(57 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA02S01   "Daily Infections to Deaths S1 IHME"
+{txt}
+{com}. 
+. gen TotITDMeRaA02S01  =  TotINFMeRaA02S01  / TotDeaMeRaA02S01 
+{txt}(56 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA02S01   "Total Infections to Deaths S1 IHME"
+{txt}
+{com}. 
+. 
+. 
+. 
+. gen DayITDMeRaA02S02 = DayINFMeRaA02S02 / DayDeaMeRaA02S02  
+{txt}(561 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA02S02 "Daily Infections to Deaths S2 IHME"
+{txt}
+{com}. 
+. gen TotITDMeRaA02S02 = TotINFMeRaA02S02 / TotDeaMeRaA02S02  
+{txt}(678 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA02S02 "Total Infections to Deaths S2 IHME"
+{txt}
+{com}. 
+. 
+. 
+. 
+. gen DayITDMeRaA02S03  = DayINFMeRaA02S03  / DayDeaMeRaA02S03   
+{txt}(561 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA02S03  "Daily Infections to Deaths S3 IHME"
+{txt}
+{com}. 
+. gen TotITDMeRaA02S03  = TotINFMeRaA02S03  / TotDeaMeRaA02S03   
+{txt}(678 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA02S03  "Total Infections to Deaths S3 IHME"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. gen DayITDMeRaA03S01  = DayINFMeRaA03S01  / DayDeaMeRaA03S01   
+{txt}(39 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA03S01  "Daily Infections to Deaths S1 IMPE"
+{txt}
+{com}. 
+. gen TotITDMeRaA03S01  = TotINFMeRaA03S01  / TotDeaMeRaA03S01   
+{txt}(35 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA03S01  "Total Infections to Deaths S1 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen DayITDMeRaA03S02  = DayINFMeRaA03S02  / DayDeaMeRaA03S02   
+{txt}(39 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA03S02  "Daily Infections to Deaths S2 IMPE"
+{txt}
+{com}. 
+. gen TotITDMeRaA03S02  = TotINFMeRaA03S02  / TotDeaMeRaA03S02   
+{txt}(35 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA03S02  "Total Infections to Deaths S2 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen DayITDMeRaA03S03  = DayINFMeRaA03S03  / DayDeaMeRaA03S03   
+{txt}(39 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA03S03  "Daily Infections to Deaths S3 IMPE"
+{txt}
+{com}. 
+. gen TotITDMeRaA03S03  = TotINFMeRaA03S03  / TotDeaMeRaA03S03   
+{txt}(35 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA03S03  "Total Infections to Deaths S3 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. gen DayCTDMeRaA04S00  = DayCasMeRaA04S00  / DayDeaMeRaA04S00   
+{txt}(101 missing values generated)
+
+{com}. 
+. label var DayCTDMeRaA04S00  "Daily Cases to Deaths S0 LANL"
+{txt}
+{com}. 
+. gen TotCTDMeRaA04S00  = TotCasMeRaA04S00  / TotDeaMeRaA04S00   
+{txt}(100 missing values generated)
+
+{com}. 
+. label var TotCTDMeRaA04S00  "Total Cases to Deaths S0 LANL"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. gen DayCTDMeRaA05S00  = DayCasMeRaA05S00  / DayDeaMeRaA05S00   
+{txt}(578 missing values generated)
+
+{com}. 
+. label var DayCTDMeRaA05S00  "Daily Cases to Deaths S0 SRIV"
+{txt}
+{com}. 
+. gen TotCTDMeRaA05S00  = TotCasMeRaA05S00  / TotDeaMeRaA05S00   
+{txt}(577 missing values generated)
+
+{com}. 
+. label var TotCTDMeRaA05S00  "Total Cases to Deaths S0 SRIV"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ***********************
+. 
+. * daily deaths estimated to reported  
+. 
+.     
+. gen DayDERMeRaA00S00 = DayDeaMeRaA00S00 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA00S00 "Daily Deaths estim to reported JOHN = 1" 
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA01S00 = DayDeaMeRaA01S00 / DayDeaMeRaA00S00
+{txt}(582 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA01S00 "Daily Deaths estim to reported Mean DELP S0"
+{txt}
+{com}. 
+. 
+. 
+. 
+. gen DayDERMeRaA02S01 = DayDeaMeRaA02S01 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA02S01 "Daily Deaths estim to reported Mean not smoothed IHME S1"
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA02S02 = DayDeaMeRaA02S02 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHME S2"
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA02S03 = DayDeaMeRaA02S03 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA02S03 "Daily Deaths estim to reported Mean not smoothed IHME S3"
+{txt}
+{com}. 
+. 
+. 
+. gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA03S02 = DayDeaMeRaA03S02 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen DayDERMeRaA04S00 = DayDeaMeRaA04S00 / DayDeaMeRaA00S00
+{txt}(145 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA04S00 "Daily Deaths estim to reported to Deaths S0 LANL"
+{txt}
+{com}. 
+. 
+. 
+. gen DayDERMeRaA05S00  = DayDeaMeRaA05S00 / DayDeaMeRaA00S00
+{txt}(673 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA05S00 "Daily Deaths estim to reported S0 SRIV"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * daily cases or infections estimated to reported  
+. 
+. 
+. gen DayCERMeRaA00S00 = DayCasMeRaA00S00 / DayCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var DayCERMeRaA00S00 "Daily Cases estim to reported JOHN = 1" 
+{txt}
+{com}. 
+. 
+. 
+. gen DayCERMeRaA01S00 = DayCasMeRaA01S00 / DayCasMeRaA00S00
+{txt}(582 missing values generated)
+
+{com}. 
+. label var DayCERMeRaA01S00 "Daily Cases estim to reported Mean DELP S0"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. gen DayIERMeRaA02S01 = DayINFMeRaA02S01 / DayCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA02S01 "Daily Infections estim to reported Mean not smoothed IHME S1"
+{txt}
+{com}. 
+. 
+. gen DayIERMeRaA02S02 = DayINFMeRaA02S02 / DayCasMeRaA00S00
+{txt}(649 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
+{txt}
+{com}. 
+. 
+. gen DayIERMeRaA02S03 = DayINFMeRaA02S03 / DayCasMeRaA00S00
+{txt}(649 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA02S03 "Daily Infections estim to reported Mean not smoothed IHME S3"
+{txt}
+{com}. 
+. 
+. 
+. gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayIERMeRaA03S02 = DayINFMeRaA03S02 / DayCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen DayCERMeRaA04S00 = DayCasMeRaA04S00 / DayCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var DayCERMeRaA04S00 "Daily Cases estim to reported to Cases S0 LANL"
+{txt}
+{com}. 
+. 
+. 
+. gen DayCERMeRaA05S00  = DayCasMeRaA05S00 / DayCasMeRaA00S00
+{txt}(673 missing values generated)
+
+{com}. 
+. label var DayCERMeRaA05S00 "Daily Cases estim to reported S0 SRIV"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * Total deaths estimated to reported  
+. 
+. 
+. gen TotDERMeRaA00S00 = TotDeaMeRaA00S00 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA00S00 "Total Deaths estim to reported JOHN = 1" 
+{txt}
+{com}. 
+. 
+. 
+. gen TotDERMeRaA01S00 = TotDeaMeRaA01S00 / TotDeaMeRaA00S00
+{txt}(581 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA01S00 "Total Deaths estim to reported Mean DELP S0"
+{txt}
+{com}. 
+. 
+. 
+. gen TotDERMeRaA02S01 = TotDeaMeRaA02S01 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA02S01 "Total Deaths estim to reported Mean not smoothed IHME S1"
+{txt}
+{com}. 
+. 
+. gen TotDERMeRaA02S02 = TotDeaMeRaA02S02 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHME S2"
+{txt}
+{com}. 
+. 
+. gen TotDERMeRaA02S03 = TotDeaMeRaA02S03 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA02S03 "Total Deaths estim to reported Mean not smoothed IHME S3"
+{txt}
+{com}. 
+. 
+. 
+. gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotDERMeRaA03S02 = TotDeaMeRaA03S02 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen TotDERMeRaA04S00 = TotDeaMeRaA04S00 / TotDeaMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA04S00 "Total Deaths estim to reported to Deaths S0 LANL"
+{txt}
+{com}. 
+. 
+. 
+. gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00S00
+{txt}(672 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * Total cases or infections estimated to reported  
+. 
+. 
+. gen TotCERMeRaA00S00 = TotCasMeRaA00S00 / TotCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotCERMeRaA00S00 "Total Cases estim to reported JOHN = 1" 
+{txt}
+{com}. 
+. 
+. gen TotCERMeRaA01S00 = TotCasMeRaA01S00 / TotCasMeRaA00S00
+{txt}(581 missing values generated)
+
+{com}. 
+. label var TotCERMeRaA01S00 "Total Cases estim to reported Mean DELP S0"
+{txt}
+{com}. 
+. 
+. 
+. gen TotIERMeRaA02S01 = TotINFMeRaA02S01 / TotCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA02S01 "Total Infections estim to reported Mean not smoothed IHME S1"
+{txt}
+{com}. 
+. 
+. gen TotIERMeRaA02S02 = TotINFMeRaA02S02 / TotCasMeRaA00S00
+{txt}(678 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed IHME S2"
+{txt}
+{com}. 
+. 
+. gen TotIERMeRaA02S03 = TotINFMeRaA02S03 / TotCasMeRaA00S00
+{txt}(678 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA02S03 "Total Infections estim to reported Mean not smoothed IHME S3"
+{txt}
+{com}. 
+. 
+. 
+. gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotIERMeRaA03S02 = TotINFMeRaA03S02 / TotCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen TotCERMeRaA04S00 = TotCasMeRaA04S00 / TotCasMeRaA00S00
+{txt}(144 missing values generated)
+
+{com}. 
+. label var TotCERMeRaA04S00 "Total Cases estim to reported to Cases S0 LANL"
+{txt}
+{com}. 
+. 
+. 
+. gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00S00
+{txt}(672 missing values generated)
+
+{com}. 
+. label var TotCERMeRaA05S00 "Total Cases estim to reported S0 SRIV"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. *
+. 
+. di in red "********* Description of vars in final combined file country.dta *********" 
+{res}{err}********* Description of vars in final combined file country.dta *********
+{txt}
+{com}. 
+. 
+. desc, fullnames
+
+{txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20210806/code/JOHN/country JOHN.dta
+{txt}  obs:{res}           678                          
+{txt} vars:{res}           488                          6 Aug 2021 17:28
+{txt} size:{res}     1,316,676                          
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:date           }{txt}{bind: int     }{bind:{txt}%td..     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:loc_grand_name }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}Location{p_end}
+{p 0 48}DayDeaMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths JOHN{p_end}
+{p 0 48}TotDeaMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%10.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths JOHN{p_end}
+{p 0 48}DayDeaMeRaA00S00_CF2{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths JOHN correction factor 2{p_end}
+{p 0 48}DayDeaMeRaA00S00_CF5{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths JOHN correction factor 5{p_end}
+{p 0 48}TotDeaMeRaA00S00_CF2{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths JOHN correction factor 2{p_end}
+{p 0 48}TotDeaMeRaA00S00_CF5{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths JOHN correction factor 5{p_end}
+{p 0 48}DayCasMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases JOHN{p_end}
+{p 0 48}TotCasMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%10.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases JOHN{p_end}
+{p 0 48}DayCasMeRaA00S00_CF2{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases JOHN correction factor 2{p_end}
+{p 0 48}DayCasMeRaA00S00_CF5{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases JOHN correction factor 5{p_end}
+{p 0 48}TotCasMeRaA00S00_CF2{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases JOHN correction factor 2{p_end}
+{p 0 48}TotCasMeRaA00S00_CF5{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases JOHN correction factor 5{p_end}
+{p 0 48}TotRecMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%10.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total RECovered JOHN{p_end}
+{p 0 48}DayRecMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily RECovered JOHN{p_end}
+{p 0 48}DayCfrMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR JOHN{p_end}
+{p 0 48}DayActMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Active JOHN{p_end}
+{p 0 48}DayDeaMeSmA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths smooth A00 JOHN{p_end}
+{p 0 48}DayCasMeSmA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases smooth A00 JOHN{p_end}
+{p 0 48}DayDeMMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean JOHN DayDeM{p_end}
+{p 0 48}DayCaMMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean JOHN DayCaM{p_end}
+{p 0 48}DayCbDMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean div by daily deaths mean JOHN DayCbD{p_end}
+{p 0 48}DayDeaMeRaA00multip{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of cases by deaths) only for visualization JOHN{p_end}
+{p 0 48}TotDeaMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean DELP S0{p_end}
+{p 0 48}TotDeaLoRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower DELP S0{p_end}
+{p 0 48}TotDeaUpRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper DELP S0{p_end}
+{p 0 48}DayDeaMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean DELP S0{p_end}
+{p 0 48}DayDeaLoRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower DELP S0{p_end}
+{p 0 48}DayDeaUpRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper DELP S0{p_end}
+{p 0 48}TotCasMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Mean DELP S0{p_end}
+{p 0 48}TotCasLoRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Lower DELP S0{p_end}
+{p 0 48}TotCasUpRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Upper DELP S0{p_end}
+{p 0 48}DayCasMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Mean DELP S0{p_end}
+{p 0 48}DayCasLoRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Lower DELP S0{p_end}
+{p 0 48}DayCasUpRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Upper DELP S0{p_end}
+{p 0 48}DayActMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Active Mean DELP S0{p_end}
+{p 0 48}DayHosMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Active Hospitalized Mean DELP S0{p_end}
+{p 0 48}DayVenMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Active Ventilated Mean DELP S0{p_end}
+{p 0 48}TotHosMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Active Mean DELP S0{p_end}
+{p 0 48}DayCfrMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Mean DELP S0 V4{p_end}
+{p 0 48}DayCfrLoRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Lower DELP S0 V4{p_end}
+{p 0 48}DayCfrUpRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Upper DELP S0 V4{p_end}
+{p 0 48}DayDeMMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean DELP DayDeM{p_end}
+{p 0 48}DayCaMMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean DELP DayCaM{p_end}
+{p 0 48}DayCbDMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean div by daily deaths mean DELP DayCbD{p_end}
+{p 0 48}DayDMuMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of cases by deaths) only for visualization DELP{p_end}
+{p 0 48}DayBedMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Beds needed Mean IHME S1{p_end}
+{p 0 48}DayBedUpSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Beds needed Upper IHME S1{p_end}
+{p 0 48}DayBedLoSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Beds needed Lower IHME S1{p_end}
+{p 0 48}DayIcuMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU beds needed Mean IHME S1{p_end}
+{p 0 48}DayIcuUpSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU beds needed Upper IHME S1{p_end}
+{p 0 48}DayIcuLoSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU beds needed Lower IHME S1{p_end}
+{p 0 48}DayAdmMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital admissions Mean IHME S1{p_end}
+{p 0 48}DayAdmUpSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital admissions Upper IHME S1{p_end}
+{p 0 48}DayAdmLoSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital admissions Lower IHME S1{p_end}
+{p 0 48}DayIcnMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily new people going to ICU Mean IHME S1{p_end}
+{p 0 48}DayIcnUpSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily new people going to ICU Upper IHME S1{p_end}
+{p 0 48}DayIcnLoSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily new people going to ICU Lower IHME S1{p_end}
+{p 0 48}DayDeaMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean not smoothed IHME S1{p_end}
+{p 0 48}DayDeaLoRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower not smoothed IHME S1{p_end}
+{p 0 48}DayDeaUpRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper not smoothed IHME S1{p_end}
+{p 0 48}TotDeaMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean not smoothed IHME S1{p_end}
+{p 0 48}TotDeaLoRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower not smoothed IHME S1{p_end}
+{p 0 48}TotDeaUpRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper not smoothed IHME S1{p_end}
+{p 0 48}DayDeaMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean smoothed IHME S1{p_end}
+{p 0 48}DayDeaLoSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower smoothed IHME S1{p_end}
+{p 0 48}DayDeaUpSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper smoothed IHME S1{p_end}
+{p 0 48}TotDeaMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean smoothed IHME S1{p_end}
+{p 0 48}TotDeaLoSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower smoothed IHME S1{p_end}
+{p 0 48}TotDeaUpSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper smoothed IHME S1{p_end}
+{p 0 48}deaths_reported_mean{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_lower{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_upper{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_mean{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_lower{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_upper{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_mean_smoothed{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_lower_smoothed{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_upper_smoothed{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_mean_smoothed{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_lower_smoothed{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_upper_smoothed{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}mobility_composite{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}TotTesMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Tests Mean IHME S1{p_end}
+{p 0 48}DayINFMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean not smoothed IHME S1{p_end}
+{p 0 48}DayINFLoRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower not smoothed IHME S1{p_end}
+{p 0 48}DayINFUpRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper not smoothed IHME S1{p_end}
+{p 0 48}TotINFMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean not smoothed IHME S1{p_end}
+{p 0 48}TotINFUpRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper not smoothed IHME S1{p_end}
+{p 0 48}TotINFLoRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower not smoothed IHME S1{p_end}
+{p 0 48}DayDeaMeRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean not smoothed IHME S2{p_end}
+{p 0 48}DayDeaLoRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower not smoothed IHME S2{p_end}
+{p 0 48}DayDeaUpRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper not smoothed IHME S2{p_end}
+{p 0 48}TotDeaMeRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean not smoothed IHME S2{p_end}
+{p 0 48}TotDeaLoRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower not smoothed IHME S2{p_end}
+{p 0 48}TotDeaUpRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper not smoothed IHME S2{p_end}
+{p 0 48}DayDeaMeSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean smoothed IHME S2{p_end}
+{p 0 48}DayDeaLoSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower smoothed IHME S2{p_end}
+{p 0 48}DayDeaUpSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper smoothed IHME S2{p_end}
+{p 0 48}TotDeaMeSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean smoothed IHME S2{p_end}
+{p 0 48}TotDeaLoSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower smoothed IHME S2{p_end}
+{p 0 48}TotDeaUpSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper smoothed IHME S2{p_end}
+{p 0 48}TotTesMeSmA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Tests Mean IHME S2{p_end}
+{p 0 48}DayINFMeRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean not smoothed IHME S2{p_end}
+{p 0 48}DayINFLoRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower not smoothed IHME S2{p_end}
+{p 0 48}DayINFUpRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper not smoothed IHME S2{p_end}
+{p 0 48}TotINFMeRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean not smoothed IHME S2{p_end}
+{p 0 48}TotINFUpRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper not smoothed IHME S2{p_end}
+{p 0 48}TotINFLoRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower not smoothed IHME S2{p_end}
+{p 0 48}DayDeaMeRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean not smoothed IHME S3{p_end}
+{p 0 48}DayDeaLoRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower not smoothed IHME S3{p_end}
+{p 0 48}DayDeaUpRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper not smoothed IHME S3{p_end}
+{p 0 48}TotDeaMeRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean not smoothed IHME S3{p_end}
+{p 0 48}TotDeaLoRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower not smoothed IHME S3{p_end}
+{p 0 48}TotDeaUpRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper not smoothed IHME S3{p_end}
+{p 0 48}DayDeaMeSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean smoothed IHME S3{p_end}
+{p 0 48}DayDeaLoSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower smoothed IHME S3{p_end}
+{p 0 48}DayDeaUpSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper smoothed IHME S3{p_end}
+{p 0 48}TotDeaMeSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean smoothed IHME S3{p_end}
+{p 0 48}TotDeaLoSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower smoothed IHME S3{p_end}
+{p 0 48}TotDeaUpSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper smoothed IHME S3{p_end}
+{p 0 48}TotTesMeSmA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Tests Mean IHME S3{p_end}
+{p 0 48}DayINFMeRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean not smoothed IHME S3{p_end}
+{p 0 48}DayINFLoRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower not smoothed IHME S3{p_end}
+{p 0 48}DayINFUpRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper not smoothed IHME S3{p_end}
+{p 0 48}TotINFMeRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean not smoothed IHME S3{p_end}
+{p 0 48}TotINFUpRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper not smoothed IHME S3{p_end}
+{p 0 48}TotINFLoRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower not smoothed IHME S3{p_end}
+{p 0 48}deaths_mean_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean raw per 100k rate IHME{p_end}
+{p 0 48}deaths_lower_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths lower raw per 100k rate IHME{p_end}
+{p 0 48}deaths_upper_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths upper raw per 100k rate IHME{p_end}
+{p 0 48}totdea_mean_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths mean per raw 100k rate IHME{p_end}
+{p 0 48}totdea_lower_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths mean per raw 100k rate IHME{p_end}
+{p 0 48}totdea_upper_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths upper per raw 100k rate IHME{p_end}
+{p 0 48}deaths_mean_smoothed_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean smoothed per 100k rate IHME{p_end}
+{p 0 48}deaths_lower_smoothed_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths lower smoothed per 100k rate IHME{p_end}
+{p 0 48}deaths_upper_smoothed_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths upper smoothed per 100k rate IHME{p_end}
+{p 0 48}totdea_mean_smoothed_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths mean smoothed per 100k rate IHME{p_end}
+{p 0 48}totdea_lower_smoothed_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths lower smoothed per 100k rate IHME{p_end}
+{p 0 48}totdea_upper_smoothed_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths upper smoothed per 100k rate IHME{p_end}
+{p 0 48}deaths_reported_mean_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_lower_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_upper_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_mean_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_lower_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}totdea_reported_upper_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}deaths_reported_mean_smoothed_p1{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}deaths_reported_mean_smoothed_p100k_rate{p_end}
+{p 0 48}deaths_reported_lower_smoothed_p{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}deaths_reported_lower_smoothed_p100k_rate{p_end}
+{p 0 48}deaths_reported_upper_smoothed_p{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}deaths_reported_upper_smoothed_p100k_rate{p_end}
+{p 0 48}totdea_reported_mean_smoothed_p1{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}totdea_reported_mean_smoothed_p100k_rate{p_end}
+{p 0 48}totdea_reported_lower_smoothed_p{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}totdea_reported_lower_smoothed_p100k_rate{p_end}
+{p 0 48}totdea_reported_upper_smoothed_p{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}totdea_reported_upper_smoothed_p100k_rate{p_end}
+{p 0 48}confirmed_infections_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}confirmed infections per 100k rate IHME{p_end}
+{p 0 48}est_infections_mean_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}estimated infections mean per 100k rate IHME{p_end}
+{p 0 48}est_infections_lower_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}estimated infections lower per 100k rate IHME{p_end}
+{p 0 48}est_infections_upper_p100k_rate{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}estimated infections upper per 100k rate IHME{p_end}
+{p 0 48}DayIFRMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean Raw IHME S1{p_end}
+{p 0 48}DayIFRLoRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower Raw IHME S1{p_end}
+{p 0 48}DayIFRUpRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper Raw IHME S1{p_end}
+{p 0 48}DayIFRMeRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean Raw IHME S2{p_end}
+{p 0 48}DayIFRLoRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower Raw IHME S2{p_end}
+{p 0 48}DayIFRUpRaA02S02V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper Raw IHME S2{p_end}
+{p 0 48}DayIFRMeRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean Raw IHME S3{p_end}
+{p 0 48}DayIFRLoRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower Raw IHME S3{p_end}
+{p 0 48}DayIFRUpRaA02S03V04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper Raw IHME S3{p_end}
+{p 0 48}DayDeMMeSmA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean IHME DayDeM{p_end}
+{p 0 48}DayCaMMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean IHME DayCaM{p_end}
+{p 0 48}DayIbDMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean div by daily deaths mean IHME DayIbD{p_end}
+{p 0 48}DayDMuMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of infections by deaths) IHME{p_end}
+{p 0 48}TotDeaMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S01 {p_end}
+{p 0 48}TotDeaLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S01 {p_end}
+{p 0 48}TotDeaUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S01 {p_end}
+{p 0 48}TotDeaMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S02 {p_end}
+{p 0 48}TotDeaLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S02 {p_end}
+{p 0 48}TotDeaUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S02 {p_end}
+{p 0 48}TotDeaMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S03 {p_end}
+{p 0 48}TotDeaLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S03 {p_end}
+{p 0 48}TotDeaUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S03 {p_end}
+{p 0 48}TotDeaMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S04 {p_end}
+{p 0 48}TotDeaLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S04 {p_end}
+{p 0 48}TotDeaUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S04 {p_end}
+{p 0 48}TotDeaMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S05 {p_end}
+{p 0 48}TotDeaLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S05 {p_end}
+{p 0 48}TotDeaUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S05 {p_end}
+{p 0 48}TotDeaMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S06 {p_end}
+{p 0 48}TotDeaLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S06 {p_end}
+{p 0 48}TotDeaUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S06 {p_end}
+{p 0 48}DayDeaMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S01 {p_end}
+{p 0 48}DayDeaLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S01 {p_end}
+{p 0 48}DayDeaUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S01 {p_end}
+{p 0 48}DayDeaMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S02 {p_end}
+{p 0 48}DayDeaLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S02 {p_end}
+{p 0 48}DayDeaUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S02 {p_end}
+{p 0 48}DayDeaMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S03 {p_end}
+{p 0 48}DayDeaLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S03 {p_end}
+{p 0 48}DayDeaUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S03 {p_end}
+{p 0 48}DayDeaMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S04 {p_end}
+{p 0 48}DayDeaLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S04 {p_end}
+{p 0 48}DayDeaUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S04 {p_end}
+{p 0 48}DayDeaMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S05 {p_end}
+{p 0 48}DayDeaLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S05 {p_end}
+{p 0 48}DayDeaUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S05 {p_end}
+{p 0 48}DayDeaMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S06 {p_end}
+{p 0 48}DayDeaLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S06 {p_end}
+{p 0 48}DayDeaUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S06 {p_end}
+{p 0 48}TotINFMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S01 {p_end}
+{p 0 48}TotINFLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S01 {p_end}
+{p 0 48}TotINFUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S01 {p_end}
+{p 0 48}TotINFMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S02 {p_end}
+{p 0 48}TotINFLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S02 {p_end}
+{p 0 48}TotINFUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S02 {p_end}
+{p 0 48}TotINFMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S03 {p_end}
+{p 0 48}TotINFLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S03 {p_end}
+{p 0 48}TotINFUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S03 {p_end}
+{p 0 48}TotINFMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S04 {p_end}
+{p 0 48}TotINFLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S04 {p_end}
+{p 0 48}TotINFUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S04 {p_end}
+{p 0 48}TotINFMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S05 {p_end}
+{p 0 48}TotINFLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S05 {p_end}
+{p 0 48}TotINFUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S05 {p_end}
+{p 0 48}TotINFMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S06 {p_end}
+{p 0 48}TotINFLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S06 {p_end}
+{p 0 48}TotINFUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S06 {p_end}
+{p 0 48}DayINFMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S01 {p_end}
+{p 0 48}DayINFLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S01 {p_end}
+{p 0 48}DayINFUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S01 {p_end}
+{p 0 48}DayINFMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S02 {p_end}
+{p 0 48}DayINFLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S02 {p_end}
+{p 0 48}DayINFUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S02 {p_end}
+{p 0 48}DayINFMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S03 {p_end}
+{p 0 48}DayINFLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S03 {p_end}
+{p 0 48}DayINFUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S03 {p_end}
+{p 0 48}DayINFMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S04 {p_end}
+{p 0 48}DayINFLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S04 {p_end}
+{p 0 48}DayINFUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S04 {p_end}
+{p 0 48}DayINFMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S05 {p_end}
+{p 0 48}DayINFLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S05 {p_end}
+{p 0 48}DayINFUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S05 {p_end}
+{p 0 48}DayINFMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S06 {p_end}
+{p 0 48}DayINFLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S06 {p_end}
+{p 0 48}DayINFUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S06 {p_end}
+{p 0 48}DayHodLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S01 {p_end}
+{p 0 48}DayHodMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S01 {p_end}
+{p 0 48}DayHodUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S01 {p_end}
+{p 0 48}DayHodLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S02 {p_end}
+{p 0 48}DayHodMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S02 {p_end}
+{p 0 48}DayHodUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S02 {p_end}
+{p 0 48}DayHodLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S03 {p_end}
+{p 0 48}DayHodMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S03 {p_end}
+{p 0 48}DayHodUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S03 {p_end}
+{p 0 48}DayHodLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S04 {p_end}
+{p 0 48}DayHodMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S04 {p_end}
+{p 0 48}DayHodUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S04 {p_end}
+{p 0 48}DayHodLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S05 {p_end}
+{p 0 48}DayHodMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S05 {p_end}
+{p 0 48}DayHodUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S05 {p_end}
+{p 0 48}DayHodLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S06 {p_end}
+{p 0 48}DayHodMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S06 {p_end}
+{p 0 48}DayHodUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S06 {p_end}
+{p 0 48}DayHoiLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_025_S1{p_end}
+{p 0 48}DayHoiMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_mea_S1{p_end}
+{p 0 48}DayHoiUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_975_S1{p_end}
+{p 0 48}DayHoiLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_025_S2{p_end}
+{p 0 48}DayHoiMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_mea_S2{p_end}
+{p 0 48}DayHoiUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_975_S2{p_end}
+{p 0 48}DayHoiLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_025_S3{p_end}
+{p 0 48}DayHoiMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_mea_S3{p_end}
+{p 0 48}DayHoiUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_975_S3{p_end}
+{p 0 48}DayHoiLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_025_S4{p_end}
+{p 0 48}DayHoiMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_mea_S4{p_end}
+{p 0 48}DayHoiUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_975_S4{p_end}
+{p 0 48}DayHoiLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_025_S5{p_end}
+{p 0 48}DayHoiMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_mea_S5{p_end}
+{p 0 48}DayHoiUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_975_S5{p_end}
+{p 0 48}DayHoiLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_025_S6{p_end}
+{p 0 48}DayHoiMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_mea_S6{p_end}
+{p 0 48}DayHoiUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}hospi_incid_y_975_S6{p_end}
+{p 0 48}DayIcdLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S01 {p_end}
+{p 0 48}DayIcdMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S01 {p_end}
+{p 0 48}DayIcdUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S01 {p_end}
+{p 0 48}DayIcdLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S02 {p_end}
+{p 0 48}DayIcdMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S02 {p_end}
+{p 0 48}DayIcdUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S02 {p_end}
+{p 0 48}DayIcdLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S03 {p_end}
+{p 0 48}DayIcdMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S03 {p_end}
+{p 0 48}DayIcdUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S03 {p_end}
+{p 0 48}DayIcdLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S04 {p_end}
+{p 0 48}DayIcdMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S04 {p_end}
+{p 0 48}DayIcdUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S04 {p_end}
+{p 0 48}DayIcdLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S05 {p_end}
+{p 0 48}DayIcdMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S05 {p_end}
+{p 0 48}DayIcdUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S05 {p_end}
+{p 0 48}DayIcdLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S06 {p_end}
+{p 0 48}DayIcdMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S06 {p_end}
+{p 0 48}DayIcdUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S06 {p_end}
+{p 0 48}DayIciLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_025_S1{p_end}
+{p 0 48}DayIciMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_mea_S1{p_end}
+{p 0 48}DayIciUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_975_S1{p_end}
+{p 0 48}DayIciLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_025_S2{p_end}
+{p 0 48}DayIciMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_mea_S2{p_end}
+{p 0 48}DayIciUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_975_S2{p_end}
+{p 0 48}DayIciLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_025_S3{p_end}
+{p 0 48}DayIciMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_mea_S3{p_end}
+{p 0 48}DayIciUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_975_S3{p_end}
+{p 0 48}DayIciLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_025_S4{p_end}
+{p 0 48}DayIciMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_mea_S4{p_end}
+{p 0 48}DayIciUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_975_S4{p_end}
+{p 0 48}DayIciLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_025_S5{p_end}
+{p 0 48}DayIciMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_mea_S5{p_end}
+{p 0 48}DayIciUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_975_S5{p_end}
+{p 0 48}DayIciLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_025_S6{p_end}
+{p 0 48}DayIciMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_mea_S6{p_end}
+{p 0 48}DayIciUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}icu___incid_y_975_S6{p_end}
+{p 0 48}DayPreLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S01 {p_end}
+{p 0 48}DayPreMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S01 {p_end}
+{p 0 48}DayPreUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S01 {p_end}
+{p 0 48}DayPreLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S02 {p_end}
+{p 0 48}DayPreMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S02 {p_end}
+{p 0 48}DayPreUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S02 {p_end}
+{p 0 48}DayPreLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S03 {p_end}
+{p 0 48}DayPreMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S03 {p_end}
+{p 0 48}DayPreUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S03 {p_end}
+{p 0 48}DayPreLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S04 {p_end}
+{p 0 48}DayPreMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S04 {p_end}
+{p 0 48}DayPreUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S04 {p_end}
+{p 0 48}DayPreLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S05 {p_end}
+{p 0 48}DayPreMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S05 {p_end}
+{p 0 48}DayPreUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S05 {p_end}
+{p 0 48}DayPreLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S06 {p_end}
+{p 0 48}DayPreMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S06 {p_end}
+{p 0 48}DayPreUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S06 {p_end}
+{p 0 48}DayRefLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S01 {p_end}
+{p 0 48}DayRefMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S01 {p_end}
+{p 0 48}DayRefUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S01 {p_end}
+{p 0 48}DayRefLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S02 {p_end}
+{p 0 48}DayRefMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S02 {p_end}
+{p 0 48}DayRefUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S02 {p_end}
+{p 0 48}DayRefLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S03 {p_end}
+{p 0 48}DayRefMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S03 {p_end}
+{p 0 48}DayRefUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S03 {p_end}
+{p 0 48}DayRefLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S04 {p_end}
+{p 0 48}DayRefMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S04 {p_end}
+{p 0 48}DayRefUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S04 {p_end}
+{p 0 48}DayRefLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S05 {p_end}
+{p 0 48}DayRefMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S05 {p_end}
+{p 0 48}DayRefUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S05 {p_end}
+{p 0 48}DayRefLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S06 {p_end}
+{p 0 48}DayRefMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S06 {p_end}
+{p 0 48}DayRefUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S06 {p_end}
+{p 0 48}DayRttLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S01 {p_end}
+{p 0 48}DayRttMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S01 {p_end}
+{p 0 48}DayRttUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S01 {p_end}
+{p 0 48}DayRttLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S02 {p_end}
+{p 0 48}DayRttMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S02 {p_end}
+{p 0 48}DayRttUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S02 {p_end}
+{p 0 48}DayRttLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S03 {p_end}
+{p 0 48}DayRttMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S03 {p_end}
+{p 0 48}DayRttUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S03 {p_end}
+{p 0 48}DayRttLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S04 {p_end}
+{p 0 48}DayRttMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S04 {p_end}
+{p 0 48}DayRttUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S04 {p_end}
+{p 0 48}DayRttLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S05 {p_end}
+{p 0 48}DayRttMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S05 {p_end}
+{p 0 48}DayRttUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S05 {p_end}
+{p 0 48}DayRttLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S06 {p_end}
+{p 0 48}DayRttMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S06 {p_end}
+{p 0 48}DayRttUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S06 {p_end}
+{p 0 48}DayIFRMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S01 {p_end}
+{p 0 48}DayIFRLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S01 {p_end}
+{p 0 48}DayIFRUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S01 {p_end}
+{p 0 48}DayIFRMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S02 {p_end}
+{p 0 48}DayIFRLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S02 {p_end}
+{p 0 48}DayIFRUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S02 {p_end}
+{p 0 48}DayIFRMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S03 {p_end}
+{p 0 48}DayIFRLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S03 {p_end}
+{p 0 48}DayIFRUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S03 {p_end}
+{p 0 48}DayIFRMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S04 {p_end}
+{p 0 48}DayIFRLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S04 {p_end}
+{p 0 48}DayIFRUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S04 {p_end}
+{p 0 48}DayIFRMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S05 {p_end}
+{p 0 48}DayIFRLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S05 {p_end}
+{p 0 48}DayIFRUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S05 {p_end}
+{p 0 48}DayIFRMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S06 {p_end}
+{p 0 48}DayIFRLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S06 {p_end}
+{p 0 48}DayIFRUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S06 {p_end}
+{p 0 48}DayDeMMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean IMPE DayDeM{p_end}
+{p 0 48}DayCaMMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean IMPE DayCaM{p_end}
+{p 0 48}DayIbDMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean div by daily deaths mean IMPE DayIbD{p_end}
+{p 0 48}DayDMuMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of infections by deaths) IMPE{p_end}
+{p 0 48}TotDeaLoRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths Lower LANL S0{p_end}
+{p 0 48}TotDeaMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths Mean LANL S0{p_end}
+{p 0 48}TotDeaUpRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total deaths Upper LANL S0{p_end}
+{p 0 48}DayDeaLoRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths Lower LANL S0{p_end}
+{p 0 48}DayDeaMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths Mean LANL S0{p_end}
+{p 0 48}DayDeaUpRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths Upper LANL S0{p_end}
+{p 0 48}TotCasLoRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Lower LANL S0{p_end}
+{p 0 48}TotCasMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Mean LANL S0{p_end}
+{p 0 48}TotCasUpRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Upper LANL S0{p_end}
+{p 0 48}DayCasLoRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases Lower LANL S0{p_end}
+{p 0 48}DayCasMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases Mean LANL S0{p_end}
+{p 0 48}DayCasUpRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases Upper LANL S0{p_end}
+{p 0 48}DayCfrMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Mean LANL S0{p_end}
+{p 0 48}DayCfrLoRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Lower LANL S0{p_end}
+{p 0 48}DayCfrUpRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Upper LANL S0{p_end}
+{p 0 48}DayDeMMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean LANL DayDeM{p_end}
+{p 0 48}DayCaMMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean LANL DayCaM{p_end}
+{p 0 48}DayCbDMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean div by daily deaths mean LANL DayCbD{p_end}
+{p 0 48}DayDMuMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of cases by deaths) LANL{p_end}
+{p 0 48}TotCasUpRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Upper SRIV{p_end}
+{p 0 48}TotDeaMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean SRIV{p_end}
+{p 0 48}TotDeaLoRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower SRIV{p_end}
+{p 0 48}TotDeaUpRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper SRIV{p_end}
+{p 0 48}TotCasMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Mean SRIV{p_end}
+{p 0 48}TotCasLoRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Lower SRIV{p_end}
+{p 0 48}DayDeaMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean SRIV{p_end}
+{p 0 48}DayDeaLoRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower SRIV{p_end}
+{p 0 48}DayDeaUpRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper SRIV{p_end}
+{p 0 48}DayCasMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Mean SRIV{p_end}
+{p 0 48}DayCasLoRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Lower SRIV{p_end}
+{p 0 48}DayCasUpRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Upper SRIV{p_end}
+{p 0 48}DayCfrMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Mean SRIV{p_end}
+{p 0 48}DayCfrLoRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Lower SRIV{p_end}
+{p 0 48}DayCfrUpRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily CFR Upper SRIV{p_end}
+{p 0 48}DayDeMMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean SRIV  DayDeM{p_end}
+{p 0 48}DayCaMMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean SRIV  DayCaM{p_end}
+{p 0 48}DayCbDMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases mean div by daily deaths mean SRIV  DayCbD{p_end}
+{p 0 48}DayDMuMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of cases by deaths) SRIV {p_end}
+{p 0 48}DayCTDMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases to Deaths S0 JOHN{p_end}
+{p 0 48}TotCTDMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases to Deaths S0 JOHN{p_end}
+{p 0 48}DayCTDMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases to Deaths S0 DELP{p_end}
+{p 0 48}TotCTDMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases to Deaths S0 DELP{p_end}
+{p 0 48}DayITDMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S1 IHME{p_end}
+{p 0 48}TotITDMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S1 IHME{p_end}
+{p 0 48}DayITDMeRaA02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S2 IHME{p_end}
+{p 0 48}TotITDMeRaA02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S2 IHME{p_end}
+{p 0 48}DayITDMeRaA02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S3 IHME{p_end}
+{p 0 48}TotITDMeRaA02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S3 IHME{p_end}
+{p 0 48}DayITDMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S1 IMPE{p_end}
+{p 0 48}TotITDMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S1 IMPE{p_end}
+{p 0 48}DayITDMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S2 IMPE{p_end}
+{p 0 48}TotITDMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S2 IMPE{p_end}
+{p 0 48}DayITDMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S3 IMPE{p_end}
+{p 0 48}TotITDMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S3 IMPE{p_end}
+{p 0 48}DayCTDMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases to Deaths S0 LANL{p_end}
+{p 0 48}TotCTDMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases to Deaths S0 LANL{p_end}
+{p 0 48}DayCTDMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases to Deaths S0 SRIV{p_end}
+{p 0 48}TotCTDMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases to Deaths S0 SRIV{p_end}
+{p 0 48}DayDERMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported JOHN = 1{p_end}
+{p 0 48}DayDERMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean DELP S0{p_end}
+{p 0 48}DayDERMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean not smoothed IHME S1{p_end}
+{p 0 48}DayDERMeRaA02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}DayDERMeRaA02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean not smoothed IHME S3{p_end}
+{p 0 48}DayDERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean S1 IMPE{p_end}
+{p 0 48}DayDERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean S2 IMPE{p_end}
+{p 0 48}DayDERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean S3 IMPE{p_end}
+{p 0 48}DayDERMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported to Deaths S0 LANL{p_end}
+{p 0 48}DayDERMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported S0 SRIV{p_end}
+{p 0 48}DayCERMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases estim to reported JOHN = 1{p_end}
+{p 0 48}DayCERMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases estim to reported Mean DELP S0{p_end}
+{p 0 48}DayIERMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean not smoothed IHME S1{p_end}
+{p 0 48}DayIERMeRaA02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}DayIERMeRaA02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean not smoothed IHME S3{p_end}
+{p 0 48}DayIERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean S1 IMPE{p_end}
+{p 0 48}DayIERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean S2 IMPE{p_end}
+{p 0 48}DayIERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean S3 IMPE{p_end}
+{p 0 48}DayCERMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases estim to reported to Cases S0 LANL{p_end}
+{p 0 48}DayCERMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases estim to reported S0 SRIV{p_end}
+{p 0 48}TotDERMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported JOHN = 1{p_end}
+{p 0 48}TotDERMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean DELP S0{p_end}
+{p 0 48}TotDERMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean not smoothed IHME S1{p_end}
+{p 0 48}TotDERMeRaA02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}TotDERMeRaA02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean not smoothed IHME S3{p_end}
+{p 0 48}TotDERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean S1 IMPE{p_end}
+{p 0 48}TotDERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean S2 IMPE{p_end}
+{p 0 48}TotDERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean S3 IMPE{p_end}
+{p 0 48}TotDERMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported to Deaths S0 LANL{p_end}
+{p 0 48}TotDERMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported S0 SRIV{p_end}
+{p 0 48}TotCERMeRaA00S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases estim to reported JOHN = 1{p_end}
+{p 0 48}TotCERMeRaA01S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases estim to reported Mean DELP S0{p_end}
+{p 0 48}TotIERMeRaA02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean not smoothed IHME S1{p_end}
+{p 0 48}TotIERMeRaA02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}TotIERMeRaA02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean not smoothed IHME S3{p_end}
+{p 0 48}TotIERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean S1 IMPE{p_end}
+{p 0 48}TotIERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean S2 IMPE{p_end}
+{p 0 48}TotIERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean S3 IMPE{p_end}
+{p 0 48}TotCERMeRaA04S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases estim to reported to Cases S0 LANL{p_end}
+{p 0 48}TotCERMeRaA05S00{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases estim to reported S0 SRIV{p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+{txt}
+{com}.  
+.  
+. *
+. 
+. sort date
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "country.dta", replace
+{txt}file country.dta saved
+
+{com}. 
+. export delimited using "country.csv", replace 
+{res}{txt}file country.csv saved
+
+{com}. 
+. 
+. *
+. 
+. 
+. 
+. 
+. 
+. ***************
+. 
+. * graphs 
+. 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. ******************
+. 
+. 
+. 
+. * daily deaths (graph numbers start with 11)
+. 
+. 
+. ****
+. * daily deaths, reference scenario, all time
+. 
+. 
+. * adjust x axis ticks and avoid globals
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN smooth"
+> (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayDeaMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayDeaMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 11 COVID-19 daily deaths, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 11 COVID-19 daily deaths, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 11 COVID-19 daily deaths, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 11 COVID-19 daily deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily deaths, reference scenario, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN smooth"
+> (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayDeaMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayDeaMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 12 COVID-19 daily deaths, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 12 COVID-19 daily deaths, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 12 COVID-19 daily deaths, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 12 COVID-19 daily deaths, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. ****
+. * daily deaths, reference scenario, 2021, CI
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN smooth"
+> (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP" mean
+> (line DayDeaLoRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 3 "DELP" lower
+> (line DayDeaUpRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 4 "DELP" upper
+> (line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 5 IHME mean
+> (line DayDeaLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
+> (line DayDeaUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
+> (line DayDeaMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
+> (line DayDeaLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
+> (line DayDeaUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
+> (line DayDeaMeRaA04S00 date, sort lcolor(gold)) /// 11 LANL mean
+> (line DayDeaLoRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 12 LANL lower
+> (line DayDeaUpRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 13 LANL upper
+> (line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 14 "SRIV" mean
+> (line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 15 "SRIV" lower
+> (line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 16 "SRIV" upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "IMPE" 11 "LANL" 14 "SRIV") size(small) row(1)) ///
+> subtitle("after 2021-01-01, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed curves" ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 13 COVID-19 daily deaths, $country, reference scenarios, CI.gph", replace
+{res}{txt}(file graph 13 COVID-19 daily deaths, Iran, reference scenarios, CI.gph saved)
+
+{com}. graph export "graph 13 COVID-19 daily deaths, $country, reference scenarios, CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 13 COVID-19 daily deaths, Iran, reference scenarios, CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. ****
+. * daily deaths, reference scenario with uncertainty, IHME, 2021 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(medthick)) /// 2 "JOHN smooth"
+> (line DayDeaMeRaA02S01 date, sort lcolor(black)) /// 3 IHME reference mean
+> (line DayDeaLoRaA02S01 date, sort lcolor(green) lpattern(dash)) /// 4 IHME reference lower
+> (line DayDeaUpRaA02S01 date, sort lcolor(red) lpattern(dash)) /// 5 IHME reference upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IHME", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IHME reference scenario, mean" ///
+> 4 "IHME reference scenario, lower" 5 "IHME reference scenario, upper") size(small) row(3)) ///
+> subtitle("after 2021-01-01, reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed (– – –) curves" ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 14 COVID-19 daily deaths, $country, reference scenario with uncertainty, IHME.gph", replace
+{res}{txt}(file graph 14 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IHME.gph saved)
+
+{com}. graph export "graph 14 COVID-19 daily deaths, $country, reference scenario with uncertainty, IHME.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 14 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IHME.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily deaths, 3 scenarios, IHME, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(medthick)) /// 2 "JOHN smooth"
+> (line DayDeaMeRaA02S01 date, sort lcolor(black)) /// 3 IHME reference mean
+> (line DayDeaMeRaA02S02 date, sort lcolor(green) lwidth(thick) lpattern(tight_dot)) /// 4 IHME better mean
+> (line DayDeaMeRaA02S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 5 IHME worse mean
+> (line DayDeaUpRaA02S03 date, sort lcolor(red) lpattern(dash)) /// 6 IHME worse upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IHME", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IHME reference scenario, mean" 4 "IHME better scenario, mean" ///
+> 5 "IHME worse scenario, mean" 6 "IHME worse scenario, upper uncertainty limit") size(small) row(3)) ///
+> subtitle("after 2021-01-01, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 15 COVID-19 daily deaths, $country, 3 scenarios, IHME.gph", replace
+{res}{txt}(file graph 15 COVID-19 daily deaths, Iran, 3 scenarios, IHME.gph saved)
+
+{com}. graph export "graph 15 COVID-19 daily deaths, $country, 3 scenarios, IHME.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 15 COVID-19 daily deaths, Iran, 3 scenarios, IHME.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily deaths, reference scenario with uncertainty, IMPE, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 2 "JOHN smooth"
+> (line DayDeaMeRaA03S02 date, sort lcolor(black)) /// 3 IMPE reference mean
+> (line DayDeaLoRaA03S02 date, sort lcolor(green) lpattern(dash)) /// 4 IMPE reference lower
+> (line DayDeaUpRaA03S02 date, sort lcolor(red) lpattern(dash)) /// 5 IMPE reference upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IMPE reference scenario, mean" ///
+> 4 "IMPE reference scenario, lower" 5 "IMPE sreference scenario, upper") size(small) row(3)) ///
+> subtitle("after 2021-01-01, reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+> note("- Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.gph", replace
+{res}{txt}(file graph 16 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IMPE.gph saved)
+
+{com}. graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 16 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily deaths, 3 scenarios, IMPE, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 2 "JOHN smooth"
+> (line DayDeaMeRaA03S02 date, sort lcolor(black)) /// 3 IMPE reference mean
+> (line DayDeaMeRaA03S01 date, sort lcolor(green) lwidth(thick) lpattern(tight_dot)) /// 4 IMPE better mean
+> (line DayDeaMeRaA03S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 5 IMPE worse mean
+> (line DayDeaUpRaA03S03 date, sort lcolor(red) lpattern(dash)) /// 6 IMPE worse upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IMPE reference scenario, mean" 4 "IMPE better scenario, mean" ///
+> 5 "IMPE worse scenario, mean" 6 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
+> subtitle("after 2021-01-01, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+> note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.gph", replace
+{res}{txt}(file graph 17 COVID-19 daily deaths, Iran, 3 scenarios, IMPE.gph saved)
+
+{com}. graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 17 COVID-19 daily deaths, Iran, 3 scenarios, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ***********************
+. 
+. * daily cases or infections (graph numbers start with 21)
+. 
+. 
+. * daily cases or infections, reference scenario, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCasMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCasMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
+> 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 21 COVID-19 daily cases, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 21 COVID-19 daily cases, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 21 COVID-19 daily cases, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 21 COVID-19 daily cases, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections, reference scenario, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCasMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCasMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
+> 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 22 COVID-19 daily cases, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 22 COVID-19 daily cases, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 22 COVID-19 daily cases, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 22 COVID-19 daily cases, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. ****
+. * daily cases or infections, reference scenarios, 2021, CI
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 JOHN
+> (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP" mean
+> (line DayCasLoRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 3 "DELP" lower
+> (line DayCasUpRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 4 "DELP" upper
+> (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 5 IHME mean
+> (line DayINFLoRaA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
+> (line DayINFUpRaA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
+> (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
+> (line DayINFLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
+> (line DayINFUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
+> (line DayCasMeRaA04S00 date, sort lcolor(gold)) /// 11 LANL mean
+> (line DayCasLoRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 12 LANL lower
+> (line DayCasUpRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 13 LANL upper
+> (line DayCasMeRaA05S00 date, sort lcolor(green)) /// 14 "SRIV" mean
+> (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 15 "SRIV" lower
+> (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 16 "SRIV" upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" 8 "IMPE infections" ///
+> 11 "LANL cases" 14 "SRIV cases") size(small) row(2)) /// 
+> subtitle("after 2021-01-01, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 23 COVID-19 daily cases, $country, reference scenarios, CI.gph", replace
+{res}{txt}(file graph 23 COVID-19 daily cases, Iran, reference scenarios, CI.gph saved)
+
+{com}. graph export "graph 23 COVID-19 daily cases, $country, reference scenarios, CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 23 COVID-19 daily cases, Iran, reference scenarios, CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections, full scenarios, with uncertainty, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 JOHN
+> (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP" mean
+> (line DayCasLoRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 3 "DELP" lower
+> (line DayCasUpRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 4 "DELP" upper
+> (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 5 IHME reference mean
+> (line DayINFLoRaA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME reference lower
+> (line DayINFUpRaA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME reference upper
+> (line DayINFMeRaA02S02 date, sort lcolor(black) lwidth(thick) lpattern(tight_dot)) /// 8 IHME better mean
+> (line DayINFMeRaA02S03 date, sort lcolor(black) lwidth(thick) lpattern(tight_dot)) /// 9 IHME worse mean
+> (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 10 IMPE reference mean
+> (line DayINFLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 11 IMPE reference lower
+> (line DayINFUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 12 IMPE reference upper
+> (line DayINFMeRaA03S01 date, sort lcolor(magenta) lwidth(thick) lpattern(tight_dot)) /// 13 IMPE better mean
+> (line DayINFMeRaA03S03 date, sort lcolor(magenta) lwidth(thick) lpattern(tight_dot)) /// 14 IMPE worse mean
+> (line DayCasMeRaA04S00 date, sort lcolor(gold)) /// 15 LANL mean
+> (line DayCasLoRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 16 LANL lower
+> (line DayCasUpRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 17 LANL upper
+> (line DayCasMeRaA05S00 date, sort lcolor(green)) /// 18 "SRIV" mean
+> (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 19 "SRIV" lower
+> (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 20 "SRIV" upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME reference, mean" 6 "IHME ref, uncertainty" 8 "IHME better and worse" ///
+> 10 "IMPE reference, mean " 11 "IMPE ref, uncertainty" 13 "IMPE better and worse" ///
+> 15 "LANL cases" 18 "SRIV cases") size(small) row(4)) ///
+> subtitle("after 2021-01-01, full scenarios, with uncertainty; IHME & IMPE: infections", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed (– – –) curves; Better and worse scenarios: tight dot (|||||) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 23 COVID-19 daily cases, $country, full scenarios, CI.gph", replace
+{res}{txt}(file graph 23 COVID-19 daily cases, Iran, full scenarios, CI.gph saved)
+
+{com}. graph export "graph 23 COVID-19 daily cases, $country, full scenarios, CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 23 COVID-19 daily cases, Iran, full scenarios, CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections, reference scenario with uncertainty, IHME, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
+> (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 2 IHME reference mean
+> (line DayINFLoRaA02S01 date, sort lcolor(green) lpattern(dash)) /// 3 IHME reference lower
+> (line DayINFUpRaA02S01 date, sort lcolor(red) lpattern(dash)) /// 4 IHME reference upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily cases JOHN, and infections IHME, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "IHME reference, mean" 3 "IHME reference, lower" 4 "IHME reference, upper") size(small) row(2)) ///
+> subtitle("after 2021-01-01, IHME infections reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 24 COVID-19 daily cases, $country, reference scenario with uncertainty, IHME.gph", replace
+{res}{txt}(file graph 24 COVID-19 daily cases, Iran, reference scenario with uncertainty, IHME.gph saved)
+
+{com}. graph export "graph 24 COVID-19 daily cases, $country, reference scenario with uncertainty, IHME.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 24 COVID-19 daily cases, Iran, reference scenario with uncertainty, IHME.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections, 3 scenarios, IHME, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
+> (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 2 IHME reference mean
+> (line DayINFMeRaA02S02 date, sort lcolor(green) lwidth(thick) lpattern(tight_dot)) /// 3 IHME better mean
+> (line DayINFMeRaA02S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 4 IHME worse mean
+> (line DayINFUpRaA02S03 date, sort lcolor(red) lpattern(dash)) /// 5 IHME worse upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily JOHN, and infections IHME, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "IHME reference, mean" 3 "IHME better, mean" 4 "IHME worse, mean" ///
+> 5 "IHME worse scenario, upper uncertainty limit") size(small) row(3)) ///
+> subtitle("after 2021-01-01, IHME infections 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 25 COVID-19 daily cases, $country, 3 scenarios, IHME.gph", replace
+{res}{txt}(file graph 25 COVID-19 daily cases, Iran, 3 scenarios, IHME.gph saved)
+
+{com}. graph export "graph 25 COVID-19 daily cases, $country, 3 scenarios, IHME.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 25 COVID-19 daily cases, Iran, 3 scenarios, IHME.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections, reference scenario with uncertainty, IMPE, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
+> (line DayINFMeRaA03S02 date, sort lcolor(black)) /// 2 IMPE reference mean
+> (line DayINFLoRaA03S02 date, sort lcolor(green) lpattern(dash)) /// 3 IMPE reference lower
+> (line DayINFUpRaA03S02 date, sort lcolor(red) lpattern(dash)) /// 4 IMPE reference upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily cases JOHN, and infections IMPE, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "IMPE reference, mean" 3 "IMPE reference, lower" 4 "IMPE reference, upper") size(small) row(2)) ///
+> subtitle("after 2021-01-01, IMPE infections reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.gph", replace
+{res}{txt}(file graph 26 COVID-19 daily cases, Iran, reference scenario with uncertainty, IMPE.gph saved)
+
+{com}. graph export "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 26 COVID-19 daily cases, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections, 3 scenarios, IMPE 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
+> (line DayINFMeRaA03S02 date, sort lcolor(black)) /// 2 IMPE reference mean
+> (line DayINFMeRaA03S01 date, sort lcolor(green) lwidth(thick) lpattern(tight_dot)) /// 3 IMPE better mean
+> (line DayINFMeRaA03S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 4 IMPE worse mean
+> (line DayINFUpRaA03S03 date, sort lcolor(red) lpattern(dash)) /// 5 IMPE worse upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections) title("COVID-19 daily JOHN, and infections IMPE, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "IMPE reference, mean" 3 "IMPE better, mean" 4 "IMPE worse, mean" ///
+> 5 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
+> subtitle("after 2021-01-01, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.gph", replace
+{res}{txt}(file graph 27 COVID-19 daily cases, Iran, 3 scenarios, IMPE.gph saved)
+
+{com}. graph export "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 27 COVID-19 daily cases, Iran, 3 scenarios, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. *****************
+. 
+. * total deaths (graph numbers start with 31)
+. 
+. 
+. ****
+. * total deaths, reference scenario, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotDeaMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 31 COVID-19 total deaths, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 31 COVID-19 total deaths, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 31 COVID-19 total deaths, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 31 COVID-19 total deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total deaths, reference scenario, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotDeaMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 32 COVID-19 total deaths, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 32 COVID-19 total deaths, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 32 COVID-19 total deaths, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 32 COVID-19 total deaths, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total deaths, reference scenario, CI, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 JOHN
+> (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 DELP mean
+> (line TotDeaLoRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 3 DELP lower
+> (line TotDeaUpRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 4 DELP upper
+> (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 5 IHME mean
+> (line TotDeaLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
+> (line TotDeaUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
+> (line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
+> (line TotDeaLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
+> (line TotDeaUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
+> (line TotDeaMeRaA04S00 date, sort lcolor(gold)) /// 11 LANL mean
+> (line TotDeaLoRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 12 LANL lower
+> (line TotDeaUpRaA04S00 date, sort lcolor(gold) lpattern(dash)) /// 13 LANL upper
+> (line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 14 "SRIV" mean
+> (line TotDeaLoRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 15 "SRIV" lower
+> (line TotDeaUpRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 16 "SRIV" upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "IMPE" 11 "LANL" 14 "SRIV") size(small) row(1)) ///
+> note("Uncertainty limits: dashed curves") ///
+> subtitle("after 2021-01-01, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 33 COVID-19 total deaths, $country, reference scenarios, CI.gph", replace
+{res}{txt}(file graph 33 COVID-19 total deaths, Iran, reference scenarios, CI.gph saved)
+
+{com}. graph export "graph 33 COVID-19 total deaths, $country, reference scenarios, CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 33 COVID-19 total deaths, Iran, reference scenarios, CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. *****************
+. 
+. * total cases or infections (graph numbers start with 41)
+. 
+. 
+. ****
+. * total cases or infections, reference scenario, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotINFMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotCasMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotCasMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
+> 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 41 COVID-19 total cases, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 41 COVID-19 total cases, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 41 COVID-19 total cases, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 41 COVID-19 total cases, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total cases or infections, reference scenario, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotINFMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotCasMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotCasMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
+> 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 42 COVID-19 total cases, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 42 COVID-19 total cases, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 42 COVID-19 total cases, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 42 COVID-19 total cases, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total cases or infections, reference scenario, CI, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 JOHN
+> (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotCasLoRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 3 "DELP"
+> (line TotCasUpRaA01S00 date, sort lcolor(red) lpattern(dash)) /// 4 "DELP"
+> (line TotINFMeRaA02S01 date, sort lcolor(black)) /// 5 IHME mean
+> (line TotINFLoRaA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
+> (line TotINFUpRaA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
+> (line TotINFMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
+> (line TotINFLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
+> (line TotINFUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
+> (line TotCasMeRaA04S00 date, sort lcolor(gold)) /// 11 LANL mean
+> (line TotCasLoRaA04S00 date, sort lcolor(gold)  lpattern(dash)) /// 12 LANL lower
+> (line TotCasUpRaA04S00 date, sort lcolor(gold)  lpattern(dash)) /// 13 LANL upper
+> (line TotCasMeRaA05S00 date, sort lcolor(green)) /// 14 "SRIV" mean
+> (line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 15 "SRIV" lower
+> (line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 16 "SRIV" upper
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
+> 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("after 2021-01-01, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 43 COVID-19 total cases, $country, reference scenarios, CI.gph", replace
+{res}{txt}(file graph 43 COVID-19 total cases, Iran, reference scenarios, CI.gph saved)
+
+{com}. graph export "graph 43 COVID-19 total cases, $country, reference scenarios, CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 43 COVID-19 total cases, Iran, reference scenarios, CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****************
+. 
+. * daily CFR / IFR (graph numbers start with 51)
+. 
+. 
+. ****
+. * CFR / IFR all studies, all time, reference scenarios, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCfrMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN"
+> (line DayCfrMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayIFRMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayIFRMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCfrMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR or IFR) title("COVID-19 daily CFR or IFR, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN CFR" 2 "DELP CFR" 3 "IHME IFR" 4 "IMPE IFR" 5 "LANL CFR" 6 "SRIV CFR") size(small) row(2)) ///
+> subtitle("reference scenarios", size(small) color(white))
+{res}{txt}
+{com}. 
+. graph save "graph 51 COVID-19 daily CFR, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 51 COVID-19 daily CFR, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 51 COVID-19 daily CFR, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 51 COVID-19 daily CFR, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * cfr all studies, reference scenarios, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCfrMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN"
+> (line DayCfrMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayIFRMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayIFRMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCfrMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR or IFR) title("COVID-19 daily CFR or IFR, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN CFR" 2 "DELP CFR" 3 "IHME IFR" 4 "IMPE IFR" 5 "LANL CFR" 6 "SRIV CFR") size(small) row(2)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 52 COVID-19 daily CFR, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 52 COVID-19 daily CFR, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 52 COVID-19 daily CFR, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 52 COVID-19 daily CFR, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. ************************
+. 
+. * other outcomes (graph numbers start with 71)
+. 
+. 
+. * base codes with IHME and IMPE, all hospital-related outcomes, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayHosMeRaA01S00 date, sort lcolor(red) lwidth(thick)) /// 1 DELP Hospitalized (Daily Cases Active Hospitalized Mean DELP S0)
+> (line DayVenMeRaA01S00 date, sort lcolor(red) lpattern(dash)  lwidth(thick)) /// 2 DELP Ventilated (Daily Cases Active Ventilated Mean DELP S0)
+> (line DayBedMeSmA02S01 date, sort lcolor(black)) /// 3 IHME Bed need (Daily Beds needed Mean IHME S1)
+> (line DayIcuMeSmA02S01 date, sort lcolor(green)) /// 4 IHME ICU need (Daily ICU beds needed Mean IHME S1)
+> (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 5 IHME Admissions (Daily hospital admissions Mean IHME S1)
+> (line DayIcnMeSmA02S01 date, sort lcolor(blue)) /// 6 IHME ICU new (Daily new people going to ICU Mean IHME S1)
+> (line DayHodMeRaA03S01 date, sort lcolor(magenta)) /// 7 IMPE Hosp demand (Daily hospital demand Mean A03 S01 )
+> (line DayIcdMeRaA03S01 date, sort lcolor(magenta) lpattern(dash_dot)) /// 8 IMPE ICU demand (Daily ICU demand Mean A03 S01 )
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME Bed need" 4 "IHME ICU need" ///
+> 5 "IHME Admissions" 6 "IHME ICU new" 7 "IMPE Hosp demand" ///
+> 8 "IMPE ICU demand") rows(4) size(small)) ///
+> subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 71 COVID-19 hospital-related outcomes, all time.gph", replace
+{res}{txt}(file graph 71 COVID-19 hospital-related outcomes, all time.gph saved)
+
+{com}. graph export "graph 71 COVID-19 hospital-related outcomes, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 71 COVID-19 hospital-related outcomes, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily hospital-related outcomes, DELP, IHME, IMPE, wo IHME Bed need, IMPE Hosp demand
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayHosMeRaA01S00 date, sort lcolor(red) lwidth(thick)) /// 1 DELP Hospitalized (Daily Cases Active Hospitalized Mean DELP S0)
+> (line DayVenMeRaA01S00 date, sort lcolor(red) lpattern(dash)  lwidth(thick)) /// 2 DELP Ventilated (Daily Cases Active Ventilated Mean DELP S0)
+> (line DayIcuMeSmA02S01 date, sort lcolor(green)) /// 3 IHME ICU need (Daily ICU beds needed Mean IHME S1)
+> (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 4 IHME Admissions (Daily hospital admissions Mean IHME S1)
+> (line DayIcnMeSmA02S01 date, sort lcolor(blue)) /// 5 IHME ICU new (Daily new people going to ICU Mean IHME S1)
+> (line DayIcdMeRaA03S01 date, sort lcolor(magenta) lpattern(dash_dot)) /// 6 IMPE ICU demand (Daily ICU demand Mean A03 S01 )
+> (line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME ICU need" ///
+> 4 "IHME Admissions" 5 "IHME ICU new" 6 "IMPE ICU demand") rows(3) size(small)) ///
+> subtitle("after 2021-01-01, without IHME Bed need, IMPE Hosp demand, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
+> note("- Uncertainty limits: dashed curves." ///
+> "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
+> "dimensions, drivers, preventive measures of fifth wave discussed with MOH.", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.gph", replace
+{res}{txt}(file graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.gph saved)
+
+{com}. graph export "graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. *******************************
+. 
+. * daily cases to deaths (CTD) 
+. 
+. 
+. ****
+. * Daily cases or infections to deaths (CTD / ITD) all studies, reference scenarios, all time
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCTDMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections to deaths) title("COVID-19 daily cases or infections, to deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 81 COVID-19 daily cases to deaths, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 81 COVID-19 daily cases to deaths, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 81 COVID-19 daily cases to deaths, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 81 COVID-19 daily cases to deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * Daily cases or infections to deaths (CTD / ITD) all studies, reference scenarios, 2021
+. 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN"
+> (line DayCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCTDMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections to deaths) title("COVID-19 daily cases or infections, to deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 82 COVID-19 daily cases to deaths, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 82 COVID-19 daily cases to deaths, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 82 COVID-19 daily cases to deaths, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 82 COVID-19 daily cases to deaths, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * Total cases to deaths (CTD / ITD) all studies, all time, reference scenarios, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotCTDMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections to deaths) title("COVID-19 total cases or infections, to deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 83 COVID-19 total cases to deaths, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 83 COVID-19 total cases to deaths, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 83 COVID-19 total cases to deaths, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 83 COVID-19 total cases to deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * Total cases to deaths (CTD / ITD) all studies, reference scenarios, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotCTDMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections to deaths) title("COVID-19 total cases or infections, to deaths, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("after 2021-01-01, reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 84 COVID-19 total cases to deaths, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 84 COVID-19 total cases to deaths, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 84 COVID-19 total cases to deaths, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 84 COVID-19 total cases to deaths, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. *******************************
+. 
+. *  estimated to reported (graph numbers start with 91)
+. 
+. 
+. * daily deaths estimated to reported  
+. 
+. 
+. ****
+. * daily deaths estimated to reported (DER) all studies, reference scenarios, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayDERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayDERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths estimated to reported) title("COVID-19 daily deaths, estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 91 COVID-19 daily deaths estimated to reported, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 91 COVID-19 daily deaths estimated to reported, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 91 COVID-19 daily deaths estimated to reported, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 91 COVID-19 daily deaths estimated to reported, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily deaths estimated to reported (DER) all studies, reference scenarios, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayDERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayDERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths estimated to reported) title("COVID-19 daily deaths, estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 92 COVID-19 daily deaths estimated to reported, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 92 COVID-19 daily deaths estimated to reported, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 92 COVID-19 daily deaths estimated to reported, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 92 COVID-19 daily deaths estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. * daily cases or infections estimated to reported cases
+. 
+. 
+. ****
+. * daily cases or infections estimated to reported cases (CER / IER) all studies, reference scenarios, all time 
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections estimated to reported) title("COVID-19 daily cases estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(3)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("daily cases or infections estimated, to reported cases; reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 93 COVID-19 daily cases estimated to reported, $country, reference scenarios, all time .gph", replace
+{res}{txt}(file graph 93 COVID-19 daily cases estimated to reported, Iran, reference scenarios, all time .gph saved)
+
+{com}. graph export "graph 93 COVID-19 daily cases estimated to reported, $country, reference scenarios, all time .pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 93 COVID-19 daily cases estimated to reported, Iran, reference scenarios, all time .pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily cases or infections estimated to reported cases (CER / IER) all studies, 2021-01-01 on, reference scenarios
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line DayCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line DayIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line DayIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line DayCERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line DayCERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases or infections estimated to reported) title("COVID-19 daily cases estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(3)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("daily cases or infections estimated, to reported cases; reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 94 COVID-19 daily cases estimated to reported, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 94 COVID-19 daily cases estimated to reported, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 94 COVID-19 daily cases estimated to reported, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 94 COVID-19 daily cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total deaths estimated to reported (DER) all studies, reference scenarios, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN
+> (line TotDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotDERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotDERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 95 COVID-19 total deaths estimated to reported, $country, reference scenarios, all time.gph", replace
+{res}{txt}(file graph 95 COVID-19 total deaths estimated to reported, Iran, reference scenarios, all time.gph saved)
+
+{com}. graph export "graph 95 COVID-19 total deaths estimated to reported, $country, reference scenarios, all time.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 95 COVID-19 total deaths estimated to reported, Iran, reference scenarios, all time.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total deaths estimated to reported (DER) all studies, reference scenarios, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN
+> (line TotDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotDERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotDERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
+> subtitle("reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 96 COVID-19 total deaths estimated to reported, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 96 COVID-19 total deaths estimated to reported, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 96 COVID-19 total deaths estimated to reported, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 96 COVID-19 total deaths estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total cases or infections or infections estimated to reported cases (CER / IER) all studies, reference scenarios, all time
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2020 = mdy(`i', 1, 2020)
+{txt}  3{com}.         local dates2020 `dates2020' `date2020'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotCERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotCERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01dec2019) ///
+> , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections estimated to reported) title("COVID-19 total cases estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("total cases or infections estimated, to reported cases; reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 97 COVID-19 total cases estimated to reported, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 97 COVID-19 total cases estimated to reported, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 97 COVID-19 total cases estimated to reported, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 97 COVID-19 total cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * total cases or infections or infections estimated to reported cases (CER / IER) all studies, reference scenarios, 2021
+. 
+. forval i = 1(1)12 {c -(}
+{txt}  2{com}.         local date2021 = mdy(`i', 1, 2021)
+{txt}  3{com}.         local dates2021 `dates2021' `date2021'
+{txt}  4{com}. {c )-}
+{txt}
+{com}. *
+. 
+. twoway ///
+> (line TotCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line TotCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+> (line TotIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
+> (line TotIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
+> (line TotCERMeRaA04S00 date, sort lcolor(gold)) /// 5 "LANL"
+> (line TotCERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+> if date >= td(01jan2021) ///
+> , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases or infections estimated to reported) title("COVID-19 total cases estimated to reported, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+> subtitle("total cases or infections estimated, to reported cases; reference scenarios", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 98 COVID-19 total cases estimated to reported, $country, reference scenarios.gph", replace
+{res}{txt}(file graph 98 COVID-19 total cases estimated to reported, Iran, reference scenarios.gph saved)
+
+{com}. graph export "graph 98 COVID-19 total cases estimated to reported, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/graph 98 COVID-19 total cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ************
+. 
+. * restore native scheme (of the local machine)
+. 
+. set scheme $nativescheme
+{txt}
+{com}. 
+. di c(scheme)
+{res}s2color
+{txt}
+{com}. 
+. 
+. view "log country merge.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210806/code/merge/log country merge.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 6 Aug 2021, 17:35:32
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
