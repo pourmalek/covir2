@@ -11,6 +11,11 @@ DELP 20210723, **_IHME 20210723_**, IMPE 20210709, LANL 20210718, SRIV 20210723
 ### 20210726: IHME estimates for Iran in update 20210723 and in update 20210715 WERE identical UPON FIRST RELEASE OF update 20210723, with numerical value difference of zero. As of 20210726, update 20210723 has been replaced by IHME and is not identical with update 20210715. See [`20210726`](https://github.com/pourmalek/covir2/tree/main/20210726)
 
 See code [here](https://github.com/pourmalek/covir2/blob/main/20210723/code/IHME/do%20country%20IHME.do)
+<br/><br/>
+
+### 20210730: As of July 30, 2021, IHME 20210723 version 2 is not accessible. The codes in thie uptake will not work.
+![image](https://user-images.githubusercontent.com/30849720/127723795-90834b8c-7b1b-4b2a-a91a-08a2260ddb9d.png)
+<br/><br/>
 
 ### 20210808: IHME uptake 20210723 is accessible, as of 20210808, via https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-25/ihme-covid19.zip
 
