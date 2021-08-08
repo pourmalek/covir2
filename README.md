@@ -270,8 +270,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: Operations Research Center, Massachusetts Institute of Technology, Cambridge  
 . Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1, https://www.covidanalytics.io/DELPHI_documentation_pdf  
 . Periodically updated: Yes   
-. Periodical updates accessible: No  
-  
+. Periodical updates accessible: No    
 <br/><br/>
  
 (2) IHME
@@ -284,7 +283,6 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Among articles: https://www.nature.com/articles/s41591-020-1132-9  
 . Periodically updated: Yes  
 . Periodical updates accessible: Yes  
-  
 <br/><br/>
  
 (3) IMPE  
@@ -296,8 +294,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: Imperial College, London  
 . Among articles: https://science.sciencemag.org/content/369/6502/413  
 . Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
+. Periodical updates accessible: Yes    
 <br/><br/>
  
 (4) LANL  
@@ -309,8 +306,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: Los Alamos National Laboratories, Los Alamos  
 . Among documents: https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf  
 . Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
+. Periodical updates accessible: Yes    
 <br/><br/>
  
 (5) SRIV  
@@ -322,8 +318,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: University of Southern California, Los Angeles  
 . Among articles: https://arxiv.org/abs/2007.05180  
 . Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
+. Periodical updates accessible: Yes    
 <br/><br/>
  
 (0) JOHN  
@@ -390,6 +385,9 @@ With each uptake, a directory is created in the root of the main branch of each 
 Similar work: The “covidcompare” tool [18] provides graph visualization of the latest estimates of daily and total deaths from international and periodically updated COVID-19 models for countries of the world and US states, along with historical forecasts and model performance, based on IHME’s “Predictive performance of international COVID-19 mortality forecasting models” [2]. 
 
  
+ <br/><br/>
+ 
+The three GitHub repositories created in this project are:  
 
 **CovidVisualizedGlobal**, COVID-19 estimates at the global level [13] http://doi.org/10.5281/zenodo.5019030
 
