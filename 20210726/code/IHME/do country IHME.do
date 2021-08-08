@@ -24,16 +24,18 @@ log using "log country IHME.smcl", replace
                                                                                                          ***************************
 * To change update date, find and replace all, 2021-07-23 (old), with 2021-07-23 (new) <<--       <<<--- * change update date here *
                                                                                                          ***************************
-
-
+													 
+* AND note that, update release date = 2021-07-23, date in download URL = 2021-07-25
+													 
+																										 
 clear 
  
 *****************************
 
 * get IHME estimates
 
-copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip // as of 2021-07-23
-// copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-23/ihme-covid19.zip ihme-covid19.zip
+// copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip // as of 2021-07-23
+copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-25/ihme-covid19.zip ihme-covid19.zip // as of 2021-08-06
 unzipfile ihme-covid19.zip, replace
 erase ihme-covid19.zip
 
