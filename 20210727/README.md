@@ -12,6 +12,12 @@ As of July 30, 2021, IHME 20210723 version 2 is not accessible. The codes in thi
 
 ![image](https://user-images.githubusercontent.com/30849720/127723795-90834b8c-7b1b-4b2a-a91a-08a2260ddb9d.png)
 
+<br/><br/>
+
+As of August 8, 2021, IHME 20210723 version 2 is accessible again. Date in download URL = 2021-07-25
+
+https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-25/ihme-covid19.zip
+
 
 <br/><br/>
 ****
