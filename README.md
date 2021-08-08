@@ -361,11 +361,11 @@ GitHub repositories allow others to view and/or download, scrutinize, and verify
  
 The three GitHub repositories created in this project are:  
 
-**CovidVisualizedGlobal**, COVID-19 estimates at the global level [13] http://doi.org/10.5281/zenodo.5019030
+**CovidVisualizedGlobal**, COVID-19 estimates at the global level [13] https://github.com/pourmalek/CovidVisualizedGlobal http://doi.org/10.5281/zenodo.5019030 
 
-**CovidVisualizedCountry**, COVID-19 estimates at the country level: Canada [14] http://doi.org/10.5281/zenodo.5019482
+**CovidVisualizedCountry**, COVID-19 estimates at the country level: Canada [14] https://github.com/pourmalek/CovidVisualizedCountry http://doi.org/10.5281/zenodo.5019482 
 
-**covir2**, COVID-19 estimates at the country level: Iran [15] http://doi.org/10.5281/zenodo.5020797
+**covir2**, COVID-19 estimates at the country level: Iran [15] https://github.com/pourmalek/covir2  http://doi.org/10.5281/zenodo.5020797
  
 
 <br/><br/>
