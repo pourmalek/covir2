@@ -219,123 +219,6 @@ Pre-print for this project:
 
 <br/><br/> 
 
-
-**SUMMARY**
-  
-Five international and periodically updated models of COVID-19 pandemic are identified and the results of their estimates are gathered, combined, and graphed for the progression of the pandemic at the country level. Periodical releases of these studies’ estimates undergo processing and visualization in this repository.  
-<br/><br/>
-
-  
-**BACKGROUND**
-
-The idea put to work here is to combine and visualize international periodically updated studies / models of COVID-19 pandemic, for the global level. The end result being sharable codes and outputs, for estimates files and graphs, for individual studies, and for combination of them, and repeat the process periodically. 
-<br/><br/>
-  
-**METHODS**
-
-Eligibility for target (component) studies (models) of COVID-19 pandemic, are set as those that (1) provide estimates for at least one of the four outcomes of interests, i.e., daily deaths, daily incident cases, cumulative (total) deaths, and cumulative (total) incident cases, (2) at the global level, (3) as sum of estimates at the country level, (4) periodically updated into 2021, (5) provide a list of input data and their sources, and (6) provide explanation on methods of using input data and generation of model outputs. 
-
-Target studies were found via hand search using google. After “Additional file 1 of Rapid review of COVID-19 epidemic estimation studies for Iran”, Page 39, [here](https://s3-eu-west-1.amazonaws.com/pstorage-npg-968563215/26271814/12889_2021_10183_MOESM1_ESM.docx)
-
-Methods generally follow, with alterations, this article: Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257. doi: 10.1186/s12889-021-10183-3. https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3
-<br/><br/>
-
-**RESULTS**
-<br/><br/>
-
-
-**RESULTS, (A) Studies:**
-<br/><br/>
-
-Five studies (models) meeting the eligibility criteria: DELP, IHME, IMPE, LANL, SRIV, details below. Results of estimates for each study are stored in Stata data files and graphs. Results for combination of all five studies’ estimates are also are stored in data files and combined graphs. 
-<br/><br/>
-
-(1) DELP  
-. DELP = DELPHI: Differential Equations Lead to Predictions of Hospitalizations and Infections  
-. Citation: COVID Analytics. DELPHI epidemiological case predictions. Cambridge: Operations Research Center, Massachusetts Institute of Technology. https://www.covidanalytics.io/projections  
-. Study website: https://www.covidanalytics.io/projections  
-. Estimates web site: https://www.covidanalytics.io/projections, down the page, link that reads, "Download Most Recent Predictions"  
-. License: https://github.com/COVIDAnalytics/DELPHI/blob/master/LICENSE  
-. Institution: Operations Research Center, Massachusetts Institute of Technology, Cambridge  
-. Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1, https://www.covidanalytics.io/DELPHI_documentation_pdf  
-. Periodically updated: Yes   
-. Periodical updates accessible: No  
-  
-(2) IHME
-. IHME = Institute for Health Metrics and Evaluation  
-. Citation: Institute for Health Metrics and Evaluation (IHME). COVID-19 mortality, infection, testing, hospital resource use, and social distancing projections. Seattle: Institute for Health Metrics and Evaluation (IHME), University of Washington. http://www.healthdata.org/covid  
-. Study web site: http://www.healthdata.org/covid  
-. Estimates web site: http://www.healthdata.org/covid/data-downloads  
-. License: http://www.healthdata.org/about/terms-and-conditions  
-. Institution: IHME, University of Washington, Seattle   
-. Among articles: https://www.nature.com/articles/s41591-020-1132-9  
-. Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
-(3) IMPE  
-. IMPE = Imperial College  
-. Citation: MRC Centre for Global Infectious Disease Analysis (MRC GIDA). Future scenarios of the healthcare burden of COVID-19 in low- or middle-income countries. London: MRC Centre for Global Infectious Disease Analysis, Imperial College London. https://mrc-ide.github.io/global-lmic-reports/  
-. Study web site: https://mrc-ide.github.io/global-lmic-reports/  
-. Estimates web site: https://github.com/mrc-ide/global-lmic-reports/tree/master/data  
-. License: https://github.com/mrc-ide/global-lmic-reports  
-. Institution: Imperial College, London  
-. Among articles: https://science.sciencemag.org/content/369/6502/413  
-. Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
-(4) LANL  
-. LANL = Los Alamos National Laboratories  
-. Citation: Los Alamos National Laboratory (LANL). COVID-19 cases and deaths forecasts. Los Alamos: Los Alamos National Laboratory (LANL). https://covid-19.bsvgateway.org  
-. Study web site: https://covid-19.bsvgateway.org  
-. Estimates web site: https://covid-19.bsvgateway.org, Model Outputs, Global  
-. License: https://covid-19.bsvgateway.org  
-. Institution: Los Alamos National Laboratories, Los Alamos  
-. Among documents: https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf  
-. Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
-(5) SRIV  
-. SRIV = Srivastava, Ajitesh  
-. Citation: University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19  
-. Study web site: https://scc-usc.github.io/ReCOVER-COVID-19/  
-. Estimates web site: https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts  
-. License: https://github.com/scc-usc/ReCOVER-COVID-19/blob/master/LICENSE  
-. Institution: University of Southern California, Los Angeles  
-. Among articles: https://arxiv.org/abs/2007.05180  
-. Periodically updated: Yes  
-. Periodical updates accessible: Yes  
-  
-(0) JOHN  
-. JOHN = Johns Hopkins University. Coronavirus resource center. https://coronavirus.jhu.edu  
-. Not a target study, but a benchmark for comparison.  
-. Citation: "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"  
-. Study web site: https://coronavirus.jhu.edu  
-. Estimates web site: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series , "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"  
-. License: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series  
-. Institution: Johns Hopkins University, Baltimore  
-. Among articles: Dong E, Du H, Gardner L. An interactive web-based dashboard to track COVID-19 in real time. Lancet Infect Dis. 2020 May;20(5):533-534. doi: 10.1016/S1473-3099(20)30120-1. Epub 2020 Feb 19.  
-. Periodically updated: Yes   
-. Periodical updates accessible: Yes  
-<br/><br/>
-
-  
-**RESULTS, (B) Periodical updates of component studies:** 
-<br/><br/>
-
-Periodical updates of component studies are performed here according to release of new estimates updates by the two studies with less frequent estimates updates releases, i.e., IHME and IMPE. LANL updates every 3-4 days, SRIV every day, and DELP updates frequency is not discoverable to me. With each update release by IHME or IMPE, the whole set of five studies’ estimates updates are processed (updated here) and the results are stored in a directory named after the calendar date on which update was performed. 
-<br/><br/>
-  
-**RESULTS, (C) Longitudinal visualization of component studies’ estimates updates:**
-
-Within each study, estimates for any given person-place-time unit – that is any specific outcome (e.g., daily deaths), any given location (e.g., the global level), and given calendar time period (e.g., May 2021) – might vary (in terms of height and trajectory of outcome estimates), across consecutive releases of updated estimates. Analysis of such variations should – based on my understanding – reflect that the largest proportion of variance originates from the use of new data input to the model. This is true across all-time variations. Other sources of variation include input of new data types to the model, and less frequently, major and minor updates in the modeling process, that are known as “model version”, and are quite distinct from “model estimates updates”. Based on such variation of model estimates updates for any given person-place-time unit, looking at the estimates of the same person-place-time unit across consecutive model estimates updates of any given model might be expected to provide additional insight about how model estimates evolve along with progression of the pandemic. This leads to longitudinal view of component studies’ estimates updates: e.g., look at IHME estimates for daily global deaths for May 2021 across consecutive IHME estimates releases. Timing of longitudinal visualization is set for the end of each calendar month, to minimize the role of calendar time as source of the above-described variation. 
-<br/><br/>
-
-**LIMITATIONS**
-<br/><br/>
-
-The search for target studies is not performed in a replicable method. A systematic review might reveal more target studies that meet the eligibility criteria. Software codes use a propriety software package. Use of  R or Phyton are preferable in terms of user accessibility. 
-
-<br/><br/>
  
  
  
@@ -343,6 +226,9 @@ The search for target studies is not performed in a replicable method. A systema
 
 Farshad Pourmalek, MD PhD
 
+<br/><br/>
+
+ 
 **SUMMARY**
 
 **Objectives**: To identify international and periodically updated models of the COVID-19 epidemic, compile and visualize their estimation results at the global and country levels, and periodically update the compilations. When one or more models predict an increase in daily cases or infections and deaths in the next one to three months, technical advisors to the national and subnational decision-makers can consider this early alarm for assessment and suggestion of augmentation of preventive measures and interventions. 
@@ -353,12 +239,15 @@ Farshad Pourmalek, MD PhD
 
 
 
+<br/><br/>
+
 **BACKGROUND**
 
 **Objectives and rationale**: The objectives are to identify international and periodically updated models of the COVID-19 epidemic, compile and visualize their estimations’ results at the global and country levels, and periodically update the compilations. The ultimate objective is to provide an early warning system for technical advisors to the decision-makers. When the predictions of one or more models show an increase in daily cases or infections, hospitalizations, or deaths in the next one to three months, technical advisors to the national and subnational decision-makers may consider assessing the situation and suggesting augmentation of non-pharmacologic preventive interventions and vaccinations. In doing so, the strengths and weaknesses of individual models need to be considered and those of this work. Models’ estimates demonstrate the trajectory of COVID-19 deaths, cases or infections, and hospital-related outcomes in one to three months into the future.  
 
 
 
+<br/><br/>
 
 **METHODS**
 
@@ -440,6 +329,10 @@ Five international and periodically updated models of the COVID-19 pandemic were
 The COVID-19 epidemic model by Youyang Gu [9] and the model by University of California, Los Angeles model [10] could not be categorized as international and periodically updated models. The COVID-19 International Modelling Consortium (CoMo Consortium) model, created by researchers at the University of Oxford and Cornell University [11], and CovidSim (COVID Simulation) model, developed by researchers at Imperial College, London [12], provide templates for researchers to model the future of epidemic trajectory at national and subnational levels of their choice, through adjusting the model inputs and setting the time horizon into future for the estimations. Unlike the five international and periodically updated models mentioned above, the latter two models are not intended for periodic updates by their original creators. The CoMo Consortium has engaged some countries, including Iran, but not Canada. There is no evidence of either model being used on a periodically updated basis in Iran or Canada.
 
 
+ 
+ 
+<br/><br/>
+ 
 **RESULTS**
 
 Results are described under the following items: (1) repositories for codes and data sharing, (2) data management, and (3) periodical uptakes.
@@ -483,6 +376,9 @@ Similar work: The “covidcompare” tool [18] provides graph visualization of t
 **covir2**, COVID-19 estimates at the country level: Iran [15] http://doi.org/10.5281/zenodo.5020797
 
 
+ 
+ <br/><br/>
+ 
 **Limitations and Strengths**
 
 **Limitations**: Limitations of this work include the programming languages, automatization of uptakes, and choice of the website for presentation of the results. 
@@ -491,40 +387,22 @@ Stata programming language constitutes about 99% of the codes. Whereas Stata is 
  
 Strengths and weaknesses of individual international and periodically updated COVID-19 pandemic models are not mentioned here, but they have been discussed elsewhere [1-2].
  
-Strengths: Strengths of this work include usability for informing technical advisors to the decision-makers, adaptability for use in other countries, and automatized data acquisition.
+
+**Strengths**: Strengths of this work include usability for informing technical advisors to the decision-makers, adaptability for use in other countries, and automatized data acquisition.
  
-Tested usability for informing technical advisors to the decision-makers at the country level: Results of the GitHub repository “covir2” [15] were used to present the predictions of the five international and periodically updated models of COVID-19 pandemic about the possibility, timing, slope, height, and drivers of a potential fifth wave of the epidemic in Iran. This presentation was done using the results of the covir2 repository along with the results of an e-mail survey of more than 40 epidemiologists and public health specialists. The predictions and results were presented and described in a live online session for three Deputy Ministers of Health and six epidemiologists selected by Iran’s Ministry of Health and Medical Education (MOHME). Periodical situation reports based on each uptake are also shared with MOHME. 
+_Tested usability for informing technical advisors to the decision-makers at the country level_: Results of the GitHub repository “covir2” [15] were used to present the predictions of the five international and periodically updated models of COVID-19 pandemic about the possibility, timing, slope, height, and drivers of a potential fifth wave of the epidemic in Iran. This presentation was done using the results of the covir2 repository along with the results of an e-mail survey of more than 40 epidemiologists and public health specialists. The predictions and results were presented and described in a live online session for three Deputy Ministers of Health and six epidemiologists selected by Iran’s Ministry of Health and Medical Education (MOHME). Periodical situation reports based on each uptake are also shared with MOHME. 
 
-Adaptability of the codes for use in other countries or regions in the world: The codes available in GitHub repositories “CovidVisualizedCountry” [14] and “covir2” [15] can be slightly modified by any researcher to be used for countries with and without subnational estimates respectively. “CovidVisualizedCountry” can be adjusted for use for any type of regionalization of the countries of the world, e.g., World Health Organization regions. 
-Automatized data acquisition: The Stata codes in these repositories automatically download the estimates’ data files from the five included models once executed. There is no additional need for users to locate, download, and edit the estimates’ data of individual models before running the codes. This automatic data acquisition further enhances computational reproducibility – “obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis” [19].
-Further research: Further directions include using the “ensemble” method to statistically combine models’ estimates, and retrospective assessment of models’ predictive performance. In ensemble methods, individual models are evaluated for minimum requirements of quality and reporting. They are statistically combined using specific relative weights for each model, where the weights reflect the comparative accuracy of each model. Such ensemble methods are used by European Centre for Disease Prevention and Control [20] and US COVID-19 Forecast Hub [21]. The ensemble models have been empirically shown to be more accurate than any of the individual models used in the ensemble method [22]. Retrospective assessment of models’ predictive performance includes using statistical and graphical methods to estimate and visualize the accuracy of models’ estimations [2]. 
+_Adaptability of the codes for use in other countries or regions in the world_: The codes available in GitHub repositories “CovidVisualizedCountry” [14] and “covir2” [15] can be slightly modified by any researcher to be used for countries with and without subnational estimates respectively. “CovidVisualizedCountry” can be adjusted for use for any type of regionalization of the countries of the world, e.g., World Health Organization regions. 
 
-Abbreviations
+_Automatized data acquisition_: The Stata codes in these repositories automatically download the estimates’ data files from the five included models once executed. There is no additional need for users to locate, download, and edit the estimates’ data of individual models before running the codes. This automatic data acquisition further enhances computational reproducibility – “obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis” [19].
+ 
+ 
+ <br/><br/>
+ 
+**Further research**: Further directions include using the “ensemble” method to statistically combine models’ estimates, and retrospective assessment of models’ predictive performance. In ensemble methods, individual models are evaluated for minimum requirements of quality and reporting. They are statistically combined using specific relative weights for each model, where the weights reflect the comparative accuracy of each model. Such ensemble methods are used by European Centre for Disease Prevention and Control [20] and US COVID-19 Forecast Hub [21]. The ensemble models have been empirically shown to be more accurate than any of the individual models used in the ensemble method [22]. Retrospective assessment of models’ predictive performance includes using statistical and graphical methods to estimate and visualize the accuracy of models’ estimations [2]. 
 
-CoMo (Consortium): COVID-19 International Modelling Consortium
-
-CovidSim: COVID Simulation (model)
-
-CovidVisualizedCountry: Covid Visualized Country. A GitHub repository that was created in this work for visualization of COVID-19 epidemic models’ estimates at country level – countries with subnational estimates, e.g., Canada
-
-CovidVisualizedGlobal: Covid Visualized Global. A GitHub repository that was created in this work for visualization of COVID-19 epidemic models’ estimates at global level
-
-covir2: COVID Iran Review Number 2. A GitHub repository that was created in this work for visualization of COVID-19 epidemic models’ estimates at country level – countries without subnational estimates, e.g., Iran
-
-DELP: DELPHI. Differential Equations Lead to Predictions of Hospitalizations and Infections. COVID-19 pandemic model named DELPHI developed by Massachusetts Institute of Technology, Cambridge
-
-IHME: Institute for Health Metrics and Evaluation. COVID-19 pandemic model by developed Institute for Health Metrics and Evaluation, Seattle
-
-IMPE: Imperial. COVID-19 pandemic model developed by Imperial College, London
-
-JOHN: Johns Hopkins. Coronavirus resource center, Johns Hopkins University, Baltimore
-
-LANL: Los Alamos National Laboratories. COVID-19 pandemic model developed by Los Alamos National Laboratories, Los Alamos
-
-MOHME: Ministry of Health and Medical Education (of Iran)
-
-SRIV: Srivastava, Ajitesh. COVID-19 pandemic model developed by Ajitesh Srivastava, University of Southern California, Los Angeles
-
+ 
+ 
 References
 
 1. Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257. doi: 10.1186/s12889-021-10183-3.
