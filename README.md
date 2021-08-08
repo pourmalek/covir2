@@ -397,7 +397,7 @@ Similar work: The “covidcompare” tool [18] provides graph visualization of t
 
  <br/><br/>
  
-**Limitations and Strengths**
+**LIMITATIONS, STRENGTHS, AND FURTHER DIRECTIONS**
 <br/><br/>
  
 **Limitations**: Limitations of this work include the programming languages, automatization of uptakes, and choice of the website for presentation of the results. 
