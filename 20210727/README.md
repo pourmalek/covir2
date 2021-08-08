@@ -20,6 +20,7 @@ https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-25/ihme-covid19
 
 
 <br/><br/>
+
 ****
 
 ### Merged graphs of uptake 20210727 [here](https://github.com/pourmalek/covir2/blob/main/20210727/graphs%20merged%2020210727.pdf)
