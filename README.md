@@ -79,7 +79,7 @@ The codes in these repositories can be adapted for use for any country or region
  
 ## TOC
 
-### [I. SELCTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selcted-graphs-from-latest-uptake)
+### [I. SELCTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selcted-graphs-from-latest-uptake-1)
 
 ### [II. METHODS AND RESULTS OF THIS WORK](https://github.com/pourmalek/covir2#ii-methods-and-results-of-this-work)
 
