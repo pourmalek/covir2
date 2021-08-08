@@ -433,7 +433,7 @@ _Automatized data acquisition_: The Stata codes in these repositories automatica
  
 7. Srivastava, Ajitesh. University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19 and https://github.com/scc-usc/ReCOVER-COVID-19/tree/master/results/historical_forecasts
  
-8. Johns Hopkins University. Coronavirus resource center. https://coronavirus. jhu.edu/map.html and https://github.com/CSSEGISandData/COVID-19 
+8. Johns Hopkins University. Coronavirus resource center. https://coronavirus.jhu.edu/map.html and https://github.com/CSSEGISandData/COVID-19 
  
 9. Gu, Youyang. COVID-19 Projections Using Machine Learning. https://covid19-projections.com and https://github.com/youyanggu/covid19_projections 
  
