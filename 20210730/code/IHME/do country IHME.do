@@ -25,6 +25,8 @@ log using "log country IHME.smcl", replace
 * To change update date, find and replace all, 2021-07-30 (old), with 2021-07-30 (new) <<--       <<<--- * change update date here *
                                                                                                          ***************************
 
+* AND, note that: update release date = 2021-07-30, date in download URL = 2021-07-31
+
 
 clear 
  
