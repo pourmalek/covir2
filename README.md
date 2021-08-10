@@ -3,7 +3,22 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
 
+*****************************
+<div dir="rtl"> 
 
+
+### مشهد ۱۹ مرداد ۱۴۰۰
+
+
+## اگر به داد مردم نرسیم واقعاً فکر کنم یک کشتار عظیمی باقی خواهد ماند که در تاریخ خواهند نوشت و آیندگان ممکن است بد در مورد ما قضاوت کنند. 
+
+     
+<div dir="ltr">
+ 
+*****************************
+ 
+ 
+ 
 ### Combine and visualize international periodically updated estimates of COVID-19 
 
 ### <div align="center"> at the country level, countries without subnational level estimates 
