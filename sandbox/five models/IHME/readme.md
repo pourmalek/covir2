@@ -1,4 +1,4 @@
 
-<dir="auto">
+<div dir="rtl"> </div>
 
 یک 
