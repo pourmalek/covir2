@@ -1,2 +1,4 @@
 
-<dir: lft>
+dir="auto"
+
+یک 
