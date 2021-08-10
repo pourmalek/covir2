@@ -1,4 +1,4 @@
 
-dir="auto"
+<dir="auto">
 
 یک 
