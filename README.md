@@ -3,8 +3,13 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
 
+  *****************************
+  *****************************
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/129063980-0be80e88-9567-44bc-845d-2606e71bd0f9.png)
+
+  *****************************
+  *****************************
  
  
 ### Combine and visualize international periodically updated estimates of COVID-19 
