@@ -3,21 +3,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
 
-  *****************************
-  *****************************
-  
-  https://fararu.com/fa/news/500531/افشاگری-تلخ-زالی-ما-آمارهای-مرگ-و-میر-را-از-سازمان-جهانی-بهداشت-پنهان-کردیم
-
- [PDF](https://github.com/pourmalek/covir2/blob/main/Dr%20Zali%2014000520.pdf)
-
-
-![image](https://user-images.githubusercontent.com/30849720/129063980-0be80e88-9567-44bc-845d-2606e71bd0f9.png)
- 
- 
-
-
-  *****************************
-  *****************************
  
  
 ### Combine and visualize international periodically updated estimates of COVID-19 
