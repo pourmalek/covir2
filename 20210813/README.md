@@ -1,13 +1,13 @@
 ### Study update dates in uptake 20210813
 
-DELP 20210813, IHME 20210806, IMPE 20210806, LANL 20210808, SRIV 20210813
+DELP 20210813, IHME 20210806, **_IMPE 20210806_**, LANL 20210808, SRIV 20210813
 <br/><br/>
 
 IMPE update 20210806 (2021-08-06_v8.csv.zip) released on 20210813.
 
 <br/><br/>
 
-### Note: This update 20210806 of IMPE is dead at birth. See below graph (5) Daily deaths, 2021, reference scenario with uncertainty, IMPE . While JOHN and Worldometer web site show PCR-positive daily deaths officially report by Ministry of Health of Iran surpassed 411 on 20210802, on IMPE update 20210806 released on 20210813 says daily deaths will soon go below 400. 
+### Note: This update 20210806 of IMPE is dead at birth. See below graph [(5) Daily deaths, 2021, reference scenario with uncertainty, IMPE](). While JOHN and Worldometer web site show PCR-positive daily deaths officially report by Ministry of Health of Iran surpassed 411 on 20210802, on IMPE update 20210806 released on 20210813 says daily deaths will soon go below 400. 
 
 <br/><br/>
 
