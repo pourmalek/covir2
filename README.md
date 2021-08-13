@@ -105,10 +105,11 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20210806`](https://github.com/pourmalek/covir2/tree/main/20210806)
+#### LATEST UPTAKE: uptake [`20210813`](https://github.com/pourmalek/covir2/tree/main/20210813)
  
-#### DELP 20210806, **_IHME 20210806_**, IMPE 20210719, LANL 20210801, SRIV 20210801
+#### DELP 20210813, IHME 20210806, **_IMPE 20210806_**, LANL 20210808, SRIV 20210813
  
+### Note: This update 20210806 of IMPE is dead at birth. See below graph (5) Daily deaths, 2021, reference scenario with uncertainty, IMPE. While JOHN and Worldometer web site show PCR-positive daily deaths officially report by Ministry of Health of Iran surpassed 411 on 20210802, on IMPE update 20210806 released on 20210813 says daily deaths will soon go below 400.  
  
   <br/><br/>
 
