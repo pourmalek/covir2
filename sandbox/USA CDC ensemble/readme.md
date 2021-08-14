@@ -124,4 +124,13 @@ University of Southern Californiaexternal icon (Model: USC)
 
 1 The full range of the prediction intervals is not visible for all state plots. Please see the forecast data for the full range of state-specific prediction intervals.
 
+*************
+*************
 
+GitHub:
+
+https://github.com/reichlab/covid19-forecast-hub
+
+https://github.com/reichlab/covid19-forecast-hub/tree/master/code
+
+http://reichlab.io/d3-foresight/
