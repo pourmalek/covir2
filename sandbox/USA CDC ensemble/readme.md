@@ -133,6 +133,6 @@ https://github.com/reichlab/covid19-forecast-hub
 
 https://github.com/reichlab/covid19-forecast-hub/tree/master/code
 
-https://www.zoltardata.com
+https://zoltardata.com/project/44
 
 http://reichlab.io/d3-foresight/
