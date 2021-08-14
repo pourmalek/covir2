@@ -101,6 +101,27 @@ The codes in these repositories can be adapted for use for any country or region
 
 ## I. SELCTED GRAPHS FROM LATEST UPTAKE
 <br/><br/>
+ 
+****
+  
+Abbreviations used in graphs:  
+  
+(See [Methods and Results](https://github.com/pourmalek/covir2#ii-methods-and-results-of-this-work-1) for full details.)
+
+**DELP**: DELPHI. Differential Equations Lead to Predictions of Hospitalizations and Infections. COVID-19 pandemic model named DELPHI developed by Massachusetts Institute of Technology, Cambridge
+  
+**IHME**: Institute for Health Metrics and Evaluation. COVID-19 pandemic model by developed Institute for Health Metrics and Evaluation, Seattle
+  
+**IMPE**: Imperial. COVID-19 pandemic model developed by Imperial College, London
+  
+**JOHN**: Johns Hopkins. Coronavirus resource center, Johns Hopkins University, Baltimore
+  
+**LANL**: Los Alamos National Laboratories. COVID-19 pandemic model developed by Los Alamos National Laboratories, Los Alamos
+  
+**SRIV**: Srivastava, Ajitesh. COVID-19 pandemic model developed by Ajitesh Srivastava, University of Southern California, Los Angeles
+  
+  
+ 
 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
