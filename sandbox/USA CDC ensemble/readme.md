@@ -137,4 +137,6 @@ https://zoltardata.com/project/44
 
 https://github.com/reichlab/covid19-forecast-evals
 
+https://www.cdc.gov/coronavirus/2019-ncov/science/forecasting/mathematical-modeling.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcovid-data%2Fmathematical-modeling.html
+
 http://reichlab.io/d3-foresight/
