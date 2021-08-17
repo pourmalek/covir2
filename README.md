@@ -306,7 +306,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: Operations Research Center, Massachusetts Institute of Technology, Cambridge  
 . Among articles: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883965/ , https://www.medrxiv.org/content/10.1101/2020.06.23.20138693v1, https://www.covidanalytics.io/DELPHI_documentation_pdf  
 . Periodically updated: Yes   
-. Periodical updates accessible: No    
+. Periodical updates accessible: Yes    
 <br/><br/>
 (2) IHME
 . IHME = Institute for Health Metrics and Evaluation  
