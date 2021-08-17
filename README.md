@@ -711,7 +711,7 @@ _Component studies and their scenarios_ are mentioned below.
 ## IV. SELECTED GRAPHS FROM PREVIOUS UPTAKES
  
  
-## Selected graphs from previous uptakes are stored in another web page: [RESULTS, PREVIOUS UPTAKES](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md) 
+## Selected graphs from previous uptakes are stored in another web page: [RESULTS, PREVIOUS UPTAKES]https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES) 
  
  
   
