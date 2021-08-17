@@ -9,7 +9,7 @@ IHME update 20210730 (original release on 20210730) was identical with previous 
 
 As of 20210801, the replaced (or version 2) of the IHME update 20210730 has changed and is not identical with the previous update. 
 
-As of 20210817, the file URL is https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-31/ihme-covid19.zip 
+As of 20210808, the file URL is https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-31/ihme-covid19.zip 
 
 
 <br/><br/>
