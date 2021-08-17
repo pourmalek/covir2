@@ -86,7 +86,7 @@ The codes in these repositories can be adapted for use for any country or region
 
 ### [III. INNER WORKS OF THIS REPOSITORY](https://github.com/pourmalek/covir2#iii-inner-works-of-this-repository-1)
 
-### [IV. SELECTED GRAPHS FROM PREVIOUS UPTAKES](https://github.com/pourmalek/covir2#iv-selceted-graphs-from-previous-uptakes-1)
+### [IV. SELECTED GRAPHS FROM PREVIOUS UPTAKES](https://github.com/pourmalek/covir2#iv-selected-graphs-from-previous-uptakes-1)
  
 ****
 
