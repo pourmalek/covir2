@@ -25,8 +25,6 @@ log using "log country IHME.smcl", replace
 * To change update date, find and replace all, 2021-07-30 (old), with 2021-07-30 (new) <<--       <<<--- * change update date here *
                                                                                                          ***************************
 
-* AND, note that: update release date = 2021-07-30, date in download URL = 2021-07-31
-
 
 clear 
  
@@ -34,8 +32,8 @@ clear
 
 * get IHME estimates
 
-// copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip // as of 2021-07-30
-copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-31/ihme-covid19.zip ihme-covid19.zip // as of 2021-08-08
+// https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip // as of 2021-07-30
+copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-07-31/ihme-covid19.zip ihme-covid19.zip
 unzipfile ihme-covid19.zip, replace
 erase ihme-covid19.zip
 
@@ -484,7 +482,7 @@ replace loc_grand_name = "$country"
 
 
 drop date_original v1 hosp_data_type deaths_data_type ///
-mobility_data_type mobility_composite ///
+mobility_data_type /// mobility_composite ///
 confirmed_infections_data_type confirmed_infections est_infections_data_type ///
 total_pop // seroprev_data_type
 
@@ -1298,6 +1296,30 @@ qui graph save "graph 45 COVID-19 daily deaths and infections $country, IHME.gph
 qui graph export "graph 45 COVID-19 daily deaths and infections $country, IHME.pdf", replace
 
 ***
+
+
+* mobility_composite
+
+twoway ///
+(line mobility_composite date, sort lcolor(red) yaxis(1) yscale( axis(1))) ///
+(line DayINFMeRaA02S01 date, sort lcolor(blue) yaxis(2) yscale(axis(2))) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) xlabel(, angle(forty_five)) ///
+ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal) axis(1)) ///
+ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal) axis(2)) ///
+ytitle(Daily mobility composite, axis(1)) ytitle(Daily infections, axis(2)) ///
+title("COVID-19 daily mobility composite and infections $country, IHME", size(medium)) xscale(lwidth(vthin) lcolor(gray*.2)) ///
+yscale(lwidth(vthin) lcolor(grey*.2)) yscale(titlegap(2) axis(1)) ///
+yscale(lwidth(vthin) lcolor(grey*.2)) yscale(titlegap(2) axis(2)) ///
+legend(region(lcolor(none))) legend(order(1 "Daily mobility composite" 2 "Daily infections") size(small))
+
+qui graph save "graph 50 COVID-19 mobility composite $country, IHME.gph", replace
+qui graph export "graph 50 COVID-19 mobility composite $country, IHME.pdf", replace
+
+
+
+
+
+****
 
 
 drop location_id total_tests_data_type
