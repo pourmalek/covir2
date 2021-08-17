@@ -748,27 +748,24 @@ _Component studies and their scenarios_ are mentioned below.
     
 ### Logical order of graphs
 
-1.	Location level: National, followed by 3 select provinces (two most affected, and BC)
   
-    . To follow prediction for the national level, and further examine if province-level increases are predicted
-  
-2.	Uptake date: Most recent uptake, followed by less recent uptakes
+1.	Uptake date: Most recent uptake, followed by less recent uptakes
   
     . To examine changes in predictions across consecutive uptakes
   
-3.	Outcomes: Daily deaths, Daily cases or infections, Hospital-related outcomes, Daily deaths estimated to reported, Daily cases or infections estimated to reported cases.
+2.	Outcomes: Daily deaths, Daily cases or infections, Hospital-related outcomes, Daily deaths estimated to reported, Daily cases or infections estimated to reported cases.
   
     . To examine different outcomes with different public health consequences and model performance implications
   
-4.	Calendar time of estimates coverage: All-time, followed by 2021
+3.	Calendar time of estimates coverage: All-time, followed by 2021
   
     . To view the whole epidemic trajectory, and further focus on near future
   
-5.	Scenarios: Reference scenarios, followed by alternative scenarios
+4.	Scenarios: Reference scenarios, followed by alternative scenarios
   
     . To examine the main (aka. status quo) scenario, and alternative (better and worse) scenarios
   
-6.	Models: Different models within each graph (for which model estimates update release dates are maximally synchronized), plus official reports of the country to WHO (curated by Johns Hopkins university) as under-reported benchmark for trends 
+5.	Models: Different models within each graph (for which model estimates update release dates are maximally synchronized), plus official reports of the country to WHO (curated by Johns Hopkins university) as under-reported benchmark for trends 
   
     . To examine how heterogeneity in methods used by different models results in heterogenous results for the same outcome (same time-place-person aggregated units)
   
