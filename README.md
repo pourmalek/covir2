@@ -104,7 +104,7 @@ The codes in these repositories can be adapted for use for any country or region
  
 ****
   
-Abbreviations used in graphs:  
+### Abbreviations used in graphs:  
   
 (See [Methods and Results](https://github.com/pourmalek/covir2#ii-methods-and-results-of-this-work-1) for full details.)
 
