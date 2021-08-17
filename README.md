@@ -581,7 +581,7 @@ _Component studies and their scenarios_ are mentioned below.
 
 #### A05 SRIV
 * S00 = [current]
-* Note: SRIV has 3 sets of scenrios, here (add). 
+* Note: SRIV has 3 sets of scenrios; [see](https://github.com/scc-usc/ReCOVER-COVID-19)
 <br/><br/>
 
 
