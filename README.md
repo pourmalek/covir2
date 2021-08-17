@@ -528,6 +528,8 @@ Preproduced _outputs_ are stored for each uptake, e.g., [`20210709`](https://git
 _Component studies and their scenarios_ are mentioned below.
 
 [`Variable name structure`](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md)
+ 
+[`Rule for uptakes`](https://github.com/pourmalek/covir2/blob/main/setup/README.md)   
 
 [`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md)
 
