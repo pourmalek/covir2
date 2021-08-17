@@ -709,32 +709,37 @@ _Component studies and their scenarios_ are mentioned below.
 ********************************************************************************************************************************************
 
 ## IV. SELCTED GRAPHS FROM PREVIOUS UPTAKES
+ 
+ 
+## Selected graphs from previous uptakes are stored in another web page: [RESULTS, PREVIOUS UPTAKES](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md) 
+ 
+ 
   
 ### List of graphs  
   
-[graph (1) Daily deaths, reference scenarios, all time](https://github.com/pourmalek/covir2#graph-1-iran---daily-deaths-reference-scenarios-all-time)
+[graph (1) Daily deaths, reference scenarios, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-1-iran---daily-deaths-reference-scenarios-all-time)
 
-[graph (2) Daily deaths, reference scenarios, 2021](https://github.com/pourmalek/covir2#graph-2-iran---daily-deaths-reference-scenarios-2021) 
+[graph (2) Daily deaths, reference scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-2-iran---daily-deaths-reference-scenarios-2021) 
   
-[graph (3) Daily deaths, 2021, reference scenario with uncertainty, IHME, 2021](https://github.com/pourmalek/covir2#graph-3-iran---daily-deaths-2021-reference-scenario-with-uncertainty-ihme)
+[graph (3) Daily deaths, 2021, reference scenario with uncertainty, IHME, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-3-iran---daily-deaths-2021-reference-scenario-with-uncertainty-ihme)
   
-[graph (4) Iran - Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2#graph-4-iran---daily-deaths-2021-reference-scenario-with-uncertainty-ihme)
+[graph (4) Iran - Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-4-iran---daily-deaths-2021-reference-scenario-with-uncertainty-ihme)
   
-[graph (5) Iran - Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2#graph-5-iran---daily-deaths-2021-reference-scenario-with-uncertainty-impe) 
+[graph (5) Iran - Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-5-iran---daily-deaths-2021-reference-scenario-with-uncertainty-impe) 
  
-[graph (6) Iran - Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2#graph-6-iran---daily-deaths-2021-3-scenarios-impe) 
+[graph (6) Iran - Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-6-iran---daily-deaths-2021-3-scenarios-impe) 
 
-[graph (7) Iran - Daily cases or infections, all time](https://github.com/pourmalek/covir2#graph-7-iran---daily-cases-or-infections-all-time) 
+[graph (7) Iran - Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-7-iran---daily-cases-or-infections-all-time) 
  
-[graph (8) Iran - Daily cases or infections, 2021](https://github.com/pourmalek/covir2#graph-8-iran---daily-cases-or-infections-2021) 
+[graph (8) Iran - Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8-iran---daily-cases-or-infections-2021) 
  
-[graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2#graph-9-iran---hospital-related-outcomes-all-time) 
+[graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-9-iran---hospital-related-outcomes-all-time) 
  
-[graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2#graph-10-iran---hospital-related-outcomes-2021) 
+[graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-10-iran---hospital-related-outcomes-2021) 
  
-[graph (11) Iran - Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2#graph-11-iran---daily-deaths-estimated-to-reported-all-time) 
+[graph (11) Iran - Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-11-iran---daily-deaths-estimated-to-reported-all-time) 
  
-[graph (12) Iran - Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2#graph-12-iran---daily-cases-or-infections-estimated-to-reported-cases-2021) 
+[graph (12) Iran - Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-12-iran---daily-cases-or-infections-estimated-to-reported-cases-2021) 
 
  
  
@@ -775,54 +780,6 @@ _Component studies and their scenarios_ are mentioned below.
 <br/><br/>
 
 
-
-### Selected graphs - Iran
-  
-**** 
-****  
-  
-********************************************************************************************************************************************
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
 
  
