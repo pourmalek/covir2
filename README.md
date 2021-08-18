@@ -461,6 +461,45 @@ _Automatized data acquisition_: The Stata codes in these repositories automatica
  
 <br/><br/>
  
+ 
+
+<br/><br/>
+  
+******************************************************************************************************************************************  
+  
+**DELERATIONS**  
+    
+  
+**Ethics approval and consent to participate**
+
+All the used and produced data are at non-individual and aggregate level; publicly available on the Internet; and under pertinent licenses and copyrights for non-commercial use, reproduction, and distribution for scientific research, provided that the conditions mentioned in their respective licenses and copyrights are met, as provided in [23]. Therefore, no ethics approval or consent to participate were applicable.  
+  
+  
+**Consent for publication**
+
+Not applicable.
+  
+
+**Availability of data and materials**
+
+The data described in this Data note can be freely and openly accessed on (1) GitHub repository “CovidVisualizedGlobal” under (http://doi.org/10.5281/zenodo.5019030) [13], (2) GitHub repository “CovidVisualizedCountry” under (http://doi.org/10.5281/zenodo.5019482) [14], and (3) GitHub repository “covir2” under (http://doi.org/10.5281/zenodo.5020797) [15]. See references [13-15] for details and links to the data.  
+
+  
+**Competing interests**
+
+The author worked as a [post-graduate research fellow in Institute for Health Metrics and Evaluation](http://www.healthdata.org/about/farshad-pourmalek) from 2009 to 2011 and continues voluntary collaboration as a Global Burden of Disease study collaborator without employment or financial relation. The author declares that he has no competing interests.  
+  
+  
+**Funding**
+
+There were no sources of funding for this research.  
+
+******************************************************************************************************************************************  
+   
+ 
+ 
+ 
+ 
 **References**
 
 1. Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257. doi: 10.1186/s12889-021-10183-3.
