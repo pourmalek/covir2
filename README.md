@@ -14,7 +14,13 @@
 ## <div align="center"> covir2 = COVID Iran review number 2
  
  
-  *****************************
+*****************************
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/30849720/129822476-c4dced1b-c345-409f-8319-9e13e14bef46.png)
+
+ 
+*****************************
   
 #### :eyes: SEE graphs, code, and data of periodical updates of COVID-19 pandemic models’ estimates: 
   
