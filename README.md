@@ -14,6 +14,13 @@
 ## <div align="center"> covir2 = COVID Iran review number 2
  
 *****************************
+*****************************
+***************************** 
+ 
+### Timeline
+ 
+*****************************
+ 
 https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-outbreak-in-iran
  
  
