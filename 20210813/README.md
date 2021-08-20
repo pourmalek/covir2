@@ -6,6 +6,15 @@ DELP 20210813, IHME 20210806, **_IMPE 20210806_**, LANL 20210808, SRIV 20210813
 IMPE update 20210806 (2021-08-06_v8.csv.zip) released on 20210813.
 
 <br/><br/>
+
+### Note 1: This update 20210806 of IMPE is dead at birth FOR IRAN. See graph for Iran here: [(5) Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210813/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf). While JOHN and Worldometer web site show PCR-positive daily deaths officially report by Ministry of Health of Iran surpassed 411 on 20210802, the IMPE update 20210806 released on 20210813 says daily deaths will soon go below 400 in Iran. Does the above observation _increase the validity_ of this update 20210806 of IMPE in other locations or at the global level? _No_. 
+
+
+
+### Note 2: Predictions of IHME update 20210806 and IHME update 20210730 for Canada and its provinces are identical. If IHME changes its update 20210730, in a way that they are not the same as the previous update 20210730, they will be processed here. Predictions of IHME update 20210806 and IHME update 20210730 for global level and for Iran are NOT identical. It has been observed recently when IHME releases a new update, the predictions are identical with its previous update, across locations (global, Canada, Iran). After a few days, the same last released update, when processed, is not the same as the previous update, i.e., predications have been _really_ updated. This is the first time that a released IHME update is the same as the previous update in one location (Canada) and is not the same in other locations (global, Iran). 
+
+<br/><br/>
+
 ****
 
 ### Merged graphs of uptake 20210813 [here](https://github.com/pourmalek/covir2/blob/main/20210813/graphs%20merged%2020210813.pdf)
