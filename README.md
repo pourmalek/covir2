@@ -25,6 +25,26 @@
 
 
  
+ .
+ 
+http://www.emro.who.int/irn/iran-news/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.html
+ 
+.
+ 
+ 
+### Statement on COVID-19 vaccination in Islamic Republic of Iran by WHO Representative Dr Jaffar Hussain
+
+Tehran, 19 August 2021 – WHO expresses concern over the COVID-19 outbreak in Islamic Republic of Iran, and its impact on the lives, well-being, and livelihoods of the Iranian people. The Organization remains committed to working with all partners to saves lives, ensure well-being, and control infection across the country. 
+
+As COVID-19 continues to hit the country aggressively, the level of vaccination coverage is low. As of 16 August 2021, 13.1% of the total population have received a first dose and 5.15% have received 2 doses. While delays in delivering sufficient doses of COVID-19 vaccines have limited the capacity to increase coverage, it is encouraging to see an acceleration that started in early August 2021 to vaccinate priority groups and people in the age groups of 40s and 30s in the worst hit provinces of Islamic Republic of Iran.
+
+To date, the COVAX Facility has delivered a total of 5 064 610 COVID-19 vaccines doses to Islamic Republic of Iran. An additional 8.5 million doses from the COVAX Facility will be delivered in August and September 2021. Vaccine donations from other countries are expected to arrive in the country on 20 August 2021.
+
+As part of its ongoing response to the pandemic, WHO continues to mobilize teams to provide information, recommendations and technical guidance. WHO also continues to engage proactively with national counterparts to strengthen the health care system and raise awareness about the virus to counter its heavy economic and social burden. One key measure taken in Islamic Republic of Iran is the COVID-19 Emergency Response Project (ICERP), financed by The World Bank and in cooperation with the Ministry of Health and Medical Education. The project has delivered life-saving medical and diagnostic equipment to public hospitals and laboratories across the country to support the fight against the COVID-19 pandemic.
+ 
+http://www.emro.who.int/irn/iran-news/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.html
+ 
+ 
 *****************************
   
 #### :eyes: SEE graphs, code, and data of periodical updates of COVID-19 pandemic models’ estimates: 
