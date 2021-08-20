@@ -1,0 +1,626 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/log country DELP.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}13 Aug 2021, 12:22:03
+{txt}
+{com}. 
+. ******************************************************************************
+. * This is "do country DELP.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare DELPHI data for country
+. ******************************************************************************
+. 
+. 
+.                                                                                                          ***************************
+. * To change update date, find and replace all, 20210813 (old), with 20210813 (new) <<--           <<<--- * change update date here *
+.                                                                                                          ***************************
+. 
+. * Get DELPHI data for country
+. 
+. 
+. clear
+{txt}
+{com}. 
+. copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20210813.csv Global_V4_since100_20210813.csv
+{txt}
+{com}. 
+. import delimited using "Global_V4_since100_20210813.csv", clear varnames(1)
+{res}{text}(16 vars, 40,320 obs)
+
+{com}. 
+. rename country loc_grand_name
+{res}{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(40,152 observations deleted)
+
+{com}. 
+. 
+. * gen date
+. 
+. rename day date_original
+{res}{txt}
+{com}. 
+. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22401{txt},{res}22568{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}01may2021{txt},{res}15oct2021{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}168{col 51}{txt}missing .:  {res}0{txt}/{res}168
+
+{txt}{col 19}mean:{res}{col 26} 22484.5{txt} = {res}23jul2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 48.6415
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22417{col 37} 22442.5{col 47} 22484.5{col 57} 22526.5{col 67}   22552
+{col 26}17may2021{col 36}11jun2021{col 46}23jul2021{col 56}03sep2021{col 66}29sep2021
+{txt}
+{com}. 
+. drop year month day date2
+{txt}
+{com}. 
+. 
+. * rename outcome variables
+. 
+. 
+. * total vars
+. 
+. rename totaldetecteddeaths   TotDeaMeRaA01S00
+{res}{txt}
+{com}. rename totaldetecteddeathslb TotDeaLoRaA01S00
+{res}{txt}
+{com}. rename totaldetecteddeathsub TotDeaUpRaA01S00
+{res}{txt}
+{com}. 
+. label var TotDeaMeRaA01S00 "Total Deaths Mean DELP S0"
+{txt}
+{com}. label var TotDeaMeRaA01S00 "Total Deaths Lower DELP S0"
+{txt}
+{com}. label var TotDeaMeRaA01S00 "Total Deaths Upper DELP S0"
+{txt}
+{com}. 
+. rename totaldetected   TotCasMeRaA01S00
+{res}{txt}
+{com}. rename totaldetectedlb TotCasLoRaA01S00
+{res}{txt}
+{com}. rename totaldetectedub TotCasUpRaA01S00
+{res}{txt}
+{com}. 
+. label var TotCasMeRaA01S00 "Total Cases Mean DELP S0"
+{txt}
+{com}. label var TotCasMeRaA01S00 "Total Cases Lower DELP S0"
+{txt}
+{com}. label var TotCasMeRaA01S00 "Total Cases Upper DELP S0"
+{txt}
+{com}. 
+. 
+. * gen daily vars and rename
+. 
+. sort date
+{txt}
+{com}. 
+. gen DayDeaMeRaA01S00 =  TotDeaMeRaA01S00[_n] - TotDeaMeRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayDeaLoRaA01S00 =  TotDeaLoRaA01S00[_n] - TotDeaLoRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayDeaUpRaA01S00 =  TotDeaUpRaA01S00[_n] - TotDeaUpRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayCasMeRaA01S00 =  TotCasMeRaA01S00[_n] - TotCasMeRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayCasLoRaA01S00 =  TotCasLoRaA01S00[_n] - TotCasLoRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayCasUpRaA01S00 =  TotCasUpRaA01S00[_n] - TotCasUpRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. 
+. label var DayDeaMeRaA01S00 "Daily Deaths Mean DELP S0"
+{txt}
+{com}. label var DayDeaLoRaA01S00 "Daily Deaths Lower DELP S0"
+{txt}
+{com}. label var DayDeaUpRaA01S00 "Daily Deaths Upper DELP S0"
+{txt}
+{com}. 
+. label var DayCasMeRaA01S00 "Daily Cases Mean DELP S0"
+{txt}
+{com}. label var DayCasLoRaA01S00 "Daily Cases Lower DELP S0"
+{txt}
+{com}. label var DayCasUpRaA01S00 "Daily Cases Upper DELP S0"
+{txt}
+{com}. 
+. label var TotDeaMeRaA01S00 "Total Deaths Mean DELP S0"
+{txt}
+{com}. label var TotDeaLoRaA01S00 "Total Deaths Lower DELP S0"
+{txt}
+{com}. label var TotDeaUpRaA01S00 "Total Deaths Upper DELP S0"
+{txt}
+{com}. 
+. label var TotCasMeRaA01S00 "Total Cases Mean DELP S0"
+{txt}
+{com}. label var TotCasLoRaA01S00 "Total Cases Lower DELP S0"
+{txt}
+{com}. label var TotCasUpRaA01S00 "Total Cases Upper DELP S0"
+{txt}
+{com}. 
+. 
+. 
+. rename active DayActMeRaA01S00
+{res}{txt}
+{com}. 
+. rename activehospitalized DayHosMeRaA01S00
+{res}{txt}
+{com}. 
+. rename activeventilated DayVenMeRaA01S00
+{res}{txt}
+{com}. 
+. rename cumulativehospitalized TotHosMeRaA01S00
+{res}{txt}
+{com}. 
+. label var DayActMeRaA01S00 "Daily Cases Active Mean DELP S0"
+{txt}
+{com}. 
+. label var DayHosMeRaA01S00 "Daily Cases Active Hospitalized Mean DELP S0"
+{txt}
+{com}. 
+. label var DayVenMeRaA01S00 "Daily Cases Active Ventilated Mean DELP S0"
+{txt}
+{com}. 
+. label var TotHosMeRaA01S00 "Total Cases Active Mean DELP S0"
+{txt}
+{com}. 
+.  
+. 
+. keep ///
+> loc_grand_name date ///
+> TotDeaMeRaA01S00 TotDeaLoRaA01S00 TotDeaUpRaA01S00 ///
+> DayDeaMeRaA01S00 DayDeaLoRaA01S00 DayDeaUpRaA01S00 ///
+> TotCasMeRaA01S00 TotCasLoRaA01S00 TotCasUpRaA01S00 ///
+> DayCasMeRaA01S00 DayCasLoRaA01S00 DayCasUpRaA01S00 ///
+> DayActMeRaA01S00 DayHosMeRaA01S00 DayVenMeRaA01S00 TotHosMeRaA01S00
+{txt}
+{com}. 
+. 
+. order ///
+> loc_grand_name date ///
+> TotDeaMeRaA01S00 TotDeaLoRaA01S00 TotDeaUpRaA01S00 ///
+> DayDeaMeRaA01S00 DayDeaLoRaA01S00 DayDeaUpRaA01S00 ///
+> TotCasMeRaA01S00 TotCasLoRaA01S00 TotCasUpRaA01S00 ///
+> DayCasMeRaA01S00 DayCasLoRaA01S00 DayCasUpRaA01S00 ///
+> DayActMeRaA01S00 DayHosMeRaA01S00 DayVenMeRaA01S00 TotHosMeRaA01S00
+{txt}
+{com}. 
+. 
+. 
+. * gen cfr
+. 
+. gen DayCfrMeRaA01S00 = 100 * DayDeaMeRaA01S00 / DayCasMeRaA01S00
+{txt}(1 missing value generated)
+
+{com}. gen DayCfrLoRaA01S00 = 100 * DayDeaLoRaA01S00 / DayCasLoRaA01S00
+{txt}(15 missing values generated)
+
+{com}. gen DayCfrUpRaA01S00 = 100 * DayDeaUpRaA01S00 / DayCasUpRaA01S00
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayCfrMeRaA01S00 "Daily CFR Mean DELP S0 V4"
+{txt}
+{com}. label var DayCfrLoRaA01S00 "Daily CFR Lower DELP S0 V4"
+{txt}
+{com}. label var DayCfrUpRaA01S00 "Daily CFR Upper DELP S0 V4"
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. 
+. 
+. 
+. * gen "Daily cases mean div by daily deaths mean DELP DayCbD" for visulization of temporal relation of deaths and cases peaks 
+. 
+. 
+. summ DayDeaMeRaA01S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaMeR~00 {c |}{res}        167    322.4491    156.8604        128        592
+{txt}
+{com}. gen DayDeMMeRaA01S00 = r(mean)
+{txt}
+{com}. label var DayDeMMeRaA01S00 "Daily deaths mean DELP DayDeM"
+{txt}
+{com}. 
+. summ DayCasMeRaA01S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasMeR~00 {c |}{res}        167     21361.6    12384.22       4748      47527
+{txt}
+{com}. gen DayCaMMeRaA01S00 = r(mean)
+{txt}
+{com}. label var DayCaMMeRaA01S00 "Daily cases mean DELP DayCaM"
+{txt}
+{com}.                               
+. gen DayCbDMeRaA01S00 = DayCaMMeRaA01S00 / DayDeaMeRaA01S00
+{txt}(1 missing value generated)
+
+{com}. label var DayCbDMeRaA01S00 "Daily cases mean div by daily deaths mean DELP DayCbD"
+{txt}
+{com}. summ DayCbDMeRaA01S00
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCbDMeR~00 {c |}{res}        167    85.91356    43.95526   36.08378   166.8875
+{txt}
+{com}.         
+. gen DayDMuMeRaA01S00 = DayDeaMeRaA01S00 * DayCbDMeRaA01S00
+{txt}(1 missing value generated)
+
+{com}. label var DayDMuMeRaA01S00 "Daily deaths scaled (times means of cases by deaths) only for visualization DELP"
+{txt}
+{com}. summ DayDMuMeRaA01S00   
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDMuMeR~00 {c |}{res}        167     21361.6    .0003968    21361.6    21361.6
+{txt}
+{com}. 
+. 
+. 
+. 
+. ***********************
+. 
+. * graphs
+. 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. * daily deaths wo CI
+. 
+. twoway  ///
+> (line DayDeaMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)        
+{res}{txt}
+{com}.            
+. graph save "graph 1 COVID-19 daily deaths, $country, DELP wo CI.gph", replace
+{txt}(note: file graph 1 COVID-19 daily deaths, Iran, DELP wo CI.gph not found)
+{res}{txt}(file graph 1 COVID-19 daily deaths, Iran, DELP wo CI.gph saved)
+
+{com}. graph export "graph 1 COVID-19 daily deaths, $country, DELP wo CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 1 COVID-19 daily deaths, Iran, DELP wo CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily deaths with CI
+. 
+. twoway (rarea DayDeaLoRaA01S00 DayDeaUpRaA01S00 date, sort color(green*.2)) ///
+> (line DayDeaMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> subtitle("with confidence limits", size(small)) 
+{res}{txt}
+{com}.            
+. graph save "graph 2 COVID-19 daily deaths, $country, DELP with CI.gph", replace
+{txt}(note: file graph 2 COVID-19 daily deaths, Iran, DELP with CI.gph not found)
+{res}{txt}(file graph 2 COVID-19 daily deaths, Iran, DELP with CI.gph saved)
+
+{com}. graph export "graph 2 COVID-19 daily deaths, $country, DELP with CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 2 COVID-19 daily deaths, Iran, DELP with CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total deaths wo CI 
+. 
+. twoway  ///
+> (line TotDeaMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)
+{res}{txt}
+{com}. 
+. graph save "graph 3 COVID-19 total deaths, $country, DELP wo CI.gph", replace
+{txt}(note: file graph 3 COVID-19 total deaths, Iran, DELP wo CI.gph not found)
+{res}{txt}(file graph 3 COVID-19 total deaths, Iran, DELP wo CI.gph saved)
+
+{com}. graph export "graph 3 COVID-19 total deaths, $country, DELP wo CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 3 COVID-19 total deaths, Iran, DELP wo CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total deaths with CI 
+. 
+. twoway (rarea TotDeaLoRaA01S00 TotDeaUpRaA01S00 date, sort color(green*.2)) ///
+> (line TotDeaMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> subtitle("with confidence limits", size(small)) 
+{res}{txt}
+{com}.         
+. graph save "graph 4 COVID-19 total deaths, $country, DELP with CI.gph", replace
+{txt}(note: file graph 4 COVID-19 total deaths, Iran, DELP with CI.gph not found)
+{res}{txt}(file graph 4 COVID-19 total deaths, Iran, DELP with CI.gph saved)
+
+{com}. graph export "graph 4 COVID-19 total deaths, $country, DELP with CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 4 COVID-19 total deaths, Iran, DELP with CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases wo CI
+. 
+. twoway ///
+> (line DayCasMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)        
+{res}{txt}
+{com}. 
+. graph save "graph 5 COVID-19 daily cases, $country, DELP wo CI.gph", replace
+{txt}(note: file graph 5 COVID-19 daily cases, Iran, DELP wo CI.gph not found)
+{res}{txt}(file graph 5 COVID-19 daily cases, Iran, DELP wo CI.gph saved)
+
+{com}. graph export "graph 5 COVID-19 daily cases, $country, DELP wo CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 5 COVID-19 daily cases, Iran, DELP wo CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases with CI
+. 
+. twoway (rarea DayCasLoRaA01S00 DayCasUpRaA01S00 date, sort color(green*.2)) ///
+> (line DayCasMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> subtitle("with confidence limits", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 6 COVID-19 daily cases, $country, DELP with CI.gph", replace
+{txt}(note: file graph 6 COVID-19 daily cases, Iran, DELP with CI.gph not found)
+{res}{txt}(file graph 6 COVID-19 daily cases, Iran, DELP with CI.gph saved)
+
+{com}. graph export "graph 6 COVID-19 daily cases, $country, DELP with CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 6 COVID-19 daily cases, Iran, DELP with CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases wo CI
+. 
+. twoway ///
+> (line TotCasMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)        
+{res}{txt}
+{com}. 
+. graph save "graph 7 COVID-19 total cases, $country, DELP wo CI.gph", replace
+{txt}(note: file graph 7 COVID-19 total cases, Iran, DELP wo CI.gph not found)
+{res}{txt}(file graph 7 COVID-19 total cases, Iran, DELP wo CI.gph saved)
+
+{com}. graph export "graph 7 COVID-19 total cases, $country, DELP wo CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 7 COVID-19 total cases, Iran, DELP wo CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases with CI
+. 
+. twoway (rarea TotCasLoRaA01S00 TotCasUpRaA01S00 date, sort color(green*.2)) ///
+> (line TotCasMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> subtitle("with confidence limits", size(small)) 
+{res}{txt}
+{com}.         
+. graph save "graph 8 COVID-19 total cases, $country, DELP with CI.gph", replace
+{txt}(note: file graph 8 COVID-19 total cases, Iran, DELP with CI.gph not found)
+{res}{txt}(file graph 8 COVID-19 total cases, Iran, DELP with CI.gph saved)
+
+{com}. graph export "graph 8 COVID-19 total cases, $country, DELP with CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 8 COVID-19 total cases, Iran, DELP with CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cfr 
+. 
+. twoway (rarea DayCfrLoRaA01S00 DayCfrUpRaA01S00 date, sort color(green*.2)) ///
+> (line DayCfrMeRaA01S00 date, sort lcolor(green)) ///
+> if DayDeaMeRaA01S00 != ., legend(off) ///          
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily CFR, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand)        
+{res}{txt}
+{com}. 
+. graph save "graph 9 COVID-19 daily CFR, $country, DELP.gph", replace
+{txt}(note: file graph 9 COVID-19 daily CFR, Iran, DELP.gph not found)
+{res}{txt}(file graph 9 COVID-19 daily CFR, Iran, DELP.gph saved)
+
+{com}. graph export "graph 9 COVID-19 daily CFR, $country, DELP.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 9 COVID-19 daily CFR, Iran, DELP.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases active, active hospitalized, active ventilated
+. 
+. twoway ///
+> (line DayActMeRaA01S00 date, sort lcolor(green)) ///
+> (line DayHosMeRaA01S00 date, sort lcolor(black)) ///
+> (line DayVenMeRaA01S00 date, sort lcolor(red)) ///
+> if DayDeaMeRaA01S00 != ., ///      
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily cases, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Active cases" 2 "Active hospitalized" 3 "Active ventilated") rows(1)) ///
+> subtitle("active cases, active hospitalized, active ventilated", size(small))   
+{res}{txt}
+{com}.            
+. graph save "graph 10 COVID-19 daily cases etc, $country, DELP wo CI.gph", replace
+{txt}(note: file graph 10 COVID-19 daily cases etc, Iran, DELP wo CI.gph not found)
+{res}{txt}(file graph 10 COVID-19 daily cases etc, Iran, DELP wo CI.gph saved)
+
+{com}. graph export "graph 10 COVID-19 daily cases etc, $country, DELP wo CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 10 COVID-19 daily cases etc, Iran, DELP wo CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily active hospitalized, active ventilated
+. 
+. twoway ///
+> (line DayHosMeRaA01S00 date, sort lcolor(black)) ///
+> (line DayVenMeRaA01S00 date, sort lcolor(red)) ///
+> if DayDeaMeRaA01S00 != .,  ///     
+> xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily outcome) title("COVID-19 daily cases, $country, DELP, single scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Active hospitalized" 2 "Active ventilated") rows(1)) ///
+> subtitle("active hospitalized, active ventilated", size(small)) 
+{res}{txt}
+{com}. 
+. graph save "graph 11 COVID-19 daily cases etc, $country, DELP wo CI.gph", replace
+{txt}(note: file graph 11 COVID-19 daily cases etc, Iran, DELP wo CI.gph not found)
+{res}{txt}(file graph 11 COVID-19 daily cases etc, Iran, DELP wo CI.gph saved)
+
+{com}. graph export "graph 11 COVID-19 daily cases etc, $country, DELP wo CI.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 11 COVID-19 daily cases etc, Iran, DELP wo CI.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. ** DayCas DayDea DayDea_multip
+. 
+. twoway ///
+> (line DayCasMeRaA01S00 date, sort lcolor(blue)) ///
+> (line DayDeaMeRaA01S00 date, sort lcolor(red)) ///
+> (line DayDMuMeRaA01S00 date, sort lpattern(dot) lcolor(red)) ///
+> if date > td(01jan2020) ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases and deaths) title("COVID-19 daily cases and deaths, $country, DELP", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(4)) legend(region(lcolor(none)))  ///
+> legend(order(1 "Daily cases" 2 "Daily deaths" 3 "Daily deaths scaled for visualization") size(small)) ///
+> subtitle("Daily deaths, scaled = times (means of cases divided by deaths) for visualization only", size(small)) ///
+> note("Single scenario, mean estimate")
+{res}{txt}
+{com}. 
+. graph save "graph 12 COVID-19 daily deaths and cases $country, DELP.gph", replace
+{txt}(note: file graph 12 COVID-19 daily deaths and cases Iran, DELP.gph not found)
+{res}{txt}(file graph 12 COVID-19 daily deaths and cases Iran, DELP.gph saved)
+
+{com}. graph export "graph 12 COVID-19 daily deaths and cases $country, DELP.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/graph 12 COVID-19 daily deaths and cases Iran, DELP.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. sort date loc_grand_name
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "country DELP.dta", replace
+{txt}(note: file country DELP.dta not found)
+file country DELP.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. view "log country DELP.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210813/code/DELP/log country DELP.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}13 Aug 2021, 12:22:15
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
