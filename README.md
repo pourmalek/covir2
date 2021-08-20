@@ -44,6 +44,8 @@ As part of its ongoing response to the pandemic, WHO continues to mobilize teams
  
 http://www.emro.who.int/irn/iran-news/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.html
  
+[PDF](https://github.com/pourmalek/covir2/blob/main/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.pdf) 
+
  
 *****************************
 *****************************
