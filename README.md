@@ -13,6 +13,14 @@
 
 ## <div align="center"> covir2 = COVID Iran review number 2
  
+*****************************
+https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-outbreak-in-iran
+ 
+ 
+ MARCH 16TH, 2020
+ 
+![image](https://user-images.githubusercontent.com/30849720/130260538-8b776efb-90e4-425c-bc9c-3929b591e879.png)
+
  
 *****************************
  
@@ -20,6 +28,7 @@
  ![image](https://user-images.githubusercontent.com/30849720/129822476-c4dced1b-c345-409f-8319-9e13e14bef46.png)
  
  
+ *******************
  
  ![image](https://user-images.githubusercontent.com/30849720/130256603-6ef10977-975a-4e07-a4c2-dc9523968d2d.png)
 
