@@ -5,6 +5,10 @@ DELP 20210813, IHME 20210806, **_IMPE 20210806_**, LANL 20210808, SRIV 20210813
 
 IMPE update 20210806 (2021-08-06_v8.csv.zip) released on 20210813.
 
+IHME update 20210806 creates directory 2021_08_04 with web address https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip when downloaded on 20210820 1800 PST.
+
+
+
 <br/><br/>
 
 ### Note 1: This update 20210806 of IMPE is dead at birth FOR IRAN. See graph for Iran here: [(5) Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210813/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf). While JOHN and Worldometer web site show PCR-positive daily deaths officially report by Ministry of Health of Iran surpassed 411 on 20210802, the IMPE update 20210806 released on 20210813 says daily deaths will soon go below 400 in Iran. Does the above observation _increase the validity_ of this update 20210806 of IMPE in other locations or at the global level? _No_. 
