@@ -2,7 +2,7 @@
 
 DELP 20210806, **_IHME 20210806_**, IMPE 20210719, LANL 20210801, SRIV 20210801
 
-
+IHME update 20210806 creates directory 2021_08_04 with web address https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip when downloaded on 20210820 1800 PST. 
 
 <br/><br/>
 ****
