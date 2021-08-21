@@ -7,7 +7,17 @@ IMPE update 20210806 (2021-08-06_v8.csv.zip) released on 20210813.
 
 IHME update 20210806 creates directory 2021_08_04 with web address https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip when downloaded on 20210820 1800 PST.
 
+(Variability of regularity in electrocardiogram:
 
+Regular 
+
+Basically regular
+
+Regularly irregular
+
+Irregularly irregular
+
+Torsade de pointes)
 
 <br/><br/>
 
