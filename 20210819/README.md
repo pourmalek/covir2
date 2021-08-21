@@ -2,7 +2,7 @@
 
 DELP 20210819, **_IHME 20210819_**, IMPE 20210806, LANL 20210815, SRIV 20210819
 
-20210820: IHME update 20210819 released on 20210820. "This page was last updated at 5:30 p.m. Pacific, August 20, 2021." IHME update 20210819 released on 20210820 creates directory 2021_08_04 when downloaded on 20210820 2053 PST, with web address https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip. Predictions identical with IHME update 20210806. Since IHME update 20210702, it takes a few stages for IHME update to be fully delivered. The first stage is releasing an update with a new update date, but the files are still the exact same files as the previous updates. 
+20210820: IHME update 20210819 released on 20210820. "This page was last updated at 5:30 p.m. Pacific, August 20, 2021." IHME update 20210819 released on 20210820 creates directory 2021_08_04 when downloaded on 20210820 2053 PST, with web address https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip. Predictions identical with IHME update 20210806. Since IHME update 20210702, it takes a few stages for IHME update to be fully delivered. The shower is change of "date" and curves in https://covid19.healthdata.org/global. The first stage is releasing an update with a new update date, but the files are still the exact same files as the previous updates. 
 
 <br/><br/>
 ****
