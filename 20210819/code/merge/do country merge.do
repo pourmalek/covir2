@@ -1845,12 +1845,176 @@ subtitle("total cases or infections estimated, to reported cases; reference scen
 graph save "graph 98 COVID-19 total cases estimated to reported, $country, reference scenarios.gph", replace
 graph export "graph 98 COVID-19 total cases estimated to reported, $country, reference scenarios.pdf", replace
 
-***
 
 
 
 
 
+
+
+
+
+*******************************************************
+
+* summary table
+
+use "country.dta", clear
+
+rename ///
+(DayDeaMeRaA02S03V04 DayDeaUpRaA02S03V04 DayINFMeRaA02S03V04 DayINFUpRaA02S03V04 TotDeaMeSmA02S03V04 TotDeaUpSmA02S03V04 TotINFMeRaA02S03V04 TotINFUpRaA02S03V04) ///
+(DayDeaMeRaA02S03 DayDeaUpRaA02S03 DayINFMeRaA02S03 DayINFUpRaA02S03 TotDeaMeSmA02S03 TotDeaUpSmA02S03 TotINFMeRaA02S03 TotINFUpRaA02S03) ///
+
+* peak values and dates
+
+keep date loc_grand_name ///
+DayDeaMeSmA02S01 DayDeaUpSmA02S01 /// IHME daily deaths reference scenario mean upper
+DayDeaMeRaA02S03 DayDeaUpRaA02S03 /// IHME daily deaths worse scenario mean upper
+DayDeaMeRaA03S02 DayDeaUpRaA03S02 /// IMPE daily deaths reference scenario mean upper
+DayDeaMeRaA03S03 DayDeaUpRaA03S03 /// IMPE daily deaths worse scenario mean upper
+DayINFMeRaA02S01 DayINFUpRaA02S01 /// IHME daily infections reference scenario mean upper
+DayINFMeRaA02S03 DayINFUpRaA02S03 /// IHME daily infections worse scenario mean upper
+DayINFMeRaA03S02 DayINFUpRaA03S02 /// IMPE daily infections reference scenario mean upper
+DayINFLoRaA03S03 DayINFUpRaA03S03 /// IMPE daily infections worse scenario mean upper
+TotDeaMeSmA02S01 TotDeaUpSmA02S01 /// IHME total deaths reference scenario mean upper
+TotDeaMeSmA02S03 TotDeaUpSmA02S03 /// IHME total deaths worse scenario mean upper
+TotDeaMeRaA03S02 TotDeaUpRaA03S02 /// IMPE total deaths reference scenario mean upper 
+TotDeaMeRaA03S03 TotDeaUpRaA03S03 /// IMPE total deaths worse scenario mean upper 
+TotINFMeRaA02S01 TotINFUpRaA02S01 /// IHME total infections reference scenario mean upper
+TotINFMeRaA02S03 TotINFUpRaA02S03 /// IHME total infections worse scenario mean upper
+TotINFMeRaA03S02 TotINFUpRaA03S02 /// IMPE total infections reference scenario mean upper
+TotINFMeRaA03S03 TotINFUpRaA03S03 //  IMPE total infections worse scenario mean upper
+
+
+order date loc_grand_name ///
+DayDeaMeSmA02S01 DayDeaUpSmA02S01 /// IHME daily deaths reference scenario mean upper
+DayDeaMeRaA02S03 DayDeaUpRaA02S03 /// IHME daily deaths worse scenario mean upper
+DayDeaMeRaA03S02 DayDeaUpRaA03S02 /// IMPE daily deaths reference scenario mean upper
+DayDeaMeRaA03S03 DayDeaUpRaA03S03 /// IMPE daily deaths worse scenario mean upper
+DayINFMeRaA02S01 DayINFUpRaA02S01 /// IHME daily infections reference scenario mean upper
+DayINFMeRaA02S03 DayINFUpRaA02S03 /// IHME daily infections worse scenario mean upper
+DayINFMeRaA03S02 DayINFUpRaA03S02 /// IMPE daily infections reference scenario mean upper
+TotDeaMeSmA02S01 TotDeaUpSmA02S01 /// IHME total deaths reference scenario mean upper
+TotDeaMeSmA02S03 TotDeaUpSmA02S03 /// IHME total deaths worse scenario mean upper
+TotDeaMeRaA03S02 TotDeaUpRaA03S02 /// IMPE total deaths reference scenario mean upper 
+TotDeaMeRaA03S03 TotDeaUpRaA03S03 /// IMPE total deaths worse scenario mean upper 
+TotINFMeRaA02S01 TotINFUpRaA02S01 /// IHME total infections reference scenario mean upper
+TotINFMeRaA02S03 TotINFUpRaA02S03 /// IHME total infections worse scenario mean upper
+TotINFMeRaA03S02 TotINFUpRaA03S02 /// IMPE total infections reference scenario mean upper
+TotINFMeRaA03S03 TotINFUpRaA03S03 //  IMPE total infections worse scenario mean upper
+
+
+
+
+local varlist ///
+DayDeaMeSmA02S01 DayDeaUpSmA02S01 /// IHME daily deaths reference scenario mean upper
+DayDeaMeRaA02S03 DayDeaUpRaA02S03 /// IHME daily deaths worse scenario mean upper
+DayDeaMeRaA03S02 DayDeaUpRaA03S02 /// IMPE daily deaths reference scenario mean upper
+DayDeaMeRaA03S03 DayDeaUpRaA03S03 /// IMPE daily deaths worse scenario mean upper
+DayINFMeRaA02S01 DayINFUpRaA02S01 /// IHME daily infections reference scenario mean upper
+DayINFMeRaA02S03 DayINFUpRaA02S03 /// IHME daily infections worse scenario mean upper
+DayINFMeRaA03S02 DayINFUpRaA03S02 /// IMPE daily infections reference scenario mean upper
+
+
+
+
+foreach var of local varlist {
+
+di "`var'"
+summ `var' if date > td(01jul2021) 
+gen `var'_LPV = r(max) 
+label var `var'_LPV "`var' Latest peak value"
+
+summ date if `var' == `var'_LPV & date > td(01jul2021) 
+gen `var'_LPD = r(mean) 
+label var `var'_LPD "`var' Latest peak date"
+format `var'_LPD %tdDDMonCCYY
+tab `var'_LPD
+
+replace `var'_LPV = round(`var'_LPV)
+tab `var'_LPV
+
+}
+*
+
+
+
+
+
+* end values and dates
+
+
+* IHME
+
+summ date if TotDeaMeSmA02S01 != . 
+gen TotDeaMeSmA02S01_ED = r(max)
+format TotDeaMeSmA02S01_ED %tdDDMonCCYY
+label var TotDeaMeSmA02S01_ED "TotDeaMeSmA02S01 End date"
+tab TotDeaMeSmA02S01_ED
+
+
+local varlist ///
+TotDeaMeSmA02S01 TotDeaUpSmA02S01 /// IHME total deaths reference scenario mean upper
+TotDeaMeSmA02S03 TotDeaUpSmA02S03 /// IHME total deaths worse scenario mean upper
+TotINFMeRaA02S01 TotINFUpRaA02S01 /// IHME total infections reference scenario mean upper
+TotINFMeRaA02S03 TotINFUpRaA02S03 /// IHME total infections worse scenario mean upper
+
+
+foreach var of local varlist {
+
+di "`var'"
+summ `var' if date == TotDeaMeSmA02S01_ED
+gen `var'_EV = r(mean)
+replace `var'_EV = round(`var'_EV)
+label var `var'_EV "`var' End value"
+tab `var'_EV
+
+}
+*
+
+
+
+
+* IMPE
+
+summ date if TotDeaMeRaA03S02 != . 
+gen TotDeaMeRaA03S02_ED = r(max)
+format TotDeaMeRaA03S02_ED %tdDDMonCCYY
+label var TotDeaMeRaA03S02_ED "TotDeaMeRaA03S02 End date"
+tab TotDeaMeRaA03S02_ED
+
+
+local varlist ///
+TotDeaMeRaA03S02 TotDeaUpRaA03S02 /// IMPE total deaths reference scenario mean upper 
+TotDeaMeRaA03S03 TotDeaUpRaA03S03 /// IMPE total deaths worse scenario mean upper 
+TotINFMeRaA03S02 TotINFUpRaA03S02 /// IMPE total infections reference scenario mean upper
+TotINFMeRaA03S03 TotINFUpRaA03S03 //  IMPE total infections worse scenario mean upper
+
+
+foreach var of local varlist {
+
+di "`var'"
+summ `var' if date == TotDeaMeRaA03S02_ED
+gen `var'_EV = r(mean)
+replace `var'_EV = round(`var'_EV)
+label var `var'_EV "`var' End value"
+tab `var'_EV
+
+}
+*
+
+
+
+* 
+
+
+keep *_LPV *_LPD *_ED *_EV
+
+keep in 1
+
+
+
+save "summary table.dta", replace
+export delimited using "summary table.csv", replace 
 
 
 
