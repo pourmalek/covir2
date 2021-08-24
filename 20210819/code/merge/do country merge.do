@@ -1289,8 +1289,8 @@ if date >= td(01jan2021) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
-5 "LANL cases" 6 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" 8 "IMPE infections" ///
+11 "LANL cases" 14 "SRIV cases") size(small) row(2)) ///
 subtitle("after 2021-01-01, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) ///
 note("- Uncertainty limits: dashed curves." ///
 "- Red vertical line: 20210424 online meeting; estimated probability, timing," ///
@@ -1773,7 +1773,7 @@ twoway ///
 (line TotDERMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+xlabel(, angle(forty_five)) ylabel(, format(%12.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "LANL" 6 "SRIV") size(small) row(1)) ///
