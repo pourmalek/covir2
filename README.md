@@ -43,7 +43,7 @@ https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-o
  
 * 2021-08-11
  
-Chief of Corona Control Headquarters of city of Tehran:
+Dr Zali, Head of Tehran COVID-19 Combat Taskforce:
 
 ## "We covered up the mortality statistics from the World Health Organization." 
 
@@ -82,12 +82,16 @@ As part of its ongoing response to the pandemic, WHO continues to mobilize teams
  
 http://www.emro.who.int/irn/iran-news/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.html
  
-[PDF](https://github.com/pourmalek/covir2/blob/main/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.pdf)
+[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.pdf)
  
  
 *****************************
  
 * 2021-08-25 
+ 
+ 
+WHO Rep in IR #Iran Dr Hussain visited a public #COVID19 vaccination site in Tehran on Wed & oversaw national immunisation efforts accompanied by Dr 
+@MohsenAsadilari, Health Ministry Int'l Affairs DG, Dr Zali, head of Tehran COVID-19 Combat Taskforce, Dr Gouya, head of Iran CDC. 
  
  
 ![image](https://user-images.githubusercontent.com/30849720/130783826-4dd6f838-c7bc-461b-8682-545daf211283.png)
