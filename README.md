@@ -111,6 +111,8 @@ https://www.isna.ir/news/1400060302280/موجودی-واکسن-آسترازنک�
  
 ISNA News Agency. Available stock of AstraZeneca Vaccine in Isfahan is zero. News code 1400060302280. 2021-08-25, 1400-06-03. https://www.isna.ir/news/1400060302280/  
  
+[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/موجودی%20واکسن%20آسترازنکا%20در%20اصفهان%20صفر%20است%20-%20ایسنا.pdf) 
+ 
 *****************************
 *****************************
 ***************************** 
