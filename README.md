@@ -33,7 +33,7 @@ https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-o
  
 ![image](https://user-images.githubusercontent.com/30849720/130260538-8b776efb-90e4-425c-bc9c-3929b591e879.png)
 
-[PDF](https://github.com/pourmalek/covir2/blob/main/WHO%20Dr.%20Rick%20Brennan%20correction%20factor%20of%205%20for%20Iran.pdf) 
+[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/WHO%20Dr.%20Rick%20Brennan%20correction%20factor%20of%205%20for%20Iran.pdf) 
  
 <br/><br/>
  
