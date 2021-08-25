@@ -117,17 +117,17 @@ https://www.javanonline.ir/fa/news/1059389/کرونا-را-باید-در-۴-ما
 
 Dr. Kourosh Holakouie Naeini, Professor of Epidemiology, Tehran University of Medical Sciences:
  
-Ministry of Health performs "_engineering_" of "data". [aka. data _fabrication_]
+Ministry of Health performs "**_engineering_**" of "data". [aka. data **_fabrication and falsification_**]
 
-The real number of deaths is _seven_ times more the official reports. 
+The real number of deaths is **_seven_** times more the official reports. 
 
-Next peak of the epidemic in Iran will occurring about _four_ months. 
+Next peak of the epidemic in Iran will occurring about **_four months_**. 
 
-The _lambda_ variant will definitely come to Iran and will be more deadly than the previous variants.
+The **_lambda_** variant will definitely come to Iran and will be more deadly than the previous variants.
 
 There is no [actual] management of the COVID-19 epidemic in Iran and the virus is left at large to spread. 
 
-Some individuals benefit from this non-existence of epidemic management: the blackmarket of COVID-19 medications, conflict of interest in vaccine production and import, etc. 
+Some individuals benefit from this non-existence of epidemic management: the blackmarket of COVID-19 medications, **_conflict of interest_** in vaccine production and import, etc. 
  
 <br/><br/>
  
