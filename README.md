@@ -153,7 +153,7 @@ https://twitter.com/whoiriran/status/1430463895123206146
  
 https://twitter.com/whoiriran/status/1430463895123206146/photo/1 
 
-"AstraZeneca Vaccine" 
+"_AstraZeneca Vaccine_" 
  
 * 
  
@@ -161,9 +161,9 @@ https://twitter.com/whoiriran/status/1430463895123206146/photo/1
 
 https://www.isna.ir/news/1400060302280/موجودی-واکسن-آسترازنکا-در-اصفهان-صفر-است
  
-ISNA News Agency. Available stock of AstraZeneca Vaccine in Isfahan is zero. News code 1400060302280. 2021-08-25, 1400-06-03. https://www.isna.ir/news/1400060302280/  
+ISNA News Agency. Available stock of _AstraZeneca Vaccine_ in Isfahan is zero. News code 1400060302280. 2021-08-25, 1400-06-03. https://www.isna.ir/news/1400060302280/  
  
-[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/موجودی%20واکسن%20آسترازنکا%20در%20اصفهان%20صفر%20است%20-%20ایسنا.pdf) 
+[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/Available%20stock%20of%20AstraZeneca%20Vaccine%20in%20Isfahan%20is%20zero.pdf) 
  
 <br/><br/>
  
