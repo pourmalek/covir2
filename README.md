@@ -16,9 +16,12 @@
 *****************************
 *****************************
 ***************************** 
+*****************************
+ 
  
 ### Timeline
  
+*****************************
 *****************************
  
 * 2020-03-16 
@@ -32,14 +35,21 @@ https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-o
 
 [PDF](https://github.com/pourmalek/covir2/blob/main/WHO%20Dr.%20Rick%20Brennan%20correction%20factor%20of%205%20for%20Iran.pdf) 
  
+<br/><br/>
+ 
 *****************************
+*****************************
+ 
  
 * 2021-08-10 
  
  ![image](https://user-images.githubusercontent.com/30849720/129822476-c4dced1b-c345-409f-8319-9e13e14bef46.png)
  
+<br/><br/>
  
-********************
+*****************************
+*****************************
+ 
  
 * 2021-08-11
  
@@ -54,8 +64,11 @@ https://fararu.com/fa/news/500531/افشاگری-تلخ-زالی-ما-آماره
  
  ![image](https://user-images.githubusercontent.com/30849720/130752757-ad1fa2af-3c20-4024-91ea-f5dad8e157a8.png)
 
+<br/><br/>
  
-********************
+*****************************
+*****************************
+ 
  
 * 2021-08-19 
  
@@ -84,8 +97,43 @@ http://www.emro.who.int/irn/iran-news/statement-on-covid-19-vaccination-in-islam
  
 [PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.pdf)
  
+<br/><br/>
  
 *****************************
+*****************************
+ 
+ 
+* 2021-08-23
+
+![image](https://user-images.githubusercontent.com/30849720/130832643-46bf1f50-7972-44da-9e6c-05d53d23ee47.png)
+ 
+Javan Newspaper. News code 1059389. 2021-08-23. 1400-06-01. https://www.Javann.ir/004Rav
+
+https://www.javanonline.ir/fa/news/1059389/کرونا-را-باید-در-۴-ماه-مهار-کنیم
+
+
+
+[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/Dr.%20Kourosh%20Holakouie%202021-08-23.pdf)
+
+Dr. Kourosh Holakouie Naeini, Professor of Epidemiology, Tehran University of Medical Sciences:
+ 
+Ministry of Health performs "_engineering_" of "data". [aka. data _fabrication_]
+
+The real number of deaths is _seven_ times more the official reports. 
+
+Next peak of the epidemic in Iran will occurring about _four_ months. 
+
+The _lambda_ variant will definitely come to Iran and will be more deadly than the previous variants.
+
+There is no [actual] management of the COVID-19 epidemic in Iran and the virus is left at large to spread. 
+
+Some individuals benefit from this non-existence of epidemic management: the blackmarket of COVID-19 medications, conflict of interest in vaccine production and import, etc. 
+ 
+<br/><br/>
+ 
+*****************************
+*****************************
+ 
  
 * 2021-08-25 
  
@@ -117,10 +165,13 @@ ISNA News Agency. Available stock of AstraZeneca Vaccine in Isfahan is zero. New
  
 [PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/موجودی%20واکسن%20آسترازنکا%20در%20اصفهان%20صفر%20است%20-%20ایسنا.pdf) 
  
+<br/><br/>
+ 
 *****************************
 *****************************
 ***************************** 
-  
+*****************************  
+ 
 #### :eyes: SEE graphs, code, and data of periodical updates of COVID-19 pandemic models’ estimates: 
   
 #### by models: [Delphi](https://covidanalytics.io/projections), [IHME](https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend), [Imperial college](https://github.com/mrc-ide/global-lmic-reports/blob/master/CAN/2021-06-18/index.pdf), [Los Alamos](https://covid-19.bsvgateway.org), and [Srivastava](https://scc-usc.github.io/ReCOVER-COVID-19/#/), 
