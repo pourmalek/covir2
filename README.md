@@ -55,7 +55,7 @@ https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-o
  
 Dr Zali, Head of Tehran COVID-19 Combat Taskforce:
 
-## "We covered up the mortality statistics from the World Health Organization." 
+## "We _covered up_ the mortality statistics from the World Health Organization." 
 
 Fararu News Agency, Tehran. News code 500531. 2021-08-11. 1400-05-20. 
 https://fararu.com/fa/news/500531/افشاگری-تلخ-زالی-ما-آمارهای-مرگ-و-میر-را-از-سازمان-جهانی-بهداشت-پنهان-کردیم
