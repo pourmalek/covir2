@@ -41,6 +41,22 @@ https://www.dailywire.com/news/w-h-o-doctor-paints-grim-picture-of-coronavirus-o
  
 ********************
  
+* 2021-08-11
+ 
+Chief of Corona Control Headquarters of city of Tehran:
+
+## "We covered up the mortality statistics from the World Health Organization." 
+
+Fararu News Agency, Tehran. News code 500531. 2021-08-11. 1400-05-20. 
+https://fararu.com/fa/news/500531/افشاگری-تلخ-زالی-ما-آمارهای-مرگ-و-میر-را-از-سازمان-جهانی-بهداشت-پنهان-کردیم
+ 
+ [PDF](https://github.com/pourmalek/covir2/blob/main/Dr%20Zali%2014000520.pdf)
+ 
+ ![image](https://user-images.githubusercontent.com/30849720/130752757-ad1fa2af-3c20-4024-91ea-f5dad8e157a8.png)
+
+ 
+********************
+ 
 * 2021-08-19 
  
  ![image](https://user-images.githubusercontent.com/30849720/130256603-6ef10977-975a-4e07-a4c2-dc9523968d2d.png)
