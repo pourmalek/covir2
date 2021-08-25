@@ -157,6 +157,11 @@ WHO Rep in IR #Iran Dr Hussain visited a public #COVID19 vaccination site in Teh
 
 https://twitter.com/whoiriran/status/1430463895123206146
  
+*
+ 
+![image](https://user-images.githubusercontent.com/30849720/130847217-dac7b527-40ec-43b7-aa05-315695777ede.png)
+ 
+https://twitter.com/whoiriran/status/1430463895123206146/photo/2 
  
 *
  
