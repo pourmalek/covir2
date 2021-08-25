@@ -82,8 +82,34 @@ As part of its ongoing response to the pandemic, WHO continues to mobilize teams
  
 http://www.emro.who.int/irn/iran-news/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.html
  
-[PDF](https://github.com/pourmalek/covir2/blob/main/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.pdf) 
+[PDF](https://github.com/pourmalek/covir2/blob/main/statement-on-covid-19-vaccination-in-islamic-republic-of-iran-by-who-representative-dr-jaffar-hussain.pdf)
+ 
+ 
+*****************************
+ 
+* 2021-08-25 
+ 
+ 
+![image](https://user-images.githubusercontent.com/30849720/130783826-4dd6f838-c7bc-461b-8682-545daf211283.png)
 
+https://twitter.com/whoiriran/status/1430463895123206146
+ 
+ 
+*
+ 
+![image](https://user-images.githubusercontent.com/30849720/130784047-6a117c49-885a-449f-9c6d-54cc7c6763eb.png)
+ 
+https://twitter.com/whoiriran/status/1430463895123206146/photo/1 
+
+"AstraZeneca Vaccine" 
+ 
+* 
+ 
+![image](https://user-images.githubusercontent.com/30849720/130784422-3423b76e-2a4d-4024-9ba9-61bfb1b11c36.png)
+
+https://www.isna.ir/news/1400060302280/موجودی-واکسن-آسترازنکا-در-اصفهان-صفر-است
+ 
+ISNA News Agency. Available stock of AstraZeneca Vaccine in Isfahan is zero. News code 1400060302280. 2021-08-25, 1400-06-03. https://www.isna.ir/news/1400060302280/  
  
 *****************************
 *****************************
