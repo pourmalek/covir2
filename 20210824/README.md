@@ -20,16 +20,19 @@ IMPE update 20210819 (2021-08-19_v8.csv.zip) released on 20210824.
 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210824/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/130747196-86ea3868-3ce5-48ef-8098-0b8edf3174cc.png)
 
 ****
 
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210824/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/130747301-1bb0852a-ef60-4483-b589-bfac5275a1fd.png)
 
 ****
 
 (3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210824/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/130747429-f6cb6f21-fd3a-4927-82cb-f5835b9988aa.png)
 
 ****
 
