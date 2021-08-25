@@ -66,9 +66,14 @@ Dr. Rick Brennan, Director of Emergency Operations in the World Health Organizat
 Fararu News Agency, Tehran. News code 500531. 2021-08-11. 1400-05-20. 
 https://fararu.com/fa/news/500531/افشاگری-تلخ-زالی-ما-آمارهای-مرگ-و-میر-را-از-سازمان-جهانی-بهداشت-پنهان-کردیم
  
- [PDF](https://github.com/pourmalek/covir2/blob/main/Dr%20Zali%2014000520.pdf)
+[PDF](https://github.com/pourmalek/covir2/blob/main/Dr%20Zali%2014000520.pdf)
+
  
  ![image](https://user-images.githubusercontent.com/30849720/130752757-ad1fa2af-3c20-4024-91ea-f5dad8e157a8.png)
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/30849720/130846909-599b546f-8fca-4371-8a90-0c895af6cc76.png)
+
 
 <br/><br/>
  
