@@ -119,9 +119,9 @@ Dr. Kourosh Holakouie Naeini, Professor of Epidemiology, Tehran University of Me
  
 Ministry of Health performs "**_engineering_**" of "data". [aka. data **_fabrication and falsification_**]
 
-The real number of deaths is **_seven_** times more the official reports. 
+The real number of deaths is **_seven times more the official reports_**. 
 
-Next peak of the epidemic in Iran will occurring about **_four months_**. 
+The next peak of the epidemic in Iran will occurring about **_four months_**. 
 
 The **_lambda_** variant will definitely come to Iran and will be more deadly than the previous variants.
 
