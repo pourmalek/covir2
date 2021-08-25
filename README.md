@@ -59,9 +59,9 @@ Dr. Rick Brennan, Director of Emergency Operations in the World Health Organizat
  
 * 2021-08-11
  
-Dr Zali, Head of Tehran COVID-19 Combat Taskforce:
+# Dr Zali, Head of Tehran COVID-19 Combat Taskforce:
 
-## "We _covered up_ the mortality statistics from the World Health Organization." 
+# "We _covered up_ the mortality statistics from the World Health Organization." 
 
 Fararu News Agency, Tehran. News code 500531. 2021-08-11. 1400-05-20. 
 https://fararu.com/fa/news/500531/افشاگری-تلخ-زالی-ما-آمارهای-مرگ-و-میر-را-از-سازمان-جهانی-بهداشت-پنهان-کردیم
