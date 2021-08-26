@@ -48,20 +48,7 @@ Dr. Rick Brennan, Director of Emergency Operations in the World Health Organizat
 ***************************** 
  
 * 2021-05-24
- 
- 
- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5020797.svg)](https://doi.org/10.5281/zenodo.5020797)
 
- 
-![image](https://user-images.githubusercontent.com/30849720/131010392-7f7eda04-150d-48ba-ba73-1350ce6e4e85.png)
- 
-[![image](https://user-images.githubusercontent.com/30849720/131010392-7f7eda04-150d-48ba-ba73-1350ce6e4e85.png)](https://user-images.githubusercontent.com/30849720/131010321-095c24ec-bdc4-46e4-9b68-1abe5eb333f2.png)
- 
- 
-  <br/><br/>
-
-![image](https://user-images.githubusercontent.com/30849720/131010321-095c24ec-bdc4-46e4-9b68-1abe5eb333f2.png)
- 
   <br/><br/>
 
 [Online presentation for MOH about fifth wave of COVID-19 in Iran 20210524 14000303](https://github.com/pourmalek/covir2/blob/main/situation%20reports/meeting%20with%20MOH%2020210524/Online%20presentation%20for%20MOH%20about%20fifth%20wave%20of%20COVID-19%20in%20Iran%2020210524%2014000303.pdf)
