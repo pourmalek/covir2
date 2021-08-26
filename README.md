@@ -53,10 +53,14 @@ Dr. Rick Brennan, Director of Emergency Operations in the World Health Organizat
  
 [Online presentation for MOH about fifth wave of COVID-19 in Iran 20210524 14000303](https://github.com/pourmalek/covir2/blob/main/situation%20reports/meeting%20with%20MOH%2020210524/Online%20presentation%20for%20MOH%20about%20fifth%20wave%20of%20COVID-19%20in%20Iran%2020210524%2014000303.pdf)
  
-  <br/><br/>
-
+*
+ 
+![image](https://user-images.githubusercontent.com/30849720/131011452-8f5a2b64-31f9-45e4-b5ed-02e5fcd37ca7.png)
+ 
  
 [Online meeting with MOH about fifth wave of COVID-19 in Iran 20210524 14000303](https://github.com/pourmalek/covir2/blob/main/situation%20reports/meeting%20with%20MOH%2020210524/Online%20meeting%20with%20MOH%20about%20fifth%20wave%20of%20COVID-19%20in%20Iran%2020210524%2014000303.pdf) 
+ 
+Note: The minute darft sent to MOH but not approved or signed by anyone. 
  
  <br/><br/>
 
