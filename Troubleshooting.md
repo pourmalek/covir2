@@ -8,6 +8,7 @@
 
 **********
 
+********************************************************************************************************************************************
 
 Once you have started executing the downloaded code that is expected to be located in your local machine's |Downloads|covir2-main|20210405|code|master|do Iran merge.do, `Stata` may return *ERRORs*, or may *RESTART*. The following are among possible causes and treatments. | denotes / or \ for Mac or Windows respectively. 
 <br/><br/>
@@ -16,6 +17,90 @@ Once you have started executing the downloaded code that is expected to be locat
 Déjà diagnostiqué 
 
 <br/><br/>
+
+
+********************************************************************************************************************************************
+
+********************************************************************************************************************************************
+
+
+On 20210824, the Imperial College COVID-19 model / study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. 
+
+This means the Imperial College COVID-19 model / study is no more a periodically updated study with ACCESSIBLE updates – short of early retirement of the study. Predictive performance of the Imperial College model is no longer assessable. 
+
+Several thousand lines of codes that used their previously released updates will not work. 
+
+The remedy for CovidVisualized repositories (https://github.com/pourmalek/covir2 for Iran, https://github.com/pourmalek/CovidVisualizedCountry for Canada, and https://github.com/pourmalek/CovidVisualizedGlobal for the global level) is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data. 
+
+<br/><br/> 
+
+ 
+To -comment out-, 
+
+For https://github.com/pourmalek/covir2, 
+
+In files:
+
+/Users/username/Downloads/covir2-main/20210806/code/master/do country master.do, _downloaded to your local machine_, 
+ 
+where 20210806 denotes uptake 20210806 in this repository that uses IMPE update 20210719, or earlier uptake here that use earlier updates of IMPE, 
+
+in line 130, that currently reads as:
+
+do "$pathcovir2/IMPE/do country IMPE.do"
+
+put // at the beginning of the line, so that it reads as:
+
+// do "$pathcovir2/IMPE/do country IMPE.do"
+ 
+save the do file and then run the file. 
+
+.
+
+For https://github.com/pourmalek/CovidVisualizedCountry, 
+
+In files:
+
+/Users/username/Downloads/CovidVisualizedCountry-main/20210806/code/master/do CovidVisualizedCountry master.do, _downloaded to your local machine_, 
+ 
+where 20210806 denotes uptake 20210806 in this repository that uses IMPE update 20210719, or earlier uptake here that use earlier updates of IMPE, 
+
+in line 124, that currently reads as:
+
+do "$pathCovidVisualizedCountry/IMPE/do CovidVisualizedCountry IMPE.do" 
+
+put // at the beginning of the line, so that it reads as:
+
+// do "$pathCovidVisualizedGlobal/IMPE/do CovidVisualizedGlobal IMPE.do"
+ 
+save the do file and then run the file. 
+
+.
+
+For https://github.com/pourmalek/CovidVisualizedGlobal,
+
+In files:
+
+/Users/username/Downloads/CovidVisualizedGlobal-main/20210727/code/master
+
+/Users/username/Downloads/CovidVisualizedGlobal-main/20210806/code/master/do do CovidVisualizedGlobal master.do, _downloaded to your local machine_, 
+ 
+where 20210806 denotes uptake 20210806 in this repository that uses IMPE update 20210719, or earlier uptake here that use earlier updates of IMPE, 
+
+in line 124, that currently reads as:
+
+do "$pathCovidVisualizedGlobal/IMPE/do CovidVisualizedGlobal IMPE.do" 
+
+put // at the beginning of the line, so that it reads as:
+
+// do "$pathCovidVisualizedGlobal/IMPE/do CovidVisualizedGlobal IMPE.do" 
+ 
+save the do file and then run the file. 
+
+
+<br/><br/>
+
+********************************************************************************************************************************************
 
 ********************************************************************************************************************************************
 * **Problem** (1): If the *ERROR* message is about file path or directory clash, e.g., the error message reads as, -unable to change to (some directory name)-. 
