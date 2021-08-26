@@ -186,19 +186,21 @@ The remedy for CovidVisualized repositories (https://github.com/pourmalek/covir2
  
 To -comment out-, 
 
+For https://github.com/pourmalek/covir2, 
+
 In files:
 
-/Users/username/Downloads/covir2-main/20210806/code/master/do country master.do, downloaded to your local machine, 
+/Users/username/Downloads/covir2-main/20210806/code/master/do country master.do, _downloaded to your local machine_, 
  
 where 20210806 denotes uptake 20210806 in this repository that uses IMPE update 20210719, or earlier uptake here that use earlier updates of IMPE, 
 
 in line 130, that currently reads as:
 
-do "$pathcovir2/IHME/do country IHME.do"
+do "$pathcovir2/IMPE/do country IMPE.do"
 
 put // at the beginning of the line, so that it reads as:
 
-// do "$pathCovidVisualizedGlobal/IMPE/do CovidVisualizedGlobal IMPE.do"
+// do "$pathcovir2/IMPE/do country IMPE.do"
  
 save the do file and then run the file. 
  
