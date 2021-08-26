@@ -61,9 +61,7 @@ Dr. Rick Brennan, Director of Emergency Operations in the World Health Organizat
  
  
 [Online meeting with MOH about fifth wave of COVID-19 in Iran 20210524 14000303]() 
- 
-Note: The minute darft sent to MOH but not approved or signed by anyone. 
- 
+  
  <br/><br/>
 
 *****************************
