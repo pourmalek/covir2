@@ -19,7 +19,7 @@
 *****************************
  
  
-### Timeline
+### Timeline - _cover-uncover_ test:
  
 *****************************
 *****************************
@@ -168,7 +168,7 @@ Some individuals benefit from this non-existence of epidemic management: the bla
  
 * 2021-08-24 
  
-### COVID-19 fatigue!
+### COVID-19 model fatigue!
  
 ![image](https://user-images.githubusercontent.com/30849720/131047998-eaab3342-330f-49d7-9c69-79c52b7a6aa3.png)
  
@@ -186,9 +186,9 @@ To comment out:
 
 In files:
 
-/Users/farshadpourmalek/Downloads/covir2-main/20210719/code/master/do country master.do
+/Users/username/Downloads/covir2-main/20210719/code/master/do country master.do, downloaded to your local machine, 
 
-where 20210719 denotes update 20210719 (or earlier updates of IMPE), 
+where 20210719 denotes update 20210719 or earlier updates of IMPE, 
 
 in line 128, that reads as:
 
@@ -567,7 +567,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: Imperial College, London  
 . Among articles: https://science.sciencemag.org/content/369/6502/413  
 . Periodically updated: Yes  
-. Periodical updates accessible: Yes    
+. Periodical updates accessible: Yes up to 20210823, No from 20210824
 <br/><br/>
   
 (4) LANL  
