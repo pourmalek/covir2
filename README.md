@@ -19,7 +19,7 @@
 *****************************
  
  
-### Timeline - _cover-uncover_ test:
+### Timeline - The _cover-uncover_ test:
  
 *****************************
 *****************************
@@ -181,22 +181,26 @@ Several thousand lines of codes that used their previously released updates will
 
 The remedy for CovidVisualized repositories (https://github.com/pourmalek/covir2 for Iran, https://github.com/pourmalek/CovidVisualizedCountry for Canada, and https://github.com/pourmalek/CovidVisualizedGlobal for the global level) is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data. 
 
+<br/><br/> 
 
-To comment out:
+ 
+To -comment out-, 
 
 In files:
 
-/Users/username/Downloads/covir2-main/20210719/code/master/do country master.do, downloaded to your local machine, 
+/Users/username/Downloads/covir2-main/20210806/code/master/do country master.do, downloaded to your local machine, 
+ 
+where 20210806 denotes uptake 20210806 in this repository that uses IMPE update 20210719, or earlier uptake here that use earlier updates of IMPE, 
 
-where 20210719 denotes update 20210719 or earlier updates of IMPE, 
-
-in line 128, that reads as:
+in line 130, that currently reads as:
 
 do "$pathcovir2/IHME/do country IHME.do"
 
 put // at the beginning of the line, so that it reads as:
 
 // do "$pathCovidVisualizedGlobal/IMPE/do CovidVisualizedGlobal IMPE.do"
+ 
+save the do file and then run the file. 
  
 <br/><br/> 
  
