@@ -257,11 +257,11 @@ https://twitter.com/whoiriran/status/1430463895123206146/photo/2
 [[[Dr Maria Van Kerkhove, PhD, WHO’s COVID-19 technical lead, and "the spread of SARS-CoV-2 by
 asymptomatic individuals as “rare.” as of June 10, 2020: 
  
-[WHO Says Covid-19 Asymptomatic Transmission Is ‘Very Rare’](https://www.youtube.com/watch?v=NQTBlbx1Xjs) [cached](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/WHO%20Says%20Covid19%20Asymptomatic%20Transmission%20Is%20Very%20Rare.mp4)
+[WHO Says Covid-19 Asymptomatic Transmission Is ‘Very Rare’](https://www.youtube.com/watch?v=NQTBlbx1Xjs), [cached](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/WHO%20Says%20Covid19%20Asymptomatic%20Transmission%20Is%20Very%20Rare.mp4)
  
-[WHO clarifies comments on asymptomatic transmission of SARS-CoV-2](https://www.mdedge.com/cardiology/article/223631/coronavirus-updates/who-clarifies-comments-asymptomatic-transmission-sars), 
+[WHO clarifies comments on asymptomatic transmission of SARS-CoV-2](https://www.mdedge.com/cardiology/article/223631/coronavirus-updates/who-clarifies-comments-asymptomatic-transmission-sars), [cached](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/WHO%20clarifies%20comments%20on%20asymptomatic%20transmission%20of%20SARS-CoV-2%20%7C%20MDedge%20Cardiology.pdf)
  
-and [‘We don’t actually have that answer yet’: WHO clarifies comments on asymptomatic spread of Covid-19](https://www.statnews.com/2020/06/09/who-comments-asymptomatic-spread-covid-19/) ]]]
+and [‘We don’t actually have that answer yet’: WHO clarifies comments on asymptomatic spread of Covid-19](https://www.statnews.com/2020/06/09/who-comments-asymptomatic-spread-covid-19/), [cached](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/WHO%20clarifies%20comments%20on%20asymptomatic%20spread%20of%20Covid-19.pdf) ]]]
   
 *
  
