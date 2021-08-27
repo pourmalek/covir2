@@ -258,8 +258,10 @@ https://twitter.com/whoiriran/status/1430463895123206146/photo/2
 asymptomatic individuals as “rare.” as of June 10, 2020: 
  
 [WHO Says Covid-19 Asymptomatic Transmission Is ‘Very Rare’](https://www.youtube.com/watch?v=NQTBlbx1Xjs), 
+ 
 [WHO clarifies comments on asymptomatic transmission of SARS-CoV-2](https://www.mdedge.com/cardiology/article/223631/coronavirus-updates/who-clarifies-comments-asymptomatic-transmission-sars), 
-and [‘We don’t actually have that answer yet’: WHO clarifies comments on asymptomatic spread of Covid-19](https://www.statnews.com/2020/06/09/who-comments-asymptomatic-spread-covid-19/)
+ 
+and [‘We don’t actually have that answer yet’: WHO clarifies comments on asymptomatic spread of Covid-19](https://www.statnews.com/2020/06/09/who-comments-asymptomatic-spread-covid-19/) ]]]
   
 *
  
