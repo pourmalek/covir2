@@ -582,7 +582,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . Institution: Imperial College, London  
 . Among articles: https://science.sciencemag.org/content/369/6502/413  
 . Periodically updated: Yes  
-. Periodical updates accessible: Yes up to 20210823, No from 20210824
+. ### Periodical updates accessible: Yes up to 20210823, No from 20210824
 <br/><br/>
   
 (4) LANL  
@@ -822,6 +822,8 @@ Preproduced _outputs_ are stored for each uptake, e.g., [`20210709`](https://git
 [`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md) describes possible difficulties in running the Stata codes on your computer after the repository has been downloaded to your local machine. 
  
  ****
+ 
+Troubleshooting: 
  
 On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. 
 
