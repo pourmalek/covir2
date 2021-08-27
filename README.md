@@ -247,6 +247,9 @@ WHO Rep in IR #Iran Dr Hussain visited a public #COVID19 vaccination site in Teh
 
 https://twitter.com/whoiriran/status/1430463895123206146
  
+Dr Maria Van Kerkhove, PhD, WHO’s COVID-19 technical lead, and [the spread of SARS-CoV-2 by
+asymptomatic individuals as “rare.”](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/Dr%20Maria%20Van%20Kerkhove.md)
+ 
 *
  
 ![image](https://user-images.githubusercontent.com/30849720/130847217-dac7b527-40ec-43b7-aa05-315695777ede.png)
