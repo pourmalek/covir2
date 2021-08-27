@@ -24,13 +24,14 @@ Déjà diagnostiqué
 ********************************************************************************************************************************************
 
 
-On 20210824, the Imperial College COVID-19 model / study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. 
+On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. 
 
-This means the Imperial College COVID-19 model / study is no more a periodically updated study with ACCESSIBLE updates – short of early retirement of the study. Predictive performance of the Imperial College model is no longer assessable. 
+This means the Imperial College COVID-19 model/study is no more a periodically updated study with ACCESSIBLE updates – short of early retirement of the study. The predictive performance of the Imperial College model is no longer assessable. 
 
 Several thousand lines of codes that used their previously released updates will not work. 
 
 The remedy for CovidVisualized repositories (https://github.com/pourmalek/covir2 for Iran, https://github.com/pourmalek/CovidVisualizedCountry for Canada, and https://github.com/pourmalek/CovidVisualizedGlobal for the global level) is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data. 
+
 
 <br/><br/> 
 
