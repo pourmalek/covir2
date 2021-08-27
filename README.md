@@ -21,7 +21,7 @@
  
 ## TOC
  
-### [Timeline - The _cover-uncover_ test](https://github.com/pourmalek/covir2#timeline---the-cover-uncover-test)
+### [Timeline - The _cover-uncover_ test](https://github.com/pourmalek/covir2#timeline---the-cover-uncover-test-1)
 
 ### [I. SELECTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selected-graphs-from-latest-uptake-1)
 
