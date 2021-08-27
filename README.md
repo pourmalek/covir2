@@ -254,8 +254,8 @@ https://twitter.com/whoiriran/status/1430463895123206146
  
 https://twitter.com/whoiriran/status/1430463895123206146/photo/2 
  
-Dr Maria Van Kerkhove, PhD, WHO’s COVID-19 technical lead, and [the spread of SARS-CoV-2 by
-asymptomatic individuals as “rare.”](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/Dr%20Maria%20Van%20Kerkhove.md) 
+[[[Dr Maria Van Kerkhove, PhD, WHO’s COVID-19 technical lead, and [the spread of SARS-CoV-2 by
+asymptomatic individuals as “rare.” of June 10, 2020](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/Dr%20Maria%20Van%20Kerkhove.md)]]]
  
 *
  
