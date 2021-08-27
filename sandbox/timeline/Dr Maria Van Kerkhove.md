@@ -8,3 +8,9 @@ https://www.mdedge.com/cardiology/article/223631/coronavirus-updates/who-clarifi
 
 [PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/WHO%20clarifies%20comments%20on%20asymptomatic%20transmission%20of%20SARS-CoV-2%20%7C%20MDedge%20Cardiology.pdf)
 
+
+
+*
+
+![image](https://user-images.githubusercontent.com/30849720/131180315-53004c1c-990a-42b9-a7e9-1f669f426ec0.png)
+
