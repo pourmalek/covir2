@@ -255,10 +255,12 @@ https://twitter.com/whoiriran/status/1430463895123206146
 https://twitter.com/whoiriran/status/1430463895123206146/photo/2 
  
 [[[Dr Maria Van Kerkhove, PhD, WHO’s COVID-19 technical lead, and "the spread of SARS-CoV-2 by
-asymptomatic individuals as “rare.” as of June 10, 2020: [here](https://www.youtube.com/watch?v=NQTBlbx1Xjs), [here](https://www.mdedge.com/cardiology/article/223631/coronavirus-updates/who-clarifies-comments-asymptomatic-transmission-sars), and [here](https://www.statnews.com/2020/06/09/who-comments-asymptomatic-spread-covid-19/)
+asymptomatic individuals as “rare.” as of June 10, 2020: 
  
-[PDF](https://github.com/pourmalek/covir2/blob/main/sandbox/timeline/Dr%20Maria%20Van%20Kerkhove.md)]]]
- 
+[WHO Says Covid-19 Asymptomatic Transmission Is ‘Very Rare’](https://www.youtube.com/watch?v=NQTBlbx1Xjs), 
+[WHO clarifies comments on asymptomatic transmission of SARS-CoV-2](https://www.mdedge.com/cardiology/article/223631/coronavirus-updates/who-clarifies-comments-asymptomatic-transmission-sars), 
+and [‘We don’t actually have that answer yet’: WHO clarifies comments on asymptomatic spread of Covid-19](https://www.statnews.com/2020/06/09/who-comments-asymptomatic-spread-covid-19/)
+  
 *
  
 ![image](https://user-images.githubusercontent.com/30849720/130784047-6a117c49-885a-449f-9c6d-54cc7c6763eb.png)
