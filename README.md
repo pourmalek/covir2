@@ -19,6 +19,24 @@
 *****************************
  
  
+## TOC
+ 
+### [Timeline - The _cover-uncover_ test](https://github.com/pourmalek/covir2#timeline---the-cover-uncover-test)
+
+### [I. SELECTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selected-graphs-from-latest-uptake-1)
+
+### [II. METHODS AND RESULTS OF THIS WORK](https://github.com/pourmalek/covir2#ii-methods-and-results-of-this-work-1)
+
+### [III. INNER WORKS OF THIS REPOSITORY](https://github.com/pourmalek/covir2#iii-inner-works-of-this-repository-1)
+
+### [IV. SELECTED GRAPHS FROM PREVIOUS UPTAKES](https://github.com/pourmalek/covir2#iv-selected-graphs-from-previous-uptakes-1)
+  
+*****************************
+*****************************
+***************************** 
+*****************************
+ 
+ 
 ### Timeline - The _cover-uncover_ test:
  
 *****************************
@@ -319,17 +337,7 @@ The codes in these repositories can be adapted for use for any country or region
  
   
  
- 
-## TOC
 
-### [I. SELECTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selected-graphs-from-latest-uptake-1)
-
-### [II. METHODS AND RESULTS OF THIS WORK](https://github.com/pourmalek/covir2#ii-methods-and-results-of-this-work-1)
-
-### [III. INNER WORKS OF THIS REPOSITORY](https://github.com/pourmalek/covir2#iii-inner-works-of-this-repository-1)
-
-### [IV. SELECTED GRAPHS FROM PREVIOUS UPTAKES](https://github.com/pourmalek/covir2#iv-selected-graphs-from-previous-uptakes-1)
- 
 ****
 
 ********************************************************************************************************************************************
