@@ -151,7 +151,7 @@ The remedy for CovidVisualized repository https://github.com/pourmalek/covir2 fo
 is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data.
 
 * However, the previously stored results, such as:
-data in covir2-main/20210401/output/merge/country.dta
+data in covir2-main/20210416/output/merge/country.dta
 and graphs stored in:
 covir2-main /covir2/20210416/output/merge/*.pdf
 and covir2-main /20210416/output/IMPE/*.pdf
