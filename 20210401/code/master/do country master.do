@@ -154,7 +154,7 @@ is to comment out the command line reading csv data from https://github.com/mrc-
 data in covir2-main/20210401/output/merge/country.dta
 and graphs stored in:
 covir2-main /covir2/20210401/output/merge/*.pdf
-and covir2-main /20210401/output/IMPE/.pdf
+and covir2-main /20210401/output/IMPE/*.pdf
 preserve a copy of previously accessed the Imperial College COVID-19 model/study removed updates. 
 
 
