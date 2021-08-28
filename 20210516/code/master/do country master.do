@@ -153,8 +153,8 @@ is to comment out the command line reading csv data from https://github.com/mrc-
 * However, the previously stored results, such as:
 data in covir2-main/20210516/output/merge/country.dta
 and graphs stored in:
-covir2-main /covir2/20210516/output/merge/*.pdf
-and covir2-main /20210516/output/IMPE/*.pdf
+covir2-main/20210516/output/merge/*.pdf
+and covir2-main/20210516/output/IMPE/*.pdf
 preserve a copy of previously accessed the Imperial College COVID-19 model/study removed updates.
 
 
