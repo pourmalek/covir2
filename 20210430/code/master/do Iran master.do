@@ -122,7 +122,7 @@ do "$pathcovir2/DELP/do Iran DELP.do"
 
 do "$pathcovir2/IHME/do Iran IHME.do" 
 
-do "$pathcovir2/IMPE/do Iran IMPE.do" 
+// do "$pathcovir2/IMPE/do Iran IMPE.do" 
 
 do "$pathcovir2/LANL/do Iran LANL.do" 
 
@@ -143,6 +143,29 @@ do "$pathcovir2/merge/do Iran merge.do"
 
 * since you are reading this:
 * Useful additional note:  After first clean execution of entire codes, time-consuming commands can be /* bypassed */. These are -copy- commands to download component studies' estimates files, and -import delimited- after them. 
+
+
+/*
+
+* On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – 
+all previously released updates from day 1 up to and including IMPE update 20210719 – 
+from https://github.com/mrc-ide/global-lmic-reports/tree/master/data 
+
+This means the Imperial College COVID-19 model/study is no more a periodically updated study with ACCESSIBLE updates – 
+short of early retirement of the study. 
+
+Several thousand lines of codes that used their previously released updates will not work.
+
+The remedy for CovidVisualized repository https://github.com/pourmalek/covir2 for Iran 
+is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data.
+
+* However, the previously stored results, such as:
+data in covir2-main/20210401/output/merge/country.dta
+and graphs stored in:
+covir2-main /covir2/20210430/output/merge/*.pdf
+and covir2-main /20210430/output/IMPE/*.pdf
+preserve a copy of previously accessed the Imperial College COVID-19 model/study removed updates.
+
 
 
 
