@@ -829,7 +829,9 @@ double forward slashes // have been put at the beginning of the line, so that it
 save the do file and then run the file.
 
 * However, the previously stored results, such as the graphs stored in 
+ 
 "covir2-main/20210806/output/merge/asterisk.pdf" and 
+ 
 "covir2-main/20210806/output/IMPE/asterisk.pdf" preserve a graphical copy of previously accessed the Imperial College COVID-19 model/study removed updates. 
  
 
