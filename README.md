@@ -13,10 +13,31 @@
 
 ## <div align="center"> covir2 = COVID Iran review number 2
  
-*****************************
-*****************************
-***************************** 
-*****************************
+
+ 
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
+* Project: Combine and visualize international periodically updated estimates of COVID-19 pandemic at the country level (CovidVisualizedCountry) Countries without subnational estimates: Iran
+* Project name at conception: Rapid review of estimates of COVID-19 epidemic in Iran - No 2
+* Person: Farshad Pourmalek (pourmalek_farshad at yahoo dot com) || [![ORCIDID](https://user-images.githubusercontent.com/30849720/127926326-89321742-cb08-4c18-bbdd-9b0c12e4ab2f.png)](https://orcid.org/0000-0002-2134-0771) || [`PubMed`](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
+ 
+   || [UBC SPPH](https://www.spph.ubc.ca/person/farshad-pourmalek/) || [UW IHME](http://www.healthdata.org/about/farshad-pourmalek) || [YouCheck](https://youcheck.ca)  
+* Time (initial): 2021-02-10
+********************************************************************************************************************************************
+******************************************************************************************************************************************** 
+ 
+<br/><br/>
+  
+Pre-print for this project: 
+   
+ [Farshad Pourmalek. CovidVisualized: Visualized compilation of international updating models’ estimates of COVID-19 pandemic at global and country levels, 02 August 2021, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-768714/v1]](https://www.researchsquare.com/article/rs-768714/v1)
+
+[PDF](https://github.com/pourmalek/covir2/blob/main/journal%20articles%2C%20this%20work/Pourmalek%20F%20-%20CovidVisualized-%20Visualized%20compilation%20of%20international%20updating%20models’%20estimates%20of%20COVID-19%20pandemic%20at%20global%20and%20country%20levels%20-%20PREPRINT%20%20Research%20Square%2020210802.pdf)
+
+ <br/><br/>
+ 
+  
  
  
 ## TOC
@@ -33,8 +54,7 @@
   
 *****************************
 *****************************
-***************************** 
-*****************************
+
  
  
 ### Timeline - The _cover-uncover_ test:
@@ -263,28 +283,6 @@ ISNA News Agency. Available stock of _AstraZeneca Vaccine_ in Isfahan is zero. N
 
  
  
- 
- 
-********************************************************************************************************************************************
-********************************************************************************************************************************************
-* Project: Combine and visualize international periodically updated estimates of COVID-19 pandemic at the country level (CovidVisualizedCountry) Countries without subnational estimates: Iran
-* Project name at conception: Rapid review of estimates of COVID-19 epidemic in Iran - No 2
-* Person: Farshad Pourmalek (pourmalek_farshad at yahoo dot com) || [![ORCIDID](https://user-images.githubusercontent.com/30849720/127926326-89321742-cb08-4c18-bbdd-9b0c12e4ab2f.png)](https://orcid.org/0000-0002-2134-0771) || [`PubMed`](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)
- 
-   || [UBC SPPH](https://www.spph.ubc.ca/person/farshad-pourmalek/) || [UW IHME](http://www.healthdata.org/about/farshad-pourmalek) || [YouCheck](https://youcheck.ca)  
-* Time (initial): 2021-02-10
-********************************************************************************************************************************************
-******************************************************************************************************************************************** 
- 
-<br/><br/>
-  
-Pre-print for this project: 
-   
- [Farshad Pourmalek. CovidVisualized: Visualized compilation of international updating models’ estimates of COVID-19 pandemic at global and country levels, 02 August 2021, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-768714/v1]](https://www.researchsquare.com/article/rs-768714/v1)
-
-[PDF](https://github.com/pourmalek/covir2/blob/main/journal%20articles%2C%20this%20work/Pourmalek%20F%20-%20CovidVisualized-%20Visualized%20compilation%20of%20international%20updating%20models’%20estimates%20of%20COVID-19%20pandemic%20at%20global%20and%20country%20levels%20-%20PREPRINT%20%20Research%20Square%2020210802.pdf)
-
- <br/><br/>
  
  
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
