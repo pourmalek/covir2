@@ -94,7 +94,7 @@ Dr. Rick Brennan, Director of Emergency Operations in the World Health Organizat
 
 ![image](https://user-images.githubusercontent.com/30849720/131011217-5bc040c0-3054-45d7-a529-8a906b0cff16.png)
  
-![image](https://user-images.githubusercontent.com/30849720/131549586-f0640c32-3af6-4101-a1ce-c273c56555e8.png) 
+![image](https://user-images.githubusercontent.com/30849720/131549731-1fa1c02c-59b0-4684-9104-c4f14566fffa.png)
 
 ![image](https://user-images.githubusercontent.com/30849720/131054206-fb899ff6-cd9c-45ad-8e5f-590512ca233f.png)
  
