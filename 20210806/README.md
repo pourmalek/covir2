@@ -18,7 +18,7 @@ do "$pathcovir2/IMPE/do country IMPE.do"
 
 in /Users/username/Downloads/covir2-main/20210806/code/master/do country master.do
 
-and dates 2021???? before. 
+and dates 2021???? before 20210806. 
 
 However, the previously stored results, such as the graphs stored in
 "covir2-main/20210806/output/merge/asterisk.pdf" and
