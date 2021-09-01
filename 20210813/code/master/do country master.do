@@ -127,7 +127,7 @@ do "$pathcovir2/DELP/do country DELP.do"
 
 do "$pathcovir2/IHME/do country IHME.do" 
 
-// do "$pathcovir2/IMPE/do country IMPE.do" 
+do "$pathcovir2/IMPE/do country IMPE.do" 
 
 do "$pathcovir2/LANL/do country LANL.do" 
 
@@ -136,31 +136,6 @@ do "$pathcovir2/SRIV/do country SRIV.do"
 do "$pathcovir2/merge/do country merge.do" 
 
 // do "$pathcovir2/merge/do country ensemble.do" 
-
-
-/*
-
-* On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – 
-all previously released updates from day 1 up to and including IMPE update 20210719 – 
-from https://github.com/mrc-ide/global-lmic-reports/tree/master/data 
-
-This means the Imperial College COVID-19 model/study is no more a periodically updated study with ACCESSIBLE updates – 
-short of early retirement of the study. 
-
-Several thousand lines of codes that used their previously released updates will not work.
-
-The remedy for CovidVisualized repository https://github.com/pourmalek/covir2 for Iran 
-is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data.
-
-* However, the previously stored results, such as:
-data in covir2-main/20210813/output/merge/country.dta
-and graphs stored in:
-covir2-main/20210813/output/merge/*.pdf
-and covir2-main/20210813/output/IMPE/*.pdf
-preserve a copy of previously accessed the Imperial College COVID-19 model/study removed updates.
-
-
-
 
 
 
