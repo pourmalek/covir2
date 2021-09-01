@@ -5,6 +5,28 @@ DELP 20210806, **_IHME 20210806_**, IMPE 20210719, LANL 20210801, SRIV 20210801
 IHME update 20210806 creates directory 2021_08_04 with web address https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip when downloaded on 20210820 1800 PST. 
 
 <br/><br/>
+
+* IMPE model "old fits" are gone
+
+On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. As of 20210824, the IMPE update 20210806 is the earliest IMPE update available at https://github.com/mrc-ide/global-lmic-reports/tree/master/data. IMPE update 20210719 and earlier are no longer available. 
+
+This means the Imperial College COVID-19 model/study is no more a periodically updated study with ACCESSIBLE updates. 
+
+Shooting this trouble IMPE model includes -// commenting out- the line 
+
+do "$pathcovir2/IMPE/do country IMPE.do"
+
+in /Users/username/Downloads/covir2-main/20210806/code/master/do country master.do
+
+and dates 2021???? before. 
+
+However, the previously stored results, such as the graphs stored in
+"covir2-main/20210806/output/merge/asterisk.pdf" and
+
+"covir2-main/20210806/output/IMPE/asterisk.pdf" preserve a graphical copy of previously accessed the Imperial College COVID-19 model/study removed updates.
+
+<br/><br/>
+
 ****
 
 ### Merged graphs of uptake 20210806 [here](https://github.com/pourmalek/covir2/blob/main/20210806/graphs%20merged%2020210806.pdf)
