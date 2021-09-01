@@ -6,6 +6,11 @@ DELP 20210901, IHME 20210826, **_IMPE 20210825_**, LANL 20210829, SRIV 20210901
 IMPE update 20210825 (2021-08-25_v8.csv.zip) released on 20210901. 
 
 
+Similar to a previous update 20210806 of IMPE, this IMPE update 20210825 is stillborn or Dead on Arrival, because on the day it is released, 20210901, the trajectory of officially reported deaths (JOHN, the blue curve) surpassed the IMPE prediction (IMPE reference scenario mean, the black curve) in graph (5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210901/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf). 
+
+Does this invalidity of the results of IMPE update 20210825 for Iran increase the validity estimates of IMPE update 20210825 for other locations? No. 
+
+
 <br/><br/>
 ****
 
