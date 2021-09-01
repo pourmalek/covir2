@@ -11,7 +11,7 @@ Similar to a previous update 20210806 of IMPE, this IMPE update 20210825 is stil
 ![image](https://user-images.githubusercontent.com/30849720/131726453-ba0ef5ef-1dd4-4ac1-ae91-c516c13ef106.png)
 
 
-Does this invalidity of the results of IMPE update 20210825 for Iran increase the validity estimates of IMPE update 20210825 for other locations? No. 
+Does this inaccuracy of the results of IMPE update 20210825 for Iran increase the validity estimates of IMPE update 20210825 for other locations? No. 
 
 
 <br/><br/>
