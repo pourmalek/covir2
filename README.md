@@ -804,7 +804,7 @@ Troubleshooting:
  
 * IMPE: Imperial College COVID-19 model/study 
  
-* On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. 
+* On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. As of 20210824, the IMPE update 20210806 is the earliest IMPE update available at https://github.com/mrc-ide/global-lmic-reports/tree/master/data. IMPE update 20210719 and earlier are no longer available. 
 
 This means the Imperial College COVID-19 model/study is no more a periodically updated study with ACCESSIBLE updates – short of early retirement of the study. 
 
