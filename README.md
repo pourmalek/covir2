@@ -1,6 +1,6 @@
 # covir2
 
-## Just have a look at the [latest Situation report](https://github.com/pourmalek/covir2/blob/main/situation%20reports/15%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2015%20–%201400-06-06%2C%202021-08-28.pdf) if you have a very important and serious job and no time to lose.
+## If you are in a rush, look at the graphs in the [latest Situation report](https://github.com/pourmalek/covir2/blob/main/situation%20reports/15%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2015%20–%201400-06-06%2C%202021-08-28.pdf).
 
 For a streamlined view of this repository, see: https://pourmalek.github.io/covir2/ 
 
