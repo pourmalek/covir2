@@ -790,11 +790,10 @@ Preproduced _outputs_ are stored for each uptake, e.g., [`20210709`](https://git
 [`Variable name structure`](https://github.com/pourmalek/covir2/blob/main/Variable%20name%20structure.md) describes the template for models’ output data management used in this repository. 
 
 
-[`Rule for uptakes`](https://github.com/pourmalek/covir2/blob/main/setup/README.md)  describes the rule for periodical uptakes used in this repository. 
+[`Rule for uptakes`](https://github.com/pourmalek/covir2/blob/main/setup/README.md) describes the rule for periodical uptakes used in this repository. 
  
-
  
-[`Bugs and issues`](https://github.com/pourmalek/covir2/blob/main/Bugs%20and%20issues.md)
+[`Bugs and issues`](https://github.com/pourmalek/covir2/blob/main/Bugs%20and%20issues.md) describes how to report bugs and issues. 
  
  
 [`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md) describes possible difficulties in running the Stata codes on your computer after the repository has been downloaded to your local machine. 
