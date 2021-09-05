@@ -794,7 +794,7 @@ Preproduced _outputs_ are stored for each uptake, e.g., [`20210709`](https://git
  
 
  
-[`Bugs and issues`] https://github.com/pourmalek/covir2/blob/main/Bugs%20and%20issues.md
+[`Bugs and issues`](https://github.com/pourmalek/covir2/blob/main/Bugs%20and%20issues.md)
  
  
 [`Troubleshooting`](https://github.com/pourmalek/covir2/blob/main/Troubleshooting.md) describes possible difficulties in running the Stata codes on your computer after the repository has been downloaded to your local machine. 
