@@ -21,7 +21,7 @@ Algorithm: choose "X Step with interpolation" (default is Averaging window)
 
 delta X Step: set as 1 (default is 14)
 
-Soothing: set as 20% of delta X (default is 0) 
+Smoothing: set as 20% of delta X (default is 0) 
 
 Output settings: 
 Format: Decimal digits = 0
