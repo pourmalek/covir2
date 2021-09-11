@@ -57,14 +57,7 @@ Pre-print for this project:
 
 ### [IV. SELECTED GRAPHS FROM PREVIOUS UPTAKES](https://github.com/pourmalek/covir2#iv-selected-graphs-from-previous-uptakes-1)
   
-*****************************
-*****************************
 
- 
- 
-
-*****************************
-*****************************
 ***************************** 
 *****************************  
  
