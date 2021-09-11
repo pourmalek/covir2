@@ -142,6 +142,8 @@ The codes in these repositories can be adapted for use for any country or region
 #### LATEST UPTAKE: uptake [`20210910`](https://github.com/pourmalek/covir2/tree/main/20210910)
  
 #### DELP 20210910,  **_IHME 20210910_**, IMPE 20210825, LANL 20210905, SRIV 20210910 
+ 
+Note: IMPE update 20210825 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval.  
 
  
   <br/><br/>
