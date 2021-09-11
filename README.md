@@ -206,15 +206,15 @@ The codes in these repositories can be adapted for use for any country or region
   
 ****
 
-(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
+(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210910/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/132930956-23c10ce6-bcb8-48ea-9cc8-2796552ca2ce.png)
+![image](https://user-images.githubusercontent.com/30849720/132931701-afafce8c-a77b-4a03-b7f5-66acf8d3d036.png)
 
 ****
 
-(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210625/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+(10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20210910/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/132930987-a6999133-5a5a-425f-927b-cd68395362ce.png)
+![image](https://user-images.githubusercontent.com/30849720/132931733-6c8398f4-46c0-4661-822a-70e96a35d150.png)
 
 ****
 
