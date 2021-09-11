@@ -42,16 +42,19 @@ DELP 20210910,  **_IHME 20210910_**, IMPE 20210825, LANL 20210905, SRIV 20210910
 
 (5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210910/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/132930857-8ddd78ea-c06b-444e-8b82-734582171d42.png)
 
 ****
 
 (6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210910/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/132930879-a990c34d-992c-4164-bf1e-a18cec73aa4b.png)
 
 ****
 
 (7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210910/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/132930902-9f4f4895-d3ff-40c7-afec-2f4f5fe5e96b.png)
   
 ****
 
