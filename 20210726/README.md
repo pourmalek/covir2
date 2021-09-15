@@ -1,4 +1,4 @@
-! Read Iran COVID-19 epidemic models situation report No 11 - 2021-07-27 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2011%20on%2014000505%20202107027.pdf)
+! Read Iran COVID-19 epidemic models situation report No 10 - 2021-07-26 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2010%20on%2014000504%20202107026.pdf)
 
 ### Study update dates in uptake **20210726**
 
