@@ -1,3 +1,5 @@
+! Read Iran COVID-19 epidemic models situation report No 13 - 2021-08-06 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2013%20on%2014000515%2020210806.pdf)
+
 ### Study update dates in uptake 20210806
 
 DELP 20210806, **_IHME 20210806_**, IMPE 20210719, LANL 20210801, SRIV 20210801
