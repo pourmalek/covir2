@@ -1,3 +1,5 @@
+! Read Iran COVID-19 epidemic models situation report No 02 - 2021-05-28 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Early%20warning%20report%2002%20on%2020210528%20based%20on%20uptake%2020210528.pdf)
+
 ### Study update dates in uptake 20210528
 
 DELP 20210528, **IHME 20210528**, IMPE 20210522, LANL 20210526, SRIV 20210528
