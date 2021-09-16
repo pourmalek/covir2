@@ -1,6 +1,6 @@
 ! Read Iran COVID-19 epidemic models situation report No 13 - 2021-08-06 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2013%20on%2014000515%2020210806.pdf)
 
-! Read Iran COVID-19 epidemic models situation report No 13, Exta 3- 2021-08-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2013%20on%2014000517%2020210808%20Extra%203.pdf) on #correction factor for deaths and saturation of hospitals#
+! Read Iran COVID-19 epidemic models situation report No 13, Exta 3- 2021-08-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2013%20on%2014000517%2020210808%20Extra%203.pdf) on ##correction factor for deaths and saturation of hospitals##
 
 ### Study update dates in uptake 20210806
 
