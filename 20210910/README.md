@@ -6,6 +6,10 @@ DELP 20210910,  **_IHME 20210910_**, IMPE 20210825, LANL 20210905, SRIV 20210910
 
 Note: IMPE update 20210825 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval. 
 
+
+[IHME COVID-19 Results Briefing - Iran - September 9, 2021](http://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf)
+
+
 <br/><br/>
 ****
 
