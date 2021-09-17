@@ -36,7 +36,7 @@ For a streamlined view of this repository, see: https://pourmalek.github.io/covi
  
 <br/><br/>
   
-Pre-print for this project: 
+Under review pre-print for this project: 
  
  https://europepmc.org/article/PPR/PPR377517
    
