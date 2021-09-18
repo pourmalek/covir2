@@ -4206,13 +4206,153 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
   
  
  
+ ********************************************************************************************************************************************
  
+#### graph (13) Iran - R effective, Iran, 3 scenarios, June 2021 on, IHME
+ 
+ 
+ 
+ 
+ 
+*
+
+uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
+ 
+(13) [R effective, Iran, 3 scenarios, June 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%20101%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/133905793-202c92e3-2c3c-40b2-b229-18362de0ed29.png)
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************
+ 
+#### graph (14) Daily Infection outcomes ratios, Iran 3 scenarios, IHME
+ 
+ 
+ 
+ 
+ 
+*
+
+uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
+ 
+(14) [Daily Infection outcomes ratios, Iran 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%20102%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/133905853-67bfc2fc-a274-4d15-ae74-83377075272f.png)
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************
+ 
+#### graph (15) Daily mobility, Iran, 3 scenarios IHME
+ 
+ 
+ 
+ 
+ 
+*
+
+uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
+ 
+(15) [Daily mobility, Iran, 3 scenarios IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/133905895-800ccbe0-bf0d-41b6-a8fe-6b8761b9b2be.png)
+
+*
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+********************************************************************************************************************************************
+ 
+#### graph (16) Daily mask use, Iran, 3 scenarios, IHME
+ 
+ 
+ 
+ 
+ 
+*
+
+uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
+ 
+(16) [Daily mask use, Iran, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%20104%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/133905958-e509db3e-ad71-45fa-bcf3-60822fbca58a.png)
+
+*
+
   
  
  
  
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+********************************************************************************************************************************************
+ 
+#### graph (17) Percent cumulative vaccinated, Iran, IHME
+ 
+ 
+ 
+ 
+ 
+*
+
+uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
+ 
+(17) [Percent cumulative vaccinated, Iran, IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%20105%20COVID-19%20percent%20cumulative%20vaccinated%2C%20Iran%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/133905992-24391e0a-b3b3-4937-b4f9-07b37b04d226.png)
+
+*
+
  
  
  
