@@ -2,7 +2,7 @@
 
 ### Study update dates in uptake 20210916
 
-DELP 20210916,  **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
+DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 20210912, SRIV 20210916
 
 Note: IMPE update 20210825 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval. 
 
