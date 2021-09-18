@@ -57,16 +57,19 @@ Note: IMPE update 20210825 was dead at birth since predicted daily deaths was le
 
 (7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905498-0a6024d8-326f-44c8-844d-844c16aeaf08.png)
   
 ****
 
 (8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905515-522c1382-861b-4107-9755-90c532db569e.png)
   
 ****
 
-(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
+(9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905543-3c2dc951-07d3-437a-83ff-8e5bb435038a.png)
 
 ****
 
