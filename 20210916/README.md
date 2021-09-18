@@ -21,6 +21,7 @@ Note: IMPE update 20210825 was dead at birth since predicted daily deaths was le
 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905350-afd11d3f-2d9c-44ae-be65-0d27ab505897.png)
 
 ****
 
