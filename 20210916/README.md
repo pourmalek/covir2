@@ -27,21 +27,25 @@ Note: IMPE update 20210825 was dead at birth since predicted daily deaths was le
 
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905378-7e0855e3-8fa2-44fc-a92a-d8c6eac399e2.png)
 
 ****
 
 (3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905403-948cda49-60a2-4317-9df9-4fcc249ec047.png)
 
 ****
 
 (4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905422-76f82c8b-288e-4b3e-89c4-a7dc700925e1.png)
 
 ****
 
 (5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210916/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/133905442-19282d3d-9921-4976-8d6e-2e0c53b22b11.png)
 
 ****
 
