@@ -1,6 +1,6 @@
 # covir2
 
-## ! If you are in a rush, look at the graphs in the [latest Situation report](https://github.com/pourmalek/covir2/blob/main/situation%20reports/16%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2016%20–%201400-06-19%2C%202021-09-10%20copy.pdf).
+## ! If you are in a rush, look at the graphs in the [latest Situation report](https://github.com/pourmalek/covir2/blob/main/situation%20reports/17%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2017%20–%201400-06-25%2C%202021-09-16.pdf).
 
 For a streamlined view of this repository, see: https://pourmalek.github.io/covir2/ 
 
@@ -151,7 +151,7 @@ Note: IMPE update 20210825 was dead at birth since predicted daily deaths was le
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 15 – 1400-06-19, 2021-09-10](https://github.com/pourmalek/covir2/blob/main/situation%20reports/16%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2016%20–%201400-06-19%2C%202021-09-10%20copy.pdf)
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 17 – 2021-09-16](https://github.com/pourmalek/covir2/blob/main/situation%20reports/17%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2017%20–%201400-06-25%2C%202021-09-16.pdf)
  
 
 ********************************************************************************************************************************************
