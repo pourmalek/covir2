@@ -32,9 +32,9 @@ Thank you very much indeed! The situation reports that you prepared is a very we
  
 Regards
 
-Farid Najafi MD PhD                 Epidemiologist
+Farid Najafi MD PhD  
  
-
+Epidemiologist
  
 Deputy Minister of Research and Technology
 
