@@ -24,12 +24,9 @@ For a streamlined view of this repository, see: https://pourmalek.github.io/covi
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
  
- [Testimonial by Deputy Minister of Health for Research and Technology, Iran, about the Situation Reports developed in this work](https://github.com/pourmalek/covir2/blob/main/situation%20reports/--%20Re%2017%20Iran%20COVID19%20epidemic%20models%20situation%20report%20No%2017%20%2014000625%2020210916.pdf)
+### [Testimonial by Deputy Minister of Health for Research and Technology, Iran, about the Situation Reports developed in this work](https://github.com/pourmalek/covir2/blob/main/situation%20reports/--%20Re%2017%20Iran%20COVID19%20epidemic%20models%20situation%20report%20No%2017%20%2014000625%2020210916.pdf)
 
 ### "Thank you very much indeed! The situation reports that you prepared is a very well prepared summary document on epidemic of covid-19 in Iran, for all policymakers and researchers." 
- 
- <br/><br/>
-
 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
