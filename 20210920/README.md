@@ -41,11 +41,13 @@ For use in this code, IMPE estimates for Iran from "2021-09-09_v8.csv" is stored
 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210920/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/134087806-9df8ebaf-8b55-4d87-bc66-8c721e11e8e6.png)
 
 ****
 
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210920/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/134087903-31e5158d-416a-4696-bd13-909c398e06ad.png)
 
 ****
 
