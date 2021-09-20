@@ -12,7 +12,7 @@ DELP 20210920, IHME 20210916, **_IMPE 20210909_**, LANL 20210919, SRIV 20210920
 
 (1) IMPE update 20210909 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval.
 
-(2) This is fourth time in a row that a freshly released IMPE update is dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval.
+(2) This is fourth time in a row that a freshly released IMPE update is dead at birth since predicted daily deaths are less than report daily deaths during the overlap interval.
 
 (3) IMPE update 20210909 was released on 20210920. 
 
