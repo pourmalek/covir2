@@ -1,4 +1,4 @@
-No new Situation Report is developed based on this uptake, because the only new update is IMPE update 20210909, and was dead at birth; see below.
+No new Situation Report was developed based on this uptake, because the only new update is IMPE update 20210909, and it was dead at birth; see below.
 
 
 ### Study update dates in uptake 20210920
