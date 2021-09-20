@@ -4,15 +4,21 @@
 
 DELP 20210920, IHME 20210916, **_IMPE 20210909_**, LANL 20210919, SRIV 20210920
 
-Note: IMPE update 20210909 was released on 20210920. 
-
 <br/><br/>
 
 
-[IHME COVID-19 Results Briefing - Iran - 20210909](http://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf) || [PDF](https://github.com/pourmalek/covir2/blob/main/20210920/IHME%20COVID-19%20Results%20Briefing%20-%20Iran%20-%20September%209%2C%202021.pdf)
+#### IMPE update 20210825 notes: 
 
+(1) IMPE update 20210909 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval.
+
+(2) IMPE update 20210909 was released on 20210920. 
+
+(3) On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
+
+For use in this code, IMPE estimates for Iran from "2021-09-09_v8.csv" is stored in file "2021-09-25-09_v8 Iran.csv".
 
 <br/><br/>
+
 ****
 
 ### Merged graphs of uptake 20210920 [here](https://github.com/pourmalek/covir2/blob/main/20210920/graphs%20merged%2020210920.pdf)
