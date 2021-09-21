@@ -66,8 +66,6 @@ Under review pre-print for this project:
  
 ## TOC
  
-### [Timeline - The _cover-uncover_ test](https://github.com/pourmalek/covir2/blob/main/Timeline%20-%20The%20_cover-uncover_%20test.md)
-
 ### [I. SELECTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selected-graphs-from-latest-uptake-1)
 
 ### [II. METHODS AND RESULTS OF THIS WORK](https://github.com/pourmalek/covir2#ii-methods-and-results-of-this-work-1)
@@ -166,7 +164,7 @@ Note: IMPE update 20210909 (released on 20210920) was dead at birth since predic
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 17 – 2021-09-16](https://github.com/pourmalek/covir2/blob/main/situation%20reports/17%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2017%20–%201400-06-25%2C%202021-09-16.pdf)
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 18 – 2021-09-20](https://github.com/pourmalek/covir2/blob/main/situation%20reports/18%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2018%20–%201400-06-29%2C%202021-09-20.pdf)
  
 
 ********************************************************************************************************************************************
