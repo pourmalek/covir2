@@ -31,7 +31,7 @@
 
 [graph (13) Iran - R effective, Iran, 3 scenarios, June 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-13-iran---r-effective-iran-3-scenarios-june-2021-on-ihme) 
  
-[graph (14) Daily Infection outcomes ratios, Iran 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-14-daily-infection-outcomes-ratios-iran-3-scenarios-ihme)
+[graph (14) Daily Infection-outcome ratios, Iran 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-14-daily-infection-outcomes-ratios-iran-3-scenarios-ihme)
 
 [graph (15) Daily mobility, Iran, 3 scenarios IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-15-daily-mobility-iran-3-scenarios-ihme)
 
