@@ -924,7 +924,7 @@ _Component studies (the international periodically updated models) and their sce
   
     . To examine changes in predictions across consecutive uptakes
   
-2.	Outcomes: Daily deaths, Daily cases or infections, Hospital-related outcomes, Daily deaths estimated to reported, Daily cases or infections estimated to reported cases.
+2.	Outcomes: Daily deaths, Daily cases or infections, Hospital-related outcomes, Daily deaths estimated to reported, Daily cases or infections estimated to reported cases. Followed by extra outcomes estimated by IHME and added starting from uptake 20210916, i.e., R effective, Daily Infection-outcome ratios, Daily mobility, Daily mask use, and (Percent) cumulative vaccinated.
   
     . To examine different outcomes with different public health consequences and model performance implications
   
