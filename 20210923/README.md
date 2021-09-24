@@ -7,24 +7,6 @@ DELP 20210923, **_IHME 20210923_**, IMPE 20210909, LANL 20210919, SRIV 20210923
 <br/><br/>
 
 
-#### IMPE update 20210825 notes: 
-
-(1) IMPE update 20210909 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval.
-
-(2) This is fourth time in a row that a freshly released IMPE update is dead at birth since predicted daily deaths are less than report daily deaths during the overlap interval.
-
-(3) IMPE update 20210909 was released on 20210923. 
-
-(4) On 20210923, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
-
-For use in this code, IMPE estimates for Iran from "2021-09-09_v8.csv" is stored in file "2021-09-25-09_v8 Iran.csv".
-
-<br/><br/>
-
-![image](https://user-images.githubusercontent.com/30849720/134087255-557f336a-0a32-48c2-9302-30b5f196d777.png)
-
-<br/><br/>
-
 ****
 
 ### Merged graphs of uptake 20210923 [here](https://github.com/pourmalek/covir2/blob/main/20210923/graphs%20merged%2020210923.pdf)
