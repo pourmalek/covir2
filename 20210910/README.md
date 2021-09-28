@@ -4,8 +4,6 @@
 
 DELP 20210910,  **_IHME 20210910_**, IMPE 20210825, LANL 20210905, SRIV 20210910
 
-Note: IMPE update 20210825 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval. 
-
 <br/><br/>
 
 
