@@ -33,21 +33,25 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 (1) [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135177897-48e8b30e-8faa-4556-a656-006af6aaf316.png)
 
 ****
 
 (2) [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135177945-71d592a8-2fb4-41c7-bcf2-e112931d34f2.png)
 
 ****
 
 (3) [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178001-0eebafe0-5a6f-42c3-a5d9-4851c2abf415.png)
 
 ****
 
 (4) [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Japan%2C%203%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178055-1453662f-983c-482f-889d-91a4cfbb6c1f.png)
 
 ****
 
