@@ -55,13 +55,11 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 ****
 
-(5) [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
-
+(5) Daily deaths, 2021, reference scenario with uncertainty, IMPE //  Imperial College revoked their previously released updates. 
 
 ****
 
-(6) [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Japan%2C%203%20scenarios%2C%20IMPE.pdf)
-
+(6) Daily deaths, 2021, 3 scenarios, IMPE //  Imperial College revoked their previously released updates. 
 
 ****
 
