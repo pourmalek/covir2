@@ -1,1 +1,0 @@
-For re-running the codes in the covir2 / ADAPTATIONS_EXAMPLES / , the use will need to relocate the downloaded dirctory "Country_date" / "date" to the root of "covir2-main" in local machine's Downloads folder.
