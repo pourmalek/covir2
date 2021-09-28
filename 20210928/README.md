@@ -29,41 +29,49 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135111465-7a2a5257-b9cc-415f-ab9b-bdefe99b7955.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135111596-83d8db2f-9c01-4c14-9215-5bf62c5616d9.png)
 
 ****
 
 (3) Iran [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135111752-56eecc76-a9f2-47b9-9ff9-e1f52930ace4.png)
 
 ****
 
 (4) Iran [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135111900-03a99d02-4017-4f71-b389-b9236ad938b3.png)
 
 ****
 
 (5) Iran [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135112036-868b8b02-aa5b-4ad1-a625-bd9773c92434.png)
 
 ****
 
 (6) Iran [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135112202-551fb19d-d47d-44b7-85a1-04c541e957ae.png)
 
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135112349-8c8bcb19-fb47-4608-83c9-9e16868cb4db.png)
   
 ****
 
 (8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135112472-02a73c49-55ed-4eb7-a39e-b909ec5d4896.png)
   
 ****
 
