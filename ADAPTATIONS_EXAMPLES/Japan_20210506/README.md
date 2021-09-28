@@ -8,6 +8,10 @@ Pourmalek, F. GitHub repository “covid2”: Combine and visualize internationa
 
 DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
+<br/><br/>
+
+#### IHME estimated on 20210506 that the correction factor for under-reporting of COVID-19 deaths in Japan was about more than 10. Graphs number 1 and 13 below. 
+
 
 <br/><br/>
 ****
@@ -101,5 +105,12 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 ![image](https://user-images.githubusercontent.com/30849720/135178704-ab414b4c-9929-43a2-874e-7bf723176d5e.png)
   
+****
+****
+
+(13) [Total deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2095%20COVID-19%20total%20deaths%20estimated%20to%20reported%2C%20Japan%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/135179062-7bbf6c97-04d8-4015-94d9-01c70c2fc2e7.png)
+
 ****
 
