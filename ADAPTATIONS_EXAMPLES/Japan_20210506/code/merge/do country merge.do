@@ -543,19 +543,6 @@ grstyle color background white
 ****
 * daily deaths, reference scenario, all time
 
-
-* adjust x axis ticks and avoid globals
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -563,7 +550,7 @@ twoway ///
 (line DayDeaMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -579,12 +566,6 @@ graph export "graph 11 COVID-19 daily deaths, $country, reference scenarios, all
 ****
 * daily deaths, reference scenario, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -592,7 +573,7 @@ twoway ///
 (line DayDeaMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -607,12 +588,6 @@ graph export "graph 12 COVID-19 daily deaths, $country, reference scenarios.pdf"
 
 ****
 * daily deaths, reference scenario, 2021, CI
-
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
 
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
@@ -629,7 +604,7 @@ twoway ///
 (line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
 (line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -646,12 +621,6 @@ graph export "graph 13 COVID-19 daily deaths, $country, reference scenarios, CI.
 ****
 * daily deaths, reference scenario with uncertainty, IHME, 2021 
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
 (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(medthick)) /// 2 "JOHN smooth"
@@ -659,7 +628,7 @@ twoway ///
 (line DayDeaLoRaA02S01 date, sort lcolor(green) lpattern(dash)) /// 4 IHME reference lower
 (line DayDeaUpRaA02S01 date, sort lcolor(red) lpattern(dash)) /// 5 IHME reference upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IHME", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -676,12 +645,6 @@ graph export "graph 14 COVID-19 daily deaths, $country, reference scenario with 
 ****
 * daily deaths, 3 scenarios, IHME, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
 (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(medthick)) /// 2 "JOHN smooth"
@@ -690,7 +653,7 @@ twoway ///
 (line DayDeaMeRaA02S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 5 IHME worse mean
 (line DayDeaUpRaA02S03 date, sort lcolor(red) lpattern(dash)) /// 6 IHME worse upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IHME", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -710,7 +673,7 @@ graph export "graph 15 COVID-19 daily deaths, $country, 3 scenarios, IHME.pdf", 
 
 forval i = 1(1)12 {
 	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
+	local dates2021 #12 `date2021'
 }
 *
 
@@ -721,7 +684,7 @@ twoway ///
 (line DayDeaLoRaA03S02 date, sort lcolor(green) lpattern(dash)) /// 4 IMPE reference lower
 (line DayDeaUpRaA03S02 date, sort lcolor(red) lpattern(dash)) /// 5 IMPE reference upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -740,7 +703,7 @@ graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with 
 
 forval i = 1(1)12 {
 	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
+	local dates2021 #12 `date2021'
 }
 *
 
@@ -752,7 +715,7 @@ twoway ///
 (line DayDeaMeRaA03S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 5 IMPE worse mean
 (line DayDeaUpRaA03S03 date, sort lcolor(red) lpattern(dash)) /// 6 IMPE worse upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -773,17 +736,6 @@ graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", 
 
 * daily cases or infections, reference scenario, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -791,7 +743,7 @@ twoway ///
 (line DayCasMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -807,12 +759,6 @@ graph export "graph 21 COVID-19 daily cases, $country, reference scenarios, all 
 ****
 * daily cases or infections, reference scenario, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -820,7 +766,7 @@ twoway ///
 (line DayCasMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -834,12 +780,6 @@ graph export "graph 22 COVID-19 daily cases, $country, reference scenarios.pdf",
 
 ****
 * daily cases or infections, reference scenarios, 2021, CI
-
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
 
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
@@ -856,7 +796,7 @@ twoway ///
 (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
 (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -871,12 +811,6 @@ graph export "graph 23 COVID-19 daily cases, $country, reference scenarios, CI.p
 
 ****
 * daily cases or infections, full scenarios, with uncertainty, 2021
-
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
 
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
@@ -895,7 +829,7 @@ twoway ///
 (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 14 "SRIV" lower
 (line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 15 "SRIV" upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -912,19 +846,13 @@ graph export "graph 23 COVID-19 daily cases, $country, full scenarios, CI.pdf", 
 ****
 * daily cases or infections, reference scenario with uncertainty, IHME, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
 (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 2 IHME reference mean
 (line DayINFLoRaA02S01 date, sort lcolor(green) lpattern(dash)) /// 3 IHME reference lower
 (line DayINFUpRaA02S01 date, sort lcolor(red) lpattern(dash)) /// 4 IHME reference upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases JOHN, and infections IHME, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -940,12 +868,6 @@ graph export "graph 24 COVID-19 daily cases, $country, reference scenario with u
 ****
 * daily cases or infections, 3 scenarios, IHME, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
 (line DayINFMeRaA02S01 date, sort lcolor(black)) /// 2 IHME reference mean
@@ -953,7 +875,7 @@ twoway ///
 (line DayINFMeRaA02S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 4 IHME worse mean
 (line DayINFUpRaA02S03 date, sort lcolor(red) lpattern(dash)) /// 5 IHME worse upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily JOHN, and infections IHME, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -972,7 +894,7 @@ graph export "graph 25 COVID-19 daily cases, $country, 3 scenarios, IHME.pdf", r
 
 forval i = 1(1)12 {
 	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
+	local dates2021 #12 `date2021'
 }
 *
 
@@ -982,7 +904,7 @@ twoway ///
 (line DayINFLoRaA03S02 date, sort lcolor(green) lpattern(dash)) /// 3 IMPE reference lower
 (line DayINFUpRaA03S02 date, sort lcolor(red) lpattern(dash)) /// 4 IMPE reference upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases JOHN, and infections IMPE, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1000,7 +922,7 @@ graph export "graph 26 COVID-19 daily cases, $country, reference scenario with u
 
 forval i = 1(1)12 {
 	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
+	local dates2021 #12 `date2021'
 }
 *
 
@@ -1011,7 +933,7 @@ twoway ///
 (line DayINFMeRaA03S03 date, sort lcolor(red) lwidth(thick) lpattern(tight_dot)) /// 4 IMPE worse mean
 (line DayINFUpRaA03S03 date, sort lcolor(red) lpattern(dash)) /// 5 IMPE worse upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily JOHN, and infections IMPE, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1033,17 +955,6 @@ graph export "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.pdf", r
 ****
 * total deaths, reference scenario, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1051,7 +962,7 @@ twoway ///
 (line TotDeaMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1066,12 +977,6 @@ graph export "graph 31 COVID-19 total deaths, $country, reference scenarios, all
 ****
 * total deaths, reference scenario, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1079,7 +984,7 @@ twoway ///
 (line TotDeaMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1093,12 +998,6 @@ graph export "graph 32 COVID-19 total deaths, $country, reference scenarios.pdf"
 
 ****
 * total deaths, reference scenario, CI, 2021
-
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
 
 twoway ///
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
@@ -1115,7 +1014,7 @@ twoway ///
 (line TotDeaLoRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
 (line TotDeaUpRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1137,17 +1036,6 @@ graph export "graph 33 COVID-19 total deaths, $country, reference scenarios, CI.
 ****
 * total cases or infections, reference scenario, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1155,7 +1043,7 @@ twoway ///
 (line TotCasMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1171,12 +1059,6 @@ graph export "graph 41 COVID-19 total cases, $country, reference scenarios, all 
 ****
 * total cases or infections, reference scenario, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1184,7 +1066,7 @@ twoway ///
 (line TotCasMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1199,12 +1081,6 @@ graph export "graph 42 COVID-19 total cases, $country, reference scenarios.pdf",
 
 ****
 * total cases or infections, reference scenario, CI, 2021
-
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
 
 twoway ///
 (line TotCasMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 JOHN
@@ -1221,7 +1097,7 @@ twoway ///
 (line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
 (line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1243,17 +1119,6 @@ graph export "graph 43 COVID-19 total cases, $country, reference scenarios, CI.p
 ****
 * CFR / IFR all studies, all time, reference scenarios, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCfrMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCfrMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1261,7 +1126,7 @@ twoway ///
 (line DayCfrMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily CFR or IFR) title("COVID-19 daily CFR or IFR, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1276,12 +1141,6 @@ graph export "graph 51 COVID-19 daily CFR, $country, reference scenarios, all ti
 ****
 * cfr all studies, reference scenarios, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCfrMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCfrMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1289,7 +1148,7 @@ twoway ///
 (line DayCfrMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily CFR or IFR) title("COVID-19 daily CFR or IFR, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1307,20 +1166,6 @@ graph export "graph 52 COVID-19 daily CFR, $country, reference scenarios.pdf", r
 
 * other outcomes (graph numbers start with 71)
 
-
-* all hospital-related outcomes, all time
-
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayHosMeRaA01S00 date, sort lcolor(red)  lwidth(thick)) /// 1 DELP Hospitalized (Daily Cases Active Hospitalized Mean DELP S0)
 (line DayVenMeRaA01S00 date, sort lcolor(red) lpattern(dash)  lwidth(thick)) /// 2 DELP Ventilated (Daily Cases Active Ventilated Mean DELP S0)
@@ -1329,7 +1174,7 @@ twoway ///
 (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 5 IHME Admissions (Daily hospital admissions Mean IHME S1)
 (line DayIcnMeSmA02S01 date, sort lcolor(blue)) /// 6 IHME ICU new (Daily new people going to ICU Mean IHME S1)
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1345,12 +1190,6 @@ graph export "graph 71 COVID-19 hospital-related outcomes, all time.pdf", replac
 ****
 * daily hospital-related outcomes, DELP, IHME, wo IHME Bed need
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayHosMeRaA01S00 date, sort lcolor(red)  lwidth(thick)) /// 1 DELP Hospitalized (Daily Cases Active Hospitalized Mean DELP S0)
 (line DayVenMeRaA01S00 date, sort lcolor(red) lpattern(dash)  lwidth(thick)) /// 2 DELP Ventilated (Daily Cases Active Ventilated Mean DELP S0)
@@ -1358,7 +1197,7 @@ twoway ///
 (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 4 IHME Admissions (Daily hospital admissions Mean IHME S1)
 (line DayIcnMeSmA02S01 date, sort lcolor(blue)) /// 5 IHME ICU new (Daily new people going to ICU Mean IHME S1)
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1380,18 +1219,6 @@ graph export "graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf
 ****
 * Daily cases or infections to deaths (CTD / ITD) all studies, reference scenarios, all time
 
-
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCTDMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1399,7 +1226,7 @@ twoway ///
 (line DayCTDMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections to deaths) title("COVID-19 daily cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1414,13 +1241,6 @@ graph export "graph 81 COVID-19 daily cases to deaths, $country, reference scena
 ****
 * Daily cases or infections to deaths (CTD / ITD) all studies, reference scenarios, 2021
 
-
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCTDMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1428,7 +1248,7 @@ twoway ///
 (line DayCTDMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections to deaths) title("COVID-19 daily cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1443,17 +1263,6 @@ graph export "graph 82 COVID-19 daily cases to deaths, $country, reference scena
 ****
 * Total cases to deaths (CTD / ITD) all studies, all time, reference scenarios, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotCTDMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1461,7 +1270,7 @@ twoway ///
 (line TotCTDMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections to deaths) title("COVID-19 total cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1476,12 +1285,6 @@ graph export "graph 83 COVID-19 total cases to deaths, $country, reference scena
 ****
 * Total cases to deaths (CTD / ITD) all studies, reference scenarios, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotCTDMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1489,7 +1292,7 @@ twoway ///
 (line TotCTDMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections to deaths) title("COVID-19 total cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1513,17 +1316,6 @@ graph export "graph 84 COVID-19 total cases to deaths, $country, reference scena
 ****
 * daily deaths estimated to reported (DER) all studies, reference scenarios, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayDERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1531,7 +1323,7 @@ twoway ///
 (line DayDERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths estimated to reported) title("COVID-19 daily deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1546,12 +1338,6 @@ graph export "graph 91 COVID-19 daily deaths estimated to reported, $country, re
 ****
 * daily deaths estimated to reported (DER) all studies, reference scenarios, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayDERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1559,7 +1345,7 @@ twoway ///
 (line DayDERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths estimated to reported) title("COVID-19 daily deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1577,17 +1363,6 @@ graph export "graph 92 COVID-19 daily deaths estimated to reported, $country, re
 ****
 * daily cases or infections estimated to reported cases (CER / IER) all studies, reference scenarios, all time 
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1595,7 +1370,7 @@ twoway ///
 (line DayCERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections estimated to reported) title("COVID-19 daily cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(3)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1610,12 +1385,6 @@ graph export "graph 93 COVID-19 daily cases estimated to reported, $country, ref
 ****
 * daily cases or infections estimated to reported cases (CER / IER) all studies, 2021-01-01 on, reference scenarios
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line DayCERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line DayCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1623,7 +1392,7 @@ twoway ///
 (line DayCERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line DayCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections estimated to reported) title("COVID-19 daily cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(3)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1638,17 +1407,6 @@ graph export "graph 94 COVID-19 daily cases estimated to reported, $country, ref
 ****
 * total deaths estimated to reported (DER) all studies, reference scenarios, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotDERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN
 (line TotDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1656,7 +1414,7 @@ twoway ///
 (line TotDERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1671,12 +1429,6 @@ graph export "graph 95 COVID-19 total deaths estimated to reported, $country, re
 ****
 * total deaths estimated to reported (DER) all studies, reference scenarios, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotDERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN
 (line TotDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1684,7 +1436,7 @@ twoway ///
 (line TotDERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1700,17 +1452,6 @@ graph export "graph 96 COVID-19 total deaths estimated to reported, $country, re
 ****
 * total cases or infections or infections estimated to reported cases (CER / IER) all studies, reference scenarios, all time
 
-forval i = 1(1)12 {
-	local date2020 = mdy(`i', 1, 2020)
-	local dates2020 `dates2020' `date2020'
-}
-*
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotCERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1718,7 +1459,7 @@ twoway ///
 (line TotCERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01dec2019) ///
-, xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#24, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections estimated to reported) title("COVID-19 total cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -1733,12 +1474,6 @@ graph export "graph 97 COVID-19 total cases estimated to reported, $country, ref
 ****
 * total cases or infections or infections estimated to reported cases (CER / IER) all studies, reference scenarios, 2021
 
-forval i = 1(1)12 {
-	local date2021 = mdy(`i', 1, 2021)
-	local dates2021 `dates2021' `date2021'
-}
-*
-
 twoway ///
 (line TotCERMeRaA00S00 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) /// 1 "JOHN"
 (line TotCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
@@ -1746,7 +1481,7 @@ twoway ///
 (line TotCERMeRaA04S00 date, sort lcolor(gold)) /// 4 "LANL"
 (line TotCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
-, xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections estimated to reported) title("COVID-19 total cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
