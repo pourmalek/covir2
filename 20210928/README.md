@@ -1,8 +1,10 @@
-! Read Iran COVID-19 epidemic models situation report No 19 - 2021-09-23 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/19%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2019%20–%202021-09-23.pdf)
+! Read Iran COVID-19 epidemic models situation report No 20 - 2021-09-28 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/19%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2020%20–%202021-09-28.pdf)
 
 ### Study update dates in uptake 20210928
 
 DELP 20210927, IHME 20210923, **_IMPE 20210924_**, LANL 20210926, SRIV 20210928
+
+<br/><br/>
 
 
 IMPE update 20210924 (2021-09-24_v8.csv.zip) was released on 20210928.
