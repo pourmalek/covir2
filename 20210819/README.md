@@ -10,11 +10,6 @@ IHME update:
 
 20210823: Expectedly, IHME replaced their IHME update 20210819 released on 20210820 with a genuinely new file that does not create the old directory 2021_08_04 when downloaded. That is the final stage of release of IHME update 20210819, unless the file might be removed or become not accessible, the risk highest being during the next seven days. 
 
-
-IMPE update: 
-
-This update 20210806 of IMPE is dead at birth FOR IRAN. See graph for Iran here: [(5) Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20210819/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf). While JOHN and Worldometer web site show PCR-positive daily deaths officially report by Ministry of Health of Iran surpassed 411 on 20210802, the IMPE update 20210806 released on 20210813 says daily deaths will soon go below 400 in Iran. Does the above observation increase the validity of this update 20210806 of IMPE in other locations or at the global level? No.
-
 <br/><br/>
 ****
 
