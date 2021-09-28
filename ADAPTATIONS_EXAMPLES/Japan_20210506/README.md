@@ -3,13 +3,10 @@
 DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 
-Note: In this uptake, and uptakes before this, IHME zip file creates a directory, and the code needs - cd 2021-05-06 - and cd .. at the end. The directory name is snail_type in some IHME updates and is not snail in some other some IHME updates, e.g., this same 2021-05-06. The date shown in the directory name, shows a calendar date equal to the update date in some IHME updates, and shows a different calendar date in other IHME updates. 
-
-
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210506 [here](https://github.com/pourmalek/covir2/blob/main/20210506/graphs%20merged%2020210506.pdf)
+### Merged graphs of uptake 20210506 [here](https://github.com/pourmalek/covir2/edit/main/ADAPTATIONS_EXAMPLES/Japan_20210506/graphs%20merged%2020210506.pdf)
 
 ****
 
