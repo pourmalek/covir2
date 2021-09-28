@@ -87,16 +87,19 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 (10) [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178542-f244a4a2-c767-45d7-bc91-4e8f9f785123.png)
 
 ****
 
 (11) [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Japan%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178600-29505e14-bc10-4303-ae47-19139da81d94.png)
   
 ****
 
 (12) [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Japan%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/135178704-ab414b4c-9929-43a2-874e-7bf723176d5e.png)
   
 ****
 
