@@ -1,3 +1,7 @@
+Pourmalek, F. GitHub repository “covid2”: Combine and visualize international periodically updating estimates of COVID-19 pandemic at the country level, countries without subnational level estimates: Iran. Version 2.2, Released June 23, 2021. https://github.com/pourmalek/covir2. Adaptation for Japan 20210506 available at https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210506
+
+<br/><br/>
+
 ### COUNTRY = Japan
 
 ### Study update dates in uptake 20210506
@@ -65,16 +69,19 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 
 (7) [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Japan%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178331-052d393e-a2cb-497c-868f-57b92f04ab45.png)
   
 ****
 
 (8) [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Japan%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178427-0e3ff744-391b-407d-8241-7babc19c0a22.png)
   
 ****
 
 (9) [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/output/merge/graph%2071%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135178480-bf5c393c-a237-4191-9fcd-ed74b240a8f6.png)
 
 ****
 
