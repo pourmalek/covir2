@@ -7,11 +7,11 @@ DELP 20210920, IHME 20210916, **_IMPE 20210909_**, LANL 20210919, SRIV 20210920
 <br/><br/>
 
 
-#### IMPE update 20210825 notes: 
+#### IMPE update 20210909 notes: 
 
 IMPE update 20210909 was released on 20210920. 
 
-On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
+On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. 
 
 For use in this code, IMPE estimates for Iran from "2021-09-09_v8.csv" is stored in file "2021-09-25-09_v8 Iran.csv".
 
