@@ -13,6 +13,8 @@ DELP 20210506, **IHME 20210506**, IMPE 20210424, LANL 20210505, SRIV 20210506
 #### IHME estimated on 20210506 that the correction factor for under-reporting of COVID-19 deaths in Japan was about more than 10. Graphs number 1 and 13 below. 
 
 
+### For the newest updates as of 20210928 of the international and periodically updated models of the COVID-19 epidemic in Japan, see  https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210928
+
 <br/><br/>
 ****
 
