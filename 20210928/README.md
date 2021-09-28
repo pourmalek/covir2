@@ -100,7 +100,7 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 ****
 ****
 
-(13) Iran [R effective, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20210928/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
+(13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20210928/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/135113329-2ef6111c-600f-4a64-ae0d-86a16d79b8d7.png)
 
