@@ -9,13 +9,9 @@ DELP 20210920, IHME 20210916, **_IMPE 20210909_**, LANL 20210919, SRIV 20210920
 
 #### IMPE update 20210825 notes: 
 
-(1) IMPE update 20210909 was dead at birth since predicted daily deaths was less than report daily deaths during the overlap interval.
+IMPE update 20210909 was released on 20210920. 
 
-(2) This is fourth time in a row that a freshly released IMPE update is dead at birth since predicted daily deaths are less than report daily deaths during the overlap interval.
-
-(3) IMPE update 20210909 was released on 20210920. 
-
-(4) On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
+On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
 
 For use in this code, IMPE estimates for Iran from "2021-09-09_v8.csv" is stored in file "2021-09-25-09_v8 Iran.csv".
 
