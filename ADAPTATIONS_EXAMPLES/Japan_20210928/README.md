@@ -35,16 +35,19 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 (1) Japan [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185286-c1be9bc7-f462-41e6-9c3f-4f0cbe660951.png)
 
 ****
 
 (2) Japan [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185326-6b823406-843a-4eed-9c50-271687995e56.png)
 
 ****
 
 (3) Japan [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Japan%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185365-911c465b-1371-4539-8441-6259a5d579cd.png)
 
 ****
 
