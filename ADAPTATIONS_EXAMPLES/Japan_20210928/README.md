@@ -1,4 +1,4 @@
-! Read Japan COVID-19 epidemic models situation report No 01 - 2021-09-23 [here](https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210928/01 Japan COVID-19 epidemic models situation report No 01 – 2021-09-28.pdf)
+! Read Japan COVID-19 epidemic models situation report No 01 - 2021-09-23 [here](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/01%20Japan%20COVID-19%20epidemic%20models%20situation%20report%20No%2001%20–%202021-09-28.pdf)
 
 <br/><br/>
 
