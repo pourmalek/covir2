@@ -1,9 +1,12 @@
-Content loading will be complete at 6:00 PM Standard Pacific Time, Sep 28, 2021.
-
-****
-
-
 ! Read Japan COVID-19 epidemic models situation report No 01 - 2021-09-23 [here](.pdf)
+
+<br/><br/>
+
+Pourmalek, F. GitHub repository “covid2”: Combine and visualize international periodically updating estimates of COVID-19 pandemic at the country level, countries without subnational level estimates: Iran. Version 2.2, Released June 23, 2021. https://github.com/pourmalek/covir2. Adaptation for Japan 20210506 available at https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210506
+
+<br/><br/>
+
+### COUNTRY = Japan
 
 ### Study update dates in uptake 20210928
 
