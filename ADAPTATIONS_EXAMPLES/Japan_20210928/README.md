@@ -2,7 +2,7 @@
 
 <br/><br/>
 
-Pourmalek, F. GitHub repository “covid2”: Combine and visualize international periodically updating estimates of COVID-19 pandemic at the country level, countries without subnational level estimates: Iran. Version 2.2, Released June 23, 2021. https://github.com/pourmalek/covir2. Adaptation for Japan 20210506 available at https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210506
+Pourmalek, F. GitHub repository “covid2”: Combine and visualize international periodically updating estimates of COVID-19 pandemic at the country level, countries without subnational level estimates: Iran. Version 2.2, Released June 23, 2021. https://github.com/pourmalek/covir2. Adaptation for Japan 20210928available at https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210928
 
 <br/><br/>
 
@@ -13,7 +13,7 @@ Pourmalek, F. GitHub repository “covid2”: Combine and visualize internationa
 DELP 20210927, IHME 20210923, **_IMPE 20210924_**, LANL 20210926, SRIV 20210928
 
 
-IMPE update 20210924 (2021-09-24_v8.csv.zip) was released on ADAPTATIONS_EXAMPLES/Japan_20210928.
+IMPE update 20210924 (2021-09-24_v8.csv.zip) was released on 20210928.
 
 The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926].
 
