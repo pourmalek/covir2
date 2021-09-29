@@ -71,21 +71,25 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 (7) Japan [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Japan%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185611-34fcf401-9e2f-40ac-b562-51c864aed5be.png)
   
 ****
 
 (8) Japan [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Japan%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185661-7907f573-511f-4b13-801c-6a3345317b5a.png)
   
 ****
 
 (9) Japan [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185706-814f134c-a790-4c5d-a784-fc25d0212583.png)
 
 ****
 
 (10) Japan [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210928/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135185750-17a59b57-ba79-4740-9c2b-25950736c9f4.png)
 
 ****
 
