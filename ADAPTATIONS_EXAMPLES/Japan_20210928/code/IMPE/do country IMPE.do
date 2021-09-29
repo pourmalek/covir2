@@ -39,7 +39,7 @@ erase 2021-09-24_v8.csv.zip
 
 On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
 
-For use in this code, IMPE estimates for Iran from "2021-09-24_v8.csv" is stored in file "2021-09-24_v8 Iran.csv".
+For use in this code, IMPE estimates for Iran from "2021-09-24_v8.csv" is stored in file "2021-09-24_v8 Japan.csv".
 
 */
 
@@ -49,7 +49,7 @@ For use in this code, IMPE estimates for Iran from "2021-09-24_v8.csv" is stored
 * import csv file
 
 
-import delimited "2021-09-24_v8 Iran.csv", clear varnames(1)
+import delimited "2021-09-24_v8 Japan.csv", clear varnames(1)
 
 
 * gen date 
