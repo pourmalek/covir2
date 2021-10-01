@@ -1,6 +1,6 @@
 # covir2
 
-## ! If you are in a rush, look at the graphs in the [_latest Situation report_](https://github.com/pourmalek/covir2/blob/main/situation%20reports/20%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2020%20–%202021-09-28.pdf).
+## ! If you are in a rush, look at the graphs in the [_latest Situation report_](https://github.com/pourmalek/covir2/blob/main/situation%20reports/21%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2021%20–%202021-10-01.pdf).
 
 For a streamlined view of this repository, see: https://pourmalek.github.io/covir2/ 
 
@@ -162,7 +162,7 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 20 – 2021-09-28](https://github.com/pourmalek/covir2/blob/main/situation%20reports/20%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2020%20–%202021-09-28.pdf)
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 21 – 2021-10-01](https://github.com/pourmalek/covir2/blob/main/situation%20reports/21%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2021%20–%202021-10-01.pdf)
  
 
 ********************************************************************************************************************************************
