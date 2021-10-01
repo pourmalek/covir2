@@ -102,6 +102,7 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 (13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211001/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135685915-9a4d5ee6-e657-48c5-9887-2bcfc6bb0768.png)
 
 ****
 
@@ -109,21 +110,25 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 Note: values of the three scenarios for this estimand by IHME are the same for Iran.  
 
+![image](https://user-images.githubusercontent.com/30849720/135686001-035a270e-8f1e-4609-9dab-590c317ca8d3.png)
 
 ****
 
 (15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211001/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135686086-a66fa995-8164-4f47-bc8b-9741276f87b0.png)
 
 ****
 
 (16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211001/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135686165-a5411d9b-8de0-4a6c-badd-1ee61bbdd2e8.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211001/output/IHME/graph%2037%20COVID-19%20percent%20cumulative%20vaccinated%2C%20Iran.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/135686246-739bafe9-3191-4b3f-8b55-c7a3d4b058a5.png)
 
 ****
 
