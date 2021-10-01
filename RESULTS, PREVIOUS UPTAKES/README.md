@@ -96,9 +96,9 @@
 
 uptake 20211001: DELP 20210930, **_IHME 20211001_**, IMPE 20210924, LANL 20210926, SRIV 20210930
 
-(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20210928/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211001/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/135111465-7a2a5257-b9cc-415f-ab9b-bdefe99b7955.png)
+.
 
 *
 
