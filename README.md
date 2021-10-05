@@ -23,6 +23,13 @@ For a streamlined view of this repository, see: https://pourmalek.github.io/covi
 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
+
+# 20211004 potential new surge
+ 
+#### Considering the trends of COVID-19 hospitalizations, the provinces in northwest Iran might be starting a new surge already or soon. Yazd province shows a possible start of bouncing upward. See ["Ad Hoc Report Number 4 – Iran COVID-19 epidemic – 14000712 - 20211004"](https://github.com/pourmalek/covir2/blob/main/situation%20reports/04%20AH%20-%20Ad%20Hoc%20Report%20Number%204%20–%20Iran%20COVID-19%20epidemic%20–%2014000712%20-%2020211004.pdf) 
+
+********************************************************************************************************************************************
+********************************************************************************************************************************************
  
 ### [Deputy Minister of Health for Research and Technology, Iran, on the Situation Reports developed in this work:](https://github.com/pourmalek/covir2/blob/main/situation%20reports/--%20Re%2017%20Iran%20COVID19%20epidemic%20models%20situation%20report%20No%2017%20%2014000625%2020210916.pdf)
 
