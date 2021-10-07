@@ -2,7 +2,7 @@
 
 ### Study update dates in uptake 20211008
 
-DELP 20211008, IHME 20211001, IMPE 20210924, LANL 20210926, SRIV 20211008
+**_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
 Updates that are new in this uptake: 
 
