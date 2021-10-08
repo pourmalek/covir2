@@ -145,18 +145,19 @@ Note: values of the three scenarios for this estimand by IHME are the same for I
 
 (17) Iran [Cumulative vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/136626681-4ff2bc9b-6b1e-4f55-a377-f8bf2350bf9b.png)
 
 ****
 
 (18) Iran [Daily vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%20106%20COVID-19%20daily%20vaccinated%20percent%2C%20Iran.pdf)
 
-.
+![image](https://user-images.githubusercontent.com/30849720/136626744-fa1e688c-053c-411c-98f9-32d266fdcdcd.png)
 
 ****
 
 (19) Iran [Daily vaccinated number, IHME](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%20107%20COVID-19%20daily%20vaccinated%20number%2C%20Iran.pdf)
 
-.
+![image](https://user-images.githubusercontent.com/30849720/136626807-08e4decb-ebc1-4b1f-9706-d9ede2df148a.png)
 
 ****
 
