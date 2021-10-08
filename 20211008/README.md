@@ -94,27 +94,32 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/136622733-be50f6df-b0d6-4906-aae5-c0649c88ff49.png)
 
 ****
 
 (10) Iran [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/136622813-a0e6b15c-c820-4584-87aa-3215e04473d3.png)
 
 ****
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/136622881-b63570f4-db87-4b92-9a49-6bc21a0d9aa8.png)
   
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/136622944-cb5d0032-50ef-4c7f-9e91-6d2e95673ec0.png)
   
 ****
 ****
 
 (13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211008/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/136626080-4671087c-0be0-456a-b4a9-a533a1d2e61a.png)
 
 ****
 
