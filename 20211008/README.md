@@ -1,4 +1,4 @@
-## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE]
+! Read Iran COVID-19 epidemic models situation report No 22 - 2021-10-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/22%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2022%20–%202021-10-08.pdf)
 
 
 ### Study update dates in uptake 20211008
