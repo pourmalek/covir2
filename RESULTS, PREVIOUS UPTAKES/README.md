@@ -96,7 +96,9 @@
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136616959-5cfcd4c2-217c-4180-9532-8867db585e8a.png)
 
 *
 *
@@ -466,7 +468,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136617031-1da9fbd0-7aa5-4e6f-97c5-b89e168b8839.png)
 
 *
 *
@@ -2392,7 +2396,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136617832-6c28362d-dd7d-4dd7-b59e-926a765a8f72.png)
 
 *
 *
@@ -2783,7 +2789,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136617894-4c5ea62a-2677-4d8b-9024-fb93a0c89149.png)
 
 *
 *
@@ -3163,7 +3171,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136622733-be50f6df-b0d6-4906-aae5-c0649c88ff49.png)
 
 *
 *
@@ -3544,7 +3554,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(10) Iran [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136622813-a0e6b15c-c820-4584-87aa-3215e04473d3.png)
 
 *
 *
@@ -3929,7 +3941,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136622881-b63570f4-db87-4b92-9a49-6bc21a0d9aa8.png)
 
 *
 *
@@ -4317,7 +4331,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
 
-.
+(12) Iran [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
+
+![image](https://user-images.githubusercontent.com/30849720/136622944-cb5d0032-50ef-4c7f-9e91-6d2e95673ec0.png)
 
 *
 *
