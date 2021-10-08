@@ -4982,7 +4982,7 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
  
 ********************************************************************************************************************************************
  
-#### graph (17) Percent cumulative vaccinated, Iran, IHME
+#### graph (17) Cumulative vaccinated percent, Iran, IHME
  
  
  
@@ -5038,4 +5038,66 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
  
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+********************************************************************************************************************************************
+ 
+#### graph (18) Daily vaccinated percent, Iran, IHME
+ 
+This graph added starting on 20211008.  
+ 
+ 
+ 
+*
+
+uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
+ 
+(18) Iran [Daily vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%20106%20COVID-19%20daily%20vaccinated%20percent%2C%20Iran.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136626744-fa1e688c-053c-411c-98f9-32d266fdcdcd.png)
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************
+ 
+#### graph (19) Daily vaccinated number, Iran, IHME
+ 
+This graph added starting on 20211008.  
+ 
+ 
+ 
+*
+
+uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
+ 
+(19) Iran [Daily vaccinated number, IHME](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%20107%20COVID-19%20daily%20vaccinated%20number%2C%20Iran.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/136626807-08e4decb-ebc1-4b1f-9706-d9ede2df148a.png)
+
+*
+
+
+
+
+
+
  
