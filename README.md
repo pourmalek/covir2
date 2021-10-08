@@ -1,6 +1,6 @@
 # covir2
 
-## ! If you are in a rush, look at the graphs in the [_latest Situation report_](https://github.com/pourmalek/covir2/blob/main/situation%20reports/21%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2021%20–%202021-10-01.pdf).
+## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/CovidVisualizedCountry/blob/main/situation%20reports/LATEST/14%20Canada%20COVID-19%20epidemic%20models%20situation%20report%20No%2014%20-%202021-10-01.pdf). 
 
 For a streamlined view of this repository, see: https://pourmalek.github.io/covir2/ 
 
