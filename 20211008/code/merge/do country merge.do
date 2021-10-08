@@ -1827,27 +1827,69 @@ graph export "graph 104 COVID-19 daily mask_use, $country, 3 scenarios IHME.pdf"
 
 
 
-* percent cumulative vaccinated
+* cumulative vaccinated percent
 
 twoway ///
 (line cumulative_all_vaccin_pct date, sort lcolor(black)) ///
 (line cumul_all_effect_vacci_pct date, sort lcolor(blue)) ///
-(line cumul_all_fully_vacci_pct date, sort lcolor(green)) ///
+(line cumul_all_fully_vacci_pct date, sort lcolor(green) lwidth(thick)) ///
 if date >= td(01dec2020) ///
 , xtitle(Date) xlabel(#13, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(% Cumulative vaccinated) title("COVID-19 percent cumulative vaccinated, $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(% Cumulative vaccinated percent) title("COVID-19 cumulative vaccinated percent, $country, IHME, 3 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "% Vaccinated" 2 "% Effectively vaccinated" 3 "% Fully vaccinated") rows(1)) ///
 note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
 "Effectively vaccinated: one and two dose with efficacy" ///
 "Fully vaccinated: one of one and two of two doses", size(small))
 
-graph save "graph 105 COVID-19 percent cumulative vaccinated, $country IHME.gph", replace
-graph export "graph 105 COVID-19 percent cumulative vaccinated, $country IHME.pdf", replace
+graph save "graph 105 COVID-19 cumulative vaccinated percent, $country IHME.gph", replace
+graph export "graph 105 COVID-19 cumulative vaccinated percent, $country IHME.pdf", replace
 
 
 
+
+
+* daily vaccinated percent
+
+twoway ///
+(line daily_all_vaccin_pct date, sort lcolor(black)) ///
+(line daily_all_effect_vacci_pct date, sort lcolor(blue)) ///
+(line daily_all_fully_vacci_pct date, sort lcolor(green) lwidth(thick)) ///
+if date >= td(01dec2020) ///
+, xtitle(Date) xlabel(#13, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(% Daily vaccinated percent) title("COVID-19 daily vaccinated percent, $country, IHME, 3 scenarios", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "% Vaccinated" 2 "% Effectively vaccinated" 3 "% Fully vaccinated") rows(1)) ///
+note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
+"Effectively vaccinated: one and two dose with efficacy" ///
+"Fully vaccinated: one of one and two of two doses", size(small))
+
+graph save "graph 106 COVID-19 daily vaccinated percent, $country.gph", replace
+graph export "graph 106 COVID-19 daily vaccinated percent, $country.pdf", replace
+
+
+
+
+* daily vaccinated number
+
+twoway ///
+(line daily_all_vaccinated date, sort lcolor(black)) ///
+(line daily_all_effectively_vacci date, sort lcolor(blue)) ///
+(line daily_all_fully_vaccinated date, sort lcolor(green) lwidth(thick)) ///
+if date >= td(01jan2021) ///
+, xtitle(Date) xlabel(#13, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily vaccinated number) title("COVID-19 daily vaccinated number, $country, IHME, 3 scenarios", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Vaccinated" 2 "Effectively vaccinated" 3 "Fully vaccinated") rows(1)) ///
+note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
+"Effectively vaccinated: one and two dose with efficacy" ///
+"Fully vaccinated: one of one and two of two doses", size(small))
+
+graph save "graph 107 COVID-19 daily vaccinated number, $country.gph", replace
+graph export "graph 107 COVID-19 daily vaccinated number, $country.pdf", replace
 
 
 
