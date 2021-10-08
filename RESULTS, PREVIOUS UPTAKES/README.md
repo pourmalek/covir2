@@ -41,7 +41,7 @@
 
 [graph (18) Iran - Daily vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-18-daily-vaccinated-percent-iran-ihme) 
 
-[graph (18) Iran - Daily vaccinated number, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-19-daily-vaccinated-number-iran-ihme) 
+[graph (19) Iran - Daily vaccinated number, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-19-daily-vaccinated-number-iran-ihme) 
 
  
  
