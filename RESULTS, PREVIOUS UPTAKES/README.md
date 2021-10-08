@@ -37,11 +37,11 @@
 
 [graph (16) Iran - Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-16-daily-mask-use-iran-3-scenarios-ihme)
 
-[graph (17) Iran - Cumulative vaccinated percent, IHME]() 
+[graph (17) Iran - Cumulative vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-17-cumulative-vaccinated-percent-iran-ihme) 
 
-[graph (18) Iran - Daily vaccinated percent, IHME]() 
+[graph (18) Iran - Daily vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-18-daily-vaccinated-percent-iran-ihme) 
 
-[graph (18) Iran - Daily vaccinated number, IHME]() 
+[graph (18) Iran - Daily vaccinated number, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-19-daily-vaccinated-number-iran-ihme) 
 
  
  
