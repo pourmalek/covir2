@@ -37,6 +37,26 @@ For every single calendar date,
 Internal Note: If a new update by IHME is available (step 2), the URL for previous latest update needs to be changed from -copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip- to -https://ihmecovid19storage.blob.core.windows.net/archive/2021-05-07/ihme-covid19.zip- where 2021-05-07 denotes the previous latest update.
 
 
+<br/><br/>
+
+******************************************************************************************************
+
+### Addendum to rules for performing uptakes in this repository, 20211008:
+
+Considering the recent deviations of IMPE and IHME from their regularly scheduled updates, omission of IMPE models’ previous updates except for the latest couple of updates, and the retirement of LANL model on 20210926, the following changes are made, effective as of 20211008.
+
+(1) Every Friday, a new uptake will be performed. 
+
+(2) Any model updates older than two weeks on the uptake date will not be included in the new uptake. 
+
+As such, the last LANL update of 20210926 will no longer be used after the uptake 20211008. 
+
+For the CovidVisualizedCountry repository: The PHAC model has been updated approximately monthly. One possible option can be keeping PHAC updates for a month after their release date. Option selected here is to keep them for 40 days.  
+
+<br/><br/>
+
+******************************************************************************************************
+
 ### Application of the rule for uptakes of covir2
 
 Application of the rule for uptakes of covir2 is peformed by running ["do Studies models update dates Iran.do"](https://github.com/pourmalek/covir2/blob/main/setup/do%20Studies%20models%20update%20dates%20Iran.do) and the results are stored in [Uptakes table Iran](https://github.com/pourmalek/covir2/blob/main/setup/Uptakes%20table%20Iran.csv).
