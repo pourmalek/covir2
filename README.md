@@ -415,7 +415,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 . IMPE = Imperial College  
 . Citation: MRC Centre for Global Infectious Disease Analysis (MRC GIDA). Future scenarios of the healthcare burden of COVID-19 in low- or middle-income countries. London: MRC Centre for Global Infectious Disease Analysis, Imperial College London. https://mrc-ide.github.io/global-lmic-reports/  
 . Study web site: https://mrc-ide.github.io/global-lmic-reports/  
-. Estimates web site: https://github.com/mrc-ide/global-lmic-reports/tree/master/data  
+. Estimates web site: https://mrcdata.dide.ic.ac.uk/global-lmic-reports/ (new), https://github.com/mrc-ide/global-lmic-reports/tree/master/data (old) 
 . License: https://github.com/mrc-ide/global-lmic-reports  
 . Institution: Imperial College, London  
 . Among articles: https://science.sciencemag.org/content/369/6502/413  
@@ -668,53 +668,7 @@ Troubleshooting:
  
 * IMPE: Imperial College COVID-19 model/study 
  
-* On 20210824, the Imperial College COVID-19 model/study removed their "old fits" – all previously released updates from day 1 up to and including IMPE update 20210719. As of 20210824, the IMPE update 20210806 is the earliest IMPE update available at https://github.com/mrc-ide/global-lmic-reports/tree/master/data. IMPE update 20210719 and earlier are no longer available. 
-
-This means the Imperial College COVID-19 model/study is no more a periodically updated study with ACCESSIBLE updates – short of early retirement of the study. 
-
-Several thousand lines of codes that used their previously released updates will not work. 
-
-The remedy for CovidVisualized repositories (https://github.com/pourmalek/covir2 for Iran, https://github.com/pourmalek/CovidVisualizedCountry for Canada, and https://github.com/pourmalek/CovidVisualizedGlobal for the global level) is to comment out the command line reading csv data from https://github.com/mrc-ide/global-lmic-reports/tree/master/data. 
- 
- 
-* To -comment out-,
- 
-For https://github.com/pourmalek/covir2,
-
-In files:
- 
-/Users/username/Downloads/covir2-main/20210806/code/master/do country master.do, _downloaded to your local machine_,
-
-where 20210806 denotes uptake 20210806 in this repository that uses IMPE update 20210719, or earlier uptake here that use earlier updates of IMPE,
-
-in line 130, that currently reads as:
-
-do "$pathcovir2/IMPE/do country IMPE.do" 
-
-double forward slashes // have been put at the beginning of the line, so that it reads as:
-
-// do "$pathcovir2/IMPE/do country IMPE.do" 
-
-save the do file and then run the file.
-
-* However, the previously stored results, such as the graphs stored in 
- 
-"covir2-main/20210806/output/merge/asterisk.pdf" and 
- 
-"covir2-main/20210806/output/IMPE/asterisk.pdf" preserve a graphical copy of previously accessed the Imperial College COVID-19 model/study removed updates. 
- 
-<br/><br/> 
-
-* For rerunning the codes without access to the previous IMPE updates, two modifications are needed. 
-
-(1) Commenting out in master.do file, the line that runs the do file for IMPE, like the line 130 shown below in https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/code/master/do%20country%20master.do
-
-// do "$pathcovir2/IMPE/do country IMPE.do"
-
-(2) Omitting the lines in merge.do file the lines that used IMPE variables, like the merge.do file for Japan_20210506 that is adapted to run without access to the previous IMPE updates:
-
-https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Japan_20210506/code/merge/do%20country%20merge.do
- 
+* On 20210824, the Imperial College COVID-19 model/study removed their "old fits" from https://github.com/mrc-ide/global-lmic-reports/tree/master/data (old), but they are accessible on https://mrcdata.dide.ic.ac.uk/global-lmic-reports/ (new). Stata codes are updated accordingly to use estimates files from the latter site.
 
 <br/><br/> 
 
