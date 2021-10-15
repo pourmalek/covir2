@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210813/code/IMPE/log country IMPE.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}13 Aug 2021, 12:24:18
+ {txt}opened on:  {res}15 Oct 2021, 10:04:25
 {txt}
 {com}. 
 . *****************************************************************************
@@ -30,7 +30,7 @@
 . * get IMPE estimates
 . 
 . 
-. copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2021-08-06_v8.csv.zip 2021-08-06_v8.csv.zip
+. copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-08-06_v8.csv.zip 2021-08-06_v8.csv.zip
 {txt}
 {com}. unzipfile 2021-08-06_v8.csv.zip, replace
 {res}{txt}    inflating: 2021-08-06_v8.csv
@@ -2016,7 +2016,7 @@ file country IMPE.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210813/code/IMPE/log country IMPE.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}13 Aug 2021, 12:28:10
+ {txt}closed on:  {res}15 Oct 2021, 10:09:42
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
