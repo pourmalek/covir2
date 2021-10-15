@@ -106,6 +106,7 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 (13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/137534151-be70031f-bac1-4d3a-a1f9-73991cc5e7a3.png)
 
 ****
 
@@ -113,16 +114,19 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 Note: values of the three scenarios for this estimand by IHME are the same for Iran.  
 
+![image](https://user-images.githubusercontent.com/30849720/137534226-dcfb1c59-7212-4628-b722-5665ed5b3e79.png)
 
 ****
 
 (15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/137534293-faab2844-5e88-4625-a10d-2c2ecf4e6515.png)
 
 ****
 
 (16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/137534369-a2c79b40-0cf9-4a45-b650-af26614368bb.png)
 
 ****
 
