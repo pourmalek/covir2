@@ -31,16 +31,11 @@ clear
 
 * get IMPE estimates
 
-/*
 
-copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2021-10-06_v8.csv.zip 2021-10-06_v8.csv.zip
+/*
+copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-10-06_v8.csv.zip 2021-10-06_v8.csv.zip
 unzipfile 2021-10-06_v8.csv.zip, replace
 erase 2021-10-06_v8.csv.zip
-
-On 20210920, IMPE removed their THREE available previous updates, and uploaded their new update, 2021-09-09_v8.csv.zip. "GBarnsley Remove old pages to save on site space 63c9e0e". 
-
-For use in this code, IMPE estimates for Iran from "2021-10-06_v8.csv" is stored in file "2021-10-06_v8 Iran.csv".
-
 */
 
  
@@ -50,6 +45,7 @@ For use in this code, IMPE estimates for Iran from "2021-10-06_v8.csv" is stored
 
 
 import delimited "2021-10-06_v8 Iran.csv", clear varnames(1)
+
 
 
 * gen date 
