@@ -3,7 +3,7 @@
 *****************************************************************************
 * This is "do country master.do"
                                                                                                           ***************************
-* Project: CovidVisualized country - countries without subnational estimates                              * this is uptake 20210703 *
+* Project: CovidVisualized country - countries without subnational estimates                              * this is uptake 20210704 *
 * Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com                                            ***************************
 * Time (initial): 2021-04-13 
 
@@ -15,7 +15,7 @@ global country Iran // <<-- set here the country of choice - countries without s
                                                                                                          ***************************
 di "$country"                                                                                  // <<<--- *   change country here   *
                                                                                                          ***************************
-* To change uptake date, find and replace all, 20210703 (old), with 20210703 (new) <<--           <<<--- * change uptake date here *
+* To change uptake date, find and replace all, 20210704 (old), with 20210704 (new) <<--           <<<--- * change uptake date here *
                                                                                                          ***************************
 
 /* 
@@ -60,10 +60,10 @@ di "`usrnam'"
 ****** set path based on local operating system ******
 
 if regexm(c(os),"Mac") == 1 {
-	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20210703/code" 
+	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20210704/code" 
 }
 else if regexm(c(os),"Windows") {
-	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20210703\code"
+	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20210704\code"
 }
 *
 
@@ -134,4 +134,7 @@ do "$pathcovir2/LANL/do country LANL.do"
 do "$pathcovir2/SRIV/do country SRIV.do" 
 
 do "$pathcovir2/merge/do country merge.do" 
+
+
+
 
