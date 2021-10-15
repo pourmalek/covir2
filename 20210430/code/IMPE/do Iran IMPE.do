@@ -27,8 +27,8 @@ clear all
 * get IMPE estimates
 
 copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-04-24_v7.csv.zip 2021-04-24_v7.csv.zip
-unzipfile 2021-04-29_v7.csv.zip, replace
-erase 2021-04-29_v7.csv.zip
+unzipfile 2021-04-24_v7.csv.zip, replace
+erase 2021-04-24_v7.csv.zip
 
  
 ******************************
@@ -36,7 +36,7 @@ erase 2021-04-29_v7.csv.zip
 * import csv file
 
 
-import delimited "2021-04-29_v7.csv", clear varnames(1)
+import delimited "2021-04-24_v7.csv", clear varnames(1)
 keep if country == "Iran"
 
 
