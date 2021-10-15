@@ -21,7 +21,7 @@ log using "log country IMPE.smcl", replace
 
 
                                                                                                          ***************************
-* To change update date, find and replace all, 2021-07-09 (old), with 2021-07-09 (new) <<--       <<<--- * change update date here *
+* To change update date, find and replace all, 2021-05-10 (old), with 2021-05-10 (new) <<--       <<<--- * change update date here *
                                                                                                          ***************************
 																										 
 
@@ -32,9 +32,9 @@ clear
 * get IMPE estimates
 
 
-copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2021-07-09_v8.csv.zip 2021-07-09_v8.csv.zip
-unzipfile 2021-07-09_v8.csv.zip, replace
-erase 2021-07-09_v8.csv.zip
+copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-05-10_v8.csv.zip 2021-05-10_v8.csv.zip
+unzipfile 2021-05-10_v8.csv.zip, replace
+erase 2021-05-10_v8.csv.zip
 
  
 ******************************
@@ -42,7 +42,7 @@ erase 2021-07-09_v8.csv.zip
 * import csv file
 
 
-import delimited "2021-07-09_v8.csv", clear varnames(1)
+import delimited "2021-05-10_v8.csv", clear varnames(1)
 keep if regexm(country,"$country") == 1
 
 
