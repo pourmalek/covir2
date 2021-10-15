@@ -135,7 +135,6 @@ do "$pathcovir2/SRIV/do country SRIV.do"
 
 do "$pathcovir2/merge/do country merge.do" 
 
-// do "$pathcovir2/merge/do country ensemble.do" 
 
 
 
