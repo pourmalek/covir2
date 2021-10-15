@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210430/code/IMPE/log Iran IMPE.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 4 May 2021, 14:51:01
+ {txt}opened on:  {res}14 Oct 2021, 18:18:38
 {txt}
 {com}. 
 . ***************************************************************************
@@ -24,8 +24,13 @@
 . 
 . * get IMPE estimates
 . 
-. 
-. copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/IRN/2021-04-24/projections.csv projections.csv
+. copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-04-24_v7.csv.zip 2021-04-24_v7.csv.zip
+{txt}
+{com}. unzipfile 2021-04-24_v7.csv.zip, replace
+{res}{txt}    inflating: 2021-04-24_v7.csv
+successfully unzipped 2021-04-24_v7.csv.zip to current directory
+
+{com}. erase 2021-04-24_v7.csv.zip
 {txt}
 {com}. 
 .  
@@ -34,8 +39,11 @@
 . * import csv file
 . 
 . 
-. import delimited "projections.csv", clear varnames(1)
-{res}{text}(14 vars, 37,146 obs)
+. import delimited "2021-04-24_v7.csv", clear varnames(1)
+{res}{text}(14 vars, 5,987,622 obs)
+
+{com}. keep if country == "Iran"
+{txt}(5,950,476 observations deleted)
 
 {com}. 
 . 
@@ -1986,7 +1994,8 @@ DayDMuMeR~07 {c |}{res}        563    88448.47    119664.6          0     461213
 {com}. 
 . compress
   {txt}variable {bf}date{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
-{txt}  (1,126 bytes saved)
+  {txt}variable {bf}loc_grand_name{sf} was {bf}{res}str30{sf}{txt} now {bf}{res}str4{sf}
+{txt}  (15,764 bytes saved)
 
 {com}. 
 . save "Iran IMPE.dta", replace
@@ -2005,7 +2014,7 @@ file Iran IMPE.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20210430/code/IMPE/log Iran IMPE.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 4 May 2021, 14:52:11
+ {txt}closed on:  {res}14 Oct 2021, 18:23:52
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
