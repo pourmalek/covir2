@@ -3,7 +3,7 @@
 *****************************************************************************
 * This is "do country master.do"
                                                                                                           ***************************
-* Project: CovidVisualized country - countries without subnational estimates                              * this is uptake 20210820 *
+* Project: CovidVisualized country - countries without subnational estimates                              * this is uptake 20210819 *
 * Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com                                            ***************************
 * Time (initial): 2021-04-13 
 
@@ -15,7 +15,7 @@ global country Iran // <<-- set here the country of choice - countries without s
                                                                                                          ***************************
 di "$country"                                                                                  // <<<--- *   change country here   *
                                                                                                          ***************************
-* To change uptake date, find and replace all, 20210820 (old), with 20210820 (new) <<--           <<<--- * change uptake date here *
+* To change uptake date, find and replace all, 20210819 (old), with 20210819 (new) <<--           <<<--- * change uptake date here *
                                                                                                          ***************************
 
 /* 
@@ -60,10 +60,10 @@ di "`usrnam'"
 ****** set path based on local operating system ******
 
 if regexm(c(os),"Mac") == 1 {
-	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20210820/code" 
+	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20210819/code" 
 }
 else if regexm(c(os),"Windows") {
-	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20210820\code"
+	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20210819\code"
 }
 *
 
