@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211015/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}15 Oct 2021, 10:28:17
+ {txt}opened on:  {res}16 Oct 2021, 10:30:28
 {txt}
 {com}. 
 . 
@@ -54,11 +54,11 @@
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}             623
+{col 5}not matched{col 30}{res}             622
 {txt}{col 9}from master{col 30}{res}             561{txt}  (_merge==1)
-{col 9}from using{col 30}{res}              62{txt}  (_merge==2)
+{col 9}from using{col 30}{res}              61{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              92{txt}  (_merge==3)
+{col 5}matched{col 30}{res}              93{txt}  (_merge==3)
 {col 5}{hline 41}
 {com}. {c )-}
 {txt}
@@ -174,14 +174,14 @@
 . 
 . 
 . gen DayCTDMeRaA00S00 =  DayCasMeRaA00S00 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayCTDMeRaA00S00  "Daily Cases to Deaths S0 JOHN"
 {txt}
 {com}. 
 . gen TotCTDMeRaA00S00 =  TotCasMeRaA00S00 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotCTDMeRaA00S00  "Total Cases to Deaths S0 JOHN"
@@ -335,7 +335,7 @@
 . 
 .     
 . gen DayDERMeRaA00S00 = DayDeaMeRaA00S00 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA00S00 "Daily Deaths estim to reported JOHN = 1" 
@@ -343,7 +343,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA01S00 = DayDeaMeRaA01S00 / DayDeaMeRaA00S00
-{txt}(666 missing values generated)
+{txt}(665 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA01S00 "Daily Deaths estim to reported Mean DELP S0"
@@ -353,7 +353,7 @@
 . 
 . 
 . gen DayDERMeRaA02S01 = DayDeaMeSmA02S01 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S01 "Daily Deaths estim to reported Mean not smoothed IHME S1"
@@ -361,7 +361,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA02S02 = DayDeaMeSmA02S02 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHME S2"
@@ -369,7 +369,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA02S03 = DayDeaMeSmA02S03 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S03 "Daily Deaths estim to reported Mean not smoothed IHME S3"
@@ -378,7 +378,7 @@
 . 
 . 
 . gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
@@ -386,7 +386,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA03S02 = DayDeaMeRaA03S02 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
@@ -394,7 +394,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00S00
-{txt}(154 missing values generated)
+{txt}(153 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
@@ -403,7 +403,7 @@
 . 
 . 
 . gen DayDERMeRaA05S00  = DayDeaMeRaA05S00 / DayDeaMeRaA00S00
-{txt}(757 missing values generated)
+{txt}(756 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA05S00 "Daily Deaths estim to reported S0 SRIV"
@@ -419,7 +419,7 @@
 . 
 . 
 . gen DayCERMeRaA00S00 = DayCasMeRaA00S00 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA00S00 "Daily Cases estim to reported JOHN = 1" 
@@ -428,7 +428,7 @@
 . 
 . 
 . gen DayCERMeRaA01S00 = DayCasMeRaA01S00 / DayCasMeRaA00S00
-{txt}(666 missing values generated)
+{txt}(665 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA01S00 "Daily Cases estim to reported Mean DELP S0"
@@ -440,7 +440,7 @@
 . 
 . 
 . gen DayIERMeRaA02S01 = DayINFMeSmA02S01 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S01 "Daily Infections estim to reported Mean not smoothed IHME S1"
@@ -448,7 +448,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
@@ -456,7 +456,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA02S03 = DayINFMeSmA02S03 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S03 "Daily Infections estim to reported Mean not smoothed IHME S3"
@@ -465,7 +465,7 @@
 . 
 . 
 . gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
@@ -473,7 +473,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA03S02 = DayINFMeRaA03S02 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
@@ -481,7 +481,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
@@ -489,7 +489,7 @@
 {com}. 
 . 
 . gen DayCERMeRaA05S00  = DayCasMeRaA05S00 / DayCasMeRaA00S00
-{txt}(757 missing values generated)
+{txt}(756 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA05S00 "Daily Cases estim to reported S0 SRIV"
@@ -505,7 +505,7 @@
 . 
 . 
 . gen TotDERMeRaA00S00 = TotDeaMeRaA00S00 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA00S00 "Total Deaths estim to reported JOHN = 1" 
@@ -514,7 +514,7 @@
 . 
 . 
 . gen TotDERMeRaA01S00 = TotDeaMeRaA01S00 / TotDeaMeRaA00S00
-{txt}(665 missing values generated)
+{txt}(664 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA01S00 "Total Deaths estim to reported Mean DELP S0"
@@ -523,7 +523,7 @@
 . 
 . 
 . gen TotDERMeRaA02S01 = TotDeaMeSmA02S01 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S01 "Total Deaths estim to reported Mean not smoothed IHME S1"
@@ -531,7 +531,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA02S02 = TotDeaMeSmA02S02 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHME S2"
@@ -539,7 +539,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA02S03 = TotDeaMeSmA02S03 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S03 "Total Deaths estim to reported Mean not smoothed IHME S3"
@@ -548,7 +548,7 @@
 . 
 . 
 . gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
@@ -556,7 +556,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA03S02 = TotDeaMeRaA03S02 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
@@ -564,7 +564,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
@@ -572,7 +572,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00S00
-{txt}(756 missing values generated)
+{txt}(755 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
@@ -588,7 +588,7 @@
 . 
 . 
 . gen TotCERMeRaA00S00 = TotCasMeRaA00S00 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA00S00 "Total Cases estim to reported JOHN = 1" 
@@ -596,7 +596,7 @@
 {com}. 
 . 
 . gen TotCERMeRaA01S00 = TotCasMeRaA01S00 / TotCasMeRaA00S00
-{txt}(665 missing values generated)
+{txt}(664 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA01S00 "Total Cases estim to reported Mean DELP S0"
@@ -605,7 +605,7 @@
 . 
 . 
 . gen TotIERMeRaA02S01 = TotINFMeSmA02S01 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S01 "Total Infections estim to reported Mean not smoothed IHME S1"
@@ -613,7 +613,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA02S02 = TotINFMeSmA02S02 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed IHME S2"
@@ -621,7 +621,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA02S03 = TotINFMeSmA02S03 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S03 "Total Infections estim to reported Mean not smoothed IHME S3"
@@ -630,7 +630,7 @@
 . 
 . 
 . gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
@@ -638,7 +638,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA03S02 = TotINFMeRaA03S02 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
@@ -646,7 +646,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00S00
-{txt}(153 missing values generated)
+{txt}(152 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
@@ -655,7 +655,7 @@
 . 
 . 
 . gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00S00
-{txt}(756 missing values generated)
+{txt}(755 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA05S00 "Total Cases estim to reported S0 SRIV"
@@ -679,8 +679,8 @@
 
 {txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20211015/code/JOHN/country JOHN.dta
 {txt}  obs:{res}           757                          
-{txt} vars:{res}           496                          15 Oct 2021 10:21
-{txt} size:{res}     1,510,215                          
+{txt} vars:{res}           493                          16 Oct 2021 10:26
+{txt} size:{res}     1,528,383                          
 {txt}{hline}
               storage   display    value
 variable name   type    format     label      variable label
@@ -819,22 +819,19 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME R effective (lower 95% confidence interval) S1{p_end}
 {p 0 48}reff_upper_A02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME R effective (upper 95% confidence interval) S1{p_end}
-{p 0 48}cumulative_cases_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative cases (raw data) S1{p_end}
 {p 0 48}cumulative_deaths_A02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative deaths (raw data with excess mortality scalar applied) S1{p_end}
-{p 0 48}cumulative_hosp_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative hospitalizations (raw data) S1{p_end}
 {p 0 48}daily_deaths_A02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily deaths (raw data with excess mortality scalar applied) S1{p_end}
-{p 0 48}daily_infections_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data){p_end}
+{p 0 48}cumulative_cases_A02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative cases (raw data) S1{p_end}
 {p 0 48}cumul_deaths_unscaled_A02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME umulative deaths (raw data without excess mortality scalar applied) S1{p_end}
+{p 0 48}cumulative_hosp_A02S01{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative hospitalizations (raw data) S1{p_end}
 {p 0 48}dai_dea_unscaled_A02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily deaths (raw data without excess mortality scalar applied) S1{p_end}
-{p 0 48}dai_inf_unscaled_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data without excess mortality scalar applied){p_end}
+{p 0 48}{bind:dai_inf_A02S01 }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data without excess mortality scalar applied){p_end}
 {p 0 48}{bind:population     }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Population size{p_end}
 {p 0 48}mobility_mean_A02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Percent change in mobility from baseline (mean)  S1{p_end}
@@ -875,11 +872,11 @@ variable name   type    format     label      variable label
 {p 0 48}{bind:DayBEDMeSmA02  }{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}IHME Total number of beds that exist at a location{p_end}
 {p 0 48}{bind:DayICUMeSmA02  }{txt}{bind: int     }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}IHME Total number of ICU beds that exist at a location{p_end}
 {p 0 48}infection_fatality_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection fatality ratio S1{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection fatality ratio S1{p_end}
 {p 0 48}infection_detection_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection detection ratio S1{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection detection ratio S1{p_end}
 {p 0 48}infection_hospitalization_A02S01{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection hospitalization ratio S1{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection hospitalization ratio S1{p_end}
 {p 0 48}DayINFMeSmA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean smoothed IHME S2{p_end}
 {p 0 48}DayINFUpSmA02S02{p_end}
@@ -922,22 +919,19 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME R effective (lower 95% confidence interval) S2{p_end}
 {p 0 48}reff_upper_A02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME R effective (upper 95% confidence interval) S2{p_end}
-{p 0 48}cumulative_cases_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative cases (raw data) S2{p_end}
 {p 0 48}cumulative_deaths_A02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative deaths (raw data with excess mortality scalar applied) S2{p_end}
-{p 0 48}cumulative_hosp_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative hospitalizations (raw data) S2{p_end}
 {p 0 48}daily_deaths_A02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily deaths (raw data with excess mortality scalar applied) S2{p_end}
-{p 0 48}daily_infections_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data){p_end}
+{p 0 48}cumulative_cases_A02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative cases (raw data) S2{p_end}
 {p 0 48}cumul_deaths_unscaled_A02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME umulative deaths (raw data without excess mortality scalar applied) S2{p_end}
+{p 0 48}cumulative_hosp_A02S02{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative hospitalizations (raw data) S2{p_end}
 {p 0 48}dai_dea_unscaled_A02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily deaths (raw data without excess mortality scalar applied) S2{p_end}
-{p 0 48}dai_inf_unscaled_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data without excess mortality scalar applied){p_end}
+{p 0 48}{bind:dai_inf_A02S02 }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data without excess mortality scalar applied){p_end}
 {p 0 48}mobility_mean_A02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Percent change in mobility from baseline (mean) S2{p_end}
 {p 0 48}mask_use_mean_A02S02{p_end}
@@ -961,11 +955,11 @@ variable name   type    format     label      variable label
 {p 0 48}DayAdmLoSmA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily COVID-19 hospital admissions (mean estimate) S2{p_end}
 {p 0 48}infection_fatality_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection fatality ratio S2{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection fatality ratio S2{p_end}
 {p 0 48}infection_detection_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection detection ratio S2{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection detection ratio S2{p_end}
 {p 0 48}infection_hospitalization_A02S02{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection hospitalization ratio S2{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection hospitalization ratio S2{p_end}
 {p 0 48}DayINFMeSmA02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean smoothed IHME S3{p_end}
 {p 0 48}DayINFUpSmA02S03{p_end}
@@ -1008,22 +1002,19 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME R effective (lower 95% confidence interval) S3{p_end}
 {p 0 48}reff_upper_A02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME R effective (upper 95% confidence interval) S3{p_end}
-{p 0 48}cumulative_cases_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative cases (raw data) S3{p_end}
 {p 0 48}cumulative_deaths_A02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative deaths (raw data with excess mortality scalar applied) S3{p_end}
-{p 0 48}cumulative_hosp_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative hospitalizations (raw data) S3{p_end}
 {p 0 48}daily_deaths_A02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily deaths (raw data with excess mortality scalar applied) S3{p_end}
-{p 0 48}daily_infections_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data){p_end}
+{p 0 48}cumulative_cases_A02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative cases (raw data) S3{p_end}
 {p 0 48}cumul_deaths_unscaled_A02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME umulative deaths (raw data without excess mortality scalar applied) S3{p_end}
+{p 0 48}cumulative_hosp_A02S03{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Cumulative hospitalizations (raw data) S3{p_end}
 {p 0 48}dai_dea_unscaled_A02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily deaths (raw data without excess mortality scalar applied) S3{p_end}
-{p 0 48}dai_inf_unscaled_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data without excess mortality scalar applied){p_end}
+{p 0 48}{bind:dai_inf_A02S03 }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily infections (raw data without excess mortality scalar applied){p_end}
 {p 0 48}mobility_mean_A02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Percent change in mobility from baseline (mean) S3{p_end}
 {p 0 48}mask_use_mean_A02S03{p_end}
@@ -1047,11 +1038,11 @@ variable name   type    format     label      variable label
 {p 0 48}DayAdmLoSmA02S03{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Daily COVID-19 hospital admissions (mean estimate) S3{p_end}
 {p 0 48}infection_fatality_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection fatality ratio S3{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection fatality ratio S3{p_end}
 {p 0 48}infection_detection_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection detection ratio S3{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection detection ratio S3{p_end}
 {p 0 48}infection_hospitalization_A02S03{p_end}
-{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection hospitalization ratio S3{p_end}
+{p 0 48}{space 15}{txt}{bind: double  }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}IHME Infection hospitalization ratio S3{p_end}
 {p 0 48}DayDeMMeSmA02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean IHME DayDeM{p_end}
 {p 0 48}DayCaMMeSmA02S01{p_end}
@@ -3349,7 +3340,7 @@ file country.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211015/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}15 Oct 2021, 10:29:07
+ {txt}closed on:  {res}16 Oct 2021, 10:31:19
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
