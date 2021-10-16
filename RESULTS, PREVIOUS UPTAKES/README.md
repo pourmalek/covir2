@@ -4033,7 +4033,8 @@ uptake 20211008: **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 2021092
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20211008/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-mmmmmm
+![image](https://user-images.githubusercontent.com/30849720/137604644-7955d85f-75aa-4b42-958b-c3787d20330a.png)
+
 *
 *
 
@@ -4420,7 +4421,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
 
+(12) Iran [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211015/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/137597713-8e658e14-a718-4725-8a04-511c340e53e3.png)
 
 *
 
@@ -4804,6 +4807,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
 
+(13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137597736-fae23f69-bf4f-48ad-bfd1-94ff56fe3edc.png)
 
 *
 
@@ -4880,6 +4886,9 @@ Note: values of the three scenarios for this estimand by IHME are the same for I
 
 uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
 
+(14) Iran [Daily Infection-outcome ratios, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2021g%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137597781-276c6029-8b1f-4ec3-9574-185d0b9f8b9a.png)
 
 *
 
@@ -4953,6 +4962,9 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
 
 uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
 
+(15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137597803-204126ba-d141-473a-99ad-872109e9d2f3.png)
 
 *
 
@@ -5028,6 +5040,9 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
 
 uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
 
+(16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137597826-cb188d16-edae-4ae6-b8ca-328f3790c78c.png)
 
 *
 
@@ -5102,6 +5117,9 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
 
 uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
 
+(17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211015/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137597845-3dcb49a4-2ae0-45b1-a6cb-ceb67a4929f1.png)
 
 *
 
