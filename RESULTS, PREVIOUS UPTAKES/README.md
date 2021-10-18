@@ -2860,7 +2860,7 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 ********************************************************************************************************************************************
  
-#### graph (7b) Iran - Reported cases, peaks, post-peaksm, and linear trends
+#### graph (7b) Iran - Reported cases, peaks, post-peaks, and linear trends
  
  
  
