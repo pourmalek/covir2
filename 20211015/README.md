@@ -37,6 +37,12 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 ****
 
+(1b) Iran [Reported daily deaths, peaks, post-peaksm, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211015/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137650205-d9ee1b05-0cb8-4781-b57f-b52deb81887e.png)
+
+****
+
 (2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211015/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/137597419-16c2a1ec-6bdd-42c5-a667-5ba839b3b2d4.png)
@@ -71,6 +77,12 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 ![image](https://user-images.githubusercontent.com/30849720/137597569-ca37f984-75ba-4c45-9404-78d63e589207.png)
     
+****
+
+(7b) Iran [Reported cases, peaks, post-peaksm, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211015/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137650288-bc4ba37b-41b1-47da-8666-8ab08e68d049.png)
+
 ****
 
 (8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211015/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
