@@ -463,7 +463,41 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 ![image](https://user-images.githubusercontent.com/30849720/125372901-fc918100-e338-11eb-9c64-ef518bf49e44.png)
  
-* 
+*
+
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************
+ 
+#### graph (1b) Iran - Reported daily deaths, peaks, post-peaksm, and linear trends
+
+
+
+
+*
+
+uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
+
+(1b) Iran [Reported daily deaths, peaks, post-peaksm, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211015/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137650205-d9ee1b05-0cb8-4781-b57f-b52deb81887e.png)
+
+*
+
+
+
+
+
+
+
+
+
  
 
 ********************************************************************************************************************************************
@@ -2822,8 +2856,29 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
  
  
+********************************************************************************************************************************************
+ 
+#### graph (7b) Iran - Reported cases, peaks, post-peaksm, and linear trends
  
  
+ 
+ 
+ 
+*
+
+uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, **_SRIV 20211015_**
+
+(7b) Iran [Reported cases, peaks, post-peaksm, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211015/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/137650288-bc4ba37b-41b1-47da-8666-8ab08e68d049.png)
+
+*
+
+
+
+
+
+
  
  
  
