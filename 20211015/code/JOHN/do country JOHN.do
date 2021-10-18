@@ -386,6 +386,416 @@ tsset, clear
 
 
 
+**********************
+
+* Peak Dates (P?D) and Peak Values (P?V), and Post-peaks (PP?), smoothed values
+
+
+* deaths
+
+
+* peak 1 - deaths P1 20-03-01 20-05-01 - 22009 04Apr2020 137.6071 
+
+summ DayDeaMeSmA00S00 if date > td(01mar2020) & date < td(01may2020)
+gen DayDeaMeSmA00S00P1V = r(max)
+label var DayDeaMeSmA00S00P1V "Daily deaths smooth JOHN Peak 1 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00P1V & date > td(01mar2020) & date < td(01may2020)
+gen DayDeaMeSmA00S00P1D = r(mean)
+label var DayDeaMeSmA00S00P1D "Daily deaths smooth JOHN Peak 1 Date"
+format DayDeaMeSmA00S00P1D %tdDDMonCCYY 
+
+
+
+* peak 2 - deaths P2 20-07-01 20-09-01 - 22120 24Jul2020 215.0536
+
+summ DayDeaMeSmA00S00 if date > td(01jul2020) & date < td(01sep2020)
+
+gen DayDeaMeSmA00S00P2V = r(max)
+label var DayDeaMeSmA00S00P2V "Daily deaths smooth JOHN Peak 2 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00P2V & date > td(01jul2020) & date < td(01sep2020)
+gen DayDeaMeSmA00S00P2D = r(mean)
+label var DayDeaMeSmA00S00P2D "Daily deaths smooth JOHN Peak 2 Date"
+format DayDeaMeSmA00S00P2D %tdDDMonCCYY 
+
+
+
+* peak 3 - deaths P3 20-11-01 20-12-01 - 22237 18Nov2020 470.8839
+
+summ DayDeaMeSmA00S00 if date > td(01nov2020) & date < td(01dec2020)
+
+gen DayDeaMeSmA00S00P3V = r(max)
+label var DayDeaMeSmA00S00P3V "Daily deaths smooth JOHN Peak 3 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00P3V & date > td(01nov2020) & date < td(01dec2020)
+gen DayDeaMeSmA00S00P3D = r(mean)
+label var DayDeaMeSmA00S00P3D "Daily deaths smooth JOHN Peak 3 Date"
+format DayDeaMeSmA00S00P3D %tdDDMonCCYY 
+
+
+
+* peak 4 - deaths P4 21-04-01 21-06-01 - 22396 26Apr2021 428.0268
+
+summ DayDeaMeSmA00S00 if date > td(01apr2021) & date < td(01jun2021)
+
+gen DayDeaMeSmA00S00P4V = r(max)
+label var DayDeaMeSmA00S00P4V "Daily deaths smooth JOHN Peak 4 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00P4V & date > td(01apr2021) & date < td(01jun2021)
+gen DayDeaMeSmA00S00P4D = r(mean)
+label var DayDeaMeSmA00S00P4D "Daily deaths smooth JOHN Peak 4 Date"
+format DayDeaMeSmA00S00P4D %tdDDMonCCYY 
+
+
+
+* peak 5 - deaths P5 21-08-01 21-09-01 - 22517 25Aug2021 639.7053
+
+summ DayDeaMeSmA00S00 if date > td(01aug2021) & date < td(01sep2021)
+
+gen DayDeaMeSmA00S00P5V = r(max)
+label var DayDeaMeSmA00S00P5V "Daily deaths smooth JOHN Peak 5 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00P5V & date > td(01aug2021) & date < td(01sep2021)
+gen DayDeaMeSmA00S00P5D = r(mean)
+label var DayDeaMeSmA00S00P5D "Daily deaths smooth JOHN Peak 5 Date"
+format DayDeaMeSmA00S00P5D %tdDDMonCCYY 
+
+
+
+
+
+
+* POST Peak 1 - deaths PP1 20-05-01 20-06-01 - 22037 02May2020 67.01786
+
+summ DayDeaMeSmA00S00 if date > td(01may2020) & date < td(01jun2020)
+gen DayDeaMeSmA00S00PP1V = r(min)
+label var DayDeaMeSmA00S00PP1V "Daily deaths smooth JOHN POST Peak 1 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP1V & date > td(01may2020) & date < td(01jun2020)
+gen DayDeaMeSmA00S00PP1D = r(mean)
+label var DayDeaMeSmA00S00PP1D "Daily deaths smooth JOHN POST Peak 1 Date"
+format DayDeaMeSmA00S00PP1D %tdDDMonCCYY 
+
+
+
+* POST Peak 2 - deaths PP2 20-08-01 20-10-01 - 22129 02Aug2020 204.9732
+
+summ DayDeaMeSmA00S00 if date > td(01aug2020) & date < td(01oct2020)
+
+gen DayDeaMeSmA00S00PP2V = r(min)
+label var DayDeaMeSmA00S00PP2V "Daily deaths smooth JOHN POST Peak 2 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP2V & date > td(01aug2020) & date < td(01oct2020)
+gen DayDeaMeSmA00S00PP2D = r(mean)
+label var DayDeaMeSmA00S00PP2D "Daily deaths smooth JOHN POST Peak 2 Date"
+format DayDeaMeSmA00S00PP2D %tdDDMonCCYY 
+
+
+
+* POST Peak 3 - deaths PP3 21-01-01 21-04-01 - 22282 02Jan2021 112.3214 
+
+summ DayDeaMeSmA00S00 if date > td(01jan2021) & date < td(01apr2021)
+
+gen DayDeaMeSmA00S00PP3V = r(min)
+label var DayDeaMeSmA00S00PP3V "Daily deaths smooth JOHN POST Peak 3 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP3V & date > td(01jan2021) & date < td(01apr2021)
+gen DayDeaMeSmA00S00PP3D = r(mean)
+label var DayDeaMeSmA00S00PP3D "Daily deaths smooth JOHN POST Peak 3 Date"
+format DayDeaMeSmA00S00PP3D %tdDDMonCCYY 
+
+
+
+
+* POST peak 4 - deaths PP4 21-06-01 21-07-01 - 22433 02Jun2021 167.9732
+
+summ DayDeaMeSmA00S00 if date > td(01jun2021) & date < td(01jul2021)
+
+gen DayDeaMeSmA00S00PP4V = r(min)
+label var DayDeaMeSmA00S00PP4V "Daily deaths smooth JOHN POST Peak 4 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP4V & date > td(01jun2021) & date < td(01jul2021)
+gen DayDeaMeSmA00S00PP4D = r(mean)
+label var DayDeaMeSmA00S00PP4D "Daily deaths smooth JOHN POST Peak 4 Date"
+format DayDeaMeSmA00S00PP4D %tdDDMonCCYY 
+
+
+
+
+* POST peak 5 - deaths PP5 21-10-01 21-11-01 - 22555 02Oct2021 237.9375
+
+summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(01nov2021)
+
+gen DayDeaMeSmA00S00PP5V = r(min)
+label var DayDeaMeSmA00S00PP5V "Daily deaths smooth JOHN Peak 5 Value"
+
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP5V & date > td(01oct2021) & date < td(01nov2021)
+gen DayDeaMeSmA00S00PP5D = r(mean)
+label var DayDeaMeSmA00S00PP5D "Daily deaths smooth JOHN Peak 5 Date"
+format DayDeaMeSmA00S00PP5D %tdDDMonCCYY 
+
+
+
+* peak 1 - deaths P1 20-03-01 20-05-01 - 22009 04Apr2020 137.6071 
+* peak 2 - deaths P2 20-07-01 20-09-01 - 22120 24Jul2020 215.0536
+* peak 3 - deaths P3 20-11-01 20-12-01 - 22237 18Nov2020 470.8839
+* peak 4 - deaths P4 21-04-01 21-06-01 - 22396 26Apr2021 428.0268
+* peak 5 - deaths P5 21-08-01 21-09-01 - 22517 25Aug2021 639.7053
+
+* POST Peak 1 - deaths PP1 20-05-01 20-06-01 - 22048 13May2020 51.33929
+* POST Peak 2 - deaths PP2 20-08-01 20-10-01 - 22157 30Aug2020 112.3393
+* POST Peak 3 - deaths PP3 21-01-01 21-04-01 - 22321 10Feb2021 68.69643 
+* POST peak 4 - deaths PP4 21-06-01 21-07-01 - 22452 21Jun2021 122.3125
+* POST peak 5 - deaths PP5 21-10-01 21-11-01 - 22569 16Oct2021 204.2943
+
+
+
+gen DayDeaMeSmA00S00PD = . 
+label var DayDeaMeSmA00S00PD "Daily deaths smooth JOHN Peak Dates"
+replace DayDeaMeSmA00S00PD = DayDeaMeSmA00S00P1D if date == DayDeaMeSmA00S00P1D
+replace DayDeaMeSmA00S00PD = DayDeaMeSmA00S00P2D if date == DayDeaMeSmA00S00P2D
+replace DayDeaMeSmA00S00PD = DayDeaMeSmA00S00P3D if date == DayDeaMeSmA00S00P3D
+replace DayDeaMeSmA00S00PD = DayDeaMeSmA00S00P4D if date == DayDeaMeSmA00S00P4D
+replace DayDeaMeSmA00S00PD = DayDeaMeSmA00S00P5D if date == DayDeaMeSmA00S00P5D
+
+gen DayDeaMeSmA00S00PV = . 
+label var DayDeaMeSmA00S00PV "Daily deaths smooth JOHN Peak Values"
+replace DayDeaMeSmA00S00PV = DayDeaMeSmA00S00P1V if date == DayDeaMeSmA00S00P1D
+replace DayDeaMeSmA00S00PV = DayDeaMeSmA00S00P2V if date == DayDeaMeSmA00S00P2D
+replace DayDeaMeSmA00S00PV = DayDeaMeSmA00S00P3V if date == DayDeaMeSmA00S00P3D
+replace DayDeaMeSmA00S00PV = DayDeaMeSmA00S00P4V if date == DayDeaMeSmA00S00P4D
+replace DayDeaMeSmA00S00PV = DayDeaMeSmA00S00P5V if date == DayDeaMeSmA00S00P5D
+
+
+
+gen DayDeaMeSmA00S00PPD = . 
+label var DayDeaMeSmA00S00PPD "Daily deaths smooth JOHN POST Peak Dates"
+replace DayDeaMeSmA00S00PPD = DayDeaMeSmA00S00PP1D if date == DayDeaMeSmA00S00PP1D
+replace DayDeaMeSmA00S00PPD = DayDeaMeSmA00S00PP2D if date == DayDeaMeSmA00S00PP2D
+replace DayDeaMeSmA00S00PPD = DayDeaMeSmA00S00PP3D if date == DayDeaMeSmA00S00PP3D
+replace DayDeaMeSmA00S00PPD = DayDeaMeSmA00S00PP4D if date == DayDeaMeSmA00S00PP4D
+replace DayDeaMeSmA00S00PPD = DayDeaMeSmA00S00PP5D if date == DayDeaMeSmA00S00PP5D
+
+gen DayDeaMeSmA00S00PPV = . 
+label var DayDeaMeSmA00S00PPV "Daily deaths smooth JOHN POST Peak Values"
+replace DayDeaMeSmA00S00PPV = DayDeaMeSmA00S00PP1V if date == DayDeaMeSmA00S00PP1D
+replace DayDeaMeSmA00S00PPV = DayDeaMeSmA00S00PP2V if date == DayDeaMeSmA00S00PP2D
+replace DayDeaMeSmA00S00PPV = DayDeaMeSmA00S00PP3V if date == DayDeaMeSmA00S00PP3D
+replace DayDeaMeSmA00S00PPV = DayDeaMeSmA00S00PP4V if date == DayDeaMeSmA00S00PP4D
+replace DayDeaMeSmA00S00PPV = DayDeaMeSmA00S00PP5V if date == DayDeaMeSmA00S00PP5D
+
+
+
+
+
+
+
+
+
+
+
+* cases
+
+
+* peak 1 - cases P1 20-03-01 20-05-01 - 22005 31Mar2020 2923.036
+
+summ DayCasMeSmA00S00 if date > td(01mar2020) & date < td(01may2020)
+gen DayCasMeSmA00S00P1V = r(max)
+label var DayCasMeSmA00S00P1V "Daily cases smooth JOHN Peak 1 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00P1V & date > td(01mar2020) & date < td(01may2020)
+gen DayCasMeSmA00S00P1D = r(mean)
+label var DayCasMeSmA00S00P1D "Daily cases smooth JOHN Peak 1 Date"
+format DayCasMeSmA00S00P1D %tdDDMonCCYY 
+
+
+
+* peak 2 - cases P2 20-03-01 20-09-01 - 22069 03Jun2020 2869.813
+
+summ DayCasMeSmA00S00 if date > td(01may2020) & date < td(01sep2020)
+
+gen DayCasMeSmA00S00P2V = r(max)
+label var DayCasMeSmA00S00P2V "Daily cases smooth JOHN Peak 2 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00P2V & date > td(01may2020) & date < td(01sep2020)
+gen DayCasMeSmA00S00P2D = r(mean)
+label var DayCasMeSmA00S00P2D "Daily cases smooth JOHN Peak 2 Date"
+format DayCasMeSmA00S00P2D %tdDDMonCCYY 
+
+
+
+* peak 3 - cases P3 20-11-01 21-01-01 - 22247 28Nov2020 13579.87
+
+summ DayCasMeSmA00S00 if date > td(01nov2020) & date < td(01jan2021)
+
+gen DayCasMeSmA00S00P3V = r(max)
+label var DayCasMeSmA00S00P3V "Daily cases smooth JOHN Peak 3 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00P3V & date > td(01nov2020) & date < td(01jan2021)
+gen DayCasMeSmA00S00P3D = r(mean)
+label var DayCasMeSmA00S00P3D "Daily cases smooth JOHN Peak 3 Date"
+format DayCasMeSmA00S00P3D %tdDDMonCCYY 
+
+
+
+* peak 4 - cases P4 21-04-01 21-06-01 - 22387 17Apr2021 23945.28
+
+summ DayCasMeSmA00S00 if date > td(01apr2021) & date < td(01jun2021)
+
+gen DayCasMeSmA00S00P4V = r(max)
+label var DayCasMeSmA00S00P4V "Daily cases smooth JOHN Peak 4 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00P4V & date > td(01apr2021) & date < td(01jun2021)
+gen DayCasMeSmA00S00P4D = r(mean)
+label var DayCasMeSmA00S00P4D "Daily cases smooth JOHN Peak 4 Date"
+format DayCasMeSmA00S00P4D %tdDDMonCCYY 
+
+
+
+* peak 5 - cases P5 21-08-01 21-09-01 - 22506 14Aug2021 38735.95
+
+summ DayCasMeSmA00S00 if date > td(01aug2021) & date < td(01sep2021)
+
+gen DayCasMeSmA00S00P5V = r(max)
+label var DayCasMeSmA00S00P5V "Daily cases smooth JOHN Peak 5 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00P5V & date > td(01aug2021) & date < td(01sep2021)
+gen DayCasMeSmA00S00P5D = r(mean)
+label var DayCasMeSmA00S00P5D "Daily cases smooth JOHN Peak 5 Date"
+format DayCasMeSmA00S00P5D %tdDDMonCCYY 
+
+
+
+
+
+
+* POST Peak 1 - cases PP1 20-04-01 20-06-01 - 22035 30Apr2020 1035.179
+
+summ DayCasMeSmA00S00 if date > td(01apr2020) & date < td(01jun2020)
+gen DayCasMeSmA00S00PP1V = r(min)
+label var DayCasMeSmA00S00PP1V "Daily cases smooth JOHN POST Peak 1 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP1V & date > td(01apr2020) & date < td(01jun2020)
+gen DayCasMeSmA00S00PP1D = r(mean)
+label var DayCasMeSmA00S00PP1D "Daily cases smooth JOHN POST Peak 1 Date"
+format DayCasMeSmA00S00PP1D %tdDDMonCCYY 
+
+
+
+* POST Peak 2 - cases PP2 20-06-01 20-10-01 - 22159 01Sep2020 1861.08
+
+summ DayCasMeSmA00S00 if date > td(01jun2020) & date < td(01oct2020)
+
+gen DayCasMeSmA00S00PP2V = r(min)
+label var DayCasMeSmA00S00PP2V "Daily cases smooth JOHN POST Peak 2 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP2V & date > td(01jun2020) & date < td(01oct2020)
+gen DayCasMeSmA00S00PP2D = r(mean)
+label var DayCasMeSmA00S00PP2D "Daily cases smooth JOHN POST Peak 2 Date"
+format DayCasMeSmA00S00PP2D %tdDDMonCCYY 
+
+
+
+* POST Peak 3 - cases PP3 21-01-01 21-04-01 - 22299 19Jan2021 6103
+
+summ DayCasMeSmA00S00 if date > td(01jan2021) & date < td(01apr2021)
+
+gen DayCasMeSmA00S00PP3V = r(min)
+label var DayCasMeSmA00S00PP3V "Daily cases smooth JOHN POST Peak 3 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP3V & date > td(01jan2021) & date < td(01apr2021)
+gen DayCasMeSmA00S00PP3D = r(mean)
+label var DayCasMeSmA00S00PP3D "Daily cases smooth JOHN POST Peak 3 Date"
+format DayCasMeSmA00S00PP3D %tdDDMonCCYY 
+
+
+
+
+* POST peak 4 - cases PP4 21-05-01 21-07-01 - 22437 06Jun2021 8230.759
+
+summ DayCasMeSmA00S00 if date > td(01may2021) & date < td(01jul2021)
+
+gen DayCasMeSmA00S00PP4V = r(min)
+label var DayCasMeSmA00S00PP4V "Daily cases smooth JOHN POST Peak 4 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP4V & date > td(01may2021) & date < td(01jul2021)
+gen DayCasMeSmA00S00PP4D = r(mean)
+label var DayCasMeSmA00S00PP4D "Daily cases smooth JOHN POST Peak 4 Date"
+format DayCasMeSmA00S00PP4D %tdDDMonCCYY 
+
+
+
+
+* POST peak 5 - cases PP5 21-10-01 21-11-01 - 22561 08Oct2021 11266.88
+
+summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(01nov2021)
+
+gen DayCasMeSmA00S00PP5V = r(min)
+label var DayCasMeSmA00S00PP5V "Daily cases smooth JOHN Peak 5 Value"
+
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP5V & date > td(01oct2021) & date < td(01nov2021)
+gen DayCasMeSmA00S00PP5D = r(mean)
+label var DayCasMeSmA00S00PP5D "Daily cases smooth JOHN Peak 5 Date"
+format DayCasMeSmA00S00PP5D %tdDDMonCCYY 
+
+
+
+gen DayCasMeSmA00S00PD = . 
+label var DayCasMeSmA00S00PD "Daily cases smooth JOHN Peak Dates"
+replace DayCasMeSmA00S00PD = DayCasMeSmA00S00P1D if date == DayCasMeSmA00S00P1D
+replace DayCasMeSmA00S00PD = DayCasMeSmA00S00P2D if date == DayCasMeSmA00S00P2D
+replace DayCasMeSmA00S00PD = DayCasMeSmA00S00P3D if date == DayCasMeSmA00S00P3D
+replace DayCasMeSmA00S00PD = DayCasMeSmA00S00P4D if date == DayCasMeSmA00S00P4D
+replace DayCasMeSmA00S00PD = DayCasMeSmA00S00P5D if date == DayCasMeSmA00S00P5D
+
+gen DayCasMeSmA00S00PV = . 
+label var DayCasMeSmA00S00PV "Daily cases smooth JOHN Peak Values"
+replace DayCasMeSmA00S00PV = DayCasMeSmA00S00P1V if date == DayCasMeSmA00S00P1D
+replace DayCasMeSmA00S00PV = DayCasMeSmA00S00P2V if date == DayCasMeSmA00S00P2D
+replace DayCasMeSmA00S00PV = DayCasMeSmA00S00P3V if date == DayCasMeSmA00S00P3D
+replace DayCasMeSmA00S00PV = DayCasMeSmA00S00P4V if date == DayCasMeSmA00S00P4D
+replace DayCasMeSmA00S00PV = DayCasMeSmA00S00P5V if date == DayCasMeSmA00S00P5D
+
+
+
+gen DayCasMeSmA00S00PPD = . 
+label var DayCasMeSmA00S00PPD "Daily cases smooth JOHN POST Peak Dates"
+replace DayCasMeSmA00S00PPD = DayCasMeSmA00S00PP1D if date == DayCasMeSmA00S00PP1D
+replace DayCasMeSmA00S00PPD = DayCasMeSmA00S00PP2D if date == DayCasMeSmA00S00PP2D
+replace DayCasMeSmA00S00PPD = DayCasMeSmA00S00PP3D if date == DayCasMeSmA00S00PP3D
+replace DayCasMeSmA00S00PPD = DayCasMeSmA00S00PP4D if date == DayCasMeSmA00S00PP4D
+replace DayCasMeSmA00S00PPD = DayCasMeSmA00S00PP5D if date == DayCasMeSmA00S00PP5D
+
+
+
+gen DayCasMeSmA00S00PPV = . 
+label var DayCasMeSmA00S00PPV "Daily cases smooth JOHN POST Peak Values"
+replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP1V if date == DayCasMeSmA00S00PP1D
+replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP2V if date == DayCasMeSmA00S00PP2D
+replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP3V if date == DayCasMeSmA00S00PP3D
+replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP4V if date == DayCasMeSmA00S00PP4D
+replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP5V if date == DayCasMeSmA00S00PP5D
+
+
+* peak 1 - cases P1 20-03-01 20-05-01 - 22005 31Mar2020 2923.036
+* peak 2 - cases P2 20-03-01 20-09-01 - 22069 03Jun2020 2869.813
+* peak 3 - cases P3 20-11-01 21-01-01 - 22247 28Nov2020 13579.87
+* peak 4 - cases P4 21-04-01 21-06-01 - 22387 17Apr2021 23945.28
+* peak 5 - cases P5 21-08-01 21-09-01 - 22506 14Aug2021 38735.95
+
+* POST Peak 1 - cases PP1 20-04-01 20-06-01 - 22035 30Apr2020 1035.179
+* POST Peak 2 - cases PP2 20-06-01 20-10-01 - 22159 01Sep2020 1861.08
+* POST Peak 3 - cases PP3 21-01-01 21-04-01 - 22299 19Jan2021 6103
+* POST peak 4 - cases PP4 21-05-01 21-07-01 - 22437 06Jun2021 8230.759
+* POST peak 5 - cases PP5 21-10-01 21-11-01 - 22561 08Oct2021 11266.88
+
+
+
+
+
+
+
 **************
 
 * graphs
@@ -419,14 +829,20 @@ forval i = 1(1)`wanted' {
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+(scatter DayDeaMeSmA00S00PV date, sort mcolor(red)) ///
+(lfit DayDeaMeSmA00S00PV date, lcolor(red) lpattern(dash)) ///
+(scatter DayDeaMeSmA00S00PPV date, sort mcolor(lime)) ///
+(lfit DayDeaMeSmA00S00PPV date, lcolor(lime) lpattern(dash)) ///
 , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country, Johns Hopkins", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "raw" 2 "smooth") size(small) row(1)) 
+legend(order(1 "Raw deaths" 2 "Smooth deaths" 3 "Peaks" 4 "Peaks trend" 5 "Post-peaks" 6 "Post-peaks trend") size(small) row(2)) ///
+subtitle("Peaks, Post-peaks, and their linear trends")
 
 graph save "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.gph", replace
 graph export "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.pdf", replace
+
 
 
 
@@ -448,14 +864,20 @@ forval i = 1(1)`wanted' {
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 (line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+(scatter DayCasMeSmA00S00PV date, sort mcolor(red)) ///
+(lfit DayCasMeSmA00S00PV date, lcolor(red) lpattern(dash)) ///
+(scatter DayCasMeSmA00S00PPV date, sort mcolor(lime)) ///
+(lfit DayCasMeSmA00S00PPV date, lcolor(lime) lpattern(dash)) ///
 , xtitle(Date) xlabel(`dates2020' `dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases) title("COVID-19 daily cases, $country, Johns Hopkins", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "raw" 2 "smooth") size(small) row(1)) 
+legend(order(1 "Raw cases" 2 "Smooth cases" 3 "Peaks" 4 "Peaks trend" 5 "Post-peaks" 6 "Post-peaks trend") size(small) row(2)) ///
+subtitle("Peaks, Post-peaks, and their linear trends")
 
 graph save "graph 2 COVID-19 daily cases, $country, Johns Hopkins.gph", replace
 graph export "graph 2 COVID-19 daily cases, $country, Johns Hopkins.pdf", replace
+
 
 
 
