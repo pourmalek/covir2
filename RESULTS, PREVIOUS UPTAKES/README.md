@@ -5,7 +5,7 @@
   
 [graph (1) Iran - Daily deaths, reference scenarios, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-1-iran---daily-deaths-reference-scenarios-all-time)
 
-[graph (1b) Iran - Reported daily deaths, peaks, post-peaksm, and linear trends]https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-1b-iran---reported-daily-deaths-peaks-post-peaksm-and-linear-trends
+[graph (1b) Iran - Reported daily deaths, peaks, post-peaksm, and linear trends](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-1b-iran---reported-daily-deaths-peaks-post-peaksm-and-linear-trends)
 
 [graph (2) Iran - Daily deaths, reference scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-2-iran---daily-deaths-reference-scenarios-2021) 
   
