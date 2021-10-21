@@ -4,14 +4,6 @@
 
 **_DELP 20211022_**, IHME 20211022, IMPE 20211006, **_SRIV 20211022_**
 
-
-
-<br/><br/>
-
-IMPE update 20211006 (2021-10-06_v8.csv.zip) was released on 20211013.
-
-The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
-
 <br/><br/>
 
 
