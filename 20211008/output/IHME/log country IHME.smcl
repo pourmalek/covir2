@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211008/code/IHME/log country IHME.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}21 Oct 2021, 11:22:01
+ {txt}opened on:  {res}21 Oct 2021, 11:40:43
 {txt}
 {com}. 
 . *****************************************************************************
@@ -30,7 +30,8 @@
 . 
 . * get IHME estimates
 . 
-. * URLs as of  2021-10-01
+. 
+. * URLs as of  2021-10-21
 . 
 . copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-10-01/ihme-covid19.zip ihme-covid19.zip
 {txt}
@@ -48,7 +49,13 @@ successfully unzipped ihme-covid19.zip to current directory
 {com}. erase ihme-covid19.zip
 {txt}
 {com}. 
+. 
+. 
+. 
 . /*
+> 
+> * URLs as of  2021-10-01
+> 
 > copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2020.csv data_download_file_reference_2020.csv 
 > copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2021.csv data_download_file_reference_2021.csv 
 > copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2020.csv data_download_file_best_masks_2020.csv 
@@ -73,8 +80,7 @@ successfully unzipped ihme-covid19.zip to current directory
 {txt}(123,727 observations deleted)
 
 {com}. save data_download_file_reference_2020.dta, replace
-{txt}(note: file data_download_file_reference_2020.dta not found)
-file data_download_file_reference_2020.dta saved
+{txt}file data_download_file_reference_2020.dta saved
 
 {com}. 
 . import delimited using data_download_file_reference_2021.csv, clear varnames(1)
@@ -84,8 +90,7 @@ file data_download_file_reference_2020.dta saved
 {txt}(139,812 observations deleted)
 
 {com}. save data_download_file_reference_2021.dta, replace
-{txt}(note: file data_download_file_reference_2021.dta not found)
-file data_download_file_reference_2021.dta saved
+{txt}file data_download_file_reference_2021.dta saved
 
 {com}. 
 . 
@@ -98,8 +103,7 @@ file data_download_file_reference_2021.dta saved
 {txt}(123,727 observations deleted)
 
 {com}. save data_download_file_best_masks_2020.dta, replace
-{txt}(note: file data_download_file_best_masks_2020.dta not found)
-file data_download_file_best_masks_2020.dta saved
+{txt}file data_download_file_best_masks_2020.dta saved
 
 {com}. 
 . import delimited using data_download_file_best_masks_2021.csv, clear varnames(1)
@@ -109,8 +113,7 @@ file data_download_file_best_masks_2020.dta saved
 {txt}(139,812 observations deleted)
 
 {com}. save data_download_file_best_masks_2021.dta, replace
-{txt}(note: file data_download_file_best_masks_2021.dta not found)
-file data_download_file_best_masks_2021.dta saved
+{txt}file data_download_file_best_masks_2021.dta saved
 
 {com}. 
 .         
@@ -122,8 +125,7 @@ file data_download_file_best_masks_2021.dta saved
 {txt}(123,727 observations deleted)
 
 {com}. save data_download_file_worse_2020.dta, replace
-{txt}(note: file data_download_file_worse_2020.dta not found)
-file data_download_file_worse_2020.dta saved
+{txt}file data_download_file_worse_2020.dta saved
 
 {com}. 
 . import delimited using data_download_file_worse_2021.csv, clear varnames(1)
@@ -133,8 +135,7 @@ file data_download_file_worse_2020.dta saved
 {txt}(139,812 observations deleted)
 
 {com}. save data_download_file_worse_2021.dta, replace
-{txt}(note: file data_download_file_worse_2021.dta not found)
-file data_download_file_worse_2021.dta saved
+{txt}file data_download_file_worse_2021.dta saved
 
 {com}. 
 . 
@@ -226,8 +227,7 @@ float, now double to accommodate using data's values)
 
 {com}. 
 . save "data_download_file_reference_2020_21.dta", replace
-{txt}(note: file data_download_file_reference_2020_21.dta not found)
-file data_download_file_reference_2020_21.dta saved
+{txt}file data_download_file_reference_2020_21.dta saved
 
 {com}. 
 . *
@@ -313,8 +313,7 @@ float, now double to accommodate using data's values)
 
 {com}. 
 . save "data_download_file_best_masks_2020_21.dta", replace
-{txt}(note: file data_download_file_best_masks_2020_21.dta not found)
-file data_download_file_best_masks_2020_21.dta saved
+{txt}file data_download_file_best_masks_2020_21.dta saved
 
 {com}. 
 . *
@@ -400,8 +399,7 @@ float, now double to accommodate using data's values)
 
 {com}. 
 . save "data_download_file_worse_2020_21.dta", replace
-{txt}(note: file data_download_file_worse_2020_21.dta not found)
-file data_download_file_worse_2020_21.dta saved
+{txt}file data_download_file_worse_2020_21.dta saved
 
 {com}. 
 . 
@@ -990,8 +988,7 @@ file data_download_file_worse_2020_21.dta saved
 {txt}
 {com}. 
 . save "Reference country.dta", replace
-{txt}(note: file Reference country.dta not found)
-file Reference country.dta saved
+{txt}file Reference country.dta saved
 
 {com}. 
 . 
@@ -1395,8 +1392,7 @@ file Reference country.dta saved
 {com}. 
 . 
 . save "Best country.dta", replace
-{txt}(note: file Best country.dta not found)
-file Best country.dta saved
+{txt}file Best country.dta saved
 
 {com}. 
 . 
@@ -1801,8 +1797,7 @@ file Best country.dta saved
 {com}. 
 . 
 . save "Worse country.dta", replace
-{txt}(note: file Worse country.dta not found)
-file Worse country.dta saved
+{txt}file Worse country.dta saved
 
 {com}. 
 . 
@@ -1970,8 +1965,7 @@ DayDMuMeS~01 {c |}{res}        698    80576.55       62001          0   274428.4
 {txt}
 {com}. 
 . save "country IHME.dta", replace
-{txt}(note: file country IHME.dta not found)
-file country IHME.dta saved
+{txt}file country IHME.dta saved
 
 {com}. 
 . 
@@ -2003,7 +1997,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 1a COVID-19 daily reported deaths, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 1a COVID-19 daily reported deaths, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 1a COVID-19 daily reported deaths, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 1a COVID-19 daily reported deaths, reference scenario, $country, IHME.pdf", replace
@@ -2024,7 +2017,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 1b COVID-19 daily excess deaths, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 1b COVID-19 daily excess deaths, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 1b COVID-19 daily excess deaths, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 1b COVID-19 daily excess deaths, reference scenario, $country, IHME.pdf", replace
@@ -2049,7 +2041,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 1c COVID-19 daily reported & excess deaths, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 1c COVID-19 daily reported & excess deaths, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 1c COVID-19 daily reported & excess deaths, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 1c COVID-19 daily reported & excess deaths, reference scenario, $country, IHME.pdf", replace
@@ -2077,7 +2068,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 2a COVID-19 daily reported deaths, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 2a COVID-19 daily reported deaths, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 2a COVID-19 daily reported deaths, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 2a COVID-19 daily reported deaths, $country 3 scenarios, IHME.pdf", replace
@@ -2102,7 +2092,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 2b COVID-19 daily excess deaths, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 2b COVID-19 daily excess deaths, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 2b COVID-19 daily excess deaths, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 2b COVID-19 daily excess deaths, $country 3 scenarios, IHME.pdf", replace
@@ -2131,7 +2120,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 2c COVID-19 daily reported & excess deaths, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 2c COVID-19 daily reported & excess deaths, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 2c COVID-19 daily reported & excess deaths, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 2c COVID-19 daily reported & excess deaths, $country 3 scenarios, IHME.pdf", replace
@@ -2157,7 +2145,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 3 COVID-19 daily deaths, $country reference scenario CI, IHME.gph", replace
-{txt}(note: file graph 3 COVID-19 daily deaths, Iran reference scenario CI, IHME.gph not found)
 {res}{txt}(file graph 3 COVID-19 daily deaths, Iran reference scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 3 COVID-19 daily deaths, $country reference scenario CI, IHME.pdf", replace
@@ -2182,7 +2169,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 4 COVID-19 daily deaths, $country best scenario CI, IHME.gph", replace
-{txt}(note: file graph 4 COVID-19 daily deaths, Iran best scenario CI, IHME.gph not found)
 {res}{txt}(file graph 4 COVID-19 daily deaths, Iran best scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 4 COVID-19 daily deaths, $country best scenario CI, IHME.pdf", replace
@@ -2207,7 +2193,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 5 COVID-19 daily deaths, $country worse scenario CI, IHME.gph", replace
-{txt}(note: file graph 5 COVID-19 daily deaths, Iran worse scenario CI, IHME.gph not found)
 {res}{txt}(file graph 5 COVID-19 daily deaths, Iran worse scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 5 COVID-19 daily deaths, $country worse scenario CI, IHME.pdf", replace
@@ -2232,7 +2217,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 6 COVID-19 daily infections, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 6 COVID-19 daily infections, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 6 COVID-19 daily infections, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 6 COVID-19 daily infections, reference scenario, $country, IHME.pdf", replace
@@ -2257,7 +2241,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 7 COVID-19 daily infections, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 7 COVID-19 daily infections, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 7 COVID-19 daily infections, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 7 COVID-19 daily infections, $country 3 scenarios, IHME.pdf", replace
@@ -2282,7 +2265,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 8 COVID-19 daily infections, $country reference scenario CI, IHME.gph", replace
-{txt}(note: file graph 8 COVID-19 daily infections, Iran reference scenario CI, IHME.gph not found)
 {res}{txt}(file graph 8 COVID-19 daily infections, Iran reference scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 8 COVID-19 daily infections, $country reference scenario CI, IHME.pdf", replace
@@ -2307,7 +2289,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 9 COVID-19 daily infections, $country best scenario CI, IHME.gph", replace
-{txt}(note: file graph 9 COVID-19 daily infections, Iran best scenario CI, IHME.gph not found)
 {res}{txt}(file graph 9 COVID-19 daily infections, Iran best scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 9 COVID-19 daily infections, $country best scenario CI, IHME.pdf", replace
@@ -2332,7 +2313,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 10 COVID-19 daily infections, $country worse scenario CI, IHME.gph", replace
-{txt}(note: file graph 10 COVID-19 daily infections, Iran worse scenario CI, IHME.gph not found)
 {res}{txt}(file graph 10 COVID-19 daily infections, Iran worse scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 10 COVID-19 daily infections, $country worse scenario CI, IHME.pdf", replace
@@ -2357,7 +2337,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 11a COVID-19 total reported deaths, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 11a COVID-19 total reported deaths, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 11a COVID-19 total reported deaths, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 11a COVID-19 total reported deaths, reference scenario, $country, IHME.pdf", replace
@@ -2378,7 +2357,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 11b COVID-19 total excess deaths, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 11b COVID-19 total excess deaths, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 11b COVID-19 total excess deaths, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 11b COVID-19 total excess deaths, reference scenario, $country, IHME.pdf", replace
@@ -2403,7 +2381,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 11c COVID-19 total reported & excess deaths, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 11c COVID-19 total reported & excess deaths, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 11c COVID-19 total reported & excess deaths, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 11c COVID-19 total reported & excess deaths, reference scenario, $country, IHME.pdf", replace
@@ -2428,7 +2405,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 12a COVID-19 total reported deaths, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 12a COVID-19 total reported deaths, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 12a COVID-19 total reported deaths, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 12a COVID-19 total reported deaths, $country 3 scenarios, IHME.pdf", replace
@@ -2453,7 +2429,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 12b COVID-19 total excess deaths, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 12b COVID-19 total excess deaths, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 12b COVID-19 total excess deaths, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 12b COVID-19 total excess deaths, $country 3 scenarios, IHME.pdf", replace
@@ -2482,7 +2457,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 12c COVID-19 total reported & excess deaths, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 12c COVID-19 total reported & excess deaths, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 12c COVID-19 total reported & excess deaths, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 12c COVID-19 total reported & excess deaths, $country 3 scenarios, IHME.pdf", replace
@@ -2508,7 +2482,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 13 COVID-19 total deaths, $country reference scenario CI, IHME.gph", replace
-{txt}(note: file graph 13 COVID-19 total deaths, Iran reference scenario CI, IHME.gph not found)
 {res}{txt}(file graph 13 COVID-19 total deaths, Iran reference scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 13 COVID-19 total deaths, $country reference scenario CI, IHME.pdf", replace
@@ -2533,7 +2506,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 14 COVID-19 total deaths, $country best scenario CI, IHME.gph", replace
-{txt}(note: file graph 14 COVID-19 total deaths, Iran best scenario CI, IHME.gph not found)
 {res}{txt}(file graph 14 COVID-19 total deaths, Iran best scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 14 COVID-19 total deaths, $country best scenario CI, IHME.pdf", replace
@@ -2558,7 +2530,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 15 COVID-19 total deaths, $country worse scenario CI, IHME.gph", replace
-{txt}(note: file graph 15 COVID-19 total deaths, Iran worse scenario CI, IHME.gph not found)
 {res}{txt}(file graph 15 COVID-19 total deaths, Iran worse scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 15 COVID-19 total deaths, $country worse scenario CI, IHME.pdf", replace
@@ -2583,7 +2554,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 16 COVID-19 total infections, reference scenario, $country, IHME.gph", replace
-{txt}(note: file graph 16 COVID-19 total infections, reference scenario, Iran, IHME.gph not found)
 {res}{txt}(file graph 16 COVID-19 total infections, reference scenario, Iran, IHME.gph saved)
 
 {com}. graph export "graph 16 COVID-19 total infections, reference scenario, $country, IHME.pdf", replace
@@ -2608,7 +2578,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 18 COVID-19 total infections, $country reference scenario CI, IHME.gph", replace
-{txt}(note: file graph 18 COVID-19 total infections, Iran reference scenario CI, IHME.gph not found)
 {res}{txt}(file graph 18 COVID-19 total infections, Iran reference scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 18 COVID-19 total infections, $country reference scenario CI, IHME.pdf", replace
@@ -2633,7 +2602,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 19 COVID-19 total infections, $country better scenario CI, IHME.gph", replace
-{txt}(note: file graph 19 COVID-19 total infections, Iran better scenario CI, IHME.gph not found)
 {res}{txt}(file graph 19 COVID-19 total infections, Iran better scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 19 COVID-19 total infections, $country better scenario CI, IHME.pdf", replace
@@ -2657,7 +2625,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 19 COVID-19 total infections, $country worse scenario CI, IHME.gph", replace
-{txt}(note: file graph 19 COVID-19 total infections, Iran worse scenario CI, IHME.gph not found)
 {res}{txt}(file graph 19 COVID-19 total infections, Iran worse scenario CI, IHME.gph saved)
 
 {com}. graph export "graph 19 COVID-19 total infections, $country worse scenario CI, IHME.pdf", replace
@@ -2689,7 +2656,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 20 COVID-19 total infections, $country 3 scenarios CI, IHME.gph", replace
-{txt}(note: file graph 20 COVID-19 total infections, Iran 3 scenarios CI, IHME.gph not found)
 {res}{txt}(file graph 20 COVID-19 total infections, Iran 3 scenarios CI, IHME.gph saved)
 
 {com}. graph export "graph 20 COVID-19 total infections, $country 3 scenarios CI, IHME.pdf", replace
@@ -2720,7 +2686,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21a COVID-19 daily IFR, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 21a COVID-19 daily IFR, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 21a COVID-19 daily IFR, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 21a COVID-19 daily IFR, $country 3 scenarios, IHME.pdf", replace
@@ -2745,7 +2710,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21b COVID-19 daily IDR, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 21b COVID-19 daily IDR, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 21b COVID-19 daily IDR, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 21b COVID-19 daily IDR, $country 3 scenarios, IHME.pdf", replace
@@ -2771,7 +2735,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21c COVID-19 daily IHR, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 21c COVID-19 daily IHR, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 21c COVID-19 daily IHR, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 21c COVID-19 daily IHR, $country 3 scenarios, IHME.pdf", replace
@@ -2796,7 +2759,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21d COVID-19 daily Infection outcomes ratios, $country reference scenario, IHME.gph", replace
-{txt}(note: file graph 21d COVID-19 daily Infection outcomes ratios, Iran reference scenario, IHME.gph not found)
 {res}{txt}(file graph 21d COVID-19 daily Infection outcomes ratios, Iran reference scenario, IHME.gph saved)
 
 {com}. graph export "graph 21d COVID-19 daily Infection outcomes ratios, $country reference scenario, IHME.pdf", replace
@@ -2820,7 +2782,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21e COVID-19 daily Infection outcomes ratios, $country better scenario, IHME.gph", replace
-{txt}(note: file graph 21e COVID-19 daily Infection outcomes ratios, Iran better scenario, IHME.gph not found)
 {res}{txt}(file graph 21e COVID-19 daily Infection outcomes ratios, Iran better scenario, IHME.gph saved)
 
 {com}. graph export "graph 21e COVID-19 daily Infection outcomes ratios, $country better scenario, IHME.pdf", replace
@@ -2846,7 +2807,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21f COVID-19 daily Infection outcomes ratios, $country worse scenario, IHME.gph", replace
-{txt}(note: file graph 21f COVID-19 daily Infection outcomes ratios, Iran worse scenario, IHME.gph not found)
 {res}{txt}(file graph 21f COVID-19 daily Infection outcomes ratios, Iran worse scenario, IHME.gph saved)
 
 {com}. graph export "graph 21f COVID-19 daily Infection outcomes ratios, $country worse scenario, IHME.pdf", replace
@@ -2880,7 +2840,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 21g COVID-19 daily Infection outcomes ratios, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 21g COVID-19 daily Infection outcomes ratios, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 21g COVID-19 daily Infection outcomes ratios, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 21g COVID-19 daily Infection outcomes ratios, $country 3 scenarios, IHME.pdf", replace
@@ -2912,7 +2871,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 22a COVID-19 daily beds needed, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 22a COVID-19 daily beds needed, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 22a COVID-19 daily beds needed, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 22a COVID-19 daily beds needed, $country 3 scenarios, IHME.pdf", replace
@@ -2940,7 +2898,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 22b COVID-19 daily beds needed, $country 3 scenarios, IHME all_bed_capacity.gph", replace
-{txt}(note: file graph 22b COVID-19 daily beds needed, Iran 3 scenarios, IHME all_bed_capacity.gph not found)
 {res}{txt}(file graph 22b COVID-19 daily beds needed, Iran 3 scenarios, IHME all_bed_capacity.gph saved)
 
 {com}. graph export "graph 22b COVID-19 daily beds needed, $country 3 scenarios, IHME all_bed_capacity.pdf", replace
@@ -2966,7 +2923,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 23a COVID-19 daily ICU beds needed, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 23a COVID-19 daily ICU beds needed, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 23a COVID-19 daily ICU beds needed, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 23a COVID-19 daily ICU beds needed, $country 3 scenarios, IHME.pdf", replace
@@ -2994,7 +2950,6 @@ file country IHME.dta saved
 {com}. 
 .            
 . graph save "graph 23b COVID-19 daily ICU beds needed, $country 3 scenarios, IHME icu_bed_capacity.gph", replace
-{txt}(note: file graph 23b COVID-19 daily ICU beds needed, Iran 3 scenarios, IHME icu_bed_capacity.gph not found)
 {res}{txt}(file graph 23b COVID-19 daily ICU beds needed, Iran 3 scenarios, IHME icu_bed_capacity.gph saved)
 
 {com}. graph export "graph 23b COVID-19 daily ICU beds needed, $country 3 scenarios, IHME icu_bed_capacity.pdf", replace
@@ -3020,7 +2975,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}.            
 . graph save "graph 25 COVID-19 daily hospital admissions, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 25 COVID-19 daily hospital admissions, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 25 COVID-19 daily hospital admissions, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 26 COVID-19 daily hospital admissions, $country 3 scenarios, IHME.pdf", replace
@@ -3046,7 +3000,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 26 COVID-19 daily ICU beds needed, $country 3 scenarios, IHME.gph", replace
-{txt}(note: file graph 26 COVID-19 daily ICU beds needed, Iran 3 scenarios, IHME.gph not found)
 {res}{txt}(file graph 26 COVID-19 daily ICU beds needed, Iran 3 scenarios, IHME.gph saved)
 
 {com}. graph export "graph 26 COVID-19 ICU beds needed, $country 3 scenarios, IHME.pdf", replace
@@ -3068,7 +3021,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 29 COVID-19 Tests per 100,000, $country, IHME.gph", replace
-{txt}(note: file graph 29 COVID-19 Tests per 100,000, Iran, IHME.gph not found)
 {res}{txt}(file graph 29 COVID-19 Tests per 100,000, Iran, IHME.gph saved)
 
 {com}. graph export "graph 29 COVID-19 Tests per 100,000, $country, IHME.pdf", replace
@@ -3093,7 +3045,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 31a COVID-19 daily hospital-related outcomes, $country reference scenario, IHME.gph", replace
-{txt}(note: file graph 31a COVID-19 daily hospital-related outcomes, Iran reference scenario, IHME.gph not found)
 {res}{txt}(file graph 31a COVID-19 daily hospital-related outcomes, Iran reference scenario, IHME.gph saved)
 
 {com}. graph export "graph 31a COVID-19 daily hospital-related outcomes, $country reference scenario, IHME.pdf", replace
@@ -3120,7 +3071,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 31b COVID-19 daily hospital-related outcomes, $country reference scenario, IHME all_bed_capacity.gph", replace
-{txt}(note: file graph 31b COVID-19 daily hospital-related outcomes, Iran reference scenario, IHME all_bed_capacity.gph not found)
 {res}{txt}(file graph 31b COVID-19 daily hospital-related outcomes, Iran reference scenario, IHME all_bed_capacity.gph saved)
 
 {com}. graph export "graph 31b COVID-19 daily hospital-related outcomes, $country reference scenario, IHME all_bed_capacity.pdf", replace
@@ -3148,7 +3098,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 32 COVID-19 daily hospital-related outcomes, $country reference scenario, IHME, wo beds needed.gph", replace
-{txt}(note: file graph 32 COVID-19 daily hospital-related outcomes, Iran reference scenario, IHME, wo beds needed.gph not found)
 {res}{txt}(file graph 32 COVID-19 daily hospital-related outcomes, Iran reference scenario, IHME, wo beds needed.gph saved)
 
 {com}. graph export "graph 32 COVID-19 daily hospital-related outcomes, $country reference scenario, IHME, wo beds needed.pdf", replace
@@ -3175,7 +3124,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 33 COVID-19 daily mobility, $country, 3 scenarios.gph", replace
-{txt}(note: file graph 33 COVID-19 daily mobility, Iran, 3 scenarios.gph not found)
 {res}{txt}(file graph 33 COVID-19 daily mobility, Iran, 3 scenarios.gph saved)
 
 {com}. graph export "graph 33 COVID-19 daily mobility, $country, 3 scenarios.pdf", replace
@@ -3202,7 +3150,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 34 COVID-19 daily mask_use, $country, 3 scenarios.gph", replace
-{txt}(note: file graph 34 COVID-19 daily mask_use, Iran, 3 scenarios.gph not found)
 {res}{txt}(file graph 34 COVID-19 daily mask_use, Iran, 3 scenarios.gph saved)
 
 {com}. graph export "graph 34 COVID-19 daily mask_use, $country, 3 scenarios.pdf", replace
@@ -3226,7 +3173,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 35 COVID-19 daily ratio of pneumonia deaths, $country.gph", replace
-{txt}(note: file graph 35 COVID-19 daily ratio of pneumonia deaths, Iran.gph not found)
 {res}{txt}(file graph 35 COVID-19 daily ratio of pneumonia deaths, Iran.gph saved)
 
 {com}. graph export "graph 35 COVID-19 daily ratio of pneumonia deaths, $country.pdf", replace
@@ -3256,7 +3202,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 36 COVID-19 cumulative vaccinated, $country.gph", replace
-{txt}(note: file graph 36 COVID-19 cumulative vaccinated, Iran.gph not found)
 {res}{txt}(file graph 36 COVID-19 cumulative vaccinated, Iran.gph saved)
 
 {com}. graph export "graph 36 COVID-19 cumulative vaccinated, $country.pdf", replace
@@ -3284,7 +3229,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 36b COVID-19 daily vaccinated number, $country.gph", replace
-{txt}(note: file graph 36b COVID-19 daily vaccinated number, Iran.gph not found)
 {res}{txt}(file graph 36b COVID-19 daily vaccinated number, Iran.gph saved)
 
 {com}. graph export "graph 36b COVID-19 daily vaccinated number, $country.pdf", replace
@@ -3313,7 +3257,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 37 COVID-19 percent cumulative vaccinated, $country.gph", replace
-{txt}(note: file graph 37 COVID-19 percent cumulative vaccinated, Iran.gph not found)
 {res}{txt}(file graph 37 COVID-19 percent cumulative vaccinated, Iran.gph saved)
 
 {com}. graph export "graph 37 COVID-19 percent cumulative vaccinated, $country.pdf", replace
@@ -3342,7 +3285,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 37b COVID-19 percent daily vaccinated, $country.gph", replace
-{txt}(note: file graph 37b COVID-19 percent daily vaccinated, Iran.gph not found)
 {res}{txt}(file graph 37b COVID-19 percent daily vaccinated, Iran.gph saved)
 
 {com}. graph export "graph 37b COVID-19 percent daily vaccinated, $country.pdf", replace
@@ -3369,7 +3311,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 38 COVID-19 R effective, $country, 3 scenarios.gph", replace
-{txt}(note: file graph 38 COVID-19 R effective, Iran, 3 scenarios.gph not found)
 {res}{txt}(file graph 38 COVID-19 R effective, Iran, 3 scenarios.gph saved)
 
 {com}. graph export "graph 38 COVID-19 R effective, $country, 3 scenarios.pdf", replace
@@ -3400,7 +3341,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 39 COVID-19 R effective, $country, 3 scenarios 01jun2021 on.gph", replace
-{txt}(note: file graph 39 COVID-19 R effective, Iran, 3 scenarios 01jun2021 on.gph not found)
 {res}{txt}(file graph 39 COVID-19 R effective, Iran, 3 scenarios 01jun2021 on.gph saved)
 
 {com}. graph export "graph 39 COVID-19 R effective, $country, 3 scenarios 01jun2021 on.pdf", replace
@@ -3429,7 +3369,6 @@ file country IHME.dta saved
 {res}{txt}
 {com}. 
 . graph save "graph 45 COVID-19 daily deaths and infections $country, IHME.gph", replace
-{txt}(note: file graph 45 COVID-19 daily deaths and infections Iran, IHME.gph not found)
 {res}{txt}(file graph 45 COVID-19 daily deaths and infections Iran, IHME.gph saved)
 
 {com}. qui graph export "graph 45 COVID-19 daily deaths and infections $country, IHME.pdf", replace
@@ -3454,7 +3393,7 @@ file country IHME.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211008/code/IHME/log country IHME.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}21 Oct 2021, 11:25:59
+ {txt}closed on:  {res}21 Oct 2021, 11:44:44
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
