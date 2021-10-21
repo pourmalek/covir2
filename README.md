@@ -722,8 +722,8 @@ _Component studies (the international periodically updated models) and their sce
 
 ### uptakes in this repository, since April 2021 
 
-
-**_bold italic fonts_** show the uptake was triggered by either IHME or IMPE. 
+ 
+**_bold italic fonts_** show the uptake was triggered by either IHME or IMPE (before 20211008), or the model updates that are new in this uptake (20211008 and afterwards). 
 
 .
 
