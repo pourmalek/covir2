@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211001/code/IHME/log country IHME.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Oct 2021, 13:17:02
+ {txt}opened on:  {res}21 Oct 2021, 11:50:23
 {txt}
 {com}. 
 . *****************************************************************************
@@ -30,27 +30,40 @@
 . 
 . * get IHME estimates
 . 
-. * URLs as of  2021-10-01
 . 
-. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2020.csv data_download_file_reference_2020.csv 
+. * URLs as of  2021-10-21
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-10-01/ihme-covid19.zip ihme-covid19.zip
 {txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2021.csv data_download_file_reference_2021.csv 
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2020.csv data_download_file_best_masks_2020.csv 
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2021.csv data_download_file_best_masks_2021.csv 
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_worse_2020.csv data_download_file_worse_2020.csv
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_worse_2021.csv data_download_file_worse_2021.csv
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/data_dictionary.csv data_dictionary.csv 
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/IHME_COVID_19_Data_Release_Information_Sheet.pdf IHME_COVID_19_Data_Release_Information_Sheet.pdf 
-{txt}
-{com}. copy https://ihmecovid19storage.blob.core.windows.net/latest/sha256sums.txt sha256sums.txt
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_worse_2020.csv
+    inflating: data_download_file_worse_2021.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
 {txt}
 {com}. 
+. 
+. 
+. /* URLs as of  2021-10-01
+> 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2020.csv data_download_file_reference_2020.csv 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2021.csv data_download_file_reference_2021.csv 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2020.csv data_download_file_best_masks_2020.csv 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2021.csv data_download_file_best_masks_2021.csv 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_worse_2020.csv data_download_file_worse_2020.csv
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_worse_2021.csv data_download_file_worse_2021.csv
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/data_dictionary.csv data_dictionary.csv 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/IHME_COVID_19_Data_Release_Information_Sheet.pdf IHME_COVID_19_Data_Release_Information_Sheet.pdf 
+> copy https://ihmecovid19storage.blob.core.windows.net/latest/sha256sums.txt sha256sums.txt
+> */
+. 
 . ******************************
 . 
 . * import csv files
@@ -3334,7 +3347,7 @@ file country IHME.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211001/code/IHME/log country IHME.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Oct 2021, 13:22:28
+ {txt}closed on:  {res}21 Oct 2021, 11:54:29
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
