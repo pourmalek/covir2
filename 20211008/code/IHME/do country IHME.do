@@ -35,6 +35,11 @@ clear
 
 * URLs as of  2021-10-01
 
+copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-10-01/ihme-covid19.zip ihme-covid19.zip
+unzipfile ihme-covid19.zip, replace
+erase ihme-covid19.zip
+
+/*
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2020.csv data_download_file_reference_2020.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2021.csv data_download_file_reference_2021.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2020.csv data_download_file_best_masks_2020.csv 
@@ -44,6 +49,7 @@ copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_dictionary.csv data_dictionary.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/IHME_COVID_19_Data_Release_Information_Sheet.pdf IHME_COVID_19_Data_Release_Information_Sheet.pdf 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/sha256sums.txt sha256sums.txt
+*/
 
 ******************************
 
