@@ -33,13 +33,20 @@ clear
 
 * get IHME estimates
 
-* URLs as of  2021-10-01
+
+* URLs as of  2021-10-21
 
 copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-10-01/ihme-covid19.zip ihme-covid19.zip
 unzipfile ihme-covid19.zip, replace
 erase ihme-covid19.zip
 
+
+
+
 /*
+
+* URLs as of  2021-10-01
+
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2020.csv data_download_file_reference_2020.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2021.csv data_download_file_reference_2021.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_best_masks_2020.csv data_download_file_best_masks_2020.csv 
