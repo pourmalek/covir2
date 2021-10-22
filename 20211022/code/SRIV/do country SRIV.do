@@ -21,11 +21,11 @@ log using "log country SRIV.smcl", replace
 
 
                                                                                                          ***************************
-* To change update date, find and replace all, 2021-10-22 (old), with 2021-10-22 (new) <<--       <<<--- * change update date here *
+* To change update date, find and replace all, 2021-10-17 (old), with 2021-10-17 (new) <<--       <<<--- * change update date here *
                                                                                                          ***************************
 
 																										 																										 
-******* Also, find and replace ALL, 21oct2021 (old), with 21oct2021 (new) **********              <<<---       *  AND HERE  *
+******* Also, find and replace ALL, 16oct2021 (old), with 16oct2021 (new) **********              <<<---       *  AND HERE  *
                                                                                                          ***************************
 * Start date of estimates in each release of SRIV is one day before the release date. 
 
@@ -33,12 +33,12 @@ log using "log country SRIV.smcl", replace
 
 * Get SRIV estimates 
 
-copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-22/global_forecasts_deaths.csv global_forecasts_deaths.csv
-copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-22/global_forecasts_deaths_lb.csv global_forecasts_deaths_lb.csv
-copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-22/global_forecasts_deaths_ub.csv global_forecasts_deaths_ub.csv
-copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-22/global_forecasts_cases.csv global_forecasts_cases.csv
-copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-22/global_forecasts_cases_lb.csv global_forecasts_cases_lb.csv
-copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-22/global_forecasts_cases_ub.csv global_forecasts_cases_ub.csv
+copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-17/global_forecasts_deaths.csv global_forecasts_deaths.csv
+copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-17/global_forecasts_deaths_lb.csv global_forecasts_deaths_lb.csv
+copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-17/global_forecasts_deaths_ub.csv global_forecasts_deaths_ub.csv
+copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-17/global_forecasts_cases.csv global_forecasts_cases.csv
+copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-17/global_forecasts_cases_lb.csv global_forecasts_cases_lb.csv
+copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-10-17/global_forecasts_cases_ub.csv global_forecasts_cases_ub.csv
 
 
 
@@ -86,7 +86,7 @@ label var TotCasUpRaA05S00 "Total Cases Upper SRIV"
 
 rename date date_original
 gen date = .
-replace date = td(21oct2021) in 1
+replace date = td(16oct2021) in 1
 replace date = date[_n-1] + 1 in 2/l
 format date %tdDDMonCCYY
 codebook date
