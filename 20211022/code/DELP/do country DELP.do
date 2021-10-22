@@ -29,9 +29,9 @@ log using "log country DELP.smcl", replace
 
 clear
 
-copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20211022.csv Global_V4_since100_20211022.csv
+copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20211019.csv Global_V4_since100_20211019.csv
 
-import delimited using "Global_V4_since100_20211022.csv", clear varnames(1)
+import delimited using "Global_V4_since100_20211019.csv", clear varnames(1)
 
 rename country loc_grand_name
 
