@@ -791,6 +791,32 @@ graph save "graph 22 COVID-19 daily cases, $country, reference scenarios.gph", r
 graph export "graph 22 COVID-19 daily cases, $country, reference scenarios.pdf", replace
 
 
+
+****
+* daily cases, reference scenario, 2021
+
+twoway ///
+(line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN"
+(line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+(line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
+(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+if date >= td(01jan2021) ///
+, xtitle(Date) xlabel(#$ytickn2021, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily cases) title("COVID-19 daily cases, $country", size(medium)) /// 
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "SRIV cases") size(small) row(1)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
+"    the FIFTH wave and Delta were discussed with MOH." ///
+"- Cyan line: 20210910; Travel restrictions to Iraq, inter alia, to delay and attenuate the SIXTH wave, Lambda, +/- Mu," ///
+"    relayed to the new MOH.", size(vsmall))
+
+graph save "graph 22b COVID-19 daily cases, $country, reference scenarios.gph", replace
+graph export "graph 22b COVID-19 daily cases, $country, reference scenarios.pdf", replace
+
+
+
 ****
 * daily cases or infections, reference scenarios, 2021, CI
 
