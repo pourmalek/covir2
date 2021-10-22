@@ -2,7 +2,17 @@
 
 DELP 20210902,  **_IHME 20210902_**, IMPE 20210825, LANL 20210829, SRIV 20210902
 
-Nothing new in this uptake.
+On 20210903, -copy https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip ihme-covid19.zip- led to ihme-covid19.zip with  reference_hospitalization_all_locs.csv, best_masks_hospitalization_all_locs.csv, and worse_hospitalization_all_locs.csv, inside the ihme-covid19.zip. 
+
+On 20211021, -copy https://ihmecovid19storage.blob.core.windows.net/archive/2021-09-17/ihme-covid19.zip ihme-covid19.zip- leads to the new configuration of IHME files: 
+data_dictionary.csv
+data_download_file_best_masks_2020.csv
+data_download_file_best_masks_2021.csv
+data_download_file_reference_2020.csv
+data_download_file_reference_2021.csv
+data_download_file_worse_2020.csv
+data_download_file_worse_2021.csv
+	
 
 <br/><br/>
 ****
