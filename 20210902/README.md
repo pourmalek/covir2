@@ -13,9 +13,9 @@ data_download_file_reference_2021.csv,
 data_download_file_worse_2020.csv,
 data_download_file_worse_2021.csv. 
 
-"do country IHME.do" is amended accordingly. 
+The file "do country IHME.do" here is amended accordingly. 
 
-A peculiar observation is that the downloaded file path for downloading "September 2, 2021" from http://www.healthdata.org/node/8787 (COVID-19 estimate downloads | Archive) leads to https://ihmecovid19storage.blob.core.windows.net/archive/2021-09-17/ihme-covid19.zip that bears the date 2021-09-17 not the date 2021-09-02. 
+A peculiar observation is that the downloaded file path for downloading "September 2, 2021" from http://www.healthdata.org/node/8787 (COVID-19 estimate downloads | Archive) leads to https://ihmecovid19storage.blob.core.windows.net/archive/2021-09-17/ihme-covid19.zip that bears the date 2021-09-17, not the date 2021-09-02. 
 	
 
 <br/><br/>
