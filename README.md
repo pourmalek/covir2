@@ -169,7 +169,7 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 23 – 2021-10-15](https://github.com/pourmalek/covir2/blob/main/situation%20reports/23%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2023%20–%202021-10-15.pdf)
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 24 – 2021-10-22](https://github.com/pourmalek/covir2/blob/main/situation%20reports/24%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2024%20–%202021-10-22.pdf)
  
 
 ********************************************************************************************************************************************
