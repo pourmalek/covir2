@@ -797,15 +797,15 @@ graph export "graph 22 COVID-19 daily cases, $country, reference scenarios.pdf",
 
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN"
-(line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
-(line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
-(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 2 "JOHN"
+(line DayCasMeRaA01S00 date, sort lcolor(red)) /// 3 "DELP"
+(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$ytickn2021, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases) title("COVID-19 daily cases, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "SRIV cases") size(small) row(1)) ///
+legend(order(1 "JOHN cases raw" 2 "JOHN cases smooth" 3 "DELP cases" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH." ///
