@@ -3382,7 +3382,7 @@ uptake 20211022: **_DELP 20211019_**, **_IHME 20211021_**, IMPE 20211006, **_SRI
 
 (8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211022/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/138492135-b9b3341a-45c5-4088-909b-b79dc5c45166.png)
+![image](https://user-images.githubusercontent.com/30849720/138500523-e5b9a6fd-1d81-4f08-83f5-25bcb1de8099.png)
 
 *
  
