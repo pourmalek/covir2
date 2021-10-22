@@ -83,6 +83,12 @@ DELP and SRIV models have started falling behind their daily update release sche
   
 ****
 
+(8b) Iran [Daily cases, 2021]()
+
+.
+
+****
+
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211022/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/138489069-039fad40-abb0-4cfe-9f60-54c542524d93.png)
