@@ -43,16 +43,182 @@ erase ihme-covid19.zip
 
 * import csv files
 
-// cd 2021-09-10
 
-import delimited using reference_hospitalization_all_locs.csv, clear varnames(1)
-save Reference_hospitalization_all_locs.dta, replace
+
+import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+keep if regexm(location_name,"$country") == 1
+save data_download_file_reference_2020.dta, replace
+
+import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+keep if regexm(location_name,"$country") == 1
+save data_download_file_reference_2021.dta, replace
+
+
+
 	
-import delimited using best_masks_hospitalization_all_locs.csv, clear varnames(1)
-save Best_masks_hospitalization_all_locs.dta, replace
+import delimited using data_download_file_best_masks_2020.csv, clear varnames(1)
+keep if regexm(location_name,"$country") == 1
+save data_download_file_best_masks_2020.dta, replace
+
+import delimited using data_download_file_best_masks_2021.csv, clear varnames(1)
+keep if regexm(location_name,"$country") == 1
+save data_download_file_best_masks_2021.dta, replace
+
 	
-import delimited using worse_hospitalization_all_locs.csv, clear varnames(1)
-save Worse_hospitalization_all_locs.dta, replace
+	
+import delimited using data_download_file_worse_2020.csv, clear varnames(1)
+keep if regexm(location_name,"$country") == 1
+save data_download_file_worse_2020.dta, replace
+
+import delimited using data_download_file_worse_2021.csv, clear varnames(1)
+keep if regexm(location_name,"$country") == 1
+save data_download_file_worse_2021.dta, replace
+
+
+
+******************************
+
+* gen scenario dta files
+
+
+use "data_download_file_reference_2020.dta", clear 
+
+local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+
+foreach v of local varlist {
+	capture confirm numeric variable `v'
+    if !_rc {
+		di "`v'" " is numeric"
+    }
+    else {
+		di "`v'" " contains string"
+		replace `v' = "." if `v' == "Inf"
+		destring `v', replace 
+    }
+}
+*
+
+save "data_download_file_reference_2020.dta", replace 
+
+
+
+use "data_download_file_reference_2021.dta", clear 
+
+
+local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+
+foreach v of local varlist {
+	capture confirm numeric variable `v'
+    if !_rc {
+		di "`v'" " is numeric"
+    }
+    else {
+		di "`v'" " contains string"
+		replace `v' = "." if `v' == "Inf"
+		destring `v', replace 
+    }
+}
+*
+
+save "data_download_file_reference_2021.dta", replace 
+
+append using "data_download_file_reference_2020.dta"
+
+save "data_download_file_reference_2020_21.dta", replace
+
+*
+
+use "data_download_file_best_masks_2020.dta", clear
+
+local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+
+foreach v of local varlist {
+	capture confirm numeric variable `v'
+    if !_rc {
+		di "`v'" " is numeric"
+    }
+    else {
+		di "`v'" " contains string"
+		replace `v' = "." if `v' == "Inf"
+		destring `v', replace 
+    }
+}
+*
+
+save "data_download_file_best_masks_2020.dta", replace
+
+
+
+use "data_download_file_best_masks_2021.dta", clear
+
+local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+
+foreach v of local varlist {
+	capture confirm numeric variable `v'
+    if !_rc {
+		di "`v'" " is numeric"
+    }
+    else {
+		di "`v'" " contains string"
+		replace `v' = "." if `v' == "Inf"
+		destring `v', replace 
+    }
+}
+*
+
+save "data_download_file_best_masks_2021.dta", replace
+
+append using "data_download_file_best_masks_2020.dta"
+
+save "data_download_file_best_masks_2020_21.dta", replace
+
+*
+
+use "data_download_file_worse_2020.dta", clear 
+
+local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+
+foreach v of local varlist {
+	capture confirm numeric variable `v'
+    if !_rc {
+		di "`v'" " is numeric"
+    }
+    else {
+		di "`v'" " contains string"
+		replace `v' = "." if `v' == "Inf"
+		destring `v', replace 
+    }
+}
+*
+
+save "data_download_file_worse_2020.dta", replace 
+
+
+
+use "data_download_file_worse_2021.dta", clear 
+
+local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+
+foreach v of local varlist {
+	capture confirm numeric variable `v'
+    if !_rc {
+		di "`v'" " is numeric"
+    }
+    else {
+		di "`v'" " contains string"
+		replace `v' = "." if `v' == "Inf"
+		destring `v', replace 
+    }
+}
+*
+
+save "data_download_file_worse_2021.dta", replace 
+
+append using "data_download_file_worse_2020.dta"
+
+save "data_download_file_worse_2020_21.dta", replace
+
+
 
 
 
