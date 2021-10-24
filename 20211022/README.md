@@ -6,6 +6,10 @@
 
 DELP and SRIV models have started falling behind their daily update release schedules. On 20211022, latest DELP update is not 20211022, but is 20211019. On 20211022, latest SRIV update is not 20211022, but is 20211017 for the global level. On 20211022, DELP has update 20211022, but it does not contain update for the global level. 
 
+IHME COVID-19 estimate downloads http://www.healthdata.org/covid/data-downloads
+As of October 22, our projections will be updated every other week rather than on a weekly basis. Please see our FAQs for more details on this change.
+
+
 <br/><br/>
 
 
