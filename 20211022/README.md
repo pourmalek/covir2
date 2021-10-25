@@ -6,7 +6,7 @@
 
 <br/><br/>
 
-### Because they guess the pandemic is gradually going away?
+### - Because they guess the pandemic is gradually going away, or because of the pandemic fatigue?
 
 International updating model builders are winding down their COVID-19 pandemic models, as of October 2021. I guess this weaning off will sustain for a while. 
 
