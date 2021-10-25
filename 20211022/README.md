@@ -7,7 +7,7 @@
 <br/><br/>
 
 
-### - International updating model builders are winding down their COVID-19 pandemic models, as of October 2021. 
+#### - International updating model builders are winding down their COVID-19 pandemic models, as of October 2021. 
 
 **DELP** and **SRIV** models have started falling behind their daily update release schedules. On 20211022, latest DELP update is not 20211022, but is 20211019. On 20211022, latest SRIV update is not 20211022, but is 20211017 for the global level. On 20211022, DELP has update 20211022, but it does not contain update for the global level. 
 
