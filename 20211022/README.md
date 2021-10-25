@@ -4,10 +4,19 @@
 
 **_DELP 20211019_**, **_IHME 20211021_**, IMPE 20211006, **_SRIV 20211017_**
 
-DELP and SRIV models have started falling behind their daily update release schedules. On 20211022, latest DELP update is not 20211022, but is 20211019. On 20211022, latest SRIV update is not 20211022, but is 20211017 for the global level. On 20211022, DELP has update 20211022, but it does not contain update for the global level. 
+<br/><br/>
 
-IHME COVID-19 estimate downloads http://www.healthdata.org/covid/data-downloads
-As of October 22, our projections will be updated every other week rather than on a weekly basis. Please see our FAQs for more details on this change.
+### Because they guess the pandemic is gradually going away?
+
+International updating model builders are winding down their COVID-19 pandemic models, as of October 2021. I guess this weaning off will sustain for a while. 
+
+**DELP** and **SRIV** models have started falling behind their daily update release schedules. On 20211022, latest DELP update is not 20211022, but is 20211019. On 20211022, latest SRIV update is not 20211022, but is 20211017 for the global level. On 20211022, DELP has update 20211022, but it does not contain update for the global level. 
+
+**IHME** COVID-19 estimate downloads http://www.healthdata.org/covid/data-downloads says: As of October 22, our projections will be updated every other week rather than on a weekly basis. Please see our FAQs for more details on this change.
+
+**IMPE**’s latest update as of 20211022 is update 20211006, released on 20211013.
+
+**LANL** model was retired on 20210926.
 
 
 <br/><br/>
