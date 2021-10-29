@@ -167,7 +167,7 @@ The codes in these repositories can be adapted for use for any country or region
 
 #### LATEST UPTAKE: uptake [`20211029`](https://github.com/pourmalek/covir2/tree/main/20211029)
 
-#### **_DELP 20211028_**, IHME 20211021, **_IMPE 20211021_**, **_SRIV 20211029_**
+#### **_DELP 20211029_**, IHME 20211021, **_IMPE 20211021_**, **_SRIV 20211029_**
  
  
   <br/><br/>
