@@ -84,7 +84,6 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 (8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139498672-d4268938-ea1b-4fd1-8dc9-84a6848de604.png)
 
 ****
 
