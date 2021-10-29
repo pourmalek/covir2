@@ -24,16 +24,19 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139479600-8b7b301f-88bf-43a9-a22e-bdb1c4a55aba.png)
 
 ****
 
 (1b) Iran [Reported daily deaths, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211029/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139480943-8e70c177-254d-48d6-a300-b16d260597c4.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139481017-df2f98b5-4eba-40f0-ac81-8c91e489bfb1.png)
 
 ****
 
