@@ -115,6 +115,7 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 (13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139482765-701ae582-9c01-4f99-a9a2-589eeb15fd82.png)
 
 ****
 
@@ -122,21 +123,25 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 Note: values of the three scenarios for this estimand by IHME are the same for Iran.  
 
+![image](https://user-images.githubusercontent.com/30849720/139482836-fdfac18f-e681-4f94-ba15-e9c44c0ea912.png)
 
 ****
 
 (15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139482916-1b89d539-1e2d-45e6-a188-97984182e5a5.png)
 
 ****
 
 (16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139483003-cfe0e28b-f43f-4997-a50b-d80584719c39.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139483083-aecf8598-47f0-4276-8280-ab33958d62d6.png)
 
 ****
 
