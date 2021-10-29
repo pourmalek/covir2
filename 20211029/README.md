@@ -24,6 +24,7 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139498377-82e1166a-7dcc-4d4d-a532-39afc892f57a.png)
 
 ****
 
@@ -35,6 +36,7 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 (2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139498477-1633614f-176c-4b03-a29f-6b6dee475272.png)
 
 ****
 
@@ -75,11 +77,13 @@ IMPE update 20211021 (2021-10-21_v8.csv.zip) released on 20211025.
 
 (8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139498581-efb85fcc-6697-4456-9195-e21ef965f306.png)
   
 ****
 
 (8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/139498672-d4268938-ea1b-4fd1-8dc9-84a6848de604.png)
 
 ****
 
