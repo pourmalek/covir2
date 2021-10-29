@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211029/code/DELP/log country DELP.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Oct 2021, 10:04:06
+ {txt}opened on:  {res}29 Oct 2021, 13:23:08
 {txt}
 {com}. 
 . ******************************************************************************
@@ -18,7 +18,7 @@
 . 
 . 
 .                                                                                                          ***************************
-. * To change update date, find and replace all, 20211028 (old), with 20211028 (new) <<--           <<<--- * change update date here *
+. * To change update date, find and replace all, 20211029 (old), with 20211029 (new) <<--           <<<--- * change update date here *
 .                                                                                                          ***************************
 . 
 . * Get DELPHI data for country
@@ -27,10 +27,10 @@
 . clear
 {txt}
 {com}. 
-. copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20211028.csv Global_V4_since100_20211028.csv
+. copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20211029.csv Global_V4_since100_20211029.csv
 {txt}
 {com}. 
-. import delimited using "Global_V4_since100_20211028.csv", clear varnames(1)
+. import delimited using "Global_V4_since100_20211029.csv", clear varnames(1)
 {res}{text}(16 vars, 36,960 obs)
 
 {com}. 
@@ -230,7 +230,7 @@
 {txt}(1 missing value generated)
 
 {com}. gen DayCfrLoRaA01S00 = 100 * DayDeaLoRaA01S00 / DayCasLoRaA01S00
-{txt}(49 missing values generated)
+{txt}(48 missing values generated)
 
 {com}. gen DayCfrUpRaA01S00 = 100 * DayDeaUpRaA01S00 / DayCasUpRaA01S00
 {txt}(1 missing value generated)
@@ -607,7 +607,7 @@ DayDMuMeR~00 {c |}{res}        153    16918.43           0   16918.43   16918.43
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211029/code/DELP/log country DELP.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Oct 2021, 10:04:18
+ {txt}closed on:  {res}29 Oct 2021, 13:23:25
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
