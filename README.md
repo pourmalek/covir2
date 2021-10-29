@@ -6,7 +6,7 @@ For a streamlined view of this repository, see: https://pourmalek.github.io/covi
 
 <br/><br/>
 
-**Questions: Why are the international COVID-19 epidemic models not very accurate in predicting new waves’ timing in Iran?** 
+**Question: Why are the international COVID-19 epidemic models not very accurate in predicting new waves’ timing in Iran?** 
 
 **Answer: Garbage in, garbage out.**
 
