@@ -165,9 +165,9 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20211029`](https://github.com/pourmalek/covir2/tree/main/20211029)
+#### LATEST UPTAKE: uptake [`20211105`](https://github.com/pourmalek/covir2/tree/main/20211105)
 
-#### **_DELP 20211029_**, IHME 20211021, **_IMPE 20211021_**, **_SRIV 20211029_**
+#### **_DELP 20211105_**, **_IHME 20211104_**, **_IMPE 20211027_**, **_SRIV 20211105_**
  
  
   <br/><br/>
@@ -184,126 +184,126 @@ The codes in these repositories can be adapted for use for any country or region
 
 ****
 
-(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139498377-82e1166a-7dcc-4d4d-a532-39afc892f57a.png)
-
-****
-
-(1b) Iran [Reported daily deaths, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211029/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/139480943-8e70c177-254d-48d6-a300-b16d260597c4.png)
+![image](https://user-images.githubusercontent.com/30849720/140559815-fbf1cd5c-76ab-41de-8dff-d8f1ff5aff89.png)
 
 ****
 
-(2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+(1b) Iran [Reported daily deaths, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211105/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139498477-1633614f-176c-4b03-a29f-6b6dee475272.png)
-
-****
-
-(3) Iran [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/139481762-28a40aec-27a9-4084-844f-ee8654899aee.png)
+![image](https://user-images.githubusercontent.com/30849720/140559971-b2e65a12-5d3d-4cef-8b75-d965730123b1.png)
 
 ****
 
-(4) Iran [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
+(2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139481852-f4045737-195d-40aa-ad7e-62a70c0c4e5d.png)
-
-****
-
-(5) Iran [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/139481929-40ef51a9-d5e7-430a-9c7d-a5dfebff0b9d.png)
+![image](https://user-images.githubusercontent.com/30849720/140560055-6440c40d-c12b-4401-815f-5d258db54c38.png)
 
 ****
 
-(6) Iran [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+(3) Iran [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139481994-fb034186-64ac-496b-a4fa-aad46d9e380c.png)
+![image](https://user-images.githubusercontent.com/30849720/140560175-f397acec-7fb6-46f0-9524-ae38095fa937.png)
 
 ****
 
-(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(4) Iran [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139498990-cf033eec-f14a-48b4-811e-68df5909a783.png)
+![image](https://user-images.githubusercontent.com/30849720/140560268-3f5fc32c-2f41-446f-afb6-427906e88935.png)
+
+****
+
+(5) Iran [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/140560369-89e88002-e26b-4c47-b5ab-e735b718fd73.png)
+
+****
+
+(6) Iran [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/140560470-6d7b8fb7-a7f2-4746-a5c6-8bcd0499ce88.png)
+
+****
+
+(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/140560584-efc4d5e6-ff1f-4af4-9e36-ada3b2a85c17.png)
     
 ****
 
-(7b) Iran [Reported cases, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211029/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+(7b) Iran [Reported cases, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211105/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139482187-b87c50f3-aebd-4ec1-b10e-789c84dab660.png)
+![image](https://user-images.githubusercontent.com/30849720/140560698-6c0a7ee0-40c8-4911-a34a-c9f7985d6f08.png)
 
 ****
 
-(8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+(8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139498581-efb85fcc-6697-4456-9195-e21ef965f306.png)
+![image](https://user-images.githubusercontent.com/30849720/140560792-aab7a5f6-20f1-45dd-824b-f342a109511c.png)
   
 ****
 
-(8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+(8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139499231-dc6192cc-715c-4aeb-b88e-669a79a24d5f.png)
-
-****
-
-(9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/139499290-f55abb84-beee-4882-9956-5dd92349e693.png)
+![image](https://user-images.githubusercontent.com/30849720/140560886-f258d552-9ad1-4ab5-95e8-0fdb17c8bfd9.png)
 
 ****
 
-(10) Iran [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
+(9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139499346-7529b72d-075c-4cfc-9b80-9f289117873c.png)
+![image](https://user-images.githubusercontent.com/30849720/140560999-f6b91832-8e4d-4363-86ca-b4b2f47749af.png)
 
 ****
 
-(11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(10) Iran [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139499407-1890f128-00d0-4f3b-89a3-35dd51544bf1.png)
+![image](https://user-images.githubusercontent.com/30849720/140561078-3fa086ef-554b-4a7f-9dd7-f3d0d7cce066.png)
+
+****
+
+(11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/140561176-4c521aab-8164-4fe7-bc11-e7e8c2a299c2.png)
   
 ****
 
-(12) Iran [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
+(12) Iran [Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/139499476-6905999d-e135-42ea-ab5c-c2e4b5132898.png)
+![image](https://user-images.githubusercontent.com/30849720/140561253-ffb1556b-3d12-4832-8e15-4267fe74ceef.png)
   
 ****
 ****
 
-(13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
+(13) Iran [R effective, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139482765-701ae582-9c01-4f99-a9a2-589eeb15fd82.png)
+![image](https://user-images.githubusercontent.com/30849720/140561359-d3d30a18-6723-4000-a0a9-dde56a4c1e6c.png)
 
 ****
 
-(14) Iran [Daily Infection-outcome ratios, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2021g%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
+(14) Iran [Daily Infection-outcome ratios, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/IHME/graph%2021g%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
 
 Note: values of the three scenarios for this estimand by IHME are the same for Iran.  
 
-![image](https://user-images.githubusercontent.com/30849720/139482836-fdfac18f-e681-4f94-ba15-e9c44c0ea912.png)
+![image](https://user-images.githubusercontent.com/30849720/140561438-3e4b96ff-efdd-4d11-8a7f-a4c95bd818c3.png)
 
 ****
 
-(15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
+(15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139482916-1b89d539-1e2d-45e6-a188-97984182e5a5.png)
-
-****
-
-(16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/139483003-cfe0e28b-f43f-4997-a50b-d80584719c39.png)
+![image](https://user-images.githubusercontent.com/30849720/140561520-21ce2401-e88a-4911-ba26-c27424d907b6.png)
 
 ****
 
-(17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211029/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
+(16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/139483083-aecf8598-47f0-4276-8280-ab33958d62d6.png)
+![image](https://user-images.githubusercontent.com/30849720/140561601-26b5360c-4852-45df-8699-67181972900f.png)
+
+****
+
+(17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211105/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/140561705-503ebe58-3bea-4787-aec3-399658ebc795.png)
 
 ****
 
