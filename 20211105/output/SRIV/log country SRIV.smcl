@@ -1,0 +1,657 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/log country SRIV.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 Nov 2021, 11:02:52
+{txt}
+{com}. 
+. *****************************************************************************
+. * This is "do country SRIV.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
+. * Time (initial): 2021-02-10
+. 
+. * OBJECTIVE: Get and prepare SRIV data for country
+. *****************************************************************************
+. 
+. 
+.                                                                                                          ***************************
+. * To change update date, find and replace all, 2021-11-05 (old), with 2021-11-05 (new) <<--       <<<--- * change update date here *
+.                                                                                                          ***************************
+. 
+.                                                                                                                                                                                                                                                                                                                                                                                                                                  
+. ******* Also, find and replace ALL, 04nov2021 (old), with 04nov2021 (new) **********              <<<---       *  AND HERE  *
+.                                                                                                          ***************************
+. * Start date of estimates in each release of SRIV is one day before the release date. 
+. 
+. 
+. 
+. * Get SRIV estimates 
+. 
+. copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-11-05/global_forecasts_deaths.csv global_forecasts_deaths.csv
+{txt}
+{com}. copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-11-05/global_forecasts_deaths_lb.csv global_forecasts_deaths_lb.csv
+{txt}
+{com}. copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-11-05/global_forecasts_deaths_ub.csv global_forecasts_deaths_ub.csv
+{txt}
+{com}. copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-11-05/global_forecasts_cases.csv global_forecasts_cases.csv
+{txt}
+{com}. copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-11-05/global_forecasts_cases_lb.csv global_forecasts_cases_lb.csv
+{txt}
+{com}. copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/2021-11-05/global_forecasts_cases_ub.csv global_forecasts_cases_ub.csv
+{txt}
+{com}. 
+. 
+. 
+. local list ///
+> global_forecasts_deaths global_forecasts_deaths_lb global_forecasts_deaths_ub ///
+> global_forecasts_cases global_forecasts_cases_lb global_forecasts_cases_ub
+{txt}
+{com}. 
+. foreach l of local list {c -(}
+{txt}  2{com}.         import delimited "`l'.csv", clear varnames(1)
+{txt}  3{com}.         keep if regexm(country,"$country") == 1
+{txt}  4{com}.         drop id country
+{txt}  5{com}.         
+.         gen i = _n
+{txt}  6{com}.         reshape long v, i(i) j(j)
+{txt}  7{com}.         rename v `l'
+{txt}  8{com}.         rename j date
+{txt}  9{com}.         drop i
+{txt} 10{com}. 
+.         save "`l'.dta", replace 
+{txt} 11{com}. {c )-}
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+(note: j = 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     101
+{txt}Number of variables            {res}     102   {txt}->{res}       3
+{txt}j variable (101 values)                   ->   {res}j
+{txt}xij variables:
+                         {res}v3 v4 ... v103   {txt}->   {res}v
+{txt}{hline 77}
+{res}{txt}(note: file global_forecasts_deaths.dta not found)
+file global_forecasts_deaths.dta saved
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+(note: j = 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     101
+{txt}Number of variables            {res}     102   {txt}->{res}       3
+{txt}j variable (101 values)                   ->   {res}j
+{txt}xij variables:
+                         {res}v3 v4 ... v103   {txt}->   {res}v
+{txt}{hline 77}
+{res}{txt}(note: file global_forecasts_deaths_lb.dta not found)
+file global_forecasts_deaths_lb.dta saved
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+(note: j = 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     101
+{txt}Number of variables            {res}     102   {txt}->{res}       3
+{txt}j variable (101 values)                   ->   {res}j
+{txt}xij variables:
+                         {res}v3 v4 ... v103   {txt}->   {res}v
+{txt}{hline 77}
+{res}{txt}(note: file global_forecasts_deaths_ub.dta not found)
+file global_forecasts_deaths_ub.dta saved
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+(note: j = 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     101
+{txt}Number of variables            {res}     102   {txt}->{res}       3
+{txt}j variable (101 values)                   ->   {res}j
+{txt}xij variables:
+                         {res}v3 v4 ... v103   {txt}->   {res}v
+{txt}{hline 77}
+{res}{txt}(note: file global_forecasts_cases.dta not found)
+file global_forecasts_cases.dta saved
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+(note: j = 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     101
+{txt}Number of variables            {res}     102   {txt}->{res}       3
+{txt}j variable (101 values)                   ->   {res}j
+{txt}xij variables:
+                         {res}v3 v4 ... v103   {txt}->   {res}v
+{txt}{hline 77}
+{res}{txt}(note: file global_forecasts_cases_lb.dta not found)
+file global_forecasts_cases_lb.dta saved
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+(note: j = 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}       1   {txt}->{res}     101
+{txt}Number of variables            {res}     102   {txt}->{res}       3
+{txt}j variable (101 values)                   ->   {res}j
+{txt}xij variables:
+                         {res}v3 v4 ... v103   {txt}->   {res}v
+{txt}{hline 77}
+{res}{txt}(note: file global_forecasts_cases_ub.dta not found)
+file global_forecasts_cases_ub.dta saved
+
+{com}. *
+. 
+. foreach l of local list {c -(}
+{txt}  2{com}.         merge 1:1 date using "`l'.dta"
+{txt}  3{com}.         drop _merge
+{txt}  4{com}. {c )-}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. *
+. 
+. rename global_forecasts_deaths_lb TotDeaLoRaA05S00      
+{res}{txt}
+{com}. rename global_forecasts_deaths_ub TotDeaUpRaA05S00      
+{res}{txt}
+{com}. rename global_forecasts_deaths    TotDeaMeRaA05S00
+{res}{txt}
+{com}. rename global_forecasts_cases_lb  TotCasLoRaA05S00
+{res}{txt}
+{com}. rename global_forecasts_cases_ub  TotCasUpRaA05S00      
+{res}{txt}
+{com}. rename global_forecasts_cases     TotCasMeRaA05S00
+{res}{txt}
+{com}. 
+. label var TotDeaMeRaA05S00 "Total Deaths Mean SRIV"
+{txt}
+{com}. label var TotDeaLoRaA05S00 "Total Deaths Lower SRIV"
+{txt}
+{com}. label var TotDeaUpRaA05S00 "Total Deaths Upper SRIV"
+{txt}
+{com}. label var TotCasMeRaA05S00 "Total Cases Mean SRIV"
+{txt}
+{com}. label var TotCasLoRaA05S00 "Total Cases Lower SRIV"
+{txt}
+{com}. label var TotCasUpRaA05S00 "Total Cases Upper SRIV"
+{txt}
+{com}. 
+. 
+. * first date in csv files is one day before the update date
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen date = .
+{txt}(101 missing values generated)
+
+{com}. replace date = td(04nov2021) in 1
+{txt}(1 real change made)
+
+{com}. replace date = date[_n-1] + 1 in 2/l
+{txt}(100 real changes made)
+
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22588{txt},{res}22688{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04nov2021{txt},{res}12feb2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22638{txt} = {res}24dec2021{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22598{col 37}   22613{col 47}   22638{col 57}   22663{col 67}   22678
+{col 26}14nov2021{col 36}29nov2021{col 46}24dec2021{col 56}18jan2022{col 66}02feb2022
+{txt}
+{com}. drop date_original
+{txt}
+{com}. 
+. sort date
+{txt}
+{com}. 
+. local list ///
+> DeaMeRaA05S00 DeaLoRaA05S00 DeaUpRaA05S00 ///
+> CasMeRaA05S00 CasLoRaA05S00 CasUpRaA05S00 
+{txt}
+{com}. 
+. foreach l of local list {c -(}
+{txt}  2{com}.         gen Day`l' =  Tot`l'[_n] - Tot`l'[_n-1]
+{txt}  3{com}. {c )-}
+{txt}(1 missing value generated)
+(1 missing value generated)
+(1 missing value generated)
+(1 missing value generated)
+(1 missing value generated)
+(1 missing value generated)
+
+{com}. *
+. 
+. 
+. label var DayDeaMeRaA05S00 "Daily Deaths Mean SRIV"
+{txt}
+{com}. label var DayDeaLoRaA05S00 "Daily Deaths Lower SRIV"
+{txt}
+{com}. label var DayDeaUpRaA05S00 "Daily Deaths Upper SRIV"
+{txt}
+{com}. label var DayCasMeRaA05S00 "Daily Cases Mean SRIV"
+{txt}
+{com}. label var DayCasLoRaA05S00 "Daily Cases Lower SRIV"
+{txt}
+{com}. label var DayCasUpRaA05S00 "Daily Cases Upper SRIV"
+{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. 
+. order date loc_grand_name
+{txt}
+{com}. 
+. * gen cfr 
+. 
+. gen DayCfrMeRaA05S00 = 100 * DayDeaMeRaA05S00 / DayCasMeRaA05S00
+{txt}(8 missing values generated)
+
+{com}. gen DayCfrLoRaA05S00 = 100 * DayDeaLoRaA05S00 / DayCasLoRaA05S00
+{txt}(14 missing values generated)
+
+{com}. gen DayCfrUpRaA05S00 = 100 * DayDeaUpRaA05S00 / DayCasUpRaA05S00
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayCfrMeRaA05S00 "Daily CFR Mean SRIV"
+{txt}
+{com}. label var DayCfrLoRaA05S00 "Daily CFR Lower SRIV"
+{txt}
+{com}. label var DayCfrUpRaA05S00 "Daily CFR Upper SRIV"
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. * gen "Daily cases mean div by daily deaths mean SRIV  DayCbD" for visulization of temporal relation of deaths and cases peaks 
+. 
+. 
+. summ DayDeaMeRaA05S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaMeR~00 {c |}{res}        100       49.19    54.03528          0        152
+{txt}
+{com}. gen DayDeMMeRaA05S00   = r(mean)
+{txt}
+{com}. label var DayDeMMeRaA05S00   "Daily deaths mean SRIV  DayDeM"
+{txt}
+{com}. 
+. summ DayCasMeRaA05S00   
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasMeR~00 {c |}{res}        100     1463.38    2238.611          0       8051
+{txt}
+{com}. gen DayCaMMeRaA05S00   = r(mean)
+{txt}
+{com}. label var DayCaMMeRaA05S00   "Daily cases mean SRIV  DayCaM"
+{txt}
+{com}.                            
+. gen DayCbDMeRaA05S00   = DayCaMMeRaA05S00   / DayDeMMeRaA05S00  
+{txt}
+{com}. label var DayCbDMeRaA05S00   "Daily cases mean div by daily deaths mean SRIV  DayCbD"
+{txt}
+{com}. summ DayCbDMeRaA05S00  
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCbDMeR~00 {c |}{res}        101    29.74954           0   29.74954   29.74954
+{txt}
+{com}.                                               
+. gen DayDMuMeRaA05S00   = DayDeaMeRaA05S00   * DayCbDMeRaA05S00  
+{txt}(1 missing value generated)
+
+{com}. label var DayDMuMeRaA05S00   "Daily deaths scaled (times means of cases by deaths) SRIV "
+{txt}
+{com}. summ DayDMuMeRaA05S00  
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDMuMeR~00 {c |}{res}        100     1463.38    1607.525          0   4521.931
+{txt}
+{com}.         
+. 
+. 
+. 
+. 
+. ****************************
+. 
+. * graphs 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. * daily deaths 
+. 
+. twoway ///
+> (line DayDeaMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 1 COVID-19 daily deaths, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 1 COVID-19 daily deaths, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 1 COVID-19 daily deaths, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 1 COVID-19 daily deaths, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 1 COVID-19 daily deaths, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily deaths CI
+. 
+. twoway ///
+> (rarea DayDeaLoRaA05S00 DayDeaUpRaA05S00 date, sort color(black*.2)) ///
+> (line DayDeaMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 2 COVID-19 daily deaths, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 2 COVID-19 daily deaths, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 2 COVID-19 daily deaths, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 2 COVID-19 daily deaths, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 2 COVID-19 daily deaths, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases 
+. 
+. twoway ///
+> (line DayCasMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 3 COVID-19 daily cases, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 3 COVID-19 daily cases, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 3 COVID-19 daily cases, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 3 COVID-19 daily cases, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 3 COVID-19 daily cases, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases CI
+. 
+. twoway ///
+> (rarea DayCasLoRaA05S00 DayCasUpRaA05S00 date, sort color(black*.2)) ///
+> (line DayCasMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 4 COVID-19 daily cases, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 4 COVID-19 daily cases, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 4 COVID-19 daily cases, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 4 COVID-19 daily cases, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 4 COVID-19 daily cases, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total deaths 
+. 
+. twoway ///
+> (line TotDeaMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 5 COVID-19 total deaths, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 5 COVID-19 total deaths, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 5 COVID-19 total deaths, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 5 COVID-19 total deaths, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 5 COVID-19 total deaths, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total deaths CI
+. 
+. twoway ///
+> (rarea TotDeaLoRaA05S00 TotDeaUpRaA05S00 date, sort color(black*.2)) ///
+> (line TotDeaMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total deaths) title("COVID-19 total deaths, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 6 COVID-19 total deaths, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 6 COVID-19 total deaths, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 6 COVID-19 total deaths, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 6 COVID-19 total deaths, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 6 COVID-19 total deaths, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases 
+. 
+. twoway ///
+> (line TotCasMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 7 COVID-19 total cases, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 7 COVID-19 total cases, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 7 COVID-19 total cases, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 7 COVID-19 total cases, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 7 COVID-19 total cases, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * total cases CI
+. 
+. twoway ///
+> (rarea TotCasLoRaA05S00 TotCasUpRaA05S00 date, sort color(black*.2)) ///
+> (line TotCasMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Total cases) title("COVID-19 total cases, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 8 COVID-19 total cases, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 8 COVID-19 total cases, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 8 COVID-19 total cases, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 8 COVID-19 total cases, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 8 COVID-19 total cases, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily CFR 
+. 
+. twoway ///
+> (line DayCfrMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) 
+{res}{txt}
+{com}. 
+. graph save "graph 9 COVID-19 daily CFR, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 9 COVID-19 daily CFR, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 9 COVID-19 daily CFR, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 9 COVID-19 daily CFR, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 9 COVID-19 daily CFR, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily CFR CI
+. 
+. twoway ///
+> (rarea DayCfrLoRaA05S00 DayCfrUpRaA05S00 date, sort color(black*.2)) ///
+> (line DayCfrMeRaA05S00 date, sort lcolor(black)) ///
+> , xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily CFR) title("COVID-19 daily CFR, $country, SRIV, default scenario", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
+> subtitle("with confidence limits", size(small))
+{res}{txt}
+{com}. 
+. graph save "graph 10 COVID-19 daily CFR, default scenario, $country, SRIV.gph", replace
+{txt}(note: file graph 10 COVID-19 daily CFR, default scenario, Iran, SRIV.gph not found)
+{res}{txt}(file graph 10 COVID-19 daily CFR, default scenario, Iran, SRIV.gph saved)
+
+{com}. graph export "graph 10 COVID-19 daily CFR, default scenario, $country, SRIV.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/graph 10 COVID-19 daily CFR, default scenario, Iran, SRIV.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * DayCas DayDeaDay Dea_multip
+. 
+. twoway ///
+> (line DayCasMeRaA05S00 date, sort lcolor(blue)) ///
+> (line DayDeaMeRaA05S00 date, sort lcolor(red)) ///
+> (line DayDMuMeRaA05S00 date, sort lpattern(dot) lcolor(red)) ///
+> if date > td(01jan2020) ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases and deaths) title("COVID-19 daily cases and deaths, $country, SRIV ", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(4)) legend(region(lcolor(none)))  ///
+> legend(order(1 "Daily cases" 2 "Daily deaths" 3 "Daily deaths scaled for visualization") size(small)) ///
+> subtitle("Daily deaths, scaled = times (means of cases divided by deaths) for visualization only", size(small)) ///
+> note("Current scenario, mean estimate")
+{res}{txt}
+{com}. 
+. qui graph save "graph 10 COVID-19 daily deaths and cases $country, SRIV .gph", replace
+{txt}
+{com}. qui graph export "graph 10 COVID-19 daily deaths and cases $country, SRIV .pdf", replace
+{txt}
+{com}. 
+. ***
+. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. sort date loc_grand_name 
+{txt}
+{com}. 
+. save "country SRIV.dta", replace
+{txt}(note: file country SRIV.dta not found)
+file country SRIV.dta saved
+
+{com}.  
+. 
+. 
+. view "log country SRIV.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211105/code/SRIV/log country SRIV.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 5 Nov 2021, 11:03:05
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
