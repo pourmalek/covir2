@@ -140,7 +140,7 @@ Note: values of the three scenarios for this estimand by IHME are the same for I
 
 (17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211112/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/30849720/141599721-b0a3e3df-8c3c-4235-88b6-b3e2ad83c606.png)
 
 ****
 
