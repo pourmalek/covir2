@@ -129,19 +129,18 @@ Note: values of the three scenarios for this estimand by IHME are the same for I
 
 (15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211112/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/141599684-2db312f5-b2fd-407f-9d8e-c94531c1525c.png)
 
 ****
 
 (16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211112/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/141599684-2db312f5-b2fd-407f-9d8e-c94531c1525c.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, IHME](https://github.com/pourmalek/covir2/blob/main/20211112/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/141599721-b0a3e3df-8c3c-4235-88b6-b3e2ad83c606.png)
-
+\
 ****
 
 
