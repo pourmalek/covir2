@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211112/code/JOHN/log country JOHN.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}12 Nov 2021, 12:22:09
+ {txt}opened on:  {res}12 Nov 2021, 16:33:28
 {txt}
 {com}. 
 . ***************************************************************************
@@ -1044,11 +1044,11 @@ DayDeaMeS~00 {c |}{res}         29     136.516    11.86686   122.3125   167.9732
 . 
 . * POST peak 5 - deaths PP5 21-10-01 21-11-01 - 22555 02Oct2021 237.9375
 . 
-. summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(01nov2021)
+. summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(01jan2022)
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-DayDeaMeS~00 {c |}{res}         30    189.0345    28.92781   152.1429   237.9375
+DayDeaMeS~00 {c |}{res}         41    175.0733    34.23342   127.0457   237.9375
 {txt}
 {com}. 
 . gen DayDeaMeSmA00S00PP5V = r(min)
@@ -1060,10 +1060,11 @@ DayDeaMeS~00 {c |}{res}         30    189.0345    28.92781   152.1429   237.9375
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-{space 8}date {c |}{res}          1       22584           .      22584      22584
+{space 8}date {c |}{res}          0
 {txt}
 {com}. gen DayDeaMeSmA00S00PP5D = r(mean)
-{txt}
+{txt}(681 missing values generated)
+
 {com}. label var DayDeaMeSmA00S00PP5D "Daily deaths smooth JOHN Peak 5 Date"
 {txt}
 {com}. format DayDeaMeSmA00S00PP5D %tdDDMonCCYY 
@@ -1147,7 +1148,7 @@ DayDeaMeS~00 {c |}{res}         30    189.0345    28.92781   152.1429   237.9375
 {txt}(1 real change made)
 
 {com}. replace DayDeaMeSmA00S00PPD = DayDeaMeSmA00S00PP5D if date == DayDeaMeSmA00S00PP5D
-{txt}(1 real change made)
+{txt}(0 real changes made)
 
 {com}. 
 . gen DayDeaMeSmA00S00PPV = . 
@@ -1168,7 +1169,7 @@ DayDeaMeS~00 {c |}{res}         30    189.0345    28.92781   152.1429   237.9375
 {txt}(1 real change made)
 
 {com}. replace DayDeaMeSmA00S00PPV = DayDeaMeSmA00S00PP5V if date == DayDeaMeSmA00S00PP5D
-{txt}(1 real change made)
+{txt}(0 real changes made)
 
 {com}. 
 . 
@@ -1450,11 +1451,11 @@ DayCasMeS~00 {c |}{res}         60    11488.59    2884.883   8230.759    18982.1
 . 
 . * POST peak 5 - cases PP5 21-10-01 21-11-01 - 22561 08Oct2021 11266.88
 . 
-. summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(01nov2021)
+. summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(01jan2022)
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-DayCasMeS~00 {c |}{res}         30    10888.81    1071.964   9301.152   12852.61
+DayCasMeS~00 {c |}{res}         41    10259.48    1419.383    7926.95   12852.61
 {txt}
 {com}. 
 . gen DayCasMeSmA00S00PP5V = r(min)
@@ -1466,10 +1467,11 @@ DayCasMeS~00 {c |}{res}         30    10888.81    1071.964   9301.152   12852.61
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-{space 8}date {c |}{res}          1       22580           .      22580      22580
+{space 8}date {c |}{res}          0
 {txt}
 {com}. gen DayCasMeSmA00S00PP5D = r(mean)
-{txt}
+{txt}(681 missing values generated)
+
 {com}. label var DayCasMeSmA00S00PP5D "Daily cases smooth JOHN Peak 5 Date"
 {txt}
 {com}. format DayCasMeSmA00S00PP5D %tdDDMonCCYY 
@@ -1539,7 +1541,7 @@ DayCasMeS~00 {c |}{res}         30    10888.81    1071.964   9301.152   12852.61
 {txt}(1 real change made)
 
 {com}. replace DayCasMeSmA00S00PPD = DayCasMeSmA00S00PP5D if date == DayCasMeSmA00S00PP5D
-{txt}(1 real change made)
+{txt}(0 real changes made)
 
 {com}. 
 . 
@@ -1562,7 +1564,7 @@ DayCasMeS~00 {c |}{res}         30    10888.81    1071.964   9301.152   12852.61
 {txt}(1 real change made)
 
 {com}. replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP5V if date == DayCasMeSmA00S00PP5D
-{txt}(1 real change made)
+{txt}(0 real changes made)
 
 {com}. 
 . 
@@ -2011,7 +2013,7 @@ DayDeaMeRa~p {c |}{res}        632    9525.233    6873.922          0    33394.7
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211112/code/JOHN/log country JOHN.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}12 Nov 2021, 12:22:36
+ {txt}closed on:  {res}12 Nov 2021, 16:33:54
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
