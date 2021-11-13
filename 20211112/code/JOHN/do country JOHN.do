@@ -525,7 +525,7 @@ format DayDeaMeSmA00S00PP4D %tdDDMonCCYY
 
 * POST peak 5 - deaths PP5 21-10-01 21-11-01 - 22555 02Oct2021 237.9375
 
-summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(01nov2021)
+summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(01jan2022)
 
 gen DayDeaMeSmA00S00PP5V = r(min)
 label var DayDeaMeSmA00S00PP5V "Daily deaths smooth JOHN Peak 5 Value"
@@ -729,7 +729,7 @@ format DayCasMeSmA00S00PP4D %tdDDMonCCYY
 
 * POST peak 5 - cases PP5 21-10-01 21-11-01 - 22561 08Oct2021 11266.88
 
-summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(01nov2021)
+summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(01jan2022)
 
 gen DayCasMeSmA00S00PP5V = r(min)
 label var DayCasMeSmA00S00PP5V "Daily cases smooth JOHN Peak 5 Value"
