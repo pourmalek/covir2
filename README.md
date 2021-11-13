@@ -711,14 +711,14 @@ _Component studies (the international periodically updated models) and their sce
 <br/><br/>
 
 #### A03 IMPE
-* S01 = Additional 50% Reduction [Best]	
+* S01 = Additional 50% Reduction [Best], renamed "Optimistic" with IMPE update 20211103 (2021-11-03_v9.csv.zip) released on 20211110 
 * S02 = Current level of interventions [Reference] 			
-* S03 = Relax Interventions 50% [Worst]
+* S03 = Relax Interventions 50% [Worst], renamed "Pessimistic" with IMPE update 20211103 (2021-11-03_v9.csv.zip) released on 20211110 
   
   . additional alternate scenarios:
-* S04 = Surged Additional 50% Reduction [Best, Surged]
+* S04 = Surged Additional 50% Reduction [Best, Surged], renamed "Surged Optimistic"
 * S05 = Surged Maintain Status Quo [Reference, Surged] 	
-* S06 = Surged Relax Interventions 50% [Worst, Surged]	
+* S06 = Surged Relax Interventions 50% [Worst, Surged], renamed "Surged Pessimistic"
 <br/><br/>
 
 #### A04 LANL
