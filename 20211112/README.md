@@ -129,7 +129,6 @@ Note: values of the three scenarios for this estimand by IHME are the same for I
 
 (15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211112/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/141599684-2db312f5-b2fd-407f-9d8e-c94531c1525c.png)
 
 ****
 
