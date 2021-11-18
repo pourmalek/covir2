@@ -25,7 +25,7 @@ log using "log country SRIV.smcl", replace
                                                                                                          ***************************
 
 																										 																										 
-******* Also, find and replace ALL, 11nov2021 (old), with 11nov2021 (new) **********              <<<---       *  AND HERE  *
+******* Also, find and replace ALL, 18nov2021 (old), with 18nov2021 (new) **********              <<<---       *  AND HERE  *
                                                                                                          ***************************
 * Start date of estimates in each release of SRIV is one day before the release date. 
 
@@ -86,7 +86,7 @@ label var TotCasUpRaA05S00 "Total Cases Upper SRIV"
 
 rename date date_original
 gen date = .
-replace date = td(11nov2021) in 1
+replace date = td(18nov2021) in 1
 replace date = date[_n-1] + 1 in 2/l
 format date %tdDDMonCCYY
 codebook date
