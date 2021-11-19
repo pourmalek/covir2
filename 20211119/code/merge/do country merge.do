@@ -742,7 +742,7 @@ graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", 
 * daily cases or infections (graph numbers start with 21)
 
 twoway ///
-(line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+(line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2)) /// 1 "JOHN"
 (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
@@ -769,7 +769,7 @@ graph export "graph 21 COVID-19 daily cases, $country, reference scenarios, all 
 * daily cases or infections, reference scenario, 2021
 
 twoway ///
-(line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+(line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2)) /// 1 "JOHN"
 (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
