@@ -92,16 +92,28 @@ S3  "Relax Interventions 50%" 			"S3_Relax_Half_Intervention"
 S4  "Surged Additional 50% Reduction"	"S4_Surged_Add_Half_Reduction"
 S5  "Surged Maintain Status Quo"		"S5_Surged_Maintain_Staus_Quo"
 S6  "Surged Relax Interventions 50%"	"S6_Surged_Relax_Half_Intervention"
+
+With IMPE update 20211103 (2021-11-15_v9.csv.zip) released on 20211110., IMPE has new terms for their scenarios:
+
+S1	Optimistic
+S2	Maintain Status Quo
+S3	Pessimistic
+
+S4	Surged Optimistic
+S5	Surged Maintain Status Quo
+S6	Surged Pessimistic
 */
 
 
+
 gen scenario_snail = ""
-replace scenario_snail = "S1" if scenario == "Additional 50% Reduction"
+replace scenario_snail = "S1" if scenario == "Optimistic"
 replace scenario_snail = "S2" if scenario == "Maintain Status Quo"
-replace scenario_snail = "S3" if scenario == "Relax Interventions 50%"
-replace scenario_snail = "S4" if scenario == "Surged Additional 50% Reduction"
+replace scenario_snail = "S3" if scenario == "Pessimistic"
+replace scenario_snail = "S4" if scenario == "Surged Optimistic"
 replace scenario_snail = "S5" if scenario == "Surged Maintain Status Quo"
-replace scenario_snail = "S6" if scenario == "Surged Relax Interventions 50%"
+replace scenario_snail = "S6" if scenario == "Surged Pessimistic"
+
 
 
 gen underline = "_"
@@ -133,9 +145,12 @@ replace compartment = "hospi_incid" if compartment == "hospital_incidence"  // H
 replace compartment = "preval_____" if compartment == "prevalence"			// Pre
 
 
+duplicates drop date compartment scenario, force
+
 
 
 * reshape
+
 
 egen compartment_scenario_snail = concat(compartment underline scenario_snail)	
 
@@ -1171,7 +1186,6 @@ view "log country IMPE.smcl"
 log close
 
 exit, clear
-
 
 
 
