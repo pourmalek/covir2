@@ -2,7 +2,6 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/covir2/blob/main/situation%20reports/28%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2028%20–%202021-11-19.pdf). 
 
-For a streamlined view of this repository, see: https://pourmalek.github.io/covir2/ 
 
 <br/><br/>
 
