@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}19 Nov 2021, 11:20:28
+ {txt}opened on:  {res}19 Nov 2021, 12:02:07
 {txt}
 {com}. 
 . 
@@ -2092,7 +2092,7 @@ Sorted by: {res}date
 . * daily cases or infections (graph numbers start with 21)
 . 
 . twoway ///
-> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2)) /// 1 "JOHN"
 > (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 > (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 > (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
@@ -2124,7 +2124,7 @@ Sorted by: {res}date
 . * daily cases or infections, reference scenario, 2021
 . 
 . twoway ///
-> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
+> (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2)) /// 1 "JOHN"
 > (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 > (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 > (line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
@@ -3418,7 +3418,7 @@ Sorted by: {res}date
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}19 Nov 2021, 11:21:27
+ {txt}closed on:  {res}19 Nov 2021, 12:02:58
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
