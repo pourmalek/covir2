@@ -65,8 +65,8 @@
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20211119/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/142681531-9529fc6f-0a80-4c71-b203-5aa39fdd86fe.png)
-    
+![image](https://user-images.githubusercontent.com/30849720/142685491-0a293215-883c-42d7-a024-88a7b3b3434d.png)
+
 ****
 
 (7b) Iran [Reported cases, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211119/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
