@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/IHME/log country IHME.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}19 Nov 2021, 11:13:17
+ {txt}opened on:  {res}19 Nov 2021, 16:22:43
 {txt}
 {com}. 
 . *****************************************************************************
@@ -18,7 +18,7 @@
 . 
 . 
 .                                                                                                          ***************************
-. * To change update date, find and replace all, 2021-11-04 (old), with 2021-11-04 (new) <<--       <<<--- * change update date here *
+. * To change update date, find and replace all, 2021-11-19 (old), with 2021-11-19 (new) <<--       <<<--- * change update date here *
 .                                                                                                          ***************************
 . 
 . 
@@ -30,7 +30,7 @@
 . 
 . * get IHME estimates
 . 
-. * URLs as of  2021-11-04
+. * URLs as of  2021-11-19
 . 
 . copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reference_2020.csv data_download_file_reference_2020.csv 
 {txt}
@@ -58,20 +58,20 @@
 . 
 . 
 . import delimited using data_download_file_reference_2020.csv, clear varnames(1)
-{res}{text}(60 vars, 124,612 obs)
+{res}{text}(60 vars, 124,271 obs)
 
 {com}. keep if regexm(location_name,"$country") == 1
-{txt}(124,280 observations deleted)
+{txt}(123,939 observations deleted)
 
 {com}. save data_download_file_reference_2020.dta, replace
 {txt}file data_download_file_reference_2020.dta saved
 
 {com}. 
 . import delimited using data_download_file_reference_2021.csv, clear varnames(1)
-{res}{text}(60 vars, 162,350 obs)
+{res}{text}(60 vars, 161,925 obs)
 
 {com}. keep if regexm(location_name,"$country") == 1
-{txt}(161,925 observations deleted)
+{txt}(161,500 observations deleted)
 
 {com}. save data_download_file_reference_2021.dta, replace
 {txt}file data_download_file_reference_2021.dta saved
@@ -81,20 +81,20 @@
 . 
 .         
 . import delimited using data_download_file_best_masks_2020.csv, clear varnames(1)
-{res}{text}(60 vars, 124,612 obs)
+{res}{text}(60 vars, 124,271 obs)
 
 {com}. keep if regexm(location_name,"$country") == 1
-{txt}(124,280 observations deleted)
+{txt}(123,939 observations deleted)
 
 {com}. save data_download_file_best_masks_2020.dta, replace
 {txt}file data_download_file_best_masks_2020.dta saved
 
 {com}. 
 . import delimited using data_download_file_best_masks_2021.csv, clear varnames(1)
-{res}{text}(60 vars, 162,350 obs)
+{res}{text}(60 vars, 161,925 obs)
 
 {com}. keep if regexm(location_name,"$country") == 1
-{txt}(161,925 observations deleted)
+{txt}(161,500 observations deleted)
 
 {com}. save data_download_file_best_masks_2021.dta, replace
 {txt}file data_download_file_best_masks_2021.dta saved
@@ -103,20 +103,20 @@
 .         
 .         
 . import delimited using data_download_file_worse_2020.csv, clear varnames(1)
-{res}{text}(60 vars, 124,612 obs)
+{res}{text}(60 vars, 124,271 obs)
 
 {com}. keep if regexm(location_name,"$country") == 1
-{txt}(124,280 observations deleted)
+{txt}(123,939 observations deleted)
 
 {com}. save data_download_file_worse_2020.dta, replace
 {txt}file data_download_file_worse_2020.dta saved
 
 {com}. 
 . import delimited using data_download_file_worse_2021.csv, clear varnames(1)
-{res}{text}(60 vars, 162,350 obs)
+{res}{text}(60 vars, 161,925 obs)
 
 {com}. keep if regexm(location_name,"$country") == 1
-{txt}(161,925 observations deleted)
+{txt}(161,500 observations deleted)
 
 {com}. save data_download_file_worse_2021.dta, replace
 {txt}file data_download_file_worse_2021.dta saved
@@ -158,9 +158,9 @@ reff_upper contains string
 reff_upper: all characters numeric; {res}replaced {txt}as {res}double
 {txt}(6 missing values generated)
 {res}infection_fatality contains string
-{txt}(5 real changes made)
+{txt}(6 real changes made)
 infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
-{txt}(24 missing values generated)
+{txt}(25 missing values generated)
 {res}infection_detection contains string
 {txt}(6 real changes made)
 infection_detection: all characters numeric; {res}replaced {txt}as {res}double
@@ -274,9 +274,9 @@ reff_upper contains string
 reff_upper: all characters numeric; {res}replaced {txt}as {res}double
 {txt}(6 missing values generated)
 {res}infection_fatality contains string
-{txt}(5 real changes made)
+{txt}(6 real changes made)
 infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
-{txt}(24 missing values generated)
+{txt}(25 missing values generated)
 {res}infection_detection contains string
 {txt}(6 real changes made)
 infection_detection: all characters numeric; {res}replaced {txt}as {res}double
@@ -389,9 +389,9 @@ reff_upper contains string
 reff_upper: all characters numeric; {res}replaced {txt}as {res}double
 {txt}(6 missing values generated)
 {res}infection_fatality contains string
-{txt}(5 real changes made)
+{txt}(6 real changes made)
 infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
-{txt}(24 missing values generated)
+{txt}(25 missing values generated)
 {res}infection_detection contains string
 {txt}(6 real changes made)
 infection_detection: all characters numeric; {res}replaced {txt}as {res}double
@@ -1921,7 +1921,7 @@ float, now double to accommodate using data's values)
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-DayDeaMeS~01 {c |}{res}        757    180.1108    141.2681          0     638.51
+DayDeaMeS~01 {c |}{res}        757    180.6736    140.5517          0     638.76
 {txt}
 {com}. gen DayDeMMeSmA02S01 = r(mean)
 {txt}
@@ -1932,7 +1932,7 @@ DayDeaMeS~01 {c |}{res}        757    180.1108    141.2681          0     638.51
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-DayINFMeS~01 {c |}{res}        757     78340.5     54013.2    1260.23   253354.5
+DayINFMeS~01 {c |}{res}        757    80268.55    53485.24     1320.3   254534.9
 {txt}
 {com}. gen DayCaMMeSmA02S01 = r(mean)
 {txt}
@@ -1947,7 +1947,7 @@ DayINFMeS~01 {c |}{res}        757     78340.5     54013.2    1260.23   253354.5
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-DayCbDMeS~01 {c |}{res}        757    434.9572           0   434.9572   434.9572
+DayCbDMeS~01 {c |}{res}        757    444.2739           0   444.2739   444.2739
 {txt}
 {com}.                                               
 . gen DayDMuMeSmA02S01 = DayDeaMeSmA02S01 * DayCbDMeSmA02S01
@@ -1958,7 +1958,7 @@ DayCbDMeS~01 {c |}{res}        757    434.9572           0   434.9572   434.9572
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-DayDMuMeS~01 {c |}{res}        757     78340.5    61445.56          0   277724.5
+DayDMuMeS~01 {c |}{res}        757    80268.56    62443.45          0   283784.4
 {txt}
 {com}. 
 . 
@@ -3462,7 +3462,7 @@ DayDMuMeS~01 {c |}{res}        757     78340.5    61445.56          0   277724.5
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/IHME/log country IHME.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}19 Nov 2021, 11:18:36
+ {txt}closed on:  {res}19 Nov 2021, 16:25:47
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
