@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}19 Nov 2021, 12:02:07
+ {txt}opened on:  {res}19 Nov 2021, 16:27:44
 {txt}
 {com}. 
 . 
@@ -679,7 +679,7 @@
 
 {txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/JOHN/country JOHN.dta
 {txt}  obs:{res}           798                          
-{txt} vars:{res}           541                          19 Nov 2021 11:13
+{txt} vars:{res}           541                          19 Nov 2021 16:22
 {txt} size:{res}     1,724,478                          
 {txt}{hline}
               storage   display    value
@@ -3418,7 +3418,7 @@ Sorted by: {res}date
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20211119/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}19 Nov 2021, 12:02:58
+ {txt}closed on:  {res}19 Nov 2021, 16:28:47
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
