@@ -743,7 +743,9 @@ _Component studies (the international periodically updated models) and their sce
  
  
  
-
+(52) uptake [`20211126`](https://github.com/pourmalek/covir2/tree/main/20211126): 
+**_DELP 20211126_**, IHME 20211119, IMPE 20211115, **_SRIV 20211126_**
+ 
 (51) uptake [`20211119`](https://github.com/pourmalek/covir2/tree/main/20211119): 
 **_DELP 20211119_**, **_IHME 20211119_**, **_IMPE 20211115_**, **_SRIV 20211119_**
  
@@ -754,25 +756,16 @@ _Component studies (the international periodically updated models) and their sce
 **_DELP 20211105_**, **_IHME 20211104_**, **_IMPE 20211027_**, **_SRIV 20211105_**
  
 (48) uptake [`20211029`](https://github.com/pourmalek/covir2/tree/main/20211029): 
-**_DELP 20211029_**, IHME 20211021, **_IMPE 20211021_**, **_SRIV 20211029_** 
+**_DELP 20211029_**, IHME 20211021, **_IMPE 20211021_**, **_SRIV 20211029_**
 
 (47) uptake [`20211022`](https://github.com/pourmalek/covir2/tree/main/20211022): 
-**_DELP 20211019_**, **_IHME 20211021_**, IMPE 20211006, **_SRIV 20211017_** 
+**_DELP 20211019_**, **_IHME 20211021_**, IMPE 20211006, **_SRIV 20211017_**
  
 (46) uptake [`20211015`](https://github.com/pourmalek/covir2/tree/main/20211015): 
 **_DELP 20211015_**, **_IHME 20211015_**, **_IMPE 20211006_**, **_SRIV 20211015_**
  
 (45) uptake [`20211008`](https://github.com/pourmalek/covir2/tree/main/20211008): 
 **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
- 
-.
- 
- 
- 
-
- 
-(45) uptake [`20211008`](https://github.com/pourmalek/covir2/tree/main/20211008): 
- **_DELP 20211008_**, IHME 20211001, IMPE 20210924, LANL 20210926, **_SRIV 20211008_**
  
 (44) uptake [`20211001`](https://github.com/pourmalek/covir2/tree/main/20211001): 
  DELP 20210930, **_IHME 20211001_**, IMPE 20210924, LANL 20210926, SRIV 20210930
