@@ -21,7 +21,7 @@ log using "log country DELP.smcl", replace
 
 
                                                                                                          ***************************
-* To change update date, find and replace all, 20211126 (old), with 20211126 (new) <<--           <<<--- * change update date here *
+* To change update date, find and replace all, 20211123 (old), with 20211123 (new) <<--           <<<--- * change update date here *
                                                                                                          ***************************
 
 * Get DELPHI data for country
@@ -29,9 +29,9 @@ log using "log country DELP.smcl", replace
 
 clear
 
-copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20211126.csv Global_V4_since100_20211126.csv
+copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_20211123.csv Global_V4_since100_20211123.csv
 
-import delimited using "Global_V4_since100_20211126.csv", clear varnames(1)
+import delimited using "Global_V4_since100_20211123.csv", clear varnames(1)
 
 rename country loc_grand_name
 
