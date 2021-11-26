@@ -1,4 +1,4 @@
-### While I am running the 20211126 uptake for Iran, people are being shoot at in Isfahan, Iran. 
+### While I am running the 20211126 uptake for Iran, now, people are being shoot at in Isfahan, Iran. 
 
 ******
 
