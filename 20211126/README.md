@@ -11,7 +11,7 @@
 ******
 ******
 
-The variant omicron was classified as variant of concern today. 
+The variant omicron was classified as variant of concern today 20211126, few days after its sequencing. 
 
 ******
 
