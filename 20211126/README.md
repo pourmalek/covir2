@@ -2,11 +2,7 @@
 ******
 ******
 
-### While I am running the 20211126 uptake for Iran, now, people are being shot at in Isfahan, Iran. 
-
-![image](https://user-images.githubusercontent.com/30849720/143895292-d0c5dd98-2f09-496e-b348-24005198fa69.png)
-
-Multiple radio-opaque shotgun metal pellets, in face and neck.
+### While this uptake 20211126 for Iran is being run, now, people are being shot at in Isfahan, Iran. 
 
 ******
 ******
