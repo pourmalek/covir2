@@ -1,14 +1,7 @@
-******
-******
-******
-
-### While this uptake 20211126 for Iran is being run, now, people are being shot at in Isfahan, Iran. 
 
 ******
-******
-******
 
-The variant omicron was classified as variant of concern today 20211126, few days after its sequencing. 
+The variant omicron was classified as variant of concern by WHO today 20211126, few days after its sequencing. 
 
 ******
 
