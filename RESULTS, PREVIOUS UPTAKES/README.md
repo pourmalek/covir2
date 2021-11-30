@@ -25,6 +25,9 @@
 
 [graph (8b) Iran - Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8b-iran---daily-cases-2021)
  
+[graph (8c) Iran [Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021) 
+(https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8c-iran---daily-estimated-infections-ihme-impe-to-reported-cases-john-main-scenarios-2021)
+ 
 [graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-9-iran---hospital-related-outcomes-all-time) 
  
 [graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-10-iran---hospital-related-outcomes-2021) 
