@@ -36,6 +36,7 @@ SRIV A05 // Some labs were much bettre with physics.
 */
 
 
+clear 
 
 * JOHN
 
@@ -998,6 +999,107 @@ note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits
 
 graph save "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.gph", replace
 graph export "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.pdf", replace
+
+
+
+
+****
+* daily estimated infections to reported cases IHME, IMPE, all time
+
+
+gen DayITCMeSmA02S01 =  DayINFMeSmA02S01 / DayCasMeRaA00S00
+
+label var DayITCMeSmA02S01  "Daily Infections IHME to cases JOHN"
+
+gen DayITCMeRaA03S02 =  DayINFMeRaA03S02 / DayCasMeRaA00S00
+
+label var DayITCMeRaA03S02  "Daily Infections IMPE to cases JOHN"
+
+
+twoway ///
+(line DayITCMeSmA02S01 date, sort lcolor(black)) /// 1 "IHME"
+(line DayITCMeRaA03S02 date, sort lcolor(magenta)) /// 2 "IMPE"
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#26, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estimated infections to reported cases, $country", size(medium)) /// 
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "IHME" 2 "IMPE" 3) size(small) row(1)) ///
+subtitle("reference scenarios", size(small)) 
+
+graph save "graph 28 C19 daily estimated infections to reported cases, $country, reference scenarios.gph", replace
+graph export "graph 28 C19 daily estimated infections to reported cases, $country, reference scenarios.pdf", replace
+
+
+
+
+****
+* daily estimated infections to reported cases IHME, IMPE, 2021
+
+
+* smooth Infections to cases ratio of IHME and IMPE
+
+tsset date, daily   
+
+
+foreach var of varlist ///
+DayITCMeSmA02S01 DayITCMeRaA03S02 {
+
+
+tssmooth ma `var'_window = `var', window(3 1 3)
+
+tssmooth ma `var'sm = `var'_window, weights( 1 2 3 <4> 3 2 1) replace
+
+drop `var'_window
+
+}
+*
+
+tsset, clear
+
+ssc install labutil2
+
+labvars DayITCMeSmA02S01sm DayITCMeRaA03S02sm ,names
+
+          
+qui summ DayITCMeSmA02S01sm if date >= td(01jan2021) , detail
+
+gen DayITCMeSmA02S01sm_median = r(p50)
+
+replace DayITCMeSmA02S01sm_median = round(DayITCMeSmA02S01sm_median)
+
+local DayITCMeSmA02S01sm_median = DayITCMeSmA02S01sm_median
+
+
+qui summ DayITCMeRaA03S02sm if date >= td(01jan2021) , detail
+
+gen DayITCMeRaA03S02sm_median = r(p50)
+
+replace DayITCMeRaA03S02sm_median = round(DayITCMeRaA03S02sm_median)
+
+local DayITCMeRaA03S02sm_median = DayITCMeRaA03S02sm_median
+
+twoway ///
+(line DayITCMeSmA02S01 date, sort lcolor(black*0.2)) /// 1 "IHME"
+(line DayITCMeRaA03S02 date, sort lcolor(magenta*0.2)) /// 2 "IMPE"
+(line DayITCMeSmA02S01sm date, sort lcolor(black) lwidth(thick)) /// 3 "IHME"
+(line DayITCMeRaA03S02sm date, sort lcolor(magenta) lwidth(thick)) /// 4 "IMPE"
+(line DayITCMeSmA02S01sm_median date, sort lcolor(black) lwidth(thin) lpattern(dash)) /// 5 "IHME"
+(line DayITCMeRaA03S02sm_median date, sort lcolor(magenta) lwidth(thin) lpattern(dash)) /// 6 "IMPE"
+if date >= td(01jan2021) ///
+, xtitle(Date) xlabel(#14, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estimated infections to reported cases, $country", size(medium)) /// 
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "IHME" 2 "IMPE" 3 "IHME smooth" 4 "IMPE smooth" 5 "IHME smooth meadian" 6 "IMPE smooth meadian") size(small) row(2)) ///
+subtitle("reference scenarios", size(small)) ///
+note("IHME smooth median in 2021 = `DayITCMeSmA02S01sm_median'; IMPE smooth median in 2021 = `DayITCMeRaA03S02sm_median'")
+
+graph save "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.gph", replace
+graph export "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.pdf", replace
+
+
+
 
 
 
