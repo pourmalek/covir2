@@ -94,6 +94,12 @@ The variant omicron was classified as variant of concern by WHO today 20211126, 
 
 ****
 
+(8c) Iran [Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/20211126/output/merge/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/144087958-2df27d6a-c50f-4955-8163-b0c0de6d23c4.png)
+
+****
+
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211126/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/143618656-acc4121d-1339-40ed-956e-70f4381aadf6.png)
