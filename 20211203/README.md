@@ -109,8 +109,6 @@
 
 (14) Iran [Daily Infection-outcome ratios, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211203/output/IHME/graph%2021g%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%203%20scenarios%2C%20IHME.pdf)
 
-Note: values of the three scenarios for this estimand by IHME are the same for Iran.  
-
 
 ****
 
