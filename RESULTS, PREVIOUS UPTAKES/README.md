@@ -106,7 +106,9 @@
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144656879-853855e5-8982-4690-9446-e969ed35e1ee.png)
 
 *
 
@@ -546,7 +548,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(1b) Iran [Reported daily deaths, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211203/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144656991-b46c3b79-6e18-4a51-869d-a69ed82100a2.png)
 
 *
 
@@ -628,7 +632,9 @@ uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, 
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(2) Iran [Daily deaths, 2021](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657090-b74a841b-89c6-47a6-9011-ca1d0c1eaac8.png)
 
 *
 
@@ -1079,7 +1085,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(3) Iran [Daily deaths, 2021, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657193-ad4c70eb-9760-47cf-be61-d4625b0c2c53.png)
 
 *
 
@@ -1528,7 +1536,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(4) Iran [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657360-686e1fd0-69ba-4b5f-afa9-fb57ac1d2354.png)
 
 *
 
@@ -1965,7 +1975,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(5) Iran [Daily deaths, 2021, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657585-b431ee50-e1a3-4eaf-84d9-582520430552.png)
 
 *
 
@@ -2414,7 +2426,9 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 uptake 20211203: **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
+(6) Iran [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657794-63dbf26b-7860-4998-b6f6-6abd477efeec.png)
 
 *
 
