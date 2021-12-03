@@ -25,14 +25,6 @@
 ## <div align="center"> :iran: Iran 
 
 ## <div align="center"> covir2 = COVID Iran review number 2
- 
-
-********************************************************************************************************************************************
-********************************************************************************************************************************************
-
-# 20211004 potential new surge:
- 
-### Considering the trends of COVID-19 hospitalizations, the provinces in northwest Iran might be starting a new surge already or soon. Yazd province shows a possible start of bouncing upward. See ["Ad Hoc Report Number 4 – Iran COVID-19 epidemic – 14000712 - 20211004"](https://github.com/pourmalek/covir2/blob/main/situation%20reports/04%20AH%20-%20Ad%20Hoc%20Report%20Number%204%20–%20Iran%20COVID-19%20epidemic%20–%2014000712%20-%2020211004.pdf) 
 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
