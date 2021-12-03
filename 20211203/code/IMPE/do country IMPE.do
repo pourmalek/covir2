@@ -21,7 +21,7 @@ log using "log country IMPE.smcl", replace
 
 
                                                                                                          ***************************
-* To change update date, find and replace all, 2021-11-21 (old), with 2021-11-21 (new) <<--       <<<--- * change update date here *
+* To change update date, find and replace all, 2021-11-29 (old), with 2021-11-29 (new) <<--       <<<--- * change update date here *
                                                                                                          ***************************
 																										 
 
@@ -33,9 +33,9 @@ clear
 
 
 /*
-copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-11-21_v9.csv.zip 2021-11-21_v9.csv.zip
-unzipfile 2021-11-21_v9.csv.zip, replace
-erase 2021-11-21_v9.csv.zip
+copy https://mrcdata.dide.ic.ac.uk/global-lmic-reports/2021-11-29_v9.csv.zip 2021-11-29_v9.csv.zip
+unzipfile 2021-11-29_v9.csv.zip, replace
+erase 2021-11-29_v9.csv.zip
 */
 
  
@@ -44,7 +44,7 @@ erase 2021-11-21_v9.csv.zip
 * import csv file
 
 
-import delimited "2021-11-21_v9 Iran.csv", clear varnames(1)
+import delimited "2021-11-29_v9 Iran.csv", clear varnames(1)
 
 
 
@@ -93,7 +93,7 @@ S4  "Surged Additional 50% Reduction"	"S4_Surged_Add_Half_Reduction"
 S5  "Surged Maintain Status Quo"		"S5_Surged_Maintain_Staus_Quo"
 S6  "Surged Relax Interventions 50%"	"S6_Surged_Relax_Half_Intervention"
 
-With IMPE update 20211103 (2021-11-21_v9.csv.zip) released on 20211110., IMPE has new terms for their scenarios:
+With IMPE update 20211103 (2021-11-29_v9.csv.zip) released on 20211110., IMPE has new terms for their scenarios:
 
 S1	Optimistic
 S2	Maintain Status Quo
