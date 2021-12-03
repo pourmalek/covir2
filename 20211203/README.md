@@ -59,26 +59,31 @@
 
 (6) Iran [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657794-63dbf26b-7860-4998-b6f6-6abd477efeec.png)
 
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144657899-eae609cc-0dc6-4f90-b60c-ddf174219f3b.png)
     
 ****
 
 (7b) Iran [Reported cases, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211203/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144658012-33f52a1d-b69f-439f-b823-8c327118062c.png)
 
 ****
 
 (8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144658094-47339a8e-54ff-4315-bff1-07295496fed4.png)
   
 ****
 
 (8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144658199-fdecb2a7-4c0c-44bf-a338-016324ea0379.png)
 
 ****
 
@@ -89,11 +94,13 @@
 
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144658573-b6924517-908e-4323-b881-01836e7861b4.png)
 
 ****
 
 (10) Iran [Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![Uploading image.png…]()
 
 ****
 
