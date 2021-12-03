@@ -89,6 +89,7 @@
 
 (8c) Iran [Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/20211203/output/merge/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/144658765-139a7403-ca16-4e6a-a04c-1b90b0a3d167.png)
 
 ****
 
