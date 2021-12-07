@@ -4,7 +4,12 @@
 
 **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
 
-[IHME | Omicron Variant – What We Know | Dec 3], 2021(https://www.youtube.com/watch?v=IAbgFVXLl2w&t=74s)
+<br/><br/>
+
+[IHME | Omicron Variant – What We Know | Dec 3, 2021](https://www.youtube.com/watch?v=IAbgFVXLl2w&t=74s)
+
+[IHME COVID-19 Model Insights Blog](http://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run)
+
 <br/><br/>
 
 
