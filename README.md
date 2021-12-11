@@ -741,6 +741,10 @@ _Component studies (the international periodically updated models) and their sce
  
  
  
+ 
+(54) uptake [`20211210`](https://github.com/pourmalek/covir2/tree/main/20211210): 
+**_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
+ 
 (53) uptake [`20211203`](https://github.com/pourmalek/covir2/tree/main/20211203): 
 **_DELP 20211203_**, IHME 20211119, **_IMPE 20211129_**, **_SRIV 20211203_**
  
