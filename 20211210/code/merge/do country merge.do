@@ -540,11 +540,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
-subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH." , size(vsmall))
 
 graph save "graph 11 COVID-19 daily deaths, $country, reference scenarios, all time.gph", replace
 graph export "graph 11 COVID-19 daily deaths, $country, reference scenarios, all time.pdf", replace
@@ -567,11 +565,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, la
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
-subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH." , size(vsmall))
 
 graph save "graph 12 COVID-19 daily deaths, $country, reference scenarios.gph", replace
 graph export "graph 12 COVID-19 daily deaths, $country, reference scenarios.pdf", replace
@@ -602,12 +598,10 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, la
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "IMPE" 11 "SRIV") size(small) row(1)) ///
-subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed curves" ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 13 COVID-19 daily deaths, $country, reference scenarios, CI.gph", replace
 graph export "graph 13 COVID-19 daily deaths, $country, reference scenarios, CI.pdf", replace
@@ -635,12 +629,10 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IHME reference scenario, mean" ///
 4 "IHME reference scenario, lower" 5 "IHME reference scenario, upper" 6 "IHME excess lower" ///
 7 "IHME excess upper" 8 "IHME excess mean") size(small) row(4)) ///
-subtitle("2021 on, reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed (– – –) curves" ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall)) 
 
 graph save "graph 14 COVID-19 daily deaths, $country, reference scenario with uncertainty, IHME.gph", replace
 graph export "graph 14 COVID-19 daily deaths, $country, reference scenario with uncertainty, IHME.pdf", replace
@@ -669,12 +661,10 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IHME reference scenario, mean" 4 "IHME better scenario, mean" ///
 5 "IHME worse scenario, mean" 6 "IHME worse scenario, upper limit" 7 "IHME excess reference mean" ///
 8 "IHME excess better mean" 9 "IHME excess worse mean" 10 "IHME excess worse upper") size(small) row(5)) ///
-subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall)) 
 
 graph save "graph 15 COVID-19 daily deaths, $country, 3 scenarios, IHME.gph", replace
 graph export "graph 15 COVID-19 daily deaths, $country, 3 scenarios, IHME.pdf", replace
@@ -697,12 +687,10 @@ ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IMPE reference scenario, mean" ///
 4 "IMPE reference scenario, lower" 5 "IMPE sreference scenario, upper") size(small) row(3)) ///
-subtitle("2021 on, reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.gph", replace
 graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.pdf", replace
@@ -726,12 +714,10 @@ ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IMPE reference scenario, mean" 4 "IMPE better scenario, mean" ///
 5 "IMPE worse scenario, mean" 6 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
-subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.gph", replace
 graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
@@ -755,11 +741,9 @@ ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $co
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
 5 "SRIV cases") size(small) row(2)) ///
-subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 21 COVID-19 daily cases, $country, reference scenarios, all time.gph", replace
 graph export "graph 21 COVID-19 daily cases, $country, reference scenarios, all time.pdf", replace
@@ -782,11 +766,9 @@ ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $co
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
 5 "SRIV cases") size(small) row(2)) ///
-subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, inter alia, to delay and attenuate the SIXTH wave, Lambda, +/- Mu," ///
-"    relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 22 COVID-19 daily cases, $country, reference scenarios.gph", replace
 graph export "graph 22 COVID-19 daily cases, $country, reference scenarios.pdf", replace
@@ -807,11 +789,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, la
 ytitle(Daily cases) title("COVID-19 daily cases, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases raw" 2 "JOHN cases smooth" 3 "DELP cases" 4 "SRIV cases") size(small) row(2)) ///
-subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, inter alia, to delay and attenuate the SIXTH wave, Lambda, +/- Mu," ///
-"    relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 22b COVID-19 daily cases, $country, reference scenarios.gph", replace
 graph export "graph 22b COVID-19 daily cases, $country, reference scenarios.pdf", replace
@@ -842,11 +822,9 @@ ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $co
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" 8 "IMPE infections" ///
 11 "SRIV cases") size(small) row(2)) /// 
-subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 23 COVID-19 daily cases, $country, reference scenarios, CI.gph", replace
 graph export "graph 23 COVID-19 daily cases, $country, reference scenarios, CI.pdf", replace
@@ -882,12 +860,10 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME reference, mean" 6 "IHME ref, uncertainty" 8 "IHME better and worse" ///
 10 "IMPE reference, mean " 11 "IMPE ref, uncertainty" 13 "IMPE better and worse" ///
 15 "SRIV cases") size(small) row(4)) ///
-subtitle("2021 on, full scenarios, with uncertainty; IHME & IMPE: infections", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, full scenarios, with uncertainty; IHME & IMPE: infections", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed (– – –) curves; Better and worse scenarios: tight dot (|||||) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 23 COVID-19 daily cases, $country, full scenarios, CI.gph", replace
 graph export "graph 23 COVID-19 daily cases, $country, full scenarios, CI.pdf", replace
@@ -908,12 +884,10 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Daily cases or infections) title("COVID-19 daily cases JOHN, and infections IHME, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "IHME reference, mean" 3 "IHME reference, lower" 4 "IHME reference, upper") size(small) row(2)) ///
-subtitle("2021 on, IHME infections reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, IHME infections reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 24 COVID-19 daily cases, $country, reference scenario with uncertainty, IHME.gph", replace
 graph export "graph 24 COVID-19 daily cases, $country, reference scenario with uncertainty, IHME.pdf", replace
@@ -936,12 +910,10 @@ ytitle(Daily cases or infections) title("COVID-19 daily JOHN, and infections IHM
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "IHME reference, mean" 3 "IHME better, mean" 4 "IHME worse, mean" ///
 5 "IHME worse scenario, upper uncertainty limit") size(small) row(3)) ///
-subtitle("2021 on, IHME infections 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, IHME infections 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 25 COVID-19 daily cases, $country, 3 scenarios, IHME.gph", replace
 graph export "graph 25 COVID-19 daily cases, $country, 3 scenarios, IHME.pdf", replace
@@ -962,12 +934,10 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Daily cases or infections) title("COVID-19 daily cases JOHN, and infections IMPE, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "IMPE reference, mean" 3 "IMPE reference, lower" 4 "IMPE reference, upper") size(small) row(2)) ///
-subtitle("2021 on, IMPE infections reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, IMPE infections reference scenario with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.gph", replace
 graph export "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.pdf", replace
@@ -990,12 +960,10 @@ ytitle(Daily cases or infections) title("COVID-19 daily JOHN, and infections IMP
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "IMPE reference, mean" 3 "IMPE better, mean" 4 "IMPE worse, mean" ///
 5 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
-subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.gph", replace
 graph export "graph 27 COVID-19 daily cases, $country, 3 scenarios, IMPE.pdf", replace
@@ -1123,11 +1091,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, la
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
-subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 31a COVID-19 total deaths, $country, reference scenarios, all time.gph", replace
 graph export "graph 31a COVID-19 total deaths, $country, reference scenarios, all time.pdf", replace
@@ -1150,11 +1116,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, la
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
-subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 31b COVID-19 total deaths, $country, reference scenarios, all time.gph", replace
 graph export "graph 31b COVID-19 total deaths, $country, reference scenarios, all time.pdf", replace
@@ -1176,11 +1140,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
-subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 32a COVID-19 total deaths, $country, reference scenarios.gph", replace
 graph export "graph 32a COVID-19 total deaths, $country, reference scenarios.pdf", replace
@@ -1203,11 +1165,9 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
-subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 32b COVID-19 total deaths, $country, reference scenarios.gph", replace
 graph export "graph 32b COVID-19 total deaths, $country, reference scenarios.pdf", replace
@@ -1238,11 +1198,9 @@ ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "IMPE" 11 "SRIV") size(small) row(1)) ///
 note("Uncertainty limits: dashed curves") ///
-subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 33 COVID-19 total deaths, $country, reference scenarios, CI.gph", replace
 graph export "graph 33 COVID-19 total deaths, $country, reference scenarios, CI.pdf", replace
@@ -1271,11 +1229,9 @@ ytitle(Total cases or infections) title("COVID-19 total cases or infections, $co
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
 5 "SRIV cases") size(small) row(2)) ///
-subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 41 COVID-19 total cases, $country, reference scenarios, all time.gph", replace
 graph export "graph 41 COVID-19 total cases, $country, reference scenarios, all time.pdf", replace
@@ -1298,11 +1254,9 @@ ytitle(Total cases or infections) title("COVID-19 total cases or infections, $co
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
 5 "SRIV cases") size(small) row(2)) ///
-subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 42 COVID-19 total cases, $country, reference scenarios.gph", replace
 graph export "graph 42 COVID-19 total cases, $country, reference scenarios.pdf", replace
@@ -1333,12 +1287,10 @@ ytitle(Total cases or infections) title("COVID-19 total cases or infections, $co
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" 8 "IMPE infections" ///
 11 "SRIV cases") size(small) row(2)) ///
-subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 43 COVID-19 total cases, $country, reference scenarios, CI.gph", replace
 graph export "graph 43 COVID-19 total cases, $country, reference scenarios, CI.pdf", replace
@@ -1419,11 +1371,9 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME Bed need" 4 "IHME ICU need" ///
 5 "IHME Admissions" 6 "IMPE Hosp demand" ///
 7 "IMPE ICU demand") rows(4) size(small)) ///
-subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 71a COVID-19 hospital-related outcomes, all time.gph", replace
 graph export "graph 71a COVID-19 hospital-related outcomes, all time.pdf", replace
@@ -1453,11 +1403,9 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME Bed need" 4 "IHME ICU need" ///
 5 "IHME Admissions" 6 "IMPE Hosp demand" ///
 7 "IMPE ICU demand" 8 "IHME All bed capcity" 9 "IHME ICU bed capacity") rows(4) size(small)) ///
-subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 71b COVID-19 hospital-related outcomes, all time.gph", replace
 graph export "graph 71b COVID-19 hospital-related outcomes, all time.pdf", replace
@@ -1487,12 +1435,10 @@ ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country"
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME ICU need" ///
 4 "IHME Admissions" 5 "IMPE ICU demand" 6 "IHME All bed capcity") rows(3) size(small)) ///
-subtitle("2021 on, without IHME Bed need, IMPE Hosp demand, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick)) xline(22533, lcolor(cyan) lwidth(thick)) ///
+subtitle("2021 on, without IHME Bed need, IMPE Hosp demand, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
-"    the FIFTH wave and Delta were discussed with MOH." ///
-"- Cyan line: 20210910; Travel restrictions to Iraq, surveillance of variants, inter alia, to delay and attenuate the SIXTH wave," ///
-"    Lambda, and +/- Mu, relayed to the new MOH.", size(vsmall))
+"    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
 graph save "graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.gph", replace
 graph export "graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf", replace
