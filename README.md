@@ -5,6 +5,15 @@
 
 <br/><br/>
 
+
+Due to exponential growth, Omicron will most probably leave more cases, hospitalizations, and even deaths compared to previous waves – even with counterfactual scenarios of full lockdowns and highest coverages 3 doses of mRNA vaccines. Percent fatality and hospitalization lower than delta, but absolute numbers, higher. 
+
+Most politicians and half-politician-half-scientists repeat the same negligent mistakes with every new variant of concern. Refractory to treatment.
+
+Farshad Pourmalek, December 15, 2021 
+
+<br/><br/>
+
 **Question: Why are the international COVID-19 epidemic models not very accurate in predicting new waves’ timing in Iran?** 
 
 **Answer: Garbage in, garbage out.**
