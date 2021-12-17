@@ -4,18 +4,18 @@
 
 
 <br/><br/>
+
+********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-## Due to exponential growth, Omicron will most probably leave more cases, hospitalizations, and even deaths compared to previous waves – even with counterfactual scenarios of full lockdowns and highest coverages 3 doses of mRNA vaccines. Percent fatality and hospitalization lower than delta, but absolute numbers, higher. 
+## Given all vailable evidence so far, Omicron will most probably leave more cases, hospitalizations, and even deaths compared to previous waves, due to exponential growth – even with counterfactual scenarios of full lockdowns and highest coverages 3 doses of mRNA vaccines. Percent fatality and hospitalization lower than delta, but absolute numbers, higher. 
 
 ## Most politicians and half-politician-half-scientists repeat the same negligent mistakes with every new variant of concern. Refractory to treatment.
 
 Farshad Pourmalek, December 15, 2021 
 
-![image](https://user-images.githubusercontent.com/30849720/146469416-d1752193-0031-4a58-84eb-5eb098647b5d.png)
-
 ********************************************************************************************************************************************
-
+********************************************************************************************************************************************
 
 <br/><br/>
 
