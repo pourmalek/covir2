@@ -45,7 +45,7 @@ Farshad Pourmalek, December 15, 2021
 
 
 
-*
+
 
 ### Merged graphs of uptake 20211217 [here](https://github.com/pourmalek/covir2/blob/main/20211217/graphs%20merged%2020211217.pdf)
 
