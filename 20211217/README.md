@@ -8,8 +8,42 @@ IMPE update 20211205 released on 20211215.
 
 <br/><br/>
 
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
 
-****
+Omicron variant:
+
+None of the models have included the Omicron variant as of 2021-12-17.
+
+The IHME model has not included the Omicron variant as of their 2021-11-19 update (latest update available on 2021-12-17). Sources: "COVID-19 estimate downloads" (https://www.healthdata.org/covid/data-downloads). "This page was last updated at 12:00 p.m. Pacific, November 19, 2021. IHME is working to incorporate new data surrounding the Omicron variant into its projections. Our team is monitoring the growing concerns, and we are working to provide new models that reflect the latest developments. We will update the forecasts as soon as we’ve factored Omicron into the scenarios."
+
+
+
+The Imperial model has not included the Omicron variant as of their 2021-12-05 update (latest update available on 2021-12-17). Sources: "COMBINED Situation Report for COVID-19 2021-12-05" (https://github.com/mrc-ide/global-lmic-reports/blob/master/combined_reports.pdf) "This report adjusts for
+the Delta variant, with the variant become dominant over the period: 2021-09-13 to 2021-11-12."
+
+
+The DELPHI model (https://covidanalytics.io/projections) and the SRIV model (https://scc-usc.github.io/ReCOVER-COVID-19/) do not mention inclusion of alpha. 
+
+<br/><br/>
+
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+
+
+## Given all vailable evidence so far, Omicron will most probably leave more cases, hospitalizations, and even deaths compared to previous waves, due to exponential growth – even with counterfactual scenarios of full lockdowns and highest coverages 3 doses of mRNA vaccines. Percent fatality and hospitalization lower than delta, but absolute numbers, higher. 
+
+## Most politicians and half-politician-half-scientists repeat the same negligent mistakes with every new variant of concern. Refractory to treatment.
+
+Farshad Pourmalek, December 15, 2021 
+<br/><br/>
+
+************************************************************************************************************************************************************
+************************************************************************************************************************************************************
+
+
+
+*
 
 ### Merged graphs of uptake 20211217 [here](https://github.com/pourmalek/covir2/blob/main/20211217/graphs%20merged%2020211217.pdf)
 
