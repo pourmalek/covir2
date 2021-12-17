@@ -11,7 +11,7 @@ IMPE update 20211205 released on 20211215.
 ***********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************
 
-## The Omicron variant not yet in the models:
+## The Omicron variant not yet in the models as of 2021-12-17:
 
 None of the models have included the Omicron variant as of 2021-12-17.
 
@@ -30,7 +30,7 @@ The DELPHI model (https://covidanalytics.io/projections) and the SRIV model (htt
 ***********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************
 
-## The Omicron variant, Farshad Pourmalek's take:
+## The Omicron variant, Farshad Pourmalek's take, 2021-12-15:
 
 ## Given all vailable evidence so far, Omicron will most probably leave more cases, hospitalizations, and even deaths compared to previous waves, due to exponential growth – even with counterfactual scenarios of full lockdowns and highest coverages 3 doses of mRNA vaccines. Percent fatality and hospitalization lower than delta, but absolute numbers, higher. 
 
