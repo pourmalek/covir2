@@ -37,6 +37,7 @@ The DELPHI model (https://covidanalytics.io/projections) and the SRIV model (htt
 ## Most politicians and half-politician-half-scientists repeat the same negligent mistakes with every new variant of concern. Refractory to treatment.
 
 Farshad Pourmalek, December 15, 2021 
+
 <br/><br/>
 
 ************************************************************************************************************************************************************
