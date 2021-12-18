@@ -104,6 +104,12 @@
 
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20211210/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
@@ -554,6 +560,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
 
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 (1b) Iran [Reported daily deaths, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211210/output/JOHN/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
@@ -644,6 +656,12 @@ uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, 
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -1107,6 +1125,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 
@@ -1564,6 +1588,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+Both this and the previous uptake use the same model update, so the graphs are identical.
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -1961,6 +1991,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -2370,6 +2406,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -2776,6 +2818,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -3228,6 +3276,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 
@@ -3322,6 +3376,12 @@ uptake 20211015: **_DELP 20211015_**, **_IHME 20211001_**, **_IMPE 20211006_**, 
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -3778,6 +3838,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 
@@ -3860,6 +3926,15 @@ uptake 20211022: **_DELP 20211019_**, **_IHME 20211021_**, IMPE 20211006, **_SRI
 This graph (8c) was added starting from ouptake 20211126.
 
 
+
+
+
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -3904,6 +3979,12 @@ ouptake 20211126: **_DELP 20211123_**, IHME 20211119, IMPE 20211115, **_SRIV 202
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -4357,6 +4438,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -4814,6 +4901,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -5275,6 +5368,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 
@@ -5723,6 +5822,12 @@ uptake 20210401: DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 2021033
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+Both this and the previous uptake use the same model update, so the graphs are identical.
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -5852,6 +5957,12 @@ Note: values of the three scenarios for this estimand by IHME are the same for I
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+Both this and the previous uptake use the same model update, so the graphs are identical.
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -5976,6 +6087,12 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+Both this and the previous uptake use the same model update, so the graphs are identical.
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
@@ -6107,6 +6224,12 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
  
 *
 
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+Both this and the previous uptake use the same model update, so the graphs are identical.
+
+*
+
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -6233,6 +6356,12 @@ uptake 20210916: DELP 20210916, **_IHME 20210916_**, IMPE 20210825, LANL 2021091
  
  
  
+*
+
+uptake 20211217: **_DELP 20211216_**, IHME 20211119, **_IMPE 20211205_**, **_SRIV 20211217_**
+
+Both this and the previous uptake use the same model update, so the graphs are identical.
+
 *
 
 uptake 20211210: **_DELP 20211210_**, IHME 20211119, IMPE 20211129, **_SRIV 20211210_**
