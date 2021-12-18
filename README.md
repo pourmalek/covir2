@@ -14,6 +14,8 @@
 
 None of the models have included the Omicron variant as of 2021-12-17.
 
+# Therefore, the “WORSE” scenarios of IHME and IMPE Omicron-less models should be closer to unfolding reality on the ground, than their “Reference” scenarios. 
+
 The IHME model has not included the Omicron variant as of their 2021-11-19 update (latest update available on 2021-12-17). Sources: "COVID-19 estimate downloads" (https://www.healthdata.org/covid/data-downloads). "This page was last updated at 12:00 p.m. Pacific, November 19, 2021. IHME is working to incorporate new data surrounding the Omicron variant into its projections. Our team is monitoring the growing concerns, and we are working to provide new models that reflect the latest developments. We will update the forecasts as soon as we’ve factored Omicron into the scenarios."
 
 
