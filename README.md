@@ -19,9 +19,10 @@ None of the models have included the Omicron variant as of 2021-12-17.
 The IHME model has not included the Omicron variant as of their 2021-11-19 update (latest update available on 2021-12-17). Sources: "COVID-19 estimate downloads" (https://www.healthdata.org/covid/data-downloads). "This page was last updated at 12:00 p.m. Pacific, November 19, 2021. IHME is working to incorporate new data surrounding the Omicron variant into its projections. Our team is monitoring the growing concerns, and we are working to provide new models that reflect the latest developments. We will update the forecasts as soon as we’ve factored Omicron into the scenarios."
 
 
-
 The Imperial model has not included the Omicron variant as of their 2021-12-05 update (latest update available on 2021-12-17). Sources: "COMBINED Situation Report for COVID-19 2021-12-05" (https://github.com/mrc-ide/global-lmic-reports/blob/master/combined_reports.pdf) "This report adjusts for
 the Delta variant, with the variant become dominant over the period: 2021-09-13 to 2021-11-12."
+
+Imperial College on Omicron: Neil Ferguson, et al. Imperial College COVID-19 response team. Report 49: Growth, population distribution and immune escape of Omicron in England. 16 December 2021. https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2021-12-16-COVID19-Report-49.pdf
 
 
 The DELPHI model (https://covidanalytics.io/projections) and the SRIV model (https://scc-usc.github.io/ReCOVER-COVID-19/) do not mention inclusion of alpha. 
