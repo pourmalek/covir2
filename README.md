@@ -24,7 +24,6 @@ the Delta variant, with the variant become dominant over the period: 2021-09-13 
 
 Imperial College on Omicron: Neil Ferguson, et al. Imperial College COVID-19 response team. Report 49: Growth, population distribution and immune escape of Omicron in England. 16 December 2021. https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2021-12-16-COVID19-Report-49.pdf
 
-
 The DELPHI model (https://covidanalytics.io/projections) and the SRIV model (https://scc-usc.github.io/ReCOVER-COVID-19/) do not mention inclusion of alpha. 
 
 <br/><br/>
