@@ -51,6 +51,8 @@ foreach l of local list {
 	keep if regexm(country,"$country") == 1
 	drop id	country
 	
+	destring *, replace
+	
 	gen i = _n
 	reshape long v, i(i) j(j)
 	rename v `l'
