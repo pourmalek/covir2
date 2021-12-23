@@ -92,6 +92,12 @@
 
 ****
 
+(8d) Iran [COVID-19 daily infections, IHME, worse scenario](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20worse%20scenario%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/147199377-5f70c4aa-fc50-4f6c-a3c5-0d4768557dd6.png)
+
+****
+
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
 
