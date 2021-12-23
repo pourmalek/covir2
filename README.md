@@ -10,7 +10,7 @@
 ***********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************
 
-## The Omicron variant has only been included in IHME model, as of 2021-12-21. 
+## The Omicron variant has been included only in IHME model, as of 2021-12-21. 
 
 The IHME model has included the Omicron variant. IHME Detected Infections vs. All Infections: "Probably detected infections at the global level will be **_three times_** that previous peak that we saw for delta." https://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run
 
