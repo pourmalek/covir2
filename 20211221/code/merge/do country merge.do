@@ -862,7 +862,7 @@ graph export "graph 23 COVID-19 daily cases, $country, full scenarios, CI.pdf", 
 
 
 ****
-* daily cases or infections, reference scenario with uncertainty, IHME, 2021
+* daily infections, reference scenario with uncertainty, IHME, 2021
 
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
@@ -885,8 +885,9 @@ graph export "graph 24 COVID-19 daily cases, $country, reference scenario with u
 
 
 
+
 ****
-* daily cases or infections, 5 scenarios, IHME, 2021
+* daily infections, 5 scenarios, IHME, 2021
 
 twoway ///
 (line DayINFMeSmA02S03 date, sort lcolor(red) lwidth(vthick) lpattern(tight_dot)) ///
@@ -903,13 +904,33 @@ legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)
 note("Worse = High severity of Omicron; Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")
 
-graph save "graph 25 COVID-19 daily cases, $country, 5 scenarios, IHME.gph", replace
-graph export "graph 25 COVID-19 daily cases, $country, 5 scenarios, IHME.pdf", replace
+graph save "graph 25 1 COVID-19 daily cases, $country, 5 scenarios, IHME.gph", replace
+graph export "graph 25 1 COVID-19 daily cases, $country, 5 scenarios, IHME.pdf", replace
 
 
 
 ****
-* daily cases or infections, reference scenario with uncertainty, IMPE, 2021
+* daily infections, worse scenario = S3, CI, IHME, 2021
+  
+twoway ///
+(line DayINFMeSmA02S03 date, sort lcolor(black)) ///
+(line DayINFLoSmA02S03 date, sort lcolor(green)) ///
+(line DayINFUpSmA02S03 date, sort lcolor(red)) ///
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#25, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily infections) title("COVID-19 daily infections, $country, IHME, worse scenario", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Mean" 2 "Lower" 3 "Upper") rows(1)) ///
+note("Worse scenario = High severity of Omicron")
+
+
+graph save "graph 25 2 COVID-19 daily cases, $country, worse scenario, IHME.gph", replace
+graph export "graph 25 2 COVID-19 daily cases, $country, worse scenario, IHME.pdf", replace
+
+
+****
+* daily infections, reference scenario with uncertainty, IMPE, 2021
 
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
@@ -933,7 +954,7 @@ graph export "graph 26 COVID-19 daily cases, $country, reference scenario with u
 
 
 ****
-* daily cases or infections, 3 scenarios, IMPE 
+* daily infections, 3 scenarios, IMPE 
 
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
