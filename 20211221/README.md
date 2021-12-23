@@ -6,6 +6,19 @@
 
 <br/><br/>
 
+### Scenarios of IHME model as of update 20211221:
+
+* S01 = Current projection [Status Quo, Reference scenario]         
+* S02 = 80% mask use [Best scenario]                    
+* S03 = High severity of Omicron [Worse scenario]       
+* S04 = Third dose of vaccine [Second best scenario]               
+* S05 = Reduced vaccine hesitancy [Third best scenario] 
+
+<br/><br/>
+
+IHME Detected Infections vs. All Infections. Probably detected infections at the global level will be **_three times_** that previous peak that we saw for delta. https://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run
+
+<br/><br/>
 
 ****
 
