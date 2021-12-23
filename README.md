@@ -1,6 +1,6 @@
 # covir2
 
-## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/covir2/blob/main/situation%20reports/32%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2032%20–%202021-12-17.pdf). 
+## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/covir2/blob/main/situation%20reports/33%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2033%20–%202021-12-21.pdf). 
 
 
 <br/><br/>
@@ -13,6 +13,14 @@
 ## The Omicron variant has only been included in IHME model, as of 2021-12-21. 
 
 The IHME model has included the Omicron variant. IHME Detected Infections vs. All Infections: "Probably detected infections at the global level will be **_three times_** that previous peak that we saw for delta." https://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run
+
+Scenarios of IHME model as of update 20211221:
+
+* S01 = Current projection [Status Quo, Reference scenario]         
+* S02 = 80% mask use [Best scenario]                    
+* S03 = High severity of Omicron [Worse scenario]       
+* S04 = Third dose of vaccine [Second best scenario]               
+* S05 = Reduced vaccine hesitancy [Third best scenario] 
 
 The Imperial model has not included the Omicron variant as of their 2021-12-05 update (latest update available on 2021-12-17). Sources: "COMBINED Situation Report for COVID-19 2021-12-05" (https://github.com/mrc-ide/global-lmic-reports/blob/master/combined_reports.pdf) "This report adjusts for
 the Delta variant, with the variant become dominant over the period: 2021-09-13 to 2021-11-12."
@@ -195,7 +203,7 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 32 – 2021-12-17](https://github.com/pourmalek/covir2/blob/main/situation%20reports/32%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2032%20–%202021-12-17.pdf)
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 33 – 2021-12-21](https://github.com/pourmalek/covir2/blob/main/situation%20reports/33%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2033%20–%202021-12-21.pdf)
  
 
 ********************************************************************************************************************************************
