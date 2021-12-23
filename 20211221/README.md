@@ -58,31 +58,37 @@
 
 (6) Iran [Daily deaths, 2021, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/147198437-9908d52e-5e97-4435-99b6-08d1e4cb9647.png)
 
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/147198543-2df0bf87-de79-4045-9482-b41017c4055f.png)
     
 ****
 
 (7b) Iran [Reported cases, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/20211221/output/JOHN/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/147198632-be7b0711-7ced-4d4f-8efa-2cc88754f5de.png)
 
 ****
 
 (8) Iran [Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/147198713-4ecd6871-c854-40e7-a849-c7defb634b68.png)
   
 ****
 
 (8b) Iran [Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/147198800-25c19570-a07a-4099-a26e-9eed717ac9d2.png)
 
 ****
 
 (8c) Iran [Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/147198905-16253c24-e9fe-4b89-b693-3c82e676e05e.png)
 
 ****
 
