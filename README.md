@@ -12,7 +12,7 @@
 
 ## The Omicron variant has only been included in IHME model, as of 2021-12-21. 
 
-The IHME model has included the Omicron variant. IHME Detected Infections vs. All Infections: Probably detected infections at the global level will be **_three times_** that previous peak that we saw for delta. https://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run
+The IHME model has included the Omicron variant. IHME Detected Infections vs. All Infections: "Probably detected infections at the global level will be **_three times_** that previous peak that we saw for delta." https://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run
 
 The Imperial model has not included the Omicron variant as of their 2021-12-05 update (latest update available on 2021-12-17). Sources: "COMBINED Situation Report for COVID-19 2021-12-05" (https://github.com/mrc-ide/global-lmic-reports/blob/master/combined_reports.pdf) "This report adjusts for
 the Delta variant, with the variant become dominant over the period: 2021-09-13 to 2021-11-12."
