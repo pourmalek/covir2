@@ -736,6 +736,16 @@ _Component studies (the international periodically updated models) and their sce
 <br/><br/>
 
 #### A02 IHME
+Scenarios of IHME model as of update 20211221:
+
+* S01 = Current projection [Status Quo, Reference scenario]         
+* S02 = 80% mask use [Best scenario]                    
+* S03 = High severity of Omicron [Worse scenario]       
+* S04 = Third dose of vaccine [Second best scenario]               
+* S05 = Reduced vaccine hesitancy [Third best scenario] 
+
+Scenarios of IHME model before update 20211221:
+ 
 * S01 = Reference scenario [Status Quo] 
 * S02 = Best scenario (Universal masks) [Best]
 * S03 = Worse scenario (Mandates easing) [Worst] 
