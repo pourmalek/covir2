@@ -6,8 +6,7 @@
 
 <br/><br/>
 
-
-https://mcusercontent.com/112645edb933f5621bac7c0be/images/501cb04a-46ce-1d7b-4db3-87fa8cc9bfa4.gif![image](https://user-images.githubusercontent.com/30849720/147296894-3962abfd-9ad9-4cbe-ab78-ea5e5bbf8469.png)
+[image](https://user-images.githubusercontent.com/30849720/147296894-3962abfd-9ad9-4cbe-ab78-ea5e5bbf8469.png)
 
 Institute for Health Metrica and Evaluation 
 <br/><br/>
