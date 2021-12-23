@@ -4,11 +4,7 @@
 
 **_DELP 20211222_**, **_IHME 20211221_**, IMPE 20211205, **_SRIV 20211219_**
 
-<br/><br/>
 
-[image](https://user-images.githubusercontent.com/30849720/147296894-3962abfd-9ad9-4cbe-ab78-ea5e5bbf8469.png)
-
-Institute for Health Metrica and Evaluation 
 <br/><br/>
 
 
