@@ -1049,7 +1049,7 @@ ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estim
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "IHME" 2 "IMPE" 3 "IHME smooth" 4 "IMPE smooth" 5 "IHME smooth meadian" 6 "IMPE smooth meadian") size(small) row(2)) ///
 subtitle("reference scenarios", size(small)) ///
-note("IHME smooth median in 2021 = `DayITCMeSmA02S01sm_median'; IMPE smooth median in 2021 = `DayITCMeRaA03S02sm_median'")
+note("IHME smooth median 2021 on = `DayITCMeSmA02S01sm_median'; IMPE smooth median 2021 on = `DayITCMeRaA03S02sm_median'")
 
 graph save "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.gph", replace
 graph export "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.pdf", replace
