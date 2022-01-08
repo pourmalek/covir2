@@ -113,10 +113,11 @@
 
 (14) Iran [Daily Infection-outcome ratios, 5 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148629058-cd351d9b-bad8-40ec-9122-e20c4774e070.png)
 
 ****
 
-(15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/IHME/graph%2033%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios.pdf)
+(15) Iran [Daily mobility, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios%20IHME.pdf)
 
 
 ****
