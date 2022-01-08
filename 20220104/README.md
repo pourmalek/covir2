@@ -38,9 +38,9 @@
 
 ****
 
-(4) Iran [Daily deaths, 2021, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+(4) Iran [Daily deaths, 2021, 5 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/148627902-bacb3216-a360-42b6-a10e-6b3f2605a592.png)
+![image](https://user-images.githubusercontent.com/30849720/148628085-1bcc69ef-4366-4f53-9cc4-e83f34d0d7cf.png)
 
 ****
 
