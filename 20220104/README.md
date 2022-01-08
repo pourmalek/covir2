@@ -125,6 +125,7 @@
 
 (16) Iran [Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148629152-af3f8b62-a1f0-48b4-a2e0-d025025c54c3.png)
 
 ****
 
