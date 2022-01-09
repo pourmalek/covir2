@@ -148,7 +148,7 @@
 **** 
 **** 
 
-#### graph (3) Iran - Daily deaths, reference scenario with uncertainty, 2021 on, IHME
+#### graph (3) Iran - Daily deaths, 2021 on, reference scenario with uncertainty, IHME
 
  
  
@@ -159,7 +159,7 @@
 
 **uptake 20220104**: **_DELP 20220104_**, IHME 20211221, **_IMPE 20211213_**, **_SRIV 20220104_**
 
-(3) Iran [Daily deaths, reference scenario with uncertainty, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+(3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/148627792-304abd46-6825-40f2-8a92-a8bc000a7901.png)
 
