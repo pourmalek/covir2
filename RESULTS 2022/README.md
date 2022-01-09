@@ -125,7 +125,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (2) Iran - Daily deaths, 2021 on
 
  
  
@@ -150,7 +150,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (3) Iran - Daily deaths, 2021 on, reference scenario with uncertainty, IHME
 
  
  
@@ -179,7 +179,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (4) Iran - Daily deaths, 2021 on, 5 scenarios, IHME
 
  
  
@@ -206,7 +206,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (5) Iran - Daily deaths, 2021 on, reference scenario with uncertainty, IMPE
 
  
  
@@ -233,7 +233,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (6) Iran - Daily deaths, 2021 on, 3 scenarios, IMPE
 
  
  
@@ -260,7 +260,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (7) Iran - Daily cases or infections, all time
 
  
  
@@ -286,7 +286,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (8) Iran - Daily cases or infections, 2021 on
 
  
  
@@ -313,7 +313,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (8b) Iran - Daily cases, 2021 on
 
  
  
@@ -339,7 +339,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (8c) Iran - Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021 on
 
  
  
@@ -365,7 +365,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (9) Iran - Hospital-related outcomes, all time
 
  
  
@@ -391,7 +391,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (10) Iran - Hospital-related outcomes, 2021 on
 
  
  
@@ -417,7 +417,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (11) Iran - Daily deaths estimated to reported, all time
 
  
  
@@ -446,7 +446,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (12) Iran - Daily cases or infections estimated to reported cases, 2021 on
 
  
  
@@ -476,7 +476,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (13) Iran - R effective, 3 scenarios, 2021 on, IHME
 
  
  
@@ -506,7 +506,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (14) Iran - Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME
 
  
  
@@ -533,7 +533,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (15) Iran - Daily mobility, 3 scenarios, all time, IHME
 
  
  
@@ -561,7 +561,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (16) Iran - Daily mask use, 3 scenarios, all time, IHME
 
  
  
@@ -589,7 +589,7 @@
 **** 
 **** 
 
-#### graph (1) Iran - Daily deaths, reference scenarios, all time 
+#### graph (17) Iran - Percent cumulative vaccinated, 2021 on, IHME
 
  
  
