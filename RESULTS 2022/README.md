@@ -30,7 +30,7 @@
 
 [graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-9-iran---hospital-related-outcomes-all-time) 
  
-[graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-10-iran---hospital-related-outcomes-2021) 
+[graph (10) Iran - Hospital-related outcomes, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-10-iran---hospital-related-outcomes-2021-on) 
  
 [graph (11) Iran - Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-11-iran---daily-deaths-estimated-to-reported-all-time) 
  
