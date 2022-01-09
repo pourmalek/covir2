@@ -44,7 +44,7 @@
  
 [graph (14) Iran - Daily Infection-outcome ratios, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-14-daily-infection-outcomes-ratios-iran-3-scenarios-all-time-ihme)
 
-[graph (15) Iran - Daily mobility, 3 scenarios IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-15-daily-mobility-iran-3-scenarios-ihme)
+[graph (15) Iran - Daily mobility, 3 scenarios IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-15-daily-mobility-iran-3-scenarios-all-time-ihme)
 
 [graph (16) Iran - Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-16-daily-mask-use-iran-3-scenarios-ihme)
 
