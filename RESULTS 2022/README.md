@@ -8,7 +8,7 @@
 
 [graph (2) Iran - Daily deaths, reference scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-2-iran---daily-deaths-2021-on) 
   
-[graph (3) Iran - Daily deaths, reference scenario with uncertainty, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-3-iran---daily-deaths-2021-on-reference-scenario-with-uncertainty-ihme)
+[graph (3) Iran - Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-3-iran---daily-deaths-2021-on-reference-scenario-with-uncertainty-ihme)
   
 [graph (4) Daily deaths, 2021 on, 5 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-4-iran---daily-deaths-2021-on-5-scenarios-ihme)
   
