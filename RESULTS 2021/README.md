@@ -24,31 +24,31 @@
 
 [graph (8) Iran - Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-8-iran---daily-cases-or-infections-2021) 
 
-[graph (8b) Iran - Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8b-iran---daily-cases-2021)
+[graph (8b) Iran - Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-8b-iran---daily-cases-2021)
  
-[graph (8c) Iran - Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8c-iran---daily-estimated-infections-ihme-impe-to-reported-cases-john-main-scenarios-2021)
+[graph (8c) Iran - Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-8c-iran---daily-estimated-infections-ihme-impe-to-reported-cases-john-main-scenarios-2021)
 
-[graph (8d) Iran - COVID-19 daily infections, IHME, worse scenario](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8d-iran---covid-19-daily-infections-ihme-worse-scenario)
+[graph (8d) Iran - COVID-19 daily infections, IHME, worse scenario](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-8d-iran---covid-19-daily-infections-ihme-worse-scenario)
 
-[graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-9-iran---hospital-related-outcomes-all-time) 
+[graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-9-iran---hospital-related-outcomes-all-time) 
  
-[graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-10-iran---hospital-related-outcomes-2021) 
+[graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-10-iran---hospital-related-outcomes-2021) 
  
-[graph (11) Iran - Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-11-iran---daily-deaths-estimated-to-reported-all-time) 
+[graph (11) Iran - Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-11-iran---daily-deaths-estimated-to-reported-all-time) 
  
-[graph (12) Iran - Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-12-iran---daily-cases-or-infections-estimated-to-reported-cases-2021) 
+[graph (12) Iran - Daily cases or infections estimated to reported cases, 2021](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-12-iran---daily-cases-or-infections-estimated-to-reported-cases-2021) 
 
 .
 
-[graph (13) Iran - R effective, 3 scenarios, June 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-13-iran---r-effective-iran-3-scenarios-june-2021-on-ihme) 
+[graph (13) Iran - R effective, 3 scenarios, June 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-13-iran---r-effective-iran-3-scenarios-june-2021-on-ihme) 
  
-[graph (14) Iran - Daily Infection-outcome ratios, 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-14-daily-infection-outcomes-ratios-iran-3-scenarios-ihme)
+[graph (14) Iran - Daily Infection-outcome ratios, 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-14-daily-infection-outcomes-ratios-iran-3-scenarios-ihme)
 
-[graph (15) Iran - Daily mobility, 3 scenarios IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-15-daily-mobility-iran-3-scenarios-ihme)
+[graph (15) Iran - Daily mobility, 3 scenarios IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-15-daily-mobility-iran-3-scenarios-ihme)
 
-[graph (16) Iran - Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%2C%20PREVIOUS%20UPTAKES#graph-16-daily-mask-use-iran-3-scenarios-ihme)
+[graph (16) Iran - Daily mask use, 3 scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202021/README.md#graph-16-daily-mask-use-iran-3-scenarios-ihme)
 
-[graph (17) Iran - Cumulative vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-17-cumulative-vaccinated-percent-iran-ihme) 
+[graph (17) Iran - Cumulative vaccinated percent, IHME](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-17-cumulative-vaccinated-percent-iran-ihme) 
 
 
  
