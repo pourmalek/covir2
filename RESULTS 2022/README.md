@@ -20,7 +20,7 @@
  
 [graph (7b) Iran - Reported daily cases, peaks, post-peaks, and linear trends](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-7b-iran---reported-cases-peaks-post-peaks-and-linear-trends)
 
-[graph (8) Iran - Daily cases or infections, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS%202021/README.md#graph-8-iran---daily-cases-or-infections-2021) 
+[graph (8) Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8-iran---daily-cases-or-infections-2021-on) 
 
 [graph (8b) Iran - Daily cases, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8b-iran---daily-cases-2021)
  
