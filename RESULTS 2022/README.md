@@ -28,7 +28,7 @@
 
 [graph (8d) Iran - COVID-19 daily infections, IHME, worse scenario](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-8d-iran---covid-19-daily-infections-ihme-worse-scenario)
 
-[graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-9-iran---hospital-related-outcomes-all-time) 
+[graph (9) Iran - Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-9-iran---hospital-related-outcomes-all-time) 
  
 [graph (10) Iran - Hospital-related outcomes, 2021](https://github.com/pourmalek/covir2/blob/main/RESULTS,%20PREVIOUS%20UPTAKES/README.md#graph-10-iran---hospital-related-outcomes-2021) 
  
