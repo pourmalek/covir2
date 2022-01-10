@@ -99,22 +99,26 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148832978-4c08b3b3-7d6f-44fe-92c9-955c34394409.png)
   
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/148833083-4253e162-2643-418d-ac78-9cce34ef42be.png)
   
 ****
 ****
 
 (13) Iran [R effective, 3 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148833174-5826c8df-0322-4b56-a269-95cb29fe1549.png)
 
 ****
 
 (14) Iran [Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148833257-a156883a-b690-406f-a388-2be547bb619e.png)
 
 ****
 
