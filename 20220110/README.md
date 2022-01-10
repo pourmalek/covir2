@@ -122,9 +122,9 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 ****
 
-(14) Iran [Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
+(14) Iran [Daily Infection-outcome ratios, reference scenario, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2021d%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%20reference%20scenario%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/148833257-a156883a-b690-406f-a388-2be547bb619e.png)
+![image](https://user-images.githubusercontent.com/30849720/148836927-0e86f082-c8ec-40e9-90c9-f420424050a0.png)
 
 ****
 
