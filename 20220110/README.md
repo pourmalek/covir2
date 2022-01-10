@@ -158,7 +158,7 @@ The trend of the CALCULATED IHME Daily detected infections (= Daily infections *
 
 (19) Iran [Daily hospitalized infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2051%20COVID-19%20daily%20hospitalized%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
-Calculated Daily hospitalized infections = Daily infections * Infection hospitalizatio ratio
+Calculated Daily hospitalized infections = Daily infections * Infection hospitalization ratio
 
 The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infections * hospitalization ratio) is comparable with the trend of IHME "Daily hospital admissions", with a time lag of about two weeks for the previous waves, increasing to almost a month for the sixth peak. The peak values of the CALCULATED IHME Daily hospitalized infections are more than the peak values of the "Daily hospital admissions", and this difference increases across the waves. 
 
