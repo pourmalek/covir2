@@ -52,7 +52,7 @@
 
 [graph (19) Iran - Daily hospitalized infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-19-iran---daily-hospitalized-infections-reference-scenario-all-time-ihme)
 
-[graph (20) Iran - Daily fatal infections, reference scenario, all time, IHME]
+[graph (20) Iran - Daily fatal infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-20-iran---daily-fatal-infections-reference-scenario-all-time-ihme)
  
  
  
