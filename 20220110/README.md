@@ -150,6 +150,8 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 Calculated Daily detected infections = Daily infections * Infection detection ratio
 
+Trend of the CALCULATED IHME Daily detected infections (= Daily infections * Infection detection ratio) is comparable with the trend of IHME "Daily infections (raw data)", with a time lag of about two weeks. 
+
 ![image](https://user-images.githubusercontent.com/30849720/148837449-64d2ca4d-90e5-44ed-bde0-36f59c846279.png)
 
 ****
