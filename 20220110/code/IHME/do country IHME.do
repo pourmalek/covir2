@@ -1936,6 +1936,58 @@ label var daily_all_fully_vacci_pct "% Daily population IHME Fully vaccinated (o
 
 
 
+
+
+
+
+
+
+
+
+*******************************************************************
+
+* gen Detected Infections = Infections * Infection detection ratio 
+
+gen DayINFDetMeSmA02S01 = DayINFMeSmA02S01 * infection_detection_A02S01
+gen DayINFDetLoSmA02S01 = DayINFLoSmA02S01 * infection_detection_A02S01
+gen DayINFDetUpSmA02S01 = DayINFUpSmA02S01 * infection_detection_A02S01
+
+label var DayINFDetMeSmA02S01 "Daily Detected Infections Mean smoothed IHME S1"
+label var DayINFDetLoSmA02S01 "Daily Detected Infections Lower smoothed IHME S1"
+label var DayINFDetUpSmA02S01 "Daily Detected Infections Upper smoothed IHME S1"
+
+
+
+* gen Hospitalized Infections = Infections * Infection hospitalization ratio 
+
+gen DayINFHosMeSmA02S01 = DayINFMeSmA02S01 * infection_hospitalization_A02S01
+gen DayINFHosLoSmA02S01 = DayINFLoSmA02S01 * infection_hospitalization_A02S01
+gen DayINFHosUpSmA02S01 = DayINFUpSmA02S01 * infection_hospitalization_A02S01
+
+label var DayINFHosMeSmA02S01 "Daily Hospitalized Infections Mean smoothed IHME S1"
+label var DayINFHosLoSmA02S01 "Daily Hospitalized Infections Lower smoothed IHME S1"
+label var DayINFHosUpSmA02S01 "Daily Hospitalized Infections Upper smoothed IHME S1"
+
+
+
+* gen Fatal Infections = Infections * Infection fatality ratio 
+
+gen DayINFFatMeSmA02S01 = DayINFMeSmA02S01 * infection_fatality_A02S01
+gen DayINFFatLoSmA02S01 = DayINFLoSmA02S01 * infection_fatality_A02S01
+gen DayINFFatUpSmA02S01 = DayINFUpSmA02S01 * infection_fatality_A02S01
+
+label var DayINFFatMeSmA02S01 "Daily Fatal Infections Mean smoothed IHME S1"
+label var DayINFFatLoSmA02S01 "Daily Fatal Infections Lower smoothed IHME S1"
+label var DayINFFatUpSmA02S01 "Daily Fatal Infections Upper smoothed IHME S1"
+
+
+
+
+
+
+
+
+
 qui compress
 
 save "country IHME.dta", replace
@@ -2275,6 +2327,26 @@ note("3rd Best scenario = Reduced vaccine hesitancy")
 graph save "graph 10 3 COVID-19 daily infections, $country 3rd Best scenario CI, IHME.gph", replace
 graph export "graph 10 3 COVID-19 daily infections, $country 3rd Best scenario CI, IHME.pdf", replace
 
+
+
+*****************
+	
+* daily cases
+	
+
+* daily cases, reference scenario = S1 	   
+	   
+twoway (rarea DayCasLoSmA02S01 DayCasUpSmA02S01 date, sort color(black*.2)) ///
+(line DayCasMeSmA02S01 date, sort lcolor(black)) ///
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#26, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily cases) title("COVID-19 daily cases, $country, IHME, reference scenario", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)	///
+note("Reference scenario = Current projection; Cases = Infections * Infection detection ratio / 100")
+	   
+graph save "graph 10 4 COVID-19 daily daily, $country reference scenario CI, IHME.gph", replace
+graph export "graph 10 4 COVID-19 daily daily, $country reference scenario CI, IHME.pdf", replace
 
 
 
@@ -2883,6 +2955,72 @@ note("Current scenario, mean estimate")
 graph save "graph 45 COVID-19 daily deaths and infections $country, IHME.gph", replace
 qui graph export "graph 45 COVID-19 daily deaths and infections $country, IHME.pdf", replace
 
+
+
+
+
+
+*****************	
+
+* daily detected infections, reference scenario = S1 	   
+	   
+twoway (rarea DayINFDetLoSmA02S01 DayINFDetUpSmA02S01 date, sort color(black*.2)) ///
+(line DayINFDetMeSmA02S01 date, sort lcolor(black)) ///
+(line dai_inf_A02S01 date, sort lcolor(red)) ///
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#26, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily detected infections) title("COVID-19 daily detected infections, $country, IHME, reference scenario", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///	///
+legend(order(2 "Daily detected infections" 3 "Daily infections (raw data)") size(small)) ///
+note("Reference scenario = Current projection;" ///
+"Calculated Daily detected infections = Daily infections * Infection detection ratio")
+	   
+graph save "graph 50 COVID-19 daily detected infections, $country reference scenario CI, IHME.gph", replace
+graph export "graph 50 COVID-19 daily detected infections, $country reference scenario CI, IHME.pdf", replace
+
+
+
+*****************	
+
+* daily hospitalized infections, reference scenario = S1 	   
+	   
+twoway (rarea DayINFHosLoSmA02S01 DayINFHosUpSmA02S01 date, sort color(black*.2)) ///
+(line DayINFHosMeSmA02S01 date, sort lcolor(black)) ///
+(line DayAdmMeSmA02S01 date, sort lcolor(red)) ///
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#26, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily hospitalized infections) title("COVID-19 daily hospitalized infections, $country, IHME, reference scenario", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///	///
+legend(order(2 "Daily hospitalized infections" 3 "Daily hospital admissions") size(small)) ///
+note("Reference scenario = Current projection;" ///
+"Calculated Daily hospitalized infections = Daily infections * Infection hospitalization ratio")
+	   
+graph save "graph 51 COVID-19 daily hospitalized infections, $country reference scenario CI, IHME.gph", replace
+graph export "graph 51 COVID-19 daily hospitalized infections, $country reference scenario CI, IHME.pdf", replace
+
+
+
+
+*****************	
+
+* daily fatal infections, reference scenario = S1 	   
+	   
+twoway (rarea DayINFFatLoSmA02S01 DayINFFatUpSmA02S01 date, sort color(black*.2)) ///
+(line DayINFFatMeSmA02S01 date, sort lcolor(black)) ///
+(line DayDeaMeSmA02S01 date, sort lcolor(red)) ///
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#26, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily fatal infections) title("COVID-19 daily fatal infections, $country, IHME, reference scenario", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///	///
+legend(order(2 "Daily fatal infections" 3 "Daily deaths") size(small)) ///
+note("Reference scenario = Current projection;" ///
+"Calculated Daily fatal infections = Daily infections * Infection fatality ratio")
+	   
+graph save "graph 52 COVID-19 daily fatal infections, $country reference scenario CI, IHME.gph", replace
+graph export "graph 52 COVID-19 daily fatal infections, $country reference scenario CI, IHME.pdf", replace
 
 
 
