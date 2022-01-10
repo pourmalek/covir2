@@ -682,6 +682,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 (14) Iran [Daily Infection-outcome ratios, reference scenario, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/IHME/graph%2021d%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%20reference%20scenario%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148847750-2134064c-a82f-4e6d-845f-2a5a804c6561.png)
 
 *
 
@@ -706,7 +707,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(15) Iran [Daily mobility, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148837118-512219b9-345c-423f-9180-381f21544104.png)
 
 *
 
@@ -740,7 +743,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(16) Iran [Daily mask use, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148837211-5fe84fd7-b68e-4fd1-827e-912d81f6b11a.png)
 
 *
 
@@ -774,7 +779,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148837299-043718bb-738a-4420-a9e2-5c0ebcedabe7.png)
 
 *
 
@@ -788,7 +795,107 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 
 
+
+
+
+
+
+
+
+**** 
+**** 
+
+#### graph (18) Iran - Daily detected infections, reference scenario, all time, IHME
+
+ 
+ 
+ 
+ 
+
+*
+
+**uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
+
+(18) Iran [Daily detected infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2050%20COVID-19%20daily%20detected%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
+
+Calculated Daily detected infections = Daily infections * Infection detection ratio
+
+The trend of the CALCULATED IHME Daily detected infections (= Daily infections * Infection detection ratio) is comparable with the trend of IHME "Daily infections (raw data)", with a time lag of about two weeks.
+
+![image](https://user-images.githubusercontent.com/30849720/148837449-64d2ca4d-90e5-44ed-bde0-36f59c846279.png)
+
+*
+
+
+
+
+
+
+
+
+
+
+**** 
+**** 
+
+#### graph (19) Iran - Daily hospitalized infections, reference scenario, all time, IHME
+
+ 
+ 
+ 
+ 
+
+*
+
+**uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
+
+(19) Iran [Daily hospitalized infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2051%20COVID-19%20daily%20hospitalized%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
+
+Calculated Daily hospitalized infections = Daily infections * Infection hospitalization ratio
+
+The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infections * Infection hospitalization ratio) is comparable with the trend of IHME "Daily hospital admissions", with a time lag of about two weeks for the previous waves, increasing to almost a month for the sixth peak. The peak values of the CALCULATED IHME Daily hospitalized infections are more than the peak values of the "Daily hospital admissions", and this difference increases across the waves.
+
+![image](https://user-images.githubusercontent.com/30849720/148837610-50c417e9-e650-4cea-80a9-cf7b6819d3b6.png)
+
+*
+
+
+
+
+
+
+
+
+
+**** 
+**** 
+
+#### graph (20) Iran - Daily fatal infections, reference scenario, all time, IHME
+
+ 
+ 
+ 
+ 
+
+*
+
+**uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
+
+(20) Iran [Daily fatal infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2052%20COVID-19%20daily%20fatal%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
+
+Calculated Daily fatal infections = Daily infections * Infection fatality ratio
+
+The trend of the CALCULATED IHME Daily fatal infections (= Daily infections * Infection fatality ratio) is HARDLY comparable with the trend of IHME "Daily deaths". Time trends and peak values are incongruent. Even more, there is slight “down bowing” of "Daily deaths" concurrent with the sixth wave in the Daily fatal infections.
+
+![image](https://user-images.githubusercontent.com/30849720/148837761-91398c89-ad40-4a66-85fc-fb6be68ae733.png)
+
+*
+
+
+
 ****
 ****
+
+
 
 
