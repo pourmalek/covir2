@@ -170,6 +170,8 @@ The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infectio
 
 Calculated Daily fatal infections = Daily infections * Infection fatality ratio
 
+The trend of the CALCULATED IHME Daily fatal infections (= Daily infections * Daily fatality ratio) is HARDLY comparable with the trend of IHME "Daily deaths". Time trends and peak values are incongruent. Even more, there is slight “down bowing” of "Daily deaths" concurrent with the sixth wave in the Daily fatal infections. 
+
 ![image](https://user-images.githubusercontent.com/30849720/148837761-91398c89-ad40-4a66-85fc-fb6be68ae733.png)
 
 ****
