@@ -112,7 +112,9 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(1) Iran [Daily deaths, reference scenarios, all time](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831277-7df13048-a82f-476e-b3ad-d72430e4231b.png)
 
 *
 
