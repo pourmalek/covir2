@@ -146,7 +146,9 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(2) Iran [Daily deaths, reference scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831372-f53802f0-6473-4499-b11c-386c691cd670.png)
 
 *
 
@@ -177,7 +179,9 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831467-f4df31d6-c2f1-4d54-bb3e-81d157b1d46c.png)
 
 *
 
@@ -212,7 +216,9 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(4) Iran [Daily deaths, 2021 on, 5 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831557-2733d83c-8a59-4ceb-bc22-047f83a507c3.png)
 
 *
 
@@ -245,7 +251,7 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -278,7 +284,7 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -311,7 +317,9 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831861-f2f03042-81bc-4ed9-8b9e-a958f14647cd.png)
 
 *
 
@@ -343,7 +351,9 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831942-18f098f5-1d9d-4db9-8c86-94a531d79af4.png)
 
 *
 
@@ -362,10 +372,11 @@
 
 
 
+
 **** 
 **** 
 
-#### graph (8b) Iran - Daily cases, 2021 on
+#### graph (8b1) Iran - Daily Infections, 5 scenarios, all time, IHME
 
  
  
@@ -376,13 +387,51 @@
 
 **uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
+(8b1) [Iran Daily Infections, 5 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148833257-a156883a-b690-406f-a388-2be547bb619e.png)
 
 *
 
 **uptake 20220104**: **_DELP 20220104_**, IHME 20211221, **_IMPE 20211213_**, **_SRIV 20220104_**
 
-(8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+(8b1) [Iran Daily Infections, 5 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/148844393-1bdbde34-c2a4-4a3f-9946-15ffbcc2f7be.png)
+
+*
+
+
+
+
+
+
+
+
+
+**** 
+**** 
+
+#### graph (8b2) Iran - Daily cases, 2021 on
+
+ 
+ 
+ 
+ 
+
+*
+
+**uptake 20220110**: **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
+
+(8b2) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/148832027-1ba75ae2-83bc-435f-b9ca-592990582ba4.png)
+
+*
+
+**uptake 20220104**: **_DELP 20220104_**, IHME 20211221, **_IMPE 20211213_**, **_SRIV 20220104_**
+
+(8b2) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220104/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/148628594-44c8c767-f16a-4e92-a172-524d2f609aa8.png)
 
