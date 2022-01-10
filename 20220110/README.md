@@ -27,21 +27,25 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831277-7df13048-a82f-476e-b3ad-d72430e4231b.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831372-f53802f0-6473-4499-b11c-386c691cd670.png)
 
 ****
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831467-f4df31d6-c2f1-4d54-bb3e-81d157b1d46c.png)
 
 ****
 
 (4) Iran [Daily deaths, 2021 on, 5 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148831557-2733d83c-8a59-4ceb-bc22-047f83a507c3.png)
 
 ****
 
