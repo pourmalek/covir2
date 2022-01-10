@@ -121,5 +121,30 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 ****
 
+(18) Iran [Daily detected infections, reference scenario, all time, IHME]()
+
+Calculated Daily detected infections = Daily infections * Infection detection ratio
+
+
+****
+
+(19) Iran [Daily hospitalized infections, reference scenario, all time, IHME]()
+
+Calculated Daily hospitalized infections = Daily infections * Infection hospitalizatio ratio
+
+
+****
+
+(20) Iran [Daily fatal infections, reference scenario, all time, IHME]()
+
+Calculated Daily fatal infections = Daily infections * Infection fatality ratio
+
+
+****
+
+
+
+
+
 
 
