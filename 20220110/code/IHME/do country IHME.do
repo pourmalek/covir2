@@ -2329,25 +2329,6 @@ graph export "graph 10 3 COVID-19 daily infections, $country 3rd Best scenario C
 
 
 
-*****************
-	
-* daily cases
-	
-
-* daily cases, reference scenario = S1 	   
-	   
-twoway (rarea DayCasLoSmA02S01 DayCasUpSmA02S01 date, sort color(black*.2)) ///
-(line DayCasMeSmA02S01 date, sort lcolor(black)) ///
-if date >= td(01jan2020) ///
-, xtitle(Date) xlabel(#26, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily cases) title("COVID-19 daily cases, $country, IHME, reference scenario", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)	///
-note("Reference scenario = Current projection; Cases = Infections * Infection detection ratio / 100")
-	   
-graph save "graph 10 4 COVID-19 daily daily, $country reference scenario CI, IHME.gph", replace
-graph export "graph 10 4 COVID-19 daily daily, $country reference scenario CI, IHME.pdf", replace
-
 
 
 * total deaths
