@@ -4,7 +4,7 @@
 
 **_DELP 20220110_**, **_IHME 20220110_**, IMPE 20211213, **_SRIV 20220110_**
 
-IHME uptake 20220110 released on uptake 20220110, but dated 20220108. First time like this. 
+IHME uptake 20220110 was released on 20220110, but dated 20220108. First time like this. 
 
 <br/><br/>
 
