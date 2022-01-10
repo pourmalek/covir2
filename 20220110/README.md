@@ -73,7 +73,13 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
   
 ****
 
-(8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+(8b1) [Iran Daily Infections, 5 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/148833257-a156883a-b690-406f-a388-2be547bb619e.png)
+
+****
+
+(8b2) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/148832027-1ba75ae2-83bc-435f-b9ca-592990582ba4.png)
 
