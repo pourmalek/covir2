@@ -18,9 +18,11 @@
 
 [graph (7) Iran - Daily cases or infections, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-7-iran---daily-cases-or-infections-all-time) 
 
-[graph (8) Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8-iran---daily-cases-or-infections-2021-on) 
+[graph (8) Iran - Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8-iran---daily-cases-or-infections-2021-on) 
 
-[graph (8b) Iran - Daily cases, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8b-iran---daily-cases-2021-on)
+[graph (8b1) Iran - Daily Infections, 5 scenarios, all time, IHME()
+
+[graph (8b2) Iran - Daily cases, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8b2-iran---daily-cases-2021-on)
  
 [graph (8c) Iran - Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8c-iran---daily-estimated-infections-ihme-impe-to-reported-cases-john-main-scenarios-2021-on)
 
@@ -38,7 +40,7 @@
 
 [graph (13) Iran - R effective, 3 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-13-iran---r-effective-3-scenarios-2021-on-ihme) 
  
-[graph (14) Iran - Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-14-iran---daily-infection-outcome-ratios-5-scenarios-2021-on-ihme)
+[graph (14) Iran - Daily Infection-outcome ratios, reference scenario, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-14-iran---daily-infection-outcome-ratios-5-scenarios-2021-on-ihme)
 
 [graph (15) Iran - Daily mobility, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-15-iran---daily-mobility-3-scenarios-all-time-ihme)
 
@@ -46,7 +48,11 @@
 
 [graph (17) Iran - Cumulative vaccinated percent, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-17-iran---percent-cumulative-vaccinated-2021-on-ihme) 
 
+[graph (18) Iran - Daily detected infections, reference scenario, all time, IHME]
 
+[graph (19) Iran - Daily hospitalized infections, reference scenario, all time, IHME]
+
+[graph (20) Iran - Daily fatal infections, reference scenario, all time, IHME]
  
  
  
