@@ -93,6 +93,7 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 (10) Iran [Hospital-related outcomes, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148832834-67d4d848-c020-4989-8dd8-1867ec27f2f1.png)
 
 ****
 
