@@ -130,37 +130,43 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 (15) Iran [Daily mobility, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148837118-512219b9-345c-423f-9180-381f21544104.png)
 
 ****
 
 (16) Iran [Daily mask use, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148837211-5fe84fd7-b68e-4fd1-827e-912d81f6b11a.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/148837299-043718bb-738a-4420-a9e2-5c0ebcedabe7.png)
 
 ****
 
-(18) Iran [Daily detected infections, reference scenario, all time, IHME]()
+(18) Iran [Daily detected infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2050%20COVID-19%20daily%20detected%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
 Calculated Daily detected infections = Daily infections * Infection detection ratio
 
+![image](https://user-images.githubusercontent.com/30849720/148837449-64d2ca4d-90e5-44ed-bde0-36f59c846279.png)
 
 ****
 
-(19) Iran [Daily hospitalized infections, reference scenario, all time, IHME]()
+(19) Iran [Daily hospitalized infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2051%20COVID-19%20daily%20hospitalized%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
 Calculated Daily hospitalized infections = Daily infections * Infection hospitalizatio ratio
 
+![image](https://user-images.githubusercontent.com/30849720/148837610-50c417e9-e650-4cea-80a9-cf7b6819d3b6.png)
 
 ****
 
-(20) Iran [Daily fatal infections, reference scenario, all time, IHME]()
+(20) Iran [Daily fatal infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/IHME/graph%2052%20COVID-19%20daily%20fatal%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
 Calculated Daily fatal infections = Daily infections * Infection fatality ratio
 
+![image](https://user-images.githubusercontent.com/30849720/148837761-91398c89-ad40-4a66-85fc-fb6be68ae733.png)
 
 ****
 
