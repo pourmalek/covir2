@@ -160,7 +160,7 @@ The trend of the CALCULATED IHME Daily detected infections (= Daily infections *
 
 Calculated Daily hospitalized infections = Daily infections * Infection hospitalizatio ratio
 
-The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infections * hospitalization detection ratio) is comparable with the trend of IHME "Daily hospital admissions", with a time lag of about two weeks for the previous waves, increasing to almost a month for the sixth peak. The peak values of the CALCULATED IHME Daily hospitalized infections are more than the peak values of the "Daily hospital admissions", and this difference increases across the waves. 
+The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infections * hospitalization ratio) is comparable with the trend of IHME "Daily hospital admissions", with a time lag of about two weeks for the previous waves, increasing to almost a month for the sixth peak. The peak values of the CALCULATED IHME Daily hospitalized infections are more than the peak values of the "Daily hospital admissions", and this difference increases across the waves. 
 
 ![image](https://user-images.githubusercontent.com/30849720/148837610-50c417e9-e650-4cea-80a9-cf7b6819d3b6.png)
 
