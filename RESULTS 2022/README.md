@@ -916,7 +916,7 @@ The trend of the CALCULATED IHME daily hospitalized infections (= Daily infectio
 
 Calculated daily fatal infections = Daily infections * Infection fatality ratio
 
-The trend of the CALCULATED IHME Daily fatal infections (= Daily infections * Infection fatality ratio) (red curve) is HARDLY comparable with the trend of IHME Daily deaths (black curve) or the IHME Daily excess deaths (yellow curve). Time trends and peak values are incongruent. Even more, there is a slight "down bowing" of "Daily deaths" concurrent with the sixth wave, when the the CALCULATED IHME Daily fatal infections are predicted to rise. 
+The trend of the CALCULATED IHME Daily fatal infections (= Daily infections * Infection fatality ratio) (red curve) is HARDLY comparable with the trend of IHME Daily deaths (black curve) or the IHME Daily excess deaths (yellow curve). Time trends and peak values are incongruent. Even more, there is a slight "down bowing" of "Daily deaths" concurrent with the sixth wave, when the CALCULATED IHME Daily fatal infections are predicted to rise. 
 
 ![image](https://user-images.githubusercontent.com/30849720/148870029-71e179f8-0b12-43b5-b3cf-e8e4b6f81393.png)
 
