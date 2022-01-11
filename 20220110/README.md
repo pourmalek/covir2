@@ -156,7 +156,7 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 Calculated daily detected infections = Daily infections * Infection detection ratio
 
-The trend of the CALCULATED IHME Daily detected infections (= Daily infections * Infection detection ratio) (red curve) is comparable with that of IHME "Daily infections (raw data)" (black curve) and JOHN daily reported cases (blue curve). The latter two are fully aligned. with a time lag of about two weeks. The CALCULATED IHME Daily detected infections is about two weeks behind the JOHN daily reported cases, and their heights are comparable during the fifth wave. 
+The trend of the CALCULATED IHME Daily detected infections (= Daily infections * Infection detection ratio) (red curve) is comparable with that of IHME "Daily infections (raw data)" (black curve) and JOHN daily reported cases (blue curve). The latter two are fully aligned, with a time lag of about two weeks. The CALCULATED IHME Daily detected infections is about two weeks behind the JOHN daily reported cases, and their heights are comparable during the fifth wave. 
 
 This means there might be more than 80,000 daily detectable cases of disease in late February 2022 (1400-11-26 to 1400-12-14) - if enough testing performed. Not all of them will be severe or need hospitalization. 
 
