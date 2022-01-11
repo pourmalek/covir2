@@ -154,9 +154,11 @@ IHME uptake 20220110 was released on 20220110, but dated 20220108. First time li
 
 (18) Iran [Daily detected infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20121%20COVID-19%20daily%20detected%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
-Calculated Daily detected infections = Daily infections * Infection detection ratio
+Calculated daily detected infections = Daily infections * Infection detection ratio
 
-The trend of the CALCULATED IHME Daily detected infections (= Daily infections * Infection detection ratio) is comparable with the trend of IHME "Daily infections (raw data)", with a time lag of about two weeks.
+The trend of the CALCULATED IHME Daily detected infections (= Daily infections * Infection detection ratio) (red curve) is comparable with that of IHME "Daily infections (raw data)" (black curve) and JOHN daily reported cases (blue curve). The latter two are fully aligned. with a time lag of about two weeks. The CALCULATED IHME Daily detected infections is about two weeks behind the JOHN daily reported cases, and their heights are comparable during the fifth wave. 
+
+This means there might be more than 80,000 daily detectable cases of disease in late February 2022 (1400-11-26 to 1400-12-14).
 
 ![image](https://user-images.githubusercontent.com/30849720/148869822-a78314ee-efd0-40d2-afbc-087bdaf07653.png)
 
@@ -164,9 +166,8 @@ The trend of the CALCULATED IHME Daily detected infections (= Daily infections *
 
 (19) Iran [Daily hospitalized infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20122%20COVID-19%20daily%20hospitalized%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
-Calculated Daily hospitalized infections = Daily infections * Infection hospitalization ratio
+Calculated daily hospitalized infections = Daily infections * Infection hospitalization ratio
 
-The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infections * Infection hospitalization ratio) is comparable with the trend of IHME "Daily hospital admissions", with a time lag of about two weeks for the previous waves, increasing to almost a month for the sixth peak. The peak values of the CALCULATED IHME Daily hospitalized infections are more than the peak values of the "Daily hospital admissions", and this difference increases across the waves.
 
 ![image](https://user-images.githubusercontent.com/30849720/148869944-42256f08-f15e-4dfb-8bd5-8b5d11ce35b9.png)
 
@@ -174,7 +175,7 @@ The trend of the CALCULATED IHME Daily hospitalized infections (= Daily infectio
 
 (20) Iran [Daily fatal infections, reference scenario, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%20123%20COVID-19%20daily%20fatal%20infections%2C%20Iran%20reference%20scenario%20CI%2C%20IHME.pdf)
 
-Calculated Daily fatal infections = Daily infections * Infection fatality ratio
+Calculated daily fatal infections = Daily infections * Infection fatality ratio
 
 The trend of the CALCULATED IHME Daily fatal infections (= Daily infections * Infection fatality ratio) is HARDLY comparable with the trend of IHME "Daily deaths". Time trends and peak values are incongruent. Even more, there is slight “down bowing” of "Daily deaths" concurrent with the sixth wave in the Daily fatal infections.
 
