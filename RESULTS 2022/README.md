@@ -886,6 +886,8 @@ Calculated daily hospitalized infections = Daily infections * Infection hospital
 
 The trend of the CALCULATED IHME daily hospitalized infections (= Daily infections * Infection hospitalization ratio) (red curve) is comparable with that of IHME Daily hospital admissions (black curve). The CALCULATED IHME daily hospitalized infections leads about two to four months the HME Daily hospital admissions, and the height of the CALCULATED IHME daily hospitalized infections is more than the other. 
 
+تعداد موارد بیماری قابل تشخیص می تواند در اواخر بهمن ماه تا اواسط اسفند ۱۴۰۰ به بیش از هشتاد هزار مورد در روز برسد که البته همه آن ها شدید نبوده و یا منجر به بستری نمی گردند. 
+
 ![image](https://user-images.githubusercontent.com/30849720/148869944-42256f08-f15e-4dfb-8bd5-8b5d11ce35b9.png)
 
 *
