@@ -477,6 +477,37 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 
 
+
+
+
+**** 
+**** 
+
+#### graph (8d) Iran - Daily infections, IHME, worse scenario
+
+ 
+ 
+ 
+ 
+
+*
+
+(8d) Iran [Daily infections, IHME, worse scenario](https://github.com/pourmalek/covir2/blob/main/20220110/output/merge/graph%2025%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20worse%20scenario%2C%20IHME.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/148880637-26773ea7-de0d-4bde-b7b7-28799091b1b2.png)
+
+*
+
+
+
+
+
+
+
+
+
+
+
 **** 
 **** 
 
