@@ -401,7 +401,6 @@ label var DayHodMeRaA03S06 "Daily hospital demand Mean A03 S06 "
 label var DayHodLoRaA03S06 "Daily hospital demand Lower A03 S06 "
 label var DayHodUpRaA03S06 "Daily hospital demand Upper A03 S06 "
 
-/* Not available in this update
 
 label var DayHoiMeRaA03S01 "Daily hospital incidence Mean A03 S01 "
 label var DayHoiLoRaA03S01 "Daily hospital incidence Lower A03 S01 "
@@ -421,7 +420,7 @@ label var DayHoiUpRaA03S05 "Daily hospital incidence Upper A03 S05 "
 label var DayHoiMeRaA03S06 "Daily hospital incidence Mean A03 S06 "
 label var DayHoiLoRaA03S06 "Daily hospital incidence Lower A03 S06 "
 label var DayHoiUpRaA03S06 "Daily hospital incidence Upper A03 S06 "
-*/
+
 
 label var DayIcdMeRaA03S01 "Daily ICU demand Mean A03 S01 "
 label var DayIcdLoRaA03S01 "Daily ICU demand Lower A03 S01 "
@@ -442,7 +441,6 @@ label var DayIcdMeRaA03S06 "Daily ICU demand Mean A03 S06 "
 label var DayIcdLoRaA03S06 "Daily ICU demand Lower A03 S06 "
 label var DayIcdUpRaA03S06 "Daily ICU demand Upper A03 S06 "
 
-/* Not available in this update
 
 label var DayIciMeRaA03S01 "Daily ICU incidence Mean A03 S01 "
 label var DayIciLoRaA03S01 "Daily ICU incidence Lower A03 S01 "
@@ -462,7 +460,7 @@ label var DayIciUpRaA03S05 "Daily ICU incidence Upper A03 S05 "
 label var DayIciMeRaA03S06 "Daily ICU incidence Mean A03 S06 "
 label var DayIciLoRaA03S06 "Daily ICU incidence Lower A03 S06 "
 label var DayIciUpRaA03S06 "Daily ICU incidence Upper A03 S06 "
-*/
+
 
 label var DayPreMeRaA03S01 "Daily prevalence Mean A03 S01 "
 label var DayPreLoRaA03S01 "Daily prevalence Lower A03 S01 "
@@ -952,7 +950,6 @@ graph export "graph 12 COVID-19 daily hospital demand, 6 scenarios, $country, IM
 
 * daily hospital incidence, median scenario
 
-/* Not available in this update
 
 twoway ///
 (rarea DayHoiLoRaA03S01 DayHoiUpRaA03S01 date, sort color(green*0.2)) ///
@@ -989,7 +986,7 @@ legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4
 graph save "graph 14 COVID-19 daily hospital incidence, 6 scenarios, $country, IMPE.gph", replace
 graph export "graph 14 COVID-19 daily hospital incidence, 6 scenarios, $country, IMPE.pdf", replace
 
-*/
+
 
 
 
@@ -1036,8 +1033,6 @@ graph export "graph 16 COVID-19 daily ICU demand, 6 scenarios, $country, IMPE.pd
 
 * daily ICU incidence, median scenario
 
-/* Not available in this update
-
 twoway ///
 (rarea DayIciLoRaA03S01 DayIciUpRaA03S01 date, sort color(green*0.2)) ///
 (line DayIciMeRaA03S01 date, sort lcolor(black)) ///
@@ -1073,7 +1068,7 @@ legend(region(lcolor(none))) legend(bexpand) legend(order(1 "S1" 2 "S2" 3 "S3" 4
 graph save "graph 18 COVID-19 daily ICU incidence, 6 scenarios, $country, IMPE.gph", replace
 graph export "graph 18 COVID-19 daily ICU incidence, 6 scenarios, $country, IMPE.pdf", replace
 
-*/
+
 
 
 
