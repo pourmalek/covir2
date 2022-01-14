@@ -21,16 +21,19 @@ SRIV update 20220114 cannot be downloaded. Issue with https://raw.githubusercont
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220114/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149572957-0b2726ea-4b40-4d70-9445-112fa227f767.png)
 
 ****
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220114/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149573050-c7990443-2f67-4ba1-b0a4-ca388e245d5e.png)
 
 ****
 
 (4) Iran [Daily deaths, 2021 on, 5 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220114/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149573136-4d039cc4-8901-4bf3-b741-d3075072aad4.png)
 
 ****
 
