@@ -15,6 +15,7 @@ SRIV update 2022014 cannot be downloaded. Issue with https://raw.githubuserconte
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220114/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149572574-3896cb48-1f09-4d18-b32d-8fbe5e599e2f.png)
 
 ****
 
