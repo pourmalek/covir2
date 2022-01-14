@@ -1,6 +1,6 @@
 # covir2
 
-## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/covir2/blob/main/situation%20reports/35%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2035%20–%202022-01-10.pdf). 
+## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/covir2/blob/main/situation%20reports/36%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2036%20–%202022-01-14.pdf). 
 
 
 
@@ -221,7 +221,7 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 35 – 2022-01-10](https://github.com/pourmalek/covir2/blob/main/situation%20reports/35%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2035%20–%202022-01-10.pdf)
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 36 – 2022-01-14](https://github.com/pourmalek/covir2/blob/main/situation%20reports/36%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2036%20–%202022-01-14.pdf)
  
 
 ********************************************************************************************************************************************
