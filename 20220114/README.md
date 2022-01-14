@@ -100,26 +100,31 @@ SRIV update 20220114 cannot be downloaded. Issue with https://raw.githubusercont
 
 (13) Iran [R effective, 3 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220114/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149574255-bf48da7d-bdce-470c-9ff9-07073bd7c206.png)
 
 ****
 
 (14) Iran [Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149574335-bd245bc5-9dfa-4b4c-abbf-8af6cdd9ff90.png)
 
 ****
 
 (15) Iran [Daily mobility, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220114/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%203%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149574427-940432ee-7a10-47a9-b45f-ff0d0c88e7c4.png)
 
 ****
 
 (16) Iran [Daily mask use, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220114/output/IHME/graph%2034%20COVID-19%20daily%20mask_use%2C%20Iran%2C%203%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149574514-2e715412-c06b-4ca9-ad2e-7364bc61b8b2.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220114/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149574610-84d1db4b-9867-443c-910a-36fe57133545.png)
 
 ****
 
