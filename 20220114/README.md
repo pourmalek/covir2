@@ -4,7 +4,6 @@
 
 **_DELP 20220114_**, IHME 20220110, **_IMPE 20211226_**, **_SRIV 2022013_**
 
-SRIV update 20220114 cannot be downloaded. Issue with https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/$SRIVdate/2022-01-14/
 
 <br/><br/>
 
