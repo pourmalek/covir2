@@ -7,7 +7,7 @@
 
 <br/><br/>
 
-Note on not including SRIV update 20220116 in graphs:
+Note on not including **SRIV** update 20220116 in graphs:
 
 The SRIV update 20220116 includes extremely highly implausible estimates. Therefore, the SRIV update 20220116 estimates are not included in the merged graphs. 
 
