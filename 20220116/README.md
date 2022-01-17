@@ -97,12 +97,14 @@ The SRIV update 20220116 includes extremely highly implausible estimates. Theref
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/149820114-b1327b83-c470-4c17-a6c1-11a62bdab9bb.png)
   
 ****
 ****
 
-(13) Iran [R effective, 3 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/IHME/graph%2039%20COVID-19%20R%20effective%2C%20Iran%2C%203%20scenarios%2001jun2021%20on.pdf)
+(13) Iran [R effective, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%20101%20COVID-19%20R%20effective%2C%20Iran%2C%202%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149820342-a95fe179-1a6d-47d4-83a9-3c64278d5318.png)
 
 ****
 
