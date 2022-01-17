@@ -36,9 +36,9 @@ The SRIV update 20220116 includes extremely highly implausible estimates. Theref
 
 ****
 
-(4) Iran [Daily deaths, 2021 on, 4 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
+(4) Iran [Daily deaths, 2021 on, 4 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%204%20scenarios%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/149818253-a985b336-c688-4cea-afb7-d5a8835d4f93.png)
+![image](https://user-images.githubusercontent.com/30849720/149820748-ef0ec5f8-399e-48f1-a272-6f57a4edf78d.png)
 
 ****
 
