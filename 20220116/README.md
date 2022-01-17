@@ -50,6 +50,7 @@ The SRIV update 20220116 includes extremely highly implausible estimates. Theref
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/149824152-6cbc27c1-3940-42ea-9d8c-86888fbaccce.png)
 
 ****
 
