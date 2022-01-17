@@ -209,9 +209,9 @@ The codes in these repositories can be adapted for use for any country or region
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20220114`](https://github.com/pourmalek/covir2/tree/main/20220114)
+#### LATEST UPTAKE: uptake [`20220116`](https://github.com/pourmalek/covir2/tree/main/20220116)
 
-#### **_DELP 20220114_**, IHME 20220110, **_IMPE 20211226_**, **_SRIV 2022013_**
+#### **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
  
  
  
@@ -793,6 +793,8 @@ Scenarios of IHME model before update 20211221:
 .
  
  
+(60) uptake [`20220116`](https://github.com/pourmalek/covir2/tree/main/20220116): 
+**_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
  
 (59) uptake [`20220114`](https://github.com/pourmalek/covir2/tree/main/20220114): 
 **_DELP 20220114_**, IHME 20220110, **_IMPE 20211226_**, **_SRIV 2022013_**
