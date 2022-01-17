@@ -108,7 +108,7 @@ The SRIV update 20220116 includes extremely highly implausible estimates. Theref
 
 ****
 
-(14) Iran [Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
+(14) Iran [Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
 
 
 ****
