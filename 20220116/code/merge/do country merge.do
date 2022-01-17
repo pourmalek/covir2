@@ -689,7 +689,7 @@ graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with 
 
 
 ****
-* daily deaths, 2 scenarios, IMPE, 2021
+* daily deaths, 3 scenarios, IMPE, 2021
 
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
@@ -705,13 +705,13 @@ ytitle(Daily deaths) title("COVID-19 daily deaths, $country, IMPE", size(medium)
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN raw" 2 "JOHN smooth" 3 "IMPE reference scenario, mean" 4 "IMPE better scenario, mean" ///
 5 "IMPE worse scenario, mean" 6 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
-subtitle("2021 on, 2 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+subtitle("2021 on, 3 scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
 
-graph save "graph 17 COVID-19 daily deaths, $country, 2 scenarios, IMPE.gph", replace
-graph export "graph 17 COVID-19 daily deaths, $country, 2 scenarios, IMPE.pdf", replace
+graph save "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.gph", replace
+graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
 
 
 
@@ -1734,7 +1734,7 @@ graph export "graph 102 COVID-19 daily Infection outcomes ratios, $country 2 sce
 * daily % change in mobility, CI
 
 twoway ///
-(line mobility_mean_A02S02 date, sort lcolor(green)) ///
+(line mobility_mean_A02S02 date, sort lcolor(green) lwidth(vthick) lpattern(tight_dot)) ///
 (line mobility_mean_A02S01 date, sort lcolor(black)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
@@ -1752,7 +1752,7 @@ graph export "graph 103 COVID-19 daily mobility, $country, 2 scenarios IHME.pdf"
 * daily mask use Percent of population reporting always wearing a mask when leaving home
 
 twoway ///
-(line mask_use_mean_A02S02 date, sort lcolor(green)) ///
+(line mask_use_mean_A02S02 date, sort lcolor(green) lwidth(vthick) lpattern(tight_dot)) ///
 (line mask_use_mean_A02S01 date, sort lcolor(black)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
