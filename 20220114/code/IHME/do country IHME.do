@@ -21,6 +21,7 @@ log using "log country IHME.smcl", replace
 *****************************************************************************
 
 																																																			 
+/* severe_omicron is not available in this update. The "current projection" or "reference scenario" is functionally the "worse scenario". */
 																										 
 																									 
 clear 
@@ -40,8 +41,7 @@ Reference scenario 2021
 80% mask use scenario 2021
 Reduced vaccine hesitancy scenario 2020
 Reduced vaccine hesitancy scenario 2021
-Severe Omicron scenario 2020
-Severe Omicron scenario 2021
+
 Third vaccine dose scenario 2020
 Third vaccine dose scenario 2021
 Checksum (sha-256) 
@@ -59,8 +59,6 @@ copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reduce_hesitancy_2020.csv data_download_file_reduce_hesitancy_2020.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_reduce_hesitancy_2021.csv data_download_file_reduce_hesitancy_2021.csv 
 
-copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_severe_omicron_2020.csv data_download_file_severe_omicron_2020.csv 
-copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_severe_omicron_2021.csv data_download_file_severe_omicron_2021.csv 
 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_third_dose_2020.csv data_download_file_third_dose_2020.csv 
 copy https://ihmecovid19storage.blob.core.windows.net/latest/data_download_file_third_dose_2021.csv data_download_file_third_dose_2021.csv 
@@ -100,16 +98,6 @@ save data_download_file_best_masks_2021.dta, replace
 
 
 	
-* scenario name = version_name = high_severity = Severe Omicron
-	
-import delimited using data_download_file_severe_omicron_2020.csv, clear varnames(1)
-keep if regexm(location_name,"$country") == 1
-save data_download_file_severe_omicron_2020.dta, replace
-
-import delimited using data_download_file_severe_omicron_2021.csv, clear varnames(1)
-keep if regexm(location_name,"$country") == 1
-save data_download_file_severe_omicron_2021.dta, replace
-
 
 
 * scenario name = version_name = reduced_hesitancy = Reduced hesitancy
@@ -244,55 +232,6 @@ save "data_download_file_best_masks_2020_21.dta", replace
 
 
 
-* _severe_omicron_
-
-use "data_download_file_severe_omicron_2020.dta", clear 
-
-local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
-
-foreach v of local varlist {
-	capture confirm numeric variable `v'
-    if !_rc {
-		di "`v'" " is numeric"
-    }
-    else {
-		di "`v'" " contains string"
-		replace `v' = "." if `v' == "Inf"
-		destring `v', replace 
-    }
-}
-*
-
-save "data_download_file_severe_omicron_2020.dta", replace 
-
-
-
-use "data_download_file_severe_omicron_2021.dta", clear 
-
-local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
-
-foreach v of local varlist {
-	capture confirm numeric variable `v'
-    if !_rc {
-		di "`v'" " is numeric"
-    }
-    else {
-		di "`v'" " contains string"
-		replace `v' = "." if `v' == "Inf"
-		destring `v', replace 
-    }
-}
-*
-
-save "data_download_file_severe_omicron_2021.dta", replace 
-
-append using "data_download_file_severe_omicron_2020.dta"
-
-save "data_download_file_severe_omicron_2020_21.dta", replace
-
-
-
-
 
 
 * _reduce_hesitancy_
@@ -411,12 +350,11 @@ save "data_download_file_third_dose_2020_21.dta", replace
 
 /*
 
-Descending order of incidence of daily deaths GLOBAL
-(1) High severity of Omicron
-(2) Current projection
-(3) Reduced vaccine hesitancy
-(4) Third dose
-(5) 80% mask use
+Descending order of incidence of daily deaths 
+(1) Current projection
+(2) Reduced vaccine hesitancy
+(3) Third dose
+(4) 80% mask use
 
 
 Previous designation of three scenarios:
@@ -431,7 +369,7 @@ Previous designation of three scenarios:
 **                                             **
 ** * S1 Reference [Current projection]         **
 ** * S2 Best [80% mask use]                    **
-** * S3 Worse [High severity of Omicron]       **
+** * NOMORE S3 Worse [High severity of Omicron]**
 **                                             **
 ** * S4 Second best [Third dose]               **
 ** * S5 Third best [Reduced vaccine hesitancy] **
@@ -484,7 +422,7 @@ cumulative_cases						Cumulative cases (raw data)
 cumulative_deaths						Cumulative deaths (raw data with excess mortality scalar applied)
 cumulative_hospitalizations				Cumulative hospitalizations (raw data)
 daily_deaths							Daily deaths (raw data with excess mortality scalar applied)
-daily_infections						Daily infections (raw data)
+
 cumulative_deaths_unscaled				Cumulative deaths (raw data without excess mortality scalar applied)
 daily_deaths_unscaled					Daily deaths (raw data without excess mortality scalar applied)
 
@@ -635,19 +573,15 @@ rename cumulative_cases cumulative_cases_A02S01
 rename cumulative_deaths cumulative_deaths_A02S01
 rename cumulative_hospitalizations cumulative_hosp_A02S01
 rename daily_deaths daily_deaths_A02S01
-rename daily_infections daily_infections_A02S01
 rename cumulative_deaths_unscaled cumul_deaths_unscaled_A02S01
 rename daily_deaths_unscaled dai_dea_unscaled_A02S01
 label var cumulative_cases_A02S01 "IHME Cumulative cases (raw data) S1"
 label var cumulative_deaths_A02S01 "IHME Cumulative deaths (raw data with excess mortality scalar applied) S1"
 label var cumulative_hosp_A02S01 "IHME Cumulative hospitalizations (raw data) S1"
 label var daily_deaths_A02S01 "IHME Daily deaths (raw data with excess mortality scalar applied) S1"
-label var daily_infections_A02S01 "IHME Daily infections (raw data)"
 label var cumul_deaths_unscaled_A02S01 "IHME umulative deaths (raw data without excess mortality scalar applied) S1"
 label var dai_dea_unscaled_A02S01 "IHME Daily deaths (raw data without excess mortality scalar applied) S1"
 
-rename daily_infections dai_inf_A02S01
-label var dai_inf_A02S01 "IHME Daily infections (raw data without excess mortality scalar applied)" // present in data, not present in data_dictionary.csv
 
 
 
@@ -951,19 +885,15 @@ rename cumulative_cases cumulative_cases_A02S02
 rename cumulative_deaths cumulative_deaths_A02S02
 rename cumulative_hospitalizations cumulative_hosp_A02S02
 rename daily_deaths daily_deaths_A02S02
-rename daily_infections daily_infections_A02S02
 rename cumulative_deaths_unscaled cumul_deaths_unscaled_A02S02
 rename daily_deaths_unscaled dai_dea_unscaled_A02S02
 label var cumulative_cases_A02S02 "IHME Cumulative cases (raw data) S2"
 label var cumulative_deaths_A02S02 "IHME Cumulative deaths (raw data with excess mortality scalar applied) S2"
 label var cumulative_hosp_A02S02 "IHME Cumulative hospitalizations (raw data) S2"
 label var daily_deaths_A02S02 "IHME Daily deaths (raw data with excess mortality scalar applied) S2"
-label var daily_infections_A02S02 "IHME Daily infections (raw data)"
 label var cumul_deaths_unscaled_A02S02 "IHME umulative deaths (raw data without excess mortality scalar applied) S2"
 label var dai_dea_unscaled_A02S02 "IHME Daily deaths (raw data without excess mortality scalar applied) S2"
 
-rename daily_infections dai_inf_A02S02
-label var dai_inf_A02S02 "IHME Daily infections (raw data without excess mortality scalar applied)" // present in data, not present in data_dictionary.csv
 
 
 
@@ -1108,244 +1038,6 @@ save "Best country.dta", replace
 
 
 
-**********************
-
-* S3 Worse
-
-use "data_download_file_severe_omicron_2020_21.dta", clear
-
-
-rename date date_original
-gen year = substr(date_original,1,4) 
-gen month = substr(date_original,6,2) 
-gen day = substr(date_original,9,2) 
-egen date2 = concat(day month year)
-gen date = date(date2, "DMY", 2050)
-format date %tdDDMonCCYY
-codebook date
-drop year month day date2
-
-
-
-* rename variables
-
-* Total Reported Deaths smoothed
-rename seir_cumulative_unscaled_mean  TotDeaMeSmA02S03
-rename seir_cumulative_unscaled_lower TotDeaLoSmA02S03
-rename seir_cumulative_unscaled_upper TotDeaUpSmA02S03
-label var TotDeaMeSmA02S03 "Total Reported Deaths Mean smoothed IHME S3" // Cumulative reported deaths (mean estimate)
-label var TotDeaLoSmA02S03 "Total Reported Deaths Lower smoothed IHME S3" // Cumulative reported deaths (lower 95% confidence interval)
-label var TotDeaUpSmA02S03 "Total Reported Deaths Upper smoothed IHME S3" // Cumulative reported deaths (upper 95% confidence interval)
-
-* Total Excess Deaths smoothed
-rename seir_cumulative_mean  TotDeXMeSmA02S03
-rename seir_cumulative_lower TotDeXLoSmA02S03
-rename seir_cumulative_upper TotDeXUpSmA02S03
-label var TotDeXMeSmA02S03 "Total Excess Deaths Mean smoothed IHME S3" // Cumulative excess deaths (mean estimate)
-label var TotDeXLoSmA02S03 "Total Excess Deaths Lower smoothed IHME S3" // Cumulative excess deaths (lower 95% confidence interval)
-label var TotDeXUpSmA02S03 "Total Excess Deaths Upper smoothed IHME S3" // Cumulative excess deaths (upper 95% confidence interval)
-
-* Daily Reported Deaths smoothed
-rename seir_daily_unscaled_mean  DayDeaMeSmA02S03
-rename seir_daily_unscaled_lower DayDeaLoSmA02S03
-rename seir_daily_unscaled_upper DayDeaUpSmA02S03
-label var DayDeaMeSmA02S03 "Daily Reported Deaths Mean smoothed IHME S3" // Daily reported deaths (mean estimate)
-label var DayDeaLoSmA02S03 "Daily Reported Deaths Lower smoothed IHME S3" // Daily reported deaths (lower 95% confidence interval)
-label var DayDeaUpSmA02S03 "Daily Reported Deaths Upper smoothed IHME S3" // Daily reported deaths upper 95% confidence interval)
-	
-* Daily Excess Deaths smoothed
-rename seir_daily_mean  DayDeXMeSmA02S03
-rename seir_daily_lower DayDeXLoSmA02S03
-rename seir_daily_upper DayDeXUpSmA02S03
-label var DayDeXMeSmA02S03 "Daily Excess Deaths Mean smoothed IHME S3" // Daily excess deaths (mean estimate)
-label var DayDeXLoSmA02S03 "Daily Excess Deaths Lower smoothed IHME S3" // Daily excess deaths (lower 95% confidence interval)
-label var DayDeXUpSmA02S03 "Daily Excess Deaths Upper smoothed IHME S3" // Daily excess deaths upper 95% confidence interval)
-		
-* Total infections smoothed
-rename inf_cuml_mean  TotINFMeSmA02S03
-rename inf_cuml_lower TotINFLoSmA02S03
-rename inf_cuml_upper TotINFUpSmA02S03
-label var TotINFMeSmA02S03 "Total infections Mean smoothed IHME S3" // Cumulative infections (mean estimate)
-label var TotINFLoSmA02S03 "Total infections Lower smoothed IHME S3" // Cumulative infections (lower 95% confidence interval)
-label var TotINFUpSmA02S03 "Total infections Upper smoothed IHME S3" // Cumulative infections (upper 95% confidence interval)
-
-* Daily infections smoothed
-rename inf_mean  DayINFMeSmA02S03 // previously est_infections_mean
-rename inf_lower DayINFLoSmA02S03 // previously est_infections_lower
-rename inf_upper DayINFUpSmA02S03 // previously est_infections_upper
-label var DayINFMeSmA02S03 "Daily infections Mean smoothed IHME S3" // Daily infections (mean estimate)
-label var DayINFLoSmA02S03 "Daily infections Lower smoothed IHME S3" // Daily infections (lower 95% confidence interval)
-label var DayINFUpSmA02S03 "Daily infections Upper smoothed IHME S3" // Daily infections (upper 95% confidence interval)
-
-
-
-
-
-* other variables 
-
-rename reff_mean reff_mean_A02S03
-rename reff_lower reff_lower_A02S03
-rename reff_upper reff_upper_A02S03
-label var reff_mean_A02S03 "IHME R effective (mean estimate) S3"
-label var reff_lower_A02S03 "IHME R effective (lower 95% confidence interval) S3"
-label var reff_upper_A02S03 "IHME R effective (upper 95% confidence interval) S3"
-
-rename cumulative_cases cumulative_cases_A02S03
-rename cumulative_deaths cumulative_deaths_A02S03
-rename cumulative_hospitalizations cumulative_hosp_A02S03
-rename daily_deaths daily_deaths_A02S03
-rename daily_infections daily_infections_A02S03
-rename cumulative_deaths_unscaled cumul_deaths_unscaled_A02S03
-rename daily_deaths_unscaled dai_dea_unscaled_A02S03
-label var cumulative_cases_A02S03 "IHME Cumulative cases (raw data) S3"
-label var cumulative_deaths_A02S03 "IHME Cumulative deaths (raw data with excess mortality scalar applied) S3"
-label var cumulative_hosp_A02S03 "IHME Cumulative hospitalizations (raw data) S3"
-label var daily_deaths_A02S03 "IHME Daily deaths (raw data with excess mortality scalar applied) S3"
-label var daily_infections_A02S03 "IHME Daily infections (raw data)"
-label var cumul_deaths_unscaled_A02S03 "IHME umulative deaths (raw data without excess mortality scalar applied) S3"
-label var dai_dea_unscaled_A02S03 "IHME Daily deaths (raw data without excess mortality scalar applied) S3"
-
-rename daily_infections dai_inf_A02S03
-label var dai_inf_A02S03 "IHME Daily infections (raw data without excess mortality scalar applied)" // present in data, not present in data_dictionary.csv
-
-
-
-
-
-* IDENTICAL ACROSS SCENARIOS:
-
-label var population "IHME Population size"
-label var mobility_obs "IHME Indicator for whether mobility estimate comes from observed data (1) or modelled estimates (0)"
-label var testing_mean "IHME Tests per 100,000 (mean estimate)"
-label var testing_lower "IHME Tests per 100,000 (lower 95% confidence interval)"
-label var testing_upper "IHME Tests per 100,000 (upper 95% confidence interval)"
-label var testing_obs "IHME Indicator for whether testing estimate comes from observed data (1) or modelled estimates (0)"
-label var pneumonia_mean "IHME Ratio of pneumonia deaths in a given week to the average weekly pneumonia deaths by location"
-label var pneumonia_obs "IHME Indicator for whether pneumonia estimate comes from observed data (1) or modelled estimates (0)"
-label var mask_use_obs "IHME Indicator for whether mask estimate comes from observed data (1) or modelled estimates (0)"
-label var cumulative_all_vaccinated	"IHME Initially vaccinated (one dose of two doses)"
-label var cumulative_all_effectively_vacci "IHME Effectively vaccinated (one and two dose with efficacy)" // cumulative_all_effectively_vaccinated
-label var cumulative_all_fully_vaccinated "IHME Fully vaccinated (one of one and†two†of two doses)"
-
-label var all_bed_capacity "IHME Total number of beds that exist at a location"
-label var icu_bed_capacity "IHME Total number of ICU beds that exist at a location"
-
-
-/*
-BY DEFINITION, THE FOLLOWING VARIABLES SHOULD NOT BE IDENTICAL ACROSS SCENARIOS:
-
-mobility_mean
-
-mask_use_mean
-
-hospital_beds_mean
-hospital_beds_upper
-hospital_beds_lower
-icu_beds_mean
-icu_beds_upper
-icu_beds_lower
-admis_mean
-admis_upper
-admis_lower
-
-infection_fatality						Infection fatality ratio
-infection_detection						Infection detection ratio
-infection_hospitalization				Infection hospitalization ratio
-*/
-
-
-rename mobility_mean mobility_mean_A02S03
-rename mask_use_mean mask_use_mean_A02S03
-label var mobility_mean_A02S03 "IHME Percent change in mobility from baseline (mean) S3"
-label var mask_use_mean_A02S03 "IHME Percent of population reporting always wearing a mask when leaving home S3"
-
-rename hospital_beds_mean hospital_beds_mean_A02S03
-rename hospital_beds_upper hospital_beds_upper_A02S03
-rename hospital_beds_lower hospital_beds_lower_A02S03
-rename icu_beds_mean icu_beds_mean_A02S03
-rename icu_beds_upper icu_beds_upper_A02S03
-rename icu_beds_lower icu_beds_lower_A02S03
-rename admis_mean admis_mean_A02S03
-rename admis_upper admis_upper_A02S03
-rename admis_lower admis_lower_A02S03
-label var hospital_beds_mean_A02S03 "IHME Daily COVID-19 hospital beds needed (mean estimate) S3"
-label var hospital_beds_upper_A02S03 "IHME Daily COVID-19 hospital beds needed (upper 95% confidence interval) S3"
-label var hospital_beds_lower_A02S03 "IHME Daily COVID-19 hospital beds needed (lower 95% confidence interval) S3"
-label var icu_beds_mean_A02S03	"IHME Daily COVID-19 ICU beds needed (mean estimate) S3"
-label var icu_beds_upper_A02S03 "IHME Daily COVID-19 ICU beds needed (upper 95% confidence interval) S3"
-label var icu_beds_lower_A02S03 "IHME Daily COVID-19 ICU beds needed (lower 95% confidence interval) S3"
-label var admis_mean_A02S03 "IHME Daily COVID-19 hospital admissions (mean estimate) S3"
-label var admis_upper_A02S03 "IHME Daily COVID-19 hospital admissions (mean estimate) S3"
-label var admis_lower_A02S03 "IHME Daily COVID-19 hospital admissions (mean estimate) S3"
-
-
-rename infection_fatality infection_fatality_A02S03
-rename infection_detection infection_detection_A02S03
-rename infection_hospitalization infection_hospitalization_A02S03
-label var infection_fatality_A02S03 "IHME Infection fatality ratio S3"
-label var infection_detection_A02S03 "IHME Infection detection ratio S3"
-label var infection_hospitalization_A02S03 "IHME Infection hospitalization ratio S3"
-
-
-
-
-
-*
-
-rename hospital_beds_mean_A02S03		DayBedMeSmA02S03
-rename hospital_beds_upper_A02S03		DayBedLoSmA02S03
-rename hospital_beds_lower_A02S03		DayBedUpSmA02S03
-
-label var DayBedMeSmA02S03 "IHME Daily COVID-19 hospital beds needed (mean estimate) S3"
-label var DayBedLoSmA02S03 "IHME Daily COVID-19 hospital beds needed (upper 95% confidence interval) S3"
-label var DayBedUpSmA02S03 "IHME Daily COVID-19 hospital beds needed (lower 95% confidence interval) S3"
-
-*
-
-rename icu_beds_mean_A02S03			DayIcuMeSmA02S03
-rename icu_beds_lower_A02S03		DayIcuLoSmA02S03
-rename icu_beds_upper_A02S03		DayIcuUpSmA02S03
-
-label var DayIcuMeSmA02S03"IHME Daily COVID-19 ICU beds needed (mean estimate) S3"
-label var DayIcuLoSmA02S03 "IHME Daily COVID-19 ICU beds needed (upper 95% confidence interval) S3"
-label var DayIcuUpSmA02S03 "IHME Daily COVID-19 ICU beds needed (lower 95% confidence interval) S3"
-
-*
-
-rename admis_mean_A02S03		DayAdmMeSmA02S03
-rename admis_lower_A02S03		DayAdmLoSmA02S03
-rename admis_upper_A02S03		DayAdmUpSmA02S03
-
-label var DayAdmMeSmA02S03 "IHME Daily COVID-19 hospital admissions (mean estimate) S3"
-label var DayAdmLoSmA02S03 "IHME Daily COVID-19 hospital admissions (mean estimate) S3"
-label var DayAdmUpSmA02S03 "IHME Daily COVID-19 hospital admissions (mean estimate) S3"
-
-*
-
-label var all_bed_capacity "IHME Total number of beds that exist at a location"
-label var icu_bed_capacity "IHME Total number of ICU beds that exist at a location"
-
-rename all_bed_capacity DayBEDMeSmA02
-label var DayBEDMeSmA02 "IHME Total number of beds that exist at a location"
-
-rename icu_bed_capacity DayICUMeSmA02 
-label var DayICUMeSmA02 "IHME Total number of ICU beds that exist at a location"
-
-
-
-
-
-order date location_name 
-
-sort date location_name 
-
-drop location_id date_original version_name
-
-
-save "Worse country.dta", replace
-
-
-
 
 
 
@@ -1444,19 +1136,15 @@ rename cumulative_cases cumulative_cases_A02S04
 rename cumulative_deaths cumulative_deaths_A02S04
 rename cumulative_hospitalizations cumulative_hosp_A02S04
 rename daily_deaths daily_deaths_A02S04
-rename daily_infections daily_infections_A02S04
 rename cumulative_deaths_unscaled cumul_deaths_unscaled_A02S04
 rename daily_deaths_unscaled dai_dea_unscaled_A02S04
 label var cumulative_cases_A02S04 "IHME Cumulative cases (raw data) S4"
 label var cumulative_deaths_A02S04 "IHME Cumulative deaths (raw data with excess mortality scalar applied) S4"
 label var cumulative_hosp_A02S04 "IHME Cumulative hospitalizations (raw data) S4"
 label var daily_deaths_A02S04 "IHME Daily deaths (raw data with excess mortality scalar applied) S4"
-label var daily_infections_A02S04 "IHME Daily infections (raw data)"
 label var cumul_deaths_unscaled_A02S04 "IHME umulative deaths (raw data without excess mortality scalar applied) S4"
 label var dai_dea_unscaled_A02S04 "IHME Daily deaths (raw data without excess mortality scalar applied) S4"
 
-rename daily_infections dai_inf_A02S04
-label var dai_inf_A02S04 "IHME Daily infections (raw data without excess mortality scalar applied)" // present in data, not present in data_dictionary.csv
 
 
 
@@ -1694,19 +1382,15 @@ rename cumulative_cases cumulative_cases_A02S05
 rename cumulative_deaths cumulative_deaths_A02S05
 rename cumulative_hospitalizations cumulative_hosp_A02S05
 rename daily_deaths daily_deaths_A02S05
-rename daily_infections daily_infections_A02S05
 rename cumulative_deaths_unscaled cumul_deaths_unscaled_A02S05
 rename daily_deaths_unscaled dai_dea_unscaled_A02S05
 label var cumulative_cases_A02S05 "IHME Cumulative cases (raw data) S5"
 label var cumulative_deaths_A02S05 "IHME Cumulative deaths (raw data with excess mortality scalar applied) S5"
 label var cumulative_hosp_A02S05 "IHME Cumulative hospitalizations (raw data) S5"
 label var daily_deaths_A02S05 "IHME Daily deaths (raw data with excess mortality scalar applied) S5"
-label var daily_infections_A02S05 "IHME Daily infections (raw data)"
 label var cumul_deaths_unscaled_A02S05 "IHME umulative deaths (raw data without excess mortality scalar applied) S5"
 label var dai_dea_unscaled_A02S05 "IHME Daily deaths (raw data without excess mortality scalar applied) S5"
 
-rename daily_infections dai_inf_A02S05
-label var dai_inf_A02S05 "IHME Daily infections (raw data without excess mortality scalar applied)" // present in data, not present in data_dictionary.csv
 
 
 
@@ -1858,8 +1542,6 @@ save "3rd best is Reduced vaccine hesitancy country.dta", replace
 
 use "Reference country.dta", clear
 merge 1:1 location_name date using "Best country.dta"
-drop _merge
-merge 1:1 location_name date using "Worse country.dta"
 drop _merge
 merge 1:1 location_name date using "2nd best is 3rd dose country.dta"
 drop _merge
@@ -2099,10 +1781,9 @@ graph export "graph 1c COVID-19 daily reported & excess deaths, reference scenar
 
 
 
-* daily reported deaths, 5 scenarios  
+* daily reported deaths, 4 scenarios  
 
 twoway ///
-(line DayDeaMeSmA02S03 date, sort lcolor(red)) ///
 (line DayDeaMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line DayDeaMeSmA02S05 date, sort lcolor(purple)) ///
 (line DayDeaMeSmA02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2110,21 +1791,20 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 2 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")
 
-graph save "graph 2a COVID-19 daily reported deaths, $country 5 scenarios, IHME.gph", replace
-graph export "graph 2a COVID-19 daily reported deaths, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 2a COVID-19 daily reported deaths, $country 4 scenarios, IHME.gph", replace
+graph export "graph 2a COVID-19 daily reported deaths, $country 4 scenarios, IHME.pdf", replace
 
 
 
-* daily excess deaths, 5 scenarios  
+* daily excess deaths, 4 scenarios  
   
 twoway ///
-(line DayDeXMeSmA02S03 date, sort lcolor(red)) ///
 (line DayDeXMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line DayDeXMeSmA02S05 date, sort lcolor(purple)) ///
 (line DayDeXMeSmA02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2132,14 +1812,14 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily excess deaths) title("COVID-19 daily excess deaths, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily excess deaths) title("COVID-19 daily excess deaths, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 3 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")
 
-graph save "graph 2b COVID-19 daily excess deaths, $country 5 scenarios, IHME.gph", replace
-graph export "graph 2b COVID-19 daily excess deaths, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 2b COVID-19 daily excess deaths, $country 4 scenarios, IHME.gph", replace
+graph export "graph 2b COVID-19 daily excess deaths, $country 4 scenarios, IHME.pdf", replace
 
 
 
@@ -2181,23 +1861,6 @@ graph save "graph 4 COVID-19 daily deaths, $country best scenario CI, IHME.gph",
 graph export "graph 4 COVID-19 daily deaths, $country best scenario CI, IHME.pdf", replace
 
 
-
-* daily reported deaths, worse scenario = S3, CI
-  
-twoway ///
-(line DayDeaMeSmA02S03 date, sort lcolor(black)) ///
-(line DayDeaLoSmA02S03 date, sort lcolor(green)) ///
-(line DayDeaUpSmA02S03 date, sort lcolor(red)) ///
-if date >= td(01jan2020) ///
-, xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, IHME, worse scenario", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Mean" 2 "Lower" 3 "Upper") rows(1)) ///
-note("Worse scenario = High severity of Omicron")
-
-graph save "graph 5 1 COVID-19 daily deaths, $country worse scenario CI, IHME.gph", replace
-graph export "graph 5 1 COVID-19 daily deaths, $country worse scenario CI, IHME.pdf", replace
 
 
 
@@ -2261,10 +1924,9 @@ graph export "graph 6 COVID-19 daily infections, reference scenario, $country, I
 
 
 
-* daily infections, 5 scenarios  
+* daily infections, 4 scenarios  
   
 twoway ///
-(line DayINFMeSmA02S03 date, sort lcolor(red) lwidth(vthick) lpattern(tight_dot)) ///
 (line DayINFMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line DayINFMeSmA02S05 date, sort lcolor(purple)) ///
 (line DayINFMeSmA02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2272,14 +1934,14 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily infections) title("COVID-19 daily infections, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily infections) title("COVID-19 daily infections, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 3 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")
 
-graph save "graph 7 COVID-19 daily infections, $country 5 scenarios, IHME.gph", replace
-graph export "graph 7 COVID-19 daily infections, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 7 COVID-19 daily infections, $country 4 scenarios, IHME.gph", replace
+graph export "graph 7 COVID-19 daily infections, $country 4 scenarios, IHME.pdf", replace
 
 
 
@@ -2321,25 +1983,6 @@ note("Best scenario = 80% mask use")
 graph save "graph 9 COVID-19 daily infections, $country best scenario CI, IHME.gph", replace
 graph export "graph 9 COVID-19 daily infections, $country best scenario CI, IHME.pdf", replace
 
-
-
-
-* daily infections, worse scenario = S3, CI
-  
-twoway ///
-(line DayINFMeSmA02S03 date, sort lcolor(black)) ///
-(line DayINFLoSmA02S03 date, sort lcolor(green)) ///
-(line DayINFUpSmA02S03 date, sort lcolor(red)) ///
-if date >= td(01jan2020) ///
-, xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily infections) title("COVID-19 daily infections, $country, IHME, worse scenario", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Mean" 2 "Lower" 3 "Upper") rows(1)) ///
-note("Worse scenario = High severity of Omicron")
-
-graph save "graph 10 1 COVID-19 daily infections, $country worse scenario CI, IHME.gph", replace
-graph export "graph 10 1 COVID-19 daily infections, $country worse scenario CI, IHME.pdf", replace
 
 
 
@@ -2418,10 +2061,9 @@ graph export "graph 11b COVID-19 total excess deaths, reference scenario, $count
 
 
 
-* total reported deaths, 5 scenarios  
+* total reported deaths, 4 scenarios  
   
 twoway ///
-(line TotDeaMeSmA02S03 date, sort lcolor(red)) ///
 (line TotDeaMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line TotDeaMeSmA02S05 date, sort lcolor(purple)) ///
 (line TotDeaMeSmA02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2429,22 +2071,21 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Total reported deaths) title("COVID-19 total reported deaths, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Total reported deaths) title("COVID-19 total reported deaths, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 3 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")
   
-graph save "graph 12a COVID-19 total reported deaths, $country 5 scenarios, IHME.gph", replace
-graph export "graph 12a COVID-19 total reported deaths, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 12a COVID-19 total reported deaths, $country 4 scenarios, IHME.gph", replace
+graph export "graph 12a COVID-19 total reported deaths, $country 4 scenarios, IHME.pdf", replace
 
 
 
 
-* total excess deaths, 5 scenarios  
+* total excess deaths, 4 scenarios  
 
 twoway ///
-(line TotDeXMeSmA02S03 date, sort lcolor(red)) ///
 (line TotDeXMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line TotDeXMeSmA02S05 date, sort lcolor(purple)) ///
 (line TotDeXMeSmA02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2452,14 +2093,14 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Total excess deaths) title("COVID-19 total excess deaths, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Total excess deaths) title("COVID-19 total excess deaths, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 3 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")  
 
-graph save "graph 12b COVID-19 total excess deaths, $country 5 scenarios, IHME.gph", replace
-graph export "graph 12b COVID-19 total excess deaths, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 12b COVID-19 total excess deaths, $country 4 scenarios, IHME.gph", replace
+graph export "graph 12b COVID-19 total excess deaths, $country 4 scenarios, IHME.pdf", replace
 
 
 
@@ -2507,24 +2148,6 @@ graph export "graph 19 COVID-19 total infections, $country best scenario CI, IHM
  
 
  
-* total infections, worse scenario = S3, CI
-  
-twoway ///
-(line TotINFMeSmA02S03 date, sort lcolor(black)) ///
-(line TotINFLoSmA02S03 date, sort lcolor(green)) ///
-(line TotINFUpSmA02S03 date, sort lcolor(red)) ///
-if date >= td(01jan2020) ///
-, xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Total infections) title("COVID-19 total infections, $country, IHME, worse scenario", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Mean" 2 "Lower" 3 "Upper") rows(1)) ///
-note("Worse scenario = High severity of Omicron")
-
-graph save "graph 19 COVID-19 total infections, $country worse scenario CI, IHME.gph", replace
-graph export "graph 19 COVID-19 total infections, $country worse scenario CI, IHME.pdf", replace
-
-
 
 
 
@@ -2534,10 +2157,9 @@ graph export "graph 19 COVID-19 total infections, $country worse scenario CI, IH
 * IDR, IHR, IFR
 
 
-* daily Infection fatality ratio, 5 scenarios  
+* daily Infection fatality ratio, 4 scenarios  
   
 twoway ///
-(line infection_fatality_A02S03 date, sort lcolor(red)) ///
 (line infection_fatality_A02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line infection_fatality_A02S05 date, sort lcolor(purple)) ///
 (line infection_fatality_A02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2545,22 +2167,21 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.3fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily Infection fatality ratio) title("COVID-19 daily Infection fatality ratio, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily Infection fatality ratio) title("COVID-19 daily Infection fatality ratio, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 3 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")  
 
-graph save "graph 21a COVID-19 daily IFR, $country 5 scenarios, IHME.gph", replace
-graph export "graph 21a COVID-19 daily IFR, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 21a COVID-19 daily IFR, $country 4 scenarios, IHME.gph", replace
+graph export "graph 21a COVID-19 daily IFR, $country 4 scenarios, IHME.pdf", replace
 
 
 
 
-* daily Infection detection ratio, 5 scenarios  
+* daily Infection detection ratio, 4 scenarios  
   
 twoway ///
-(line infection_detection_A02S03 date, sort lcolor(red)) ///
 (line infection_detection_A02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line infection_detection_A02S05 date, sort lcolor(purple)) ///
 (line infection_detection_A02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2568,23 +2189,22 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.3fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily Infection detection ratio) title("COVID-19 daily Infection detection ratio, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily Infection detection ratio) title("COVID-19 daily Infection detection ratio, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 2 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")  
 
-graph save "graph 21b COVID-19 daily IDR, $country 5 scenarios, IHME.gph", replace
-graph export "graph 21b COVID-19 daily IDR, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 21b COVID-19 daily IDR, $country 4 scenarios, IHME.gph", replace
+graph export "graph 21b COVID-19 daily IDR, $country 4 scenarios, IHME.pdf", replace
 
 
 
 
 
-* daily Infection hospitalization ratio, 5 scenarios  
+* daily Infection hospitalization ratio, 4 scenarios  
   
 twoway ///
-(line infection_hospitalization_A02S03 date, sort lcolor(red)) ///
 (line infection_hospitalization_A02S01 date, sort lcolor(black) lwidth(medthick)) ///
 (line infection_hospitalization_A02S05 date, sort lcolor(purple)) ///
 (line infection_hospitalization_A02S04 date, sort lcolor(cyan) lwidth(vthick) lpattern(tight_dot)) ///
@@ -2592,14 +2212,14 @@ twoway ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.3fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily Infection hospitalization ratio) title("COVID-19 daily Infection hospitalization ratio, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily Infection hospitalization ratio) title("COVID-19 daily Infection hospitalization ratio, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Worse" 2 "Reference" 3 "3rd Best" 4 "2nd Best" 5 "Best") rows(1)) ///
-note("Worse = High severity of Omicron; Reference = Current projection" ///
+legend(order(1 "Reference" 2 "3rd Best" 3 "2nd Best" 4 "Best") rows(1)) ///
+note("Reference = Current projection" ///
 "3rd best = Reduced vaccine hesitancy; 2nd Best = Vaccine 3rd dose; Best = 80% mask use")  
 
-graph save "graph 21c COVID-19 daily IHR, $country 5 scenarios, IHME.gph", replace
-graph export "graph 21c COVID-19 daily IHR, $country 5 scenarios, IHME.pdf", replace
+graph save "graph 21c COVID-19 daily IHR, $country 4 scenarios, IHME.gph", replace
+graph export "graph 21c COVID-19 daily IHR, $country 4 scenarios, IHME.pdf", replace
 
 
 
@@ -2643,85 +2263,64 @@ graph export "graph 21e COVID-19 daily Infection outcomes ratios, $country best 
 
 
 
-* daily Infection outcomes ratios, worse scenario 
-  
-twoway ///
-(line infection_detection_A02S03 date, sort lcolor(green)) ///
-(line infection_hospitalization_A02S03 date, sort lcolor(black)) ///
-(line infection_fatality_A02S03 date, sort lcolor(red)) ///
-if date >= td(01jan2020) ///
-, xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, format(%9.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily infection outcome ratios) title("COVID-19 daily infection outcome ratios, $country, IHME, worse scenario", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Infection detection ratio" 2 "Infection hospitalization ratio" 3 "Infection fatality ratio") rows(2)) ///
-note("Worse scenario = High severity of Omicron")
-
-graph save "graph 21f COVID-19 daily Infection outcomes ratios, $country worse scenario, IHME.gph", replace
-graph export "graph 21f COVID-19 daily Infection outcomes ratios, $country worse scenario, IHME.pdf", replace
-
-
 
 
 
 * other outcomes 
 
 
-* daily beds needed, 3 scenarios
+* daily beds needed, 2 scenarios
 
 twoway (rarea DayBedLoSmA02S01 DayBedUpSmA02S01 date, sort color(black*.2)) ///
 (line DayBedMeSmA02S01 date, sort lcolor(black)) ///
 (line DayBedMeSmA02S02 date, sort lcolor(green)) ///
-(line DayBedMeSmA02S03 date, sort lcolor(red)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily beds needed) title("COVID-19 daily beds needed, $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(Daily beds needed) title("COVID-19 daily beds needed, $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(2 "Reference" 3 "Best" 4 "Worse") rows(1)) ///
-note("Reference = Current projection; Best = 80% mask use; Worse = High severity of Omicron") 
+legend(order(2 "Reference" 3 "Best") rows(1)) ///
+note("Reference = Current projection; Best = 80% mask use") 
 
-graph save "graph 22a COVID-19 daily beds needed, $country 3 scenarios, IHME.gph", replace
-graph export "graph 22a COVID-19 daily beds needed, $country 3 scenarios, IHME.pdf", replace
-
-
+graph save "graph 22a COVID-19 daily beds needed, $country 2 scenarios, IHME.gph", replace
+graph export "graph 22a COVID-19 daily beds needed, $country 2 scenarios, IHME.pdf", replace
 
 
-* ICU beds needed, 3 scenarios
+
+
+* ICU beds needed, 2 scenarios
 
 twoway (rarea DayIcuLoSmA02S01 DayIcuUpSmA02S01 date, sort color(black*.2)) ///
 (line DayIcuMeSmA02S01 date, sort lcolor(black)) ///
 (line DayIcuMeSmA02S02 date, sort lcolor(green)) ///
-(line DayIcuMeSmA02S03 date, sort lcolor(red)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(ICU beds needed) title("COVID-19 daily ICU beds needed, $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(ICU beds needed) title("COVID-19 daily ICU beds needed, $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(2 "Reference" 3 "Best" 4 "Worse") rows(1)) ///
-note("Reference = Current projection; Best = 80% mask use; Worse = High severity of Omicron") 
+legend(order(2 "Reference" 3 "Best") rows(1)) ///
+note("Reference = Current projection; Best = 80% mask use") 
 	   
-graph save "graph 23a COVID-19 daily ICU beds needed, $country 3 scenarios, IHME.gph", replace
-graph export "graph 23a COVID-19 daily ICU beds needed, $country 3 scenarios, IHME.pdf", replace
+graph save "graph 23a COVID-19 daily ICU beds needed, $country 2 scenarios, IHME.gph", replace
+graph export "graph 23a COVID-19 daily ICU beds needed, $country 2 scenarios, IHME.pdf", replace
 
 
 
-* daily hospital admissions, 3 scenarios
+* daily hospital admissions, 2 scenarios
 
 twoway (rarea DayAdmLoSmA02S01 DayAdmUpSmA02S01 date, sort color(black*.2)) ///
 (line DayAdmMeSmA02S01 date, sort lcolor(black)) ///
 (line DayAdmMeSmA02S02 date, sort lcolor(green)) ///
-(line DayAdmMeSmA02S03 date, sort lcolor(red)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily hospital admissions) title("COVID-19 daily hospital admissions $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(Daily hospital admissions) title("COVID-19 daily hospital admissions $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(2 "Reference" 3 "Best" 4 "Worse") rows(1)) ///
-note("Reference = Current projection; Best = 80% mask use; Worse = High severity of Omicron") 
+legend(order(2 "Reference" 3 "Best") rows(1)) ///
+note("Reference = Current projection; Best = 80% mask use") 
 	   
-graph save "graph 25 COVID-19 daily hospital admissions, $country 3 scenarios, IHME.gph", replace
-graph export "graph 26 COVID-19 daily hospital admissions, $country 3 scenarios, IHME.pdf", replace
+graph save "graph 25 COVID-19 daily hospital admissions, $country 2 scenarios, IHME.gph", replace
+graph export "graph 26 COVID-19 daily hospital admissions, $country 2 scenarios, IHME.pdf", replace
 
 
 
@@ -2731,17 +2330,16 @@ graph export "graph 26 COVID-19 daily hospital admissions, $country 3 scenarios,
 twoway (rarea DayIcuLoSmA02S01 DayIcuUpSmA02S01 date, sort color(black*.2)) ///
 (line DayIcuMeSmA02S01 date, sort lcolor(black)) ///
 (line DayIcuMeSmA02S02 date, sort lcolor(green)) ///
-(line DayIcuMeSmA02S03 date, sort lcolor(red)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily ICU beds needed) title("COVID-19 daily ICU beds needed $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(Daily ICU beds needed) title("COVID-19 daily ICU beds needed $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(2 "Reference" 3 "Best" 4 "Worse") rows(1)) ///
-note("Reference = Current projection; Best = 80% mask use; Worse = High severity of Omicron") 
+legend(order(2 "Reference" 3 "Best") rows(1)) ///
+note("Reference = Current projection; Best = 80% mask use") 
 
-graph save "graph 26 COVID-19 daily ICU beds needed, $country 3 scenarios, IHME.gph", replace
-graph export "graph 26 COVID-19 ICU beds needed, $country 3 scenarios, IHME.pdf", replace
+graph save "graph 26 COVID-19 daily ICU beds needed, $country 2 scenarios, IHME.gph", replace
+graph export "graph 26 COVID-19 ICU beds needed, $country 2 scenarios, IHME.pdf", replace
 
 
 
@@ -2802,18 +2400,17 @@ graph export "graph 33 COVID-19 daily mobility, $country, reference scenario.pdf
 
 twoway ///
 (line mask_use_mean_A02S02 date, sort lcolor(green)) ///
-(line mask_use_mean_A02S03 date, sort lcolor(red) lwidth(vthick) lpattern(tight_dot)) ///
 (line mask_use_mean_A02S01 date, sort lcolor(black)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily mask use) title("COVID-19 daily mask use, $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(Daily mask use) title("COVID-19 daily mask use, $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Best" 2 "Worse" 3 "Reference") rows(1)) ///
+legend(order(1 "Best" 2 "Reference") rows(1)) ///
 subtitle(Percent of population reporting always wearing a mask when leaving home, size(small))
 
-graph save "graph 34 COVID-19 daily mask_use, $country, 3 scenarios.gph", replace
-graph export "graph 34 COVID-19 daily mask_use, $country, 3 scenarios.pdf", replace
+graph save "graph 34 COVID-19 daily mask_use, $country, 2 scenarios.gph", replace
+graph export "graph 34 COVID-19 daily mask_use, $country, 2 scenarios.pdf", replace
 
 
 
@@ -2845,7 +2442,7 @@ twoway ///
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Cumulative vaccinated number) title("COVID-19 cumulative vaccinated number, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Cumulative vaccinated number) title("COVID-19 cumulative vaccinated number, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Vaccinated" 2 "Effectively vaccinated" 3 "Fully vaccinated") rows(1)) ///
 note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
@@ -2867,7 +2464,7 @@ twoway ///
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Daily vaccinated number) title("COVID-19 daily vaccinated number, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(Daily vaccinated number) title("COVID-19 daily vaccinated number, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Vaccinated" 2 "Effectively vaccinated" 3 "Fully vaccinated") rows(1)) ///
 note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
@@ -2890,7 +2487,7 @@ twoway ///
 if date >= td(01dec2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(% Cumulative vaccinated percent) title("COVID-19 cumulative vaccinated percent, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(% Cumulative vaccinated percent) title("COVID-19 cumulative vaccinated percent, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "% Vaccinated" 2 "% Effectively vaccinated" 3 "% Fully vaccinated") rows(1)) ///
 note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
@@ -2913,7 +2510,7 @@ twoway ///
 if date >= td(01dec2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(% Daily vaccinated percent) title("COVID-19 daily vaccinated percent, $country, IHME, 5 scenarios", size(medium)) ///
+ytitle(% Daily vaccinated percent) title("COVID-19 daily vaccinated percent, $country, IHME, 4 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "% Vaccinated" 2 "% Effectively vaccinated" 3 "% Fully vaccinated") rows(1)) ///
 note("Vaccinated: Initially vaccinated (one dose of two doses)" ///
@@ -2931,18 +2528,17 @@ graph export "graph 37b COVID-19 daily vaccinated percent, $country.pdf", replac
 
 twoway ///
 (line reff_mean_A02S02 date, sort lcolor(green) lwidth(vthick)) ///
-(line reff_mean_A02S03 date, sort lcolor(red) lwidth(vthick)) ///
 (line reff_mean_A02S01 date, sort lcolor(black)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(R effective) title("COVID-19 R effective, $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(R effective) title("COVID-19 R effective, $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Best" 2 "Worse" 3 "Reference") rows(1)) ///
-note("Reference = Current projection; Best = 80% mask use; Worse = High severity of Omicron") 
+legend(order(1 "Best" 2 "Reference") rows(1)) ///
+note("Reference = Current projection; Best = 80% mask use") 
 
-graph save "graph 38 COVID-19 R effective, $country, 3 scenarios.gph", replace
-graph export "graph 38 COVID-19 R effective, $country, 3 scenarios.pdf", replace
+graph save "graph 38 COVID-19 R effective, $country, 2 scenarios.gph", replace
+graph export "graph 38 COVID-19 R effective, $country, 2 scenarios.pdf", replace
 
 
 
@@ -2952,18 +2548,17 @@ graph export "graph 38 COVID-19 R effective, $country, 3 scenarios.pdf", replace
 
 twoway ///
 (line reff_mean_A02S02 date, sort lcolor(green) lwidth(vthick)) ///
-(line reff_mean_A02S03 date, sort lcolor(red) lwidth(vthick)) ///
 (line reff_mean_A02S01 date, sort lcolor(black)) ///
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(R effective) title("COVID-19 R effective, $country, IHME, 3 scenarios", size(medium)) ///
+ytitle(R effective) title("COVID-19 R effective, $country, IHME, 2 scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Best" 2 "Worse" 3 "Reference") rows(1)) ///
-note("Reference = Current projection; Best = 80% mask use; Worse = High severity of Omicron") 
+legend(order(1 "Best" 2 "Reference") rows(1)) ///
+note("Reference = Current projection; Best = 80% mask use") 
 
-graph save "graph 39 COVID-19 R effective, $country, 3 scenarios 01jun2021 on.gph", replace
-graph export "graph 39 COVID-19 R effective, $country, 3 scenarios 01jun2021 on.pdf", replace
+graph save "graph 39 COVID-19 R effective, $country, 2 scenarios 01jun2021 on.gph", replace
+graph export "graph 39 COVID-19 R effective, $country, 2 scenarios 01jun2021 on.pdf", replace
 
 
 
@@ -2999,13 +2594,11 @@ qui graph export "graph 45 COVID-19 daily deaths and infections $country, IHME.p
 	   
 twoway (rarea DayINFDetLoSmA02S01 DayINFDetUpSmA02S01 date, sort color(black*.2)) ///
 (line DayINFDetMeSmA02S01 date, sort lcolor(black)) ///
-(line dai_inf_A02S01 date, sort lcolor(red)) ///
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020IHME, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily detected infections) title("COVID-19 daily detected infections, $country, IHME, reference scenario", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///	///
-legend(order(2 "Daily detected infections" 3 "Daily infections (raw data)") size(small)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///	///
 note("Reference scenario = Current projection;" ///
 "Calculated Daily detected infections = Daily infections * Infection detection ratio")
 	   
