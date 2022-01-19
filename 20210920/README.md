@@ -23,13 +23,6 @@ For use in this code, IMPE estimates for Iran from "2021-09-09_v8.csv" is stored
 
 ****
 
-### Merged graphs of uptake 20210920 [here](https://github.com/pourmalek/covir2/blob/main/20210920/graphs%20merged%2020210920.pdf)
-
-****
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
