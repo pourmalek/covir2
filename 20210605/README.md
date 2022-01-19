@@ -9,13 +9,6 @@ This uptake is actually uptake 20210604 number 2, because IMPE update 20210604 (
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210605 [here](https://github.com/pourmalek/covir2/blob/main/20210605/graphs%20merged%2020210605.pdf)
-
-****
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
