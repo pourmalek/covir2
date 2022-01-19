@@ -16,12 +16,6 @@ SRIV shows a flat bump (like lichen planus) in the last week of May, lasting for
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210528 [here](https://github.com/pourmalek/covir2/blob/main/20210528/graphs%20merged%2020210528.pdf)
-
-****
-
-<br/><br/>
-
 
 ### Selected graphs
 
