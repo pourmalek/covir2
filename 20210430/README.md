@@ -15,16 +15,6 @@ DELPHI 20210430, **_IHME 20210430_**, IMPE 20210424, LANL 20210428, SRIV 2021043
 
 ****
 
-### Merged graphs of uptake 20210430 [here](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/graphs%20merged%20uptake%2020210430.pdf)
-
-<div dir="rtl">
-  
-###  همه نمودارهای برداشت ۱۴۰۰۰۲۱۰ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210430%20(archived)/graphs%20merged%20uptake%2020210430.pdf)
-  
-<div dir="ltr">
-
-****
-
 ### What is new, uptake 20210430
  
 
