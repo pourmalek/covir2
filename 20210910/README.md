@@ -7,18 +7,11 @@ DELP 20210910,  **_IHME 20210910_**, IMPE 20210825, LANL 20210905, SRIV 20210910
 <br/><br/>
 
 
-[IHME COVID-19 Results Briefing - Iran - 20210909](http://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf) || [PDF](https://github.com/pourmalek/covir2/blob/main/20210910/IHME%20COVID-19%20Results%20Briefing%20-%20Iran%20-%20September%209%2C%202021.pdf)
+[IHME COVID-19 Results Briefing - Iran - 20210909](http://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf)
 
 
 <br/><br/>
 ****
-
-### Merged graphs of uptake 20210910 [here](https://github.com/pourmalek/covir2/blob/main/20210910/graphs%20merged%2020210910.pdf)
-
-****
-
-<br/><br/>
-
 
 ### Selected graphs
 
