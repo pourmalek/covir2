@@ -1,4 +1,4 @@
-### Longitudinal visualization of models’ estimates’ updates 
+### Longitudinal visualization of models’ estimates’ updates  
 
 <br/><br/>
 
