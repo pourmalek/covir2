@@ -22,15 +22,10 @@ https://covid19.healthdata.org/iran-(islamic-republic-of)?view=infections-testin
 تعداد موارد بیماری قابل تشخیص می تواند در اواخر بهمن ماه تا اواسط اسفند ۱۴۰۰ به بیش از هشتاد هزار مورد در روز برسد که البته همه آن ها شدید نبوده و یا منجر به بستری نمی گردند. 
 دقت زمانی برآورد ها معمولا از یک تا دو هفته زودتر تا یک تا دو هفته دیر تر است.
 
-
-
-****
-
-### Merged graphs of uptake 20220110 [here](https://github.com/pourmalek/covir2/blob/main/20220110/graphs%20merged%2020220110.pdf)
-
-****
-
 <br/><br/>
+
+
+****
 
 
 ### Selected graphs
