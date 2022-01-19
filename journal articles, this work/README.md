@@ -1,5 +1,5 @@
 
-## Journal articles for this work:
+## Journal articles for this work: 
 
 ********
 
