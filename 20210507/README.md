@@ -37,18 +37,7 @@ Their Case Fatality Ratio (CFR) -> Infection Fatality ratio (IFR).
 ### Study update dates in uptake 20210507
 
 DELP 20210507, **IHME 20210507**, IMPE 20210424, LANL 20210505, SRIV 20210507
-<br/><br/>
-****
 
-### Merged graphs of uptake 20210507 [here](https://github.com/pourmalek/covir2/blob/main/20210507/graphs%20merged%20uptake%2020210507.pdf)
-
-<div dir="rtl">
-  
-###  همه نمودارهای برداشت ۱۴۰۰۰۲۱۷ [اینجا](https://github.com/pourmalek/covir2/blob/main/20210507/graphs%20merged%20uptake%2020210507.pdf)
-  
-<div dir="ltr">
-
-****
 
 <br/><br/>
 
