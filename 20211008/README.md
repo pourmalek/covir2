@@ -34,13 +34,6 @@ The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021.
 
 ****
 
-### Merged graphs of uptake 20211008 [here](https://github.com/pourmalek/covir2/blob/main/20211008/graphs%20merged%2020211008.pdf)
-
-****
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
