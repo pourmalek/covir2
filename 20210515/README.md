@@ -10,10 +10,6 @@ IHME removed their originally released seroprevalence variable (seroprev_mean se
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210515 [here](https://github.com/pourmalek/covir2/blob/main/20210515/graphs%20merged%2020210515.pdf)
-
-****
-
 <br/><br/>
 
 
