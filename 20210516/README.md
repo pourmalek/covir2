@@ -8,12 +8,6 @@ IMPE 20210516 (2021-05-16_v8.csv.zip) released on 20210519.
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210516 [here](https://github.com/pourmalek/covir2/blob/main/20210516/graphs%20merged%2020210516.pdf)
-
-****
-
-<br/><br/>
-
 
 ### Selected graphs
 
