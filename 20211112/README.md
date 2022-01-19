@@ -11,13 +11,6 @@ IMPE update 20211103 (2021-11-03_v9.csv.zip) released on 20211110.
 
 ****
 
-### Merged graphs of uptake 20211112 [here](https://github.com/pourmalek/covir2/blob/main/20211112/graphs%20merged%2020211112.pdf)
-
-****
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
