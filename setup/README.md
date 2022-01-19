@@ -1,4 +1,4 @@
-## Description of rule for uptakes in this repository, covir2, and related repositories:
+## Description of rule for uptakes in this repository, covir2, and related repositories: 
 
 ## repository [`CovidVisualizedCountry`](https://github.com/pourmalek/CovidVisualizedCountry) 
 
