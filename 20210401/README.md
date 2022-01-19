@@ -5,10 +5,6 @@ DELP 20210401, **_IHME 20210401_**, IMPE 20210329, LANL 20210331, SRIV 20210401
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210401 [here](https://github.com/pourmalek/covir2/blob/main/20210401/graphs%20merged%2020210401.pdf)
-
-****
-
 
 ### Selected graphs
 
