@@ -10,12 +10,6 @@
 
 ****
 
-### Merged graphs of uptake 20211119 [here](https://github.com/pourmalek/covir2/blob/main/20211119/graphs%20merged%2020211119.pdf)
-
-****
-
-<br/><br/>
-
 
 ### Selected graphs
 
