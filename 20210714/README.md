@@ -14,13 +14,6 @@ IHME released a 20210714 update but later it is not accesible:
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210714 [here](https://github.com/pourmalek/covir2/blob/main/20210714/graphs%20merged%2020210714.pdf)
-
-****
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
