@@ -9,10 +9,6 @@ Note: In this uptake, and uptakes before this, IHME zip file creates a directory
 <br/><br/>
 ****
 
-### Merged graphs of uptake 20210506 [here](https://github.com/pourmalek/covir2/blob/main/20210506/graphs%20merged%2020210506.pdf)
-
-****
-
 <br/><br/>
 
 ****
