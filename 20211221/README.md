@@ -24,12 +24,6 @@ IHME Detected Infections vs. All Infections. Probably detected infections at the
 
 ****
 
-### Merged graphs of uptake 20211221 [here](https://github.com/pourmalek/covir2/blob/main/20211221/graphs%20merged%2020211221.pdf)
-
-****
-
-<br/><br/>
-
 
 ### Selected graphs
 
