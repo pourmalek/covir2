@@ -17,13 +17,6 @@ The variant omicron was classified as variant of concern by WHO today 20211126, 
 
 ****
 
-### Merged graphs of uptake 20211126 [here](https://github.com/pourmalek/covir2/blob/main/20211126/graphs%20merged%2020211126.pdf)
-
-****
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
