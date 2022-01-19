@@ -4,7 +4,7 @@
 
 **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
-<br/><br/>
+<br/><br/> 
 
 **IHME**: The previous [S1] "severe omicron" is not available in IHME update 20220114. The "current projection" or "reference scenario" is functionally the "worse scenario", i.e., the scenario with highest magnitude of estimated deaths and infections. 
 
