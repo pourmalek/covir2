@@ -29,31 +29,37 @@ The current scenarios of IHME include:
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150619507-7152e67c-5adc-4460-bae7-cbfef1cd3347.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150619538-16522c07-3ca0-4c35-8f7d-4f73473959fd.png)
 
 ****
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150619560-7a4d2d60-2d78-4e74-9091-4a81817e734e.png)
 
 ****
 
 (4) Iran [Daily deaths, 2021 on, 4 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%204%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150619596-f6821106-e6d5-426b-80ce-78d3b0096d2f.png)
 
 ****
 
 (5) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150619615-56b8d9c4-ea32-46bb-bb81-33322c3d9038.png)
 
 ****
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150619626-3ec6e0d0-4466-4d6d-827a-2195e7b29629.png)
 
 ****
 
