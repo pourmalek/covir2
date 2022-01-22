@@ -110,6 +110,12 @@
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
@@ -160,6 +166,12 @@
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -206,6 +218,12 @@
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -262,6 +280,12 @@
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (4) Iran [Daily deaths, 2021 on, 4 scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%204%20scenarios%2C%20IHME.pdf)
@@ -310,6 +334,12 @@
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -362,6 +392,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
@@ -408,6 +444,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -458,6 +500,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -520,6 +568,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -567,6 +621,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -633,6 +693,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
@@ -680,6 +746,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -733,6 +805,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
@@ -783,6 +861,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -840,6 +924,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (13) Iran [R effective, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%20101%20COVID-19%20R%20effective%2C%20Iran%2C%202%20scenarios%2001jun2021%20on.pdf)
@@ -894,6 +984,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (14) Iran [Daily Infection-outcome ratios, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%20102%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%202%20scenarios%2C%20IHME.pdf)
@@ -942,6 +1038,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -997,6 +1099,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 (16) Iran [Daily mask use, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220116/output/merge/graph%20104%20COVID-19%20daily%20mask_use%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
@@ -1046,6 +1154,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
@@ -1102,6 +1216,12 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 
@@ -1143,6 +1263,12 @@ This means there might be more than 80,000 daily detectable cases of disease in 
 
 *
 
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
+
+*
+
 **uptake 20220116**: **_DELP 20220115_**, **_IHME 20220114_**, **_IMPE 20220102_**, **_SRIV 20220116_**
 
 
@@ -1178,6 +1304,12 @@ The trend of the CALCULATED IHME daily hospitalized infections (= Daily infectio
  
  
  
+
+*
+
+**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+
+
 
 *
 
