@@ -28,7 +28,7 @@ global DELPdate 20220121
 global IMPEdate 2022-01-02_v9
 *            3/ -------------
 
-global SRIVdate 2022-01-19 // SRIV updates 20220120 and 20220121 do not contain global estimates files 
+global SRIVdate 2022-01-19 // SRIV updates 20220120 and 20220121 do not contain global (each country) estimates files. 
 *            4/ ----------
 
 global IHMEdate 20220114																		 
