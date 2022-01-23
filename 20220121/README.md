@@ -8,6 +8,8 @@
 
 **SRIV**: SRIV updates 20220120 and 20220121 do not contain global (each country) estimates files.
 
+SRIV update 20220119 not included in graphs due to highly implausibly high estimates. 
+
 <br/><br/> 
 
 **IHME**: The previous [S1] "severe omicron" is not available in IHME update 20220114. The "current projection" or "reference scenario" is functionally the "worse scenario", i.e., the scenario with highest magnitude of estimated deaths and infections. 
