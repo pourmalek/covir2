@@ -59,21 +59,25 @@ The current scenarios of IHME include:
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150661413-045229dc-61ac-46aa-b16e-a726274630ed.png)
 
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150661450-b2cc4038-6eed-41b2-9e7f-6bbaca565237.png)
     
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150661466-e5e5c53d-b40f-47bc-aa8c-14e2ed4ac053.png)
   
 ****
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/150661478-e34aea34-c917-4279-85e2-474aa75afd2f.png)
 
 ****
 
