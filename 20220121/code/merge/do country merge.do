@@ -21,6 +21,7 @@ log using "log country merge.smcl", replace
 ***************************************************************************
 
 
+* SRIV not included in graphs due to highly implausibly high estimates. 
 
 
 /* 
@@ -33,7 +34,7 @@ DELP A01
 IHME A02
 IMPE A03
 LANL A04 // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
-SRIV A05 
+SRIV A05 // Some labs were much bettre with physics. 
 
 */
 
