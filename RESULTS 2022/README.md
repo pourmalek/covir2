@@ -110,11 +110,10 @@
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/150619507-7152e67c-5adc-4460-bae7-cbfef1cd3347.png)
 
 *
 
@@ -168,11 +167,10 @@
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/150619538-16522c07-3ca0-4c35-8f7d-4f73473959fd.png)
 
 *
 
@@ -225,9 +223,8 @@
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -284,9 +281,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -341,7 +337,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
 
@@ -396,7 +392,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
 
@@ -451,11 +447,10 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/150619679-7d47f644-e407-4784-a3f9-cb936e25d2dd.png)
 
 *
 
@@ -509,11 +504,10 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/150619699-5a435d1c-f058-45a6-862e-6f02962de462.png)
 
 *
 
@@ -576,11 +570,10 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220121/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/150619728-2c3ef325-53c0-4c09-99db-6730f140c720.png)
 
 *
 
@@ -634,9 +627,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -703,7 +695,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 
 
@@ -759,7 +751,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 
 
@@ -815,7 +807,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 
 
@@ -874,7 +866,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
 
 
@@ -934,9 +926,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -994,9 +985,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -1051,9 +1041,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -1109,9 +1098,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -1167,9 +1155,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -1226,9 +1213,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -1273,9 +1259,8 @@ This means there might be more than 80,000 daily detectable cases of disease in 
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -1317,9 +1302,8 @@ The trend of the CALCULATED IHME daily hospitalized infections (= Daily infectio
 
 *
 
-**uptake 20220121**: **_DELP 20220121_**, IHME 20220114, IMPE 20220102, **_SRIV 20220119_**
+**uptake 20220121**: **_DELP 20220121_**, **_IHME 20220121_**, IMPE 20220102, **_SRIV 20220119_**
 
-Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
