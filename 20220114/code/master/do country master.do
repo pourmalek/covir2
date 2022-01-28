@@ -2,60 +2,40 @@
 
 *****************************************************************************
 * This is "do country master.do"
-                                                                                                          ***************************
-* Project: CovidVisualized country - countries without subnational estimates                              * this is uptake 20220114 *
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com                                            ***************************
+                                                                                                          
+* Project: CovidVisualized country - countries without subnational estimates                             
+* Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com                                            
 * Time (initial): 2021-04-13 
 
 * OBJECTIVE: Get and prepare component studies' estimates for country
 *****************************************************************************
+
+ * this is uptake ************ 20220128 ************
 
                                                                                                          
 global country Iran // <<-- set here the country of choice - countries without subnational estimates     
                                                                                                          ***************************
 di "$country"                                                                                  // <<<--- *   change country here   *
                                                                                                          ***************************
-* To change uptake date, find and replace all, 20220114 (old), with 20220114 (new) <<--           <<<--- * change uptake date here *
+* To change uptake date, find and replace all, 20220128 (old), with 20220128 (new) <<--           <<<--- * change uptake date here *
 *                                           1/ --------                                                  ***************************
 
 * To change uptake date in individual do files for models, change the following dates:
 
-global DELPdate 20220114
+global DELPdate 20220128 
 *            2/ --------
 
-global IMPEdate 2021-12-26_v9
+global IMPEdate 2022-01-02_v9
 *            3/ -------------
 
-global SRIVdate 2022-01-13
+global SRIVdate 2022-01-26
 *            4/ ----------
-																							 
-																										 
-																										 
-																										 
-/* 
 
-This file "do country master.do" was set up to be run from:
- |Users|local-user-name|Downloads|covir2-main|202YMMDD|code|master|do country master.do
- where 2021MMDD is the udpate date, e.g. starting with 20210405
-
-If the first run does not go thru due to directory path clash, edit the contents within " " of the line _63_ or _66_ below, located beneath ****** set path based on local operating system ****** ,,, 
-,,, to reflect the location of directory /covir2-main/ or \covir2-main\ on your local machine. Path should be:
-
-
-global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/202YMMDD/code/" [for Mac]
-
-global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\202YMMDD\code\" [for Windows]
-
-
-
-It can be moved to and run from anywhere else as far as path requirements are adjusted. 
-
-This code was developed and run using Stata SE 14.2 on MacOS Big Sur 11.2.2 (also ran on same flavour of Stata on Windows 10).
-
-
-*/
-
-
+global IHMEdate 20220121																		 
+					
+		
+******************************************************		
+		
 
 * setup Stata path by operating system 
 
@@ -74,10 +54,10 @@ di "`usrnam'"
 ****** set path based on local operating system ******
 
 if regexm(c(os),"Mac") == 1 {
-	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20220114/code" 
+	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20220128/code" 
 }
 else if regexm(c(os),"Windows") {
-	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20220114\code"
+	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20220128\code"
 }
 *
 
@@ -86,7 +66,7 @@ cd "$pathcovir2"
  
 cd master
 
-
+ 
 
 
 
