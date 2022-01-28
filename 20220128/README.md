@@ -56,7 +56,7 @@ The current scenarios of IHME include:
 
 ****
 
-(6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+(6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%202%20scenarios%2C%20IMPE.pdf)
 
 
 ****
