@@ -2,7 +2,7 @@
 
 ### Study update dates in uptake 20220128
 
-**_DELP 20220128_**, IHME 20220121, IMPE 20220102, **_SRIV 20220128_**
+**_DELP 20220128_**, IHME 20220121, IMPE 20220102, **_SRIV 20220126_**
 
 
 <br/><br/> 
@@ -16,6 +16,8 @@ The current scenarios of IHME include:
 (S3) Third dose,
 (S4) 80% mask use
 
+
+**SRIV**: SRIV updates 20220127 and 20220128 do not contain global (each country) estimates files.
 
 <br/><br/>
 
