@@ -76,6 +76,7 @@ The current scenarios of IHME include:
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/151617878-7b4e1dbd-0156-41d0-b7da-e0d1d3fe0cef.png)
 
 ****
 
