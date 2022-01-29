@@ -712,7 +712,7 @@ Scenarios of IHME model as of update 20211221:
 
 * S01 = Current projection [Status Quo, Reference scenario]         
 * S02 = 80% mask use [Best scenario]                    
-* S03 = High severity of Omicron [Worse scenario]       
+* S03 = High severity of Omicron [Worse scenario] (discontinued starting from IHME update 20220114)      
 * S04 = Third dose of vaccine [Second best scenario]               
 * S05 = Reduced vaccine hesitancy [Third best scenario] 
 
