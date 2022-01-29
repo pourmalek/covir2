@@ -215,15 +215,37 @@ COVID-19 Forecasts in the United States. medRxiv per-print. Posted May 25, 2020.
 
 * **A00 JOHN**
 * S00 = [Not Applicable]
+
 <br/><br/>
+
 * **A01 DELP** 
 * S00 = [Single scenario]
+
 <br/><br/>
+
 * **A02 IHME**       **(see more details below)**
-* S01 = Reference scenario [Status Quo] 
+
+* All updates up to and including 20211217:
+* S01 = Reference scenario [Status Quo]
 * S02 = Best scenario (Universal masks) [Best]
 * S03 = Worse scenario (Mandates easing) [Worst] 
+.
+* Updates 20211221 to 20220110:
+* S01 = Current projection [Status Quo, Reference scenario]
+* S02 = 80% mask use [Best scenario]
+* S03 = High severity of Omicron [Worse scenario]
+* S04 = Third dose of vaccine [Second best scenario]
+* S05 = Reduced vaccine hesitancy [Third best scenario]
+.
+* Updates 20220114 onwards:
+* S01 = Current projection [Status Quo, Reference scenario]
+* S02 = 80% mask use [Best scenario]
+* S04 = Third dose of vaccine [Second best scenario]
+* S05 = Reduced vaccine hesitancy [Third best scenario]
+* The previous acenario "severe omicron" omiited starting from update 20220114. The "current projection" or "reference scenario" is functionally the "worse scenario", i.e., the scenario with highest magnitude of estimated deaths and infections.
+
 <br/><br/>
+
 * **A03 IMPE** 
 * S01 = Additional 50% Reduction [Best]	
 * S02 = Current level of interventions [Reference] 			
@@ -231,25 +253,19 @@ COVID-19 Forecasts in the United States. medRxiv per-print. Posted May 25, 2020.
 * S04 = Surged Additional 50% Reduction [Best, Surged]
 * S05 = Surged Maintain Status Quo [Reference, Surged] 	
 * S06 = Surged Relax Interventions 50% [Worst, Surged]	
+
 <br/><br/>
+
 * **A04 LANL** 
 * S00 = [Single scenario]
+
 <br/><br/>
+
 * **A05 SRIV**
 * S00 = [current]
-<br/><br/>
-* **SOLT Soltani**
-* S01 = Reopening scenario 1 = [Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 35% and at lowest point between third and fourth peaks (about 2021-03-01) is 20%]. 
-* S02 = Reopening scenario 2 = [Percentage of population "free from quarantine" upon reopening at lowest point between second and third peaks (about 2020-09-01) is 32% and at lowest point between third and fourth peaks (about 2021-03-01) is 22%].
-<br/><br/>
-* **GHAN Ghanbari**
-* Ghanbari has two subtypes of Daily Cases, “Density of the infected population with a strong immunity system”, and “Density of the infected population with a weak immunity system or with a historical medical illness as diabetic, blood pressure, heart issue, and others.” [*verbatim*] Each subtype is presented with 18 different values (aka model subtypes) based on different values of three parameters in their model. The median scenario, first subtype was selected for digitalization. It is the model subtype number 9 out of 18 subtypes [named S09 here], with the following details. Model subtype parameter: γ1 = 0.09, where γ1 is recovery rate in population subtype 1. Time point: Second peak. Estimate type: Mean. Peak value mentioned: 897,264. Peak date Solar: 1399-11-30. Peak date Gregorian: 2021-02-18. Source: Fig 4a, green curve. 
-
-
-* **A17 UCLA** 
-* S00 = [Single scenario]
 
 <br/><br/>
+
 
 **Details about IHME scenarios:**
 
