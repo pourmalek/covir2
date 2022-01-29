@@ -285,8 +285,7 @@ Updates 20220114 onwards:
 
 Added: Waning immunity, Fitting the past (improved methods), and Omicron specific changes 
 
-(Including use of integro-differential equations; Fitting the past (IDR, IHR, IFR, for different exposure categories, and Integration of rate estimation within the SEIR fitting approach,
-simultaneously estimate COVID rates and underlying transmission intensity)
+Including use of integro-differential equations; Fitting the past (IDR, IHR, IFR, for different exposure categories), and Integration of rate estimation within the SEIR fitting approach, simultaneously estimate COVID rates and underlying transmission intensity
 
 
 
