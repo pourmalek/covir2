@@ -328,14 +328,15 @@ DELP source for model versions: https://github.com/COVIDAnalytics/website/tree/m
 
 IHME model versions
 
-IHME V1 2999-99-99 to 2999-99-99  IHME_CF [Curve Fitting]
+IHME V1 2999-99-99 to 2999-99-99:  IHME_CF [Curve Fitting]
 
-IHME V2 2999-99-99 to 2999-99-99  IHME_CF_SEIR [Curve Fitting and SEIR]
+IHME V2 2999-99-99 to 2999-99-99:  IHME_CF_SEIR [Curve Fitting and SEIR]
 
-IHME V3 2999-99-99 to 2021-04-30  IHME_MS_SEIR [Mortality Spline and SEIR]
+IHME V3 2999-99-99 to 2021-04-30:  IHME_MS_SEIR [Mortality Spline and SEIR]
 
-IHME V4 2021-05-06 to when specified otherwise IHME_MS_SEIR + Total Covid-19 Mortality (excess-mortality-due-covid-19)
+IHME V4 2021-05-06 to 2022-01-10: IHME_MS_SEIR + Total Covid-19 Mortality (excess-mortality-due-covid-19)
 
+IHME V5 2022-01-14 onwards: IHME_MS_SEIR + Total Covid-19 Mortality (excess-mortality-due-covid-19) + Added: Waning immunity, Fitting the past (improved methods), and Omicron specific changes 
 
 IHME source for model versions: IHME had 3 versions before (reference here). Since the release on May 6th 2021 (http://www.healthdata.org/special-analysis/estimation-excess-mortality-due-covid-19-and-scalars-reported-covid-19-deaths), they  changed their key metric from reported deaths to the total number of COVID-19 deaths. This included estimation of ratio of total number of COVID-19 death to reported deaths from COVID-19. Hence, IHME model is labeled V4, HERE, starting from May 6, 2021.
 
