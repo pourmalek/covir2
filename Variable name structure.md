@@ -148,20 +148,6 @@ A04 LANL Los Alamos National Laboratory
 
 A05 SRIV Srivastava
 
-.
-
-A06 SOLT Soltani
-
-A07 GHAN Ghanbari
-	 
-A08 YYGU Youyang Gu (was included in a 20210423 uptake; this uptake was later omitted in conformation to the [rule for creating uptakes](https://github.com/pourmalek/covir2/tree/main/setup))
-<br/><br/>
-
-(Additional international studies’ number starting from 16, to represent 6th international study and onwards.)
-
-A16 CSIM COVID-19 Simulation
-
-A17 UCLA University of California, Los Angeles
 
 
 ***********************
