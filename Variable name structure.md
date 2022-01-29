@@ -255,6 +255,8 @@ COVID-19 Forecasts in the United States. medRxiv per-print. Posted May 25, 2020.
 
 **Details about IHME scenarios:**
 
+All updates up to and including 20211217:
+
 [IHME. COVID-19 Results Briefing, The Eastern Mediterranean Region. May 13, 2021. Page 19, Projections and scenarios]( http://www.healthdata.org/sites/default/files/files/Projects/COVID/2021/44567_briefing_Eastern_Mediterranean_Region_16.pdf) “The model was run on May 12, 2021.”
 
 (S1) The reference scenario is our forecast of what we think is most likely to happen: 
@@ -276,6 +278,16 @@ COVID-19 Forecasts in the United States. medRxiv per-print. Posted May 25, 2020.
 2- Second, it assumes that all those vaccinated increase their mobility toward pre-COVID-19 levels. 
 
 3- Third, it assumes that among those vaccinated, mask use starts to decline exponentially one month after completed vaccination. 
+
+.
+
+Updates 20220114 onwards:
+
+Added: Waning immunity, Fitting the past (improved methods), and Omicron specific changes 
+
+(Including use of integro-differential equations; Fitting the past (IDR, IHR, IFR, for different exposure categories, and Integration of rate estimation within the SEIR fitting approach,
+simultaneously estimate COVID rates and underlying transmission intensity)
+
 
 
 
