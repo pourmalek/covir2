@@ -11,32 +11,38 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 ******
 
-(1) Iran [Daily reported deaths, all time]()
+(1) Iran [Daily reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
-
-******
-
-(2) Iran [Daily reported deaths, 2021 on]()
-
+![image](https://user-images.githubusercontent.com/30849720/151763092-df59c322-81f1-48f0-8351-f9f2ed9fedd5.png)
 
 ******
 
-(3) Iran [Daily reported deaths, recent]()
+(2) Iran [Daily reported deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202021.pdf)
 
-
-******
-
-(4) Iran [Daily reported cases, all time]()
-
+![image](https://user-images.githubusercontent.com/30849720/151763201-c84daf44-40ab-44c9-9ace-5215c230144c.png)
 
 ******
 
-(5) Iran [Daily reported cases, 2021 on]()
+(3) Iran [Daily reported deaths, recent](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202022.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/151763317-f4a17834-bb00-4aa9-a3a9-a5bf0cfe9147.png)
 
 ******
 
-(6) Iran [Daily reported cases, recent]()
+(4) Iran [Daily reported cases, all time](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/151763419-5c7495b3-c410-4ec7-80cc-9b9907e761c5.png)
+
+******
+
+(5) Iran [Daily reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202021.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/151763545-0af377f3-3d53-465e-9e8f-716d6206803a.png)
+
+******
+
+(6) Iran [Daily reported cases, recent](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202022.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/151763636-e129df6c-9278-442e-a534-c0f24c88aac6.png)
 
 ******
