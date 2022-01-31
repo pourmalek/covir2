@@ -2,6 +2,10 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, [HERE](https://github.com/pourmalek/covir2/blob/main/situation%20reports/39%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2039%20–%202022-01-28.pdf). 
 
+! Read Iran COVID-19 epidemic models situation report No 40 - 2022-01-30 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/40%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2040%20–%202022-01-30.pdf)
+
+! Read Iran COVID-19 epidemic models situation report No 39 - 2022-01-28 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/39%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2039%20–%202022-01-28.pdf)
+
 <br/><br/>
 
 
@@ -185,6 +189,9 @@ The current scenarios of IHME include:
  
 
 # :eyes: SEE: [Iran COVID-19 epidemic models situation report No 39 – 2022-01-28](https://github.com/pourmalek/covir2/blob/main/situation%20reports/39%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2039%20–%202022-01-28.pdf)
+ 
+# :eyes: SEE: [Iran COVID-19 epidemic models situation report No 40 – 2022-01-30](https://github.com/pourmalek/covir2/blob/main/situation%20reports/40%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2040%20–%202022-01-30.pdf) 
+
  
 
 ********************************************************************************************************************************************
