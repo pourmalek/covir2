@@ -523,14 +523,14 @@ format DayDeaMeSmA00S00PP4D %tdDDMonCCYY
 
 
 
-* POST peak 5 - deaths PP5 21-10-01 21-11-01 - 22555 02Oct2021 237.9375
+* POST peak 5 - deaths PP5 21-10-01 22-02-30 - 22663 02Oct2021 22.02679
 
-summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(01jan2022)
+summ DayDeaMeSmA00S00 if date > td(01oct2021) & date < td(30jan2022)
 
 gen DayDeaMeSmA00S00PP5V = r(min)
 label var DayDeaMeSmA00S00PP5V "Daily deaths smooth JOHN Peak 5 Value"
 
-summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP5V & date > td(01oct2021) & date < td(01nov2021)
+summ date if DayDeaMeSmA00S00 == DayDeaMeSmA00S00PP5V & date > td(01oct2021) & date < td(30jan2022)
 gen DayDeaMeSmA00S00PP5D = r(mean)
 label var DayDeaMeSmA00S00PP5D "Daily deaths smooth JOHN Peak 5 Date"
 format DayDeaMeSmA00S00PP5D %tdDDMonCCYY 
@@ -547,7 +547,7 @@ format DayDeaMeSmA00S00PP5D %tdDDMonCCYY
 * POST Peak 2 - deaths PP2 20-08-01 20-10-01 - 22157 30Aug2020 112.3393
 * POST Peak 3 - deaths PP3 21-01-01 21-04-01 - 22321 10Feb2021 68.69643 
 * POST peak 4 - deaths PP4 21-06-01 21-07-01 - 22452 21Jun2021 122.3125
-* POST peak 5 - deaths PP5 21-10-01 21-11-01 - 22569 16Oct2021 204.2943
+* POST peak 5 - deaths PP5 21-10-01 22-02-30 - 22663 18jan2022 22.02679
 
 
 
@@ -727,14 +727,14 @@ format DayCasMeSmA00S00PP4D %tdDDMonCCYY
 
 
 
-* POST peak 5 - cases PP5 21-10-01 21-11-01 - 22561 08Oct2021 11266.88
+* POST peak 5 - cases PP5 21-10-01 22-02-30 - 22645 31dec2021 1399.045
 
-summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(01jan2022)
+summ DayCasMeSmA00S00 if date > td(01oct2021) & date < td(30jan2022)
 
 gen DayCasMeSmA00S00PP5V = r(min)
 label var DayCasMeSmA00S00PP5V "Daily cases smooth JOHN Peak 5 Value"
 
-summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP5V & date > td(01oct2021) & date < td(01nov2021)
+summ date if DayCasMeSmA00S00 == DayCasMeSmA00S00PP5V & date > td(01oct2021) & date < td(30jan2022)
 gen DayCasMeSmA00S00PP5D = r(mean)
 label var DayCasMeSmA00S00PP5D "Daily cases smooth JOHN Peak 5 Date"
 format DayCasMeSmA00S00PP5D %tdDDMonCCYY 
@@ -778,6 +778,7 @@ replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP4V if date == DayCasMeSmA00S00PP
 replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP5V if date == DayCasMeSmA00S00PP5D
 
 
+
 * peak 1 - cases P1 20-03-01 20-05-01 - 22005 31Mar2020 2923.036
 * peak 2 - cases P2 20-03-01 20-09-01 - 22069 03Jun2020 2869.813
 * peak 3 - cases P3 20-11-01 21-01-01 - 22247 28Nov2020 13579.87
@@ -788,7 +789,61 @@ replace DayCasMeSmA00S00PPV = DayCasMeSmA00S00PP5V if date == DayCasMeSmA00S00PP
 * POST Peak 2 - cases PP2 20-06-01 20-10-01 - 22159 01Sep2020 1861.08
 * POST Peak 3 - cases PP3 21-01-01 21-04-01 - 22299 19Jan2021 6103
 * POST peak 4 - cases PP4 21-05-01 21-07-01 - 22437 06Jun2021 8230.759
-* POST peak 5 - cases PP5 21-10-01 21-11-01 - 22561 08Oct2021 11266.88
+* POST peak 5 - cases PP5 21-10-01 21-11-01 - 22645 31dec2021 1399.045
+
+
+
+
+**************
+
+*** compare wave 6 (Omicron) and wave 5 (Delta)
+
+* POST peak 5 = day 1 of peak 6 = 31dec2021
+
+* gen day1 based on daily cases that precede daily deaths
+
+// gen wave6day1 = 22645 // 31dec2021
+// gen wave5day1 = 22437 // 06jun2021
+// di 22645 - 22437 + 1 // = 209 duration in days of 5th wave
+
+gen wave5day = 1
+label var wave5day "Days from 5th wave start"
+replace wave5day = . if date < 22437
+replace wave5day = . if date > 22645
+
+sort wave5day date
+replace wave5day = wave5day[_n-1] + 1 in 2/l
+replace wave5day = . if wave5day > 209
+
+gen DayCasMeSmA00S00wave5 = DayCasMeSmA00S00
+label var DayCasMeSmA00S00wave5 "DayCasMeSmA00S00 from 5th wave start"
+replace DayCasMeSmA00S00wave5 = . if date < 22437
+replace DayCasMeSmA00S00wave5 = . if date > 22645
+
+
+gen DayCasMeSmA00S00wave6 = DayCasMeSmA00S00
+label var DayCasMeSmA00S00wave6 "DayCasMeSmA00S00 from 6th wave start"
+sort date  
+replace DayCasMeSmA00S00wave6 = DayCasMeSmA00S00[_n+214] in 2/l
+replace DayCasMeSmA00S00wave6 = . if date < td(06Jun2021)
+
+
+
+
+
+gen DayDeaMeSmA00S00wave5 = DayDeaMeSmA00S00
+label var DayDeaMeSmA00S00wave5 "DayDeaMeSmA00S00 from 5th wave start"
+replace DayDeaMeSmA00S00wave5 = . if date < 22437
+replace DayDeaMeSmA00S00wave5 = . if date > 22645
+
+
+gen DayDeaMeSmA00S00wave6 = DayDeaMeSmA00S00
+label var DayDeaMeSmA00S00wave6 "DayDeaMeSmA00S00 from 6th wave start"
+sort date  
+replace DayDeaMeSmA00S00wave6 = DayDeaMeSmA00S00[_n+214] in 2/l
+replace DayDeaMeSmA00S00wave6 = . if date < td(06Jun2021)
+
+
 
 
 

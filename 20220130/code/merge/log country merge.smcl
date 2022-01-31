@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}31 Jan 2022, 00:35:46
+ {txt}opened on:  {res}31 Jan 2022, 09:03:29
 {txt}
 {com}. 
 . 
@@ -177,12 +177,10 @@
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)
 {res}{txt}
 {com}. 
-. graph save "graph 11 COVID-19 daily deaths, $country, JOHN, all time.gph", replace
-{res}{txt}(file graph 11 COVID-19 daily deaths, Iran, JOHN, all time.gph saved)
-
-{com}. graph export "graph 11 COVID-19 daily deaths, $country, JOHN, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/graph 11 COVID-19 daily deaths, Iran, JOHN, all time.pdf written in PDF format)
-
+. qui graph save "graph 11 COVID-19 daily deaths, $country, JOHN, all time.gph", replace
+{txt}
+{com}. qui graph export "graph 11 COVID-19 daily deaths, $country, JOHN, all time.pdf", replace
+{txt}
 {com}. 
 . 
 . 
@@ -198,12 +196,10 @@
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)
 {res}{txt}
 {com}. 
-. graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.gph", replace
-{res}{txt}(file graph 12 COVID-19 daily deaths, Iran, JOHN, 2021.gph saved)
-
-{com}. graph export "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/graph 12 COVID-19 daily deaths, Iran, JOHN, 2021.pdf written in PDF format)
-
+. qui graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.gph", replace
+{txt}
+{com}. qui graph export "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.pdf", replace
+{txt}
 {com}. 
 . 
 . 
@@ -220,12 +216,10 @@
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)
 {res}{txt}
 {com}. 
-. graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.gph", replace
-{res}{txt}(file graph 12 COVID-19 daily deaths, Iran, JOHN, 2022.gph saved)
-
-{com}. graph export "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/graph 12 COVID-19 daily deaths, Iran, JOHN, 2022.pdf written in PDF format)
-
+. qui graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.gph", replace
+{txt}
+{com}. qui graph export "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.pdf", replace
+{txt}
 {com}. 
 . 
 . 
@@ -249,13 +243,10 @@
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)
 {res}{txt}
 {com}. 
-. graph save "graph 21 COVID-19 daily cases, $country, JOHN, all time.gph", replace
-{txt}(note: file graph 21 COVID-19 daily cases, Iran, JOHN, all time.gph not found)
-{res}{txt}(file graph 21 COVID-19 daily cases, Iran, JOHN, all time.gph saved)
-
-{com}. graph export "graph 21 COVID-19 daily cases, $country, JOHN, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/graph 21 COVID-19 daily cases, Iran, JOHN, all time.pdf written in PDF format)
-
+. qui graph save "graph 21 COVID-19 daily cases, $country, JOHN, all time.gph", replace
+{txt}
+{com}. qui graph export "graph 21 COVID-19 daily cases, $country, JOHN, all time.pdf", replace
+{txt}
 {com}. 
 . 
 . 
@@ -271,13 +262,10 @@
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)
 {res}{txt}
 {com}. 
-. graph save "graph 22 COVID-19 daily cases, $country, JOHN, 2021.gph", replace
-{txt}(note: file graph 22 COVID-19 daily cases, Iran, JOHN, 2021.gph not found)
-{res}{txt}(file graph 22 COVID-19 daily cases, Iran, JOHN, 2021.gph saved)
-
-{com}. graph export "graph 22 COVID-19 daily cases, $country, JOHN, 2021.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/graph 22 COVID-19 daily cases, Iran, JOHN, 2021.pdf written in PDF format)
-
+. qui graph save "graph 22 COVID-19 daily cases, $country, JOHN, 2021.gph", replace
+{txt}
+{com}. qui graph export "graph 22 COVID-19 daily cases, $country, JOHN, 2021.pdf", replace
+{txt}
 {com}. 
 . 
 . 
@@ -294,13 +282,60 @@
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off)
 {res}{txt}
 {com}. 
-. graph save "graph 22 COVID-19 daily cases, $country, JOHN, 2022.gph", replace
-{txt}(note: file graph 22 COVID-19 daily cases, Iran, JOHN, 2022.gph not found)
-{res}{txt}(file graph 22 COVID-19 daily cases, Iran, JOHN, 2022.gph saved)
-
-{com}. graph export "graph 22 COVID-19 daily cases, $country, JOHN, 2022.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/graph 22 COVID-19 daily cases, Iran, JOHN, 2022.pdf written in PDF format)
-
+. qui graph save "graph 22 COVID-19 daily cases, $country, JOHN, 2022.gph", replace
+{txt}
+{com}. qui graph export "graph 22 COVID-19 daily cases, $country, JOHN, 2022.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****
+. * daily cases, JOHN, comparison of 5th and 6th waves
+. 
+. twoway ///
+> (line DayCasMeSmA00S00wave5 wave5day, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "5th wave"
+> (line DayCasMeSmA00S00wave6 wave5day, sort lcolor(red) lwidth(thick)) /// 1 "6th wave"
+> if date >= td(06jun2021) ///
+> , xtitle(Days from wave start) xlabel(0(10)210, labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily reported cases) yscale(titlegap(2)) ///
+> title("COVID-19 daily reported cases, $country, comparison of 5th and 6th waves", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "5th wave" 2 "6th wave") size(small) rows (1)) 
+{res}{txt}
+{com}. 
+. qui graph save "graph 31 COVID-19 daily cases, $country, JOHN, 5th and 6th waves.gph", replace
+{txt}
+{com}. qui graph export "graph 31 COVID-19 daily cases, $country, JOHN, 5th and 6th waves.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. ****
+. * daily deaths, JOHN, comparison of 5th and 6th waves
+. 
+. twoway ///
+> (line DayDeaMeSmA00S00wave5 wave5day, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "5th wave"
+> (line DayDeaMeSmA00S00wave6 wave5day, sort lcolor(red) lwidth(thick)) /// 1 "6th wave"
+> if date >= td(06jun2021) ///
+> , xtitle(Days from wave start) xlabel(0(10)210, labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily reported deaths) yscale(titlegap(2)) ///
+> title("COVID-19 daily reported deaths, $country, comparison of 5th and 6th waves", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "5th wave" 2 "6th wave") size(small) rows (1)) 
+{res}{txt}
+{com}. 
+. qui graph save "graph 32 COVID-19 daily deaths, $country, JOHN, 5th and 6th waves.gph", replace
+{txt}
+{com}. qui graph export "graph 32 COVID-19 daily deaths, $country, JOHN, 5th and 6th waves.pdf", replace
+{txt}
 {com}. 
 . 
 . 
@@ -326,7 +361,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220130/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}31 Jan 2022, 00:35:51
+ {txt}closed on:  {res}31 Jan 2022, 09:03:40
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
