@@ -55,7 +55,7 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 (8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/151842174-37193127-bc53-4c84-b4cd-c0d693eba432.png)
+![image](https://user-images.githubusercontent.com/30849720/151842268-8e88bc4d-2dcb-4773-a3cd-1ec4b6b15dab.png)
 
 ******
 
