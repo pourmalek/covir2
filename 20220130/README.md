@@ -6,6 +6,9 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 <br/><br/>
 
+The rate of increase in daily cases in the first 25 days of the sixth wave is about **two times** that of the fifth wave (graph 8 below).
+
+<br/><br/>
 
 ### Selected graphs
 
@@ -49,7 +52,7 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 (7) Iran [Daily reported deaths, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2031%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
-Absolute Percent change = 100 * (|Old – New|) / Old = 100 * (|8231- 12035|) / 8231 = 46.2 for 5th wave and 100 * (|1399 – 15279|) / 15279 = 90.8 for 6th wave. 90.8 / 46.2 = 1.97 or about 2 times more. 
+In days 1 and 25 of each wave, smoothed reported daily death were respectively 146 and 133 in the 5th wave, and 23 and 23 in the sixth wave. Rise of daily deaths lags rise of daily cases. 
 
 ![image](https://user-images.githubusercontent.com/30849720/151841990-625796a4-26f1-4390-878e-e5c668bfec19.png)
 
@@ -57,7 +60,7 @@ Absolute Percent change = 100 * (|Old – New|) / Old = 100 * (|8231- 12035|) / 
 
 (8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220130/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
-In days 1 and 25 of each wave, smoothed reported daily death were respectively 146 and 133 in the 5th wave, and 23 and 23 in the sixth wave. Rise of daily deaths lags rise of daily cases. 
+Absolute Percent change = 100 * (|Old – New|) / Old = 100 * (|8231- 12035|) / 8231 = 46.2 for 5th wave and 100 * (|1399 – 15279|) / 15279 = 90.8 for 6th wave. 90.8 / 46.2 = 1.97 or about 2 times more. The rate of increase in daily cases in the first 25 days of the sixth wave is about two times that of the fifth wave. 
 
 ![image](https://user-images.githubusercontent.com/30849720/151842268-8e88bc4d-2dcb-4773-a3cd-1ec4b6b15dab.png)
 
