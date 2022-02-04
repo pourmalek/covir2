@@ -29,9 +29,9 @@ JOHN A00
 
 DELP A01
 IHME A02
-IMPE A03
+IMPE A03 // IMPE 2022-01-02_v9.csv.zip is > one month old
 LANL A04 // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
-SRIV A05 // Some labs were much bettre with physics. 
+SRIV A05  
 
 */
 
@@ -71,7 +71,7 @@ else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IHME\coun
 drop _merge
 
 
-
+/*
 * IMPE
 
 if regexm(c(os),"Mac") == 1 {
@@ -81,7 +81,7 @@ if regexm(c(os),"Mac") == 1 {
 else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IMPE\country IMPE.dta"
 
 drop _merge
-
+*/
 
 
 /* LANL
@@ -173,7 +173,7 @@ label var TotITDMeRaA02S02 "Total Infections to Deaths S2 IHME"
 
 
 
-
+/*
 gen DayITDMeRaA03S01  = DayINFMeRaA03S01  / DayDeaMeRaA03S01   
 
 label var DayITDMeRaA03S01  "Daily Infections to Deaths S1 IMPE"
@@ -201,7 +201,7 @@ label var DayITDMeRaA03S03  "Daily Infections to Deaths S3 IMPE"
 gen TotITDMeRaA03S03  = TotINFMeRaA03S03  / TotDeaMeRaA03S03   
 
 label var TotITDMeRaA03S03  "Total Infections to Deaths S3 IMPE"
-
+*/
 
 
 
@@ -246,7 +246,7 @@ label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHM
 
 
 
-
+/*
 gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00S00
 
 label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
@@ -260,7 +260,7 @@ label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
 gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00S00
 
 label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
-
+*/
 
 
 gen DayDERMeRaA05S00  = DayDeaMeRaA05S00 / DayDeaMeRaA00S00
@@ -301,7 +301,7 @@ gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeRaA00S00
 label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
 
 
-
+/*
 gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00S00
 
 label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
@@ -315,7 +315,7 @@ label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
 gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00S00
 
 label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
-
+*/
 
 gen DayCERMeRaA05S00  = DayCasMeRaA05S00 / DayCasMeRaA00S00
 
@@ -353,7 +353,7 @@ label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHM
 
 
 
-
+/*
 gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00S00
 
 label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
@@ -372,7 +372,7 @@ label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
 gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00S00
 
 label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
-
+*/
 
 
 
@@ -404,7 +404,7 @@ label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed
 
 
 
-
+/*
 gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00S00
 
 label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
@@ -418,7 +418,7 @@ label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
 gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00S00
 
 label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
-
+*/
 
 
 gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00S00
@@ -529,14 +529,13 @@ twoway ///
 (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 (line DayDeXMeSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 4 "IHME"
-(line DayDeaMeRaA03S02 date, sort lcolor(magenta)) /// 5 "IMPE"
-(line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+(line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH." , size(vsmall))
@@ -554,14 +553,13 @@ twoway ///
 (line DayDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 (line DayDeXMeSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 4 "IHME"
-(line DayDeaMeRaA03S02 date, sort lcolor(magenta)) /// 5 "IMPE"
-(line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+(line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "SRIV") size(small) row(1)) ///
 subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH." , size(vsmall))
@@ -583,18 +581,15 @@ twoway ///
 (line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 5 IHME mean
 (line DayDeaLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
 (line DayDeaUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
-(line DayDeaMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
-(line DayDeaLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
-(line DayDeaUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
-(line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 11 "SRIV" mean
-(line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
-(line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
+(line DayDeaMeRaA05S00 date, sort lcolor(green)) /// 8 "SRIV" mean
+(line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 9 "SRIV" lower
+(line DayDeaMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 10 "SRIV" upper
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "IMPE" 11 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "SRIV") size(small) row(1)) ///
 subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed curves" ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
@@ -660,7 +655,7 @@ graph export "graph 15 COVID-19 daily deaths, $country, 4 scenarios, IHME.pdf", 
 
 ****
 * daily deaths, reference scenario with uncertainty, IMPE, 2021
-
+/*
 twoway ///
 (line DayDeaMeRaA00S00 date, sort lcolor(cyan) lwidth(medium)) /// 1 "JOHN raw"
 (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 2 "JOHN smooth"
@@ -708,7 +703,7 @@ note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits
 
 graph save "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.gph", replace
 graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
-
+*/
 
 
 ***********************
@@ -719,15 +714,14 @@ twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2)) /// 1 "JOHN"
 (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid)  ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
-5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" ///
+4 "SRIV cases") size(small) row(2)) ///
 subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -744,15 +738,14 @@ twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2)) /// 1 "JOHN"
 (line DayCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
-5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" ///
+4 "SRIV cases") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -796,19 +789,16 @@ twoway ///
 (line DayINFMeSmA02S01 date, sort lcolor(black)) /// 5 IHME mean
 (line DayINFLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
 (line DayINFUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
-(line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
-(line DayINFLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
-(line DayINFUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
-(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 11 "SRIV" mean
-(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
-(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
+(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 8 "SRIV" mean
+(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 9 "SRIV" lower
+(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 10 "SRIV" upper
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" 8 "IMPE infections" ///
-11 "SRIV cases") size(small) row(2)) /// 
+legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" ///
+8 "SRIV cases") size(small) row(2)) /// 
 subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -830,23 +820,17 @@ twoway ///
 (line DayINFLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME reference lower
 (line DayINFUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME reference upper
 (line DayINFMeSmA02S02 date, sort lcolor(black) lwidth(thick) lpattern(tight_dot)) /// 8 IHME better mean
-(line DayINFMeRaA03S02 date, sort lcolor(magenta)) /// 9 IMPE reference mean
-(line DayINFLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE reference lower
-(line DayINFUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 11 IMPE reference upper
-(line DayINFMeRaA03S01 date, sort lcolor(magenta) lwidth(thick) lpattern(tight_dot)) /// 12 IMPE better mean
-(line DayINFMeRaA03S03 date, sort lcolor(magenta) lwidth(thick) lpattern(tight_dot)) /// 13 IMPE worse mean
-(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 14 "SRIV" mean
-(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 15 "SRIV" lower
-(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 16 "SRIV" upper
+(line DayCasMeRaA05S00 date, sort lcolor(green)) /// 9 "SRIV" mean
+(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 10 "SRIV" lower
+(line DayCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 11 "SRIV" upper
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections) title("COVID-19 daily cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME reference, mean" 6 "IHME ref, uncertainty" 8 "IHME better" ///
-9 "IMPE reference, mean " 10 "IMPE ref, uncertainty" 12 "IMPE better and worse" ///
-14 "SRIV cases") size(small) row(4)) ///
-subtitle("2021 on, full scenarios, with uncertainty; IHME & IMPE: infections", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+9 "SRIV cases") size(small) row(4)) ///
+subtitle("2021 on, full scenarios, with uncertainty; IHME: infections", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed (– – –) curves; Better and worse scenarios: tight dot (|||||) curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -905,7 +889,7 @@ graph export "graph 25 1 COVID-19 daily cases, $country, 4 scenarios, IHME.pdf",
 
 ****
 * daily infections, reference scenario with uncertainty, IMPE, 2021
-
+/*
 twoway ///
 (line DayCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 JOHN
 (line DayINFMeRaA03S02 date, sort lcolor(black)) /// 2 IMPE reference mean
@@ -950,7 +934,7 @@ note("- Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits
 
 graph save "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.gph", replace
 graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", replace
-
+*/
 
 
 
@@ -961,21 +945,20 @@ graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", r
 gen DayITCMeSmA02S01 =  DayINFMeSmA02S01 / DayCasMeRaA00S00
 
 label var DayITCMeSmA02S01  "Daily Infections IHME to cases JOHN"
-
+/*
 gen DayITCMeRaA03S02 =  DayINFMeRaA03S02 / DayCasMeRaA00S00
 
 label var DayITCMeRaA03S02  "Daily Infections IMPE to cases JOHN"
-
+*/
 
 twoway ///
 (line DayITCMeSmA02S01 date, sort lcolor(black)) /// 1 "IHME"
-(line DayITCMeRaA03S02 date, sort lcolor(magenta)) /// 2 "IMPE"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estimated infections to reported cases, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "IHME" 2 "IMPE" 3) size(small) row(1)) ///
+legend(order(1 "IHME") size(small) row(1)) ///
 subtitle("reference scenarios", size(small)) 
 
 graph save "graph 28 C19 daily estimated infections to reported cases, $country, reference scenarios.gph", replace
@@ -994,7 +977,7 @@ tsset date, daily
 
 
 foreach var of varlist ///
-DayITCMeSmA02S01 DayITCMeRaA03S02 {
+DayITCMeSmA02S01  {
 
 
 tssmooth ma `var'_window = `var', window(3 1 3)
@@ -1010,7 +993,7 @@ tsset, clear
 
 ssc install labutil2
 
-labvars DayITCMeSmA02S01sm DayITCMeRaA03S02sm ,names
+// labvars DayITCMeSmA02S01sm DayITCMeRaA03S02sm ,names
 
           
 qui summ DayITCMeSmA02S01sm if date >= td(01jan2021) , detail
@@ -1021,7 +1004,7 @@ replace DayITCMeSmA02S01sm_median = round(DayITCMeSmA02S01sm_median)
 
 local DayITCMeSmA02S01sm_median = DayITCMeSmA02S01sm_median
 
-
+/*
 qui summ DayITCMeRaA03S02sm if date >= td(01jan2021) , detail
 
 gen DayITCMeRaA03S02sm_median = r(p50)
@@ -1029,22 +1012,20 @@ gen DayITCMeRaA03S02sm_median = r(p50)
 replace DayITCMeRaA03S02sm_median = round(DayITCMeRaA03S02sm_median)
 
 local DayITCMeRaA03S02sm_median = DayITCMeRaA03S02sm_median
+*/
 
 twoway ///
 (line DayITCMeSmA02S01 date, sort lcolor(black*0.2)) /// 1 "IHME"
-(line DayITCMeRaA03S02 date, sort lcolor(magenta*0.2)) /// 2 "IMPE"
-(line DayITCMeSmA02S01sm date, sort lcolor(black) lwidth(thick)) /// 3 "IHME"
-(line DayITCMeRaA03S02sm date, sort lcolor(magenta) lwidth(thick)) /// 4 "IMPE"
-(line DayITCMeSmA02S01sm_median date, sort lcolor(black) lwidth(thin) lpattern(dash)) /// 5 "IHME"
-(line DayITCMeRaA03S02sm_median date, sort lcolor(magenta) lwidth(thin) lpattern(dash)) /// 6 "IMPE"
+(line DayITCMeSmA02S01sm date, sort lcolor(black) lwidth(thick)) /// 2 "IHME"
+(line DayITCMeSmA02S01sm_median date, sort lcolor(black) lwidth(thin) lpattern(dash)) /// 3 "IHME"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estimated infections to reported cases, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "IHME" 2 "IMPE" 3 "IHME smooth" 4 "IMPE smooth" 5 "IHME smooth meadian" 6 "IMPE smooth meadian") size(small) row(2)) ///
+legend(order(1 "IHME" 2 "IHME smooth" 3 "IHME smooth meadian") size(small) row(2)) ///
 subtitle("reference scenarios", size(small)) ///
-note("IHME smooth median 2021 on = `DayITCMeSmA02S01sm_median'; IMPE smooth median 2021 on = `DayITCMeRaA03S02sm_median'")
+note("IHME smooth median 2021 on = `DayITCMeSmA02S01sm_median'")
 
 graph save "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.gph", replace
 graph export "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.pdf", replace
@@ -1066,14 +1047,13 @@ twoway ///
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1091,14 +1071,13 @@ twoway ///
 (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 (line TotDeXMeSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 4 "IHME excess"
-(line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 5 "IMPE"
-(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1115,14 +1094,13 @@ twoway ///
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "SRIV") size(small) row(1)) ///
 subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1140,14 +1118,13 @@ twoway ///
 (line TotDeaMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
 (line TotDeXMeSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 4 "IHME excess"
-(line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 5 "IMPE"
-(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 6 "SRIV"
+(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "IMPE" 6 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IHME excess" 5 "SRIV") size(small) row(1)) ///
 subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1168,18 +1145,15 @@ twoway ///
 (line TotDeaMeSmA02S01 date, sort lcolor(black)) /// 5 IHME mean
 (line TotDeaLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
 (line TotDeaUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
-(line TotDeaMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
-(line TotDeaLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
-(line TotDeaUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
-(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 11 "SRIV" mean
-(line TotDeaLoRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
-(line TotDeaUpRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
+(line TotDeaMeRaA05S00 date, sort lcolor(green)) /// 8 "SRIV" mean
+(line TotDeaLoRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 9 "SRIV" lower
+(line TotDeaUpRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 10 "SRIV" upper
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths) title("COVID-19 total deaths, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "IMPE" 11 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 5 "IHME" 8 "SRIV") size(small) row(1)) ///
 note("Uncertainty limits: dashed curves") ///
 subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
@@ -1203,15 +1177,14 @@ twoway ///
 (line TotCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotCasMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
-5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" ///
+4 "SRIV cases") size(small) row(2)) ///
 subtitle("reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1228,15 +1201,14 @@ twoway ///
 (line TotCasMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotCasMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotINFMeSmA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotINFMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotCasMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotCasMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" ///
-5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" ///
+4 "SRIV cases") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1257,19 +1229,16 @@ twoway ///
 (line TotINFMeSmA02S01 date, sort lcolor(black)) /// 5 IHME mean
 (line TotINFLoSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 6 IHME lower
 (line TotINFUpSmA02S01 date, sort lcolor(black) lpattern(dash)) /// 7 IHME upper
-(line TotINFMeRaA03S02 date, sort lcolor(magenta)) /// 8 IMPE mean
-(line TotINFLoRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 9 IMPE lower
-(line TotINFUpRaA03S02 date, sort lcolor(magenta) lpattern(dash)) /// 10 IMPE upper
-(line TotCasMeRaA05S00 date, sort lcolor(green)) /// 11 "SRIV" mean
-(line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 12 "SRIV" lower
-(line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 13 "SRIV" upper
+(line TotCasMeRaA05S00 date, sort lcolor(green)) /// 8 "SRIV" mean
+(line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 9 "SRIV" lower
+(line TotCasMeRaA05S00 date, sort lcolor(green) lpattern(dash)) /// 10 "SRIV" upper
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(`dates2021', format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections) title("COVID-19 total cases or infections, $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" 8 "IMPE infections" ///
-11 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 5 "IHME infections" ///
+8 "SRIV cases") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios with uncertainty", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
@@ -1292,14 +1261,13 @@ twoway ///
 (line DayCfrMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN"
 (line DayCfrMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line infection_fatality_A02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayIFRMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily CFR or IFR) title("COVID-19 daily CFR or IFR, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN CFR" 2 "DELP CFR" 3 "IHME IFR" 4 "IMPE IFR" 5 "SRIV CFR") size(small) row(2)) ///
+legend(order(1 "JOHN CFR" 2 "DELP CFR" 3 "IHME IFR" 4 "SRIV CFR") size(small) row(2)) ///
 subtitle("reference scenarios", size(small) color(white))
 
 graph save "graph 51 COVID-19 daily CFR, $country, reference scenarios, all time.gph", replace
@@ -1314,14 +1282,13 @@ twoway ///
 (line DayCfrMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN"
 (line DayCfrMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line infection_fatality_A02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayIFRMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCfrMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily CFR or IFR) title("COVID-19 daily CFR or IFR, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN CFR" 2 "DELP CFR" 3 "IHME IFR" 4 "IMPE IFR" 5 "SRIV CFR") size(small) row(2)) ///
+legend(order(1 "JOHN CFR" 2 "DELP CFR" 3 "IHME IFR" 4 "SRIV CFR") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios", size(small))
 
 graph save "graph 52 COVID-19 daily CFR, $country, reference scenarios.gph", replace
@@ -1344,16 +1311,13 @@ twoway ///
 (line DayBedMeSmA02S01 date, sort lcolor(black)) /// 3 IHME Bed need (Daily Beds needed Mean IHME S1)
 (line DayIcuMeSmA02S01 date, sort lcolor(green)) /// 4 IHME ICU need (Daily ICU beds needed Mean IHME S1)
 (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 5 IHME Admissions (Daily hospital admissions Mean IHME S1)
-(line DayHodMeRaA03S01 date, sort lcolor(magenta)) /// 6 IMPE Hosp demand (Daily hospital demand Mean A03 S01 )
-(line DayIcdMeRaA03S01 date, sort lcolor(magenta) lpattern(dash_dot)) /// 7 IMPE ICU demand (Daily ICU demand Mean A03 S01 )
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME Bed need" 4 "IHME ICU need" ///
-5 "IHME Admissions" 6 "IMPE Hosp demand" ///
-7 "IMPE ICU demand") rows(4) size(small)) ///
+5 "IHME Admissions") rows(4) size(small)) ///
 subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1374,18 +1338,16 @@ twoway ///
 (line DayBedMeSmA02S01 date, sort lcolor(black)) /// 3 IHME Bed need (Daily Beds needed Mean IHME S1)
 (line DayIcuMeSmA02S01 date, sort lcolor(green)) /// 4 IHME ICU need (Daily ICU beds needed Mean IHME S1)
 (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 5 IHME Admissions (Daily hospital admissions Mean IHME S1)
-(line DayHodMeRaA03S01 date, sort lcolor(magenta)) /// 6 IMPE Hosp demand (Daily hospital demand Mean A03 S01 )
-(line DayIcdMeRaA03S01 date, sort lcolor(magenta) lpattern(dash_dot)) /// 7 IMPE ICU demand (Daily ICU demand Mean A03 S01 )
-(line DayBEDMeSmA02    date, sort lcolor(black) lpattern(dash)) /// 8
-(line DayICUMeSmA02    date, sort lcolor(cyan) lpattern(dash)) /// 9
+(line DayBEDMeSmA02    date, sort lcolor(black) lpattern(dash)) /// 6
+(line DayICUMeSmA02    date, sort lcolor(cyan) lpattern(dash)) /// 7
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME Bed need" 4 "IHME ICU need" ///
-5 "IHME Admissions" 6 "IMPE Hosp demand" ///
-7 "IMPE ICU demand" 8 "IHME All bed capcity" 9 "IHME ICU bed capacity") rows(4) size(small)) ///
+5 "IHME Admissions" ///
+6 "IHME All bed capcity" 7 "IHME ICU bed capacity") rows(4) size(small)) ///
 subtitle("reference scenarios", size(small) color(white)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1409,16 +1371,15 @@ twoway ///
 (line DayVenMeRaA01S00 date, sort lcolor(red) lpattern(dash)  lwidth(thick)) /// 2 DELP Ventilated (Daily Cases Active Ventilated Mean DELP S0)
 (line DayIcuMeSmA02S01 date, sort lcolor(green)) /// 3 IHME ICU need (Daily ICU beds needed Mean IHME S1)
 (line DayAdmMeSmA02S01 date, sort lcolor(yellow)) /// 4 IHME Admissions (Daily hospital admissions Mean IHME S1)
-(line DayIcdMeRaA03S01 date, sort lcolor(magenta) lpattern(dash_dot)) /// 5 IMPE ICU demand (Daily ICU demand Mean A03 S01 )
-(line DayICUMeSmA02    date, sort lcolor(cyan) lpattern(dash)) /// 6
+(line DayICUMeSmA02    date, sort lcolor(cyan) lpattern(dash)) /// 5
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily outcomes) title("COVID-19 daily hospital-related outcomes $country", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "DELP Hospitalized" 2 "DELP Ventilated" 3 "IHME ICU need" ///
-4 "IHME Admissions" 5 "IMPE ICU demand" 6 "IHME All bed capcity") rows(3) size(small)) ///
-subtitle("2021 on, without IHME Bed need, IMPE Hosp demand, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
+4 "IHME Admissions" 5 "IHME All bed capcity") rows(3) size(small)) ///
+subtitle("2021 on, without IHME Bed need, reference scenarios", size(small)) xline(22424, lcolor(red) lwidth(thick))  ///
 note("- Uncertainty limits: dashed curves." ///
 "- Red line: 20210424 online meeting; The estimated probability, timing, dimensions, drivers, and preventive measures of" ///
 "    the FIFTH wave and Delta were discussed with MOH.", size(vsmall))
@@ -1440,14 +1401,13 @@ twoway ///
 (line DayCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line DayCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections to deaths) title("COVID-19 daily cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("reference scenarios", size(small))
 
 graph save "graph 81 COVID-19 daily cases to deaths, $country, reference scenarios, all time.gph", replace
@@ -1462,14 +1422,13 @@ twoway ///
 (line DayCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN"
 (line DayCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCTDMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections to deaths) title("COVID-19 daily cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios", size(small))
 
 graph save "graph 82 COVID-19 daily cases to deaths, $country, reference scenarios.gph", replace
@@ -1484,14 +1443,13 @@ twoway ///
 (line TotCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections to deaths) title("COVID-19 total cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("reference scenarios", size(small))
 
 graph save "graph 83 COVID-19 total cases to deaths, $country, reference scenarios, all time.gph", replace
@@ -1506,14 +1464,13 @@ twoway ///
 (line TotCTDMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotCTDMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotITDMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotITDMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotCTDMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections to deaths) title("COVID-19 total cases or infections, to deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("2021 on, reference scenarios", size(small))
 
 graph save "graph 84 COVID-19 total cases to deaths, $country, reference scenarios.gph", replace
@@ -1537,14 +1494,13 @@ twoway ///
 (line DayDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line DayDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayDERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths estimated to reported) title("COVID-19 daily deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small))
 
 graph save "graph 91 COVID-19 daily deaths estimated to reported, $country, reference scenarios, all time.gph", replace
@@ -1559,14 +1515,13 @@ twoway ///
 (line DayDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line DayDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayDERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.1fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths estimated to reported) title("COVID-19 daily deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small))
 
 graph save "graph 92 COVID-19 daily deaths estimated to reported, $country, reference scenarios.gph", replace
@@ -1584,14 +1539,13 @@ twoway ///
 (line DayCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line DayCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections estimated to reported) title("COVID-19 daily cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(3)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("daily cases or infections estimated, to reported cases; reference scenarios", size(small))
 
 graph save "graph 93 COVID-19 daily cases estimated to reported, $country, reference scenarios, all time .gph", replace
@@ -1606,14 +1560,13 @@ twoway ///
 (line DayCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line DayCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line DayIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line DayIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line DayCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line DayCERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily cases or infections estimated to reported) title("COVID-19 daily cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(3)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("daily cases or infections estimated, to reported cases; reference scenarios", size(small))
 
 graph save "graph 94 COVID-19 daily cases estimated to reported, $country, reference scenarios.gph", replace
@@ -1628,14 +1581,13 @@ twoway ///
 (line TotDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN
 (line TotDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotDERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small))
 
 graph save "graph 95 COVID-19 total deaths estimated to reported, $country, reference scenarios, all time.gph", replace
@@ -1650,14 +1602,13 @@ twoway ///
 (line TotDERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN
 (line TotDERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotDERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotDERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotDERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotDERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.2fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total deaths estimated to reported) title("COVID-19 total deaths, estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "IMPE" 5 "SRIV") size(small) row(1)) ///
+legend(order(1 "JOHN" 2 "DELP" 3 "IHME" 4 "SRIV") size(small) row(1)) ///
 subtitle("reference scenarios", size(small))
 
 graph save "graph 96 COVID-19 total deaths estimated to reported, $country, reference scenarios.gph", replace
@@ -1672,14 +1623,13 @@ twoway ///
 (line TotCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotCERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections estimated to reported) title("COVID-19 total cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("total cases or infections estimated, to reported cases; reference scenarios", size(small))
 
 graph save "graph 97 COVID-19 total cases estimated to reported, $country, reference scenarios.gph", replace
@@ -1694,14 +1644,13 @@ twoway ///
 (line TotCERMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(vthick)) /// 1 "JOHN"
 (line TotCERMeRaA01S00 date, sort lcolor(red)) /// 2 "DELP"
 (line TotIERMeRaA02S01 date, sort lcolor(black)) /// 3 "IHME"
-(line TotIERMeRaA03S02 date, sort lcolor(magenta)) /// 4 "IMPE"
-(line TotCERMeRaA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+(line TotCERMeRaA05S00 date, sort lcolor(green)) /// 4 "SRIV"
 if date >= td(01jan2021) ///
 , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Total cases or infections estimated to reported) title("COVID-19 total cases estimated to reported, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2) titlegap(5)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "IMPE infections" 5 "SRIV cases") size(small) row(2)) ///
+legend(order(1 "JOHN cases" 2 "DELP cases" 3 "IHME infections" 4 "SRIV cases") size(small) row(2)) ///
 subtitle("total cases or infections estimated, to reported cases; reference scenarios", size(small))
 
 graph save "graph 98 COVID-19 total cases estimated to reported, $country, reference scenarios.gph", replace
