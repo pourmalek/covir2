@@ -1,10 +1,14 @@
 ! Read Iran COVID-19 epidemic models situation report No 40 - 2022-01-30 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/40%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2040%20–%202022-01-30.pdf)
 
-### JOHN only in uptake 20220204
+### JOHN only in uptake 20220204 
 
-IHME and IMPE models have not been updated since the previous uptake of CovidVisualizedGlobal, and the SRIV model updated estimates are highly implausible. 
+IHME and IMPE models have not been updated since the previous uptake of covir2, and the SRIV model updated estimates are highly implausible. 
 
 <br/><br/>
+
+Daily deaths with correction factors 3 and 4 are added to daily deaths graphs.  
+
+Daily cases with correction factor 5 since the start of the 6th wave are added to daily cases graphs. 
 
 
 <br/><br/>
@@ -15,6 +19,7 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 (1) Iran [Daily reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/152650839-0cc03c4e-2159-465a-932e-7a5d6cd6b7a9.png)
 
 ******
 
