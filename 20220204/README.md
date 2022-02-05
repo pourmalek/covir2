@@ -6,6 +6,9 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 <br/><br/>
 
+Deaths with correction factors 3 and 4 are added to deaths graphs.  
+
+Daily cases with correction factor 5 since the start of the 6th wave are added to daily cases graphs.  
 
 <br/><br/>
 
@@ -15,6 +18,7 @@ IHME and IMPE models have not been updated since the previous uptake of CovidVis
 
 (1) Iran [Daily reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/152652649-3cc9080a-a426-47a6-bfc3-37b62ccbdf66.png)
 
 ******
 
