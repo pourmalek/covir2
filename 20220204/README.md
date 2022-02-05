@@ -82,4 +82,11 @@ Daily cases with correction factor 5 since the start of the 6th wave are added t
 
 ******
 
+Total COVID-19 deaths In Iran up to 4 Feb 2022:
+ 
+132,681 reported	
+
+398,043 reported with correction factor 3	
+
+## 530,724 reported with correction factor 4
 
