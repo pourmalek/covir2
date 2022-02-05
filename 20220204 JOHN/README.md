@@ -16,67 +16,67 @@ Daily cases with correction factor 5 since the start of the 6th wave are added t
 
 ******
 
-(1) Iran [Daily reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
+(1) Iran [Daily reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652649-3cc9080a-a426-47a6-bfc3-37b62ccbdf66.png)
 
 ******
 
-(2) Iran [Daily reported deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202021.pdf)
+(2) Iran [Daily reported deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202021.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652717-5572303c-34be-407d-8757-9de710568ac2.png)
 
 ******
 
-(3) Iran [Daily reported deaths, recent](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202022.pdf)
+(3) Iran [Daily reported deaths, recent](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202022.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652743-1465146c-7815-4daf-b753-dfb927503121.png)
 
 ******
 
-(4) Iran [Daily reported cases, all time](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
+(4) Iran [Daily reported cases, all time](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652770-ef88b9cd-a188-42a4-b2e7-c5d7638f3358.png)
 
 ******
 
-(5) Iran [Daily reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202021.pdf)
+(5) Iran [Daily reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202021.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652822-8fbfa17d-f493-45ad-b888-b712f1ed26aa.png)
 
 ******
 
-(6) Iran [Daily reported cases, recent](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202022.pdf)
+(6) Iran [Daily reported cases, recent](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202022.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652840-18bbab27-284e-4298-bfd4-7f7160eb3f33.png)
 
 ******
 
-(7) Iran [Daily reported deaths, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2031%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
+(7) Iran [Daily reported deaths, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2031%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652869-4ef1ace2-48f9-49af-969d-559cecb2ba5d.png)
 
 ******
 
-(7b) Iran [Daily reported deaths, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2031b%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
+(7b) Iran [Daily reported deaths, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2031b%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152653230-e3a4e4ef-ab8d-4bd9-836f-286337399747.png)
 
 ******
 
-(8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
+(8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652885-d8c2b523-e4bc-44c5-a7d8-592b4f6bf5e8.png)
 
 ******
 
-(8b) Iran [Daily reported cases, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2032b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
+(8b) Iran [Daily reported cases, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2032b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152653310-cbf94c9b-86b0-4427-9bad-8cbae675a32b.png)
 
 ******
 
-(9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2033%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
+(9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220204%20JOHN/output/merge/graph%2033%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152653126-a8ab4e72-bbdd-4f54-a968-37a503951510.png)
 
