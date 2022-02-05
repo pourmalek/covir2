@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220204/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 5 Feb 2022, 07:29:28
+ {txt}opened on:  {res} 5 Feb 2022, 09:20:47
 {txt}
 {com}. 
 . 
@@ -169,14 +169,16 @@
 . * daily deaths, JOHN, all time
 . 
 . twoway ///
-> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN smooth"
-> (line DayDeaMeSmA00S00_CF3 date, sort lcolor(cyan) lwidth(thick) lpattern(dash)) /// 
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 
+> (line DayDeaMeSmA00S00_CF3 date, sort lcolor(cyan) lwidth(medthick) lpattern(dash)) /// 
+> (line DayDeaMeSmA00S00_CF4 date, sort lcolor(cyan) lwidth(medthick)) /// 
 > if date >= td(01jan2020) ///
 > , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, all time", size(medium)) /// 
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-> legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3") size(small) rows (1)) 
+> legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3" ///
+> 3 "Daily reported deaths correction factor 4") size(small) rows (2)) 
 {res}{txt}
 {com}. 
 . qui graph save "graph 11 COVID-19 daily deaths, $country, JOHN, all time.gph", replace
@@ -190,14 +192,16 @@
 . * daily deaths, JOHN, 2021 on
 . 
 . twoway ///
-> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN smooth"
-> (line DayDeaMeSmA00S00_CF3 date, sort lcolor(cyan) lwidth(thick) lpattern(dash)) /// 
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 
+> (line DayDeaMeSmA00S00_CF3 date, sort lcolor(cyan) lwidth(medthick) lpattern(dash)) /// 
+> (line DayDeaMeSmA00S00_CF4 date, sort lcolor(cyan) lwidth(medthick)) ///  
 > if date >= td(01jan2021) ///
 > , xtitle(Date) xlabel(#$monthspast01jan2021merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, 2021 on", size(medium)) /// 
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-> legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3") size(small) rows (1)) 
+> legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3" ///
+> 3 "Daily reported deaths correction factor 4") size(small) rows (2)) 
 {res}{txt}
 {com}. 
 . qui graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.gph", replace
@@ -212,14 +216,16 @@
 . * daily deaths, JOHN, recent
 . 
 . twoway ///
-> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "JOHN smooth"
-> (line DayDeaMeSmA00S00_CF3 date, sort lcolor(cyan) lwidth(thick) lpattern(dash)) /// 
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 
+> (line DayDeaMeSmA00S00_CF3 date, sort lcolor(cyan) lwidth(medthick) lpattern(dash)) /// 
+> (line DayDeaMeSmA00S00_CF4 date, sort lcolor(cyan) lwidth(medthick)) /// 
 > if date >= td(01dec2021) ///
 > , xtitle(Date) xlabel(#$monthspast01jan2022merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, recent", size(medium)) /// 
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-> legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3") size(small) rows (1)) 
+> legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3" ///
+> 3 "Daily reported deaths correction factor 4") size(small) rows (2)) 
 {res}{txt}
 {com}. 
 . qui graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.gph", replace
@@ -382,15 +388,16 @@
 > (line DayDeaMeSmA00S00wave5 wave5day, sort lcolor(cyan*1.2) lwidth(thick)) /// 1 "5th wave"
 > (line DayDeaMeSmA00S00wave5_CF3 wave5day, sort lcolor(cyan) lwidth(thick) lpattern(dash)) /// 2 "5th wave w CF"
 > (line DayDeaMeSmA00S00wave6 wave5day, sort lcolor(red) lwidth(thick)) /// 3 "6th wave"
-> (line DayDeaMeSmA00S00wave6_CF3 wave5day, sort lcolor(red) lwidth(thick) lpattern(dash)) /// 4 "6th wave w CF"
+> (line DayDeaMeSmA00S00wave6_CF3 wave5day, sort lcolor(red) lwidth(medthick) lpattern(dash)) /// 4 "6th wave CF 3"
+> (line DayDeaMeSmA00S00wave6_CF4 wave5day, sort lcolor(red) lwidth(medthick)) /// 5 "6th wave CF 4"
 > if date >= td(06jun2021) ///
 > , xtitle(Days from wave start) xlabel(0(10)210, labsize(small)) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) yscale(titlegap(2)) ///
 > title("COVID-19 daily reported deaths, $country, comparison of 5th and 6th waves", size(medium)) /// 
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-> legend(order(1 "5th wave" 2 "6th wave" 3 "5th wave correction factor 3" ///
-> 4 "6th wave correction factor 3") size(small) rows (2)) 
+> legend(order(1 "5th wave reported" 2 "5th wave correction factor 3" ///
+> 3 "6th wave reported" 4 "6th wave correction factor 3" 5 "6th wave correction factor 4") size(small) rows (3)) 
 {res}{txt}
 {com}. 
 . qui graph save "graph 32b COVID-19 daily deaths, $country, JOHN, 5th and 6th waves.gph", replace
@@ -449,7 +456,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220204/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 5 Feb 2022, 07:29:41
+ {txt}closed on:  {res} 5 Feb 2022, 09:20:58
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

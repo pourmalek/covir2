@@ -103,9 +103,9 @@ gen DayDeaMeRaA00S00_CF3 = DayDeaMeRaA00S00 * 3
 
 label var DayDeaMeRaA00S00_CF3 "Daily Deaths JOHN correction factor 3"
 
-gen DayDeaMeRaA00S00_CF5 = DayDeaMeRaA00S00 * 5
+gen DayDeaMeRaA00S00_CF4 = DayDeaMeRaA00S00 * 4
 
-label var DayDeaMeRaA00S00_CF5 "Daily Deaths JOHN correction factor 5"
+label var DayDeaMeRaA00S00_CF4 "Daily Deaths JOHN correction factor 4"
 
 gen TotDeaMeRaA00S00_CF2 = TotDeaMeRaA00S00 * 2
 
@@ -396,6 +396,15 @@ tssmooth ma DayDeaMeSmA00S00_CF3 = DayDeaMeRaA00S00_CF3_window, weights( 1 2 3 <
 label var DayDeaMeSmA00S00_CF3 "Daily deaths smooth A00 JOHN correction factor 3"
 
 drop DayDeaMeRaA00S00_CF3_window
+
+
+tssmooth ma DayDeaMeRaA00S00_CF4_window = DayDeaMeRaA00S00_CF4 if DayDeaMeRaA00S00_CF4 >= 0, window(3 1 3)
+
+tssmooth ma DayDeaMeSmA00S00_CF4 = DayDeaMeRaA00S00_CF4_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayDeaMeSmA00S00_CF4 "Daily deaths smooth A00 JOHN correction factor 4"
+
+drop DayDeaMeRaA00S00_CF4_window
 
 
 tssmooth ma DayCasMeRaA00S00_window = DayCasMeRaA00S00 if DayCasMeRaA00S00 >= 0, window(3 1 3)
@@ -905,7 +914,8 @@ label var DayDeaMeSmA00S00wave5_CF3 "Daily deaths JOHN wave5 correction factor 3
 gen DayDeaMeSmA00S00wave6_CF3 = DayDeaMeSmA00S00wave6 * 3
 label var DayDeaMeSmA00S00wave6_CF3 "Daily deaths JOHN wave6 correction factor 3"
 
-
+gen DayDeaMeSmA00S00wave6_CF4 = DayDeaMeSmA00S00wave6 * 4
+label var DayDeaMeSmA00S00wave6_CF4 "Daily deaths JOHN wave6 correction factor 4"
 
 
 
