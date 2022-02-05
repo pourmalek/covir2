@@ -352,8 +352,8 @@ qui graph export "graph 32b COVID-19 daily deaths, $country, JOHN, 5th and 6th w
 
 twoway ///
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) ///
-(line TotDeaMeRaA00S00_CF3 date, sort lcolor(cyan) lwidth(thick) lpattern(dash)) /// 
-(line TotDeaMeRaA00S00_CF4 date, sort lcolor(cyan) lwidth(thick) lpattern(dash_dot)) ///  
+(line TotDeaMeRaA00S00_CF3 date, sort lcolor(cyan) lwidth(medthick) lpattern(dash)) /// 
+(line TotDeaMeRaA00S00_CF4 date, sort lcolor(cyan) lcolor(cyan) lwidth(medthick)) ///  
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
