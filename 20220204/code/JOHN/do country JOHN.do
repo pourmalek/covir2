@@ -210,7 +210,7 @@ gen DayCasMeRaA00S00_CF5 = DayCasMeRaA00S00 * 5
 
 label var DayCasMeRaA00S00_CF5 "Daily Cases JOHN correction factor 5"
 
-replace DayCasMeRaA00S00_CF5 = . if date < td(31dec2021)
+replace DayCasMeRaA00S00_CF5 = . if date < td(06jan2022)
 
 gen TotCasMeRaA00S00_CF2 = TotCasMeRaA00S00 * 2
 
@@ -438,7 +438,7 @@ gen DayCasMeSmA00S00_CF5 = DayCasMeSmA00S00 * 5
 
 label var DayCasMeSmA00S00_CF5 "Daily Cases JOHN correction factor 5"
 
-replace DayCasMeSmA00S00_CF5 = . if date < td(31dec2021)
+replace DayCasMeSmA00S00_CF5 = . if date < td(06jan2022)
 
 
 

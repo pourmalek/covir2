@@ -145,7 +145,7 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, all time", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3" ///
-3 "Daily reported deaths correction factor 4") size(small) rows (2)) 
+3 "Daily reported deaths correction factor 4") size(small) rows (3)) 
 
 qui graph save "graph 11 COVID-19 daily deaths, $country, JOHN, all time.gph", replace
 qui graph export "graph 11 COVID-19 daily deaths, $country, JOHN, all time.pdf", replace
@@ -165,7 +165,7 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, 2021 on", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3" ///
-3 "Daily reported deaths correction factor 4") size(small) rows (2)) 
+3 "Daily reported deaths correction factor 4") size(small) rows (3)) 
 
 qui graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.gph", replace
 qui graph export "graph 12 COVID-19 daily deaths, $country, JOHN, 2021.pdf", replace
@@ -186,7 +186,7 @@ xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, lab
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, recent", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Daily reported deaths" 2 "Daily reported deaths correction factor 3" ///
-3 "Daily reported deaths correction factor 4") size(small) rows (2)) 
+3 "Daily reported deaths correction factor 4") size(small) rows (3)) 
 
 qui graph save "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.gph", replace
 qui graph export "graph 12 COVID-19 daily deaths, $country, JOHN, 2022.pdf", replace
@@ -351,9 +351,9 @@ qui graph export "graph 32b COVID-19 daily deaths, $country, JOHN, 5th and 6th w
 * total deaths, JOHN
 
 twoway ///
-(line TotDeaMeRaA00S00 date, sort lcolor(red) lwidth(thick)) ///
-(line TotDeaMeRaA00S00_CF3 date, sort lcolor(red) lwidth(thick) lpattern(dash)) /// 
-(line TotDeaMeRaA00S00_CF4 date, sort lcolor(red) lwidth(thick) lpattern(dash_dot)) ///  
+(line TotDeaMeRaA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) ///
+(line TotDeaMeRaA00S00_CF3 date, sort lcolor(cyan) lwidth(thick) lpattern(dash)) /// 
+(line TotDeaMeRaA00S00_CF4 date, sort lcolor(cyan) lwidth(thick) lpattern(dash_dot)) ///  
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
