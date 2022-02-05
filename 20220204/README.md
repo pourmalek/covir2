@@ -58,6 +58,12 @@ Daily cases with correction factor 5 since the start of the 6th wave are added t
 
 ******
 
+(7b) Iran [Daily reported deaths, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2031b%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/152653230-e3a4e4ef-ab8d-4bd9-836f-286337399747.png)
+
+******
+
 (8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/152652885-d8c2b523-e4bc-44c5-a7d8-592b4f6bf5e8.png)
