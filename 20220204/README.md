@@ -24,16 +24,19 @@ Daily cases with correction factor 5 since the start of the 6th wave are added t
 
 (2) Iran [Daily reported deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/152652717-5572303c-34be-407d-8757-9de710568ac2.png)
 
 ******
 
 (3) Iran [Daily reported deaths, recent](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%202022.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/152652743-1465146c-7815-4daf-b753-dfb927503121.png)
 
 ******
 
 (4) Iran [Daily reported cases, all time](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/152652770-ef88b9cd-a188-42a4-b2e7-c5d7638f3358.png)
 
 ******
 
