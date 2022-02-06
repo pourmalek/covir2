@@ -2,9 +2,11 @@
 
 ### Study update dates in uptake 20220204
 
-**_DELP 20220204_**, **_IHME 20220204_**, IMPE NO, **_SRIV 20220204_**
+**_DELP 20220204_**, **_IHME 20220204_**, IMPE NO, SRIV NO
 
 **IMPE** 20220102 is > one month old and is not included in the graphs. 
+
+**SRIV** Highly implausibly high estimate.
 
 <br/><br/> 
 
