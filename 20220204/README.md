@@ -13,23 +13,6 @@
 
 
 
-<br/><br/> 
-
-**IHME**: The previous [S1] "severe omicron" is not available in IHME update 20220114. The "current projection" or "reference scenario" is functionally the "worse scenario", i.e., the scenario with highest magnitude of estimated deaths and infections. 
-
-The current scenarios of IHME include:
-
-(S1) Current projection,
-(S2) Reduced vaccine hesitancy,
-(S3) Third dose,
-(S4) 80% mask use
-
-
-
-
-<br/><br/>
-
-
 ### Selected graphs
 
 ****
