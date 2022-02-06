@@ -41,13 +41,15 @@
 
 ****
 
-(5) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+(5) Iran Daily deaths, 2021 on, reference scenario with uncertainty, IMPE
 
+IMPE 20220102 is > one month old and is not included in the graphs.
 
 ****
 
-(6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220204/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+(6) Iran Daily deaths, 2021 on, 3 scenarios, IMPE
 
+IMPE 20220102 is > one month old and is not included in the graphs.
 
 ****
 
