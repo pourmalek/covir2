@@ -48,31 +48,31 @@ Daily cases with correction factor 5 since the start of the 6th wave are added t
 
 (6) Iran [Daily reported cases, recent](https://github.com/pourmalek/covir2/blob/main/20220210%20JOHN/output/merge/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%202022.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/153662421-6c59c286-b265-4c54-9a03-b1fa35e00b56.png)
 
 ******
 
 (7) Iran [Daily reported deaths, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220210%20JOHN/output/merge/graph%2031%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/153662492-87a4f32b-c74f-4b00-8a8a-37956abe4d6c.png)
 
 ******
 
 (7b) Iran [Daily reported deaths, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220210%20JOHN/output/merge/graph%2031b%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/153662573-00488d42-420c-4993-9377-4771ea6771c7.png)
 
 ******
 
 (8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220210%20JOHN/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
-
-******
-
-(8b) Iran [Daily reported cases, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220210%20JOHN/output/merge/graph%2032b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
-
+![image](https://user-images.githubusercontent.com/30849720/153662660-84ab0c3f-b443-41f0-ace2-66c75698763d.png)
 
 ******
 
 (9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220210%20JOHN/output/merge/graph%2033%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/153662963-6ddd4fe1-48a9-4ea8-b5b7-79a474571b17.png)
 
 ******
 
