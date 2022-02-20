@@ -1594,8 +1594,8 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "Total reported deaths JOHN" 2 "Total reported deaths JOHN Correction factor 3" ///
 3 "Total reported deaths JOHN Correction factor 4") rows(4) size(small)) ///
 subtitle("CF: Corerction Factors 3 and 4" ///
-"Total reported deaths JOHN Correction Factor 3 = Number of PREVENTABLE COVID-19 deaths in Iran" ///
-"Total reported deaths JOHN Correction Factor 4 = TRUE number of COVID-19 deaths in Iran" /// 
+"Total reported deaths JOHN Correction Factor 3 = Number of PREVENTABLE C-19 deaths in Iran" ///
+"Total reported deaths JOHN Correction Factor 4 = TRUE number of C-19 deaths in Iran" /// 
 , size(small)) yscale(titlegap(2))
 	   
 graph save "graph 124 COVID-19 total deaths, $country, JOHN.gph", replace
