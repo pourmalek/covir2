@@ -1580,6 +1580,30 @@ graph export "graph 123 COVID-19 daily fatal infections, $country reference scen
 
 
 
+* Total reported deaths with correction factors 2, 3 and 4    	   
+
+twoway /// 	   
+(line TotDeaMeRaA00S00 date, sort lcolor(cyan)) /// 
+(line TotDeaMeRaA00S00_CF3 date, sort lcolor(black) lwidth(thick)) /// 
+(line TotDeaMeRaA00S00_CF4 date, sort lcolor(red) lwidth(thick)) /// 
+if date >= td(01jan2020) ///
+, xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily outcomes) title("COVID-19 total reported deaths with CF, $country, JOHN", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///	
+legend(order(1 "Total reported deaths JOHN" 2 "Total reported deaths JOHN Correction factor 3" ///
+3 "Total reported deaths JOHN Correction factor 4") rows(4) size(small)) ///
+subtitle("CF: Corerction Factors 3 and 4" ///
+"Total reported deaths JOHN Correction Factor 3 = Number of PREVENTABLE COVID-19 deaths in Iran" ///
+"Total reported deaths JOHN Correction Factor 4 = TRUE number of COVID-19 deaths in Iran" /// 
+, size(small)) yscale(titlegap(2))
+	   
+graph save "graph 124 COVID-19 total deaths, $country, JOHN.gph", replace
+graph export "graph 124 COVID-19 total deaths, $country, JOHN.pdf", replace
+
+
+
+
 
 ************
 

@@ -95,25 +95,25 @@ drop _j _merge
 
 
 
-gen DayDeaMeRaA00S00_CF2 = DayDeaMeRaA00S00 * 2
+gen DayDeaMeRaA00S00_CF3 = DayDeaMeRaA00S00 * 3
 
-label var DayDeaMeRaA00S00_CF2 "Daily Deaths JOHN correction factor 2"
+label var DayDeaMeRaA00S00_CF3 "Daily Deaths JOHN correction factor 3"
 
-gen DayDeaMeRaA00S00_CF5 = DayDeaMeRaA00S00 * 5
+gen DayDeaMeRaA00S00_CF4 = DayDeaMeRaA00S00 * 4
 
-label var DayDeaMeRaA00S00_CF5 "Daily Deaths JOHN correction factor 5"
+label var DayDeaMeRaA00S00_CF4 "Daily Deaths JOHN correction factor 4"
 
-gen TotDeaMeRaA00S00_CF2 = TotDeaMeRaA00S00 * 2
+gen TotDeaMeRaA00S00_CF3 = TotDeaMeRaA00S00 * 3
 
-label var TotDeaMeRaA00S00_CF2 "Total Deaths JOHN correction factor 2"
+label var TotDeaMeRaA00S00_CF3 "Total Deaths JOHN correction factor 3"
 
-gen TotDeaMeRaA00S00_CF5 = TotDeaMeRaA00S00 * 5
+gen TotDeaMeRaA00S00_CF4 = TotDeaMeRaA00S00 * 4
 
-label var TotDeaMeRaA00S00_CF5 "Total Deaths JOHN correction factor 5"
+label var TotDeaMeRaA00S00_CF4 "Total Deaths JOHN correction factor 4"
 
 
 
-order date loc_grand_name DayDeaMeRaA00S00 TotDeaMeRaA00S00 DayDeaMeRaA00S00_CF2 DayDeaMeRaA00S00_CF5 TotDeaMeRaA00S00_CF2 TotDeaMeRaA00S00_CF5
+order date loc_grand_name DayDeaMeRaA00S00 TotDeaMeRaA00S00 DayDeaMeRaA00S00_CF3 DayDeaMeRaA00S00_CF4 TotDeaMeRaA00S00_CF3 TotDeaMeRaA00S00_CF4
 					
 
 sort date
@@ -193,24 +193,24 @@ replace DayCasMeRaA00S00 = . if date < td(19feb2020)
 drop _j _merge
 
 
-gen DayCasMeRaA00S00_CF2 = DayCasMeRaA00S00 * 2
+gen DayCasMeRaA00S00_CF3 = DayCasMeRaA00S00 * 3
 
-label var DayCasMeRaA00S00_CF2 "Daily Cases JOHN correction factor 2"
+label var DayCasMeRaA00S00_CF3 "Daily Cases JOHN correction factor 3"
 
-gen DayCasMeRaA00S00_CF5 = DayCasMeRaA00S00 * 5
+gen DayCasMeRaA00S00_CF4 = DayCasMeRaA00S00 * 4
 
-label var DayCasMeRaA00S00_CF5 "Daily Cases JOHN correction factor 5"
+label var DayCasMeRaA00S00_CF4 "Daily Cases JOHN correction factor 4"
 
-gen TotCasMeRaA00S00_CF2 = TotCasMeRaA00S00 * 2
+gen TotCasMeRaA00S00_CF3 = TotCasMeRaA00S00 * 3
 
-label var TotCasMeRaA00S00_CF2 "Total Cases JOHN correction factor 2"
+label var TotCasMeRaA00S00_CF3 "Total Cases JOHN correction factor 3"
 
-gen TotCasMeRaA00S00_CF5 = TotCasMeRaA00S00 * 5
+gen TotCasMeRaA00S00_CF4 = TotCasMeRaA00S00 * 4
 
-label var TotCasMeRaA00S00_CF5 "Total Cases JOHN correction factor 5"
+label var TotCasMeRaA00S00_CF4 "Total Cases JOHN correction factor 4"
 
 
-order date loc_grand_name DayCasMeRaA00S00 TotCasMeRaA00S00 DayCasMeRaA00S00_CF2 DayCasMeRaA00S00_CF5 TotCasMeRaA00S00_CF2 TotCasMeRaA00S00_CF5
+order date loc_grand_name DayCasMeRaA00S00 TotCasMeRaA00S00 DayCasMeRaA00S00_CF3 DayCasMeRaA00S00_CF4 TotCasMeRaA00S00_CF3 TotCasMeRaA00S00_CF4
 
 sort date
 
