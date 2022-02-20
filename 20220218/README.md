@@ -131,6 +131,22 @@ IMPE 20220102 is > one month old and is not included in the graphs.
 ![image](https://user-images.githubusercontent.com/30849720/154800455-e45b0694-425f-475e-80d1-0909a17f2615.png)
 
 ****
+****
 
+(17) Iran [Total reported deaths with correction factors 4 and 5](https://github.com/pourmalek/covir2/blob/main/20220218/output/merge/graph%20124%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/154826216-8ab1190b-a423-4971-a3c1-c6e85a1d1be0.png)
+
+****
+
+Total reported deaths JOHN Correction Factor 4 = TRUE number of COVID-19 deaths in Iran
+
+Total reported deaths JOHN Correction Factor 3 = Number of PREVENTABLE COVID-19 deaths in Iran
+
+Reported number of COVID-19 deaths in Iran up to 18 February 2022 = 134,607
+
+**TRUE number of COVID-19 deaths in Iran up to 18 February 2022 = 538,428**
+
+**Number of PREVENTABLE COVID-19 deaths in Iran up to 18 February 2022 = 403,821**
 
 
