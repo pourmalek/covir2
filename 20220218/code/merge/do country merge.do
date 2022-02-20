@@ -1580,7 +1580,7 @@ graph export "graph 123 COVID-19 daily fatal infections, $country reference scen
 
 
 
-* Total reported deaths with correction factors 2, 3 and 4    	   
+* Total reported deaths with correction factors 4 and 5    	   
 
 twoway /// 	   
 (line TotDeaMeRaA00S00 date, sort lcolor(cyan)) /// 
