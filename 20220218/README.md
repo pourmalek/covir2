@@ -133,7 +133,7 @@ IMPE 20220102 is > one month old and is not included in the graphs.
 ****
 ****
 
-(17) Iran [Total reported deaths with correction factors 4 and 5](https://github.com/pourmalek/covir2/blob/main/20220218/output/merge/graph%20124%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
+(18) Iran [Total reported deaths with correction factors 4 and 5](https://github.com/pourmalek/covir2/blob/main/20220218/output/merge/graph%20124%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/154826216-8ab1190b-a423-4971-a3c1-c6e85a1d1be0.png)
 
