@@ -70,8 +70,9 @@ Daily cases with correction factor 5 since the start of the 6th wave are added t
 
 ******
 
-(9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220225%20JOHN/output/merge/graph%2033%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
+(9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220225%20JOHN/output/merge/graph%20124%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/155822234-53e07ebc-79d7-4167-a59b-0be82639b19f.png)
 
 ******
 
