@@ -82,7 +82,7 @@ Total reported deaths JOHN Correction Factor 3 = Number of PREVENTABLE COVID-19 
 
 Reported number of COVID-19 deaths in Iran up to 25 February 2022 = 135,952
 
-**TRUE number of COVID-19 deaths in Iran up to 25 February 2022 = 543,808**  543808
+**TRUE number of COVID-19 deaths in Iran up to 25 February 2022 = 543,808**  
 
 **Number of PREVENTABLE COVID-19 deaths in Iran 25 to 18 February 2022 = 407,856**
 
