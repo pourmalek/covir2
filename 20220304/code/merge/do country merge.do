@@ -29,7 +29,7 @@ JOHN A00
 
 DELP A01
 IHME A02
-IMPE A03 // IMPE 2022-01-02_v9.csv.zip is > one month old
+IMPE A03 // IMPE 2022-01-20_v9.csv.zip is > one month old
 LANL A04 // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 SRIV A05 // Highly implausibly high estimates.   
 
