@@ -4,7 +4,7 @@
 
 **_DELP 20220304_**, **_IHME 20220304_**, IMPE NO, SRIV NO
 
-**IMPE** 20220102 is > one month old and is not included in the graphs. 
+**IMPE** 20220120 (released on March 1st) is > one month old and is not included in the graphs. 
 
 **SRIV** Highly implausibly high estimate.
 
