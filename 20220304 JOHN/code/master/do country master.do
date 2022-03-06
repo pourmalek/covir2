@@ -20,18 +20,8 @@ di "$country"                                                                   
 * To change uptake date, find and replace all, 20220304 (old), with 20220304 (new) <<--           <<<--- * change uptake date here *
 *                                           1/ --------                                                  ***************************
 
-* To change uptake date in individual do files for models, change the following dates:
 
-global DELPdate 20220304 
-*            2/ --------
-
-global IMPEdate 2022-01-02_v9 // IMPE 2022-01-02_v9.csv.zip is > one month old
-*            3/ -------------
-
-global SRIVdate 2022-02-18 
-*            4/ ----------
-
-global IHMEdate 20220304																		 
+* JOHN only in this uptake
 					
 		
 ******************************************************		
@@ -54,10 +44,10 @@ di "`usrnam'"
 ****** set path based on local operating system ******
 
 if regexm(c(os),"Mac") == 1 {
-	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20220304/code" 
+	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20220304 JOHN/code" 
 }
 else if regexm(c(os),"Windows") {
-	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20220304\code"
+	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20220304 JOHN\code"
 }
 *
 
@@ -118,16 +108,6 @@ SRIV A05
 
 
 do "$pathcovir2/JOHN/do country JOHN.do" 
-
-do "$pathcovir2/DELP/do country DELP.do" 
-
-do "$pathcovir2/IHME/do country IHME.do" 
-
-// do "$pathcovir2/IMPE/do country IMPE.do" // IMPE 2022-01-02_v9.csv.zip is > one month old
-
-// do "$pathcovir2/LANL/do country LANL.do" // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
-
-// do "$pathcovir2/SRIV/do country SRIV.do" 
 
 do "$pathcovir2/merge/do country merge.do" 
 
