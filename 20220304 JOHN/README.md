@@ -71,11 +71,11 @@ IHME and IMPE models have not been updated since the previous uptake of covir2, 
 
 ******
 
-## Total COVID-19 deaths In Iran up to 04 03 2022:
+## Total COVID-19 deaths In Iran up to 04 March 2022:
  
-### ???,??? reported	
+### 137,593 reported	
 
-### ???,??? reported with correction factor 3	
+### 412,779 reported with correction factor 3	
 
-## ???,??? reported with correction factor 4
+## 550,372 reported with correction factor 4
 
