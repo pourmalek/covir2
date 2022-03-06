@@ -49,21 +49,25 @@ IHME and IMPE models have not been updated since the previous uptake of covir2, 
 
 (7) Iran [Daily reported deaths, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220304%20JOHN/output/merge/graph%2031%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/156906299-d2fa2f39-b5c9-41d2-b475-fb324408e43f.png)
 
 ******
 
 (7b) Iran [Daily reported deaths, Comparison of 5th and 6th waves, with correction factor](https://github.com/pourmalek/covir2/blob/main/20220304%20JOHN/output/merge/graph%2031b%20COVID-19%20daily%20cases%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/156906316-0c8a31cb-14b3-446c-bf0b-9efc5033b4a6.png)
 
 ******
 
 (8) Iran [Daily reported cases, Comparison of 5th and 6th waves](https://github.com/pourmalek/covir2/blob/main/20220304%20JOHN/output/merge/graph%2032%20COVID-19%20daily%20deaths%2C%20Iran%2C%20JOHN%2C%205th%20and%206th%20waves.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/156906330-ffcd07c1-b4d3-4da8-9125-716f8ef982a7.png)
 
 ******
 
-(9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220304%20JOHN/output/merge/graph%2033%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
+(9) Iran [Total reported deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220304%20JOHN/output/merge/graph%20124%20COVID-19%20total%20deaths%2C%20Iran%2C%20JOHN.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/156906355-2861b3af-e6f0-4119-9c73-f3c3b270b48d.png)
 
 ******
 
