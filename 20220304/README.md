@@ -16,6 +16,7 @@
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220304/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/157355486-4a7f4a89-16a9-4cf6-b93d-f7a5c5f8c030.png)
 
 ****
 
