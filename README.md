@@ -759,6 +759,10 @@ Scenarios of IHME model before update 20211221:
 .
  
 
+
+(64) uptake [`20220304`](https://github.com/pourmalek/covir2/tree/main/20220304): 
+**_DELP 20220304_**, IHME 20220218, **_IMPE 20220120_**, **_SRIV 20220301_**
+ 
 (63) uptake [`20220218`](https://github.com/pourmalek/covir2/tree/main/20220218): 
 **_DELP 20220218_**, **_IHME 20220218_**, IMPE NO, SRIV NO 
  
