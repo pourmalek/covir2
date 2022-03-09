@@ -2,7 +2,7 @@
 
 ### Study update dates in uptake 20220218
 
-**_DELP 20220218_**, **_IHME 20220218_**, IMPE NO, SRIV NO
+**_DELP 20220218_**, **_IHME 20220218_**, NO IMPE, NO SRIV 
 
 **IMPE** 20220102 is > one month old and is not included in the graphs. 
 
