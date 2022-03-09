@@ -70,7 +70,7 @@ Under review pre-print for this project:
   
  
  
-## TOC
+## Table of Contents
  
 ### [I. SELECTED GRAPHS FROM LATEST UPTAKE](https://github.com/pourmalek/covir2#i-selected-graphs-from-latest-uptake-1)
 
