@@ -168,15 +168,10 @@ The [`CovidLongitudinal`](https://github.com/pourmalek/CovidLongitudinal) reposi
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20220218`](https://github.com/pourmalek/covir2/tree/main/20220218)
+#### LATEST UPTAKE: uptake [`20220304`](https://github.com/pourmalek/covir2/tree/main/20220304)
 
-**_DELP 20220218_**, **_IHME 20220218_**, IMPE NO, SRIV NO
+**_DELP 20220304_**, IHME 20220218, **_IMPE 20220120_**, **_SRIV 20220301_**
  
-<br/><br/> 
-
-**IMPE** 20220102 is > one month old and is not included in the graphs. 
-
-**SRIV** Highly implausibly high estimate.
  
 <br/><br/>
 
@@ -758,7 +753,6 @@ Scenarios of IHME model before update 20211221:
 
 .
  
-
 
 (64) uptake [`20220304`](https://github.com/pourmalek/covir2/tree/main/20220304): 
 **_DELP 20220304_**, IHME 20220218, **_IMPE 20220120_**, **_SRIV 20220301_**
