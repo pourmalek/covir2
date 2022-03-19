@@ -15,6 +15,9 @@ The New Year ceremonies and travels increase number of contacts and probability 
 
 Considerable proportions of the COVID-19 cases and deaths that will occur in the new-coming 7th wave can be **_prevented_** by Non-Pharmaceutical Interventions (NPIs) and vaccination.  
 
+![image](https://user-images.githubusercontent.com/30849720/159129522-052222f1-b67b-4bd3-a9b6-56097e4bccb6.png)
+
+
 <br/><br/> 
 
 
