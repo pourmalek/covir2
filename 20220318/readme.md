@@ -107,27 +107,32 @@ The New Year ceremonies and travels increase number of contacts and probability 
 
 (13) Iran [R effective, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%20101%20COVID-19%20R%20effective%2C%20Iran%2C%202%20scenarios%2001jun2021%20on.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159129080-a07c2def-ee3b-4fd9-ad67-0a864ab0f446.png)
+
 ****
 
 (14) Iran [Daily Infection-outcome ratios, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%20102%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%202%20scenarios%2C%20IHME.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159129103-0c47cc00-4b36-4564-afd0-44ea9008709f.png)
+
 ****
 
 (15) Iran [Daily mobility, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159129117-d8482596-bb59-420e-8694-001e1cd31a72.png)
+
 ****
 
 (16) Iran [Daily mask use, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%20104%20COVID-19%20daily%20mask_use%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159129138-33ccb6ac-a9a2-4df2-85e7-73635a5d4237.png)
+
 ****
 
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159129166-ee1692d8-8fba-4cfa-8d72-3d5ffea71d8f.png)
+
 ****
 
 
