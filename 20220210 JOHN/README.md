@@ -6,7 +6,7 @@ IHME and IMPE models have not been updated since the previous uptake of covir2, 
 
 <br/><br/>
 
-Deaths with correction factors 3 and 4 are added to deaths graphs.  
+Deaths with correction factors 3 and 4 are added to deaths graphs.   
 
 Daily cases with correction factor 5 since the start of the 6th wave are added to daily cases graphs.  
 
