@@ -22,30 +22,37 @@ The New Year ceremonies and travels increase number of contacts and probability 
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/159128538-f4f42ee0-ce36-421f-bdb6-8032222a263e.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/159128563-256ee60f-1b3a-4ba9-8892-04d0ed8305b2.png)
  
 ****
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159128582-70de64d8-56ea-44eb-bb4b-6289b28b6fdc.png)
+
 ****
 
 (4) Iran [Daily deaths, 2021 on, all scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%20all%20scenarios%2C%20IHME.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159128604-4ef3d6c9-73c2-43e7-90ae-2f84c921d55a.png)
+
 ****
 
 (5) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
- 
+ ![image](https://user-images.githubusercontent.com/30849720/159128622-bccf3362-d6e7-465f-ba42-9011c3e007dd.png)
+
 ****
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
+
+ ![image](https://user-images.githubusercontent.com/30849720/159128641-c70e573c-f473-4d67-9f56-376c102470bc.png)
 
  
 ****
