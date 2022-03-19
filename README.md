@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-! Read Iran COVID-19 epidemic models situation report No 48 - 2022-03-11 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/48%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2048%20–%202022-03-11.pdf)
+! Read Iran COVID-19 epidemic models situation report No 49 - 2022-03-18 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/49%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2049%20–%202022-03-18.pdf)
 
 
 
@@ -194,7 +194,7 @@ The New Year ceremonies and travels increase number of contacts and probability 
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 47 - 2022-03-04 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/47%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2047%20–%202022-03-04.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 49 - 2022-03-18 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/49%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2049%20–%202022-03-18.pdf)
  
 
 ********************************************************************************************************************************************
