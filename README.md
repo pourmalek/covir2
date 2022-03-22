@@ -439,7 +439,7 @@ Five international and periodically updated models of the COVID-19 pandemic were
 (0) JOHN  
   
 . JOHN = Johns Hopkins University. Coronavirus resource center. https://coronavirus.jhu.edu  
-. Not a target study, but a benchmark for comparison.  
+. Not a model, but a benchmark for comparison.  
 . Citation: "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"  
 . Study web site: https://coronavirus.jhu.edu  
 . Estimates web site: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series , "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"  
