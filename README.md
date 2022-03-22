@@ -567,53 +567,53 @@ There were no sources of funding for this research.
  
 #### References
 
-1. Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257. doi: 10.1186/s12889-021-10183-3.
+1. Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257. doi: 10.1186/s12889-021-10183-3. [link](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-10183-3)
  
-2. Friedman J, Liu P, Troeger CE, Carter A, Reiner RC Jr, et al. Predictive performance of international COVID-19 mortality forecasting models. Nat Commun. 2021 May 10;12(1):2609. doi: 10.1038/s41467-021-22457-w.
+2. Friedman J, Liu P, Troeger CE, Carter A, Reiner RC Jr, et al. Predictive performance of international COVID-19 mortality forecasting models. Nat Commun. 2021 May 10;12(1):2609. doi: 10.1038/s41467-021-22457-w. [link](https://www.nature.com/articles/s41467-021-22457-w)
  
 3. COVID Analytics. DELPHI epidemiological case predictions. Cambridge: Operations Research Center, Massachusetts Institute of Technology. https://www.covidanalytics.io/projections Accessed 23 June 2021. 
  
-4. Institute for Health Metrics and Evaluation (IHME). COVID-19 mortality, infection, testing, hospital resource use, and social distancing projections. Seattle: Institute for Health Metrics and Evaluation (IHME), University of Washington. http://www.healthdata.org/covid/ Accessed 23 June 2021.
+4. Institute for Health Metrics and Evaluation (IHME). COVID-19 mortality, infection, testing, hospital resource use, and social distancing projections. Seattle: Institute for Health Metrics and Evaluation (IHME), University of Washington. http://www.healthdata.org/covid/ Accessed 23 June 2021. 
  
-5. MRC Centre for Global Infectious Disease Analysis (MRC GIDA). Future scenarios of the healthcare burden of COVID-19 in low- or middle-income countries. London: MRC Centre for Global Infectious Disease Analysis, Imperial College London. https://mrc-ide.github.io/global-lmic-reports/ Accessed 23 June 2021.
+5. MRC Centre for Global Infectious Disease Analysis (MRC GIDA). Future scenarios of the healthcare burden of COVID-19 in low- or middle-income countries. London: MRC Centre for Global Infectious Disease Analysis, Imperial College London. https://mrc-ide.github.io/global-lmic-reports/ Accessed 23 June 2021. 
  
-6. Los Alamos National Laboratory (LANL). COVID-19 cases and deaths forecasts. Los Alamos: Los Alamos National Laboratory (LANL). https://covid-19.bsvgateway.org Accessed 23 June 2021.
+6. Los Alamos National Laboratory (LANL). COVID-19 cases and deaths forecasts. Los Alamos: Los Alamos National Laboratory (LANL). https://covid-19.bsvgateway.org Accessed 23 June 2021. 
  
-7. Srivastava, Ajitesh. University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19 and Accessed 23 June 2021.
+7. Srivastava, Ajitesh. University of Southern California (USC). COVID-19 forecast. Los Angeles: University of Southern California. https://scc-usc.github.io/ReCOVER-COVID-19 and Accessed 23 June 2021. 
  
-8. Pourmalek, F. pourmalek/CovidVisualizedGlobal: 1.1 public release. 2021. Zenodo. https://doi.org/10.5281/zenodo.5019030 Accessed 23 June 2021.
+8. Pourmalek, F. pourmalek/CovidVisualizedGlobal: 1.1 public release. 2021. Zenodo. https://doi.org/10.5281/zenodo.5019030 Accessed 23 June 2021. [link](https://github.com/pourmalek/CovidVisualizedGlobal)
  
-9. Pourmalek, F. pourmalek/CovidVisualizedCountry: 1.1 public release. 2021. Zenodo. http://doi.org/10.5281/zenodo.5019482 Accessed 23 June 2021.
+9. Pourmalek, F. pourmalek/CovidVisualizedCountry: 1.1 public release. 2021. Zenodo. http://doi.org/10.5281/zenodo.5019482 Accessed 23 June 2021. [link](https://github.com/pourmalek/CovidVisualizedCountry)
  
-10. Pourmalek, F. pourmalek/covir2: 2.2 public release. 2021. Zenodo. http://doi.org/10.5281/zenodo.5020797 Accessed 23 June 2021.
+10. Pourmalek, F. pourmalek/covir2: 2.2 public release. 2021. Zenodo. http://doi.org/10.5281/zenodo.5020797 Accessed 23 June 2021. [link](https://github.com/pourmalek/covir2)
  
-11. Pourmalek, F. CovidVisualized Methodology Document. Methodology document for CovidVisualized tools: CovidVisualizedGlobal, CovidVisualizedCountry, and covir2. Zenodo. http://doi.org/10.5281/zenodo.6371475 Accessed 10 March 2021. 
+11. Pourmalek, F. CovidVisualized Methodology Document. Methodology document for CovidVisualized tools: CovidVisualizedGlobal, CovidVisualizedCountry, and covir2. Zenodo. http://doi.org/10.5281/zenodo.6371475 Accessed 10 March 2021. [link]https://github.com/pourmalek/CovidVisualizedMethodology()
  
-12. Friedman J, Liu P, Akre S. The covidcompare tool. https://covidcompare.io/about Accessed 23 June 2021.
+12. Friedman J, Liu P, Akre S. The covidcompare tool. https://covidcompare.io/about Accessed 23 June 2021. 
  
-13. Dong E, Du H, Gardner L. An interactive web-based dashboard to track COVID-19 in real time. Lancet Infect Dis. 2020 May;20(5):533-534. doi: 10.1016/S1473-3099(20)30120-1. Epub 2020 Feb 19.
+13. Dong E, Du H, Gardner L. An interactive web-based dashboard to track COVID-19 in real time. Lancet Infect Dis. 2020 May;20(5):533-534. doi: 10.1016/S1473-3099(20)30120-1. Epub 2020 Feb 19. [link](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30120-1/fulltext)
  
-14. Bertsimas D, Boussioux L, Cory-Wright R, Delarue A, Digalakis V, Jacquillat A, et al. From predictions to prescriptions: A data-driven response to COVID-19. Health Care Manag Sci. 2021 Jun;24(2):253-272. doi: 10.1007/s10729-020-09542-0. Epub 2021 Feb 15.
+14. Bertsimas D, Boussioux L, Cory-Wright R, Delarue A, Digalakis V, Jacquillat A, et al. From predictions to prescriptions: A data-driven response to COVID-19. Health Care Manag Sci. 2021 Jun;24(2):253-272. doi: 10.1007/s10729-020-09542-0. Epub 2021 Feb 15. [link](https://link.springer.com/article/10.1007/s10729-020-09542-0)
  
-15. IHME COVID-19 Forecasting Team. Modeling COVID-19 scenarios for the United States. Nat Med. 2021 Jan;27(1):94-105.  doi: 10.1038/s41591-020-1132-9.  Epub 2020 Oct 23.
+15. IHME COVID-19 Forecasting Team. Modeling COVID-19 scenarios for the United States. Nat Med. 2021 Jan;27(1):94-105.  doi: 10.1038/s41591-020-1132-9.  Epub 2020 Oct 23. [link](https://www.nature.com/articles/s41591-020-1132-9)
  
-16. Walker PGT, Whittaker C, Watson OJ, Baguelin M, Winskill P, Hamlet A, et al. The impact of COVID-19 and strategies for mitigation and suppression in low- and middle-income countries. Science. 2020 Jul 24;369(6502):413-422. doi: 10.1126/science.abc0035. Epub 2020 Jun 12.
+16. Walker PGT, Whittaker C, Watson OJ, Baguelin M, Winskill P, Hamlet A, et al. The impact of COVID-19 and strategies for mitigation and suppression in low- and middle-income countries. Science. 2020 Jul 24;369(6502):413-422. doi: 10.1126/science.abc0035. Epub 2020 Jun 12. [link](https://www.science.org/doi/10.1126/science.abc0035?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)
  
-17. Castro L, Fairchild G, Michaud I, Osthus D. COFFEE: COVID-19 Forecasts using Fast Evaluations and Estimation. https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf Accessed 23 June 2021.
+17. Castro L, Fairchild G, Michaud I, Osthus D. COFFEE: COVID-19 Forecasts using Fast Evaluations and Estimation. https://covid-19.bsvgateway.org/static/COFFEE-methodology.pdf Accessed 23 June 2021. 
  
-18. Srivastava A, Xu T. Fast and accurate forecasting of COVID-19 deaths using the SIkJα model. arXiv:200705180. Submitted on 10 Jul 2020 (v1), last revised 13 Jul 2020 (this version, v2). https://arxiv.org/abs/2007.05180
+18. Srivastava A, Xu T. Fast and accurate forecasting of COVID-19 deaths using the SIkJα model. arXiv:200705180. Submitted on 10 Jul 2020 (v1), last revised 13 Jul 2020 (this version, v2). https://arxiv.org/abs/2007.05180 
  
-19. Johns Hopkins University Center for Systems Science and Engineering. COVID-19 Data Repository. https://github.com/CSSEGISandData/COVID-19 Accessed 23 June 2021.
+19. Johns Hopkins University Center for Systems Science and Engineering. COVID-19 Data Repository. https://github.com/CSSEGISandData/COVID-19 Accessed 23 June 2021. 
  
-20. Li ML, Bouardi HT, Omar, Lami OS, Ghane-Ezabadi M, Soni S. DELPHI: The Epidemiological model underlying COVIDAnalytics. https://github.com/COVIDAnalytics/DELPHI Accessed 23 June 2021.
+20. Li ML, Bouardi HT, Omar, Lami OS, Ghane-Ezabadi M, Soni S. DELPHI: The Epidemiological model underlying COVIDAnalytics. https://github.com/COVIDAnalytics/DELPHI Accessed 23 June 2021. 
  
-21. Institute for Health Metrics and Evaluation. University of Washington. COVID-19 resources. Terms and Conditions. https://www.healthdata.org/about/terms-and-conditions Accessed 23 June 2021.
+21. Institute for Health Metrics and Evaluation. University of Washington. COVID-19 resources. Terms and Conditions. https://www.healthdata.org/about/terms-and-conditions Accessed 23 June 2021. 
  
 22. MRC Centre for Global Infectious Disease Analysis. Department of Infectious Disease Epidemiology at Imperial College London. Global LMIC COVID-19 reports. https://github.com/mrc-ide/global-lmic-reports Accessed 23 June 2021.
  
-23. Los Alamos National Laboratory. LANL COVID-19 Cases and Deaths Forecasts. https://covid-19.bsvgateway.org Accessed 23 June 2021.
+23. Los Alamos National Laboratory. LANL COVID-19 Cases and Deaths Forecasts. https://covid-19.bsvgateway.org Accessed 23 June 2021. 
  
-24. Srivastava A, Xu F, Xiaochen Yang B, Chen J. Data-driven COVID-19 forecasts and detection of unreported cases. https://github.com/scc-usc/ReCOVER-COVID-19 Accessed 23 June 2021.
+24. Srivastava A, Xu F, Xiaochen Yang B, Chen J. Data-driven COVID-19 forecasts and detection of unreported cases. https://github.com/scc-usc/ReCOVER-COVID-19 Accessed 23 June 2021. 
 
 
   
