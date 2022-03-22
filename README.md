@@ -206,7 +206,7 @@ The New Year ceremonies and travels increase number of contacts and probability 
 ********************************************************************************************************************************************
 
 
- ****
+****
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220318/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
