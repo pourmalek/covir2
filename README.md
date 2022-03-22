@@ -125,8 +125,9 @@ The codes in these repositories can be adapted for use for any country or region
  
 <br/><br/>
  
-The [`CovidLongitudinal`](https://github.com/pourmalek/CovidLongitudinal) repository compares predictions of periodically updated international COVID-19 pandemic models with official reports of the countries to the World Health Organization.
-
+and: 
+ 
+The [`CovidLongitudinal`](https://github.com/pourmalek/CovidLongitudinal) repository compares predictions of periodically updated international COVID-19 pandemic models with official reports of the countries to the World Health Organization, for the [`Global level and WHO Regions`](https://github.com/pourmalek/CovidLongitudinal/tree/main/Global), [`Canada and its provinces`](https://github.com/pourmalek/CovidLongitudinal/tree/main/Canada), and [`Iran`](https://github.com/pourmalek/CovidLongitudinal/tree/main/Iran).
  
  
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
