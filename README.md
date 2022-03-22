@@ -626,7 +626,7 @@ The Stata _codes_ can be executed on local machines:
 
 Run in Stata the _master do file_ on your local machine after the _downloaded repository directory_ is stored in the root of /Downloads/ folder of your local machine.
   
-For covir2, the _master Stata do file_ is:
+For covir2, the _master do file_ is:
   
 covir2/20220318/code/master/do country master.do
   
