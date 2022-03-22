@@ -118,6 +118,10 @@ The codes in these repositories can be adapted for use for any country or region
  
 * For sample applications of “covir2” to countries without subnational estimates see [`Afghanistan`](https://github.com/pourmalek/covir2/blob/main/ADAPTATIONS_EXAMPLES/Afghanistan_%2020210625/20210625/README.md) [`Pakistan`](https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Pakistan_20210704) [`Japan 20210506`](https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210506) [`Japan 20210928`](https://github.com/pourmalek/covir2/tree/main/ADAPTATIONS_EXAMPLES/Japan_20210928)
  
+<br/><br/>
+ 
+ 
+[`CovidVisualizedMethodology`](https://github.com/pourmalek/CovidVisualizedMethodology) explains the conceptual and computational details of the development of CovidVisualized tools and provides examples of what the CovidVisualized tools provide in addition to the individual models. 
  
 <br/><br/>
  
