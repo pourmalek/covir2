@@ -302,19 +302,7 @@ The New Year ceremonies and travels increase number of contacts and probability 
 ## II. METHODS AND RESULTS OF THIS WORK
  
  
-### Changes made comapared with the following pre-print:
- 
-#### Addendum to rules for performing uptakes in this repository, 20211008:
 
-Considering the recent deviations of IMPE and IHME from their regularly scheduled updates, omission of IMPE models’ previous updates except for the latest couple of updates, and the retirement of LANL model on 20210926, the following changes are made, effective as of 20211008.
-
-(1) Every Friday, a new uptake will be performed. 
-
-(2) Any model updates older than two weeks on the uptake date will not be included in the new uptake. 
-
-As such, the last LANL update of 20210926 will no longer be used after the uptake 20211008. 
- 
- 
   
 <br/><br/>
  
