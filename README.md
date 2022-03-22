@@ -628,7 +628,7 @@ Run in Stata the _master do file_ on your local machine after the _downloaded re
   
 For covir2, the _master do file_ is:
   
-covir2/20220318/code/master/do country master.do
+covir2-main/20220318/code/master/do country master.do
   
 and the _downloaded repository directory_ is:
   
