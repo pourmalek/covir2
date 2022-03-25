@@ -436,7 +436,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 **** 
 **** 
 
-#### graph (4) Iran - Daily deaths, 2021 on, 5 scenarios, IHME
+#### graph (4) Iran - Daily deaths, 2021 on, alternate scenarios, IHME
 
  
  
