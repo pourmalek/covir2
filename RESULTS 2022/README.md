@@ -34,7 +34,7 @@ graph (12) Iran - [Daily cases or infections estimated to reported cases, 2021 o
 
 .
 
-graph (13) Iran - [R effective, alternate scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-13-iran---r-effective-3-scenarios-2021-on-ihme) 
+graph (13) Iran - [R effective, alternate scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-13-iran---r-effective-alternate-scenarios-2021-on-ihme) 
  
 graph (14) Iran - [Daily Infection-outcome ratios, reference scenario, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-14-iran---daily-infection-outcome-ratios-5-scenarios-2021-on-ihme)
 
