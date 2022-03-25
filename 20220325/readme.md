@@ -16,6 +16,8 @@ The New Year ceremonies and travels increase number of contacts and probability 
 
 Considerable proportions of the COVID-19 cases and deaths that will occur in the new-coming 7th wave can be **_prevented_** by Non-Pharmaceutical Interventions (NPIs) and vaccination.  
 
+Premature release of mandates for using masks and physical distancing serves the political and economic purposes of the governments, not the public health and survival needs of the populations. 
+
 People will die. Do something now. 
 
 <br/><br/> 
