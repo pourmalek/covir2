@@ -12,11 +12,11 @@ graph (3) Iran - [Daily deaths, 2021 on, reference scenario with uncertainty, IH
   
 graph (4) Iran - [Daily deaths, 2021 on, alternate scenarios, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-4-iran---daily-deaths-2021-on-alternate-scenarios-ihme)
   
-[graph (5) Iran - Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-5-iran---daily-deaths-2021-on-reference-scenario-with-uncertainty-impe) 
+graph (5) Iran - [Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](graph (5) Iran - Daily deaths, 2021 on, reference scenario with uncertainty, IMPE) 
  
-[graph (6) Iran - Iran - Daily deaths, 2021 on, alternate scenarios, IMPE](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-6-iran---daily-deaths-2021-on-alternate-scenarios-impe) 
+graph (6) Iran - [Iran - Daily deaths, 2021 on, alternate scenarios, IMPE](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-6-iran---daily-deaths-2021-on-alternate-scenarios-impe) 
 
-[graph (7) Iran - Daily cases or infections, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-6-iran---daily-deaths-2021-on-alternate-scenarios-impe) 
+graph (7) Iran - [Daily cases or infections, reference scenarios, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-6-iran---daily-deaths-2021-on-alternate-scenarios-impe) 
 
 [graph (8) Iran - Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8-iran---daily-cases-or-infections-2021-on) 
 
@@ -749,7 +749,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 **** 
 **** 
 
-#### graph (7) Iran - Daily cases or infections, all time
+#### graph (7) Iran - Daily cases or infections, reference scenarios, all time
 
  
  
