@@ -1904,7 +1904,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 **** 
 **** 
 
-#### graph (15) Iran - Daily mobility, 3 scenarios, all time, IHME
+#### graph (15) Iran - Daily mobility, alternate scenarios, all time, IHME
 
  
  
