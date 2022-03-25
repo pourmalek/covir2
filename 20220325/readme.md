@@ -15,7 +15,10 @@ The New Year ceremonies and travels increase number of contacts and probability 
 
 Considerable proportions of the COVID-19 cases and deaths that will occur in the new-coming 7th wave can be **_prevented_** by Non-Pharmaceutical Interventions (NPIs) and vaccination.  
 
+<br/><br/> 
 
+
+**Strengths and weakness** of the international and periodically update COVID-19 pandemic models are discussed [here]( https://github.com/pourmalek/CovidVisualizedMethodology#characteristics-of-the-models). 
 
 <br/><br/> 
 
@@ -26,11 +29,13 @@ Considerable proportions of the COVID-19 cases and deaths that will occur in the
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160172534-6c390a19-6d1c-4f05-9f5e-74c91de361d3.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160172661-56b4f977-8fd3-4a35-b485-7d18278e55c6.png)
  
 ****
 
