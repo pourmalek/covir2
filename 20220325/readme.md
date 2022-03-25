@@ -4,6 +4,7 @@
 
 **_DELP 20220325_**, **_IHME 20220222_**, IMPE 20220120, **_SRIV 20220325_**
 
+Note that the IMPE model reflects their predictions as of 2022-01-20.
 
 <br/><br/> 
 
@@ -41,6 +42,7 @@ Considerable proportions of the COVID-19 cases and deaths that will occur in the
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160173081-388eb405-4584-4bad-9c11-f5a48d4d0241.png)
 
 ****
 
