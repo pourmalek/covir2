@@ -4,7 +4,7 @@
 
 **_DELP 20220325_**, **_IHME 20220222_**, IMPE 20220120, **_SRIV 20220325_**
 
-Note that the IMPE model reflects their predictions as of 2022-01-20.
+Note that the latest avaivale IMPE model update reflects their predictions as of 2022-01-20, more than two months old now.
 
 <br/><br/> 
 
