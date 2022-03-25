@@ -1872,9 +1872,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **uptake 20220114**: **_DELP 20220114_**, IHME 20220110, **_IMPE 20211226_**, **_SRIV 2022013_**
 
-(14) Iran [Daily Infection-outcome ratios, 5 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20211221/output/merge/graph%2025%201%20COVID-19%20daily%20cases%2C%20Iran%2C%205%20scenarios%2C%20IHME.pdf)
+(14) Iran [Daily Infection-outcome ratios, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%20102%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%202%20scenarios%2C%20IHME.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/149574335-bd245bc5-9dfa-4b4c-abbf-8af6cdd9ff90.png)
+![image](https://user-images.githubusercontent.com/30849720/160188425-b97dfe45-4736-4457-8d8a-6db9f5675492.png)
 
 *
 
