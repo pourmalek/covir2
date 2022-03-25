@@ -1682,7 +1682,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 **** 
 **** 
 
-#### graph (13) Iran - R effective, 3 scenarios, 2021 on, IHME
+#### graph (13) Iran - R effective, alternate scenarios, 2021 on, IHME
 
  
  
