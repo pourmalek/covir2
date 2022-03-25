@@ -16,6 +16,8 @@ The New Year ceremonies and travels increase number of contacts and probability 
 
 Considerable proportions of the COVID-19 cases and deaths that will occur in the new-coming 7th wave can be **_prevented_** by Non-Pharmaceutical Interventions (NPIs) and vaccination.  
 
+People die. Do something. 
+
 <br/><br/> 
 
 
@@ -48,21 +50,25 @@ Considerable proportions of the COVID-19 cases and deaths that will occur in the
 
 (4) Iran [Daily deaths, 2021 on, all scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%20all%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160173673-bc0725b9-a044-4dd8-a151-479336b68904.png)
 
 ****
 
 (5) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2016%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160174603-ef43cad0-274f-4788-8927-bc43f1979464.png)
 
 ****
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160174721-d27293e3-47fd-4b3a-80dc-35ec72ffaab8.png)
 
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160174843-cb387476-92e6-419d-abc4-cb53b527f904.png)
  
 ****
 
