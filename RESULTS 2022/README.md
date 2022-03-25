@@ -38,9 +38,9 @@ graph (13) Iran - [R effective, alternate scenarios, 2021 on, IHME](https://gith
  
 graph (14) Iran - [Daily Infection-outcome ratios, reference scenario, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-14-iran---daily-infection-outcome-ratios-5-scenarios-2021-on-ihme)
 
-graph (15) Iran - [Daily mobility, alternatalternate scenarios, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-15-iran---daily-mobility-alternate-scenarios-all-time-ihme)
+graph (15) Iran - [Daily mobility, alternate scenarios, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-15-iran---daily-mobility-alternate-scenarios-all-time-ihme)
 
-graph (16) Iran - [Daily mask use, 3 scenarios, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-16-iran---daily-mask-use-alternate-scenarios-all-time-ihme)
+graph (16) Iran - [Daily mask use, alternate scenarios, all time, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-16-iran---daily-mask-use-alternate-scenarios-all-time-ihme)
 
 graph (17) Iran - [Cumulative vaccinated percent, 2021 on, IHME](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-17-iran---percent-cumulative-vaccinated-2021-on-ihme) 
 
