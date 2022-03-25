@@ -114,26 +114,31 @@ The current scenarios of IHME include:
 
 (13) Iran [R effective, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%20101%20COVID-19%20R%20effective%2C%20Iran%2C%202%20scenarios%2001jun2021%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160188353-ac1d5b4f-d866-4bd7-9daf-c6866eff9e54.png)
 
 ****
 
 (14) Iran [Daily Infection-outcome ratios, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%20102%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%202%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160188425-b97dfe45-4736-4457-8d8a-6db9f5675492.png)
 
 ****
 
 (15) Iran [Daily mobility, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160188494-0aa16d9f-5302-4777-973a-d29e7637bc75.png)
 
 ****
 
 (16) Iran [Daily mask use, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%20104%20COVID-19%20daily%20mask_use%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160188551-b92552c8-12f8-4329-975b-964304a0c0b8.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220128/output/merge/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/160188624-305ecd87-7b31-4fe5-8674-5eaf5de1c6c1.png)
 
 ****
 
