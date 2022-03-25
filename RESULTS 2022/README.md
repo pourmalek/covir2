@@ -986,7 +986,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 **** 
 **** 
 
-#### graph (8b1) Iran - Daily cases, reference scenarios, 2021 on
+#### graph (8b) Iran - Daily cases, reference scenarios, 2021 on
 
  
  
