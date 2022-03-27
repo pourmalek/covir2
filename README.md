@@ -19,9 +19,9 @@
 
  
  
-### Combine and visualize international periodically updated estimates of COVID-19 pandemic
+### Combine and visualize predictions of international periodically updated COVID-19 pandemic models 
 
-### <div align="center"> at the country level, countries without subnational level estimates 
+### <div align="center"> for countries without subnational level estimates
  
 ## <div align="center"> :iran: Iran 
 
