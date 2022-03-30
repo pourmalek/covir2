@@ -105,7 +105,7 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 
 <br/><br/>
   
-Under review pre-print for this project: 
+Accepted for publication in BMC Research Notes for this project: 
  
  https://europepmc.org/article/PPR/PPR377517
    
