@@ -2,7 +2,7 @@
 
 ### Study update dates in uptake 20220401
 
-**_DELP 20220328_**, **_IHME 20220322_**, **_IMPE 20220131_**, **_SRIV 20220401**
+**_DELP 20220328_**, **_IHME 20220322_**, **_IMPE 20220131_**, **_SRIV 20220401_**
 
 Note than the latest available update of IMPE (20220131) is more than 2 months old as of 20220401.
 
