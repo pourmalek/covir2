@@ -9,7 +9,7 @@ Note that the latest available update of IMPE (20220131) is more than 2 months o
 
 <br/><br/> 
 
-Summary 20220401:
+**Summary 20220401:**
 
 ![image](https://user-images.githubusercontent.com/30849720/158102963-a67a90a2-2441-4675-8c99-ae154aac643b.png)
 
@@ -23,7 +23,7 @@ Considerable proportions of the COVID-19 cases and deaths that will occur in the
 
 Premature release of mandates for using masks and physical distancing serves the political and economic purposes of the governments, not the public health and survival needs of the populations. 
 
-People will die. Do something now.
+People will die. Do something now, Ministry of Health and Medical Education.
 
 <br/><br/> 
 
