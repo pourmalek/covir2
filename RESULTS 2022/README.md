@@ -4,7 +4,7 @@
 
 ### List of graphs  
 
-graph (0) Iran - [Daily reported deaths, JOHN, all times]()
+graph (0) Iran - [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/RESULTS%202022/README.md#graph-0-iran---daily-reported-deaths-john-all-times)
   
 graph (1) Iran - [Daily deaths, reference scenarios, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-1-iran---daily-deaths-reference-scenarios-all-time)
 
