@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:50:49
+ {txt}opened on:  {res} 1 Apr 2022, 17:08:01
 {txt}
 {com}. 
 . 
@@ -639,7 +639,7 @@
 
 {txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20220401/code/JOHN/country JOHN.dta
 {txt}  obs:{res}           920                          
-{txt} vars:{res}           541                          1 Apr 2022 10:43
+{txt} vars:{res}           541                          1 Apr 2022 17:01
 {txt} size:{res}     1,989,040                          
 {txt}{hline}
               storage   display    value
@@ -3310,7 +3310,7 @@ all files already exist and are up to date.
 {txt}
 {com}. 
 . di c(scheme)
-{res}_GRSTYLE_
+{res}s2color
 {txt}
 {com}. 
 . 
@@ -3321,7 +3321,7 @@ all files already exist and are up to date.
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:52:01
+ {txt}closed on:  {res} 1 Apr 2022, 17:09:07
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
