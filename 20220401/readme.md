@@ -9,6 +9,21 @@ Note that the latest available update of IMPE (20220131) is more than 2 months o
 
 <br/><br/> 
 
+Summary 20220401:
+
+![image](https://user-images.githubusercontent.com/30849720/158102963-a67a90a2-2441-4675-8c99-ae154aac643b.png)
+
+Daily official reported cases have already bounced up since late March 2022.
+
+Daily official reported deaths are starting to bounce up as of end of March 2022.
+
+The New Year ceremonies and travels increase number of contacts and probability of transmission and spread the virus across the country. These factors are not fully included in the models. As such, a **_new surge_** is folding out in Iran in April 2022. 
+
+Considerable proportions of the COVID-19 cases and deaths that will occur in the new-coming 7th wave can be **_prevented_** by Non-Pharmaceutical Interventions (NPIs) and vaccination.  
+
+Premature release of mandates for using masks and physical distancing serves the political and economic purposes of the governments, not the public health and survival needs of the populations. 
+
+People will die. Do something now.
 
 <br/><br/> 
 
