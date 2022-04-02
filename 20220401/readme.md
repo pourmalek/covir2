@@ -19,21 +19,25 @@ Note than the latest available update of IMPE (20220131) is more than 2 months o
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/161356166-62fdab8d-30ad-45f7-9a0a-d7be9686d2c0.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/161356196-68777942-26e6-4ebf-bfc2-50094830e304.png)
  
 ****
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/161356227-1c40c858-b588-45fd-a038-f965668e5f46.png)
 
 ****
 
 (4) Iran [Daily deaths, 2021 on, all scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%20all%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/161356265-82ea4cbe-30e6-41d5-8b43-ce382088a741.png)
 
 ****
 
