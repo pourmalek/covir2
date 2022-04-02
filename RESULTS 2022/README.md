@@ -3,6 +3,8 @@
 
 
 ### List of graphs  
+
+graph (0) Iran - [Daily reported deaths, JOHN, all times]()
   
 graph (1) Iran - [Daily deaths, reference scenarios, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-1-iran---daily-deaths-reference-scenarios-all-time)
 
@@ -15,6 +17,8 @@ graph (4) Iran - [Daily deaths, 2021 on, alternate scenarios, IHME](https://gith
 graph (5) Iran - [Daily deaths, 2021 on, reference scenario with uncertainty, IMPE](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-5-iran---daily-deaths-2021-on-reference-scenario-with-uncertainty-impe) 
  
 graph (6) Iran - [Iran - Daily deaths, 2021 on, alternate scenarios, IMPE](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-6-iran---daily-deaths-2021-on-alternate-scenarios-impe) 
+
+graph (00) Iran - [Daily reported cases, JOHN, all times]()
 
 graph (7) Iran - [Daily cases or infections, reference scenarios, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-7-iran---daily-cases-or-infections-reference-scenarios-all-time) 
 
@@ -100,11 +104,13 @@ graph (17) Iran - [Cumulative vaccinated percent, 2021 on, IHME](https://github.
 
 #### graph (0) Iran - Daily reported deaths, JOHN, all times
 
-
+This graph added from uptake 20220401.
 
 
 
 *
+
+**uptake 20220401**: **_DELP 20220328_**, **_IHME 20220322_**, **_IMPE 20220131_**, **_SRIV 20220401_**
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220401/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
@@ -825,6 +831,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 #### graph (00) Iran - Daily reported cases, JOHN, all times
 
+This graph added from uptake 20220401.
 
 
 
@@ -832,6 +839,8 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 
 *
+
+**uptake 20220401**: **_DELP 20220328_**, **_IHME 20220322_**, **_IMPE 20220131_**, **_SRIV 20220401_**
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220401/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
