@@ -17,6 +17,12 @@ Note that the latest available update of IMPE (20220131) is more than 2 months o
 
 ****
 
+(0) Iran [Daily reported deaths, all times](https://github.com/pourmalek/covir2/blob/main/20220401/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/161357410-aa2237b1-2d6b-42ad-9997-cf6e0c238c3b.png)
+
+****
+
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220325/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/161356166-62fdab8d-30ad-45f7-9a0a-d7be9686d2c0.png)
