@@ -13,7 +13,7 @@ Note that the latest available update of IMPE (20220131) is more than 2 months o
 
 ![image](https://user-images.githubusercontent.com/30849720/158102963-a67a90a2-2441-4675-8c99-ae154aac643b.png)
 
-Daily official reported cases have already bounced up since late March 2022. See graph (00) Iran [Daily reported cases, JOHN, all times] below.
+Daily official reported cases have already bounced up since late March 2022. See graph (00) Iran Daily reported cases, JOHN, all times below.
 
 Daily official reported deaths are starting to bounce up as of end of March 2022. See graph (0) Iran Daily reported deaths, JOHN, all times below.
 
