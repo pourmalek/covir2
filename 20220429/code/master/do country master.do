@@ -10,19 +10,19 @@
 * OBJECTIVE: Get and prepare component studies' estimates for country
 *****************************************************************************
 
- * this is uptake ************ 20220415 ************
+ * this is uptake ************ 20220429 ************
 
                                                                                                          
 global country Iran // <<-- set here the country of choice - countries without subnational estimates     
                                                                                                          ***************************
 di "$country"                                                                                  // <<<--- *   change country here   *
                                                                                                          ***************************
-* To change uptake date, find and replace all, 20220415 (old), with 20220415 (new) <<--           <<<--- * change uptake date here *
+* To change uptake date, find and replace all, 20220429 (old), with 20220429 (new) <<--           <<<--- * change uptake date here *
 *                                           1/ --------                                                  ***************************
 
 * To change uptake date in individual do files for models, change the following dates:
 
-global DELPdate 20220415 
+global DELPdate 20220429 
 *            2/ --------
 
 global IHMEdate 20220322
@@ -31,7 +31,7 @@ global IHMEdate 20220322
 global IMPEdate 2022-01-31_v9 
 *            4/ -------------
 
-global SRIVdate 2022-04-15
+global SRIVdate 2022-04-29
 *            5/ ----------
 
 																		 
@@ -57,10 +57,10 @@ di "`usrnam'"
 ****** set path based on local operating system ******
 
 if regexm(c(os),"Mac") == 1 {
-	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20220415/code" 
+	global pathcovir2 "/Users/`usrnam'/Downloads/covir2-main/20220429/code" 
 }
 else if regexm(c(os),"Windows") {
-	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20220415\code"
+	global pathcovir2 = "C:\Users\\`usrnam'\Downloads\covir2-main\20220429\code"
 }
 *
 
