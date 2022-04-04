@@ -197,6 +197,8 @@ Note that the latest available update of IMPE (20220131) is more than 2 months o
 **Summary 20220401:**
 
 ![image](https://user-images.githubusercontent.com/30849720/158102963-a67a90a2-2441-4675-8c99-ae154aac643b.png)
+ 
+# The 7th wave is rising in Iran now.
 
 Daily official reported cases have already bounced up since late March 2022. See "graph (00) Iran Daily reported cases, JOHN, all times" below.
 
@@ -209,6 +211,8 @@ Considerable proportions of the COVID-19 cases and deaths that will occur in the
 Premature release of mandates for using masks and physical distancing serves the political and economic purposes of the governments, not the public health and survival needs of the populations. 
 
 People will die. Do something now, Ministry of Health and Medical Education.
+
+**If a new variant with more separability and fatality occurs, the 8th wave might cause one of the highest or the highest daily deaths, in summer 2022 (solar Hijri year 1401).**  
 
  
 <br/><br/>
