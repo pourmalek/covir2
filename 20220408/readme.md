@@ -29,6 +29,7 @@ Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/162497064-87bde171-3d64-4094-912f-04c79fc70647.png)
  
 ****
 
