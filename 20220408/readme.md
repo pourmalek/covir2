@@ -17,6 +17,7 @@ Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/162495753-d4fd5c2e-08b7-47c4-ba98-7d98afe3d51c.png)
 
 ****
 
