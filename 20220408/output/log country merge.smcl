@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/log country merge.smcl
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 17:08:01
+ {txt}opened on:  {res} 8 Apr 2022, 10:26:13
 {txt}
 {com}. 
 . 
@@ -59,11 +59,11 @@
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}             759
+{col 5}not matched{col 30}{res}             752
 {txt}{col 9}from master{col 30}{res}             714{txt}  (_merge==1)
-{col 9}from using{col 30}{res}              45{txt}  (_merge==2)
+{col 9}from using{col 30}{res}              38{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}             107{txt}  (_merge==3)
+{col 5}matched{col 30}{res}             114{txt}  (_merge==3)
 {col 5}{hline 41}
 {com}. {c )-}
 {txt}
@@ -179,14 +179,14 @@
 . 
 . 
 . gen DayCTDMeRaA00S00 =  DayCasMeRaA00S00 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayCTDMeRaA00S00  "Daily Cases to Deaths S0 JOHN"
 {txt}
 {com}. 
 . gen TotCTDMeRaA00S00 =  TotCasMeRaA00S00 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotCTDMeRaA00S00  "Total Cases to Deaths S0 JOHN"
@@ -324,7 +324,7 @@
 . 
 .     
 . gen DayDERMeRaA00S00 = DayDeaMeRaA00S00 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA00S00 "Daily Deaths estim to reported JOHN = 1" 
@@ -332,7 +332,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA01S00 = DayDeaMeRaA01S00 / DayDeaMeRaA00S00
-{txt}(814 missing values generated)
+{txt}(807 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA01S00 "Daily Deaths estim to reported Mean DELP S0"
@@ -342,7 +342,7 @@
 . 
 . 
 . gen DayDERMeRaA02S01 = DayDeaMeSmA02S01 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S01 "Daily Deaths estim to reported Mean not smoothed IHME S1"
@@ -350,7 +350,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA02S02 = DayDeaMeSmA02S02 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHME S2"
@@ -360,7 +360,7 @@
 . 
 . 
 . gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
@@ -368,7 +368,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA03S02 = DayDeaMeRaA03S02 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
@@ -376,7 +376,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00S00
-{txt}(149 missing values generated)
+{txt}(142 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
@@ -385,7 +385,7 @@
 . 
 . 
 . gen DayDERMeRaA05S00  = DayDeaMeRaA05S00 / DayDeaMeRaA00S00
-{txt}(839 missing values generated)
+{txt}(832 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA05S00 "Daily Deaths estim to reported S0 SRIV"
@@ -401,7 +401,7 @@
 . 
 . 
 . gen DayCERMeRaA00S00 = DayCasMeRaA00S00 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA00S00 "Daily Cases estim to reported JOHN = 1" 
@@ -410,7 +410,7 @@
 . 
 . 
 . gen DayCERMeRaA01S00 = DayCasMeRaA01S00 / DayCasMeRaA00S00
-{txt}(814 missing values generated)
+{txt}(807 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA01S00 "Daily Cases estim to reported Mean DELP S0"
@@ -422,7 +422,7 @@
 . 
 . 
 . gen DayIERMeRaA02S01 = DayINFMeSmA02S01 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S01 "Daily Infections estim to reported Mean not smoothed IHME S1"
@@ -430,7 +430,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
@@ -439,7 +439,7 @@
 . 
 . 
 . gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
@@ -447,7 +447,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA03S02 = DayINFMeRaA03S02 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
@@ -455,7 +455,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
@@ -463,7 +463,7 @@
 {com}. 
 . 
 . gen DayCERMeRaA05S00  = DayCasMeRaA05S00 / DayCasMeRaA00S00
-{txt}(839 missing values generated)
+{txt}(832 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA05S00 "Daily Cases estim to reported S0 SRIV"
@@ -479,7 +479,7 @@
 . 
 . 
 . gen TotDERMeRaA00S00 = TotDeaMeRaA00S00 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA00S00 "Total Deaths estim to reported JOHN = 1" 
@@ -488,7 +488,7 @@
 . 
 . 
 . gen TotDERMeRaA01S00 = TotDeaMeRaA01S00 / TotDeaMeRaA00S00
-{txt}(813 missing values generated)
+{txt}(806 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA01S00 "Total Deaths estim to reported Mean DELP S0"
@@ -497,7 +497,7 @@
 . 
 . 
 . gen TotDERMeRaA02S01 = TotDeaMeSmA02S01 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S01 "Total Deaths estim to reported Mean not smoothed IHME S1"
@@ -505,7 +505,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA02S02 = TotDeaMeSmA02S02 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHME S2"
@@ -515,7 +515,7 @@
 . 
 . 
 . gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
@@ -523,7 +523,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA03S02 = TotDeaMeRaA03S02 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
@@ -531,7 +531,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
@@ -539,7 +539,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00S00
-{txt}(838 missing values generated)
+{txt}(831 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
@@ -555,7 +555,7 @@
 . 
 . 
 . gen TotCERMeRaA00S00 = TotCasMeRaA00S00 / TotCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA00S00 "Total Cases estim to reported JOHN = 1" 
@@ -563,7 +563,7 @@
 {com}. 
 . 
 . gen TotCERMeRaA01S00 = TotCasMeRaA01S00 / TotCasMeRaA00S00
-{txt}(813 missing values generated)
+{txt}(806 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA01S00 "Total Cases estim to reported Mean DELP S0"
@@ -572,7 +572,7 @@
 . 
 . 
 . gen TotIERMeRaA02S01 = TotINFMeSmA02S01 / TotCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S01 "Total Infections estim to reported Mean not smoothed IHME S1"
@@ -580,7 +580,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA02S02 = TotINFMeSmA02S02 / TotCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed IHME S2"
@@ -590,7 +590,7 @@
 . 
 . 
 . gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
@@ -598,7 +598,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA03S02 = TotINFMeRaA03S02 / TotCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
@@ -606,7 +606,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
@@ -615,7 +615,7 @@
 . 
 . 
 . gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00S00
-{txt}(838 missing values generated)
+{txt}(831 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA05S00 "Total Cases estim to reported S0 SRIV"
@@ -637,10 +637,10 @@
 . 
 . desc, fullnames
 
-{txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20220401/code/JOHN/country JOHN.dta
+{txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20220408/code/JOHN/country JOHN.dta
 {txt}  obs:{res}           920                          
-{txt} vars:{res}           541                          1 Apr 2022 17:01
-{txt} size:{res}     1,989,040                          
+{txt} vars:{res}           545                          8 Apr 2022 10:19
+{txt} size:{res}     1,995,480                          
 {txt}{hline}
               storage   display    value
 variable name   type    format     label      variable label
@@ -779,6 +779,14 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases smooth JOHN POST Peak Dates{p_end}
 {p 0 48}DayCasMeSmA00S00PPV{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily cases smooth JOHN POST Peak Values{p_end}
+{p 0 48}today_numericdailydate{p_end}
+{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%td..     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}monthspast01jan2020{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}monthspast01jan2021{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}monthspast01jan2022{p_end}
+{p 0 48}{space 15}{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
 {p 0 48}TotDeaMeRaA01S00{p_end}
 {p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean DELP S0{p_end}
 {p 0 48}TotDeaLoRaA01S00{p_end}
@@ -1597,7 +1605,7 @@ variable name   type    format     label      variable label
 {p 0 48}DayCasMeRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Mean SRIV{p_end}
 {p 0 48}DayCasLoRaA05S00{p_end}
-{p 0 48}{space 15}{txt}{bind: int     }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Lower SRIV{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Lower SRIV{p_end}
 {p 0 48}DayCasUpRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases Upper SRIV{p_end}
 {p 0 48}DayCfrMeRaA05S00{p_end}
@@ -1725,11 +1733,13 @@ Sorted by: {res}date
 {txt}
 {com}. 
 . save "country.dta", replace
-{txt}file country.dta saved
+{txt}(note: file country.dta not found)
+file country.dta saved
 
 {com}. 
 . export delimited using "country.csv", replace 
-{res}{txt}file country.csv saved
+{res}{txt}(note: file country.csv not found)
+{txt}file country.csv saved
 
 {com}. 
 . 
@@ -1851,7 +1861,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 11 COVID-19 daily deaths, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 11 COVID-19 daily deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 11 COVID-19 daily deaths, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -1878,7 +1888,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 12 COVID-19 daily deaths, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 12 COVID-19 daily deaths, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 12 COVID-19 daily deaths, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -1914,7 +1924,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 13 COVID-19 daily deaths, $country, reference scenarios, CI.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 13 COVID-19 daily deaths, Iran, reference scenarios, CI.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 13 COVID-19 daily deaths, Iran, reference scenarios, CI.pdf written in PDF format)
 
 {com}. 
 . 
@@ -1947,7 +1957,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 14 COVID-19 daily deaths, $country, reference scenario with uncertainty, IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 14 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 14 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -1968,7 +1978,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 15 COVID-19 daily deaths, $country, all scenarios, IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 15 COVID-19 daily deaths, Iran, all scenarios, IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 15 COVID-19 daily deaths, Iran, all scenarios, IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -1996,7 +2006,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 16 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 16 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2025,7 +2035,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 17 COVID-19 daily deaths, Iran, 3 scenarios, IMPE.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 17 COVID-19 daily deaths, Iran, 3 scenarios, IMPE.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2053,7 +2063,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 21 COVID-19 daily cases, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 21 COVID-19 daily cases, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 21 COVID-19 daily cases, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2080,7 +2090,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 22 COVID-19 daily cases, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 22 COVID-19 daily cases, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 22 COVID-19 daily cases, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2105,7 +2115,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 22b COVID-19 daily cases, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 22b COVID-19 daily cases, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 22b COVID-19 daily cases, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2140,7 +2150,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 23 COVID-19 daily cases, $country, reference scenarios, CI.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 23 COVID-19 daily cases, Iran, reference scenarios, CI.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 23 COVID-19 daily cases, Iran, reference scenarios, CI.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2180,7 +2190,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 23 COVID-19 daily cases, $country, full scenarios, CI.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 23 COVID-19 daily cases, Iran, full scenarios, CI.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 23 COVID-19 daily cases, Iran, full scenarios, CI.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2206,7 +2216,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 24 COVID-19 daily cases, $country, reference scenario with uncertainty, IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 24 COVID-19 daily cases, Iran, reference scenario with uncertainty, IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 24 COVID-19 daily cases, Iran, reference scenario with uncertainty, IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2228,7 +2238,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 25 1 COVID-19 daily cases, $country, all scenarios, IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 25 1 COVID-19 daily cases, Iran, all scenarios, IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 25 1 COVID-19 daily cases, Iran, all scenarios, IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2254,7 +2264,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 26 COVID-19 daily cases, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 26 COVID-19 daily cases, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2282,7 +2292,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 27 COVID-19 daily cases, Iran, 2 scenarios, IMPE.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 27 COVID-19 daily cases, Iran, 2 scenarios, IMPE.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2293,14 +2303,14 @@ Sorted by: {res}date
 . 
 . 
 . gen DayITCMeSmA02S01 =  DayINFMeSmA02S01 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayITCMeSmA02S01  "Daily Infections IHME to cases JOHN"
 {txt}
 {com}. 
 . gen DayITCMeRaA03S02 =  DayINFMeRaA03S02 / DayCasMeRaA00S00
-{txt}(148 missing values generated)
+{txt}(141 missing values generated)
 
 {com}. 
 . label var DayITCMeRaA03S02  "Daily Infections IMPE to cases JOHN"
@@ -2320,7 +2330,7 @@ Sorted by: {res}date
 {res}{txt}
 {com}. 
 . graph export "graph 28 C19 daily estimated infections to reported cases, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 28 C19 daily estimated infections to reported cases, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 28 C19 daily estimated infections to reported cases, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2418,7 +2428,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 29 C19 daily estimated infections to reported cases, $country, reference scenarios 2021.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 29 C19 daily estimated infections to reported cases, Iran, reference scenarios 2021.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 29 C19 daily estimated infections to reported cases, Iran, reference scenarios 2021.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2452,7 +2462,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 31a COVID-19 total deaths, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 31a COVID-19 total deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 31a COVID-19 total deaths, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2479,7 +2489,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 31b COVID-19 total deaths, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 31b COVID-19 total deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 31b COVID-19 total deaths, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2505,7 +2515,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 32a COVID-19 total deaths, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 32a COVID-19 total deaths, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 32a COVID-19 total deaths, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2532,7 +2542,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 32b COVID-19 total deaths, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 32b COVID-19 total deaths, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 32b COVID-19 total deaths, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2567,7 +2577,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 33 COVID-19 total deaths, $country, reference scenarios, CI.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 33 COVID-19 total deaths, Iran, reference scenarios, CI.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 33 COVID-19 total deaths, Iran, reference scenarios, CI.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2600,7 +2610,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 41 COVID-19 total cases, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 41 COVID-19 total cases, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 41 COVID-19 total cases, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2627,7 +2637,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 42 COVID-19 total cases, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 42 COVID-19 total cases, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 42 COVID-19 total cases, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2663,7 +2673,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 43 COVID-19 total cases, $country, reference scenarios, CI.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 43 COVID-19 total cases, Iran, reference scenarios, CI.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 43 COVID-19 total cases, Iran, reference scenarios, CI.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2692,7 +2702,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 51 COVID-19 daily CFR, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 51 COVID-19 daily CFR, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 51 COVID-19 daily CFR, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2716,7 +2726,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 52 COVID-19 daily CFR, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 52 COVID-19 daily CFR, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 52 COVID-19 daily CFR, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2752,7 +2762,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 71a COVID-19 hospital-related outcomes, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 71a COVID-19 hospital-related outcomes, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 71a COVID-19 hospital-related outcomes, all time.pdf written in PDF format)
 
 {com}. 
 . * ICU new of IHME retired
@@ -2786,7 +2796,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 71b COVID-19 hospital-related outcomes, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 71b COVID-19 hospital-related outcomes, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 71b COVID-19 hospital-related outcomes, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2817,7 +2827,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 72 COVID-19 hospital-related outcomes, wo extremes, 2021.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2846,7 +2856,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 81 COVID-19 daily cases to deaths, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 81 COVID-19 daily cases to deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 81 COVID-19 daily cases to deaths, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2870,7 +2880,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 82 COVID-19 daily cases to deaths, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 82 COVID-19 daily cases to deaths, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 82 COVID-19 daily cases to deaths, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2894,7 +2904,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 83 COVID-19 total cases to deaths, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 83 COVID-19 total cases to deaths, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 83 COVID-19 total cases to deaths, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2918,7 +2928,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 84 COVID-19 total cases to deaths, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 84 COVID-19 total cases to deaths, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 84 COVID-19 total cases to deaths, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2951,7 +2961,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 91 COVID-19 daily deaths estimated to reported, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 91 COVID-19 daily deaths estimated to reported, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 91 COVID-19 daily deaths estimated to reported, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -2975,7 +2985,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 92 COVID-19 daily deaths estimated to reported, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 92 COVID-19 daily deaths estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 92 COVID-19 daily deaths estimated to reported, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3002,7 +3012,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 93 COVID-19 daily cases estimated to reported, $country, reference scenarios, all time .pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 93 COVID-19 daily cases estimated to reported, Iran, reference scenarios, all time .pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 93 COVID-19 daily cases estimated to reported, Iran, reference scenarios, all time .pdf written in PDF format)
 
 {com}. 
 . 
@@ -3026,7 +3036,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 94 COVID-19 daily cases estimated to reported, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 94 COVID-19 daily cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 94 COVID-19 daily cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3050,7 +3060,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 95 COVID-19 total deaths estimated to reported, $country, reference scenarios, all time.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 95 COVID-19 total deaths estimated to reported, Iran, reference scenarios, all time.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 95 COVID-19 total deaths estimated to reported, Iran, reference scenarios, all time.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3074,7 +3084,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 96 COVID-19 total deaths estimated to reported, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 96 COVID-19 total deaths estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 96 COVID-19 total deaths estimated to reported, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3098,7 +3108,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 97 COVID-19 total cases estimated to reported, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 97 COVID-19 total cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 97 COVID-19 total cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3122,7 +3132,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 98 COVID-19 total cases estimated to reported, $country, reference scenarios.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 98 COVID-19 total cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 98 COVID-19 total cases estimated to reported, Iran, reference scenarios.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3153,7 +3163,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 101 COVID-19 R effective, $country, 2 scenarios 01jun2021 on.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 101 COVID-19 R effective, Iran, 2 scenarios 01jun2021 on.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 101 COVID-19 R effective, Iran, 2 scenarios 01jun2021 on.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3178,7 +3188,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 102 COVID-19 daily Infection outcomes ratios, $country 2 scenarios, IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 102 COVID-19 daily Infection outcomes ratios, Iran 2 scenarios, IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 102 COVID-19 daily Infection outcomes ratios, Iran 2 scenarios, IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3198,7 +3208,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 103 COVID-19 daily mobility, $country, 2 scenarios IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 103 COVID-19 daily mobility, Iran, 2 scenarios IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 103 COVID-19 daily mobility, Iran, 2 scenarios IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3219,7 +3229,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 104 COVID-19 daily mask_use, $country, 2 scenarios IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 104 COVID-19 daily mask_use, Iran, 2 scenarios IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 104 COVID-19 daily mask_use, Iran, 2 scenarios IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3242,7 +3252,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 105 COVID-19 cumulative vaccinated percent, $country IHME.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 105 COVID-19 cumulative vaccinated percent, Iran IHME.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 105 COVID-19 cumulative vaccinated percent, Iran IHME.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3267,7 +3277,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 106 COVID-19 daily vaccinated percent, $country.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 106 COVID-19 daily vaccinated percent, Iran.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 106 COVID-19 daily vaccinated percent, Iran.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3291,7 +3301,7 @@ all files already exist and are up to date.
 {res}{txt}
 {com}. 
 . graph export "graph 107 COVID-19 daily vaccinated number, $country.pdf", replace
-{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/graph 107 COVID-19 daily vaccinated number, Iran.pdf written in PDF format)
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/graph 107 COVID-19 daily vaccinated number, Iran.pdf written in PDF format)
 
 {com}. 
 . 
@@ -3319,9 +3329,9 @@ all files already exist and are up to date.
 {com}. 
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220401/code/merge/log country merge.smcl
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220408/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 17:09:07
+ {txt}closed on:  {res} 8 Apr 2022, 10:27:21
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
