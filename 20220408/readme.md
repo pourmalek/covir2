@@ -21,7 +21,7 @@ Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
 
 ****
 
-(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220408/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/162496355-ead22ff1-1e70-40e1-b178-fe0d0ec75754.png)
 
