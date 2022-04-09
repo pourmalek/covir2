@@ -744,8 +744,7 @@ and /20220318/ denotes the date of uptake.
  
  
 (68) uptake [`20220408`](https://github.com/pourmalek/covir2/tree/main/20220408): 
-**_DELP 20220408_**, IHME 20220322, IMPE 20220131, **_SRIV 20220408_**
-Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
+**_DELP 20220408_**, IHME 20220322, IMPE 20220131, **_SRIV 20220408_** || Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
 
 (67) uptake [`20220401`](https://github.com/pourmalek/covir2/tree/main/20220401): 
 **_DELP 20220328_**, **_IHME 20220322_**, **_IMPE 20220131_**, **_SRIV 20220401_**
