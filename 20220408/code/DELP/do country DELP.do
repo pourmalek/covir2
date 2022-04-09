@@ -187,9 +187,22 @@ summ DayDMuMeRaA01S00
 
 
 
+* Forecast start date 
+
+gen epoch_DELP = td(08Apr2022) // update release date
+label var epoch_DELP "DELP Forecast start date"
+
+gen DayDeaFOREA01S00 = DayDeaMeRaA01S00
+replace DayDeaFOREA01S00 = . if date < td(08Apr2022)
+label var DayDeaFOREA01S00 "Daily Forecasted Deaths Mean smoothed DELP"
+
+gen DayCasFOREA01S00 = DayCasMeRaA01S00
+replace DayCasFOREA01S00 = . if date < td(08Apr2022)
+label var DayCasFOREA01S00 "Daily Forecasted Cases Mean smoothed DELP"
 
 
 sort date loc_grand_name
+
 
 qui compress
 

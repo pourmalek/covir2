@@ -622,6 +622,18 @@ summ DayDMuMeRaA03S02
 
 
 
+* Forecast start date 
+
+gen epoch_IMPE = td(31Jan2022) // update release date
+label var epoch_IMPE "IMPE Forecast start date"
+
+gen DayDeaFOREA03S02 = DayDeaMeRaA03S02
+replace DayDeaFOREA03S02 = . if date < td(31Jan2022)
+label var DayDeaFOREA03S02 "Daily Forecasted Deaths Mean smoothed IMPE S2"
+
+gen DayINFFOREA03S02 = DayINFMeRaA03S02
+replace DayINFFOREA03S02 = . if date < td(31Jan2022)
+label var DayINFFOREA03S02 "Daily Forecasted Infections Mean smoothed IMPE S2"
 
 
 sort date loc_grand_name
