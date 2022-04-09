@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-! Read Iran COVID-19 epidemic models situation report No 51 - 2022-04-01 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/51%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2051%20–%202022-04-01.pdf)
+! Read Iran COVID-19 epidemic models situation report No 52 - 2022-04-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/52%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2052%20–%202022-04-08.pdf)
 
 
 
@@ -227,7 +227,7 @@ People will die. Do something now, Ministry of Health and Medical Education.
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 51 - 2022-04-01 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/51%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2051%20–%202022-04-01.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 52 - 2022-04-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/52%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2052%20–%202022-04-08.pdf)
  
 
 ********************************************************************************************************************************************
