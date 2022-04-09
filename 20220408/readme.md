@@ -32,6 +32,8 @@ Premature release of mandates for using masks and physical distancing serves the
 People will die. **_Do something now_, Ministry of Health and Medical Education**.
 
 
+**If a new variant with more separability and fatality occurs, the 8th wave might cause one of the highest or the highest daily deaths, in summer 2022 (solar Hijri year 1401).**  
+
 <br/><br/> 
 
 
