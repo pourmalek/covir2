@@ -1821,7 +1821,43 @@ graph export "graph 107 COVID-19 daily vaccinated number, $country.pdf", replace
 
 
 
-*
+*************************
+* graphs from JOHN
+
+
+* daily deaths, JOHN
+
+twoway ///
+(line DayDeaMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+, xtitle(Date) xlabel(#$monthspast01jan2020, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
+
+graph export "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.pdf", replace
+
+
+
+
+* daily cases, JOHN
+
+twoway ///
+(line DayCasMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+, xtitle(Date) xlabel(#$monthspast01jan2020, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1)) 
+
+graph export "graph 2 COVID-19 daily cases, $country, Johns Hopkins.pdf", replace
+
+
+
+
+
 
 
 
