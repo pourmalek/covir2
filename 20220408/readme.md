@@ -65,19 +65,19 @@ Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/162498420-15da5908-52d4-493d-a42d-06c398b07fd2.png)
+![image](https://user-images.githubusercontent.com/30849720/162550165-ecffc67b-bfc7-4128-9b6b-1921894c8683.png)
 
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/162498567-79d5a017-932f-4eab-9e8c-07a5c106a667.png)
+![image](https://user-images.githubusercontent.com/30849720/162550195-20661ce1-3f8f-4bd5-90f4-abf4cdd0ff2f.png)
  
 ****
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/162498757-6d0df823-ee6d-4c97-98cc-851edae74050.png)
+![image](https://user-images.githubusercontent.com/30849720/162550214-beaa8025-b7f3-44d6-894d-e8f0b911c347.png)
  
 ****
 
