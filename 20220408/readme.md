@@ -8,6 +8,30 @@ Days old: DELP 0, IHME 18, IMPE 68, SRIV 0
 
 
 <br/><br/> 
+
+### Summary 20220408:
+
+![image](https://user-images.githubusercontent.com/30849720/162550770-7e61d24e-ac64-4417-baa0-14e50e17fdb5.png)
+ 
+
+Daily official reported cases have already bounced up since late March 2022. See "graph (00) Iran Daily reported cases, JOHN, all times" below.
+
+Daily official reported deaths are starting to bounce up as of end of March 2022. See "graph (0) Iran Daily reported deaths, JOHN, all times" below.
+
+The latest available predictions update of the IHME model is _18 days old_, and that of the IMPE model is _68 days old_.  An example among the assumptions used by models is the assumption by IHME that percent of population using masks will continue onwards on a horizontal line with constant value equal to its value in early March 2022 . See "graph (16) Iran Daily mask use, 2 scenarios, all time, IHME" below. **This assumption simply does not hold true.**
+
+**Strengths and weakness of the international and periodically update COVID-19 pandemic models** are discussed [here](https://github.com/pourmalek/CovidVisualizedMethodology#characteristics-of-the-models).
+
+The New Year ceremonies and travels increase number of contacts and probability of transmission and spread the virus across the country. These factors are not fully included in the models. As such, _a **new surge** is folding out in Iran in April 2022_.
+
+**Considerable proportions of** the COVID-19 cases and deaths that will occur in **the new-coming 7th wave can be _prevented_** by Non-Pharmaceutical Interventions (NPIs) and vaccination.
+
+
+Premature release of mandates for using masks and physical distancing serves the political and economic purposes of the governments, not the public health and survival needs of the populations.
+
+People will die. **_Do something now_, Ministry of Health and Medical Education**.
+
+
 <br/><br/> 
 
 
