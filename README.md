@@ -30,7 +30,18 @@
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
  
-### [Deputy Minister of Health for Research and Technology, Iran, on the Situation Reports developed in this work:](https://github.com/pourmalek/covir2/blob/main/situation%20reports/--%20Re%2017%20Iran%20COVID19%20epidemic%20models%20situation%20report%20No%2017%20%2014000625%2020210916.pdf)
+Published journal article for this work:
+
+Pourmalek, F. CovidVisualized: Visualized compilation of international updated models’ estimates of COVID-19 pandemic at global and country levels. _BMC Res Notes_ *15*, 136 (2022). https://doi.org/10.1186/s13104-022-06020-4 
+
+[link](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06020-4#citeas)
+
+[PDF](https://github.com/pourmalek/covir2/blob/main/CovidVisualized%20BMC%20Research%20Notes%20article.pdf) 
+ 
+********************************************************************************************************************************************
+******************************************************************************************************************************************** 
+ 
+#### [Deputy Minister of Health for Research and Technology, Iran, on the Situation Reports developed in this work:](https://github.com/pourmalek/covir2/blob/main/situation%20reports/--%20Re%2017%20Iran%20COVID19%20epidemic%20models%20situation%20report%20No%2017%20%2014000625%2020210916.pdf)
 
 Dear Dr. Pourmalak,
  
