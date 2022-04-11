@@ -38,6 +38,8 @@ Pourmalek, F. CovidVisualized: Visualized compilation of international updated m
 
 [PDF](https://github.com/pourmalek/covir2/blob/main/CovidVisualized%20BMC%20Research%20Notes%20article.pdf) 
  
+[PubMed](https://pubmed.ncbi.nlm.nih.gov/35397567/) 
+ 
 ********************************************************************************************************************************************
 ******************************************************************************************************************************************** 
  
