@@ -33,6 +33,9 @@
 Published journal article for this work:
 
 Pourmalek, F. CovidVisualized: Visualized compilation of international updated models’ estimates of COVID-19 pandemic at global and country levels. _BMC Res Notes_ **15**, 136 (2022). https://doi.org/10.1186/s13104-022-06020-4 
+ 
+Pourmalek F. CovidVisualized: Visualized compilation of international updated models' estimates of COVID-19 pandemic at global and country levels. _BMC Res Notes_. 2022 Apr 9;15(1):136. doi: 10.1186/s13104-022-06020-4. PMID: 35397567.
+ 
 
 [link](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06020-4)
 
