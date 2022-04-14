@@ -197,8 +197,6 @@ save "data_download_file_reference_2022.dta", replace
 
 
 
-
-
 use "data_download_file_reference_2021.dta", clear
 
 append using "data_download_file_reference_2020.dta"
@@ -898,6 +896,7 @@ order date location_name
 
 sort date location_name 
 
+
 drop location_id date_original version_name
 
 save "Masks country.dta", replace
@@ -1251,6 +1250,19 @@ label var DayINFFatUpSmA02S01 "Daily Fatal Infections Upper smoothed IHME S1"
 
 
 
+
+
+* Forecast start date (as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend)
+gen epoch_IHME = td(11Mar2022)
+label var epoch_IHME "IHME Forecast start date"
+
+gen DayDeaFOREA02S01 = DayDeaMeSmA02S01
+replace DayDeaFOREA02S01 = . if date < td(11Mar2022)
+label var DayDeaFOREA02S01 "Daily Forecasted Deaths Mean smoothed IHME S1"
+
+gen DayINFFOREA02S01 = DayINFMeSmA02S01
+replace DayINFFOREA02S01 = . if date < td(11Mar2022)
+label var DayINFFOREA02S01 "Daily Forecasted infections Mean smoothed IHME S1"
 
 
 
