@@ -52,6 +52,11 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15
 
 ****
 
+(6b) Iran [Daily deaths, 2022 on]()
+
+
+****
+
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
 
