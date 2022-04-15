@@ -1239,7 +1239,7 @@ label var DayINFFatUpSmA02S01 "Daily Fatal Infections Upper smoothed IHME S1"
 
 
 
-* Forecast start date // as per https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend
+* Forecast start date // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
 gen epoch_IHME = td($IHMEepoch)
 label var epoch_IHME "IHME Forecast start date"
 
