@@ -4,7 +4,7 @@
 
 Pourmalek F. CovidVisualized: Visualized compilation of international updated models' estimates of COVID-19 pandemic at global and country levels. _BMC Res Notes_. 2022 Apr 9;15(1):136. doi: 10.1186/s13104-022-06020-4. PMID: 35397567.
 
-[Publisher](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06020-4) || [PubMed](https://pubmed.ncbi.nlm.nih.gov/35397567/) || [PDF](https://github.com/pourmalek/CovidVisualizedGlobal/blob/main/journal%20articles%2C%20this%20work/Pourmalek%20F%20-%20CovidVisualized%20-%20BMC%20Research%20Notes%202022.pdf) 
+[Publisher](https://github.com/pourmalek/covir2/blob/main/journal%20articles%2C%20this%20work/Pourmalek%20F%20-%20CovidVisualized%20-%20BMC%20Research%20Notes%202022.pdf) 
 
 ********
 
