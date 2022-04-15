@@ -180,15 +180,15 @@ drop DayCasMeRaA05S00_window
 
 * Forecast start date 
 
-gen epoch_SRIV = td(08Apr2022) // update release date
+gen epoch_SRIV = td($SRIVepoch) // update release date
 label var epoch_SRIV "SRIV Forecast start date"
 
 gen DayDeaFOREA05S00 = DayDeaMeSmA05S00
-replace DayDeaFOREA05S00 = . if date < td(08Apr2022)
+replace DayDeaFOREA05S00 = . if date < td($SRIVepoch)
 label var DayDeaFOREA05S00 "Daily Forecasted Deaths Mean smoothed SRIV"
 
 gen DayCasFOREA05S00 = DayCasMeSmA05S00
-replace DayCasFOREA05S00 = . if date < td(08Apr2022)
+replace DayCasFOREA05S00 = . if date < td($SRIVepoch)
 label var DayCasFOREA05S00 "Daily Forecasted Cases Mean smoothed SRIV"
 
 qui compress

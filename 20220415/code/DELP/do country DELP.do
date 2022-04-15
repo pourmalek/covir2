@@ -255,15 +255,15 @@ drop DayCasUpRaA01S00_window
 
 * Forecast start date 
 
-gen epoch_DELP = td(08Apr2022) // update release date
+gen epoch_DELP = td($DELPepoch) // update release date
 label var epoch_DELP "DELP Forecast start date"
 
 gen DayDeaFOREA01S00 = DayDeaMeSmA01S00
-replace DayDeaFOREA01S00 = . if date < td(08Apr2022)
+replace DayDeaFOREA01S00 = . if date < td($DELPepoch)
 label var DayDeaFOREA01S00 "Daily Forecasted Deaths Mean smooth DELP"
 
 gen DayCasFOREA01S00 = DayCasMeSmA01S00
-replace DayCasFOREA01S00 = . if date < td(08Apr2022)
+replace DayCasFOREA01S00 = . if date < td($DELPepoch)
 label var DayCasFOREA01S00 "Daily Forecasted Cases Mean smooth DELP"
 
 

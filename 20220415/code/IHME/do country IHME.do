@@ -1239,16 +1239,16 @@ label var DayINFFatUpSmA02S01 "Daily Fatal Infections Upper smoothed IHME S1"
 
 
 
-* Forecast start date (as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend)
-gen epoch_IHME = td(11Mar2022)
+* Forecast start date // as per https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend
+gen epoch_IHME = td($IHMEepoch)
 label var epoch_IHME "IHME Forecast start date"
 
 gen DayDeaFOREA02S01 = DayDeaMeSmA02S01
-replace DayDeaFOREA02S01 = . if date < td(11Mar2022)
+replace DayDeaFOREA02S01 = . if date < td($IHMEepoch)
 label var DayDeaFOREA02S01 "Daily Forecasted Deaths Mean smoothed IHME S1"
 
 gen DayINFFOREA02S01 = DayINFMeSmA02S01
-replace DayINFFOREA02S01 = . if date < td(11Mar2022)
+replace DayINFFOREA02S01 = . if date < td($IHMEepoch)
 label var DayINFFOREA02S01 "Daily Forecasted infections Mean smoothed IHME S1"
 
 

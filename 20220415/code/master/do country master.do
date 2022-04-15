@@ -34,8 +34,24 @@ global IMPEdate 2022-01-31_v9
 global SRIVdate 2022-04-08
 *            5/ ----------
 
-																		 
-					
+
+
+***************************************
+
+* set epoch for marking forecasts with ||||||||||
+
+global DELPepoch 15Apr2022 // update release date
+*            6/ ----------
+
+global IHMEepoch 01Apr2022 // as per https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend
+*            7/ ----------
+
+global IMPEepoch 31Jan2022 // update release date																		 
+*            8/ ----------
+
+global SRIVepoch 15Apr2022 // update release date																		 
+*            9/ ----------
+
 		
 ******************************************************		
 		
