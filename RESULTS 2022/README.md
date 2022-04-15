@@ -28,7 +28,7 @@ graph (8) Iran - [Daily cases or infections, reference scenarios, 2021 on](https
 
 graph (8b) Iran - [Daily cases, reference scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8b-iran---daily-cases-reference-scenarios-2021-on)
 
-graph (8b2) Iran - [Daily cases or infections, 2022 on]()
+graph (8b2) Iran - [Daily cases or infections, 2022 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8b2-iran---daily-cases-or-infections-2022-on)
  
 graph (8c) Iran - [Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8c-iran---daily-estimated-infections-ihme-impe-to-reported-cases-john-main-scenarios-2021-on)
 
