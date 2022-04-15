@@ -77,6 +77,11 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15
  
 ****
 
+(8b2) Iran [Daily cases or infections, 2022 on] graph 28
+
+
+****
+
 (8c) Iran [Daily estimated infections IHME, IMPE to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
 
  
