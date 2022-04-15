@@ -89,28 +89,33 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-08
  
 ****
 
-(8c) Iran [Daily estimated infections IHME, IMPE to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
+(8c) Iran [Daily estimated infections IHME to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163604188-e4b95981-10a4-4249-8ca7-e343c9604c71.png)
  
 ****
 
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163604260-01847fdc-45d9-40b6-9db4-513d06f4e078.png)
 
 ****
 
 (10) Iran [Hospital-related outcomes, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163604340-cbf562f3-92bb-4958-ac8d-190ee6cc96c6.png)
  
 ****
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163604397-56fc517b-aaac-45fb-9aed-b1e176950fed.png)
  
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/163604487-e3dcaab8-ae7d-43f3-a56c-aa56e502ba4e.png)
  
 ****
 ****
