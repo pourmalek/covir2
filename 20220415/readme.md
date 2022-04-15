@@ -2,11 +2,11 @@
 
 ### Study update dates in uptake 20220415
 
-**_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220415_**
+**_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_**
 
-Days old: DELP 0, IHME 7, no IMPE, SRIV 0
+Days old: DELP 0, IHME 7, no IMPE, SRIV 2
 
-The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15. Not included.
+The latest available IMPE update (i.e., 2022-01-31) is 68 days old on 2022-04-08. Not included.
 
 
 <br/><br/> 
@@ -49,10 +49,9 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15
 
 (6) Iran [Daily deaths, 2021 on, 3 scenarios, IMPE](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-
 ****
 
-(6b) Iran [Daily deaths, 2022 on]() graph 18
+* daily deaths, reference scenario, 2022 on
 
 
 ****
@@ -75,11 +74,6 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
  
-****
-
-(8b2) Iran [Daily cases or infections, 2022 on] graph 28
-
-
 ****
 
 (8c) Iran [Daily estimated infections IHME, IMPE to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
