@@ -18,6 +18,8 @@ graph (5) Iran - [Daily deaths, 2021 on, reference scenario with uncertainty, IM
  
 graph (6) Iran - [Iran - Daily deaths, 2021 on, alternate scenarios, IMPE](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-6-iran---daily-deaths-2021-on-alternate-scenarios-impe) 
 
+graph (6b) Iran [Daily deaths, 2022 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-00-iran---daily-reported-cases-john-all-times) 
+
 graph (00) Iran - [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-00-iran---daily-reported-cases-john-all-times)
 
 graph (7) Iran - [Daily cases or infections, reference scenarios, all time](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-7-iran---daily-cases-or-infections-reference-scenarios-all-time) 
@@ -25,6 +27,8 @@ graph (7) Iran - [Daily cases or infections, reference scenarios, all time](http
 graph (8) Iran - [Daily cases or infections, reference scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8-iran---daily-cases-or-infections-reference-scenarios-2021-on) 
 
 graph (8b) Iran - [Daily cases, reference scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8b-iran---daily-cases-reference-scenarios-2021-on)
+
+graph (8b2) Iran - [Daily cases or infections, 2022 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8b2-iran---daily-cases-or-infections-2022-on)
  
 graph (8c) Iran - [Daily estimated infections IHME IMPE to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/tree/main/RESULTS%202022#graph-8c-iran---daily-estimated-infections-ihme-impe-to-reported-cases-john-main-scenarios-2021-on)
 
@@ -920,6 +924,38 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 
 
+
+**** 
+**** 
+
+#### graph (6b) Iran - Daily deaths, 2022 on
+
+ 
+ 
+ 
+ 
+
+*
+
+**_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220415_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 0
+
+graph (6b) Iran [Daily deaths, 2022 on]() 
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **** 
 **** 
 
@@ -1379,6 +1415,39 @@ This graph added from uptake 20220401.
 ![image](https://user-images.githubusercontent.com/30849720/148628594-44c8c767-f16a-4e92-a172-524d2f609aa8.png)
 
 *
+
+
+
+
+
+
+
+
+
+
+
+**** 
+**** 
+
+#### graph (8b2) Iran - Daily cases or infections, 2022 on
+
+ 
+ 
+ 
+ 
+
+*
+
+**_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220415_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 0
+
+(8b2) Iran [Daily cases or infections, 2022 on] 
+
+
+
+
+
+
+
 
 
 
