@@ -52,7 +52,7 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15
 
 ****
 
-(6b) Iran [Daily deaths, 2022 on]()
+(6b) Iran [Daily deaths, 2022 on]() graph 18
 
 
 ****
