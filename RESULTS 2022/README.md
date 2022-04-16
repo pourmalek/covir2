@@ -116,7 +116,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
+(0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163602395-e5e06609-c8c0-4c8a-b784-0047d8a8079a.png)
 
 *
 
@@ -159,7 +161,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163665364-943c0175-4bf0-4fc9-a568-e5980daadda0.png)
 
 *
 
@@ -295,7 +299,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
+(2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163665387-e8b8fc19-5bc4-483b-a073-d7dc00e00eda.png)
 
 *
 
@@ -939,7 +945,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
-graph (6b) Iran [Daily deaths, 2022 on]() 
+(6b) Iran [Daily deaths, reference scenario, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/163665438-8c0cf45a-f948-46da-ad9a-32695baea1d9.png)
 
 *
 
@@ -972,7 +980,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220415_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 0
 
+(00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163603602-91c537f6-0002-4673-a4cf-47fa5e7d82e0.png)
 
 *
 
@@ -1019,7 +1029,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
+(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163665466-9d70c762-d7d4-44c2-bdfb-291ddadac4ae.png)
 
 *
 
@@ -1155,7 +1167,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
+(8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163665497-d3aff04c-b407-4c4d-9260-74707d637ffc.png)
 
 *
 
@@ -1300,7 +1314,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
+(8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163665528-c3b15996-d290-43c5-9f96-2fad83c538dd.png)
 
 *
 
