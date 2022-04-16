@@ -85,7 +85,7 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-08
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/163603882-1b28fe22-27e7-4739-ae5a-fb34017b853f.png)
+![image](https://user-images.githubusercontent.com/30849720/163665528-c3b15996-d290-43c5-9f96-2fad83c538dd.png)
  
 ****
 
@@ -109,13 +109,13 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-08
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/163604397-56fc517b-aaac-45fb-9aed-b1e176950fed.png)
+![image](https://user-images.githubusercontent.com/30849720/163665586-b27aebd0-97c9-4c53-9777-13acb76daa16.png)
  
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/163604487-e3dcaab8-ae7d-43f3-a56c-aa56e502ba4e.png)
+![image](https://user-images.githubusercontent.com/30849720/163665613-94791dde-ca8b-4882-8302-b053908b873f.png)
  
 ****
 ****
