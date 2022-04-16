@@ -189,7 +189,86 @@ summ DayDMuMeRaA01S00
 
 
 
+
+* smooth 
+
+tsset date, daily   
+
+
+tssmooth ma DayDeaMeRaA01S00_window = DayDeaMeRaA01S00 if DayDeaMeRaA01S00 >= 0, window(3 1 3) 
+
+tssmooth ma DayDeaMeSmA01S00 = DayDeaMeRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayDeaMeSmA01S00 "Daily deaths smooth mean DELP"
+
+drop DayDeaMeRaA01S00_window
+
+
+tssmooth ma DayCasMeRaA01S00_window = DayCasMeRaA01S00 if DayCasMeRaA01S00 >= 0, window(3 1 3)
+
+tssmooth ma DayCasMeSmA01S00 = DayCasMeRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayCasMeSmA01S00 "Daily cases smooth mean DELP"
+
+drop DayCasMeRaA01S00_window
+
+
+
+tssmooth ma DayDeaLoRaA01S00_window = DayDeaLoRaA01S00 if DayDeaLoRaA01S00 >= 0, window(3 1 3) 
+
+tssmooth ma DayDeaLoSmA01S00 = DayDeaLoRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayDeaLoSmA01S00 "Daily deaths smooth lower DELP"
+
+drop DayDeaLoRaA01S00_window
+
+
+tssmooth ma DayCasLoRaA01S00_window = DayCasLoRaA01S00 if DayCasLoRaA01S00 >= 0, window(3 1 3)
+
+tssmooth ma DayCasLoSmA01S00 = DayCasLoRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayCasLoSmA01S00 "Daily cases smooth lower DELP"
+
+drop DayCasLoRaA01S00_window
+
+
+
+tssmooth ma DayDeaUpRaA01S00_window = DayDeaUpRaA01S00 if DayDeaUpRaA01S00 >= 0, window(3 1 3) 
+
+tssmooth ma DayDeaUpSmA01S00 = DayDeaUpRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayDeaUpSmA01S00 "Daily deaths smooth upper DELP"
+
+drop DayDeaUpRaA01S00_window
+
+
+tssmooth ma DayCasUpRaA01S00_window = DayCasUpRaA01S00 if DayCasUpRaA01S00 >= 0, window(3 1 3)
+
+tssmooth ma DayCasUpSmA01S00 = DayCasUpRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayCasUpSmA01S00 "Daily cases smooth upper DELP"
+
+drop DayCasUpRaA01S00_window
+
+
+
+
+* Forecast start date 
+
+gen epoch_DELP = td($DELPepoch) // update release date
+label var epoch_DELP "DELP Forecast start date"
+
+gen DayDeaFOREA01S00 = DayDeaMeSmA01S00
+replace DayDeaFOREA01S00 = . if date < td($DELPepoch)
+label var DayDeaFOREA01S00 "Daily Forecasted Deaths Mean smooth DELP"
+
+gen DayCasFOREA01S00 = DayCasMeSmA01S00
+replace DayCasFOREA01S00 = . if date < td($DELPepoch)
+label var DayCasFOREA01S00 "Daily Forecasted Cases Mean smooth DELP"
+
+
 sort date loc_grand_name
+
 
 qui compress
 
