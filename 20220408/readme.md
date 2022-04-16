@@ -49,11 +49,13 @@ People will die. **_Do something now_, Ministry of Health and Medical Education*
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163688741-9bd52f7b-c169-4622-8623-42f6a10b3336.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163688765-bf96e2c4-a337-4e2b-ab61-444634003d9b.png)
  
 ****
 
@@ -89,16 +91,19 @@ People will die. **_Do something now_, Ministry of Health and Medical Education*
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163688798-b528d013-a3c9-4436-8c1d-be3e86a684dd.png)
 
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163688816-06945724-4b34-4157-9efb-ca3962d963b4.png)
  
 ****
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163688839-773627e4-a469-4251-9596-8c5f252cdc15.png)
  
 ****
 
