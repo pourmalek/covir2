@@ -127,12 +127,13 @@ People will die. **_Do something now_, Ministry of Health and Medical Education*
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163688856-17c5140e-cfe9-4642-9012-ef7724b1950a.png)
  
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220408/output/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-![image](https://user-images.githubusercontent.com/30849720/162499969-6c91c859-519b-4898-b0d3-95fbd9475459.png)
+![image](https://user-images.githubusercontent.com/30849720/163688875-b28e6902-404b-4a1b-9daa-efa1cd0d028f.png)
  
 ****
 ****
