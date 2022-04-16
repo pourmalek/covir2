@@ -315,7 +315,7 @@ The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-08
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/163665586-b27aebd0-97c9-4c53-9777-13acb76daa16.png)
+![image](https://user-images.githubusercontent.com/30849720/163666285-12acc00b-0186-44ba-87db-27872eb4dba5.png)
  
 ****
 
