@@ -1456,8 +1456,11 @@ This graph added from uptake 20220401.
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
-(8b2) Iran [Daily cases or infections, 2022 on] 
+(8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2028%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/163673683-b4a3b923-06bf-4eec-8481-ef2e75f780ce.png)
+
+*
 
 
 
