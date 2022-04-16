@@ -81,7 +81,7 @@ label var TotCasUpRaA05S00 "Total Cases Upper SRIV"
 
 rename date date_original
 gen date = .
-replace date = td(09jan2022) in 1
+replace date = td($SRIVepoch) in 1
 replace date = date[_n-1] + 1 in 2/l
 format date %tdDDMonCCYY
 codebook date
@@ -144,10 +144,52 @@ gen DayDMuMeRaA05S00   = DayDeaMeRaA05S00   * DayCbDMeRaA05S00
 label var DayDMuMeRaA05S00   "Daily deaths scaled (times means of cases by deaths) SRIV "
 summ DayDMuMeRaA05S00  
 	
+	
+	
+	
+
+******************
+	
+* smooth 
+
+tsset date, daily   
 
 
+tssmooth ma DayDeaMeRaA05S00_window = DayDeaMeRaA05S00 if DayDeaMeRaA05S00 >= 0, window(3 1 3) 
+
+tssmooth ma DayDeaMeSmA05S00 = DayDeaMeRaA05S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayDeaMeSmA05S00 "Daily deaths smooth A05 SRIV"
+
+drop DayDeaMeRaA05S00_window
 
 
+tssmooth ma DayCasMeRaA05S00_window = DayCasMeRaA05S00 if DayCasMeRaA05S00 >= 0, window(3 1 3)
+
+tssmooth ma DayCasMeSmA05S00 = DayCasMeRaA05S00_window, weights( 1 2 3 <4> 3 2 1) replace
+
+label var DayCasMeSmA05S00 "Daily cases smooth A05 SRIV"
+
+drop DayCasMeRaA05S00_window
+
+
+	
+	
+	
+	
+
+* Forecast start date 
+
+gen epoch_SRIV = td($SRIVepoch) // update release date
+label var epoch_SRIV "SRIV Forecast start date"
+
+gen DayDeaFOREA05S00 = DayDeaMeSmA05S00
+replace DayDeaFOREA05S00 = . if date < td($SRIVepoch)
+label var DayDeaFOREA05S00 "Daily Forecasted Deaths Mean smoothed SRIV"
+
+gen DayCasFOREA05S00 = DayCasMeSmA05S00
+replace DayCasFOREA05S00 = . if date < td($SRIVepoch)
+label var DayCasFOREA05S00 "Daily Forecasted Cases Mean smoothed SRIV"
 
 qui compress
 
