@@ -81,7 +81,7 @@ label var TotCasUpRaA05S00 "Total Cases Upper SRIV"
 
 rename date date_original
 gen date = .
-replace date = td(09jan2022) in 1
+replace date = td($SRIVepoch) in 1
 replace date = date[_n-1] + 1 in 2/l
 format date %tdDDMonCCYY
 codebook date

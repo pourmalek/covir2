@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220415/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}15 Apr 2022, 10:29:07
+ {txt}opened on:  {res}15 Apr 2022, 23:58:58
 {txt}
 {com}. 
 . 
@@ -385,7 +385,7 @@
 . 
 . 
 . gen DayDERMeRaA05S00  = DayCasMeSmA05S00 / DayDeaMeRaA00S00
-{txt}(855 missing values generated)
+{txt}(949 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA05S00 "Daily Deaths estim to reported S0 SRIV"
@@ -463,7 +463,7 @@
 {com}. 
 . 
 . gen DayCERMeRaA05S00  = DayCasMeSmA05S00 / DayCasMeSmA00S00
-{txt}(855 missing values generated)
+{txt}(949 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA05S00 "Daily Cases estim to reported S0 SRIV"
@@ -539,7 +539,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00S00
-{txt}(855 missing values generated)
+{txt}(949 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
@@ -615,7 +615,7 @@
 . 
 . 
 . gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00S00
-{txt}(855 missing values generated)
+{txt}(949 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA05S00 "Total Cases estim to reported S0 SRIV"
@@ -3348,7 +3348,7 @@ all files already exist and are up to date.
 . twoway ///
 > (line DayDeaMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 > (line DayDeaMeSmA00S00 date, sort lcolor(cyan) lwidth(thick)) /// 2 "JOHN smooth"
-> , xtitle(Date) xlabel(#$monthspast01jan2020, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -3367,7 +3367,7 @@ all files already exist and are up to date.
 . twoway ///
 > (line DayCasMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 > (line DayCasMeSmA00S00 date, sort lcolor(cyan) lwidth(thick)) /// 2 "JOHN smooth"
-> , xtitle(Date) xlabel(#$monthspast01jan2020, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -3395,7 +3395,7 @@ all files already exist and are up to date.
 {txt}
 {com}. 
 . di c(scheme)
-{res}_GRSTYLE_
+{res}s2color
 {txt}
 {com}. 
 . 
@@ -3406,7 +3406,7 @@ all files already exist and are up to date.
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220415/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}15 Apr 2022, 10:30:06
+ {txt}closed on:  {res}15 Apr 2022, 23:59:58
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
