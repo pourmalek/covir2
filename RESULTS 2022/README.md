@@ -456,7 +456,7 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -593,7 +593,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -729,7 +729,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+The latest available IMPE update (i.e., 2022-01-31) is 82 days old on 2022-04-22. Not included.
 
 *
 
@@ -859,7 +859,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+The latest available IMPE update (i.e., 2022-01-31) is 82 days old on 2022-04-22. Not included.
 
 *
 
@@ -1578,7 +1578,7 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -2317,7 +2317,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -2458,7 +2458,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -2596,7 +2596,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -2735,7 +2735,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
@@ -2874,7 +2874,7 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
-
+Both this and the previous uptake use the same model update, so the graphs are identical.
 
 *
 
