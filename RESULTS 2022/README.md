@@ -116,7 +116,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164774355-ffd32a7c-8c24-417c-9fe1-3bedbafed936.png)
 
 *
 
@@ -167,7 +169,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164774412-b6f5c3d5-7243-47b1-8ccb-aa8f54df2d23.png)
 
 *
 
@@ -312,7 +316,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164774511-24838bd4-8c9d-4c29-a5fc-7ce52d543fef.png)
 
 *
 
@@ -993,7 +999,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(6b) Iran [Daily deaths, reference scenario, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164774877-ea82dda7-102e-43f0-a1a6-3684f88fe297.png)
 
 *
 
@@ -1035,7 +1043,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164774983-fab4af92-2626-4dff-b832-16f9fde81ac1.png)
 
 *
 
@@ -1091,7 +1101,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775092-fcd36779-6d6b-4ebc-af98-78ca5d63f4f3.png)
 
 *
 
@@ -1236,7 +1248,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775180-eef21bfc-5602-4108-ac08-b45b90fe6ded.png)
 
 *
 
@@ -1390,7 +1404,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775301-d84d7676-4730-47a2-bd05-bac921471a80.png)
 
 *
 
@@ -1539,7 +1555,9 @@ This graph added from uptake 20220401.
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2028%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775440-76168566-a394-49e3-9d11-d536be67d9b5.png)
 
 *
 
@@ -1730,7 +1748,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775708-3d7e25d7-b01a-4fd7-ac6d-2a4bcd1fd1ad.png)
 
 *
 
@@ -1875,7 +1895,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(10) Iran [Hospital-related outcomes, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775892-7bca7c0c-a80e-442b-8b92-1e679fa2e539.png)
 
 *
 
@@ -2020,7 +2042,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/164775987-95b65703-221d-41fc-a5ac-bc4bf756b1b9.png)
 
 *
 
@@ -2168,7 +2192,9 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 **_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
 
+(12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220422/output/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/164776082-f74f51ff-15dc-4738-b3c2-b2fbad1459c2.png)
 
 *
 
