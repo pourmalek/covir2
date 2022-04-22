@@ -114,6 +114,12 @@ This graph added from uptake 20220401.
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
@@ -158,6 +164,13 @@ This graph added from uptake 20220401.
 
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -297,6 +310,13 @@ This graph added from uptake 20220401.
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -434,6 +454,13 @@ This graph added from uptake 20220401.
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -564,6 +591,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -693,6 +727,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 The latest available IMPE update (i.e., 2022-01-31) is 75 days old on 2022-04-15. Not included.
@@ -815,6 +856,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -943,6 +991,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (6b) Iran [Daily deaths, reference scenario, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
@@ -977,6 +1032,13 @@ This graph added from uptake 20220401.
 
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220415_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 0
 
@@ -1026,6 +1088,13 @@ This graph added from uptake 20220401.
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -1164,6 +1233,13 @@ This graph added from uptake 20220401.
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -1312,6 +1388,13 @@ This graph added from uptake 20220401.
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -1454,6 +1537,13 @@ This graph added from uptake 20220401.
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2028%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
@@ -1485,6 +1575,13 @@ This graph added from uptake 20220401.
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -1631,6 +1728,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (9) Iran [Hospital-related outcomes, all time](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2071a%20COVID-19%20hospital-related%20outcomes%2C%20all%20time.pdf)
@@ -1769,6 +1873,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 (10) Iran [Hospital-related outcomes, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220415/output/graph%2072%20COVID-19%20hospital-related%20outcomes%2C%20wo%20extremes%2C%202021.pdf)
@@ -1906,6 +2017,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -2047,6 +2165,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -2190,6 +2315,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -2324,6 +2456,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -2454,6 +2593,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
@@ -2587,6 +2733,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
 
 *
 
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
+
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
 Both this and the previous uptake use the same model update, so the graphs are identical.
@@ -2718,6 +2871,13 @@ Both this and the previous uptake use the same model update, so the graphs are i
  
 
 *
+
+**_DELP 20220422_**: **_DELP 20220422_**, IHME 20220408, no IMPE, **_SRIV 20220422_**
+
+
+
+*
+
 
 **_DELP 20220415_**: **_DELP 20220415_**, IHME 20220408, no IMPE, **_SRIV 20220413_** || Days old: DELP 0, IHME 7, no IMPE, SRIV 3
 
