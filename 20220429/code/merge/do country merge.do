@@ -32,7 +32,7 @@ JOHN A00
 
 DELP A01
 IHME A02
-IMPE A03
+IMPE A03 //
 LANL A04 // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 SRIV A05 
 
@@ -75,7 +75,7 @@ drop _merge
 
 
 
-* IMPE
+/* IMPE
 
 if regexm(c(os),"Mac") == 1 {
 
@@ -83,7 +83,7 @@ if regexm(c(os),"Mac") == 1 {
 }
 else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IMPE\country IMPE.dta"
 
-drop _merge
+drop _merge */
 
 
 
@@ -176,7 +176,7 @@ label var TotITDMeRaA02S02 "Total Infections to Deaths S2 IHME"
 
 
 
-
+/*
 gen DayITDMeRaA03S01  = DayINFMeRaA03S01  / DayDeaMeRaA03S01   
 
 label var DayITDMeRaA03S01  "Daily Infections to Deaths S1 IMPE"
@@ -204,7 +204,7 @@ label var DayITDMeRaA03S03  "Daily Infections to Deaths S3 IMPE"
 gen TotITDMeRaA03S03  = TotINFMeRaA03S03  / TotDeaMeRaA03S03   
 
 label var TotITDMeRaA03S03  "Total Infections to Deaths S3 IMPE"
-
+*/
 
 
 
@@ -249,7 +249,7 @@ label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHM
 
 
 
-
+/*
 gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00S00
 
 label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
@@ -263,7 +263,7 @@ label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
 gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00S00
 
 label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
-
+*/
 
 
 gen DayDERMeRaA05S00  = DayCasMeSmA05S00 / DayDeaMeRaA00S00
@@ -304,7 +304,7 @@ gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeSmA00S00
 label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
 
 
-
+/*
 gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeSmA00S00
 
 label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
@@ -318,7 +318,7 @@ label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
 gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeSmA00S00
 
 label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
-
+*/
 
 gen DayCERMeRaA05S00  = DayCasMeSmA05S00 / DayCasMeSmA00S00
 
@@ -356,7 +356,7 @@ label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHM
 
 
 
-
+/*
 gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00S00
 
 label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
@@ -370,7 +370,7 @@ label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
 gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00S00
 
 label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
-
+*/
 
 gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00S00
 
@@ -407,7 +407,7 @@ label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed
 
 
 
-
+/*
 gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00S00
 
 label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
@@ -421,7 +421,7 @@ label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
 gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00S00
 
 label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
-
+*/
 
 
 gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00S00
@@ -982,10 +982,11 @@ gen DayITCMeSmA02S01 =  DayINFMeSmA02S01 / DayCasMeSmA00S00
 
 label var DayITCMeSmA02S01  "Daily Infections IHME to cases JOHN"
 
+/*
 gen DayITCMeRaA03S02 =  DayINFMeRaA03S02 / DayCasMeSmA00S00
 
 label var DayITCMeRaA03S02  "Daily Infections IMPE to cases JOHN"
-
+*/
 
 twoway ///
 (line DayITCMeSmA02S01 date, sort lcolor(black)) /// 1 "IHME"
@@ -1012,7 +1013,7 @@ tsset date, daily
 
 
 foreach var of varlist ///
-DayITCMeSmA02S01 DayITCMeRaA03S02 {
+DayITCMeSmA02S01 {
 
 
 tssmooth ma `var'_window = `var', window(3 1 3)
@@ -1028,7 +1029,7 @@ tsset, clear
 
 ssc install labutil2
 
-labvars DayITCMeSmA02S01sm DayITCMeRaA03S02sm ,names
+labvars DayITCMeSmA02S01sm ,names
 
           
 qui summ DayITCMeSmA02S01sm if date >= td(01jan2021) , detail
@@ -1040,13 +1041,6 @@ replace DayITCMeSmA02S01sm_median = round(DayITCMeSmA02S01sm_median)
 local DayITCMeSmA02S01sm_median = DayITCMeSmA02S01sm_median
 
 
-qui summ DayITCMeRaA03S02sm if date >= td(01jan2021) , detail
-
-gen DayITCMeRaA03S02sm_median = r(p50)
-
-replace DayITCMeRaA03S02sm_median = round(DayITCMeRaA03S02sm_median)
-
-local DayITCMeRaA03S02sm_median = DayITCMeRaA03S02sm_median
 
 twoway ///
 (line DayITCMeSmA02S01 date, sort lcolor(black*0.2)) /// 1 "IHME"
