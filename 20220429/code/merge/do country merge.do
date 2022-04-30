@@ -952,7 +952,7 @@ graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", r
 * daily cases or infections, 2022 on
 
 twoway ///
-(line DayCasMeSmA00S00 date, sort lcolor(cyan)) /// 1 "JOHN"
+(line DayCasMeSmA00S00 date, sort lcolor(cyan) lwidth(vthick)) /// 1 "JOHN"
 (line DayCasFOREA01S00 date, sort lcolor(red) lpattern(tight_dot) lwidth(vthick)) /// 2 "DELP" Forecast only
 (line DayCasMeSmA01S00 date, sort lcolor(red)) /// 3 "DELP"
 (line DayINFFOREA02S01 date, sort lcolor(black) lpattern(tight_dot) lwidth(vthick)) /// 4 "IHME" Forecast only

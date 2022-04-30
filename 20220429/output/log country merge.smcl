@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220429/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Apr 2022, 16:44:56
+ {txt}opened on:  {res}29 Apr 2022, 17:14:12
 {txt}
 {com}. 
 . 
@@ -1249,13 +1249,11 @@ Sorted by:
 {txt}
 {com}. 
 . save "country.dta", replace
-{txt}(note: file country.dta not found)
-file country.dta saved
+{txt}file country.dta saved
 
 {com}. 
 . export delimited using "country.csv", replace 
-{res}{txt}(note: file country.csv not found)
-{txt}file country.csv saved
+{res}{txt}file country.csv saved
 
 {com}. 
 . 
@@ -1475,7 +1473,7 @@ file country.dta saved
 . * daily deaths, all scenarios, IHME, 2021
 . 
 . twoway ///
-> (line DayDeaMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) /// 1
+> (line DayDeaMeSmA00S00 date, sort lcolor(cyan) lwidth(vthick)) /// 1
 > (line DayDeaFOREA02S01 date, sort lcolor(black*0.6) lpattern(tight_dot) lwidth(vthick)) /// 2 "IHME" Forecast only
 > (line DayDeaMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) /// 3 "IHME" 
 > (line DayDeaMeSmA02S02 date, sort lcolor(blue)) /// 4
@@ -1822,7 +1820,7 @@ file country.dta saved
 . * daily cases or infections, 2022 on
 . 
 . twoway ///
-> (line DayCasMeSmA00S00 date, sort lcolor(cyan)) /// 1 "JOHN"
+> (line DayCasMeSmA00S00 date, sort lcolor(cyan) lwidth(vthick)) /// 1 "JOHN"
 > (line DayCasFOREA01S00 date, sort lcolor(red) lpattern(tight_dot) lwidth(vthick)) /// 2 "DELP" Forecast only
 > (line DayCasMeSmA01S00 date, sort lcolor(red)) /// 3 "DELP"
 > (line DayINFFOREA02S01 date, sort lcolor(black) lpattern(tight_dot) lwidth(vthick)) /// 4 "IHME" Forecast only
@@ -2842,7 +2840,7 @@ all files already exist and are up to date.
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220429/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Apr 2022, 16:46:14
+ {txt}closed on:  {res}29 Apr 2022, 17:15:22
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
