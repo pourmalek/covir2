@@ -15,17 +15,6 @@ The latest available IMPE update (i.e., 2022-01-31) is 89 days old on 2022-04-08
 
 Beware of variants and new variants. Iran will know about variants in Iran via other countries. 
 
-
-# Color Test Document
-
-<style>H1{color:Blue;}</style>
-<style>H2{color:DarkOrange;}</style>
-<style>p{color:Black;}</style>
-
-## Second Heading
-
-This is a test to see how the colors work.
-
 <br/><br/> 
 
 
