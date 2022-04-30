@@ -1,16 +1,7 @@
 ```diff
-- book
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+@@ text (and bold)@@
 ```
 
-
-
-text in red
-
-- text in red
 
 
 
