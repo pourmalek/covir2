@@ -134,21 +134,25 @@ The latest available IMPE update (i.e., 2022-01-31) is 89 days old on 2022-04-08
 
 (14) Iran [Daily Infection-outcome ratios, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220429/output/graph%20102%20COVID-19%20daily%20Infection%20outcomes%20ratios%2C%20Iran%202%20scenarios%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/166083211-d43a8b95-b8a3-44d5-b6b0-aabbee6b0246.png)
 
 ****
 
 (15) Iran [Daily mobility, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220429/output/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/166083248-dfe3a9f9-b70c-4a06-8182-7026ad0de5ac.png)
 
 ****
 
 (16) Iran [Daily mask use, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220429/output/graph%20104%20COVID-19%20daily%20mask_use%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/166083288-b08eea2d-65f3-4511-97b7-8f3882e79387.png)
 
 ****
 
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220429/output/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/166083314-ffa09064-adff-432f-8e64-abdd754c58cb.png)
 
 ****
 
