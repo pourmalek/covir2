@@ -632,7 +632,7 @@ graph export "graph 14 COVID-19 daily deaths, $country, reference scenario with 
 * daily deaths, all scenarios, IHME, 2021
 
 twoway ///
-(line DayDeaMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) /// 1
+(line DayDeaMeSmA00S00 date, sort lcolor(cyan) lwidth(vthick)) /// 1
 (line DayDeaFOREA02S01 date, sort lcolor(black*0.6) lpattern(tight_dot) lwidth(vthick)) /// 2 "IHME" Forecast only
 (line DayDeaMeSmA02S01 date, sort lcolor(black) lwidth(medthick)) /// 3 "IHME" 
 (line DayDeaMeSmA02S02 date, sort lcolor(blue)) /// 4
