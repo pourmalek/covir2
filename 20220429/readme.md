@@ -1,3 +1,17 @@
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
+
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
+
+
 ! Read Iran COVID-19 epidemic models situation report No 55 - 2022-04-29 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/55%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2055%20–%202022-04-29.pdf)
 
 ### Study update dates in uptake 20220429
