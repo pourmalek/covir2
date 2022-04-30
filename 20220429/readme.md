@@ -14,7 +14,7 @@ The latest available IMPE update (i.e., 2022-01-31) is 89 days old on 2022-04-08
 **Summary 20220429:**
 
 ```diff
-@@ Beware of variants and new variants. Iran will know about variants in Iran via other countries. @@ 
+- Beware of variants and new variants. Iran will know about variants in Iran via other countries. 
 
 ```
 **Summary 20220429:**
