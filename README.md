@@ -200,7 +200,7 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 
 Days old: DELP 0, IHME 21, no IMPE, SRIV 0
 
-The latest available IMPE update (i.e., 2022-01-31) is 89 days old on 2022-04-08. Not included.
+The latest available IMPE update (i.e., 2022-01-31) is 3 months old. Not included.
 
  
 <br/><br/>
