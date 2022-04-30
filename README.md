@@ -202,7 +202,13 @@ Days old: DELP 0, IHME 21, no IMPE, SRIV 0
 
 The latest available IMPE update (i.e., 2022-01-31) is 89 days old on 2022-04-08. Not included.
 
+ 
+<br/><br/>
+ 
+**Summary 20220429:**
 
+Beware of variants and new variants. Iran will know about variants in Iran via other countries. 
+ 
 <br/><br/>
  
 
