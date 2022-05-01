@@ -24,13 +24,13 @@ di "$country"                                                                   
 
 * set epoch for marking forecasts with ||||||||||
 
-global DELPepoch 05May2022 // update release date
+global DELPepoch 06May2022 // update release date
 *            2/ ----------
 
 global IHMEepoch 01Apr2022 // as per https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend
 *            3/ ----------
 
-global SRIVepoch 05May2022 // update release date	
+global SRIVepoch 06May2022 // update release date	
 																	 
 *            4/ ----------
 
@@ -44,7 +44,7 @@ global DELPdate 20220506
 global IHMEdate 2022-04-08
 *            6/ --------
 
-global SRIVdate 2022-04-29
+global SRIVdate 2022-05-06
 *            7/ ----------
 
 
