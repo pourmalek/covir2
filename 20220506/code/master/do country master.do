@@ -24,28 +24,33 @@ di "$country"                                                                   
 
 * set epoch for marking forecasts with ||||||||||
 
-global DELPepoch 06May2022 // update release date
+global DELPepoch 02May2022 // update release date
 *            2/ ----------
 
-global IHMEepoch 01Apr2022 // as per https://covid19.healthdata.org/canada?view=daily-deaths&tab=trend
+global IHMEepoch 29Apr2022 // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
 *            3/ ----------
 
-global SRIVepoch 06May2022 // update release date	
-																	 
-*            4/ ----------
+global IMPEdate 2022-03-15_v9 
+*            4/ -------------
+
+global SRIVdate 2022-05-02
+*            5/ ----------
 
 
 
 * To change uptake date in individual do files for models, change the following dates:
 
-global DELPdate 20220506 
-*            5/ --------
-
-global IHMEdate 2022-04-08
+global DELPdate 20220502 
 *            6/ --------
 
-global SRIVdate 2022-05-06
-*            7/ ----------
+global IHMEdate 2022-05-06
+*            7/ --------
+
+global IMPEepoch 15Mar2022 // update release date																		 
+*            8/ ----------
+
+global SRIVepoch 02May2022 // update release date																		 
+*            9/ ----------
 
 
 		
@@ -116,9 +121,16 @@ JOHN A00
 
 DELP A01
 IHME A02
-IMPE A03 * discontinued 
+IMPE A03 
 LANL A04 * discontinued
 SRIV A05
+
+WHO	 A06 * 
+* Global excess deaths associated with COVID-19 (modelled estimates) 
+* Most recent update: 5 May 2022
+* Temporal coverage	1 January 2020 - 31 December 2021
+* Source web page:
+* https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates
 
 */
 
@@ -138,11 +150,13 @@ do "$pathcovir2/DELP/do country DELP.do"
 
 do "$pathcovir2/IHME/do country IHME.do" 
 
-// do "$pathcovir2/IMPE/do country IMPE.do" // The latest / last available update of the IMPE model was for 2022-01-31.  
+do "$pathcovir2/IMPE/do country IMPE.do" 
 
 // do "$pathcovir2/LANL/do country LANL.do" // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 
 do "$pathcovir2/SRIV/do country SRIV.do" 
+
+do "$pathcovir2/WHO/do country WHO.do"   
 
 do "$pathcovir2/merge/do country merge.do" 
 
