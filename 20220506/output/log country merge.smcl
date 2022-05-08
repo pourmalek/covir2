@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220506/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 May 2022, 17:09:06
+ {txt}opened on:  {res} 7 May 2022, 17:40:00
 {txt}
 {com}. 
 . 
@@ -2281,7 +2281,7 @@ Sorted by: {res}date
 > xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, IHME, all scenarios", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-> legend(order(1 "JOHN" 3 "IHME Reference" 4 "IHME Masks" 5 "IHME Third dose") rows(1)) ///
+> legend(order(1 "JOHN" 3 "IHME Reference" 4 "IHME Masks" 5 "IHME Third dose") size(small) rows(1)) ///
 > note("Reference scenario forecasts are marked with |||||||||||| " , size(small))
 {res}{txt}
 {com}. 
@@ -2427,6 +2427,36 @@ Sorted by: {res}date
 {com}. 
 . 
 . 
+. 
+. 
+. 
+. ****
+. * daily cases, reference scenario, 2022
+. 
+. twoway ///
+> (line DayCasMeSmA00S00 date, sort lcolor(cyan) lwidth(thick)) /// 1 "JOHN"
+> (line DayCasFOREA01S00 date, sort lcolor(red) lpattern(tight_dot) lwidth(vthick)) /// 2 "DELP" Forecast only
+> (line DayCasMeSmA01S00 date, sort lcolor(red)) /// 3 "DELP"
+> (line DayCasFOREA05S00 date, sort lcolor(green) lpattern(tight_dot) lwidth(vthick)) /// 4 "SRIV" Forecast only
+> (line DayCasMeSmA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+> if date >= td(01jan2022) ///
+> , xtitle(Date) xlabel(#$monthspast01jan2022merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily cases) title("COVID-19 daily cases, $country", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "JOHN cases" 3 "DELP cases" 5 "SRIV cases") size(small) row(1)) ///
+> subtitle("2022 on, reference scenarios", size(small)) 
+{res}{txt}
+{com}. 
+. graph export "graph 22b2 COVID-19 daily cases, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220506/code/merge/graph 22b2 COVID-19 daily cases, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
 . ****
 . * daily cases or infections, reference scenarios, 2021, CI
 . 
@@ -2534,7 +2564,7 @@ Sorted by: {res}date
 > xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily infections) title("COVID-19 daily infections, $country, IHME, all scenarios", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-> legend(order(1 "Reference" 2 "Masks" 3 "Third dose") rows(1))
+> legend(order(1 "Reference" 2 "Masks" 3 "Third dose") size(small) rows(1))
 {res}{txt}
 {com}. 
 . graph export "graph 25 1 COVID-19 daily cases, $country, all scenarios, IHME.pdf", replace
@@ -3605,7 +3635,7 @@ all files already exist and are up to date.
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220506/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 May 2022, 17:10:19
+ {txt}closed on:  {res} 7 May 2022, 17:41:17
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
