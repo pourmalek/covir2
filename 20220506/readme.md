@@ -9,10 +9,9 @@ Days old: DELP 4, IHME 0, IMPE 53, SRIV 4, WHO 1
 IMPE update 20220315 was released on 20220505.
 
 WHO	: Global excess deaths associated with COVID-19 (modelled estimates) 
-* Most recent update: 5 May 2022
-* Temporal coverage	1 January 2020 - 31 December 2021
-* Source web page:
-* https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates
+Most recent update: 5 May 2022 // Temporal coverage	1 January 2020 - 31 December 2021 //
+Source web page:
+https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates
 
 
 <br/><br/> 
