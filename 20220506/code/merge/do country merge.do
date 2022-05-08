@@ -933,6 +933,33 @@ graph export "graph 22b COVID-19 daily cases, $country, reference scenarios.pdf"
 
 
 
+
+
+
+****
+* daily cases, reference scenario, 2022
+
+twoway ///
+(line DayCasMeSmA00S00 date, sort lcolor(cyan) lwidth(thick)) /// 1 "JOHN"
+(line DayCasFOREA01S00 date, sort lcolor(red) lpattern(tight_dot) lwidth(vthick)) /// 2 "DELP" Forecast only
+(line DayCasMeSmA01S00 date, sort lcolor(red)) /// 3 "DELP"
+(line DayCasFOREA05S00 date, sort lcolor(green) lpattern(tight_dot) lwidth(vthick)) /// 4 "SRIV" Forecast only
+(line DayCasMeSmA05S00 date, sort lcolor(green)) /// 5 "SRIV"
+if date >= td(01jan2022) ///
+, xtitle(Date) xlabel(#$monthspast01jan2022merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily cases) title("COVID-19 daily cases, $country", size(medium)) /// 
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "JOHN cases" 3 "DELP cases" 5 "SRIV cases") size(small) row(1)) ///
+subtitle("2022 on, reference scenarios", size(small)) 
+
+graph export "graph 22b2 COVID-19 daily cases, $country, reference scenarios.pdf", replace
+
+
+
+
+
+
 ****
 * daily cases or infections, reference scenarios, 2021, CI
 
