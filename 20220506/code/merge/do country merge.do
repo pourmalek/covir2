@@ -1031,7 +1031,7 @@ if date >= td(01jan2021) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily infections) title("COVID-19 daily infections, $country, IHME, all scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Reference" 2 "Masks" 3 "Third dose") rows(1))
+legend(order(1 "Reference" 2 "Masks" 3 "Third dose") size(small) rows(1))
 
 graph export "graph 25 1 COVID-19 daily cases, $country, all scenarios, IHME.pdf", replace
 
