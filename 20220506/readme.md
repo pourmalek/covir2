@@ -32,6 +32,13 @@ WHO	: Global excess deaths associated with COVID-19 (modelled estimates)
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276266-c324bd0e-7046-412c-ba37-43137c851afe.png)
+
+****
+
+(0b) Iran [Daily reported deaths, JOHN, 20222](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/167276309-cd2e3d71-0b39-4ff4-8959-db8b51ea2985.png)
 
 ****
 
@@ -62,6 +69,13 @@ WHO	: Global excess deaths associated with COVID-19 (modelled estimates)
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276332-8ad3ecac-5962-416a-ba22-a7a9a4300998.png)
+
+****
+
+(00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/167276363-31e68f8d-bafc-4050-b2ee-7ea849cee9b2.png)
 
 ****
 
