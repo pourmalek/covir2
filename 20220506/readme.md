@@ -44,16 +44,19 @@ WHO	: Global excess deaths associated with COVID-19 (modelled estimates)
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276382-737162ef-5627-4d34-9681-39bf312e14df.png)
 
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276395-3fc81afa-6117-4b0d-a67d-c08f2ac58473.png)
  
 ****
 
 (3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276408-8a5cc054-ab15-43a7-be16-e1dc35575fd2.png)
 
 ****
 
