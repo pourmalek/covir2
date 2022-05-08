@@ -805,7 +805,7 @@ if date >= td(01jan2021) ///
 xlabel(, angle(forty_five)) ylabel(, format(%12.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, IHME, all scenarios", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 3 "IHME Reference" 4 "IHME Masks" 5 "IHME Third dose") rows(1)) ///
+legend(order(1 "JOHN" 3 "IHME Reference" 4 "IHME Masks" 5 "IHME Third dose") size(small) rows(1)) ///
 note("Reference scenario forecasts are marked with |||||||||||| " , size(small))
 
 graph export "graph 15 COVID-19 daily deaths, $country, all scenarios, IHME.pdf", replace
