@@ -62,11 +62,7 @@ WHO	: Global excess deaths associated with COVID-19 (modelled estimates)
 
 (4) Iran [Daily deaths, 2021 on, all scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%20all%20scenarios%2C%20IHME.pdf)
 
-
-****
-
-(6b) Iran [Daily deaths, reference scenario, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)
-
+![image](https://user-images.githubusercontent.com/30849720/167276618-f281ff7b-39f8-4eea-bce5-3fe8f7e1097e.png)
 
 ****
 
@@ -84,16 +80,19 @@ WHO	: Global excess deaths associated with COVID-19 (modelled estimates)
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276723-cc92c368-4e72-46d0-ab6a-f0ce7663b3c4.png)
 
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276743-f9fbc7c7-202b-4f9a-b906-60ab4141fa19.png)
  
 ****
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/167276761-22797f5c-f2f2-4f60-819c-cb55f8b1f776.png)
  
 ****
 
