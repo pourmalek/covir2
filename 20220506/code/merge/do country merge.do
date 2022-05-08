@@ -533,6 +533,145 @@ di $monthspast01jan2022merge
 
 
 
+
+* gen monthspast vars for #thicknumber of graphs JOHN
+
+gen monthspast01jan2020JOHN = ((today_numericdailydate - td(01jan2020)) / 30) + 1
+
+replace monthspast01jan2020JOHN = round(monthspast01jan2020)
+
+global monthspast01jan2020JOHN = monthspast01jan2020JOHN
+
+di $monthspast01jan2020JOHN
+
+
+
+gen monthspast01jan2021JOHN = ((today_numericdailydate - td(01jan2021)) / 30) + 1
+
+replace monthspast01jan2021JOHN = round(monthspast01jan2021)
+
+global monthspast01jan2021JOHN = monthspast01jan2021JOHN
+
+di $monthspast01jan2021JOHN
+
+
+
+gen monthspast01jan2022JOHN = ((today_numericdailydate - td(01jan2022)) / 30) + 1
+
+replace monthspast01jan2022JOHN = round(monthspast01jan2022JOHN)
+
+global monthspast01jan2022JOHN = monthspast01jan2022JOHN
+
+di $monthspast01jan2022JOHN
+
+
+
+* end date of graphs JOHN
+
+gen nextmonthspast01jan2020JOHN = monthspast01jan2020JOHN 
+
+gen nextmonthdayspast01jan2020JOHN = nextmonthspast01jan2020JOHN * 30
+
+gen nextmonthdatespast01jan2020JOHN = td(01jan2020) + nextmonthdayspast01jan2020JOHN
+
+local nextmonthdatespast01jan2020JOHN = nextmonthdatespast01jan2020JOHN
+
+
+
+gen nextmonthspast01jan2022JOHN = monthspast01jan2022JOHN 
+
+gen nextmonthdayspast01jan2022JOHN = nextmonthspast01jan2022JOHN * 30
+
+gen nextmonthdatespast01jan2022JOHN = td(01jan2022) + nextmonthdayspast01jan2022JOHN
+
+local nextmonthdatespast01jan2022JOHN = nextmonthdatespast01jan2022JOHN
+
+
+
+
+
+
+
+****************************
+
+* daily deaths, JOHN, 2020 on
+
+twoway ///
+(line DayDeaMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+if date >= td(01jan2020) & date <= `nextmonthdatespast01jan2020JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2020JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
+
+graph export "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.pdf", replace
+
+
+
+****************************
+
+* daily cases, JOHN, 2020 on
+
+twoway ///
+(line DayCasMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+if date >= td(01jan2020) & date <= `nextmonthdatespast01jan2020JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2020JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1)) ///
+
+
+graph export "graph 2 COVID-19 daily cases, $country, Johns Hopkins.pdf", replace
+
+
+
+
+
+
+****************************
+
+* daily deaths, JOHN, 2022 on
+
+twoway ///
+(line DayDeaMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayDeaMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+if date >= td(01jan2022) & date <= `nextmonthdatespast01jan2022JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2022JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins, 2022", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
+
+graph export "graph 3 COVID-19 daily deaths, $country, Johns Hopkins, 2022 on.pdf", replace
+
+
+
+****************************
+
+* daily cases, JOHN, 2022 on
+
+twoway ///
+(line DayCasMeRaA00S00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayCasMeSmA00S00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+if date >= td(01jan2022) & date <= `nextmonthdatespast01jan2022JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2022JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins, 2022", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1)) 
+
+graph export "graph 4 COVID-19 daily cases, $country, Johns Hopkins, 2022 on.pdf", replace
+
+
+
+
+
+
+
 ******************
 
 
