@@ -35,7 +35,7 @@ https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-mode
 
 ****
 
-(0b) Iran [Daily reported deaths, JOHN, 20222](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220506/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/167276309-cd2e3d71-0b39-4ff4-8959-db8b51ea2985.png)
 
