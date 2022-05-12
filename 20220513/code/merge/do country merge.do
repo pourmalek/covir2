@@ -22,7 +22,6 @@ log using "log country merge.smcl", replace
 
 
 
-
 /* 
 
 List of component studies:
@@ -34,13 +33,6 @@ IHME A02
 IMPE A03
 LANL A04 // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 SRIV A05 
-
-WHO	 A06 * 
-* Global excess deaths associated with COVID-19 (modelled estimates) 
-* Most recent update: 5 May 2022
-* Temporal coverage	1 January 2020 - 31 December 2021
-* Source web page:
-* https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates
 
 */
 
@@ -114,18 +106,6 @@ else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\SRIV\coun
 
 drop _merge
 
-
-
-
-* WHO
-
-if regexm(c(os),"Mac") == 1 {
-
-	merge 1:1 date using "$pathcovir2/WHO/country WHO.dta"
-}
-else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\WHO\country WHO.dta"
-
-drop _merge
 
 
 * 
@@ -692,13 +672,12 @@ twoway ///
 (line DayDeaMeSmA03S02 date, sort lcolor(magenta)) /// 8 "IMPE"
 (line DayDeaFOREA05S00 date, sort lcolor(green) lpattern(tight_dot) lwidth(vthick)) /// 9 "SRIV" Forecast only
 (line DayDeaMeSmA05S00 date, sort lcolor(green)) /// 10 "SRIV"
-(line DayDeXMeSmA06S00 date, sort lcolor(gold)) /// 11 "WHO" Excess
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "JOHN" 3 "DELP" 5 "IHME" 6 "IHME excess" 8 "IMPE" 10 "SRIV" 11 "WHO excess") size(small) row(2)) ///
+legend(order(1 "JOHN" 3 "DELP" 5 "IHME" 6 "IHME excess" 8 "IMPE" 10 "SRIV") size(small) row(2)) ///
 subtitle("reference scenarios", size(small)) 
 
 graph export "graph 11 COVID-19 daily deaths, $country, reference scenarios, all time.pdf", replace
