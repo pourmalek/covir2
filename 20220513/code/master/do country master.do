@@ -157,7 +157,7 @@ do "$pathcovir2/DELP/do country DELP.do"
 
 do "$pathcovir2/IHME/do country IHME.do" 
 
-// do "$pathcovir2/IMPE/do country IMPE.do" // IMPE update 20220315 was released on 20220505 and is 60 days old on 20220513. Not included.
+do "$pathcovir2/IMPE/do country IMPE.do" // IMPE update 20220315 was released on 20220505 and is 60 days old on 20220513. Not included.
 
 // do "$pathcovir2/LANL/do country LANL.do" // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 
