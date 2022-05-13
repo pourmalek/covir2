@@ -127,7 +127,7 @@ IMPE update 20220315 was released on 20220505 and is 60 days old on 20220513. No
 ****
 ****
 
-**IHME graphs (below) same as the previous uptake ([20220506])(https://github.com/pourmalek/covir2/tree/main/20220506).**
+**IHME graphs (below) same as the previous uptake [(20220506)](https://github.com/pourmalek/covir2/tree/main/20220506).**
 
 ****
 ****
