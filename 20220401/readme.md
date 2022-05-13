@@ -1,6 +1,6 @@
 ! Read Iran COVID-19 epidemic models situation report No 51 - 2022-04-01 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/51%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2051%20–%202022-04-01.pdf)
 
-### Study update dates in uptake 20220401
+### Study update dates in uptake 20220401 
 
 **_DELP 20220328_**, **_IHME 20220322_**, **_IMPE 20220131_**, **_SRIV 20220401_**
 
