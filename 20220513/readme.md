@@ -125,9 +125,11 @@ IMPE update 20220315 was released on 20220505 and is 60 days old on 20220513. No
 ![image](https://user-images.githubusercontent.com/30849720/168303601-7dfca699-6194-4778-95d6-4143004cb6cc.png)
   
 ****
+****
 
-**IHME graphs (below) same as the previous uptake.**
+**IHME graphs (below) same as the previous uptake ([20220506])(https://github.com/pourmalek/covir2/tree/main/20220506).**
 
+****
 ****
 
 (13) Iran [R effective, 2 scenarios, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220513/output/graph%20101%20COVID-19%20R%20effective%2C%20Iran%2C%202%20scenarios%2001jun2021%20on.pdf)
