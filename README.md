@@ -197,18 +197,15 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20220506`](https://github.com/pourmalek/covir2/tree/main/20220506)
+#### LATEST UPTAKE: uptake [`20220513`](https://github.com/pourmalek/covir2/tree/main/20220513)
 
-**_DELP 20220502_**, **_IHME 20220506_**, **_IMPE 20220315_**, **_SRIV 20220502_**, **_WHO 20220505_**
+### Study update dates in uptake 20220513  
 
-Days old: DELP 4, IHME 0, IMPE 53, SRIV 4, WHO 1
+**_DELP 20220512_**, IHME 20220506, No IMPE, **_SRIV 20220508_** 
 
-IMPE update 20220315 was released on 20220505.
+Days old: DELP 1, IHME 7, IMPE 60, SRIV 5
 
-WHO	: Global excess deaths associated with COVID-19 (modelled estimates) 
-Most recent update: 5 May 2022 // Temporal coverage	1 January 2020 - 31 December 2021 //
-Source web page:
-https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates
+IMPE update 20220315 was released on 20220505 and is 60 days old on 20220513. Not included. 
  
 <br/><br/>
  
@@ -734,8 +731,12 @@ and /20220318/ denotes the date of uptake.
 .
  
  
- 
+ ### Study update dates in uptake 20220513  
 
+
+
+
+(73) uptake [`20220513`](https://github.com/pourmalek/covir2/tree/main/20220513): **_DELP 20220512_**, IHME 20220506, No IMPE, **_SRIV 20220508_**  || Days old: DELP 1, IHME 7, IMPE 60, SRIV 5
 
 (72) uptake [`20220506`](https://github.com/pourmalek/covir2/tree/main/20220506): **_DELP 20220502_**, **_IHME 20220506_**, **_IMPE 20220315_**, **_SRIV 20220502_**, **_WHO 20220505_** || Days old: DELP 4, IHME 0, IMPE 53, SRIV 4, WHO 1 
 
