@@ -2,9 +2,9 @@
 
 ### Study update dates in uptake 20220513  
 
-**_DELP 20220513_**, IHME 20220506, No IMPE, **_SRIV 20220513_** 
+**_DELP 20220512_**, IHME 20220506, No IMPE, **_SRIV 20220508_** 
 
-Days old: DELP 0, IHME 7, IMPE 60, SRIV 0
+Days old: DELP 1, IHME 7, IMPE 60, SRIV 5
 
 IMPE update 20220315 was released on 20220505 and is 60 days old on 20220513. Not included. 
 
