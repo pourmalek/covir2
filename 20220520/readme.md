@@ -16,7 +16,7 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220520. 
 ```diff
 - Beware of variants and new variants. Iran will know about variants in Iran via other countries. 
 
-- REPORTED DAILY CASES SEEM TO BE BOUNCING UP. 
+- REPORTED DAILY DEATHS SEEM TO BE BOUNCING UP. 
 ```
 
 <br/><br/> 
@@ -78,9 +78,10 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220520. 
   
 ****
 
-(8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220520/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-  
+(8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220520/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+ 
+![image](https://user-images.githubusercontent.com/30849720/169595800-ca0c5fe1-7cb3-49d1-9d16-6c63e1db10e0.png)
+ 
 ****
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220520/output/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
