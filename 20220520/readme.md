@@ -15,6 +15,8 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220520. 
 
 ```diff
 - Beware of variants and new variants. Iran will know about variants in Iran via other countries. 
+
+- Reported daily cases seem to be bouncing up. 
 ```
 
 <br/><br/> 
