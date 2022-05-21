@@ -18,15 +18,10 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220520. 
 (2) Beware of _variants and new variants_. Iran will know about variants in Iran via other countries. 
 
 
-### NEXT-DEMICS:
+<br/><br/> 
 
-(1) **MONKEY POX:** Status uncertain.
 
-(2) **FOOD SCARCITY** and malnutrition plus additional unaffordability of health services culminate in epidemics of nutritional, infectious, and non-communicable diseases in many countries, probably resulting in a new pandemic.
-
-کم غذایی و مشکلات تغذیه به اضافه گران تر شدن دارو و خدمات درمانی به تدریج منجر به افزایش شیب بروز بیماری های عفونی و ایمنی می گردد. همه گیری ناشی از بیماری های سوء تغذیه، عفونی و غیر واگیر در راه است.  پاندمی آن با فاصله خواهد آمد.
-
-![image](https://user-images.githubusercontent.com/30849720/169627243-166b75b7-e841-4a0d-8270-78273bd1f99f.png)
+https://user-images.githubusercontent.com/30849720/169628054-b972f5b8-f486-4fde-bfe6-8ae5b0901174.png![image](https://user-images.githubusercontent.com/30849720/169628367-f6622284-9edd-44ce-8df7-dcbe9e591505.png)
 
 
 <br/><br/> 
