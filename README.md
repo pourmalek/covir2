@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-**! Read Iran COVID-19 epidemic models situation report No 58 - 2022-05-20 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/58%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2058%20–%202022-05-20.pdf)
+**! Read Iran COVID-19 epidemic models situation report No 59 - 2022-05-27 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/59%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2059%20–%202022-05-27.pdf)
 
 <br/><br/>
 
@@ -230,7 +230,7 @@ Beware of _variants and new variants_. Iran will know about variants in Iran via
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 58 - 2022-05-20 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/58%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2058%20–%202022-05-20.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 59 - 2022-05-27 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/59%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2059%20–%202022-05-27.pdf)
  
 
 ********************************************************************************************************************************************
