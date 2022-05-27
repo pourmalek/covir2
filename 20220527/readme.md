@@ -13,6 +13,14 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220527. 
 
 **Summary 20220527:**
 
+Beware of _variants and new variants_. Iran will know about variants in Iran via other countries. 
+
+<br/><br/> 
+
+### NEXT-DEMICS:
+
+![image](https://user-images.githubusercontent.com/30849720/169628386-96b6066b-c52c-48c8-b3c2-5789174025c7.png)
+
 
 <br/><br/> 
 
