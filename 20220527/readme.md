@@ -71,16 +71,19 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220527. 
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220527/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/170795436-17d99f4d-b92d-45ba-a3fb-36bd83da6361.png)
  
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220527/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/170795474-8e9ec2af-5ef0-4b61-a4da-37cdc842c520.png)
   
 ****
 
 (8b) Iran [Daily cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220527/output/graph%2022b%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/170795525-cb84db1d-ce96-4a24-8874-25001a8fb2ec.png)
   
 ****
 
