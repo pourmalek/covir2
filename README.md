@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-**! Read Iran COVID-19 epidemic models situation report No 59 - 2022-05-27 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/59%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2059%20–%202022-05-27.pdf)
+**! Read Iran COVID-19 epidemic models situation report No 60 - 2022-06-03 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/60%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2060%20–%202022-06-03.pdf)
 
 <br/><br/>
 
@@ -238,7 +238,7 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. 
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 59 - 2022-05-27 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/59%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2059%20–%202022-05-27.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 60 - 2022-06-03 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/60%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2060%20–%202022-06-03.pdf)
  
 
 ********************************************************************************************************************************************
