@@ -7,10 +7,6 @@
 <br/><br/>
 
 
-![image](https://user-images.githubusercontent.com/30849720/169628070-66bb6c06-70d0-4e49-965f-af7dff8d7235.png)
-
-
-<br/><br/>
 
 ************************************************************************************************************************************************************
 ************************************************************************************************************************************************************
@@ -200,16 +196,15 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20220520`](https://github.com/pourmalek/covir2/tree/main/20220520)
+#### LATEST UPTAKE: uptake [`20220603`](https://github.com/pourmalek/covir2/tree/main/20220603)
 
-### Study update dates in uptake 20220527  
+### Study update dates in uptake 20220603  
 
-**_DELP 20220527_**, IHME 20220506, No IMPE, **_SRIV 20220522_** 
+**_DELP 20220529_**, IHME 20220506, No IMPE, **_SRIV 20220603_** 
 
-Days old: DELP 0, IHME 21, no IMPE, SRIV 5
+Days old: DELP 5, IHME 29, no IMPE, SRIV 0
 
-IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220527. Not included. 
-
+IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. Not included. 
 
 <br/><br/> 
 
@@ -746,7 +741,10 @@ and /20220318/ denotes the date of uptake.
 
 
 
- 
+
+
+
+(76) uptake [`20220603`](https://github.com/pourmalek/covir2/tree/main/20220603): **_DELP 20220529_**, IHME 20220506, No IMPE, **_SRIV 20220603_**    || Days old: DELP 5, IHME 29, no IMPE, SRIV 0
  
 (75) uptake [`20220527`](https://github.com/pourmalek/covir2/tree/main/20220527): **_DELP 20220527_**, IHME 20220506, No IMPE, **_SRIV 20220522_**   || Days old: DELP 0, IHME 21, no IMPE, SRIV 5 
  
