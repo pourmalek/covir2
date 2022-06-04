@@ -2,9 +2,9 @@
 
 ### Study update dates in uptake 20220603  
 
-**_DELP 20220529 check if they have a newer update_**, IHME 20220603, No IMPE, **_SRIV 20220523_** check if they have a newer update --- put in master, otherwise rm this note ----------
+**_DELP 20220529 check if they have a newer update_**, IHME 20220506, No IMPE, **_SRIV 20220603_** 
 
-Days old: DELP 5, IHME 0, no IMPE, SRIV 12
+Days old: DELP 5, IHME 29, no IMPE, SRIV 0
 
 IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. Not included. 
 
