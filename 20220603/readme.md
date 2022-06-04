@@ -75,6 +75,7 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. 
 
 (00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220603/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/171989846-e33646e4-9548-4fec-a76c-54e7f28b07d4.png)
  
 ****
 
