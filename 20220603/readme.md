@@ -2,9 +2,9 @@
 
 ### Study update dates in uptake 20220603  
 
-**_DELP 20220529 check if they have a newer update_**, IHME 20220603, No IMPE, **_SRIV 20220523_** check if they have a newer update --- put in master, otherwise rm this note ----------
+**_DELP 20220529 check if they have a newer update_**, IHME 20220506, No IMPE, **_SRIV 20220603_** 
 
-Days old: DELP 5, IHME 0, no IMPE, SRIV 12
+Days old: DELP 5, IHME 29, no IMPE, SRIV 0
 
 IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. Not included. 
 
@@ -21,21 +21,17 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. 
 
 آبله میمون: جهان همان راه غلطی را که در ابتدای مواجهه با کووید-۱۹ پیمود، این بار در ابتدای مواجهه با آبله میمون در حال طی کردن است.
 
+احتمال آینده: دریافت ناکافی غذا، کمبود آب کشاورزی و آب آشامیدنی، گرمای مفرط هوا و یا بارش و سیل، ریزگرد ها و فرونشست زمین، و کاهش ارایه خدمات بهداشتی و درمانی،‌ مجموعا منجر به همه گیری های بیماری های تغذیه ای، عفونی، و غیر واگیر می گردد. Complex Disaster 
+ 
 احتمال آینده: اگر زمانی برسد که ارایه خدمات بهداشت و درمان در کشور به شدت به صفر نزدیک شود، بیماری های غیر واگیر و سوانح به کنار، همه گیری های کووید-۱۹، آبله میمون،‌ سایر بیماری های عفونی، و پاندمی احتمالی بعدی شعله ور خواهند شد. دلایل بالقوه پیدایش چنین وضعیتی به شدت در حال نزدیک شدن به امکان وقوع دارند. در صورت وقوع، ابعاد مرگ و میر بسیار وحشتناک خواهد بود. Complex Disaster
 
-
+ 
  <div dir="ltr">
  
  <br/><br/> 
  
- 
-
-### NEXT-DEMICS:
-
-![image](https://user-images.githubusercontent.com/30849720/169628386-96b6066b-c52c-48c8-b3c2-5789174025c7.png)
 
 
-<br/><br/> 
 
 
 ### Selected graphs

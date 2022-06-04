@@ -15,9 +15,9 @@
 
 Study update dates in uptake 20220603
 
-DELP 20220529 check if they have a newer update, IHME 20220603, No IMPE, SRIV 20220523 check if they have a newer update --- put in master, otherwise rm this note ----------
+DELP 20220529 check if they have a newer update, IHME 20220506, No IMPE, SRIV 20220603
 
-Days old: DELP 5, IHME 0, no IMPE, SRIV 12
+Days old: DELP 5, IHME 29, no IMPE, SRIV 0
 
 IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. Not included.
 
@@ -35,8 +35,6 @@ di "$country"                                                                   
 *                                           1/ --------                                                  ***************************
 
 
-add IHME epoch from web site
-
 ***************************************
 
 * set epoch for marking forecasts with ||||||||||
@@ -44,13 +42,13 @@ add IHME epoch from web site
 global DELPepoch 29May2022 // update release date
 *            2/ ----------
 
-global IHMEepoch -!!!------- 99Apr2022 // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
+global IHMEepoch 29Apr2022 // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
 *            3/ ----------
 
 global IMPEdate 2022-03-15_v9 
 *            4/ -------------
 
-global SRIVdate 2022-05-23
+global SRIVdate 2022-06-03
 *            5/ ----------
 
 
@@ -66,7 +64,7 @@ global IHMEdate 2022-05-06
 global IMPEepoch 15Mar2022 // update release date																		 
 *            8/ ----------
 
-global SRIVepoch 23May2022 // update release date																		 
+global SRIVepoch 03Jun2022 // update release date																		 
 *            9/ ----------
 
 
