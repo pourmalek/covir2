@@ -52,6 +52,7 @@ IMPE update 20220315 was released on 20220505 and is > 60 days old on 20220603. 
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220603/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/171989928-17eb7171-a7c9-4f77-b270-4d3d11035555.png)
  
 ****
 
