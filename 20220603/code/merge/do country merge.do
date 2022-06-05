@@ -829,6 +829,32 @@ graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", 
 */
 
 
+
+****
+* daily deaths, reference scenario, 2022 on
+
+twoway ///
+(line DayDeaMeSmA00S00 date, sort lcolor(cyan) lwidth(vthick)) /// 1 "JOHN smooth"
+(line DayDeaFOREA01S00 date, sort lcolor(red) lpattern(tight_dot) lwidth(vthick)) /// 2 "DELP" Forecast only
+(line DayDeaMeSmA01S00 date, sort lcolor(red)) /// 3 "DELP"
+(line DayDeaFOREA02S01 date, sort lcolor(black) lpattern(tight_dot) lwidth(vthick)) /// 4 "IHME" Forecast only
+(line DayDeaMeSmA02S01 date, sort lcolor(black)) /// 5 "IHME"
+(line DayDeXMeSmA02S01 date, sort lcolor(brown) lpattern(dash)) /// 6 "IHME"
+(line DayDeaFOREA05S00 date, sort lcolor(green) lpattern(tight_dot) lwidth(vthick)) /// 7 "SRIV" Forecast only
+(line DayDeaMeSmA05S00 date, sort lcolor(green)) /// 8 "SRIV"
+if date >= td(01jan2022) ///
+, xtitle(Date) xlabel(#$monthspast01jan2022merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily deaths) title("COVID-19 daily deaths, $country", size(medium)) /// 
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "JOHN" 3 "DELP" 5 "IHME" 6 "IHME excess" 8 "SRIV") size(small) rows(1)) ///
+subtitle("reference scenarios, 2022 on", size(small)) ///
+note("Reference scenario forecasts are marked with |||||||||||| " , size(small))  
+
+graph export "graph 18 COVID-19 daily deaths, $country, reference scenarios, 2022 on.pdf", replace
+
+
+
 ***********************
 
 * daily cases or infections (graph numbers start with 21)
