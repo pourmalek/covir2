@@ -6,6 +6,10 @@
 
 <br/><br/>
 
+! Read Iran COVID-19 epidemic models situation report No 60 - 2022-06-03 addendum [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/60%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2060%20–%202022-06-03%20-%20addendum.pdf)
+
+<br/><br/>
+
 
 <div dir="rtr"> 
 
