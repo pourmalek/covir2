@@ -39,12 +39,9 @@ Reference scenario 2022
 80% mask use scenario 2020
 80% mask use scenario 2021
 80% mask use scenario 2022
-Reduced vaccine hesitancy scenario 2020
-Reduced vaccine hesitancy scenario 2021
-
-Third vaccine dose scenario 2020
-Third vaccine dose scenario 2021
-Third vaccine dose scenario 2022
+Antiviral access scenario 2020
+Antiviral access scenario 2021
+Antiviral access scenario 2022
 Checksum (sha-256) 
 */
 
