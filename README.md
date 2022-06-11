@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-**! Read Iran COVID-19 epidemic models situation report No 60 - 2022-06-03 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/60%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2060%20–%202022-06-03.pdf)
+**! Read Iran COVID-19 epidemic models situation report No 61 - 2022-06-10 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/61%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2061%20–%202022-06-10.pdf)
 
 <br/><br/>
 
@@ -277,7 +277,7 @@ A new IHME scenario, “Global antivirals”, has replaced the old scenario “V
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 60 - 2022-06-03 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/60%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2060%20–%202022-06-03.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 61 - 2022-06-10 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/61%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2061%20–%202022-06-10.pdf)
  
 
 ********************************************************************************************************************************************
