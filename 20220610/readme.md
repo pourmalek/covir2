@@ -114,21 +114,25 @@ A new IHME scenario, “Global antivirals”, has replaced the old scenario “V
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220610/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
+![image](https://user-images.githubusercontent.com/30849720/173192339-372655bc-8838-4b7b-9947-57e12ed4644b.png)
   
 ****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220610/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/173192357-2c780d32-5a0e-4ca1-8dfe-8982901c891c.png)
  
 ****
 
 (00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220610/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/173192387-3b4c2b12-8fed-4f71-9898-3b93cbc263ed.png)
  
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220610/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/173192419-0eddb0c8-4d21-4414-bba6-131dfbcc8eb3.png)
  
 ****
 
