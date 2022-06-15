@@ -207,6 +207,12 @@ IMPE update 20220315 was released on 20220505 and is > 120 days old on 20220610.
 
 <br/><br/> 
 
+#### IHME update 20220610: 
+
+Global infections are increasing: Secondary Omicron waves are hitting parts of sub-Saharan Africa, Latin America, Portugal, and the United States. We expect a peak in June, but another surge in the northern hemisphere in September, leading to an additional 120,000 deaths by October.
+
+https://www.healthdata.org/covid/video/insights-ihmes-latest-covid-19-model-run
+
 A new IHME scenario, “Global antivirals”, has replaced the old scenario “Vaccine 3rd dose”. “Global antivirals” = Globally distributed antivirals extends coverage to all LMICs over the period of July 15, 2022, to September 15, 2022. 
 
 
