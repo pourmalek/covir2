@@ -1249,11 +1249,300 @@ replace DayINFFOREA02S01 = . if date < td($IHMEepoch)
 label var DayINFFOREA02S01 "Daily Forecasted infections Mean smoothed IHME S1"
 
 
+qui compress
+
+save "country IHME.dta", replace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+******************************************************
+******************************************************
+******************************************************
+
+* EMRO
+
+
+******************
+* EMRO countries
+
+import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+
+keep if ///
+location_name == "Afghanistan" | ///
+location_name == "Bahrain" | ///
+location_name == "Djibouti" | ///
+location_name == "Egypt" | ///
+location_name == "Iran (Islamic Republic of)" | ///
+location_name == "Iraq" | ///
+location_name == "Jordan" | ///
+location_name == "Kuwait" | ///
+location_name == "Lebanon" | ///
+location_name == "Libya" | ///
+location_name == "Morocco" | ///
+location_name == "Oman" | ///
+location_name == "Pakistan" | ///
+location_name == "Palestine" | ///
+location_name == "Qatar" | ///
+location_name == "Saudi Arabia" | ///
+location_name == "Somalia" | ///
+location_name == "Sudan" | ///
+location_name == "Syrian Arab Republic" | ///
+location_name == "Tunisia" | ///
+location_name == "United Arab Emirates" | ///
+location_name == "Yemen"
+
+
+* gen date
+
+rename date date_original
+gen year = substr(date_original,1,4) 
+gen month = substr(date_original,6,2) 
+gen day = substr(date_original,9,2) 
+egen date2 = concat(day month year)
+gen date = date(date2, "DMY", 2050)
+format date %tdDDMonCCYY
+codebook date
+drop year month day date2
+
+
+* rename variables
+
+* Daily Reported Deaths smoothed
+rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+rename seir_daily_unscaled_lower DayDeaLoSmA02S01
+rename seir_daily_unscaled_upper DayDeaUpSmA02S01
+label var DayDeaMeSmA02S01 "Daily Reported Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+label var DayDeaLoSmA02S01 "Daily Reported Deaths Lower smoothed IHME S1" // Daily reported deaths (lower 95% confidence interval)
+label var DayDeaUpSmA02S01 "Daily Reported Deaths Upper smoothed IHME S1" // Daily reported deaths upper 95% confidence interval)
+	
+
+* Daily infections smoothed
+rename inf_mean  DayINFMeSmA02S01 // previously est_infections_mean
+rename inf_lower DayINFLoSmA02S01 // previously est_infections_lower
+rename inf_upper DayINFUpSmA02S01 // previously est_infections_upper
+label var DayINFMeSmA02S01 "Daily infections Mean smoothed IHME S1" // Daily infections (mean estimate)
+label var DayINFLoSmA02S01 "Daily infections Lower smoothed IHME S1" // Daily infections (lower 95% confidence interval)
+label var DayINFUpSmA02S01 "Daily infections Upper smoothed IHME S1" // Daily infections (upper 95% confidence interval)
+
+rename location_name loc_grand_name
+
+keep date loc_grand_name ///
+DayDeaMeSmA02S01 DayDeaLoSmA02S01 DayDeaUpSmA02S01 DayINFMeSmA02S01 DayINFLoSmA02S01 DayINFUpSmA02S01
+	
+
+* Forecast start date // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
+gen epoch_IHME = td($IHMEepoch)
+label var epoch_IHME "IHME Forecast start date"
+
+gen DayDeaFOREA02S01 = DayDeaMeSmA02S01
+replace DayDeaFOREA02S01 = . if date < td($IHMEepoch)
+label var DayDeaFOREA02S01 "Daily Forecasted Deaths Mean smoothed IHME S1"
+
+gen DayINFFOREA02S01 = DayINFMeSmA02S01
+replace DayINFFOREA02S01 = . if date < td($IHMEepoch)
+label var DayINFFOREA02S01 "Daily Forecasted infections Mean smoothed IHME S1"
 
 
 qui compress
 
-save "country IHME.dta", replace
+save "data_download_file_reference_2022 EMRO countries.dta", replace
+
+
+
+
+******************
+* EMRO total
+
+use "data_download_file_reference_2022 EMRO countries.dta", clear 
+
+drop loc_grand_name epoch_IHME
+
+order date 
+ 
+collapse (sum) DayINFMeSmA02S01-DayINFFOREA02S01, by(date)
+
+gen loc_grand_name = "EMRO"
+
+sort date
+
+save "data_download_file_reference_2022 EMRO total.dta", replace
+
+
+
+
+******************
+* append EMRO total to EMRO countries
+
+use "data_download_file_reference_2022 EMRO countries.dta", clear 
+
+append using "data_download_file_reference_2022 EMRO total.dta"
+
+
+
+replace loc_grand_name = "Iran" if loc_grand_name == "Iran (Islamic Republic of)"
+replace loc_grand_name = "Syria" if loc_grand_name == "Syrian Arab Republic"
+
+
+
+* gen vars by location 
+
+/*
+Afghanistan	   	AFG
+Bahrain	   		BHR
+Djibouti	   	DJI
+Egypt	   		EGY
+EMRO	   		EMR <-
+Iran	   		IRN
+Iraq	   		IRQ
+Jordan	   		JOR
+Kuwait	   		KWT
+Lebanon	   		LBN
+Libya	   		LBY
+Morocco	   		MAR
+Oman	   		OMN
+Pakistan	   	PAK
+Palestine	   	PSE
+Qatar	   		QAT
+Saudi Arabia	SAU
+Somalia	   		SOM
+Sudan	   		SDN
+Syria	   		SYR
+Tunisia	   		TUN
+United Arab Emirates	   	ARE
+Yemen	   		YEM
+*/
+
+foreach var of varlist DayINFMeSmA02S01 DayINFUpSmA02S01 DayINFLoSmA02S01 DayDeaMeSmA02S01 DayDeaLoSmA02S01 DayDeaUpSmA02S01 DayDeaFOREA02S01 DayINFFOREA02S01 {
+
+	qui gen `var'AFG = `var' 
+	qui replace `var'AFG = . if loc_grand_name != "Afghanistan"
+	
+	qui gen `var'BHR = `var'
+	qui replace `var'BHR = . if loc_grand_name != "Bahrain"
+	
+	qui gen `var'DJI = `var'
+	qui replace `var'DJI = . if loc_grand_name != "Djibouti"
+	
+	qui gen `var'EGY = `var'
+	qui replace `var'EGY = . if loc_grand_name != "Egypt"
+	
+	qui gen `var'EMR = `var'
+	qui replace `var'EMR = . if loc_grand_name != "EMRO"
+	
+	qui gen `var'IRN = `var'
+	qui replace `var'IRN = . if loc_grand_name != "Iran"
+	
+	qui gen `var'IRQ = `var'
+	qui replace `var'IRQ = . if loc_grand_name != "Iraq"
+	
+	qui gen `var'JOR = `var'
+	qui replace `var'JOR = . if loc_grand_name != "Jordan"
+	
+	qui gen `var'KWT = `var'
+	qui replace `var'KWT = . if loc_grand_name != "Kuwait"
+	
+	qui gen `var'LBN = `var'
+	qui replace `var'LBN = . if loc_grand_name != "Lebanon"
+	
+	qui gen `var'LBY = `var'
+	qui replace `var'LBY = . if loc_grand_name != "Libya"
+	
+	qui gen `var'MAR = `var'
+	qui replace `var'MAR = . if loc_grand_name != "Morocco"
+	
+	qui gen `var'OMN = `var'
+	qui replace `var'OMN = . if loc_grand_name != "Oman"
+	
+	qui gen `var'PAK = `var'
+	qui replace `var'PAK = . if loc_grand_name != "Pakistan"
+	
+	qui gen `var'PSE = `var'
+	qui replace `var'PSE = . if loc_grand_name != "Palestine"
+	
+	qui gen `var'QAT = `var'
+	qui replace `var'QAT = . if loc_grand_name != "Qatar"
+	
+	qui gen `var'SAU = `var'
+	qui replace `var'SAU = . if loc_grand_name != "Saudi Arabia"
+	
+	qui gen `var'SOM = `var'
+	qui replace `var'SOM = . if loc_grand_name != "Somalia"
+	
+	qui gen `var'SDN = `var'
+	qui replace `var'SDN = . if loc_grand_name != "Sudan"
+	
+	qui gen `var'SYR = `var'
+	qui replace `var'SYR = . if loc_grand_name != "Syria"
+	
+	qui gen `var'TUN = `var'
+	qui replace `var'TUN = . if loc_grand_name != "Tunisia"
+	
+	qui gen `var'ARE = `var'
+	qui replace `var'ARE = . if loc_grand_name != "United Arab Emirates"
+	
+	qui gen `var'YEM = `var'
+	qui replace `var'YEM = . if loc_grand_name != "Yemen"
+	
+
+	
+	label var `var'AFG "`var' Afghanistan"
+	label var `var'BHR "`var' Bahrain"
+	label var `var'DJI "`var' Djibouti"
+	label var `var'EGY "`var' Egypt"
+	label var `var'EMR "`var' EMRO"
+	label var `var'IRN "`var' Iran"
+	label var `var'IRQ "`var' Iraq"
+	label var `var'JOR "`var' Jordan"
+	label var `var'KWT "`var' Kuwait"
+	label var `var'LBN "`var' Lebanon"
+	label var `var'LBY "`var' Libya"
+	label var `var'MAR "`var' Morocco"
+	label var `var'OMN "`var' Oman"
+	label var `var'PAK "`var' Pakistan"
+	label var `var'PSE "`var' Palestine"
+	label var `var'QAT "`var' Qatar"
+	label var `var'SAU "`var' Saudi Arabia"
+	label var `var'SOM "`var' Somalia"
+	label var `var'SDN "`var' Sudan"
+	label var `var'SYR "`var' Syria"
+	label var `var'TUN "`var' Tunisia"
+	label var `var'ARE "`var' United Arab Emirates"
+	label var `var'YEM "`var' Yemen"
+
+                
+}
+*
+
+
+
+
+
+
+
+qui compress
+
+save "IHME EMRO reference scenario 2022.dta", replace
+
+
+
+
+
+
+
+
+
 
 
 
