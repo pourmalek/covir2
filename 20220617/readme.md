@@ -76,6 +76,8 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 
 
 ### Selected graphs
+   
+## Iran   
 
 ****
 
@@ -209,31 +211,31 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 ******************************
 ******************************
    
-Eastern Mediterranean Region (EMR)
+## Eastern Mediterranean Region (EMR)
    
-AFG		Afghanistan
-BHR		Bahrain
-DJI		Djibouti
-EGY		Egypt
-EMR		EMRO
-IRN		Iran
-IRQ		Iraq
-JOR		Jordan
-KWT		Kuwait
-LBN		Lebanon
-LBY		Libya
-MAR		Morocco
-OMN		Oman
-PAK		Pakistan
-PSE		Palestine
-QAT		Qatar
-SAU		Saudi Arabia
-SOM		Somalia
-SDN		Sudan
-SYR		Syria
-TUN		Tunisia
-ARE		United Arab Emirates
-YEM		Yemen
+AFG:	Afghanistan	;
+ARE:	United Arab Emirates	;
+BHR:	Bahrain	;
+DJI:	 Djibouti	;
+EGY:	Egypt	;
+EMR:	EMRO	;
+IRN:	Iran	;
+IRQ:	Iraq	;
+JOR:	Jordan	;
+KWT:	Kuwait	;
+LBN:	Lebanon	;
+LBY:	Libya	;
+MAR:	Morocco	;
+OMN:	Oman	;
+PAK:	Pakistan	;
+PSE:	Palestine	;
+QAT:	Qatar	;
+SAU:	Saudi Arabia	;
+SDN:	Sudan	;
+SOM:	Somalia	;
+SYR:	Syria	;
+TUN:	Tunisia	;
+YEM:	Yemen	;
    
 ****   
 
