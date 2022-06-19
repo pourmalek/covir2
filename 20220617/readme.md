@@ -82,7 +82,7 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
   
 ****   
    
-## Iran   
+## (a) Iran   
 
 ****
 
@@ -216,7 +216,7 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 ******************************
 ******************************
    
-## Eastern Mediterranean Region (EMR)
+## (b) Eastern Mediterranean Region (EMR)
    
 AFG:	Afghanistan;
 ARE:	United Arab Emirates;
