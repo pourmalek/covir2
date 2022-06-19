@@ -250,15 +250,33 @@ YEM:	Yemen
    
 ****   
    
-(2) EMR [Daily deaths, EMR countries, Johns Hopkins, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
 ![image](https://user-images.githubusercontent.com/30849720/174465610-700e6999-22e5-474c-8952-0dbf60e7ffc7.png)
    
 ****   
     
-(3) EMR [Daily deaths, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
+(3) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-   m
+![image](https://user-images.githubusercontent.com/30849720/174466098-8bbc2a62-6a6f-4ce7-8190-c65d24948205.png)
+
+****   
+
+(4) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022]()
+   
+   
+****   
+   
+(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022 on]()
+   
+   
+****   
+    
+(6) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022]()   
+   
+
+****
+   
    
    
    
