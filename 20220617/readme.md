@@ -93,7 +93,7 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/173192270-e1563788-78f7-47ab-9785-2a2c8d422f8c.png)
+![image](https://user-images.githubusercontent.com/30849720/174464171-bd627785-5a67-48f2-bf4b-8da8de846a7d.png)
  
 ****
 
@@ -114,7 +114,7 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-![image](https://user-images.githubusercontent.com/30849720/173192339-372655bc-8838-4b7b-9947-57e12ed4644b.png)
+![image](https://user-images.githubusercontent.com/30849720/174464208-84780281-4f78-4cc9-bd8b-74c9d77b9b71.png)
   
 ****  
 
