@@ -205,7 +205,18 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
  
-****
+******************************
+******************************
+******************************
+   
+Eastern Mediterranean Region (EMR)
 
-
-
+(1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/174464450-ce04381e-4758-4ceb-9ab1-8e30dd6d3b68.png)
+   
+****   
+   
+   
+   
+   
