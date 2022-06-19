@@ -262,17 +262,17 @@ YEM:	Yemen
 
 ****   
 
-(4) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022]()
+(4) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
    
 ****   
    
-(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022 on]()
+(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
    
 ****   
     
-(6) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022]()   
+(6) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20c%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
 
 ****
