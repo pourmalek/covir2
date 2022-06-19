@@ -283,7 +283,7 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 
 
 ### [(a) Iran](https://github.com/pourmalek/covir2/blob/main/20220617/readme.md#iran) 
-### [(b) Eastern Mediterranean Region](https://github.com/pourmalek/covir2/blob/main/20220617/readme.md#eastern-mediterranean-region-emr)
+### [(b) Eastern Mediterranean Region](https://github.com/pourmalek/covir2/blob/main/README.md#eastern-mediterranean-region-emr)
   
 ****   
    
