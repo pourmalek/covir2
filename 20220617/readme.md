@@ -126,12 +126,13 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 
 (00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/174464265-fc0af3a4-fdcc-4116-bc3d-c4829feb1aac.png)
 
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/173192419-0eddb0c8-4d21-4414-bba6-131dfbcc8eb3.png)
+![image](https://user-images.githubusercontent.com/30849720/174464340-166ba036-001a-467b-890b-9c4e91050067.png)
  
 ****
 
@@ -147,7 +148,7 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/173192466-b2fc559f-b802-4e1e-bde5-c51dc3b9e172.png)
+![image](https://user-images.githubusercontent.com/30849720/174464363-95642beb-9496-4f3d-8f38-f4d76648e52c.png)
  
 ****
 
