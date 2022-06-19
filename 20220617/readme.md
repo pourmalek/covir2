@@ -210,6 +210,32 @@ IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617.
 ******************************
    
 Eastern Mediterranean Region (EMR)
+   
+AFG		Afghanistan
+BHR		Bahrain
+DJI		Djibouti
+EGY		Egypt
+EMR		EMRO
+IRN		Iran
+IRQ		Iraq
+JOR		Jordan
+KWT		Kuwait
+LBN		Lebanon
+LBY		Libya
+MAR		Morocco
+OMN		Oman
+PAK		Pakistan
+PSE		Palestine
+QAT		Qatar
+SAU		Saudi Arabia
+SOM		Somalia
+SDN		Sudan
+SYR		Syria
+TUN		Tunisia
+ARE		United Arab Emirates
+YEM		Yemen
+   
+****   
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
