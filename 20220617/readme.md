@@ -250,7 +250,7 @@ YEM:	Yemen
    
 ****   
    
-(2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
 ![image](https://user-images.githubusercontent.com/30849720/174465610-700e6999-22e5-474c-8952-0dbf60e7ffc7.png)
    
@@ -264,16 +264,19 @@ YEM:	Yemen
 
 (4) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
+![image](https://user-images.githubusercontent.com/30849720/174466333-bbf01675-9c5b-42c1-9e51-44178793f95f.png)
    
 ****   
    
-(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
+![image](https://user-images.githubusercontent.com/30849720/174466364-12bb1f06-5fe5-47a6-96da-4648d18a334f.png)
    
 ****   
     
 (6) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201010%20c%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
+![image](https://user-images.githubusercontent.com/30849720/174466399-fc2c0208-d969-43e9-8f47-69f2512f895c.png)
 
 ****
    
