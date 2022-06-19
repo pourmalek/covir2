@@ -250,7 +250,8 @@ YEM:	Yemen
    
 ****   
    
-(2) EMR [Daily deaths, EMR countries, Johns Hopkins, 2022 on]()
+(2) EMR [Daily deaths, EMR countries, Johns Hopkins, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+   
    
 ****   
    
