@@ -1373,6 +1373,9 @@ order date
  
 collapse (sum) DayINFMeSmA02S01-DayINFFOREA02S01, by(date)
 
+replace DayDeaFOREA02S01 = . if date < td($IHMEepoch)
+replace DayINFFOREA02S01 = . if date < td($IHMEepoch)
+
 gen loc_grand_name = "EMRO"
 
 sort date
