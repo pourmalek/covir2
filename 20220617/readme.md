@@ -250,6 +250,10 @@ YEM:	Yemen
    
 ****   
    
+(2) EMR [Daily deaths, EMR countries, Johns Hopkins, 2022 on]()
+   
+****   
+   
    
    
    
