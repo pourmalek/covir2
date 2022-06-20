@@ -59,20 +59,10 @@ Complex Disasters:
 
   <div dir="ltr">
 
-+ + + + + + 
 
 <br/><br/> 
 
 
-<div dir="rtr"> 
-
- 
-<br/><br/> 
-
-
- <div dir="ltr">
- 
- <br/><br/> 
  
 
 
