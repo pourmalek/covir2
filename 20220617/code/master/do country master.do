@@ -13,13 +13,13 @@
 
 /*
 
-Study update dates in uptake 20220617
+### Study update dates in uptake 20220617
 
-DELP 20220529, IHME 20220617, No IMPE, SRIV 20220617
+DELP 20220529, IHME 20220610, IMPE **_20220530_**, **_SRIV 20220617_** 
 
-Days old: DELP 20, IHME 7, no IMPE, SRIV 0
+Days old: DELP 20, IHME 7, IMPE 19, SRIV 0
 
-IMPE update 20220315 was released on 20220505 and is > 3 months old on 20220617. Not included.
+IMPE update 20220530 was released on 20220617. 
 
 */
 
@@ -45,7 +45,7 @@ global DELPepoch 29May2022 // update release date
 global IHMEepoch 03Jun2022 // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
 *            3/ ----------
 
-global IMPEdate 2022-03-15_v9 
+global IMPEdate 2022-05-30_v9 
 *            4/ -------------
 
 global SRIVdate 2022-06-17
@@ -61,7 +61,7 @@ global DELPdate 20220529
 global IHMEdate 2022-06-10
 *            7/ --------
 
-global IMPEepoch 15Mar2022 // update release date																		 
+global IMPEepoch 30May2022 // update release date																		 
 *            8/ ----------
 
 global SRIVepoch 17Jun2022 // update release date																		 
@@ -158,7 +158,7 @@ do "$pathcovir2/DELP/do country DELP.do"
 
 do "$pathcovir2/IHME/do country IHME.do" 
 
-// do "$pathcovir2/IMPE/do country IMPE.do" // IMPE update 20220315 was released on 20220505. Not included.
+do "$pathcovir2/IMPE/do country IMPE.do" 
 
 // do "$pathcovir2/LANL/do country LANL.do" // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 
