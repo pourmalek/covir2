@@ -244,7 +244,7 @@ YEM:	Yemen
    
 ****   
    
-(b1) Eastern Mediterranean Region (EMR), offcial country reports (JOHN)
+(b1) Eastern Mediterranean Region (EMR), official country reports (JOHN)
    
 ****   
 
