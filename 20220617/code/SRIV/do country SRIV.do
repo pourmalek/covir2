@@ -23,8 +23,10 @@ log using "log country SRIV.smcl", replace
 di "SRIVdate = " "$SRIVdate"
 
 
+**********************************************************
+**********************************************************
 
-* Get SRIV estimates 
+* Get SRIV estimates for $country
 
 copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/$SRIVdate/global_forecasts_deaths.csv global_forecasts_deaths.csv
 copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/$SRIVdate/global_forecasts_deaths_lb.csv global_forecasts_deaths_lb.csv
@@ -44,7 +46,7 @@ foreach l of local list {
 	keep if regexm(country,"$country") == 1
 	drop id	country
 	
-	destring *, replace
+	qui destring *, replace
 	
 	gen i = _n
 	reshape long v, i(i) j(j)
@@ -199,6 +201,8 @@ save "country SRIV.dta", replace
  
 
 
+ 
+ 
 view "log country SRIV.smcl"
 
 log close
