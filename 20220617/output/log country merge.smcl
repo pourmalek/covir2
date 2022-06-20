@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}19 Jun 2022, 07:01:53
+ {txt}opened on:  {res}19 Jun 2022, 17:39:56
 {txt}
 {com}. 
 . 
@@ -57,11 +57,11 @@
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}             721
+{col 5}not matched{col 30}{res}             720
 {txt}{col 9}from master{col 30}{res}             693{txt}  (_merge==1)
-{col 9}from using{col 30}{res}              28{txt}  (_merge==2)
+{col 9}from using{col 30}{res}              27{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}             185{txt}  (_merge==3)
+{col 5}matched{col 30}{res}             186{txt}  (_merge==3)
 {col 5}{hline 41}
 {com}. {c )-}
 {txt}
@@ -96,17 +96,29 @@
 {txt}
 {com}. 
 . 
-. /*
-> * IMPE
-> 
-> if regexm(c(os),"Mac") == 1 {c -(}
-> 
->         merge 1:1 date using "$pathcovir2/IMPE/country IMPE.dta"
-> {c )-}
-> else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IMPE\country IMPE.dta"
-> 
-> drop _merge
-> */
+. 
+. * IMPE
+. 
+. if regexm(c(os),"Mac") == 1 {c -(}
+. 
+.         merge 1:1 date using "$pathcovir2/IMPE/country IMPE.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             160
+{txt}{col 9}from master{col 30}{res}             160{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             824{txt}  (_merge==3)
+{col 5}{hline 41}
+{com}. {c )-}
+{txt}
+{com}. else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IMPE\country IMPE.dta"
+{txt}
+{com}. 
+. drop _merge
+{txt}
+{com}. 
 . 
 . 
 . /* LANL
@@ -162,14 +174,14 @@
 . 
 . 
 . gen DayCTDMeRaA00S00 =  DayCasMeRaA00 / DayDeaMeRaA00
-{txt}(137 missing values generated)
+{txt}(136 missing values generated)
 
 {com}. 
 . label var DayCTDMeRaA00S00  "Daily Cases to Deaths S0 JOHN"
 {txt}
 {com}. 
 . gen TotCTDMeRaA00S00 =  TotCasMeRaA00 / TotDeaMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotCTDMeRaA00S00  "Total Cases to Deaths S0 JOHN"
@@ -232,35 +244,53 @@
 . 
 . 
 . 
-. /*
-> gen DayITDMeRaA03S01  = DayINFMeRaA03S01  / DayDeaMeRaA03S01   
-> 
-> label var DayITDMeRaA03S01  "Daily Infections to Deaths S1 IMPE"
-> 
-> gen TotITDMeRaA03S01  = TotINFMeRaA03S01  / TotDeaMeRaA03S01   
-> 
-> label var TotITDMeRaA03S01  "Total Infections to Deaths S1 IMPE"
-> 
-> 
-> 
-> gen DayITDMeRaA03S02  = DayINFMeRaA03S02  / DayDeaMeRaA03S02   
-> 
-> label var DayITDMeRaA03S02  "Daily Infections to Deaths S2 IMPE"
-> 
-> gen TotITDMeRaA03S02  = TotINFMeRaA03S02  / TotDeaMeRaA03S02   
-> 
-> label var TotITDMeRaA03S02  "Total Infections to Deaths S2 IMPE"
-> 
-> 
-> 
-> gen DayITDMeRaA03S03  = DayINFMeRaA03S03  / DayDeaMeRaA03S03   
-> 
-> label var DayITDMeRaA03S03  "Daily Infections to Deaths S3 IMPE"
-> 
-> gen TotITDMeRaA03S03  = TotINFMeRaA03S03  / TotDeaMeRaA03S03   
-> 
-> label var TotITDMeRaA03S03  "Total Infections to Deaths S3 IMPE"
-> */
+. 
+. gen DayITDMeRaA03S01  = DayINFMeRaA03S01  / DayDeaMeRaA03S01   
+{txt}(160 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA03S01  "Daily Infections to Deaths S1 IMPE"
+{txt}
+{com}. 
+. gen TotITDMeRaA03S01  = TotINFMeRaA03S01  / TotDeaMeRaA03S01   
+{txt}(160 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA03S01  "Total Infections to Deaths S1 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen DayITDMeRaA03S02  = DayINFMeRaA03S02  / DayDeaMeRaA03S02   
+{txt}(160 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA03S02  "Daily Infections to Deaths S2 IMPE"
+{txt}
+{com}. 
+. gen TotITDMeRaA03S02  = TotINFMeRaA03S02  / TotDeaMeRaA03S02   
+{txt}(160 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA03S02  "Total Infections to Deaths S2 IMPE"
+{txt}
+{com}. 
+. 
+. 
+. gen DayITDMeRaA03S03  = DayINFMeRaA03S03  / DayDeaMeRaA03S03   
+{txt}(160 missing values generated)
+
+{com}. 
+. label var DayITDMeRaA03S03  "Daily Infections to Deaths S3 IMPE"
+{txt}
+{com}. 
+. gen TotITDMeRaA03S03  = TotINFMeRaA03S03  / TotDeaMeRaA03S03   
+{txt}(160 missing values generated)
+
+{com}. 
+. label var TotITDMeRaA03S03  "Total Infections to Deaths S3 IMPE"
+{txt}
+{com}. 
 . 
 . 
 . 
@@ -289,7 +319,7 @@
 . 
 .     
 . gen DayDERMeRaA00S00 = DayDeaMeRaA00 / DayDeaMeRaA00
-{txt}(137 missing values generated)
+{txt}(136 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA00S00 "Daily Deaths estim to reported JOHN = 1" 
@@ -297,7 +327,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA01S00 = DayDeaMeRaA01S00 / DayDeaMeRaA00
-{txt}(802 missing values generated)
+{txt}(801 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA01S00 "Daily Deaths estim to reported Mean DELP S0"
@@ -307,7 +337,7 @@
 . 
 . 
 . gen DayDERMeRaA02S01 = DayDeaMeSmA02S01 / DayDeaMeRaA00
-{txt}(137 missing values generated)
+{txt}(136 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S01 "Daily Deaths estim to reported Mean not smoothed IHME S1"
@@ -315,7 +345,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA02S02 = DayDeaMeSmA02S02 / DayDeaMeRaA00
-{txt}(137 missing values generated)
+{txt}(136 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHME S2"
@@ -323,25 +353,34 @@
 {com}. 
 . 
 . 
-. /*
-> gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00
-> 
-> label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
-> 
-> 
-> gen DayDERMeRaA03S02 = DayDeaMeRaA03S02 / DayDeaMeRaA00
-> 
-> label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
-> 
-> 
-> gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00
-> 
-> label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
-> */
+. 
+. gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00
+{txt}(232 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA03S02 = DayDeaMeRaA03S02 / DayDeaMeRaA00
+{txt}(232 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00
+{txt}(232 missing values generated)
+
+{com}. 
+. label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
 . 
 . 
 . gen DayDERMeRaA05S00  = DayDeaMeRaA05S00 / DayDeaMeRaA00
-{txt}(984 missing values generated)
+{txt}(983 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA05S00 "Daily Deaths estim to reported S0 SRIV"
@@ -357,7 +396,7 @@
 . 
 . 
 . gen DayCERMeRaA00S00 = DayCasMeRaA00 / DayCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA00S00 "Daily Cases estim to reported JOHN = 1" 
@@ -366,7 +405,7 @@
 . 
 . 
 . gen DayCERMeRaA01S00 = DayCasMeRaA01S00 / DayCasMeRaA00
-{txt}(800 missing values generated)
+{txt}(799 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA01S00 "Daily Cases estim to reported Mean DELP S0"
@@ -378,7 +417,7 @@
 . 
 . 
 . gen DayIERMeRaA02S01 = DayINFMeSmA02S01 / DayCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S01 "Daily Infections estim to reported Mean not smoothed IHME S1"
@@ -386,31 +425,40 @@
 {com}. 
 . 
 . gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
 {txt}
 {com}. 
 . 
-. /*
-> gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00
-> 
-> label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
-> 
-> 
-> gen DayIERMeRaA03S02 = DayINFMeRaA03S02 / DayCasMeRaA00
-> 
-> label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
-> 
-> 
-> gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00
-> 
-> label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
-> */
+. 
+. gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayIERMeRaA03S02 = DayINFMeRaA03S02 / DayCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
 . 
 . gen DayCERMeRaA05S00  = DayCasMeRaA05S00 / DayCasMeRaA00
-{txt}(984 missing values generated)
+{txt}(983 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA05S00 "Daily Cases estim to reported S0 SRIV"
@@ -426,7 +474,7 @@
 . 
 . 
 . gen TotDERMeRaA00S00 = TotDeaMeRaA00 / TotDeaMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA00S00 "Total Deaths estim to reported JOHN = 1" 
@@ -435,7 +483,7 @@
 . 
 . 
 . gen TotDERMeRaA01S00 = TotDeaMeRaA01S00 / TotDeaMeRaA00
-{txt}(799 missing values generated)
+{txt}(798 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA01S00 "Total Deaths estim to reported Mean DELP S0"
@@ -444,7 +492,7 @@
 . 
 . 
 . gen TotDERMeRaA02S01 = TotDeaMeSmA02S01 / TotDeaMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S01 "Total Deaths estim to reported Mean not smoothed IHME S1"
@@ -452,7 +500,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA02S02 = TotDeaMeSmA02S02 / TotDeaMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHME S2"
@@ -460,24 +508,33 @@
 {com}. 
 . 
 . 
-. /*
-> gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00
-> 
-> label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
-> 
-> 
-> gen TotDERMeRaA03S02 = TotDeaMeRaA03S02 / TotDeaMeRaA00
-> 
-> label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
-> 
-> 
-> gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00
-> 
-> label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
-> */
+. 
+. gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotDERMeRaA03S02 = TotDeaMeRaA03S02 / TotDeaMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
 . 
 . gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00
-{txt}(983 missing values generated)
+{txt}(982 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
@@ -493,7 +550,7 @@
 . 
 . 
 . gen TotCERMeRaA00S00 = TotCasMeRaA00 / TotCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA00S00 "Total Cases estim to reported JOHN = 1" 
@@ -501,7 +558,7 @@
 {com}. 
 . 
 . gen TotCERMeRaA01S00 = TotCasMeRaA01S00 / TotCasMeRaA00
-{txt}(799 missing values generated)
+{txt}(798 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA01S00 "Total Cases estim to reported Mean DELP S0"
@@ -510,7 +567,7 @@
 . 
 . 
 . gen TotIERMeRaA02S01 = TotINFMeSmA02S01 / TotCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S01 "Total Infections estim to reported Mean not smoothed IHME S1"
@@ -518,7 +575,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA02S02 = TotINFMeSmA02S02 / TotCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed IHME S2"
@@ -526,25 +583,34 @@
 {com}. 
 . 
 . 
-. /*
-> gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00
-> 
-> label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
-> 
-> 
-> gen TotIERMeRaA03S02 = TotINFMeRaA03S02 / TotCasMeRaA00
-> 
-> label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
-> 
-> 
-> gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00
-> 
-> label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
-> */
+. 
+. gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotIERMeRaA03S02 = TotINFMeRaA03S02 / TotCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
+{txt}
+{com}. 
+. 
+. gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
+{txt}
+{com}. 
 . 
 . 
 . gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00
-{txt}(983 missing values generated)
+{txt}(982 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA05S00 "Total Cases estim to reported S0 SRIV"
@@ -568,8 +634,8 @@
 
 {txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20220617/code/JOHN/country JOHN.dta
 {txt}  obs:{res}           984                          
-{txt} vars:{res}           291                          18 Jun 2022 15:57
-{txt} size:{res}     1,179,816                          
+{txt} vars:{res}           544                          19 Jun 2022 16:34
+{txt} size:{res}     2,175,624                          
 {txt}{hline}
               storage   display    value
 variable name   type    format     label      variable label
@@ -1013,6 +1079,476 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Forecasted Deaths Mean smoothed IHME S1{p_end}
 {p 0 48}DayINFFOREA02S01{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Forecasted infections Mean smoothed IHME S1{p_end}
+{p 0 48}TotDeaMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S01 {p_end}
+{p 0 48}TotDeaLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S01 {p_end}
+{p 0 48}TotDeaUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S01 {p_end}
+{p 0 48}TotDeaMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S02 {p_end}
+{p 0 48}TotDeaLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S02 {p_end}
+{p 0 48}TotDeaUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S02 {p_end}
+{p 0 48}TotDeaMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S03 {p_end}
+{p 0 48}TotDeaLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S03 {p_end}
+{p 0 48}TotDeaUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S03 {p_end}
+{p 0 48}TotDeaMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S04 {p_end}
+{p 0 48}TotDeaLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S04 {p_end}
+{p 0 48}TotDeaUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S04 {p_end}
+{p 0 48}TotDeaMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S05 {p_end}
+{p 0 48}TotDeaLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S05 {p_end}
+{p 0 48}TotDeaUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S05 {p_end}
+{p 0 48}TotDeaMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Mean A03 S06 {p_end}
+{p 0 48}TotDeaLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Lower A03 S06 {p_end}
+{p 0 48}TotDeaUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths Upper A03 S06 {p_end}
+{p 0 48}DayDeaMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S01 {p_end}
+{p 0 48}DayDeaLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S01 {p_end}
+{p 0 48}DayDeaUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S01 {p_end}
+{p 0 48}DayDeaMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S02 {p_end}
+{p 0 48}DayDeaLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S02 {p_end}
+{p 0 48}DayDeaUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S02 {p_end}
+{p 0 48}DayDeaMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S03 {p_end}
+{p 0 48}DayDeaLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S03 {p_end}
+{p 0 48}DayDeaUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S03 {p_end}
+{p 0 48}DayDeaMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S04 {p_end}
+{p 0 48}DayDeaLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S04 {p_end}
+{p 0 48}DayDeaUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S04 {p_end}
+{p 0 48}DayDeaMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S05 {p_end}
+{p 0 48}DayDeaLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S05 {p_end}
+{p 0 48}DayDeaUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S05 {p_end}
+{p 0 48}DayDeaMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Mean A03 S06 {p_end}
+{p 0 48}DayDeaLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Lower A03 S06 {p_end}
+{p 0 48}DayDeaUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths Upper A03 S06 {p_end}
+{p 0 48}TotINFMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S01 {p_end}
+{p 0 48}TotINFLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S01 {p_end}
+{p 0 48}TotINFUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S01 {p_end}
+{p 0 48}TotINFMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S02 {p_end}
+{p 0 48}TotINFLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S02 {p_end}
+{p 0 48}TotINFUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S02 {p_end}
+{p 0 48}TotINFMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S03 {p_end}
+{p 0 48}TotINFLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S03 {p_end}
+{p 0 48}TotINFUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S03 {p_end}
+{p 0 48}TotINFMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S04 {p_end}
+{p 0 48}TotINFLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S04 {p_end}
+{p 0 48}TotINFUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S04 {p_end}
+{p 0 48}TotINFMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S05 {p_end}
+{p 0 48}TotINFLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S05 {p_end}
+{p 0 48}TotINFUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S05 {p_end}
+{p 0 48}TotINFMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Mean A03 S06 {p_end}
+{p 0 48}TotINFLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Lower A03 S06 {p_end}
+{p 0 48}TotINFUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total infections Upper A03 S06 {p_end}
+{p 0 48}DayINFMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S01 {p_end}
+{p 0 48}DayINFLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S01 {p_end}
+{p 0 48}DayINFUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S01 {p_end}
+{p 0 48}DayINFMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S02 {p_end}
+{p 0 48}DayINFLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S02 {p_end}
+{p 0 48}DayINFUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S02 {p_end}
+{p 0 48}DayINFMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S03 {p_end}
+{p 0 48}DayINFLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S03 {p_end}
+{p 0 48}DayINFUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S03 {p_end}
+{p 0 48}DayINFMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S04 {p_end}
+{p 0 48}DayINFLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S04 {p_end}
+{p 0 48}DayINFUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S04 {p_end}
+{p 0 48}DayINFMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S05 {p_end}
+{p 0 48}DayINFLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S05 {p_end}
+{p 0 48}DayINFUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S05 {p_end}
+{p 0 48}DayINFMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Mean A03 S06 {p_end}
+{p 0 48}DayINFLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Lower A03 S06 {p_end}
+{p 0 48}DayINFUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections Upper A03 S06 {p_end}
+{p 0 48}DayHodLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S01 {p_end}
+{p 0 48}DayHodMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S01 {p_end}
+{p 0 48}DayHodUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S01 {p_end}
+{p 0 48}DayHodLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S02 {p_end}
+{p 0 48}DayHodMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S02 {p_end}
+{p 0 48}DayHodUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S02 {p_end}
+{p 0 48}DayHodLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S03 {p_end}
+{p 0 48}DayHodMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S03 {p_end}
+{p 0 48}DayHodUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S03 {p_end}
+{p 0 48}DayHodLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S04 {p_end}
+{p 0 48}DayHodMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S04 {p_end}
+{p 0 48}DayHodUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S04 {p_end}
+{p 0 48}DayHodLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S05 {p_end}
+{p 0 48}DayHodMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S05 {p_end}
+{p 0 48}DayHodUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S05 {p_end}
+{p 0 48}DayHodLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Lower A03 S06 {p_end}
+{p 0 48}DayHodMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Mean A03 S06 {p_end}
+{p 0 48}DayHodUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital demand Upper A03 S06 {p_end}
+{p 0 48}DayHoiLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Lower A03 S01 {p_end}
+{p 0 48}DayHoiMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Mean A03 S01 {p_end}
+{p 0 48}DayHoiUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Upper A03 S01 {p_end}
+{p 0 48}DayHoiLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Lower A03 S02 {p_end}
+{p 0 48}DayHoiMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Mean A03 S02 {p_end}
+{p 0 48}DayHoiUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Upper A03 S02 {p_end}
+{p 0 48}DayHoiLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Lower A03 S03 {p_end}
+{p 0 48}DayHoiMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Mean A03 S03 {p_end}
+{p 0 48}DayHoiUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Upper A03 S03 {p_end}
+{p 0 48}DayHoiLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Lower A03 S04 {p_end}
+{p 0 48}DayHoiMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Mean A03 S04 {p_end}
+{p 0 48}DayHoiUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Upper A03 S04 {p_end}
+{p 0 48}DayHoiLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Lower A03 S05 {p_end}
+{p 0 48}DayHoiMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Mean A03 S05 {p_end}
+{p 0 48}DayHoiUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Upper A03 S05 {p_end}
+{p 0 48}DayHoiLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Lower A03 S06 {p_end}
+{p 0 48}DayHoiMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Mean A03 S06 {p_end}
+{p 0 48}DayHoiUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily hospital incidence Upper A03 S06 {p_end}
+{p 0 48}DayIcdLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S01 {p_end}
+{p 0 48}DayIcdMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S01 {p_end}
+{p 0 48}DayIcdUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S01 {p_end}
+{p 0 48}DayIcdLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S02 {p_end}
+{p 0 48}DayIcdMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S02 {p_end}
+{p 0 48}DayIcdUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S02 {p_end}
+{p 0 48}DayIcdLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S03 {p_end}
+{p 0 48}DayIcdMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S03 {p_end}
+{p 0 48}DayIcdUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S03 {p_end}
+{p 0 48}DayIcdLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S04 {p_end}
+{p 0 48}DayIcdMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S04 {p_end}
+{p 0 48}DayIcdUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S04 {p_end}
+{p 0 48}DayIcdLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S05 {p_end}
+{p 0 48}DayIcdMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S05 {p_end}
+{p 0 48}DayIcdUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S05 {p_end}
+{p 0 48}DayIcdLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Lower A03 S06 {p_end}
+{p 0 48}DayIcdMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Mean A03 S06 {p_end}
+{p 0 48}DayIcdUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU demand Upper A03 S06 {p_end}
+{p 0 48}DayIciLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Lower A03 S01 {p_end}
+{p 0 48}DayIciMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Mean A03 S01 {p_end}
+{p 0 48}DayIciUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Upper A03 S01 {p_end}
+{p 0 48}DayIciLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Lower A03 S02 {p_end}
+{p 0 48}DayIciMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Mean A03 S02 {p_end}
+{p 0 48}DayIciUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Upper A03 S02 {p_end}
+{p 0 48}DayIciLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Lower A03 S03 {p_end}
+{p 0 48}DayIciMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Mean A03 S03 {p_end}
+{p 0 48}DayIciUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Upper A03 S03 {p_end}
+{p 0 48}DayIciLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Lower A03 S04 {p_end}
+{p 0 48}DayIciMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Mean A03 S04 {p_end}
+{p 0 48}DayIciUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Upper A03 S04 {p_end}
+{p 0 48}DayIciLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Lower A03 S05 {p_end}
+{p 0 48}DayIciMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Mean A03 S05 {p_end}
+{p 0 48}DayIciUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Upper A03 S05 {p_end}
+{p 0 48}DayIciLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Lower A03 S06 {p_end}
+{p 0 48}DayIciMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Mean A03 S06 {p_end}
+{p 0 48}DayIciUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily ICU incidence Upper A03 S06 {p_end}
+{p 0 48}DayPreLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S01 {p_end}
+{p 0 48}DayPreMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S01 {p_end}
+{p 0 48}DayPreUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S01 {p_end}
+{p 0 48}DayPreLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S02 {p_end}
+{p 0 48}DayPreMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S02 {p_end}
+{p 0 48}DayPreUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S02 {p_end}
+{p 0 48}DayPreLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S03 {p_end}
+{p 0 48}DayPreMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S03 {p_end}
+{p 0 48}DayPreUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S03 {p_end}
+{p 0 48}DayPreLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S04 {p_end}
+{p 0 48}DayPreMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S04 {p_end}
+{p 0 48}DayPreUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S04 {p_end}
+{p 0 48}DayPreLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S05 {p_end}
+{p 0 48}DayPreMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S05 {p_end}
+{p 0 48}DayPreUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S05 {p_end}
+{p 0 48}DayPreLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Lower A03 S06 {p_end}
+{p 0 48}DayPreMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Mean A03 S06 {p_end}
+{p 0 48}DayPreUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily prevalence Upper A03 S06 {p_end}
+{p 0 48}DayRefLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S01 {p_end}
+{p 0 48}DayRefMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S01 {p_end}
+{p 0 48}DayRefUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S01 {p_end}
+{p 0 48}DayRefLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S02 {p_end}
+{p 0 48}DayRefMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S02 {p_end}
+{p 0 48}DayRefUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S02 {p_end}
+{p 0 48}DayRefLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S03 {p_end}
+{p 0 48}DayRefMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S03 {p_end}
+{p 0 48}DayRefUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S03 {p_end}
+{p 0 48}DayRefLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S04 {p_end}
+{p 0 48}DayRefMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S04 {p_end}
+{p 0 48}DayRefUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S04 {p_end}
+{p 0 48}DayRefLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S05 {p_end}
+{p 0 48}DayRefMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S05 {p_end}
+{p 0 48}DayRefUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S05 {p_end}
+{p 0 48}DayRefLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Lower A03 S06 {p_end}
+{p 0 48}DayRefMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Mean A03 S06 {p_end}
+{p 0 48}DayRefUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R effective Upper A03 S06 {p_end}
+{p 0 48}DayRttLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S01 {p_end}
+{p 0 48}DayRttMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S01 {p_end}
+{p 0 48}DayRttUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S01 {p_end}
+{p 0 48}DayRttLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S02 {p_end}
+{p 0 48}DayRttMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S02 {p_end}
+{p 0 48}DayRttUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S02 {p_end}
+{p 0 48}DayRttLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S03 {p_end}
+{p 0 48}DayRttMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S03 {p_end}
+{p 0 48}DayRttUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S03 {p_end}
+{p 0 48}DayRttLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S04 {p_end}
+{p 0 48}DayRttMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S04 {p_end}
+{p 0 48}DayRttUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S04 {p_end}
+{p 0 48}DayRttLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S05 {p_end}
+{p 0 48}DayRttMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S05 {p_end}
+{p 0 48}DayRttUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S05 {p_end}
+{p 0 48}DayRttLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Lower A03 S06 {p_end}
+{p 0 48}DayRttMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Mean A03 S06 {p_end}
+{p 0 48}DayRttUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily R t Upper A03 S06 {p_end}
+{p 0 48}DayIFRMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S01 {p_end}
+{p 0 48}DayIFRLoRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S01 {p_end}
+{p 0 48}DayIFRUpRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S01 {p_end}
+{p 0 48}DayIFRMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S02 {p_end}
+{p 0 48}DayIFRLoRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S02 {p_end}
+{p 0 48}DayIFRUpRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S02 {p_end}
+{p 0 48}DayIFRMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S03 {p_end}
+{p 0 48}DayIFRLoRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S03 {p_end}
+{p 0 48}DayIFRUpRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S03 {p_end}
+{p 0 48}DayIFRMeRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S04 {p_end}
+{p 0 48}DayIFRLoRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S04 {p_end}
+{p 0 48}DayIFRUpRaA03S04{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S04 {p_end}
+{p 0 48}DayIFRMeRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S05 {p_end}
+{p 0 48}DayIFRLoRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S05 {p_end}
+{p 0 48}DayIFRUpRaA03S05{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S05 {p_end}
+{p 0 48}DayIFRMeRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Mean A03 S06 {p_end}
+{p 0 48}DayIFRLoRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Lower A03 S06 {p_end}
+{p 0 48}DayIFRUpRaA03S06{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily IFR Upper A03 S06 {p_end}
+{p 0 48}DayDeMMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean IMPE DayDeM{p_end}
+{p 0 48}DayCaMMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean IMPE DayCaM{p_end}
+{p 0 48}DayIbDMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean div by daily deaths mean IMPE DayIbD{p_end}
+{p 0 48}DayDMuMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths scaled (times means of infections by deaths) IMPE{p_end}
+{p 0 48}DayDeaFOREA03S02_raw{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Forecasted Deaths Mean smoothed IMPE S2{p_end}
+{p 0 48}DayINFFOREA03S02_raw{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Forecasted Infections Mean smoothed IMPE S2{p_end}
+{p 0 48}DayDeaMeSmA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean smooth IMPE S2{p_end}
+{p 0 48}DayDeaMeSmA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean smooth IMPE S1{p_end}
+{p 0 48}DayDeaMeSmA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean smooth IMPE S3{p_end}
+{p 0 48}DayDeaLoSmA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths lower smooth IMPE S3{p_end}
+{p 0 48}DayDeaUpSmA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths upper smooth IMPE S3{p_end}
+{p 0 48}DayDeaFOREA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths mean smooth IMPE{p_end}
+{p 0 48}DayINFMeSmA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean smooth IMPE{p_end}
+{p 0 48}DayINFFOREA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections mean smooth IMPE{p_end}
+{p 0 48}DayDeaLoSmA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths lower smooth IMPE{p_end}
+{p 0 48}DayINFLoSmA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections lower smooth IMPE{p_end}
+{p 0 48}DayDeaUpSmA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily deaths upper smooth IMPE{p_end}
+{p 0 48}DayINFUpSmA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections upper smooth IMPE S2{p_end}
+{p 0 48}DayINFUpSmA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily infections upper smooth IMPE S3{p_end}
 {p 0 48}TotCasUpRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: long    }{bind:{txt}%10.0g    }{space 1}{bind:         }{bind:  }{res}{res}Total Cases Upper SRIV{p_end}
 {p 0 48}TotDeaMeRaA05S00{p_end}
@@ -1076,6 +1612,18 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S2 IHME{p_end}
 {p 0 48}TotITDMeRaA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S2 IHME{p_end}
+{p 0 48}DayITDMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S1 IMPE{p_end}
+{p 0 48}TotITDMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S1 IMPE{p_end}
+{p 0 48}DayITDMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S2 IMPE{p_end}
+{p 0 48}TotITDMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S2 IMPE{p_end}
+{p 0 48}DayITDMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections to Deaths S3 IMPE{p_end}
+{p 0 48}TotITDMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections to Deaths S3 IMPE{p_end}
 {p 0 48}DayCTDMeRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases to Deaths S0 SRIV{p_end}
 {p 0 48}TotCTDMeRaA05S00{p_end}
@@ -1088,6 +1636,12 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean not smoothed IHME S1{p_end}
 {p 0 48}DayDERMeRaA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}DayDERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean S1 IMPE{p_end}
+{p 0 48}DayDERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean S2 IMPE{p_end}
+{p 0 48}DayDERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported Mean S3 IMPE{p_end}
 {p 0 48}DayDERMeRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Deaths estim to reported S0 SRIV{p_end}
 {p 0 48}DayCERMeRaA00S00{p_end}
@@ -1098,6 +1652,12 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean not smoothed IHME S1{p_end}
 {p 0 48}DayIERMeRaA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}DayIERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean S1 IMPE{p_end}
+{p 0 48}DayIERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean S2 IMPE{p_end}
+{p 0 48}DayIERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Infections estim to reported Mean S3 IMPE{p_end}
 {p 0 48}DayCERMeRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Daily Cases estim to reported S0 SRIV{p_end}
 {p 0 48}TotDERMeRaA00S00{p_end}
@@ -1108,6 +1668,12 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean not smoothed IHME S1{p_end}
 {p 0 48}TotDERMeRaA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}TotDERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean S1 IMPE{p_end}
+{p 0 48}TotDERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean S2 IMPE{p_end}
+{p 0 48}TotDERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported Mean S3 IMPE{p_end}
 {p 0 48}TotDERMeRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Deaths estim to reported S0 SRIV{p_end}
 {p 0 48}TotCERMeRaA00S00{p_end}
@@ -1118,6 +1684,12 @@ variable name   type    format     label      variable label
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean not smoothed IHME S1{p_end}
 {p 0 48}TotIERMeRaA02S02{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean not smoothed IHME S2{p_end}
+{p 0 48}TotIERMeRaA03S01{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean S1 IMPE{p_end}
+{p 0 48}TotIERMeRaA03S02{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean S2 IMPE{p_end}
+{p 0 48}TotIERMeRaA03S03{p_end}
+{p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Infections estim to reported Mean S3 IMPE{p_end}
 {p 0 48}TotCERMeRaA05S00{p_end}
 {p 0 48}{space 15}{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Total Cases estim to reported S0 SRIV{p_end}
 {txt}{hline}
@@ -1236,11 +1808,11 @@ Sorted by: {res}date
 . * gen monthspast vars for #thicknumber of graphs JOHN
 . 
 . gen monthspast01jan2020JOHN = ((today_numericdailydate - td(01jan2020)) / 30) + 1
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . replace monthspast01jan2020JOHN = round(monthspast01jan2020)
-{txt}(878 real changes made)
+{txt}(0 real changes made)
 
 {com}. 
 . global monthspast01jan2020JOHN = monthspast01jan2020JOHN
@@ -1253,11 +1825,11 @@ Sorted by: {res}date
 . 
 . 
 . gen monthspast01jan2021JOHN = ((today_numericdailydate - td(01jan2021)) / 30) + 1
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . replace monthspast01jan2021JOHN = round(monthspast01jan2021)
-{txt}(878 real changes made)
+{txt}(879 real changes made)
 
 {com}. 
 . global monthspast01jan2021JOHN = monthspast01jan2021JOHN
@@ -1270,11 +1842,11 @@ Sorted by: {res}date
 . 
 . 
 . gen monthspast01jan2022JOHN = ((today_numericdailydate - td(01jan2022)) / 30) + 1
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . replace monthspast01jan2022JOHN = round(monthspast01jan2022JOHN)
-{txt}(878 real changes made)
+{txt}(879 real changes made)
 
 {com}. 
 . global monthspast01jan2022JOHN = monthspast01jan2022JOHN
@@ -1289,15 +1861,15 @@ Sorted by: {res}date
 . * end date of graphs JOHN
 . 
 . gen nextmonthspast01jan2020JOHN = monthspast01jan2020JOHN 
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . gen nextmonthdayspast01jan2020JOHN = nextmonthspast01jan2020JOHN * 30
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . gen nextmonthdatespast01jan2020JOHN = td(01jan2020) + nextmonthdayspast01jan2020JOHN
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . local nextmonthdatespast01jan2020JOHN = nextmonthdatespast01jan2020JOHN
@@ -1306,15 +1878,15 @@ Sorted by: {res}date
 . 
 . 
 . gen nextmonthspast01jan2022JOHN = monthspast01jan2022JOHN 
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . gen nextmonthdayspast01jan2022JOHN = nextmonthspast01jan2022JOHN * 30
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . gen nextmonthdatespast01jan2022JOHN = td(01jan2022) + nextmonthdayspast01jan2022JOHN
-{txt}(106 missing values generated)
+{txt}(105 missing values generated)
 
 {com}. 
 . local nextmonthdatespast01jan2022JOHN = nextmonthdatespast01jan2022JOHN
@@ -1564,11 +2136,11 @@ Sorted by: {res}date
 
 {com}. 
 . 
-. /*
-> ****
-> * daily deaths, reference scenario with uncertainty, IMPE, 2021
-> 
-> twoway ///
+. 
+. ****
+. * daily deaths, reference scenario with uncertainty, IMPE, 2021
+. 
+. twoway ///
 > (line DayDeaMeSmA00 date, sort lcolor(cyan) lwidth(thick)) /// 1 "JOHN smooth"
 > (line DayDeaFOREA03S02 date, sort lcolor(black*0.6) lpattern(tight_dot) lwidth(vthick)) /// 2 "IMPE" Forecast only
 > (line DayDeaMeSmA03S02 date, sort lcolor(black)) /// 3 IMPE reference mean
@@ -1583,15 +2155,18 @@ Sorted by: {res}date
 > 4 "IMPE reference scenario, lower" 5 "IMPE reference scenario, upper") size(small) row(3)) ///
 > subtitle("2021 on, reference scenario with uncertainty", size(small)) ///
 > note("Reference scenario forecasts are marked with |||||||||||| " , size(small))
-> 
-> graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.pdf", replace
-> 
-> 
-> 
-> ****
-> * daily deaths, 3 scenarios, IMPE, 2021
-> 
-> twoway ///
+{res}{txt}
+{com}. 
+. graph export "graph 16 COVID-19 daily deaths, $country, reference scenario with uncertainty, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/graph 16 COVID-19 daily deaths, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily deaths, 3 scenarios, IMPE, 2021
+. 
+. twoway ///
 > (line DayDeaMeSmA00 date, sort lcolor(cyan) lwidth(thick)) /// 1 "JOHN smooth"
 > (line DayDeaMeSmA03S02 date, sort lcolor(black)) /// 2 IMPE reference mean
 > (line DayDeaMeSmA03S01 date, sort lcolor(green) lwidth(thick) lpattern(tight_dot)) /// 3 IMPE better mean
@@ -1606,9 +2181,12 @@ Sorted by: {res}date
 > 4 "IMPE worse scenario, mean" 5 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
 > subtitle("2021 on, 3 scenarios", size(small)) ///
 > note("Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves.")
-> 
-> graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
-> */
+{res}{txt}
+{com}. 
+. graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/graph 17 COVID-19 daily deaths, Iran, 3 scenarios, IMPE.pdf written in PDF format)
+
+{com}. 
 . 
 . 
 . 
@@ -1856,11 +2434,11 @@ Sorted by: {res}date
 
 {com}. 
 . 
-. /*
-> ****
-> * daily infections, reference scenario with uncertainty, IMPE, 2021
-> 
-> twoway ///
+. 
+. ****
+. * daily infections, reference scenario with uncertainty, IMPE, 2021
+. 
+. twoway ///
 > (line DayCasMeRaA00 date, sort lcolor(cyan) lwidth(thick)) /// 1 JOHN
 > (line DayINFMeRaA03S02 date, sort lcolor(black)) /// 2 IMPE reference mean
 > (line DayINFLoSmA03S02 date, sort lcolor(green) lpattern(dash)) /// 3 IMPE reference lower
@@ -1873,15 +2451,18 @@ Sorted by: {res}date
 > legend(order(1 "JOHN cases" 2 "IMPE reference, mean" 3 "IMPE reference, lower" 4 "IMPE reference, upper") size(small) row(2)) ///
 > subtitle("2021 on, IMPE infections reference scenario with uncertainty", size(small))  ///
 > note("Uncertainty limits: dashed (– – –) curves", size(small))
-> 
-> graph export "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.pdf", replace
-> 
-> 
-> 
-> ****
-> * daily infections, 2 scenarios, IMPE 
-> 
-> twoway ///
+{res}{txt}
+{com}. 
+. graph export "graph 26 COVID-19 daily cases, $country, reference scenario with uncertainty, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/graph 26 COVID-19 daily cases, Iran, reference scenario with uncertainty, IMPE.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. ****
+. * daily infections, 2 scenarios, IMPE 
+. 
+. twoway ///
 > (line DayCasMeRaA00 date, sort lcolor(cyan) lwidth(thick)) /// 1 JOHN
 > (line DayINFMeRaA03S02 date, sort lcolor(black)) /// 2 IMPE reference mean
 > (line DayINFMeRaA03S01 date, sort lcolor(green) lwidth(thick) lpattern(tight_dot)) /// 3 IMPE better mean
@@ -1896,9 +2477,12 @@ Sorted by: {res}date
 > 5 "IMPE worse scenario, upper uncertainty limit") size(small) row(3)) ///
 > subtitle("2021 on, 2 scenarios", size(small)) ///
 > note("Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves", size(small))
-> 
-> graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", replace
-> */
+{res}{txt}
+{com}. 
+. graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/graph 27 COVID-19 daily cases, Iran, 2 scenarios, IMPE.pdf written in PDF format)
+
+{com}. 
 . 
 . 
 . 
@@ -1907,29 +2491,35 @@ Sorted by: {res}date
 . 
 . 
 . gen DayITCMeSmA02S01 =  DayINFMeSmA02S01 / DayCasMeRaA00
-{txt}(134 missing values generated)
+{txt}(133 missing values generated)
 
 {com}. 
 . label var DayITCMeSmA02S01  "Daily Infections IHME to cases JOHN"
 {txt}
 {com}. 
-. /*
-> gen DayITCMeRaA03S02 =  DayINFMeRaA03S02 / DayCasMeRaA00
-> 
-> label var DayITCMeRaA03S02  "Daily Infections IMPE to cases JOHN"
-> 
-> 
-> twoway ///
+. 
+. gen DayITCMeRaA03S02 =  DayINFMeRaA03S02 / DayCasMeRaA00
+{txt}(230 missing values generated)
+
+{com}. 
+. label var DayITCMeRaA03S02  "Daily Infections IMPE to cases JOHN"
+{txt}
+{com}. 
+. 
+. twoway ///
 > (line DayITCMeSmA02S01 date, sort lcolor(black)) /// 1 "IHME"
 > if date >= td(01jan2020) ///
 > , xtitle(Date) xlabel(#$monthspast01jan2020merge, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-> ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estimated infections to reported cases, $country", size(medium)) /// 
+> ytitle(Daily estimated infections to reported cases) title("COVID-19 daily estimated infections to reported cases, $country, IHME", size(medium)) /// 
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) ///
 > subtitle("reference scenarios", size(small)) 
-> 
-> graph export "graph 28 C19 daily estimated infections to reported cases, $country, reference scenarios.pdf", replace
-> */
+{res}{txt}
+{com}. 
+. graph export "graph 28 C19 daily estimated infections to reported cases, $country, reference scenarios.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/graph 28 C19 daily estimated infections to reported cases, Iran, reference scenarios.pdf written in PDF format)
+
+{com}. 
 . 
 . 
 . 
@@ -3453,7 +4043,7 @@ all files already exist and are up to date.
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220617/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}19 Jun 2022, 07:05:32
+ {txt}closed on:  {res}19 Jun 2022, 17:42:04
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
