@@ -448,6 +448,10 @@ TUN:	Tunisia;
 YEM:	Yemen
    
 ****   
+   
+(b1) Eastern Mediterranean Region (EMR), official country reports (JOHN)
+   
+****   
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
@@ -483,9 +487,43 @@ YEM:	Yemen
    
 ![image](https://user-images.githubusercontent.com/30849720/174466399-fc2c0208-d969-43e9-8f47-69f2512f895c.png)
 
-****
+****   
    
+(b2) Eastern Mediterranean Region (EMR), IHME model
+   
+****  
+   
+(7) EMR [Daily deaths, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201101%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
+   
+![image](https://user-images.githubusercontent.com/30849720/174488553-6ca4687d-0573-4ccd-a644-dde177f271a7.png)
+   
+****  
+   
+(8) EMR [Daily deaths, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201101%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
+   
+![image](https://user-images.githubusercontent.com/30849720/174488560-a3bcecd1-f737-40a8-b61f-bbc7660d0e5d.png)
+   
+****  
+   
+(9) EMR [Daily infections, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201111%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/174488646-2ada53ca-f776-4b44-9a4d-5ea0b0a688fe.png)
+   
+****  
+   
+(10) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201111%20b%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/174488678-687ac81c-aa38-4052-8fe3-1158f67beca9.png)
+   
+****  
+   
+(11) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without extremes](https://github.com/pourmalek/covir2/blob/main/20220617/output/graph%201111%20c%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/174488811-0aad6987-94b9-49c9-9b57-726025cb8e52.png)
+   
+****    
 
+   
 
 
 ********************************************************************************************************************************************
