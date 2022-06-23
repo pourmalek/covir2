@@ -1984,6 +1984,8 @@ graph export "graph 1001 COVID-19 daily deaths, EMRO countries, Johns Hopkins, 2
 
 * daily deaths, JOHN, 2022 on, EMRO countries, Without extremes
 
+* Without extremes: EMR, Iran, Sudan, and Oman.
+
 twoway ///
 (line DayDeaMeSmA00AFG date, sort lcolor(brown) lwidth(medium) lpattern(solid)) /// 1 Afghanistan
 (line DayDeaMeSmA00BHR date, sort lcolor(brown) lwidth(medium) lpattern(dash)) /// 2 Bahrain
@@ -2063,6 +2065,50 @@ graph export "graph 1001 c COVID-19 daily deaths, EMRO countries, Johns Hopkins,
 
 
 
+
+
+
+
+
+****************************
+
+* daily deaths, JOHN, 2022 on, EMRO countries, June 2022
+
+* Without extremes: EMR, Oman.
+
+twoway ///
+(line DayDeaMeSmA00AFG date, sort lcolor(brown) lwidth(medium) lpattern(solid)) /// 1 Afghanistan
+(line DayDeaMeSmA00BHR date, sort lcolor(brown) lwidth(medium) lpattern(dash)) /// 2 Bahrain
+(line DayDeaMeSmA00DJI date, sort lcolor(brown) lwidth(medium) lpattern(dot)) /// 3 Djibouti 
+(line DayDeaMeSmA00EGY date, sort lcolor(blue) lwidth(medium) lpattern(solid)) /// 4 Egypt
+(line DayDeaMeSmA00IRQ date, sort lcolor(blue) lwidth(medium) lpattern(dash)) /// 5 Iraq
+(line DayDeaMeSmA00JOR date, sort lcolor(blue) lwidth(medium) lpattern(dot)) /// 6 Jordan
+(line DayDeaMeSmA00KWT date, sort lcolor(green) lwidth(medium) lpattern(solid)) /// 7 Kuwait
+(line DayDeaMeSmA00LBN date, sort lcolor(green) lwidth(medium) lpattern(dash)) /// 8 Lebanon
+(line DayDeaMeSmA00LBY date, sort lcolor(green) lwidth(medium) lpattern(dot)) /// 9 Libya
+(line DayDeaMeSmA00MAR date, sort lcolor(gold) lwidth(medium) lpattern(solid)) /// 10 Morocco
+(line DayDeaMeSmA00PAK date, sort lcolor(gold) lwidth(medium) lpattern(dot)) /// 11 Pakistan
+(line DayDeaMeSmA00PSE date, sort lcolor(magenta) lwidth(medium) lpattern(solid)) /// 12 Palestine
+(line DayDeaMeSmA00QAT date, sort lcolor(magenta) lwidth(medium) lpattern(dash)) /// 13 Qatar
+(line DayDeaMeSmA00SAU date, sort lcolor(magenta) lwidth(medium) lpattern(dot)) /// 14 Saudi Arabia
+(line DayDeaMeSmA00SOM date, sort lcolor(orange) lwidth(medium) lpattern(solid)) /// 15 Somalia
+(line DayDeaMeSmA00SDN date, sort lcolor(orange) lwidth(medium) lpattern(dash)) /// 16 Sudan
+(line DayDeaMeSmA00SYR date, sort lcolor(orange) lwidth(medium) lpattern(dot)) /// 17 Syria
+(line DayDeaMeSmA00TUN date, sort lcolor(purple) lwidth(medium) lpattern(solid)) /// 18 Tunisia
+(line DayDeaMeSmA00ARE date, sort lcolor(purple) lwidth(medium) lpattern(dash)) /// 19 United Arab Emirates
+(line DayDeaMeSmA00YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 10 Yemen
+(line DayDeaMeSmA00IRN date, sort lcolor(cyan) lwidth(thick) lpattern(solid)) /// 21 Iran
+if date >= td(01jun2022) & date <= td(01jul2022) ///
+, xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(21 "Iran" 1 "AFG" 2 "BHR" 3 "DJI" 4 "EGY" 5 "IRQ" 6 "JOR" 7 "KWT" ///
+8 "LBN" 9 "LBY" 10 "MAR" 11 "PAK" 12 "PSE" 13 "QAT" 14 "SAU" 15 "SOM" 16 "SDN" ///
+17 "SYR" 18 "TUN" 19 "ARE" 10 "YEM") size(small) row(3)) ///
+subtitle("Without extremes: EMR, Oman. June 2022. Smoothed", size(small))
+
+graph export "graph 1001 d COVID-19 daily deaths, EMRO countries, Johns Hopkins, 2022 on.pdf", replace
 
 
 
@@ -2405,6 +2451,8 @@ graph export "graph 1111 b COVID-19 daily infections, EMRO countries, IHME, 2022
 
 * daily infections, IHME, 2022 on, EMRO countries, Forecast only = 03jun2022 on
 
+* Without extremes: EMR total and Morocco.
+
 twoway ///
 (line DayINFFOREA02S01AFG date, sort lcolor(brown) lwidth(medium) lpattern(solid)) /// 1 Afghanistan
 (line DayINFFOREA02S01BHR date, sort lcolor(brown) lwidth(medium) lpattern(dash)) /// 2 Bahrain
@@ -2438,6 +2486,50 @@ legend(order(21 "Iran" 1 "AFG" 2 "BHR" 3 "DJI" 4 "EGY" 5 "IRQ" 6 "JOR" 7 "KWT" /
 subtitle("Without extremes: EMR total and Morocco. Forecast only. Smoothed", size(small))
 
 graph export "graph 1111 c COVID-19 daily infections, EMRO countries, IHME, 2022 on.pdf", replace
+
+
+
+
+
+
+
+
+
+****************************
+
+* daily infections, IHME, 2022 on, EMRO countries, Forecast only = 03jun2022 on
+
+* Without extremes: EMR total, Morocco, Pakistan, Sudan, Afghanistan, United Arab Emirates.
+
+twoway ///
+(line DayINFFOREA02S01BHR date, sort lcolor(brown) lwidth(medium) lpattern(dash)) /// 1 Bahrain
+(line DayINFFOREA02S01DJI date, sort lcolor(brown) lwidth(medium) lpattern(dot)) /// 2 Djibouti 
+(line DayINFFOREA02S01EGY date, sort lcolor(blue) lwidth(medium) lpattern(solid)) /// 3 Egypt
+(line DayINFFOREA02S01IRQ date, sort lcolor(blue) lwidth(medium) lpattern(dash)) /// 4 Iraq
+(line DayINFFOREA02S01JOR date, sort lcolor(blue) lwidth(medium) lpattern(dot)) /// 5 Jordan
+(line DayINFFOREA02S01KWT date, sort lcolor(green) lwidth(medium) lpattern(solid)) /// 6 Kuwait
+(line DayINFFOREA02S01LBN date, sort lcolor(green) lwidth(medium) lpattern(dash)) /// 7 Lebanon
+(line DayINFFOREA02S01LBY date, sort lcolor(green) lwidth(medium) lpattern(dot)) /// 8 Libya
+(line DayINFFOREA02S01OMN date, sort lcolor(gold) lwidth(medium) lpattern(dash)) /// 9 Oman
+(line DayINFFOREA02S01PSE date, sort lcolor(magenta) lwidth(medium) lpattern(solid)) /// 10 Palestine
+(line DayINFFOREA02S01QAT date, sort lcolor(magenta) lwidth(medium) lpattern(dash)) /// 11 Qatar
+(line DayINFFOREA02S01SAU date, sort lcolor(magenta) lwidth(medium) lpattern(dot)) /// 12 Saudi Arabia
+(line DayINFFOREA02S01SOM date, sort lcolor(orange) lwidth(medium) lpattern(solid)) /// 13 Somalia
+(line DayINFFOREA02S01SYR date, sort lcolor(orange) lwidth(medium) lpattern(dot)) /// 14 Syria
+(line DayINFFOREA02S01TUN date, sort lcolor(purple) lwidth(medium) lpattern(solid)) /// 15 Tunisia
+(line DayINFFOREA02S01YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 16 Yemen
+(line DayINFFOREA02S01IRN date, sort lcolor(cyan) lwidth(thick) lpattern(solid)) /// 17 Iran
+if date >= td(03jun2022) & date <= td(01oct2022) ///
+, xtitle(Date) xlabel(#5, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported infections) title("COVID-19 daily reported infections, EMRO countries, IHME, 2022", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(17 "Iran" 1 "BHR" 2 "DJI" 3 "EGY" 4 "IRQ" 5 "JOR" 6 "KWT" ///
+7 "LBN" 8 "LBY" 9 "OMN" 10 "PSE" 11 "QAT" 12 "SAU" 13 "SOM" ///
+14 "SYR" 15 "TUN" 16 "YEM") size(small) row(3)) ///
+subtitle("Without extremes: EMR total, MAR, PAK, SDN, AFG, ARE. Forecast only. Smoothed", size(small))
+
+graph export "graph 1111 d COVID-19 daily infections, EMRO countries, IHME, 2022 on.pdf", replace
 
 
 
