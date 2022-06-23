@@ -114,26 +114,26 @@ Complex Disasters:
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-m
+![image](https://user-images.githubusercontent.com/30849720/175428285-6c75338d-d7d0-405e-9942-9285a0737feb.png)
    
 ****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428518-a06c9520-1aca-4db0-b988-e2c93fa97f7d.png)
   
 ****
 
 (00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428614-c0624cc3-ed28-4abd-9d3d-ad7c34bacda0.png)
  
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-m
-  
+![image](https://user-images.githubusercontent.com/30849720/175428696-66c42a05-6571-4a7c-a2d8-f71ba3b592a9.png)
+    
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -148,8 +148,8 @@ m
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-m
-  
+![image](https://user-images.githubusercontent.com/30849720/175428785-415ac0a8-e544-489b-8876-ea2701f71067.png)
+
 ****
 
 (8c) Iran [Daily estimated infections IHME to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
