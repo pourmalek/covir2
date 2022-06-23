@@ -81,19 +81,19 @@ Complex Disasters:
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175427996-772d6a40-3f6b-4a3f-a31d-9fcfdc042a5a.png)
  
 ****
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428095-2b666d3c-6e7f-4f4d-9508-fba551b31504.png)
  
 ****
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428184-6a6cf80d-1556-4d70-be0c-c360f1e71b51.png)
  
 ****
 
@@ -114,26 +114,26 @@ m
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-m
+![image](https://user-images.githubusercontent.com/30849720/175428285-6c75338d-d7d0-405e-9942-9285a0737feb.png)
    
 ****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428518-a06c9520-1aca-4db0-b988-e2c93fa97f7d.png)
   
 ****
 
 (00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428614-c0624cc3-ed28-4abd-9d3d-ad7c34bacda0.png)
  
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-m
-  
+![image](https://user-images.githubusercontent.com/30849720/175428696-66c42a05-6571-4a7c-a2d8-f71ba3b592a9.png)
+    
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -148,8 +148,8 @@ m
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-m
-  
+![image](https://user-images.githubusercontent.com/30849720/175428785-415ac0a8-e544-489b-8876-ea2701f71067.png)
+
 ****
 
 (8c) Iran [Daily estimated infections IHME to reported cases JOHN, main scenarios, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2029%20C19%20daily%20estimated%20infections%20to%20reported%20cases%2C%20Iran%2C%20reference%20scenarios%202021.pdf)
@@ -237,79 +237,89 @@ YEM:	Yemen
    
 ****   
    
-(b1) Eastern Mediterranean Region (EMR), official country reports (JOHN)
+**(b1) Eastern Mediterranean Region (EMR), official country reports (JOHN)**
    
 ****   
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-m
+![image](https://user-images.githubusercontent.com/30849720/175428908-9cbb63f7-923c-4734-813a-df84604cb947.png)
     
 ****   
    
 (2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-m
+![image](https://user-images.githubusercontent.com/30849720/175429066-66ff1d1e-92b0-4f5a-ba52-bcec2d269954.png)
     
 ****   
     
 (3) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-m
+![image](https://user-images.githubusercontent.com/30849720/175429113-e8b44160-5857-41a5-b9ea-898c5c8fe7a5.png)
  
 ****   
-
-(4) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
-   
-m
     
-****   
+(4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
-   
-m
-    
-****   
-    
-(6) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201010%20c%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
-   
-m
  
-****   
-   
-(b2) Eastern Mediterranean Region (EMR), IHME model
-   
-****  
-   
-(7) EMR [Daily deaths, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201101%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
-   
-m
-    
-****  
-   
-(8) EMR [Daily deaths, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201101%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
-   
-m
-    
-****  
-   
-(9) EMR [Daily infections, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
-   
-m
-    
-****  
-   
-(10) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20b%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
-   
-m
-    
-****  
-   
-(11) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20c%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
-   
-m
-    
 ****    
+
+(5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/175429182-fb4fbfaf-37cf-49bf-9ee4-aa72ea3e01d3.png)
+    
+****   
+   
+(6) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/175429232-5c32dfe7-6bd5-4936-af2e-f592189717ae.png)
+    
+****   
+    
+(7) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201010%20c%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
+   
+![image](https://user-images.githubusercontent.com/30849720/175429335-970f2c8a-4789-4300-ba4e-ea81e8f398c6.png)
+ 
+****   
+   
+**(b2) Eastern Mediterranean Region (EMR), IHME model**
+   
+****  
+   
+(8) EMR [Daily deaths, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201101%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
+   
+![image](https://user-images.githubusercontent.com/30849720/175429402-7cc05c2c-558b-4268-9764-fc42de77e498.png)
+    
+****  
+   
+(9) EMR [Daily deaths, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201101%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
+   
+![image](https://user-images.githubusercontent.com/30849720/175429489-e7f09ace-24ee-40a3-9d9e-da25989b8733.png)
+    
+****  
+   
+(10) EMR [Daily infections, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/175429562-b8a3c807-6750-4ba7-bc8b-d5b194b4794a.png)
+    
+****  
+   
+(11) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20b%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/175429767-968f4c00-1e63-4c33-845d-fc12a9fe5afc.png)
+    
+****  
+   
+(12) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20c%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+![image](https://user-images.githubusercontent.com/30849720/175430385-0ca7fdd4-eb8f-4235-897f-497a9fdfe620.png)
+    
+****  
+   
+(13) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without more extremes](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201111%20c%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+   
+    
+****       
 
    
    
