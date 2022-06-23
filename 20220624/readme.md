@@ -81,19 +81,19 @@ Complex Disasters:
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175427996-772d6a40-3f6b-4a3f-a31d-9fcfdc042a5a.png)
  
 ****
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428095-2b666d3c-6e7f-4f4d-9508-fba551b31504.png)
  
 ****
 
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-m
+![image](https://user-images.githubusercontent.com/30849720/175428184-6a6cf80d-1556-4d70-be0c-c360f1e71b51.png)
  
 ****
 
