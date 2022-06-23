@@ -237,13 +237,13 @@ YEM:	Yemen
    
 ****   
    
-(b1) Eastern Mediterranean Region (EMR), official country reports (JOHN)
+**(b1) Eastern Mediterranean Region (EMR), official country reports (JOHN)**
    
 ****   
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-m
+![image](https://user-images.githubusercontent.com/30849720/175428908-9cbb63f7-923c-4734-813a-df84604cb947.png)
     
 ****   
    
@@ -277,7 +277,7 @@ m
  
 ****   
    
-(b2) Eastern Mediterranean Region (EMR), IHME model
+**(b2) Eastern Mediterranean Region (EMR), IHME model**
    
 ****  
    
