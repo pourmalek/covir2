@@ -1,4 +1,4 @@
-! Read Iran COVID-19 epidemic models situation report No 63 - 2022-06-14 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/63%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2063%20–%202022-06-24.pdf)
+! Read Iran COVID-19 epidemic models situation report No 63 - 2022-06-24 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/63%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2063%20–%202022-06-24.pdf)
 
 <br/><br/> 
 
