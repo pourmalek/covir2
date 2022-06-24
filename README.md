@@ -326,7 +326,28 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
 ![image](https://user-images.githubusercontent.com/30849720/175428095-2b666d3c-6e7f-4f4d-9508-fba551b31504.png)
  
 ****
+  
+(0c) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
+  
+![image](https://user-images.githubusercontent.com/30849720/175603662-20c11021-aad7-4fd6-971c-daad40681324.png)
 
+<br/><br/> 
+  
+Legend (Number sequenced and Frequency as of 30 May 2022) :
+  
+![image](https://user-images.githubusercontent.com/30849720/175603892-54e9a680-3a3d-41f1-a8a8-ad6b7f6890d2.png)
+  
+  
+SOURCE CITATION: Emma B. Hodcroft. 2021. "CoVariants: SARS-CoV-2 Mutations and Variants of Interest." https://covariants.org/
+
+SOURCE WEB PAGE: https://covariants.org/per-country 
+
+DATE ACCESED: June 24, 2022
+  
+SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html). You can view this license [here](https://github.com/hodcroftlab/covariants/blob/master/LICENSE.md)
+  
+****
+   
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220624/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/175428184-6a6cf80d-1556-4d70-be0c-c360f1e71b51.png)
