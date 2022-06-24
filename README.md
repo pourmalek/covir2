@@ -291,8 +291,8 @@ The IMPE update 20220530 was released on 20220624. Not included.
 ********************************************************************************************************************************************
 
 
-### [(a) Iran](https://github.com/pourmalek/covir2#a-iran-1) 
-### [(b) Eastern Mediterranean Region](https://github.com/pourmalek/covir2#b-eastern-mediterranean-region-emr)
+### [(a) Iran]() 
+### [(b) Eastern Mediterranean Region]()
   
 ****   
    
