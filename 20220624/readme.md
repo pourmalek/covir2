@@ -39,10 +39,9 @@ The IMPE update 20220530 was released on 20220624. Not included.
 همچنین احتمال چرخش وایارنت های موجود و واریانت های جدید و خطرناک، وجود دارد.
 
   
+<div dir="rtr"> 
   
   
-    <div dir="ltr">
-
 [IHME, COVID-19 Results Briefing, Iran, June 13, 2022](https://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf)
 
 [IHME, COVID-19 Results Briefing, The Eastern Mediterranean Region, June 9, 2022](https://www.healthdata.org/sites/default/files/files/Projects/COVID/2022/44567_briefing_the_Eastern_Mediterranean_Region_4.pdf)
