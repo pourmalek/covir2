@@ -39,15 +39,16 @@ The IMPE update 20220530 was released on 20220624. Not included.
 همچنین احتمال چرخش وایارنت های موجود و واریانت های جدید و خطرناک، وجود دارد.
 
   
-  توجه: 
   
-  مدل آی اچ ام ای سناریوی دسترسی کشورهای با درآمد متوسط پایین (Lower Middle Income) به داروهای ضد ویروسی کووید را جایگزین سناریوی واکسیناسیون دوز سوم نموده است.
-
-  ایران جزو کشورهای با درآمد متوسط پایین قرار گرفته است.
-
-  وزارت بهداشت، درمان، و آموزش پزشکی، و پیگری آنی پروژه ناتمام پیست اسب دوانی باغلق (https://www.isna.ir/news/1401040201138/)، 
   
-  به فکر داروهای ضد ویروسی کووید باشید.
+    <div dir="ltr">
+
+[IHME, COVID-19 Results Briefing, Iran, June 13, 2022](https://www.healthdata.org/sites/default/files/covid_briefs/142_briefing_Iran_Islamic_Republic_of.pdf)
+
+[IHME, COVID-19 Results Briefing, The Eastern Mediterranean Region, June 9, 2022](https://www.healthdata.org/sites/default/files/files/Projects/COVID/2022/44567_briefing_the_Eastern_Mediterranean_Region_4.pdf)
+  
+<div dir="rtr"> 
+
 
   <br/><br/> 
 
