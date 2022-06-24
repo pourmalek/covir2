@@ -120,7 +120,7 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
  
 ****
   
-(0c) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country)  
+(0c) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
   
 ![image](https://user-images.githubusercontent.com/30849720/175603662-20c11021-aad7-4fd6-971c-daad40681324.png)
 
@@ -133,7 +133,7 @@ Legend (Number sequenced and Frequency as of 30 May 2022) :
   
 SOURCE CITATION: Emma B. Hodcroft. 2021. "CoVariants: SARS-CoV-2 Mutations and Variants of Interest." https://covariants.org/
 
-SOURCE WEB PAGE: https://covariants.org/per-country
+SOURCE WEB PAGE: https://covariants.org/per-country 
 
 ACCESED DATE: June 24, 2022
 
