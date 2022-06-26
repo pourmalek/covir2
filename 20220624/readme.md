@@ -46,6 +46,13 @@ The IMPE update 20220530 was released on 20220624. Not included.
 
 [IHME, COVID-19 Results Briefing, The Eastern Mediterranean Region, June 9, 2022](https://www.healthdata.org/sites/default/files/files/Projects/COVID/2022/44567_briefing_the_Eastern_Mediterranean_Region_4.pdf)
   
+  <br/><br/> 
+  
+  
+  ![image](https://user-images.githubusercontent.com/30849720/175817975-142a0497-49e0-4d9a-9422-8a8d19251f37.png)
+
+  https://fararu.com/fa/news/557274/ویدئو-ماجرای-فروشی-استخوان-در-فروشگاه-های-زنجیره%E2%80%8Cای-چیست
+  
 <div dir="rtr"> 
 
 
