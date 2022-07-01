@@ -117,12 +117,14 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book 
+![image](https://user-images.githubusercontent.com/30849720/176908254-39dcc70f-ac73-433c-9fa9-406ffe70e28e.png)
+
 ****
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book  
+![image](https://user-images.githubusercontent.com/30849720/176908377-3a8db96e-e26e-4955-9cf5-3d925b0b2b6f.png)
+
 ****
   
 (0c) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
