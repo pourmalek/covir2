@@ -149,7 +149,8 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
   
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book  
+![image](https://user-images.githubusercontent.com/30849720/176909420-1858f665-00de-49e0-ad91-cd4ca689bb02.png)
+  
 ****
 
 (2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
@@ -169,22 +170,26 @@ book
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book    
+![image](https://user-images.githubusercontent.com/30849720/176909569-d9e7930e-240b-4167-9898-95dfa33341cd.png)
+  
 ****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book   
+![image](https://user-images.githubusercontent.com/30849720/176909685-bffe4699-b26d-4085-8518-d5cc0ae56163.png)
+  
 ****
 
 (00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book  
+![image](https://user-images.githubusercontent.com/30849720/176909800-0ba76344-38d6-419c-9812-70e65d6dab35.png)
+  
 ****
 
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book     
+![Uploading image.png…]()
+  
 ****
 
 (8) Iran [Daily cases or infections, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2022%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
