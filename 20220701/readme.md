@@ -225,11 +225,13 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/176913094-3f483759-f632-46e2-ac09-b868ac443686.png)
   
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
+![image](https://user-images.githubusercontent.com/30849720/176913317-5b039ebc-db0e-40b6-ba95-c99117a29b9b.png)
   
 ****
 ****
@@ -299,22 +301,26 @@ YEM:	Yemen
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book     
+![image](https://user-images.githubusercontent.com/30849720/176913630-359f0561-720b-45e3-8c79-356f2c54db79.png)
+  
 ****   
    
 (2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book     
+![image](https://user-images.githubusercontent.com/30849720/176913814-07897e7f-4de8-4220-862a-c8f6a086886c.png)
+  
 ****   
     
 (3) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book  
+![image](https://user-images.githubusercontent.com/30849720/176913993-e6ca0006-667d-4990-8715-4d8cee314de3.png)
+  
 ****   
     
 (4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%201001%20d%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book  
+![image](https://user-images.githubusercontent.com/30849720/176914179-594477d4-0338-49c5-8a60-0f1960a05f7d.png)
+  
 ****    
 
 (5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
