@@ -133,15 +133,29 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
   
 <br/><br/> 
   
-Legend (Number sequenced and Frequency as of 30 May 2022) :
+Legend (Number sequenced and Frequency as of 1 July 2022) :
   
-![image](https://user-images.githubusercontent.com/30849720/176909116-a9c39160-1f1e-4cb4-ba20-086f81eda6a8.png)   
+![image](https://user-images.githubusercontent.com/30849720/176909116-a9c39160-1f1e-4cb4-ba20-086f81eda6a8.png)  
+
+<br/><br/> 
+
+Mapping of variants nomenclature schemes 
+
+![image](https://user-images.githubusercontent.com/30849720/176985924-4b25c6b7-efd1-4d50-8add-ae476c83bcbb.png)
+
+https://covariants.org
+
+CoVariants uses the Nextstrain naming system for variants ([here](https://nextstrain.org/blog/2021-01-06-updated-SARS-CoV-2-clade-naming)). 
+
+WHO variants nomenclature scheme ([here](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)).
+
+<br/><br/> 
   
 SOURCE CITATION: Emma B. Hodcroft. 2021. "CoVariants: SARS-CoV-2 Mutations and Variants of Interest." https://covariants.org/
 
 SOURCE WEB PAGE: https://covariants.org/per-country 
 
-DATE ACCESED: June 24, 2022
+DATE ACCESED: July 1, 2022
   
 SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html). You can view this license [here](https://github.com/hodcroftlab/covariants/blob/master/LICENSE.md)
   
