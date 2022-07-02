@@ -133,7 +133,7 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
   
 <br/><br/> 
   
-Legend (Number sequenced and Frequency as of 30 May 2022) :
+Legend (Number sequenced and Frequency as of 1 July 2022) :
   
 ![image](https://user-images.githubusercontent.com/30849720/176909116-a9c39160-1f1e-4cb4-ba20-086f81eda6a8.png)   
   
