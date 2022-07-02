@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Jul 2022, 06:47:33
+ {txt}opened on:  {res} 2 Jul 2022, 09:43:32
 {txt}
 {com}. 
 . 
@@ -1135,13 +1135,11 @@ Sorted by:
 {txt}
 {com}. 
 . save "country.dta", replace
-{txt}(note: file country.dta not found)
-file country.dta saved
+{txt}file country.dta saved
 
 {com}. 
 . export delimited using "country.csv", replace 
-{res}{txt}(note: file country.csv not found)
-{txt}file country.csv saved
+{res}{txt}file country.csv saved
 
 {com}. 
 . 
@@ -1374,6 +1372,7 @@ file country.dta saved
 . 
 . 
 . 
+. 
 . ****************************
 . 
 . * daily deaths, JOHN, 2022 on
@@ -1393,6 +1392,30 @@ file country.dta saved
 {txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/graph 3 COVID-19 daily deaths, Iran, Johns Hopkins, 2022 on.pdf written in PDF format)
 
 {com}. 
+. 
+. 
+. 
+. 
+. ****************************
+. 
+. * daily deaths, JOHN, 2022 June
+. 
+. twoway ///
+> (line DayDeaMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayDeaMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+> if date >= td(01jun2022) & date <= td(01jul2022) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins, 2022", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
+{res}{txt}
+{com}. 
+. graph export "graph 3 b COVID-19 daily deaths, $country, Johns Hopkins, 2022 June.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/graph 3 b COVID-19 daily deaths, Iran, Johns Hopkins, 2022 June.pdf written in PDF format)
+
+{com}. 
+. 
 . 
 . 
 . ****************************
@@ -1416,6 +1439,26 @@ file country.dta saved
 {com}. 
 . 
 . 
+. 
+. ****************************
+. 
+. * daily cases, JOHN, 2022 June
+. 
+. twoway ///
+> (line DayCasMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayCasMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+> if date >= td(01jun2022) & date <= td(01jul2022) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins, 2022 June", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1)) 
+{res}{txt}
+{com}. 
+. graph export "graph 4 b COVID-19 daily cases, $country, Johns Hopkins, 2022 June.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/graph 4 b COVID-19 daily cases, Iran, Johns Hopkins, 2022 June.pdf written in PDF format)
+
+{com}. 
 . 
 . 
 . 
@@ -2872,8 +2915,7 @@ all files already exist and are up to date.
 {txt}
 {com}. 
 . save "JOHN deaths and cases EMRO region and countries.dta", replace
-{txt}(note: file JOHN deaths and cases EMRO region and countries.dta not found)
-file JOHN deaths and cases EMRO region and countries.dta saved
+{txt}file JOHN deaths and cases EMRO region and countries.dta saved
 
 {com}. 
 . 
@@ -3235,8 +3277,7 @@ file JOHN deaths and cases EMRO region and countries.dta saved
 {txt}
 {com}. 
 . save "IHME EMRO reference scenario 2022.dta", replace
-{txt}(note: file IHME EMRO reference scenario 2022.dta not found)
-file IHME EMRO reference scenario 2022.dta saved
+{txt}file IHME EMRO reference scenario 2022.dta saved
 
 {com}. 
 . 
@@ -3558,7 +3599,7 @@ file IHME EMRO reference scenario 2022.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Jul 2022, 06:49:04
+ {txt}closed on:  {res} 2 Jul 2022, 09:44:56
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

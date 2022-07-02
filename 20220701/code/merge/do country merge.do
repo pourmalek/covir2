@@ -611,6 +611,7 @@ graph export "graph 2 COVID-19 daily cases, $country, Johns Hopkins.pdf", replac
 
 
 
+
 ****************************
 
 * daily deaths, JOHN, 2022 on
@@ -626,6 +627,27 @@ xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) lege
 legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
 
 graph export "graph 3 COVID-19 daily deaths, $country, Johns Hopkins, 2022 on.pdf", replace
+
+
+
+
+
+****************************
+
+* daily deaths, JOHN, 2022 June
+
+twoway ///
+(line DayDeaMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayDeaMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+if date >= td(01jun2022) & date <= td(01jul2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins, 2022", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
+
+graph export "graph 3 b COVID-19 daily deaths, $country, Johns Hopkins, 2022 June.pdf", replace
+
 
 
 
@@ -646,6 +668,23 @@ legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1))
 graph export "graph 4 COVID-19 daily cases, $country, Johns Hopkins, 2022 on.pdf", replace
 
 
+
+
+****************************
+
+* daily cases, JOHN, 2022 June
+
+twoway ///
+(line DayCasMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+(line DayCasMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+if date >= td(01jun2022) & date <= td(01jul2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins, 2022 June", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1)) 
+
+graph export "graph 4 b COVID-19 daily cases, $country, Johns Hopkins, 2022 June.pdf", replace
 
 
 
