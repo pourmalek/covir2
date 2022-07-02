@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 2 Jul 2022, 09:43:32
+ {txt}opened on:  {res} 2 Jul 2022, 09:53:05
 {txt}
 {com}. 
 . 
@@ -57,11 +57,11 @@
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}             860
+{col 5}not matched{col 30}{res}             859
 {txt}{col 9}from master{col 30}{res}             783{txt}  (_merge==1)
-{col 9}from using{col 30}{res}              77{txt}  (_merge==2)
+{col 9}from using{col 30}{res}              76{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}             108{txt}  (_merge==3)
+{col 5}matched{col 30}{res}             109{txt}  (_merge==3)
 {col 5}{hline 41}
 {com}. {c )-}
 {txt}
@@ -162,14 +162,14 @@
 . 
 . 
 . gen DayCTDMeRaA00S00 =  DayCasMeRaA00 / DayDeaMeRaA00
-{txt}(135 missing values generated)
+{txt}(134 missing values generated)
 
 {com}. 
 . label var DayCTDMeRaA00S00  "Daily Cases to Deaths S0 JOHN"
 {txt}
 {com}. 
 . gen TotCTDMeRaA00S00 =  TotCasMeRaA00 / TotDeaMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotCTDMeRaA00S00  "Total Cases to Deaths S0 JOHN"
@@ -289,7 +289,7 @@
 . 
 .     
 . gen DayDERMeRaA00S00 = DayDeaMeRaA00 / DayDeaMeRaA00
-{txt}(135 missing values generated)
+{txt}(134 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA00S00 "Daily Deaths estim to reported JOHN = 1" 
@@ -297,7 +297,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA01S00 = DayDeaMeRaA01S00 / DayDeaMeRaA00
-{txt}(890 missing values generated)
+{txt}(889 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA01S00 "Daily Deaths estim to reported Mean DELP S0"
@@ -307,7 +307,7 @@
 . 
 . 
 . gen DayDERMeRaA02S01 = DayDeaMeSmA02S01 / DayDeaMeRaA00
-{txt}(135 missing values generated)
+{txt}(134 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S01 "Daily Deaths estim to reported Mean not smoothed IHME S1"
@@ -315,7 +315,7 @@
 {com}. 
 . 
 . gen DayDERMeRaA02S02 = DayDeaMeSmA02S02 / DayDeaMeRaA00
-{txt}(135 missing values generated)
+{txt}(134 missing values generated)
 
 {com}. 
 . label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHME S2"
@@ -357,7 +357,7 @@
 . 
 . 
 . gen DayCERMeRaA00S00 = DayCasMeRaA00 / DayCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA00S00 "Daily Cases estim to reported JOHN = 1" 
@@ -366,7 +366,7 @@
 . 
 . 
 . gen DayCERMeRaA01S00 = DayCasMeRaA01S00 / DayCasMeRaA00
-{txt}(885 missing values generated)
+{txt}(884 missing values generated)
 
 {com}. 
 . label var DayCERMeRaA01S00 "Daily Cases estim to reported Mean DELP S0"
@@ -378,7 +378,7 @@
 . 
 . 
 . gen DayIERMeRaA02S01 = DayINFMeSmA02S01 / DayCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S01 "Daily Infections estim to reported Mean not smoothed IHME S1"
@@ -386,7 +386,7 @@
 {com}. 
 . 
 . gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
@@ -426,7 +426,7 @@
 . 
 . 
 . gen TotDERMeRaA00S00 = TotDeaMeRaA00 / TotDeaMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA00S00 "Total Deaths estim to reported JOHN = 1" 
@@ -435,7 +435,7 @@
 . 
 . 
 . gen TotDERMeRaA01S00 = TotDeaMeRaA01S00 / TotDeaMeRaA00
-{txt}(884 missing values generated)
+{txt}(883 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA01S00 "Total Deaths estim to reported Mean DELP S0"
@@ -444,7 +444,7 @@
 . 
 . 
 . gen TotDERMeRaA02S01 = TotDeaMeSmA02S01 / TotDeaMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S01 "Total Deaths estim to reported Mean not smoothed IHME S1"
@@ -452,7 +452,7 @@
 {com}. 
 . 
 . gen TotDERMeRaA02S02 = TotDeaMeSmA02S02 / TotDeaMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHME S2"
@@ -477,7 +477,7 @@
 > */
 . 
 . gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00
-{txt}(992 missing values generated)
+{txt}(991 missing values generated)
 
 {com}. 
 . label var TotDERMeRaA05S00 "Total Deaths estim to reported S0 SRIV"
@@ -493,7 +493,7 @@
 . 
 . 
 . gen TotCERMeRaA00S00 = TotCasMeRaA00 / TotCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA00S00 "Total Cases estim to reported JOHN = 1" 
@@ -501,7 +501,7 @@
 {com}. 
 . 
 . gen TotCERMeRaA01S00 = TotCasMeRaA01S00 / TotCasMeRaA00
-{txt}(884 missing values generated)
+{txt}(883 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA01S00 "Total Cases estim to reported Mean DELP S0"
@@ -510,7 +510,7 @@
 . 
 . 
 . gen TotIERMeRaA02S01 = TotINFMeSmA02S01 / TotCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S01 "Total Infections estim to reported Mean not smoothed IHME S1"
@@ -518,7 +518,7 @@
 {com}. 
 . 
 . gen TotIERMeRaA02S02 = TotINFMeSmA02S02 / TotCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed IHME S2"
@@ -544,7 +544,7 @@
 . 
 . 
 . gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00
-{txt}(992 missing values generated)
+{txt}(991 missing values generated)
 
 {com}. 
 . label var TotCERMeRaA05S00 "Total Cases estim to reported S0 SRIV"
@@ -568,7 +568,7 @@
 
 {txt}Contains data from {res}/Users/farshadpourmalek/Downloads/covir2-main/20220701/code/JOHN/country JOHN.dta
 {txt}  obs:{res}           992                          
-{txt} vars:{res}           291                          1 Jul 2022 06:40
+{txt} vars:{res}           291                          2 Jul 2022 09:52
 {txt} size:{res}     1,184,448                          
 {txt}{hline}
               storage   display    value
@@ -1236,11 +1236,11 @@ Sorted by:
 . * gen monthspast vars for #thicknumber of graphs JOHN
 . 
 . gen monthspast01jan2020JOHN = ((today_numericdailydate - td(01jan2020)) / 30) + 1
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . replace monthspast01jan2020JOHN = round(monthspast01jan2020)
-{txt}(891 real changes made)
+{txt}(892 real changes made)
 
 {com}. 
 . global monthspast01jan2020JOHN = monthspast01jan2020JOHN
@@ -1253,11 +1253,11 @@ Sorted by:
 . 
 . 
 . gen monthspast01jan2021JOHN = ((today_numericdailydate - td(01jan2021)) / 30) + 1
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . replace monthspast01jan2021JOHN = round(monthspast01jan2021)
-{txt}(891 real changes made)
+{txt}(892 real changes made)
 
 {com}. 
 . global monthspast01jan2021JOHN = monthspast01jan2021JOHN
@@ -1270,11 +1270,11 @@ Sorted by:
 . 
 . 
 . gen monthspast01jan2022JOHN = ((today_numericdailydate - td(01jan2022)) / 30) + 1
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . replace monthspast01jan2022JOHN = round(monthspast01jan2022JOHN)
-{txt}(891 real changes made)
+{txt}(892 real changes made)
 
 {com}. 
 . global monthspast01jan2022JOHN = monthspast01jan2022JOHN
@@ -1289,15 +1289,15 @@ Sorted by:
 . * end date of graphs JOHN
 . 
 . gen nextmonthspast01jan2020JOHN = monthspast01jan2020JOHN 
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . gen nextmonthdayspast01jan2020JOHN = nextmonthspast01jan2020JOHN * 30
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . gen nextmonthdatespast01jan2020JOHN = td(01jan2020) + nextmonthdayspast01jan2020JOHN
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . local nextmonthdatespast01jan2020JOHN = nextmonthdatespast01jan2020JOHN
@@ -1306,15 +1306,15 @@ Sorted by:
 . 
 . 
 . gen nextmonthspast01jan2022JOHN = monthspast01jan2022JOHN 
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . gen nextmonthdayspast01jan2022JOHN = nextmonthspast01jan2022JOHN * 30
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . gen nextmonthdatespast01jan2022JOHN = td(01jan2022) + nextmonthdayspast01jan2022JOHN
-{txt}(101 missing values generated)
+{txt}(100 missing values generated)
 
 {com}. 
 . local nextmonthdatespast01jan2022JOHN = nextmonthdatespast01jan2022JOHN
@@ -1952,7 +1952,7 @@ Sorted by:
 . 
 . 
 . gen DayITCMeSmA02S01 =  DayINFMeSmA02S01 / DayCasMeRaA00
-{txt}(129 missing values generated)
+{txt}(128 missing values generated)
 
 {com}. 
 . label var DayITCMeSmA02S01  "Daily Infections IHME to cases JOHN"
@@ -3599,7 +3599,7 @@ all files already exist and are up to date.
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220701/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 2 Jul 2022, 09:44:56
+ {txt}closed on:  {res} 2 Jul 2022, 09:54:43
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
