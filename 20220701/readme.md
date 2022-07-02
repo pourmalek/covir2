@@ -126,8 +126,41 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
 ![image](https://user-images.githubusercontent.com/30849720/176908377-3a8db96e-e26e-4955-9cf5-3d925b0b2b6f.png)
 
 ****
+
+(0c) Iran [Daily reported deaths, JOHN, 2022 June](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/177009711-e12b9e45-72f1-4df0-81d0-320b138de6d9.png)
+
+****
   
-(0c) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/176909420-1858f665-00de-49e0-ad91-cd4ca689bb02.png)
+  
+****
+
+(2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
+
+  
+****
+
+(3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
+
+ 
+****
+
+(4) Iran [Daily deaths, 2021 on, all scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%20all%20scenarios%2C%20IHME.pdf)
+
+ 
+****
+  
+(6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
+  
+![image](https://user-images.githubusercontent.com/30849720/176909569-d9e7930e-240b-4167-9898-95dfa33341cd.png)
+  
+****  
+  
+(000) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
   
 ![image](https://user-images.githubusercontent.com/30849720/176909068-20b1bb33-499e-44aa-a569-1c71664fa238.png)
   
@@ -160,33 +193,6 @@ DATE ACCESED: July 1, 2022
 SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html). You can view this license [here](https://github.com/hodcroftlab/covariants/blob/master/LICENSE.md)
   
 ****
-  
-(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
-
-![image](https://user-images.githubusercontent.com/30849720/176909420-1858f665-00de-49e0-ad91-cd4ca689bb02.png)
-  
-****
-
-(2) Iran [Daily deaths, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2012%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios.pdf)
-
-  
-****
-
-(3) Iran [Daily deaths, 2021 on, reference scenario with uncertainty, IHME](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2014%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IHME.pdf)
-
- 
-****
-
-(4) Iran [Daily deaths, 2021 on, all scenarios, IHME](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2015%20COVID-19%20daily%20deaths%2C%20Iran%2C%20all%20scenarios%2C%20IHME.pdf)
-
- 
-****
-  
-(6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
-  
-![image](https://user-images.githubusercontent.com/30849720/176909569-d9e7930e-240b-4167-9898-95dfa33341cd.png)
-  
-****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
@@ -200,6 +206,12 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
   
 ****
 
+(00c) Iran [Daily reported cases, JOHN, 2022 June](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%204%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/177010454-cb1a4ed9-da1f-4f5c-a697-b39e5339d3a5.png)
+  
+****
+  
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/176910024-17f970d2-c9fb-4ae7-b93e-10e2555a6f0c.png)
