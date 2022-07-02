@@ -129,7 +129,7 @@ https://www.pishkhan.com/Archive/1401/04/14010402/ArmanRavabetOmoomi651141109710
 
 (0c) Iran [Daily reported deaths, JOHN, 2022 June](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-![image](https://user-images.githubusercontent.com/30849720/177009711-e12b9e45-72f1-4df0-81d0-320b138de6d9.png)
+![image](https://user-images.githubusercontent.com/30849720/177017618-4335adc7-da16-42d8-9dfd-9537af342cc3.png)
 
 ****
   
