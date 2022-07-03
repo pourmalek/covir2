@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-**! Read Iran COVID-19 epidemic models situation report No 63 - 2022-06-24 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/63%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2063%20–%202022-06-24.pdf)
+**! Read Iran COVID-19 epidemic models situation report No 64 - 2022-07-01 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/64%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2064%20–%202022-07-01.pdf)
 
 <br/><br/>
 
@@ -291,7 +291,7 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 63 - 2022-06-24 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/63%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2063%20–%202022-06-24.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 64 - 2022-07-01 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/64%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2064%20–%202022-07-01.pdf)
  
 
 ********************************************************************************************************************************************
