@@ -24,7 +24,7 @@ The latest IMPE update 20220530 was released on 20220624. Not included.
 
 <div dir="rtr"> 
   
-  ** کووید-۱۹ **
+  ** موج هفتم کووید-۱۹ **
   
   گزارش های رسمی موارد بیماری و مرگ:
 
