@@ -316,7 +316,7 @@ grstyle color background white
 * daily tests, MEDRIVA, 2020 on
 
 twoway ///
-(line newtests date, sort lcolor(black) lwidth(medium) yaxis(1)) /// 
+(line newtests date, sort lcolor(blue) lwidth(medium) yaxis(1)) /// 
 (line percentpositive7dayaverage date, sort lcolor(red) lwidth(medium) yaxis(2)) /// 
 if date >= td(01jan2020) ///
 , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
@@ -325,10 +325,12 @@ ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(h
 ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
 ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
 title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ytitle(, color(blue) axis(1)) ytitle(, color(red) axis(2)) ///
 yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
 legend(region(lcolor(none))) legend(bexpand) ///
-legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
+legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1))
+
+ 
 
 graph export "graph 1 COVID-19 daily tests, $country, MEDRIVA.pdf", replace
 

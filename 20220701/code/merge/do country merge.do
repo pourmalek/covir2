@@ -597,7 +597,7 @@ ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(h
 ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
 ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
 title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ytitle(, color(blue) axis(1)) ytitle(, color(red) axis(2)) ///
 yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
 legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
@@ -622,7 +622,7 @@ ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(h
 ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
 ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
 title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ytitle(, color(blue) axis(1)) ytitle(, color(red) axis(2)) ///
 yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
 legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
@@ -646,7 +646,7 @@ ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(h
 ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
 ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
 title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
-xscale(lwidth(vthin) lcolor(gray*.2)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ytitle(, color(blue) axis(1)) ytitle(, color(red) axis(2)) ///
 yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
 legend(region(lcolor(none))) legend(bexpand) ///
 legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
