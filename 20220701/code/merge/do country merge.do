@@ -108,6 +108,18 @@ drop _merge
 
 
 
+* MEDRIVA
+
+if regexm(c(os),"Mac") == 1 {
+
+	merge 1:1 date using "$pathcovir2/MEDRIVA/country MEDRIVA.dta"
+}
+else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\MEDRIVA\country MEDRIVA.dta"
+
+drop _merge 
+
+
+
 * 
 
 label var loc_grand_name "Location"
@@ -564,6 +576,82 @@ gen nextmonthdayspast01jan2022JOHN = nextmonthspast01jan2022JOHN * 30
 gen nextmonthdatespast01jan2022JOHN = td(01jan2022) + nextmonthdayspast01jan2022JOHN
 
 local nextmonthdatespast01jan2022JOHN = nextmonthdatespast01jan2022JOHN
+
+
+
+
+
+
+
+****************************
+
+* daily tests, MEDRIVA, 2020 on
+
+twoway ///
+(line newtests date, sort lcolor(blue) lwidth(medium) yaxis(1)) /// 
+(line percentpositive7dayaverage date, sort lcolor(red) lwidth(medium) yaxis(2)) /// 
+if date >= td(01jan2020) & date <= `nextmonthdatespast01jan2020JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2020JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ///
+ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(horizontal) axis(1)) ///
+ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
+ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
+title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ///
+yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
+legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
+
+graph export "graph 0 a COVID-19 daily tests, $country, MEDRIVA, 2020 on.pdf", replace
+
+
+
+
+
+****************************
+
+* daily tests, MEDRIVA, 2021 on
+
+twoway ///
+(line newtests date, sort lcolor(blue) lwidth(medium) yaxis(1)) /// 
+(line percentpositive7dayaverage date, sort lcolor(red) lwidth(medium) yaxis(2)) /// 
+if date >= td(01jan2021) & date <= `nextmonthdatespast01jan2020JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2021JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ///
+ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(horizontal) axis(1)) ///
+ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
+ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
+title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ///
+yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
+legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
+
+graph export "graph 0 b COVID-19 daily tests, $country, MEDRIVA, 2021 on.pdf", replace
+
+
+
+
+***
+
+* daily tests, MEDRIVA, 2022 on
+
+twoway ///
+(line newtests date, sort lcolor(blue) lwidth(medium) yaxis(1)) /// 
+(line percentpositive7dayaverage date, sort lcolor(red) lwidth(medium) yaxis(2)) /// 
+if date >= td(01jan2022) & date <= `nextmonthdatespast01jan2020JOHN' ///
+, xtitle(Date) xlabel(#$monthspast01jan2022JOHN, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+xlabel(, angle(forty_five)) ///
+ylabel(, format(%9.0fc) labsize(small) axis(1))  ylabel(, labsize(small) angle(horizontal) axis(1)) ///
+ylabel(, format(%9.0fc) labsize(small) axis(2))  ylabel(, labsize(small) angle(horizontal) axis(2)) ///
+ytitle("Daily tests", axis(1)) ytitle("% positive 7-day average", axis(2)) ///
+title("COVID-19 daily tests, $country, MEDRIVA", size(medium)) ///
+xscale(lwidth(vthin) lcolor(gray*.2)) ///
+yscale(lwidth(vthin) lcolor(gray*.2) axis(1)) yscale(lwidth(vthin) lcolor(gray*.2) axis(2)) ///
+legend(region(lcolor(none))) legend(bexpand) ///
+legend(order(1 "Daily tests" 2 "% positive 7-day average") size(small) row(1)) 
+
+graph export "graph 0 c COVID-19 daily tests, $country, MEDRIVA, 2022 on.pdf", replace
 
 
 
