@@ -209,6 +209,14 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
 ![image](https://user-images.githubusercontent.com/30849720/177010454-cb1a4ed9-da1f-4f5c-a697-b39e5339d3a5.png)
   
 ****
+
+(00d) Iran [Daily tests and % positive, MEDRIVA, 2022](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%200%20c%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202022%20on.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/177175545-1051a841-f228-41cd-a7da-7955569824e7.png)
+
+
+MEDRIVA: https://charts.medriva.com/country/IR  
+****
   
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220701/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
