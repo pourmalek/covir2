@@ -70,7 +70,8 @@ global IMPEepoch 30May2022 // update release date
 global SRIVepoch 01Jul2022 // update release date																		 
 *            9/ ----------
 
-
+global MEDRIVAdate 20220703
+*           10/ ----------
 		
 ******************************************************		
 		
@@ -143,6 +144,8 @@ IMPE A03
 LANL A04 * discontinued
 SRIV A05
 
+MEDRIVA  Gives daily tests and percent positive tests. https://charts.medriva.com/country/IR
+
 */
 
 
@@ -166,6 +169,8 @@ do "$pathcovir2/IHME/do country IHME.do"
 // do "$pathcovir2/LANL/do country LANL.do" // The LANL COVID-19 Team made its last real-time forecast on September 27th, 2021. [for 20210926]. This is more than two weeks old and will not be used. 
 
 do "$pathcovir2/SRIV/do country SRIV.do" 
+
+do "$pathcovir2/MEDRIVA/do country MEDRIVA.do" 
 
 do "$pathcovir2/merge/do country merge.do" 
 
