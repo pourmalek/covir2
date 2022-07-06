@@ -75,7 +75,7 @@ drop _merge
 
 
 
-/* IMPE
+* IMPE
 
 if regexm(c(os),"Mac") == 1 {
 
@@ -84,7 +84,7 @@ if regexm(c(os),"Mac") == 1 {
 else if regexm(c(os),"Windows") == 1 merge 1:1 date using "$pathcovir2\IMPE\country IMPE.dta"
 
 drop _merge
-*/
+
 
 
 /* LANL
@@ -185,7 +185,7 @@ label var TotITDMeRaA02S02 "Total Infections to Deaths S2 IHME"
 
 
 
-/*
+
 gen DayITDMeRaA03S01  = DayINFMeRaA03S01  / DayDeaMeRaA03S01   
 
 label var DayITDMeRaA03S01  "Daily Infections to Deaths S1 IMPE"
@@ -213,7 +213,7 @@ label var DayITDMeRaA03S03  "Daily Infections to Deaths S3 IMPE"
 gen TotITDMeRaA03S03  = TotINFMeRaA03S03  / TotDeaMeRaA03S03   
 
 label var TotITDMeRaA03S03  "Total Infections to Deaths S3 IMPE"
-*/
+
 
 
 
@@ -258,7 +258,7 @@ label var DayDERMeRaA02S02 "Daily Deaths estim to reported Mean not smoothed IHM
 
 
 
-/*
+
 gen DayDERMeRaA03S01 = DayDeaMeRaA03S01 / DayDeaMeRaA00
 
 label var DayDERMeRaA03S01 "Daily Deaths estim to reported Mean S1 IMPE"
@@ -272,7 +272,7 @@ label var DayDERMeRaA03S02 "Daily Deaths estim to reported Mean S2 IMPE"
 gen DayDERMeRaA03S03 = DayDeaMeRaA03S03 / DayDeaMeRaA00
 
 label var DayDERMeRaA03S03 "Daily Deaths estim to reported Mean S3 IMPE"
-*/
+
 
 
 gen DayDERMeRaA05S00  = DayDeaMeRaA05S00 / DayDeaMeRaA00
@@ -313,7 +313,7 @@ gen DayIERMeRaA02S02 = DayINFMeSmA02S02 / DayCasMeRaA00
 label var DayIERMeRaA02S02 "Daily Infections estim to reported Mean not smoothed IHME S2"
 
 
-/*
+
 gen DayIERMeRaA03S01 = DayINFMeRaA03S01 / DayCasMeRaA00
 
 label var DayIERMeRaA03S01 "Daily Infections estim to reported Mean S1 IMPE"
@@ -327,7 +327,7 @@ label var DayIERMeRaA03S02 "Daily Infections estim to reported Mean S2 IMPE"
 gen DayIERMeRaA03S03 = DayINFMeRaA03S03 / DayCasMeRaA00
 
 label var DayIERMeRaA03S03 "Daily Infections estim to reported Mean S3 IMPE"
-*/
+
 
 gen DayCERMeRaA05S00  = DayCasMeRaA05S00 / DayCasMeRaA00
 
@@ -365,7 +365,7 @@ label var TotDERMeRaA02S02 "Total Deaths estim to reported Mean not smoothed IHM
 
 
 
-/*
+
 gen TotDERMeRaA03S01 = TotDeaMeRaA03S01 / TotDeaMeRaA00
 
 label var TotDERMeRaA03S01 "Total Deaths estim to reported Mean S1 IMPE"
@@ -379,7 +379,7 @@ label var TotDERMeRaA03S02 "Total Deaths estim to reported Mean S2 IMPE"
 gen TotDERMeRaA03S03 = TotDeaMeRaA03S03 / TotDeaMeRaA00
 
 label var TotDERMeRaA03S03 "Total Deaths estim to reported Mean S3 IMPE"
-*/
+
 
 gen TotDERMeRaA05S00  = TotDeaMeRaA05S00 / TotDeaMeRaA00
 
@@ -416,7 +416,7 @@ label var TotIERMeRaA02S02 "Total Infections estim to reported Mean not smoothed
 
 
 
-/*
+
 gen TotIERMeRaA03S01 = TotINFMeRaA03S01 / TotCasMeRaA00
 
 label var TotIERMeRaA03S01 "Total Infections estim to reported Mean S1 IMPE"
@@ -430,7 +430,7 @@ label var TotIERMeRaA03S02 "Total Infections estim to reported Mean S2 IMPE"
 gen TotIERMeRaA03S03 = TotINFMeRaA03S03 / TotCasMeRaA00
 
 label var TotIERMeRaA03S03 "Total Infections estim to reported Mean S3 IMPE"
-*/
+
 
 
 gen TotCERMeRaA05S00  = TotCasMeRaA05S00 / TotCasMeRaA00
@@ -911,7 +911,7 @@ note("Reference scenario forecasts are marked with |||||||||||| " , size(small))
 graph export "graph 15 COVID-19 daily deaths, $country, all scenarios, IHME.pdf", replace
 
 
-/*
+
 ****
 * daily deaths, reference scenario with uncertainty, IMPE, 2021
 
@@ -955,7 +955,7 @@ subtitle("2021 on, 3 scenarios", size(small)) ///
 note("Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves.")
 
 graph export "graph 17 COVID-19 daily deaths, $country, 3 scenarios, IMPE.pdf", replace
-*/
+
 
 
 
@@ -1176,7 +1176,7 @@ legend(order(1 "Reference" 2 "Masks" 3 "Antivirals") size(small) rows(1))
 graph export "graph 25 1 COVID-19 daily cases, $country, all scenarios, IHME.pdf", replace
 
 
-/*
+
 ****
 * daily infections, reference scenario with uncertainty, IMPE, 2021
 
@@ -1218,7 +1218,7 @@ subtitle("2021 on, 2 scenarios", size(small)) ///
 note("Better and worse scenarios: tight dot (|||||) curves; Uncertainty limits: dashed (– – –) curves", size(small))
 
 graph export "graph 27 COVID-19 daily cases, $country, 2 scenarios, IMPE.pdf", replace
-*/
+
 
 
 
