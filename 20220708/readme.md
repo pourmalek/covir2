@@ -194,15 +194,15 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
   
 ****
 
-(00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+(00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178088454-62ce2211-8f5f-4edf-a23c-11c2326c3418.png)
   
 ****
 
-(00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(00b) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178088490-f1a8ac81-9964-4907-8056-1dd5eaee8401.png)
   
 ****
 
