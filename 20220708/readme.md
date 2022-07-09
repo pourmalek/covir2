@@ -106,12 +106,15 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
 
 ### Selected graphs
    
-### [(a) Iran](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#a-iran-1) 
-### [(b) Eastern Mediterranean Region](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#b-eastern-mediterranean-region-emr)
+### [(a) Iran, Official reports and models' predictions](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#a-iran-1) 
+  
+### [(b) Iran, Model's predictive performance in 2022]() 
+  
+### [(c) Eastern Mediterranean Region](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#b-eastern-mediterranean-region-emr)
   
 ****   
    
-## (a) Iran   
+## (a) Iran, Official reports and models' predictions   
 
 ****
 
@@ -318,7 +321,9 @@ MEDRIVA:  https://charts.medriva.com/country/IR
 ******************************
 ******************************
   
-## Model's predictive performance in 2022:
+## (b) Iran, Model's predictive performance in 2022
+  
+  
   
 **DELP**
   
@@ -340,7 +345,7 @@ Iran [daily deaths, Iran, DELP, updates in 2022, Forecasts and backcasts; smooth
 ******************************
 ******************************
    
-## (b) Eastern Mediterranean Region (EMR)
+## (c) Eastern Mediterranean Region (EMR)
    
 AFG:	Afghanistan;
 ARE:	United Arab Emirates;
