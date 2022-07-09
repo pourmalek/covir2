@@ -121,15 +121,15 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
 
 ****
 
-(0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(0b) Iran [Daily reported deaths, JOHN, 2022]https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178086313-6fbdf177-1e0a-4853-b5ad-985a47ffca8b.png)
 
 ****
 
-(0c) Iran [Daily reported deaths, JOHN, 2022 June](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
+(0c) Iran [Daily reported deaths, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178087828-0930b666-e182-4cdd-82a9-a9607f32ac6d.png)
 
 ****
   
