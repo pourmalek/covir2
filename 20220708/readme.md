@@ -394,9 +394,9 @@ YEM:	Yemen
    
 ****  
    
-(8) EMR [Daily deaths, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%201101%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
+(8) EMR [Daily deaths, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%201101%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/178089826-b7ce611b-20b1-460f-9562-35b801cee739.png)
   
 ****  
    
