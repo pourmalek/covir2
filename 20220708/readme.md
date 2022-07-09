@@ -285,7 +285,7 @@ MEDRIVA:  https://charts.medriva.com/country/IR
 ****
 ****
 
-**IHME graphs **
+**IHME graphs**
 
 ****
 
