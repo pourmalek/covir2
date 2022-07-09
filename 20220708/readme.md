@@ -200,7 +200,15 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
   
 ****
 
-(00b1) Iran [daily tests and % positive tests, MEDRIVA, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%200%20b%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202021%20on.pdf)
+(00b1) Iran [daily reported cases JOHN, % positive tests MEDRIVA, all time](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%202%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/178088991-75da74cc-e12c-4b71-b671-53ba56d7f06a.png)
+
+MEDRIVA:  https://charts.medriva.com/country/IR
+  
+****
+
+(00b2) Iran [daily tests and % positive tests, MEDRIVA, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%200%20b%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202021%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/178088667-c7faad57-8b0f-4265-8c38-3d1df0fa2201.png)
 
@@ -208,7 +216,7 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
 ****
 
-(00b2) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(00b3) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/178088490-f1a8ac81-9964-4907-8056-1dd5eaee8401.png)
   
