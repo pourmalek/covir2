@@ -121,7 +121,7 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
 
 ****
 
-(0b) Iran [Daily reported deaths, JOHN, 2022]https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
+(0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/178086313-6fbdf177-1e0a-4853-b5ad-985a47ffca8b.png)
 
@@ -133,9 +133,9 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
 
 ****
   
-(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178088083-1fa9ca57-118b-4832-811c-98f395e1ebe1.png)
   
 ****
 
@@ -154,10 +154,9 @@ book
  
 ****
   
-(6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
+(6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book
-
+![image](https://user-images.githubusercontent.com/30849720/178088132-84cd80ed-0bb2-4403-bfc6-c503a61979f2.png)
   
 ****  
   
