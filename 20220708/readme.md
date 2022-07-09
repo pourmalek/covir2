@@ -320,7 +320,7 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
 ## Model's predictive performance in 2022:
   
-** DELP **
+**DELP**
   
 ****
   
