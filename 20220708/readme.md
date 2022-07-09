@@ -220,16 +220,16 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
 ****
 
-(00d) Iran [Daily tests and % positive, MEDRIVA, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%200%20c%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202022%20on.pdf)
+(00d) Iran [Daily tests and % positive, MEDRIVA, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%200%20c%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178088757-567d25db-2f26-40cf-8e85-2882e7a32f7b.png)
 
-MEDRIVA: https://charts.medriva.com/country/IR  
+MEDRIVA:  https://charts.medriva.com/country/IR  
 ****
   
-(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
+(7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178088806-aeb7db6d-a3ca-4b31-83fe-ab81bb6158b9.png)
   
 ****
 
@@ -243,9 +243,9 @@ book
   
 ****
 
-(8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
+(8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/178088837-0d73ca71-4438-48f7-9fd5-3c76d39d259d.png)
   
 ****
 
