@@ -406,9 +406,8 @@ book
   
 ****  
    
-(10) EMR [Daily infections, EMR countries, IHME, 2022](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%201101%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+(10) EMR [Daily infections, EMR countries, IHME, 2022]()
    
-![image](https://user-images.githubusercontent.com/30849720/178089690-d497faa9-be42-4455-98bf-3ccf528fbff0.png)
   
 ****  
    
