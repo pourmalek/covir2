@@ -110,7 +110,7 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
   
 ### [(b) Iran, Model's predictive performance in 2022](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#b-iran-models-predictive-performance-in-2022-1) 
   
-### [(c) Eastern Mediterranean Region, Official reports and models' predictions](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#c-eastern-mediterranean-region-emr)
+### [(c) Eastern Mediterranean Region, Official reports and models' predictions](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#c-eastern-mediterranean-region-official-reports-and-models-predictions-1)
   
 ****   
    
@@ -325,12 +325,11 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
   
   
-**DELP**
+**(1) DELP**
   
 ****
   
-Iran [daily deaths, Iran, DELP, updates in 2022, Forecasts and backcasts; smooth; no extremes]  
-(https://github.com/pourmalek/covir2/blob/main/20220708/output/DELP/graph%201%20Iran%20C19%20daily%20deaths%2C%20DELP%2C%20Updates%20together%20no%20extremes.pdf)  
+Iran [daily deaths, Iran, DELP, updates in 2022, Forecasts and backcasts; smooth; no extremes](https://github.com/pourmalek/covir2/blob/main/20220708/output/DELP/graph%201%20Iran%20C19%20daily%20deaths%2C%20DELP%2C%20Updates%20together%20no%20extremes.pdf)  
   
 ![image](https://user-images.githubusercontent.com/30849720/178110852-306d8bf7-86be-417b-87cf-116352d3e44a.png)
   
