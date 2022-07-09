@@ -345,7 +345,7 @@ Iran [daily deaths, Iran, DELP, updates in 2022, Forecasts and backcasts; smooth
 ******************************
 ******************************
    
-## (c) Eastern Mediterranean Region (EMR)
+## (c) Eastern Mediterranean Region, Official reports and models' predictions
    
 AFG:	Afghanistan;
 ARE:	United Arab Emirates;
