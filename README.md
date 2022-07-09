@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-**! Read Iran COVID-19 epidemic models situation report No 65 - 2022-07-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/65%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2065%20–%202022-07-09.pdf)
+**! Read Iran COVID-19 epidemic models situation report No 65 - 2022-07-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/65%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2065%20–%202022-07-08.pdf)
 
 <br/><br/>
 
@@ -387,7 +387,7 @@ https://www.instagram.com/p/CfyxAcNDOdI/?igshid=MDJmNzVkMjY=
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 65 - 2022-07-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/65%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2065%20–%202022-07-09.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 65 - 2022-07-08 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/65%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2065%20–%202022-07-08.pdf)
  
 
 ********************************************************************************************************************************************
