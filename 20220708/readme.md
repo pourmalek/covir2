@@ -110,7 +110,7 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
   
 ### [(b) Iran, Model's predictive performance in 2022](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#b-iran-models-predictive-performance-in-2022-1) 
   
-### [(c) Eastern Mediterranean Region](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#c-eastern-mediterranean-region-emr)
+### [(c) Eastern Mediterranean Region, Official reports and models' predictions](https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#c-eastern-mediterranean-region-emr)
   
 ****   
    
