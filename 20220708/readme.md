@@ -311,6 +311,30 @@ MEDRIVA:  https://charts.medriva.com/country/IR
 
 (17) Iran [Percent cumulative vaccinated, 2021 on, IHME](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%20105%20COVID-19%20cumulative%20vaccinated%20percent%2C%20Iran%20IHME.pdf)
 
+****  
+  
+  
+******************************  
+******************************
+******************************
+  
+## Model's predictive performance in 2022:
+  
+** DELP **
+  
+****
+  
+Iran [daily deaths, Iran, DELP, updates in 2022, Forecasts and backcasts; smooth; no extremes]  
+(https://github.com/pourmalek/covir2/blob/main/20220708/output/DELP/graph%201%20Iran%20C19%20daily%20deaths%2C%20DELP%2C%20Updates%20together%20no%20extremes.pdf)  
+  
+![image](https://user-images.githubusercontent.com/30849720/178110852-306d8bf7-86be-417b-87cf-116352d3e44a.png)
+  
+****
+  
+  
+  
+  
+  
  
 ******************************
 ******************************
