@@ -412,21 +412,21 @@ YEM:	Yemen
   
 ****  
    
-(11) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%201111%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+(11) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%201111%20b%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
    
-![image](https://user-images.githubusercontent.com/30849720/178089718-6335b890-12e5-4154-81c2-5197f22c697c.png)
+![image](https://user-images.githubusercontent.com/30849720/178089985-45fbb7bf-330b-4244-89b7-0f8269783bf5.png)
   
 ****  
    
-(12) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without extremes](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%201111%20c%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+(12) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without extremes](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%201111%20c%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/178090008-91b34084-3c12-4fb9-9b45-5298f3d41891.png)
   
 ****  
    
-(13) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without more extremes](https://github.com/pourmalek/covir2/blob/main/20220708/output/graph%201111%20d%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
+(13) EMR [Daily infections, EMR countries, IHME, 2022, Forecast only, without more extremes](https://github.com/pourmalek/covir2/blob/main/20220708/output/merge/graph%201111%20d%20COVID-19%20daily%20infections%2C%20EMRO%20countries%2C%20IHME%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/178090036-f052a21c-1fb7-412f-bf86-4324207a54f8.png)
   
 ****       
 
