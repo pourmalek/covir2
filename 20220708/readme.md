@@ -345,7 +345,7 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
 ****
   
-(2-1) Iran [Daily deaths, Iran, IHME, updates in 2022, Forecasts and backcasts; smooth; no extremes] (https://github.com/pourmalek/covir2/blob/main/20220708/output/IHME/graph%201%20Iran%20C19%20daily%20deaths%2C%20IHME%2C%20Updates%20together%20no%20extremes.pdf)  
+(2-1) Iran [Daily deaths, Iran, IHME, updates in 2022, Forecasts and backcasts; smooth; no extremes](https://github.com/pourmalek/covir2/blob/main/20220708/output/IHME/graph%201%20Iran%20C19%20daily%20deaths%2C%20IHME%2C%20Updates%20together%20no%20extremes.pdf)  
   
 ![image](https://user-images.githubusercontent.com/30849720/178112755-9a76d691-dd53-468c-9797-532a62b35e59.png)
   
