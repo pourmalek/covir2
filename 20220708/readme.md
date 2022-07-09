@@ -62,6 +62,12 @@ https://github.com/pourmalek/covir2/blob/main/20220708/readme.md#b-iran-models-p
 https://github.com/pourmalek/CovidLongitudinal
 
 Longitudinal assessment of international periodically updating COVID-19 pandemic studies // Work in progress
+  
+  
+  نقاط قوت و ضعف مدل های بین المللی به روز شونده همه گیری کووید در پیوند زیر مورد بحث قرار گرفته است:
+
+https://github.com/pourmalek/CovidVisualizedMethodology#characteristics-of-the-models
+
 
 
 **وایارنت ها**:
