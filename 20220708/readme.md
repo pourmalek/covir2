@@ -71,10 +71,11 @@ Longitudinal assessment of international periodically updating COVID-19 pandemic
 Source for variants: Emma B. Hodcroft. 2021. "CoVariants: SARS-CoV-2 Mutations and Variants of Interest." https://covariants.org/ SOURCE WEB PAGE: https://covariants.org/per-country DATE ACCESED: July 1, 2022, SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero General Public License (AGPL). 
 
 
-
+****
+****  
 **کمیته علمی کشوری کرونا**
 
-
+****
 دبیر کمیته علمی کشوری کرونا: تا 3 ماه آینده موج جدیدی از کرونا نخواهیم داشت
 
 تاریخ انتشار: ۲۲:۱۸ - ۰۹ خرداد ۱۴۰۱ - 30 May 2022
@@ -108,7 +109,7 @@ mehrnews.com/xXNJM
 
  
 ****
-
+****
 **انجمن اپیدمیولوژیست های ایران**
 
 
