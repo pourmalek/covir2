@@ -137,7 +137,9 @@ https://www.instagram.com/p/Cd1CKzNo6qq/?igshid=MDJmNzVkMjY%3D
 هلاکوئی ۳۱ اردیبهشت ۱۴۰۱
 
 #روند_سینوسی_افت_و_خیز_کرونا
+  
 #تعداد_بحرانی_افراد_حساس
+  
 #موج_هفتم
 
 
@@ -177,8 +179,11 @@ https://www.instagram.com/p/CfyxAcNDOdI/?igshid=MDJmNzVkMjY=
 هلاکوئی ۱۸ تیر ۱۴۰۱
 
 #کرونا
+  
 #موج_هفتم
+  
 #تحلیل_نادرست
+  
 https://www.instagram.com/p/CfyxAcNDOdI/?igshid=MDJmNzVkMjY= 
 
 
