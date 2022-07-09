@@ -160,21 +160,21 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a GNU Affero Gen
   
 ****  
   
-(000) Iran [Variants composition, Ending 30 May 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
+(000) Iran [Variants composition, Ending 27 June 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
   
-![image](https://user-images.githubusercontent.com/30849720/176909068-20b1bb33-499e-44aa-a569-1c71664fa238.png)
+![image](https://user-images.githubusercontent.com/30849720/178088182-c2a85ff0-570b-4237-97b0-5c7b2f284176.png)
   
 <br/><br/> 
   
-Legend (Number sequenced and Frequency as of 1 July 2022) :
+Legend (Number sequenced and Frequency as of 8 July 2022) :
   
-![image](https://user-images.githubusercontent.com/30849720/176909116-a9c39160-1f1e-4cb4-ba20-086f81eda6a8.png)  
+![image](https://user-images.githubusercontent.com/30849720/178088224-8e803ca3-9722-44d9-abc0-48e4bcdd1e21.png)
 
 <br/><br/> 
 
 Mapping of variants nomenclature schemes 
 
-![image](https://user-images.githubusercontent.com/30849720/176985924-4b25c6b7-efd1-4d50-8add-ae476c83bcbb.png)
+![image](https://user-images.githubusercontent.com/30849720/178088261-87e9effe-2cdc-4b31-b981-8fb1b74adbc3.png)
 
 https://covariants.org
 
@@ -188,7 +188,7 @@ SOURCE CITATION: Emma B. Hodcroft. 2021. "CoVariants: SARS-CoV-2 Mutations and V
 
 SOURCE WEB PAGE: https://covariants.org/per-country 
 
-DATE ACCESED: July 1, 2022
+DATE ACCESED: July 8, 2022
   
 SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html). You can view this license [here](https://github.com/hodcroftlab/covariants/blob/master/LICENSE.md)
   
