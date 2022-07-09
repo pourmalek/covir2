@@ -26,6 +26,8 @@ The latest IMPE update 20220620 was released on 20220704.
   
   **  (الف) موج هفتم کووید-۱۹ **
 
+**(الف) موج هفتم کووید-۱۹** 
+
 
 گزارش تارنمای (https://charts.medriva.com/country/IR) از درصد تست های مثبت:
 
