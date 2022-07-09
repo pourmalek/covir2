@@ -1,0 +1,247 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/IMPE/log country IMPE 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Jul 2022, 10:51:23
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country IMPE 2.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek
+. ***************************************************************************
+. 
+. 
+. * merge update files
+. * input data files: "country IMPE 202?????.dta " 
+. * output data files: "country IMPE longit.dta"
+. 
+. 
+. use "IMPE 20220102.dta", clear  
+{txt}
+{com}. 
+. local list ///
+> 20220102 ///
+> 20220120 ///
+> 20220131 ///
+> 20220315 ///
+> 20220530 ///
+> 20220620
+{txt}
+{com}. 
+. 
+. 
+. foreach update of local list {c -(}
+{txt}  2{com}. 
+.         use "IMPE `update'.dta", clear
+{txt}  3{com}.         
+.         capture rename DayDeaMeSmA03S00`update' DayDeaMeSmA03`update'
+{txt}  4{com}.         
+.         capture drop update_date
+{txt}  5{com}.         
+.         gen update_date = date("`update'", "YMD")
+{txt}  6{com}.          
+.         capture drop DayDeaFOREA03`update'
+{txt}  7{com}.         
+.         gen DayDeaFOREA03`update' = DayDeaMeSmA03`update'
+{txt}  8{com}.         
+.         replace DayDeaFOREA03`update' = . if date < update_date
+{txt}  9{com}.         
+.         label var DayDeaFOREA03`update' "DayDeaMeSmA03 Forecast only"
+{txt} 10{com}.         
+.         save "country IMPE `update'.dta", replace
+{txt} 11{com}. 
+. {c )-}
+{txt}(730 real changes made, 730 to missing)
+file country IMPE 20220102.dta saved
+(751 real changes made, 751 to missing)
+file country IMPE 20220120.dta saved
+(766 real changes made, 766 to missing)
+file country IMPE 20220131.dta saved
+(803 real changes made, 803 to missing)
+file country IMPE 20220315.dta saved
+(734 real changes made, 734 to missing)
+file country IMPE 20220530.dta saved
+(748 real changes made, 748 to missing)
+file country IMPE 20220620.dta saved
+
+{com}. * 
+. 
+. 
+. 
+. 
+. foreach update of local list {c -(}
+{txt}  2{com}. 
+.         di in red "This is update " `update'
+{txt}  3{com}.         
+.         merge m:m date loc_grand_name using "country IMPE `update'.dta"
+{txt}  4{com}.         
+.         drop _merge
+{txt}  5{com}.         
+. {c )-}
+{err}This is update 20220102
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             320
+{txt}{col 9}from master{col 30}{res}             169{txt}  (_merge==1)
+{col 9}from using{col 30}{res}             151{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             669{txt}  (_merge==3)
+{col 5}{hline 41}
+{err}This is update 20220120
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             154
+{txt}{col 9}from master{col 30}{res}             151{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               3{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             838{txt}  (_merge==3)
+{col 5}{hline 41}
+{err}This is update 20220131
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             144
+{txt}{col 9}from master{col 30}{res}             140{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               4{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             852{txt}  (_merge==3)
+{col 5}{hline 41}
+{err}This is update 20220315
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             103
+{txt}{col 9}from master{col 30}{res}             103{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             893{txt}  (_merge==3)
+{col 5}{hline 41}
+{err}This is update 20220530
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             172
+{txt}{col 9}from master{col 30}{res}             172{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             824{txt}  (_merge==3)
+{col 5}{hline 41}
+{err}This is update 20220620
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             158
+{txt}{col 9}from master{col 30}{res}             158{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             838{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. *
+. 
+. 
+. isid date, missok
+{txt}
+{com}. 
+. sort loc_grand_name date
+{txt}
+{com}. 
+. save "country IMPE longit.dta", replace
+{txt}(note: file country IMPE longit.dta not found)
+file country IMPE longit.dta saved
+
+{com}. 
+. 
+. 
+. 
+. * add JOHN
+. 
+. cd .. // /code/
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code
+{txt}
+{com}. 
+. cd JOHN
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/JOHN
+{txt}
+{com}. 
+. use "country JOHN.dta", clear 
+{txt}
+{com}. 
+. cd ..
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code
+{txt}
+{com}. 
+. cd IMPE 
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/IMPE
+{txt}
+{com}. 
+. save "country JOHN.dta", replace
+{txt}(note: file country JOHN.dta not found)
+file country JOHN.dta saved
+
+{com}. 
+. merge m:m date loc_grand_name using "country IMPE longit.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             100
+{txt}{col 9}from master{col 30}{res}               0{txt}  (_merge==1)
+{col 9}from using{col 30}{res}             100{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             896{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}.  
+. drop _merge
+{txt}
+{com}. 
+. duplicates report date, gen duptag
+
+{p 0 4}{txt}Duplicates in terms of {res} date{p_end}
+
+{txt}{hline 10}{c TT}{hline 27}
+   copies {c |} observations       surplus
+{hline 10}{c +}{hline 27}
+        1 {c |}          {res}996             0
+{txt}{hline 10}{c BT}{hline 27}
+
+{com}. 
+. 
+. isid date, missok
+{txt}
+{com}. 
+. sort loc_grand_name date
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "country IMPE longit.dta", replace
+{txt}file country IMPE longit.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. view "log country IMPE 2.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/IMPE/log country IMPE 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 8 Jul 2022, 10:51:23
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

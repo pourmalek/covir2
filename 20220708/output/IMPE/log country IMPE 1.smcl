@@ -1,0 +1,364 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/IMPE/log country IMPE 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Jul 2022, 16:40:41
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country IMPE 1.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek 
+. ***************************************************************************
+. 
+. 
+. * download and prepare update files
+. * input data files: download csv files
+. * output data files: "country IMPE 202?????.dta " 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************************
+. * files stored in: 
+. * https://github.com/mrc-ide/global-lmic-reports/tree/master/data
+. 
+.                
+.                            
+.                            
+. local list `" "2022-01-20_v9" "2022-01-31_v9" "2022-03-15_v9" "2022-05-30_v9" "'
+{txt}
+{com}. 
+. 
+. 
+. foreach update of local list {c -(}
+{txt}  2{com}. 
+.         clear 
+{txt}  3{com}. 
+.         set obs 1
+{txt}  4{com}.         
+.         gen this = "`update'"
+{txt}  5{com}.         
+.         gen that = substr(this,1,10)
+{txt}  6{com}.         
+.         gen update2022MMDD = subinstr(that, "-", "",.)
+{txt}  7{com}.         
+.         local update2022MMDD = update2022MMDD
+{txt}  8{com}. 
+.         di in red "This is IMPE update " "`update2022MMDD'"
+{txt}  9{com}.         
+.         clear
+{txt} 10{com}.         
+.         copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/`update'.csv.zip `update'.csv.zip
+{txt} 11{com}.         unzipfile `update'.csv.zip, replace
+{txt} 12{com}.         erase `update'.csv.zip
+{txt} 13{com}.         
+.         import delimited "`update'.csv", clear varnames(1)
+{txt} 14{com}. 
+.         keep if regexm(country,"$country") == 1
+{txt} 15{com}. 
+.         keep if scenario == "Maintain Status Quo"
+{txt} 16{com}.         
+.         drop scenario
+{txt} 17{com}.         
+.         keep if compartment == "deaths"
+{txt} 18{com}.         
+.         drop compartment
+{txt} 19{com}.         
+.         drop y_025 y_25 y_median y_75 y_975 // keeps y_mean
+{txt} 20{com}.         
+.         
+.         * gen date 
+.         
+.         rename date date_original
+{txt} 21{com}.         gen year = substr(date_original,1,4) 
+{txt} 22{com}.         gen month = substr(date_original,6,2) 
+{txt} 23{com}.         gen day = substr(date_original,9,2) 
+{txt} 24{com}.         egen date2 = concat(day month year)
+{txt} 25{com}.         gen date = date(date2, "DMY", 2050)
+{txt} 26{com}.         format date %tdDDMonCCYY
+{txt} 27{com}.         codebook date
+{txt} 28{com}.         drop year month day date2 date_original
+{txt} 29{com}.         
+.         
+.         rename country loc_grand_name 
+{txt} 30{com}.         
+.         drop iso3c report_date version
+{txt} 31{com}.         
+.         rename y_mean DayDeaMeRaA03S02
+{txt} 32{com}.         
+.         order loc_grand_name date DayDeaMeRaA03S02
+{txt} 33{com}.         
+.         rename DayDeaMeRaA03S02 DayDeaMeRaA03`update2022MMDD'
+{txt} 34{com}.         
+. 
+.         * smooth
+. 
+.         tsset date, daily   
+{txt} 35{com}.                 
+.         qui tssmooth ma DayDeaMeRaA03`update2022MMDD'window = DayDeaMeRaA03`update2022MMDD' if DayDeaMeRaA03`update2022MMDD' >= 0, window(3 1 3)
+{txt} 36{com}.         
+.         qui tssmooth ma DayDeaMeSmA03`update2022MMDD' = DayDeaMeRaA03`update2022MMDD'window, weights( 1 2 3 <4> 3 2 1) replace
+{txt} 37{com}.         
+.         label var DayDeaMeSmA03`update2022MMDD' "Daily deaths mean smooth IMPE"
+{txt} 38{com}.         
+.         drop *window
+{txt} 39{com}.         
+.         tsset, clear
+{txt} 40{com}.         
+.         
+. 
+.         * gen Forecast only
+.                 
+.         capture drop update_date
+{txt} 41{com}.         
+.         gen update_date = date("`update2022MMDD'", "YMD")
+{txt} 42{com}.         
+.         cap drop DayDeaFOREA03`update2022MMDD'
+{txt} 43{com}.         
+.         gen DayDeaFOREA03`update2022MMDD' = DayDeaMeSmA03`update2022MMDD'
+{txt} 44{com}.         
+.         replace DayDeaFOREA03`update2022MMDD' = . if date < update_date
+{txt} 45{com}.         
+.         label var DayDeaFOREA03`update2022MMDD' "DayDeaMeRaA03 `update' Forecast only"
+{txt} 46{com}.                 
+. 
+.         qui compress 
+{txt} 47{com}. 
+.         save "IMPE `update2022MMDD'.dta", replace
+{txt} 48{com}. 
+. 
+. {c )-}
+{txt}{p}
+number of observations (_N)  was 0,
+now 1
+{p_end}
+{err}This is IMPE update 20220120
+{res}{txt}    inflating: 2022-01-20_v9.csv
+successfully unzipped 2022-01-20_v9.csv.zip to current directory
+{res}{text}(14 vars, 7,630,704 obs)
+(7,575,156 observations deleted)
+(46,290 observations deleted)
+(8,417 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21914{txt},{res}22754{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}31dec2019{txt},{res}19apr2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}841{col 51}{txt}missing .:  {res}0{txt}/{res}841
+
+{txt}{col 19}mean:{res}{col 26}   22334{txt} = {res}23feb2021{txt}
+{col 15}std. dev:{res}{col 26}  242.92
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21998{col 37}   22124{col 47}   22334{col 57}   22544{col 67}   22670
+{col 26}24mar2020{col 36}28jul2020{col 46}23feb2021{col 56}21sep2021{col 66}25jan2022
+{txt}{col 9}time variable:  {res}{col 25}date, 31Dec2019 to 19Apr2022
+{txt}{col 17}delta:  {res}1 day
+{txt}(751 real changes made, 751 to missing)
+file IMPE 20220120.dta saved
+{p}
+number of observations (_N)  was 0,
+now 1
+{p_end}
+{err}This is IMPE update 20220131
+{res}{txt}    inflating: 2022-01-31_v9.csv
+successfully unzipped 2022-01-31_v9.csv.zip to current directory
+{res}{text}(14 vars, 7,629,333 obs)
+(7,572,762 observations deleted)
+(47,148 observations deleted)
+(8,567 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21910{txt},{res}22765{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}27dec2019{txt},{res}30apr2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}856{col 51}{txt}missing .:  {res}0{txt}/{res}856
+
+{txt}{col 19}mean:{res}{col 26} 22337.5{txt} = {res}26feb2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26}  247.25
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   21995{col 37} 22123.5{col 47} 22337.5{col 57} 22551.5{col 67}   22680
+{col 26}21mar2020{col 36}27jul2020{col 46}26feb2021{col 56}28sep2021{col 66}04feb2022
+{txt}{col 9}time variable:  {res}{col 25}date, 27Dec2019 to 30Apr2022
+{txt}{col 17}delta:  {res}1 day
+{txt}(766 real changes made, 766 to missing)
+file IMPE 20220131.dta saved
+{p}
+number of observations (_N)  was 0,
+now 1
+{p_end}
+{err}This is IMPE update 20220315
+{res}{txt}    inflating: 2022-03-15_v9.csv
+successfully unzipped 2022-03-15_v9.csv.zip to current directory
+{res}{text}(14 vars, 9,767,277 obs)
+(9,708,297 observations deleted)
+(49,150 observations deleted)
+(8,937 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21916{txt},{res}22808{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}02jan2020{txt},{res}12jun2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}893{col 51}{txt}missing .:  {res}0{txt}/{res}893
+
+{txt}{col 19}mean:{res}{col 26}   22362{txt} = {res}23mar2021{txt}
+{col 15}std. dev:{res}{col 26} 257.931
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22005{col 37}   22139{col 47}   22362{col 57}   22585{col 67}   22719
+{col 26}31mar2020{col 36}12aug2020{col 46}23mar2021{col 56}01nov2021{col 66}15mar2022
+{txt}{col 9}time variable:  {res}{col 25}date, 02Jan2020 to 12Jun2022
+{txt}{col 17}delta:  {res}1 day
+{txt}(803 real changes made, 803 to missing)
+file IMPE 20220315.dta saved
+{p}
+number of observations (_N)  was 0,
+now 1
+{p_end}
+{err}This is IMPE update 20220530
+{res}{txt}    inflating: 2022-05-30_v9.csv
+successfully unzipped 2022-05-30_v9.csv.zip to current directory
+{res}{text}(14 vars, 9,577,665 obs)
+(9,523,281 observations deleted)
+(45,320 observations deleted)
+(8,240 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22061{txt},{res}22884{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}26may2020{txt},{res}27aug2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}824{col 51}{txt}missing .:  {res}0{txt}/{res}824
+
+{txt}{col 19}mean:{res}{col 26} 22472.5{txt} = {res}11jul2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 238.013
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22143{col 37} 22266.5{col 47} 22472.5{col 57} 22678.5{col 67}   22802
+{col 26}16aug2020{col 36}17dec2020{col 46}11jul2021{col 56}02feb2022{col 66}06jun2022
+{txt}{col 9}time variable:  {res}{col 25}date, 26May2020 to 27Aug2022
+{txt}{col 17}delta:  {res}1 day
+{txt}(734 real changes made, 734 to missing)
+file IMPE 20220530.dta saved
+
+{com}. *
+. 
+. 
+. 
+. 
+. shell rm -r "2022-01-20_v9.csv"
+{txt}
+
+{com}. shell rm -r "2022-01-31_v9.csv"
+{txt}
+
+{com}. shell rm -r "2022-03-15_v9.csv"
+{txt}
+
+{com}. shell rm -r "2022-05-30_v9.csv"
+{txt}
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ********************
+. 
+. * 2022-06-20_v9.csv.zip is one of a kind
+. 
+. * creates:
+. * Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data/2022-06-20_v9.csv
+. 
+. 
+. 
+. 
+. clear
+{txt}
+{com}.                            
+. copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2022-06-20_v9.csv.zip 2022-06-20_v9.csv.zip
+{txt}
+{com}. unzipfile 2022-06-20_v9.csv.zip, replace
+{res}{txt}    inflating: Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data/2022-06-20_v9.csv
+successfully unzipped 2022-06-20_v9.csv.zip to current directory
+
+{com}. erase 2022-06-20_v9.csv.zip
+{txt}
+{com}. 
+. 
+. import delimited "2022-06-20_v9.csv", clear varnames(1)
+{res}{err}file 2022-06-20_v9.csv not found
+{txt}{search r(601), local:r(601);}
+
+end of do-file
+{search r(601), local:r(601);}
+
+end of do-file
+
+{search r(601), local:r(601);}
+
+{com}. do "/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/SRIV/do country SRIV.do"
+{txt}
+{com}. 
+. clear all
+{txt}
+{com}. 
+. cd "$pathcovir2"
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code
+{txt}
+{com}. 
+. cd SRIV
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/SRIV
+{txt}
+{com}. 
+. 
+. 
+. 
+. ***************************************************************************
+. * This is "do country SRIV.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek
+. ***************************************************************************
+. 
+. 
+. 
+. do "do country SRIV 1.do"
+{txt}
+{com}. 
+. clear all
+{txt}
+{com}. 
+. cd "$pathcovir2"
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code
+{txt}
+{com}. 
+. cd SRIV
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/SRIV
+{txt}
+{com}. 
+. capture log close 
+{smcl}
+{com}{sf}{ul off}

@@ -14,10 +14,7 @@ log using "log country JOHN.smcl", replace
 * This is "do country JOHN.do"
 
 * Project: CovidVisualized country - countries without subnational estimates
-* Person: Farshad Pourmalek pourmalek_farshad@yahoo.com
-* Time (initial): 2021-02-10
-
-* OBJECTIVE: Get and prepare Johns Hopkins data for country
+* Person: Farshad Pourmalek 
 ***************************************************************************
 
 

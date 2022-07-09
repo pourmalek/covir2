@@ -1,0 +1,4116 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/DELP/log country DELP 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Jul 2022, 16:13:47
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country DELP 1.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek 
+. ***************************************************************************
+. 
+. 
+. * download and prepare update files
+. * input data files: download csv files
+. * output data files: "country DELP 202?????.dta " 
+. 
+. 
+. 
+. 
+. local list ///
+> 20220106 ///
+> 20220113 ///
+> 20220114 ///
+> 20220115 ///
+> 20220116 ///
+> 20220117 ///
+> 20220118 ///
+> 20220119 ///
+> 20220120 ///
+> 20220121 ///
+> 20220122 ///
+> 20220123 ///
+> 20220124 ///
+> 20220125 ///
+> 20220126 ///
+> 20220127 ///
+> 20220128 ///
+> 20220129 ///
+> 20220130 ///
+> 20220131 ///
+> 20220201 ///
+> 20220202 ///
+> 20220203 ///
+> 20220204 ///
+> 20220205 ///
+> 20220206 ///
+> 20220207 ///
+> 20220208 ///
+> 20220209 ///
+> 20220210 ///
+> 20220211 ///
+> 20220212 ///
+> 20220213 ///
+> 20220214 ///
+> 20220215 ///
+> 20220216 ///
+> 20220217 ///
+> 20220218 ///
+> 20220219 ///
+> 20220220 ///
+> 20220221 ///
+> 20220222 ///
+> 20220223 ///
+> 20220224 ///
+> 20220225 ///
+> 20220226 ///
+> 20220227 ///
+> 20220228 ///
+> 20220301 ///
+> 20220302 ///
+> 20220303 ///
+> 20220304 ///
+> 20220305 ///
+> 20220306 ///
+> 20220307 ///
+> 20220308 ///
+> 20220309 ///
+> 20220310 ///
+> 20220311 ///
+> 20220312 ///
+> 20220313 ///
+> 20220314 ///
+> 20220315 ///
+> 20220316 ///
+> 20220317 ///
+> 20220318 ///
+> 20220319 ///
+> 20220320 ///
+> 20220321 ///
+> 20220322 ///
+> 20220323 ///
+> 20220324 ///
+> 20220325 ///
+> 20220326 ///
+> 20220327 ///
+> 20220328 ///
+> 20220329 ///
+> 20220330 ///
+> 20220331 ///
+> 20220401 ///
+> 20220402 ///
+> 20220403 ///
+> 20220404 ///
+> 20220405 ///
+> 20220406 ///
+> 20220407 ///
+> 20220408 ///
+> 20220409 ///
+> 20220410 ///
+> 20220411 ///
+> 20220412 ///
+> 20220413 ///
+> 20220414 ///
+> 20220415 ///
+> 20220416 ///
+> 20220417 ///
+> 20220418 ///
+> 20220419 ///
+> 20220420 ///
+> 20220421 ///
+> 20220422 ///
+> 20220423 ///
+> 20220424 ///
+> 20220425 ///
+> 20220426 ///
+> 20220427 ///
+> 20220428 ///
+> 20220429 ///
+> 20220430 ///
+> 20220501 ///
+> 20220502 ///
+> 20220503 ///
+> 20220504 ///
+> 20220505 ///
+> 20220506 ///
+> 20220507 ///
+> 20220508 ///
+> 20220509 ///
+> 20220510 ///
+> 20220511 ///
+> 20220512 ///
+> 20220513 ///
+> 20220514 ///
+> 20220515 ///
+> 20220516 ///
+> 20220517 ///
+> 20220518 ///
+> 20220519 ///
+> 20220520 ///
+> 20220521 ///
+> 20220522 ///
+> 20220523 ///
+> 20220524 ///
+> 20220525 ///
+> 20220526 ///
+> 20220527 ///
+> 20220528 ///
+> 20220529 ///
+> 20220530 ///
+> 20220531 ///
+> 20220601 ///
+> 20220602 ///
+> 20220603 ///
+> 20220604 ///
+> 20220605 ///
+> 20220606 ///
+> 20220607 ///
+> 20220608 ///
+> 20220609 ///
+> 20220610 ///
+> 20220611 ///
+> 20220612 ///
+> 20220613 ///
+> 20220614 ///
+> 20220615 ///
+> 20220616 ///
+> 20220617 ///
+> 20220618
+{txt}
+{com}.  
+. 
+. 
+. foreach update of local list {c -(}
+{txt}  2{com}. 
+. di in red "This is update " `update'
+{txt}  3{com}. 
+. clear
+{txt}  4{com}. 
+. copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_`update'.csv Global_V4_since100_`update'.csv
+{txt}  5{com}. 
+. import delimited using "Global_V4_since100_`update'.csv", clear varnames(1)
+{txt}  6{com}. 
+. rename country loc_grand_name
+{txt}  7{com}. 
+. keep if loc_grand_name == "$country"
+{txt}  8{com}. 
+. drop continent
+{txt}  9{com}. 
+. rename province provincestate
+{txt} 10{com}. 
+. replace provincestate = " National" if provincestate == "None"
+{txt} 11{com}. 
+. 
+. 
+. * gen date
+. 
+. rename day date_original
+{txt} 12{com}. 
+. gen year = substr(date_original,1,4) 
+{txt} 13{com}. gen month = substr(date_original,6,2) 
+{txt} 14{com}. gen day = substr(date_original,9,2) 
+{txt} 15{com}. egen date2 = concat(day month year)
+{txt} 16{com}. gen date = date(date2, "DMY", 2050)
+{txt} 17{com}. format date %tdDDMonCCYY
+{txt} 18{com}. codebook date
+{txt} 19{com}. 
+. drop year month day date2
+{txt} 20{com}. 
+. 
+. * rename outcome variables
+. 
+. 
+. * total vars
+. 
+. rename totaldetecteddeaths   TotDeaMeRaA01S00
+{txt} 21{com}. 
+. label var TotDeaMeRaA01S00 "Total Deaths Mean DELP S0"
+{txt} 22{com}. 
+. 
+. 
+. * gen daily vars and rename
+. 
+. sort provincestate date
+{txt} 23{com}. 
+. bysort provincestate (date): gen DayDeaMeRaA01S00 =  TotDeaMeRaA01S00[_n] - TotDeaMeRaA01S00[_n-1]
+{txt} 24{com}. 
+. 
+. 
+. label var DayDeaMeRaA01S00 "Daily Deaths Mean DELP S0"
+{txt} 25{com}. 
+. 
+. 
+. keep loc_grand_name provincestate date DayDeaMeRaA01S00   
+{txt} 26{com}. 
+. order loc_grand_name provincestate date DayDeaMeRaA01S00  
+{txt} 27{com}. 
+. 
+. 
+. * smooth daily deaths 
+. 
+. qui {c -(}
+{txt} 28{com}. 
+. encode provincestate, gen(provincestate_encoded)
+{txt} 29{com}. 
+. tsset provincestate_encoded date, daily   
+{txt} 30{com}. 
+. 
+. tssmooth ma DayDeaMeRaA01S00_window = DayDeaMeRaA01S00 if DayDeaMeRaA01S00 >= 0, window(3 1 3)
+{txt} 31{com}. 
+. tssmooth ma DayDeaMeSmA01S00 = DayDeaMeRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt} 32{com}. 
+. label var DayDeaMeSmA01S00 "Daily deaths mean smooth DELP"
+{txt} 33{com}. 
+. 
+. 
+. drop *_window
+{txt} 34{com}. 
+. drop provincestate_encoded
+{txt} 35{com}. 
+. tsset, clear
+{txt} 36{com}. 
+. {c )-}
+{txt} 37{com}. *
+. 
+. 
+. 
+. drop DayDeaMeRaA01S00 
+{txt} 38{com}. 
+. 
+. capture drop update_date
+{txt} 39{com}. 
+. gen update_date = date("`update'", "YMD")
+{txt} 40{com}. 
+. 
+. 
+. 
+. * add update to varnames
+. 
+. rename (*) (*`update')
+{txt} 41{com}. 
+. rename (date`update' loc_grand_name`update' provincestate`update') (date loc_grand_name provincestate)
+{txt} 42{com}. 
+. 
+. 
+. sort date loc_grand_name provincestate 
+{txt} 43{com}. 
+. order date loc_grand_name provincestate 
+{txt} 44{com}. 
+. qui compress
+{txt} 45{com}. 
+. save "country DELP `update'.dta", replace
+{txt} 46{com}. 
+. shell rm -r "Global_V4_since100_`update'.csv"
+{txt} 47{com}. 
+. {c )-}
+{err}This is update 20220106
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220106.dta saved
+
+{err}This is update 20220113
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220113.dta saved
+
+{err}This is update 20220114
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220114.dta saved
+
+{err}This is update 20220115
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220115.dta saved
+
+{err}This is update 20220116
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220116.dta saved
+
+{err}This is update 20220117
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220117.dta saved
+
+{err}This is update 20220118
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220118.dta saved
+
+{err}This is update 20220119
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220119.dta saved
+
+{err}This is update 20220120
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220120.dta saved
+
+{err}This is update 20220121
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220121.dta saved
+
+{err}This is update 20220122
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220122.dta saved
+
+{err}This is update 20220123
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220123.dta saved
+
+{err}This is update 20220124
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220124.dta saved
+
+{err}This is update 20220125
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220125.dta saved
+
+{err}This is update 20220126
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220126.dta saved
+
+{err}This is update 20220127
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220127.dta saved
+
+{err}This is update 20220128
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220128.dta saved
+
+{err}This is update 20220129
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220129.dta saved
+
+{err}This is update 20220130
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220130.dta saved
+
+{err}This is update 20220131
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220131.dta saved
+
+{err}This is update 20220201
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220201.dta saved
+
+{err}This is update 20220202
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220202.dta saved
+
+{err}This is update 20220203
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220203.dta saved
+
+{err}This is update 20220204
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220204.dta saved
+
+{err}This is update 20220205
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220205.dta saved
+
+{err}This is update 20220206
+{res}{text}(16 vars, 40,080 obs)
+{res}{txt}(39,913 observations deleted)
+{res}{txt}(167 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22719{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15mar2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}167{col 51}{txt}missing .:  {res}0{txt}/{res}167
+
+{txt}{col 19}mean:{res}{col 26}   22636{txt} = {res}22dec2021{txt}
+{col 15}std. dev:{res}{col 26} 48.3529
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22569{col 37}   22594{col 47}   22636{col 57}   22678{col 67}   22703
+{col 26}16oct2021{col 36}10nov2021{col 46}22dec2021{col 56}02feb2022{col 66}27feb2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220206.dta saved
+
+{err}This is update 20220207
+{res}{text}(16 vars, 54,720 obs)
+{res}{txt}(54,492 observations deleted)
+{res}{txt}(228 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}228{col 51}{txt}missing .:  {res}0{txt}/{res}228
+
+{txt}{col 19}mean:{res}{col 26} 22666.5{txt} = {res}21jan2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 65.9621
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22575{col 37} 22609.5{col 47} 22666.5{col 57} 22723.5{col 67}   22758
+{col 26}22oct2021{col 36}25nov2021{col 46}21jan2022{col 56}19mar2022{col 66}23apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220207.dta saved
+
+{err}This is update 20220208
+{res}{text}(16 vars, 54,720 obs)
+{res}{txt}(54,492 observations deleted)
+{res}{txt}(228 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}228{col 51}{txt}missing .:  {res}0{txt}/{res}228
+
+{txt}{col 19}mean:{res}{col 26} 22666.5{txt} = {res}21jan2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 65.9621
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22575{col 37} 22609.5{col 47} 22666.5{col 57} 22723.5{col 67}   22758
+{col 26}22oct2021{col 36}25nov2021{col 46}21jan2022{col 56}19mar2022{col 66}23apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220208.dta saved
+
+{err}This is update 20220209
+{res}{text}(16 vars, 54,720 obs)
+{res}{txt}(54,492 observations deleted)
+{res}{txt}(228 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}228{col 51}{txt}missing .:  {res}0{txt}/{res}228
+
+{txt}{col 19}mean:{res}{col 26} 22666.5{txt} = {res}21jan2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 65.9621
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22575{col 37} 22609.5{col 47} 22666.5{col 57} 22723.5{col 67}   22758
+{col 26}22oct2021{col 36}25nov2021{col 46}21jan2022{col 56}19mar2022{col 66}23apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220209.dta saved
+
+{err}This is update 20220210
+{res}{text}(16 vars, 54,720 obs)
+{res}{txt}(54,492 observations deleted)
+{res}{txt}(228 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}228{col 51}{txt}missing .:  {res}0{txt}/{res}228
+
+{txt}{col 19}mean:{res}{col 26} 22666.5{txt} = {res}21jan2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 65.9621
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22575{col 37} 22609.5{col 47} 22666.5{col 57} 22723.5{col 67}   22758
+{col 26}22oct2021{col 36}25nov2021{col 46}21jan2022{col 56}19mar2022{col 66}23apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220210.dta saved
+
+{err}This is update 20220211
+{res}{text}(16 vars, 54,720 obs)
+{res}{txt}(54,492 observations deleted)
+{res}{txt}(228 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}228{col 51}{txt}missing .:  {res}0{txt}/{res}228
+
+{txt}{col 19}mean:{res}{col 26} 22666.5{txt} = {res}21jan2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 65.9621
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22575{col 37} 22609.5{col 47} 22666.5{col 57} 22723.5{col 67}   22758
+{col 26}22oct2021{col 36}25nov2021{col 46}21jan2022{col 56}19mar2022{col 66}23apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220211.dta saved
+
+{err}This is update 20220212
+{res}{text}(16 vars, 54,720 obs)
+{res}{txt}(54,492 observations deleted)
+{res}{txt}(228 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22553{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}30sep2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}228{col 51}{txt}missing .:  {res}0{txt}/{res}228
+
+{txt}{col 19}mean:{res}{col 26} 22666.5{txt} = {res}21jan2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 65.9621
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22575{col 37} 22609.5{col 47} 22666.5{col 57} 22723.5{col 67}   22758
+{col 26}22oct2021{col 36}25nov2021{col 46}21jan2022{col 56}19mar2022{col 66}23apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220212.dta saved
+
+{err}This is update 20220213
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220213.dta saved
+
+{err}This is update 20220214
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220214.dta saved
+
+{err}This is update 20220215
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220215.dta saved
+
+{err}This is update 20220216
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220216.dta saved
+
+{err}This is update 20220217
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220217.dta saved
+
+{err}This is update 20220218
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220218.dta saved
+
+{err}This is update 20220219
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220219.dta saved
+
+{err}This is update 20220220
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220220.dta saved
+
+{err}This is update 20220221
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220221.dta saved
+
+{err}This is update 20220222
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220222.dta saved
+
+{err}This is update 20220223
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220223.dta saved
+
+{err}This is update 20220224
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220224.dta saved
+
+{err}This is update 20220225
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220225.dta saved
+
+{err}This is update 20220226
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220226.dta saved
+
+{err}This is update 20220227
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220227.dta saved
+
+{err}This is update 20220228
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220228.dta saved
+
+{err}This is update 20220301
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220301.dta saved
+
+{err}This is update 20220302
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220302.dta saved
+
+{err}This is update 20220303
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220303.dta saved
+
+{err}This is update 20220304
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220304.dta saved
+
+{err}This is update 20220305
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220305.dta saved
+
+{err}This is update 20220306
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220306.dta saved
+
+{err}This is update 20220307
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220307.dta saved
+
+{err}This is update 20220308
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220308.dta saved
+
+{err}This is update 20220309
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220309.dta saved
+
+{err}This is update 20220310
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220310.dta saved
+
+{err}This is update 20220311
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220311.dta saved
+
+{err}This is update 20220312
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220312.dta saved
+
+{err}This is update 20220313
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220313.dta saved
+
+{err}This is update 20220314
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220314.dta saved
+
+{err}This is update 20220315
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220315.dta saved
+
+{err}This is update 20220316
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220316.dta saved
+
+{err}This is update 20220317
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220317.dta saved
+
+{err}This is update 20220318
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220318.dta saved
+
+{err}This is update 20220319
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220319.dta saved
+
+{err}This is update 20220320
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220320.dta saved
+
+{err}This is update 20220321
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220321.dta saved
+
+{err}This is update 20220322
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220322.dta saved
+
+{err}This is update 20220323
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220323.dta saved
+
+{err}This is update 20220324
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220324.dta saved
+
+{err}This is update 20220325
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220325.dta saved
+
+{err}This is update 20220326
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220326.dta saved
+
+{err}This is update 20220327
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220327.dta saved
+
+{err}This is update 20220328
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220328.dta saved
+
+{err}This is update 20220329
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220329.dta saved
+
+{err}This is update 20220330
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220330.dta saved
+
+{err}This is update 20220331
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220331.dta saved
+
+{err}This is update 20220401
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220401.dta saved
+
+{err}This is update 20220402
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220402.dta saved
+
+{err}This is update 20220403
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220403.dta saved
+
+{err}This is update 20220404
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220404.dta saved
+
+{err}This is update 20220405
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220405.dta saved
+
+{err}This is update 20220406
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220406.dta saved
+
+{err}This is update 20220407
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220407.dta saved
+
+{err}This is update 20220408
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220408.dta saved
+
+{err}This is update 20220409
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220409.dta saved
+
+{err}This is update 20220410
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220410.dta saved
+
+{err}This is update 20220411
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220411.dta saved
+
+{err}This is update 20220412
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220412.dta saved
+
+{err}This is update 20220413
+{res}{text}(16 vars, 36,480 obs)
+{res}{txt}(36,328 observations deleted)
+{res}{txt}(152 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22780{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}152{col 51}{txt}missing .:  {res}0{txt}/{res}152
+
+{txt}{col 19}mean:{res}{col 26} 22704.5{txt} = {res}28feb2022{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 44.0227
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22644{col 37} 22666.5{col 47} 22704.5{col 57} 22742.5{col 67}   22765
+{col 26}30dec2021{col 36}21jan2022{col 46}28feb2022{col 56}07apr2022{col 66}30apr2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220413.dta saved
+
+{err}This is update 20220414
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220414.dta saved
+
+{err}This is update 20220415
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220415.dta saved
+
+{err}This is update 20220416
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220416.dta saved
+
+{err}This is update 20220417
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220417.dta saved
+
+{err}This is update 20220418
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220418.dta saved
+
+{err}This is update 20220419
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220419.dta saved
+
+{err}This is update 20220420
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220420.dta saved
+
+{err}This is update 20220421
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220421.dta saved
+
+{err}This is update 20220422
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220422.dta saved
+
+{err}This is update 20220423
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220423.dta saved
+
+{err}This is update 20220424
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220424.dta saved
+
+{err}This is update 20220425
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220425.dta saved
+
+{err}This is update 20220426
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220426.dta saved
+
+{err}This is update 20220427
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220427.dta saved
+
+{err}This is update 20220428
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220428.dta saved
+
+{err}This is update 20220429
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220429.dta saved
+
+{err}This is update 20220430
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220430.dta saved
+
+{err}This is update 20220501
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220501.dta saved
+
+{err}This is update 20220502
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220502.dta saved
+
+{err}This is update 20220503
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220503.dta saved
+
+{err}This is update 20220504
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220504.dta saved
+
+{err}This is update 20220505
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220505.dta saved
+
+{err}This is update 20220506
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220506.dta saved
+
+{err}This is update 20220507
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220507.dta saved
+
+{err}This is update 20220508
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220508.dta saved
+
+{err}This is update 20220509
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220509.dta saved
+
+{err}This is update 20220510
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220510.dta saved
+
+{err}This is update 20220511
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220511.dta saved
+
+{err}This is update 20220512
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220512.dta saved
+
+{err}This is update 20220513
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220513.dta saved
+
+{err}This is update 20220514
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220514.dta saved
+
+{err}This is update 20220515
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220515.dta saved
+
+{err}This is update 20220516
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220516.dta saved
+
+{err}This is update 20220517
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220517.dta saved
+
+{err}This is update 20220518
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220518.dta saved
+
+{err}This is update 20220519
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220519.dta saved
+
+{err}This is update 20220520
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220520.dta saved
+
+{err}This is update 20220521
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220521.dta saved
+
+{err}This is update 20220522
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220522.dta saved
+
+{err}This is update 20220523
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220523.dta saved
+
+{err}This is update 20220524
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220524.dta saved
+
+{err}This is update 20220525
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220525.dta saved
+
+{err}This is update 20220526
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220526.dta saved
+
+{err}This is update 20220527
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220527.dta saved
+
+{err}This is update 20220528
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220528.dta saved
+
+{err}This is update 20220529
+{res}{text}(16 vars, 51,120 obs)
+{res}{txt}(50,907 observations deleted)
+{res}{txt}(213 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22629{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15dec2021{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}213{col 51}{txt}missing .:  {res}0{txt}/{res}213
+
+{txt}{col 19}mean:{res}{col 26}   22735{txt} = {res}31mar2022{txt}
+{col 15}std. dev:{res}{col 26}  61.632
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22650{col 37}   22682{col 47}   22735{col 57}   22788{col 67}   22820
+{col 26}05jan2022{col 36}06feb2022{col 46}31mar2022{col 56}23may2022{col 66}24jun2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220529.dta saved
+
+{err}This is update 20220530
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220530.dta saved
+
+{err}This is update 20220531
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220531.dta saved
+
+{err}This is update 20220601
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220601.dta saved
+
+{err}This is update 20220602
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220602.dta saved
+
+{err}This is update 20220603
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220603.dta saved
+
+{err}This is update 20220604
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220604.dta saved
+
+{err}This is update 20220605
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220605.dta saved
+
+{err}This is update 20220606
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220606.dta saved
+
+{err}This is update 20220607
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220607.dta saved
+
+{err}This is update 20220608
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220608.dta saved
+
+{err}This is update 20220609
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220609.dta saved
+
+{err}This is update 20220610
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220610.dta saved
+
+{err}This is update 20220611
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220611.dta saved
+
+{err}This is update 20220612
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220612.dta saved
+
+{err}This is update 20220613
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220613.dta saved
+
+{err}This is update 20220614
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220614.dta saved
+
+{err}This is update 20220615
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220615.dta saved
+
+{err}This is update 20220616
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220616.dta saved
+
+{err}This is update 20220617
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220617.dta saved
+
+{err}This is update 20220618
+{res}{text}(16 vars, 44,400 obs)
+{res}{txt}(44,215 observations deleted)
+{res}{txt}(185 real changes made)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}(1 missing value generated)
+{res}{txt}file country DELP 20220618.dta saved
+
+
+{com}. *
+. 
+. 
+. view "log country DELP 1.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/DELP/log country DELP 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 8 Jul 2022, 16:20:34
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

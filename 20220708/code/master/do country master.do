@@ -67,11 +67,10 @@ global IHMEdate 2022-06-10
 global IMPEepoch 20Jun2022 // update release date																		 
 *            8/ ----------
 
-global SRIVepoch 08Jul2022 // update release date																		 
+global SRIVepoch 06Jul2022 // update release date																		 
 *            9/ ----------
 
-
-global MEDRIVAdate 20220708
+global MEDRIVAdate 20220710 // https://charts.medriva.com/country/IR
 *           10/ ----------
 
 		

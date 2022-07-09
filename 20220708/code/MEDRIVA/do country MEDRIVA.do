@@ -13,10 +13,7 @@ log using "log country MEDRIVA.smcl", replace
 * This is "do country MEDRIVA.do"
 
 * Project: CovidVisualized country - countries without subnational estimates
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dot com
-* Time (initial): 2021-02-10
-
-* OBJECTIVE: Get and prepare MEDRIVA data for country
+* Person: Farshad Pourmalek 
 *****************************************************************************
 
 
@@ -79,7 +76,7 @@ gen date = date(date2, "DMY", 2050)
 
 format date %tdDDMonCCYY
 
-drop date_original	year	day	month	date2
+drop date_original year day month date2
 
 codebook date
 
@@ -235,8 +232,8 @@ import delimited using "percent positive $MEDRIVAdate.txt", clear delimiters(","
 
 * percentpositive7dayaverage
 * Inspect element, lookfor 14.6
-* First 14.6 is 4 July 2021 
-* Last 4.2 is 1 July 2022
+* The first 20.2 is 8 July 2021
+* The last 6.9 is 5 July 2022
 
 gen id = _n 
 
@@ -249,7 +246,7 @@ reshape long v, i(id) j(j)
 
 gen date = .
 
-replace date = td(04Jul2021) in 1
+replace date = td(08Jul2021) in 1
 
 replace date = date[_n-1] + 1 in 2/l
 

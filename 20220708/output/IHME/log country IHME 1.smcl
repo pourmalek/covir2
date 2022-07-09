@@ -1,0 +1,3913 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/IHME/log country IHME 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Jul 2022, 16:24:28
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country IHME 1.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek
+. ***************************************************************************
+. 
+. 
+. * download and prepare estimates files
+. * input data files: download csv files
+. * output data files: "IHME 202?????.dta " 
+. * "graph epoch update 202?????.pdf"
+. 
+. * based on combinations of linkdate, download, and urldate
+. * e.g.,                                    04-Nov-21 ihme-covid19  2021-11-04   https://ihmecovid19storage.blob.core.windows.net/archive/2021-11-04/ihme-covid19.zip    data_download_file_reference_2020
+. 
+. 
+. 
+. 
+. /*
+> Explanation of “linkdate”, “download”, and “urldate”:
+> 
+> “linkdate” is the date of update as shown on web page https://www.healthdata.org/node/8787 titled “COVID-19 estimate downloads | Archive” that mentions “Archive dates correspond to the update in the projections tool with most recent data, which may differ from the date listed on the downloaded file.” 
+> 
+> “linkdate” is the “update date” here.
+> 
+> “download” is the name of the directory that is created after downloading the files and unzipped. Later updates do not create a directory and the files get downloaded directly to the root of -present working directory- that is /IHME/.
+> 
+> “download” is used here with command -cd- to change directory to the created directory (and later, -cd ..- is used to come back to the root /IHME/.
+> 
+> “urldate” is the date mentioned in the URL of the update.
+> 
+> “urldate” is used in the download URL here. 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 1 
+. * linkdate              download                urldate
+. * Jan 8, 2022   ihme-covid19    2022-01-10
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. 
+.                 
+. 
+. di in red "This is urldate 2022-01-10, linkdate Jan 8, 2022"
+{res}{err}This is urldate 2022-01-10, linkdate Jan 8, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-01-10/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_reduce_hesitancy_2020.csv
+    inflating: data_download_file_reduce_hesitancy_2021.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_severe_omicron_2020.csv
+    inflating: data_download_file_severe_omicron_2021.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(60 vars, 124,832 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(124,500 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(60 vars, 182,736 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(182,250 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(486 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(0 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(2 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22766{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}818{col 51}{txt}missing .:  {res}0{txt}/{res}818
+
+{txt}{col 19}mean:{res}{col 26} 22357.5{txt} = {res}18mar2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 236.281
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22030{col 37}   22153{col 47} 22357.5{col 57}   22562{col 67}   22685
+{col 26}25apr2020{col 36}26aug2020{col 46}18mar2021{col 56}09oct2021{col 66}09feb2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(818 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220110)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220110.dta", replace
+{txt}file IHME 20220110.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220110 epoch
+. 
+. use "IHME 20220110.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220110 daily_deaths_unscaled
+. gen epoch = td(04Jan2022)
+{txt}
+{com}. di td(04Jan2022)
+{res}22649
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220110 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220110", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22649, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 04Jan2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220110.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220110
+{res}{txt}
+{com}. 
+. save "IHME 20220110.dta", replace
+{txt}file IHME 20220110.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 2 
+. * linkdate              download                urldate
+. * Jan 14, 2022  ihme-covid19    2022-01-14
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. 
+.                 
+. 
+. di in red "This is urldate 2022-01-14, linkdate Jan 14, 2022"
+{res}{err}This is urldate 2022-01-14, linkdate Jan 14, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-01-14/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_reduce_hesitancy_2020.csv
+    inflating: data_download_file_reduce_hesitancy_2021.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_severe_omicron_2020.csv
+    inflating: data_download_file_severe_omicron_2021.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(63 vars, 124,168 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(123,836 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(63 vars, 181,764 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(181,278 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(486 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(0 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(2 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(7 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(9 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22766{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}818{col 51}{txt}missing .:  {res}0{txt}/{res}818
+
+{txt}{col 19}mean:{res}{col 26} 22357.5{txt} = {res}18mar2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 236.281
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22030{col 37}   22153{col 47} 22357.5{col 57}   22562{col 67}   22685
+{col 26}25apr2020{col 36}26aug2020{col 46}18mar2021{col 56}09oct2021{col 66}09feb2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(818 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220114)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220114.dta", replace
+{txt}file IHME 20220114.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220114 epoch
+. 
+. use "IHME 20220114.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220114 daily_deaths_unscaled
+. gen epoch = td(11Jan2022)
+{txt}
+{com}. di td(11Jan2022)
+{res}22656
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220114 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220114", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22656, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 11Jan2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220114.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220114
+{res}{txt}
+{com}. 
+. save "IHME 20220114.dta", replace
+{txt}file IHME 20220114.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 3
+. * linkdate              download                urldate
+. * Jan 21, 2022  ihme-covid19    2022-01-21
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. 
+.                 
+. 
+. di in red "This is urldate 2022-01-21, linkdate Jan 21, 2022"
+{res}{err}This is urldate 2022-01-21, linkdate Jan 21, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-01-21/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(63 vars, 124,168 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(123,836 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(63 vars, 181,764 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(181,278 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(486 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(0 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(2 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22766{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01may2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}818{col 51}{txt}missing .:  {res}0{txt}/{res}818
+
+{txt}{col 19}mean:{res}{col 26} 22357.5{txt} = {res}18mar2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 236.281
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22030{col 37}   22153{col 47} 22357.5{col 57}   22562{col 67}   22685
+{col 26}25apr2020{col 36}26aug2020{col 46}18mar2021{col 56}09oct2021{col 66}09feb2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(818 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220121)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220121.dta", replace
+{txt}file IHME 20220121.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220121 epoch
+. 
+. use "IHME 20220121.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220121 daily_deaths_unscaled
+. gen epoch = td(19Jan2022)
+{txt}
+{com}. di td(19Jan2022)
+{res}22664
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220121 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220121", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22664, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 19Jan2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220121.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220121
+{res}{txt}
+{com}. 
+. save "IHME 20220121.dta", replace
+{txt}file IHME 20220121.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 4
+. * linkdate              download                urldate
+. * Feb 4, 2022   ihme-covid19    2022-02-04
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. * and data_download_file_reference_2022.csv
+.                 
+. 
+. di in red "This is urldate 2022-02-04, linkdate Feb 4, 2022"
+{res}{err}This is urldate 2022-02-04, linkdate Feb 4, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-02-04/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_best_masks_2022.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_reference_2022.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: data_download_file_third_dose_2022.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(81 vars, 114,208 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(113,876 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(81 vars, 125,560 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(125,195 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(365 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+{res}{text}(81 vars, 52,288 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(52,136 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(152 real changes made)
+
+{com}. save data_download_file_reference_2022.dta, replace
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(3 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(0 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(2 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. use "data_download_file_reference_2022.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2022.dta", replace 
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using "data_download_file_reference_2021.dta"
+{txt}{p 0 7 2}
+(note: variable
+inf_cuml_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+inf_cuml_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22797{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01jun2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}849{col 51}{txt}missing .:  {res}0{txt}/{res}849
+
+{txt}{col 19}mean:{res}{col 26}   22373{txt} = {res}03apr2021{txt}
+{col 15}std. dev:{res}{col 26} 245.229
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22033{col 37}   22161{col 47}   22373{col 57}   22585{col 67}   22713
+{col 26}28apr2020{col 36}03sep2020{col 46}03apr2021{col 56}01nov2021{col 66}09mar2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(849 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220204)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220204.dta", replace
+{txt}file IHME 20220204.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220204 epoch
+. 
+. use "IHME 20220204.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220204 daily_deaths_unscaled
+. gen epoch = td(01Feb2022)
+{txt}
+{com}. di td(01Feb2022)
+{res}22677
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220204 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220204", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22677, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 01Feb2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220204.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220204
+{res}{txt}
+{com}. 
+. save "IHME 20220204.dta", replace
+{txt}file IHME 20220204.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 5
+. * linkdate              download                urldate
+. * Feb 18, 2022  ihme-covid19    2022-02-18
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. * and data_download_file_reference_2022.csv
+.                 
+. 
+. di in red "This is urldate 2022-02-18, linkdate Feb 18, 2022"
+{res}{err}This is urldate 2022-02-18, linkdate Feb 18, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-02-18/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_best_masks_2022.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_reference_2022.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: data_download_file_third_dose_2022.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(63 vars, 127,820 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(127,488 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(63 vars, 140,525 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(140,160 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(365 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+{res}{text}(63 vars, 58,520 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(58,368 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(152 real changes made)
+
+{com}. save data_download_file_reference_2022.dta, replace
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(3 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(0 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(2 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. use "data_download_file_reference_2022.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2022.dta", replace 
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using "data_download_file_reference_2021.dta"
+{txt}{p 0 7 2}
+(note: variable
+inf_cuml_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22797{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01jun2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}849{col 51}{txt}missing .:  {res}0{txt}/{res}849
+
+{txt}{col 19}mean:{res}{col 26}   22373{txt} = {res}03apr2021{txt}
+{col 15}std. dev:{res}{col 26} 245.229
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22033{col 37}   22161{col 47}   22373{col 57}   22585{col 67}   22713
+{col 26}28apr2020{col 36}03sep2020{col 46}03apr2021{col 56}01nov2021{col 66}09mar2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(849 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220218)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220218.dta", replace
+{txt}file IHME 20220218.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220218 epoch
+. 
+. use "IHME 20220218.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220218 daily_deaths_unscaled
+. gen epoch = td(15Feb2022)
+{txt}
+{com}. di td(15Feb2022)
+{res}22691
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220218 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220218", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22691, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 15Feb2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220218.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220218
+{res}{txt}
+{com}. 
+. save "IHME 20220218.dta", replace
+{txt}file IHME 20220218.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 6
+. * linkdate              download                urldate
+. * Mar 21, 2022  ihme-covid19    2022-03-22
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. * and data_download_file_reference_2022.csv
+.                 
+. 
+. di in red "This is urldate 2022-03-22, linkdate Mar 21, 2022"
+{res}{err}This is urldate 2022-03-22, linkdate Mar 21, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-03-22/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_best_masks_2022.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_reference_2022.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: data_download_file_third_dose_2022.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(63 vars, 127,820 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(127,488 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(63 vars, 140,525 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(140,160 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(365 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+{res}{text}(63 vars, 70,070 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(69,888 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(182 real changes made)
+
+{com}. save data_download_file_reference_2022.dta, replace
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(3 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(6 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. use "data_download_file_reference_2022.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2022.dta", replace 
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using "data_download_file_reference_2021.dta"
+{txt}{p 0 7 2}
+(note: variable
+inf_cuml_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22827{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}879{col 51}{txt}missing .:  {res}0{txt}/{res}879
+
+{txt}{col 19}mean:{res}{col 26}   22388{txt} = {res}18apr2021{txt}
+{col 15}std. dev:{res}{col 26}  253.89
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22036{col 37}   22168{col 47}   22388{col 57}   22608{col 67}   22740
+{col 26}01may2020{col 36}10sep2020{col 46}18apr2021{col 56}24nov2021{col 66}05apr2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(879 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220321)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220321.dta", replace
+{txt}file IHME 20220321.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220321 epoch
+. 
+. use "IHME 20220321.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220321 daily_deaths_unscaled
+. gen epoch = td(15Mar2022)
+{txt}
+{com}. di td(15Mar2022)
+{res}22719
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220321 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220321", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22719, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 15Mar2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220321.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220321
+{res}{txt}
+{com}. 
+. save "IHME 20220321.dta", replace
+{txt}file IHME 20220321.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 7
+. * linkdate              download                urldate
+. * Apr 8, 2022   ihme-covid19    2022-04-08
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. * and data_download_file_reference_2022.csv
+.                 
+. 
+. di in red "This is urldate 2022-04-08, linkdate Apr 8, 2022"
+{res}{err}This is urldate 2022-04-08, linkdate Apr 8, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-04-08/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_best_masks_2022.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_reference_2022.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: data_download_file_third_dose_2022.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(81 vars, 126,824 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(126,492 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(81 vars, 139,430 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(139,065 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(365 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+{res}{text}(81 vars, 81,366 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(81,153 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(213 real changes made)
+
+{com}. save data_download_file_reference_2022.dta, replace
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(3 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(6 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. use "data_download_file_reference_2022.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2022.dta", replace 
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using "data_download_file_reference_2021.dta"
+{txt}
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22858{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01aug2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}910{col 51}{txt}missing .:  {res}0{txt}/{res}910
+
+{txt}{col 19}mean:{res}{col 26} 22403.5{txt} = {res}03may2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 262.839
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 22039.5{col 37}   22176{col 47} 22403.5{col 57}   22631{col 67} 22767.5
+{col 26}04may2020{col 36}18sep2020{col 46}03may2021{col 56}17dec2021{col 66}02may2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(910 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220408)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220408.dta", replace
+{txt}file IHME 20220408.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220408 epoch
+. 
+. use "IHME 20220408.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220408 daily_deaths_unscaled
+. gen epoch = td(05Apr2022)
+{txt}
+{com}. di td(05Apr2022)
+{res}22740
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220408 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220408", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22740, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 05Apr2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220408.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220408
+{res}{txt}
+{com}. 
+. save "IHME 20220408.dta", replace
+{txt}file IHME 20220408.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 8
+. * linkdate              download                urldate
+. * May 6, 2022   ihme-covid19    2022-05-18
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. * and data_download_file_reference_2022.csv
+.                 
+. 
+. di in red "This is urldate 2022-05-18, linkdate May 6, 2022"
+{res}{err}This is urldate 2022-05-18, linkdate May 6, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-05-18/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_best_masks_2022.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_reference_2022.csv
+    inflating: data_download_file_third_dose_2020.csv
+    inflating: data_download_file_third_dose_2021.csv
+    inflating: data_download_file_third_dose_2022.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(81 vars, 137,448 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(137,116 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(81 vars, 151,110 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(150,745 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(365 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+{res}{text}(81 vars, 101,016 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(100,772 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(244 real changes made)
+
+{com}. save data_download_file_reference_2022.dta, replace
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(3 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(6 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. use "data_download_file_reference_2022.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2022.dta", replace 
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using "data_download_file_reference_2021.dta"
+{txt}
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22889{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}941{col 51}{txt}missing .:  {res}0{txt}/{res}941
+
+{txt}{col 19}mean:{res}{col 26}   22419{txt} = {res}19may2021{txt}
+{col 15}std. dev:{res}{col 26} 271.788
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22043{col 37}   22184{col 47}   22419{col 57}   22654{col 67}   22795
+{col 26}08may2020{col 36}26sep2020{col 46}19may2021{col 56}09jan2022{col 66}30may2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(941 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220506)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220506.dta", replace
+{txt}file IHME 20220506.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220506 epoch
+. 
+. use "IHME 20220506.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220506 daily_deaths_unscaled
+. gen epoch = td(03May2022)
+{txt}
+{com}. di td(03May2022)
+{res}22768
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220506 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220506", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22768, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 03May2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220506.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220506
+{res}{txt}
+{com}. 
+. save "IHME 20220506.dta", replace
+{txt}file IHME 20220506.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. **********************************************
+. **********************************************
+. 
+. * Iran update 2022 No. 9
+. * linkdate              download                urldate
+. * Jun 10, 2022  ihme-covid19    2022-06-10
+. * filename: data_download_file_reference_2020.csv and data_download_file_reference_2021.csv
+. * and data_download_file_reference_2022.csv
+.                 
+. 
+. di in red "This is urldate 2022-06-10, linkdate Jun 10, 2022"
+{res}{err}This is urldate 2022-06-10, linkdate Jun 10, 2022
+{txt}
+{com}. 
+. *****************************
+. 
+. * get IHME estimates
+. 
+. copy https://ihmecovid19storage.blob.core.windows.net/archive/2022-06-10/ihme-covid19.zip ihme-covid19.zip
+{txt}
+{com}. unzipfile ihme-covid19.zip, replace
+{res}{txt}    inflating: data_dictionary.csv
+    inflating: data_download_file_best_masks_2020.csv
+    inflating: data_download_file_best_masks_2021.csv
+    inflating: data_download_file_best_masks_2022.csv
+    inflating: data_download_file_global_antivirals_2020.csv
+    inflating: data_download_file_global_antivirals_2021.csv
+    inflating: data_download_file_global_antivirals_2022.csv
+    inflating: data_download_file_reference_2020.csv
+    inflating: data_download_file_reference_2021.csv
+    inflating: data_download_file_reference_2022.csv
+    inflating: IHME_COVID_19_Data_Release_Information_Sheet.pdf
+successfully unzipped ihme-covid19.zip to current directory
+
+{com}. erase ihme-covid19.zip
+{txt}
+{com}. 
+. 
+. ******************************
+. 
+. * import csv files
+. 
+. import delimited using data_download_file_reference_2020.csv, clear varnames(1)
+{res}{text}(81 vars, 137,448 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(137,116 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(332 real changes made)
+
+{com}. save data_download_file_reference_2020.dta, replace
+{txt}(note: file data_download_file_reference_2020.dta not found)
+file data_download_file_reference_2020.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2021.csv, clear varnames(1)
+{res}{text}(81 vars, 151,110 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(150,745 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(365 real changes made)
+
+{com}. save data_download_file_reference_2021.dta, replace
+{txt}(note: file data_download_file_reference_2021.dta not found)
+file data_download_file_reference_2021.dta saved
+
+{com}. 
+. import delimited using data_download_file_reference_2022.csv, clear varnames(1)
+{res}{text}(81 vars, 113,436 obs)
+
+{com}. keep if regexm(location_name,"$country") == 1 
+{txt}(113,162 observations deleted)
+
+{com}. replace location_name = "Iran" if regexm(location_name,"$country") == 1
+{txt}(274 real changes made)
+
+{com}. save data_download_file_reference_2022.dta, replace
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. ******************************
+. 
+. * gen scenario dta files
+. 
+. use "data_download_file_reference_2020.dta", clear 
+{txt}
+{com}. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean contains string
+{txt}(4 real changes made)
+reff_mean: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(4 missing values generated)
+{res}reff_lower contains string
+{txt}(0 real changes made)
+reff_lower: all characters numeric; {res}replaced {txt}as {res}double
+reff_upper contains string
+{txt}(0 real changes made)
+reff_upper: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(3 missing values generated)
+{res}infection_fatality contains string
+{txt}(6 real changes made)
+infection_fatality: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(24 missing values generated)
+{res}infection_detection contains string
+{txt}(6 real changes made)
+infection_detection: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}infection_hospitalization contains string
+{txt}(6 real changes made)
+infection_hospitalization: all characters numeric; {res}replaced {txt}as {res}double
+{txt}(8 missing values generated)
+{res}{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2020.dta", replace 
+{txt}file data_download_file_reference_2020.dta saved
+
+{com}. 
+. 
+. 
+. use "data_download_file_reference_2021.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2021.dta", replace 
+{txt}file data_download_file_reference_2021.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. use "data_download_file_reference_2022.dta", clear 
+{txt}
+{com}. 
+. 
+. local varlist reff_mean reff_lower reff_upper infection_fatality infection_detection infection_hospitalization
+{txt}
+{com}. 
+. foreach v of local varlist {c -(}
+{txt}  2{com}.         capture confirm numeric variable `v'
+{txt}  3{com}.     if !_rc {c -(}
+{txt}  4{com}.                 di "`v'" " is numeric"
+{txt}  5{com}.     {c )-}
+{txt}  6{com}.     else {c -(}
+{txt}  7{com}.                 di "`v'" " contains string"
+{txt}  8{com}.                 replace `v' = "." if `v' == "Inf"
+{txt}  9{com}.                 destring `v', replace 
+{txt} 10{com}.     {c )-}
+{txt} 11{com}. {c )-}
+reff_mean is numeric
+reff_lower is numeric
+reff_upper is numeric
+infection_fatality is numeric
+infection_detection is numeric
+infection_hospitalization is numeric
+{txt}
+{com}. *
+. 
+. save "data_download_file_reference_2022.dta", replace 
+{txt}file data_download_file_reference_2022.dta saved
+
+{com}. 
+. 
+. 
+. append using "data_download_file_reference_2020.dta"
+{txt}{p 0 7 2}
+(note: variable
+reff_mean was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_lower was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+reff_upper was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_fatality was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_detection was 
+float, now double to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+infection_hospitalization was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using "data_download_file_reference_2021.dta"
+{txt}
+{com}. 
+. 
+. 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21949{txt},{res}22919{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}04feb2020{txt},{res}01oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}971{col 51}{txt}missing .:  {res}0{txt}/{res}971
+
+{txt}{col 19}mean:{res}{col 26}   22434{txt} = {res}03jun2021{txt}
+{col 15}std. dev:{res}{col 26} 280.448
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22046{col 37}   22191{col 47}   22434{col 57}   22677{col 67}   22822
+{col 26}11may2020{col 36}03oct2020{col 46}03jun2021{col 56}01feb2022{col 66}26jun2022
+{txt}
+{com}. drop year month day date2
+{txt}
+{com}. 
+. 
+. 
+. 
+. * rename variables
+. 
+. * Daily Deaths smoothed
+. rename seir_daily_unscaled_mean  DayDeaMeSmA02S01
+{res}{txt}
+{com}. label var DayDeaMeSmA02S01 "Daily Deaths Mean smoothed IHME S1" // Daily reported deaths (mean estimate)
+{txt}
+{com}.                 
+. 
+. rename location_name provincestate
+{res}{txt}
+{com}. 
+. gen loc_grand_name = "$country"
+{txt}
+{com}. 
+. replace provincestate = " National" if provincestate == "$country"
+{txt}(971 real changes made)
+
+{com}. 
+. 
+. 
+. keep date loc_grand_name provincestate DayDeaMeSmA02S01 daily_deaths_unscaled
+{txt}
+{com}. 
+. order date loc_grand_name provincestate DayDeaMeSmA02S01
+{txt}
+{com}. 
+. sort loc_grand_name provincestate date
+{txt}
+{com}. 
+. 
+. rename (DayDeaMeSmA02S01) (DayDeaMeSmA0220220610)
+{res}{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME 20220610.dta", replace
+{txt}file IHME 20220610.dta saved
+
+{com}. 
+. 
+. 
+. shell rm -r "data_dictionary.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_best_masks_2021.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.csv"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.csv"
+{txt}
+
+{com}. shell rm -r "IHME_COVID_19_Data_Release_Information_Sheet.pdf"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2020.dta"
+{txt}
+
+{com}. shell rm -r "data_download_file_reference_2021.dta"
+{txt}
+
+{com}. 
+. shell rm -r "data_download_file_severe_omicron_2020.csv"
+{txt}
+rm: data_download_file_severe_omicron_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_severe_omicron_2021.csv"
+{txt}
+rm: data_download_file_severe_omicron_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2020.csv"
+{txt}
+rm: data_download_file_third_dose_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_third_dose_2021.csv"
+{txt}
+rm: data_download_file_third_dose_2021.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2020.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2020.csv: No such file or directory
+
+{com}. shell rm -r "data_download_file_reduce_hesitancy_2021.csv"
+{txt}
+rm: data_download_file_reduce_hesitancy_2021.csv: No such file or directory
+
+{com}. 
+. 
+. 
+. ***
+. 
+. 
+. 
+. 
+. 
+. * update 20220610 epoch
+. 
+. use "IHME 20220610.dta", clear
+{txt}
+{com}. 
+. // br date DayDeaMeSmA0220220610 daily_deaths_unscaled
+. gen epoch = td(07Jun2022)
+{txt}
+{com}. di td(07Jun2022)
+{res}22803
+{txt}
+{com}. label var epoch "Forecast start date"
+{txt}
+{com}. local epoch = epoch
+{txt}
+{com}. 
+. 
+. twoway ///
+> (line daily_deaths_unscaled date, sort lwidth(medium) lcolor(black)) ///        
+> (line DayDeaMeSmA0220220610 date, sort lwidth(medium) lcolor(gold)) ///         
+> if date >= td(01Jan2020) & provincestate == " National" ///
+> , xtitle(Date) xlabel(, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(forty_five)) ///
+> ytitle(Daily deaths) title("C-19 daily deaths, $country, National, IHME, update 20220610", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> xline(22803, lwidth(thin) lcolor(red)) ///
+> subtitle("Forecast start date is denoted with red line: 07Jun2022") ///
+> legend(order(1 "Daily deaths unscaled" 2 "Daily deaths reference scenario smooth") size(small))
+{res}{txt}
+{com}. 
+. 
+. qui graph export "graph $country IHME epoch update 20220610.pdf", replace
+{txt}
+{com}.                 
+. drop daily_deaths_unscaled
+{txt}
+{com}. rename epoch epoch20220610
+{res}{txt}
+{com}. 
+. save "IHME 20220610.dta", replace
+{txt}file IHME 20220610.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************
+. 
+. view "log country IHME 1.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220708/code/IHME/log country IHME 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 8 Jul 2022, 16:38:16
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
