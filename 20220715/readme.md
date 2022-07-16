@@ -277,25 +277,25 @@ https://www.instagram.com/p/CfyxAcNDOdI/?igshid=MDJmNzVkMjY=
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book
+![image](https://user-images.githubusercontent.com/30849720/179365299-bb8097d8-cb78-4230-ae55-cd8e238fbf13.png)
   
 ****  
   
-(000) Iran [Variants composition, Ending 27mmmmmmmmm June 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
+(000) Iran [Variants composition, Ending 27 June 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
   
-book
+![image](https://user-images.githubusercontent.com/30849720/179365328-d709866e-ef00-4b5e-a684-2191f9c35121.png)
   
 <br/><br/> 
   
 Legend (Number sequenced and Frequency as of 15 July 2022) :
   
-book
+![image](https://user-images.githubusercontent.com/30849720/179365346-b0d36f37-682e-4424-829e-36843171f10e.png)
 
 <br/><br/> 
 
 Mapping of variants nomenclature schemes 
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365371-0b7ce563-d670-4a91-9567-37fd797035e2.png)
 
 https://covariants.org
 
