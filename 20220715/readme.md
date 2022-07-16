@@ -317,13 +317,13 @@ SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero Ge
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365427-edf74204-7d98-4263-a8bf-f49979c0d1de.png)
   
 ****
 
 (00b1) Iran [daily reported cases JOHN, % positive tests MEDRIVA, all time](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%202%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365454-3b8be46e-3222-4aa1-b7cd-38dc529c5510.png)
 
 MEDRIVA:  https://charts.medriva.com/country/IR
   
@@ -331,7 +331,7 @@ MEDRIVA:  https://charts.medriva.com/country/IR
 
 (00b2) Iran [daily tests and % positive tests, MEDRIVA, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%200%20b%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202021%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365496-9849da3d-924a-44bc-9bc1-46526c4143d0.png)
 
 MEDRIVA:  https://charts.medriva.com/country/IR
   
@@ -339,19 +339,19 @@ MEDRIVA:  https://charts.medriva.com/country/IR
 
 (00b3) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365528-75abbc74-96bf-4a59-b778-ff154844f559.png)
   
 ****
 
 (00c) Iran [Daily reported cases, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%204%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365556-9dbe8fe3-3ae0-4f2f-86c8-101ed74dc065.png)
   
 ****
 
 (00d) Iran [Daily tests and % positive, MEDRIVA, 2022](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%200%20c%20COVID-19%20daily%20tests%2C%20Iran%2C%20MEDRIVA%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179365581-9b2d30dd-5a5d-4391-89b5-9879db5e41ca.png)
 
 MEDRIVA:  https://charts.medriva.com/country/IR  
 ****
