@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}16 Jul 2022, 07:28:45
+ {txt}opened on:  {res}16 Jul 2022, 09:27:24
 {txt}
 {com}. 
 . 
@@ -1746,13 +1746,11 @@ Sorted by: {res}date
 {txt}
 {com}. 
 . save "country.dta", replace
-{txt}(note: file country.dta not found)
-file country.dta saved
+{txt}file country.dta saved
 
 {com}. 
 . export delimited using "country.csv", replace 
-{res}{txt}(note: file country.csv not found)
-{txt}file country.csv saved
+{res}{txt}file country.csv saved
 
 {com}. 
 . 
@@ -2131,7 +2129,7 @@ file country.dta saved
 > (line DayDeaMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 > (line DayDeaMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
 > if date >= td(01jun2022) & date <= td(08jul2022) ///
-> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins, 2022 June on", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -2175,7 +2173,7 @@ file country.dta saved
 > (line DayCasMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 > (line DayCasMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
 > if date >= td(01jun2022) & date <= td(08jul2022) ///
-> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins, 2022 June on", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -3654,8 +3652,7 @@ all files already exist and are up to date.
 {txt}
 {com}. 
 . save "JOHN deaths and cases EMRO region and countries.dta", replace
-{txt}(note: file JOHN deaths and cases EMRO region and countries.dta not found)
-file JOHN deaths and cases EMRO region and countries.dta saved
+{txt}file JOHN deaths and cases EMRO region and countries.dta saved
 
 {com}. 
 . 
@@ -3786,7 +3783,7 @@ file JOHN deaths and cases EMRO region and countries.dta saved
 > (line DayDeaMeSmA00EMR date, sort lcolor(black) lwidth(medthick) lpattern(solid)) /// 22 EMRO
 > (line DayDeaMeSmA00IRN date, sort lcolor(cyan) lwidth(thick) lpattern(solid)) /// 23 Iran
 > if date >= td(01jun2022) & date <= td(08jul2022) ///
-> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -3836,7 +3833,7 @@ file JOHN deaths and cases EMRO region and countries.dta saved
 > (line DayDeaMeSmA00YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 10 Yemen
 > (line DayDeaMeSmA00IRN date, sort lcolor(cyan) lwidth(thick) lpattern(solid)) /// 21 Iran
 > if date >= td(01jun2022) & date <= td(08jul2022) ///
-> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -3977,7 +3974,7 @@ file JOHN deaths and cases EMRO region and countries.dta saved
 > (line DayCasMeSmA00YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 21 Yemen
 > (line DayCasMeSmA00IRN date, sort lcolor(cyan) lwidth(thick)  lpattern(solid)) /// 22 Iran
 > if date >= td(01jun2022) & date <= td(08jul2022) ///
-> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> , xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 > xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 > ytitle(Daily reported cases) title("COVID-19 daily reported cases, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
 > xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -4017,8 +4014,7 @@ file JOHN deaths and cases EMRO region and countries.dta saved
 {txt}
 {com}. 
 . save "IHME EMRO reference scenario 2022.dta", replace
-{txt}(note: file IHME EMRO reference scenario 2022.dta not found)
-file IHME EMRO reference scenario 2022.dta saved
+{txt}file IHME EMRO reference scenario 2022.dta saved
 
 {com}. 
 . 
@@ -4340,7 +4336,7 @@ file IHME EMRO reference scenario 2022.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/merge/log country merge.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}16 Jul 2022, 07:30:33
+ {txt}closed on:  {res}16 Jul 2022, 09:29:10
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
