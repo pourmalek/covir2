@@ -755,8 +755,8 @@ graph export "graph 3 COVID-19 daily deaths, $country, Johns Hopkins, 2022 on.pd
 twoway ///
 (line DayDeaMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 (line DayDeaMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
-if date >= td(01jun2022) & date <= td(08jul2022) ///
-, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+if date >= td(01jun2022) & date <= td(01aug2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848 22858, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins, 2022 June on", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -793,8 +793,8 @@ graph export "graph 4 COVID-19 daily cases, $country, Johns Hopkins, 2022 on.pdf
 twoway ///
 (line DayCasMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
 (line DayCasMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
-if date >= td(01jun2022) & date <= td(08jul2022) ///
-, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+if date >= td(01jun2022) & date <= td(01aug2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848 22858, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins, 2022 June on", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -2206,8 +2206,8 @@ twoway ///
 (line DayDeaMeSmA00YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 21 Yemen
 (line DayDeaMeSmA00EMR date, sort lcolor(black) lwidth(medthick) lpattern(solid)) /// 22 EMRO
 (line DayDeaMeSmA00IRN date, sort lcolor(cyan) lwidth(thick) lpattern(solid)) /// 23 Iran
-if date >= td(01jun2022) & date <= td(08jul2022) ///
-, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+if date >= td(01jun2022) & date <= td(01aug2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848 22858, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -2253,8 +2253,8 @@ twoway ///
 (line DayDeaMeSmA00ARE date, sort lcolor(purple) lwidth(medium) lpattern(dash)) /// 19 United Arab Emirates
 (line DayDeaMeSmA00YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 10 Yemen
 (line DayDeaMeSmA00IRN date, sort lcolor(cyan) lwidth(thick) lpattern(solid)) /// 21 Iran
-if date >= td(01jun2022) & date <= td(08jul2022) ///
-, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+if date >= td(01jun2022) & date <= td(01aug2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848 22858, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
@@ -2385,8 +2385,8 @@ twoway ///
 (line DayCasMeSmA00ARE date, sort lcolor(purple) lwidth(medium) lpattern(dash)) /// 20 United Arab Emirates
 (line DayCasMeSmA00YEM date, sort lcolor(purple) lwidth(medium) lpattern(dot)) /// 21 Yemen
 (line DayCasMeSmA00IRN date, sort lcolor(cyan) lwidth(thick)  lpattern(solid)) /// 22 Iran
-if date >= td(01jun2022) & date <= td(08jul2022) ///
-, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+if date >= td(01jun2022) & date <= td(01aug2022) ///
+, xtitle(Date) xlabel(22797 22803 22810 22817 22824 22827 22834 22841 22848 22858, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small)) ylabel(, labsize(small) angle(horizontal)) ///
 ytitle(Daily reported cases) title("COVID-19 daily reported cases, EMRO countries, Johns Hopkins, 2022", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
