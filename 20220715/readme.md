@@ -358,7 +358,7 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179366485-6639f49e-a572-4ed9-b30d-d379cb23e553.png)
   
 ****
 
@@ -374,7 +374,7 @@ book
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179366640-ddb882fc-0ca6-40e8-8ae5-4b30769013c4.png)
   
 ****
 
@@ -395,13 +395,13 @@ book
 
 (11) Iran [Daily deaths estimated to reported, all time](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2091%20COVID-19%20daily%20deaths%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179366662-25dadcef-6166-423b-bfc3-a3edcb7e0967.png)
   
 ****
 
 (12) Iran [Daily cases or infections estimated to reported cases, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2094%20COVID-19%20daily%20cases%20estimated%20to%20reported%2C%20Iran%2C%20reference%20scenarios.pdf) 
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179366686-7f960e20-cf62-451b-b8ef-92d7008b162c.png)
   
 ****
 ****
