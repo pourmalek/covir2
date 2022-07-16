@@ -1,0 +1,47 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/log country IMPE 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:20:57
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country IMPE 1.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek 
+. ***************************************************************************
+. 
+. 
+. * get downloaded and prepared update files from covir2/20220708/output/
+. * input data files: web "country IMPE longit.dta"
+. * output data files: "country IMPE longit 20220708.dta" 
+. 
+. 
+. clear 
+{txt}
+{com}. 
+. use https://raw.githubusercontent.com/pourmalek/covir2/main/20220708/output/IMPE/country%20IMPE%20longit.dta
+{txt}
+{com}. 
+. save "country IMPE longit 20220708.dta", replace
+{txt}file country IMPE longit 20220708.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. view "log country IMPE 1.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/log country IMPE 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:21:00
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

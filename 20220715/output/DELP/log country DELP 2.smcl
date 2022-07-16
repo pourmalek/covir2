@@ -1,0 +1,54 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/DELP/log country DELP 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:17:47
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country DELP 2.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek
+. ***************************************************************************
+. 
+. 
+. * download updates after uptake 20220708
+. * input data files: "country DELP longit 20220708.dta"
+. * output data files: "country DELP longit.dta"
+. 
+. 
+. * download updates after uptake 20220708
+. 
+. * no DELP update/s after uptake 20220708
+. 
+. 
+. * merge "country DELP longit 20220708.dta" with downloadED updates after uptake 20220708
+. 
+. 
+. 
+. use "country DELP longit 20220708.dta", clear
+{txt}
+{com}. 
+. 
+. save "country DELP longit.dta", replace
+{txt}file country DELP longit.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. view "log country DELP 2.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/DELP/log country DELP 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:17:47
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

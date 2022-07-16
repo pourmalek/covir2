@@ -1,0 +1,480 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/DELP/log country DELP 4.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:18:00
+{txt}
+{com}. 
+. ******************************************************************************
+. * This is "do country DELP 4.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek
+. ******************************************************************************
+. 
+. 
+. 
+. di "DELPdate = " "$DELPdate"
+{res}DELPdate = 20220618
+{txt}
+{com}. 
+. * latest update used in this uptake
+. * input data files: csv files on web site
+. * output data files: "country DELP.dta"
+. 
+. * Get DELPHI data for country
+. 
+. 
+. clear
+{txt}
+{com}. 
+. copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_$DELPdate.csv Global_V4_since100_$DELPdate.csv
+{txt}
+{com}. 
+. import delimited using "Global_V4_since100_$DELPdate.csv", clear varnames(1)
+{res}{text}(16 vars, 44,400 obs)
+
+{com}. 
+. rename country loc_grand_name
+{res}{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(44,215 observations deleted)
+
+{com}. 
+. 
+. * gen date
+. 
+. rename day date_original
+{res}{txt}
+{com}. 
+. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22719{txt},{res}22903{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15mar2022{txt},{res}15sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}185{col 51}{txt}missing .:  {res}0{txt}/{res}185
+
+{txt}{col 19}mean:{res}{col 26}   22811{txt} = {res}15jun2022{txt}
+{col 15}std. dev:{res}{col 26}  53.549
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22737{col 37}   22765{col 47}   22811{col 57}   22857{col 67}   22885
+{col 26}02apr2022{col 36}30apr2022{col 46}15jun2022{col 56}31jul2022{col 66}28aug2022
+{txt}
+{com}. 
+. drop year month day date2
+{txt}
+{com}. 
+. 
+. * rename outcome variables
+. 
+. 
+. * total vars
+. 
+. rename totaldetecteddeaths   TotDeaMeRaA01S00
+{res}{txt}
+{com}. rename totaldetecteddeathslb TotDeaLoRaA01S00
+{res}{txt}
+{com}. rename totaldetecteddeathsub TotDeaUpRaA01S00
+{res}{txt}
+{com}. 
+. label var TotDeaMeRaA01S00 "Total Deaths Mean DELP S0"
+{txt}
+{com}. label var TotDeaMeRaA01S00 "Total Deaths Lower DELP S0"
+{txt}
+{com}. label var TotDeaMeRaA01S00 "Total Deaths Upper DELP S0"
+{txt}
+{com}. 
+. rename totaldetected   TotCasMeRaA01S00
+{res}{txt}
+{com}. rename totaldetectedlb TotCasLoRaA01S00
+{res}{txt}
+{com}. rename totaldetectedub TotCasUpRaA01S00
+{res}{txt}
+{com}. 
+. label var TotCasMeRaA01S00 "Total Cases Mean DELP S0"
+{txt}
+{com}. label var TotCasMeRaA01S00 "Total Cases Lower DELP S0"
+{txt}
+{com}. label var TotCasMeRaA01S00 "Total Cases Upper DELP S0"
+{txt}
+{com}. 
+. 
+. * gen daily vars and rename
+. 
+. sort date
+{txt}
+{com}. 
+. gen DayDeaMeRaA01S00 =  TotDeaMeRaA01S00[_n] - TotDeaMeRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayDeaLoRaA01S00 =  TotDeaLoRaA01S00[_n] - TotDeaLoRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayDeaUpRaA01S00 =  TotDeaUpRaA01S00[_n] - TotDeaUpRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayCasMeRaA01S00 =  TotCasMeRaA01S00[_n] - TotCasMeRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayCasLoRaA01S00 =  TotCasLoRaA01S00[_n] - TotCasLoRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. gen DayCasUpRaA01S00 =  TotCasUpRaA01S00[_n] - TotCasUpRaA01S00[_n-1]
+{txt}(1 missing value generated)
+
+{com}. 
+. 
+. label var DayDeaMeRaA01S00 "Daily Deaths Mean DELP S0"
+{txt}
+{com}. label var DayDeaLoRaA01S00 "Daily Deaths Lower DELP S0"
+{txt}
+{com}. label var DayDeaUpRaA01S00 "Daily Deaths Upper DELP S0"
+{txt}
+{com}. 
+. label var DayCasMeRaA01S00 "Daily Cases Mean DELP S0"
+{txt}
+{com}. label var DayCasLoRaA01S00 "Daily Cases Lower DELP S0"
+{txt}
+{com}. label var DayCasUpRaA01S00 "Daily Cases Upper DELP S0"
+{txt}
+{com}. 
+. label var TotDeaMeRaA01S00 "Total Deaths Mean DELP S0"
+{txt}
+{com}. label var TotDeaLoRaA01S00 "Total Deaths Lower DELP S0"
+{txt}
+{com}. label var TotDeaUpRaA01S00 "Total Deaths Upper DELP S0"
+{txt}
+{com}. 
+. label var TotCasMeRaA01S00 "Total Cases Mean DELP S0"
+{txt}
+{com}. label var TotCasLoRaA01S00 "Total Cases Lower DELP S0"
+{txt}
+{com}. label var TotCasUpRaA01S00 "Total Cases Upper DELP S0"
+{txt}
+{com}. 
+. 
+. 
+. rename active DayActMeRaA01S00
+{res}{txt}
+{com}. 
+. rename activehospitalized DayHosMeRaA01S00
+{res}{txt}
+{com}. 
+. rename activeventilated DayVenMeRaA01S00
+{res}{txt}
+{com}. 
+. rename cumulativehospitalized TotHosMeRaA01S00
+{res}{txt}
+{com}. 
+. label var DayActMeRaA01S00 "Daily Cases Active Mean DELP S0"
+{txt}
+{com}. 
+. label var DayHosMeRaA01S00 "Daily Cases Active Hospitalized Mean DELP S0"
+{txt}
+{com}. 
+. label var DayVenMeRaA01S00 "Daily Cases Active Ventilated Mean DELP S0"
+{txt}
+{com}. 
+. label var TotHosMeRaA01S00 "Total Cases Active Mean DELP S0"
+{txt}
+{com}. 
+.  
+. 
+. keep ///
+> loc_grand_name date ///
+> TotDeaMeRaA01S00 TotDeaLoRaA01S00 TotDeaUpRaA01S00 ///
+> DayDeaMeRaA01S00 DayDeaLoRaA01S00 DayDeaUpRaA01S00 ///
+> TotCasMeRaA01S00 TotCasLoRaA01S00 TotCasUpRaA01S00 ///
+> DayCasMeRaA01S00 DayCasLoRaA01S00 DayCasUpRaA01S00 ///
+> DayActMeRaA01S00 DayHosMeRaA01S00 DayVenMeRaA01S00 TotHosMeRaA01S00
+{txt}
+{com}. 
+. 
+. order ///
+> loc_grand_name date ///
+> TotDeaMeRaA01S00 TotDeaLoRaA01S00 TotDeaUpRaA01S00 ///
+> DayDeaMeRaA01S00 DayDeaLoRaA01S00 DayDeaUpRaA01S00 ///
+> TotCasMeRaA01S00 TotCasLoRaA01S00 TotCasUpRaA01S00 ///
+> DayCasMeRaA01S00 DayCasLoRaA01S00 DayCasUpRaA01S00 ///
+> DayActMeRaA01S00 DayHosMeRaA01S00 DayVenMeRaA01S00 TotHosMeRaA01S00
+{txt}
+{com}. 
+. 
+. 
+. * gen cfr
+. 
+. gen DayCfrMeRaA01S00 = 100 * DayDeaMeRaA01S00 / DayCasMeRaA01S00
+{txt}(60 missing values generated)
+
+{com}. gen DayCfrLoRaA01S00 = 100 * DayDeaLoRaA01S00 / DayCasLoRaA01S00
+{txt}(90 missing values generated)
+
+{com}. gen DayCfrUpRaA01S00 = 100 * DayDeaUpRaA01S00 / DayCasUpRaA01S00
+{txt}(1 missing value generated)
+
+{com}. 
+. label var DayCfrMeRaA01S00 "Daily CFR Mean DELP S0 V4"
+{txt}
+{com}. label var DayCfrLoRaA01S00 "Daily CFR Lower DELP S0 V4"
+{txt}
+{com}. label var DayCfrUpRaA01S00 "Daily CFR Upper DELP S0 V4"
+{txt}
+{com}. 
+. 
+. 
+. 
+. *
+. 
+. 
+. 
+. 
+. 
+. * gen "Daily cases mean div by daily deaths mean DELP DayCbD" for visulization of temporal relation of deaths and cases peaks 
+. 
+. 
+. summ DayDeaMeRaA01S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDeaMeR~00 {c |}{res}        184    11.67391    19.20559          0         83
+{txt}
+{com}. gen DayDeMMeRaA01S00 = r(mean)
+{txt}
+{com}. label var DayDeMMeRaA01S00 "Daily deaths mean DELP DayDeM"
+{txt}
+{com}. 
+. summ DayCasMeRaA01S00 
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCasMeR~00 {c |}{res}        184    529.5598    892.8514          0       2875
+{txt}
+{com}. gen DayCaMMeRaA01S00 = r(mean)
+{txt}
+{com}. label var DayCaMMeRaA01S00 "Daily cases mean DELP DayCaM"
+{txt}
+{com}.                               
+. gen DayCbDMeRaA01S00 = DayCaMMeRaA01S00 / DayDeaMeRaA01S00
+{txt}(70 missing values generated)
+
+{com}. label var DayCbDMeRaA01S00 "Daily cases mean div by daily deaths mean DELP DayCbD"
+{txt}
+{com}. summ DayCbDMeRaA01S00
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayCbDMeR~00 {c |}{res}        115    172.2078    202.6706   6.380238   529.5598
+{txt}
+{com}.         
+. gen DayDMuMeRaA01S00 = DayDeaMeRaA01S00 * DayCbDMeRaA01S00
+{txt}(70 missing values generated)
+
+{com}. label var DayDMuMeRaA01S00 "Daily deaths scaled (times means of cases by deaths) only for visualization DELP"
+{txt}
+{com}. summ DayDMuMeRaA01S00   
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+DayDMuMeR~00 {c |}{res}        115    529.5598           0   529.5598   529.5598
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. * smooth 
+. 
+. tsset date, daily   
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 15Mar2022 to 15Sep2022
+{txt}{col 17}delta:  {res}1 day
+{txt}
+{com}. 
+. 
+. tssmooth ma DayDeaMeRaA01S00_window = DayDeaMeRaA01S00 if DayDeaMeRaA01S00 >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayDeaMeRaA01S00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayDeaMeSmA01S00 = DayDeaMeRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayDeaMeRaA01S00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayDeaMeSmA01S00 "Daily deaths smooth mean DELP"
+{txt}
+{com}. 
+. drop DayDeaMeRaA01S00_window
+{txt}
+{com}. 
+. 
+. tssmooth ma DayCasMeRaA01S00_window = DayCasMeRaA01S00 if DayCasMeRaA01S00 >= 0, window(3 1 3)
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayCasMeRaA01S00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayCasMeSmA01S00 = DayCasMeRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayCasMeRaA01S00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayCasMeSmA01S00 "Daily cases smooth mean DELP"
+{txt}
+{com}. 
+. drop DayCasMeRaA01S00_window
+{txt}
+{com}. 
+. 
+. 
+. tssmooth ma DayDeaLoRaA01S00_window = DayDeaLoRaA01S00 if DayDeaLoRaA01S00 >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayDeaLoRaA01S00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayDeaLoSmA01S00 = DayDeaLoRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayDeaLoRaA01S00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayDeaLoSmA01S00 "Daily deaths smooth lower DELP"
+{txt}
+{com}. 
+. drop DayDeaLoRaA01S00_window
+{txt}
+{com}. 
+. 
+. tssmooth ma DayCasLoRaA01S00_window = DayCasLoRaA01S00 if DayCasLoRaA01S00 >= 0, window(3 1 3)
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayCasLoRaA01S00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayCasLoSmA01S00 = DayCasLoRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayCasLoRaA01S00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayCasLoSmA01S00 "Daily cases smooth lower DELP"
+{txt}
+{com}. 
+. drop DayCasLoRaA01S00_window
+{txt}
+{com}. 
+. 
+. 
+. tssmooth ma DayDeaUpRaA01S00_window = DayDeaUpRaA01S00 if DayDeaUpRaA01S00 >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayDeaUpRaA01S00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayDeaUpSmA01S00 = DayDeaUpRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayDeaUpRaA01S00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayDeaUpSmA01S00 "Daily deaths smooth upper DELP"
+{txt}
+{com}. 
+. drop DayDeaUpRaA01S00_window
+{txt}
+{com}. 
+. 
+. tssmooth ma DayCasUpRaA01S00_window = DayCasUpRaA01S00 if DayCasUpRaA01S00 >= 0, window(3 1 3)
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayCasUpRaA01S00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayCasUpSmA01S00 = DayCasUpRaA01S00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayCasUpRaA01S00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayCasUpSmA01S00 "Daily cases smooth upper DELP"
+{txt}
+{com}. 
+. drop DayCasUpRaA01S00_window
+{txt}
+{com}. 
+. 
+. 
+. 
+. * Forecast start date 
+. 
+. gen epoch_DELP = td($DELPepoch) // update release date
+{txt}
+{com}. label var epoch_DELP "DELP Forecast start date"
+{txt}
+{com}. 
+. gen DayDeaFOREA01S00 = DayDeaMeSmA01S00
+{txt}
+{com}. replace DayDeaFOREA01S00 = . if date < td($DELPepoch)
+{txt}(95 real changes made, 95 to missing)
+
+{com}. label var DayDeaFOREA01S00 "Daily Forecasted Deaths Mean smooth DELP"
+{txt}
+{com}. 
+. gen DayCasFOREA01S00 = DayCasMeSmA01S00
+{txt}
+{com}. replace DayCasFOREA01S00 = . if date < td($DELPepoch)
+{txt}(95 real changes made, 95 to missing)
+
+{com}. label var DayCasFOREA01S00 "Daily Forecasted Cases Mean smooth DELP"
+{txt}
+{com}. 
+. 
+. sort date loc_grand_name
+{txt}
+{com}. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "country DELP.dta", replace
+{txt}file country DELP.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. view "log country DELP 4.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/DELP/log country DELP 4.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:18:09
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

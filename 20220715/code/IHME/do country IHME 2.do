@@ -18,109 +18,24 @@ log using "log country IHME 2.smcl", replace
 
 
 
-* continue preparation of estimates files and merge them, graphs
-* Forecast and backcast
-* input data files: "IHME`update'.dta" and "country JOHN.dta"
+
+
+* download updates after uptake 20220708 + graph 1
+* input data files: "country IHME longit 20220708.dta"
 * output data files: "country IHME longit.dta"
 
 
+* download updates after uptake 20220708
+
+* no IHME update/s after uptake 20220708
 
 
-local list ///
-20220110 ///
-20220114 ///
-20220121 ///
-20220204 ///
-20220218 ///
-20220321 ///
-20220408 ///
-20220506 ///
-20220610 ///
+* merge "country IHME longit 20220708.dta" with downloadED updates after uptake 20220708
 
 
 
+use "country IHME longit 20220708.dta", clear
 
-foreach update of local list {
-	
-	use "IHME `update'.dta", clear
-
-	capture drop DayDeaFOREA02`update'
-	
-	gen DayDeaFOREA02`update' = DayDeaMeSmA02`update'
-	
-	replace DayDeaFOREA02`update' = . if date < epoch`update'
-	
-	label var DayDeaFOREA02`update' "DayDeaMeSmA02S01 Forecast only"
-	
-	save "IHME `update'.dta", replace
-
-}
-*
-
-
-foreach update of local list {
-	
-	merge m:m date loc_grand_name using "IHME `update'.dta"
-	
-	drop _merge
-	
-}
-*	
-
-
-
-
-
-duplicates drop date, force
-
-isid date
-
-order loc_grand_name date DayDeaFOREA02* epoch*
-
-sort loc_grand_name date
-
-qui compress
-
-save "country IHME longit.dta", replace
-
-
-
-
-
-
-
-* add JOHN
-
-cd ..
-
-cd JOHN
-
-use "country JOHN.dta", clear 
-
-cd ..
-
-cd IHME
-
-save "country JOHN.dta", replace 
-
-
-merge m:m loc_grand_name date using "country IHME longit.dta"
-
-drop _merge
-
-
-drop DayDeaMeRa*
-
-drop Tot*
-
-drop provincestate
-
-
-duplicates drop date, force
-
-isid date
-
-qui compress
 
 save "country IHME longit.dta", replace
 

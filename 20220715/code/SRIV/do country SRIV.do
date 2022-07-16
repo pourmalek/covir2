@@ -18,9 +18,9 @@ cd SRIV
 
 
 do "do country SRIV 1.do"
-* download estimates files for 2022
-* input data files: csv files on web site
-* output data files: "country SRIV `update'.dta" 
+* get downloaded and prepared update files from covir2/20220708/output/
+* input data files: web "country SRIV longit.dta"
+* output data files: "country SRIV longit 20220708.dta" 
 
 
 

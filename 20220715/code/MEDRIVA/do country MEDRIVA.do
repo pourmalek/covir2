@@ -231,9 +231,25 @@ import delimited using "percent positive $MEDRIVAdate.txt", clear delimiters(","
 
 
 * percentpositive7dayaverage
-* Inspect element, lookfor 14.6
-* The first 20.2 is 8 July 2021
-* The last 6.9 is 5 July 2022
+* graph "TOTAL TESTS PER DAY (IRAN)"
+* Inspect element, search for 14.6
+
+*************************************************
+* identify earliest date::
+* 16 July 2021 <---
+* use this id line below:
+* replace date = td(16Jul2021) in 1
+
+
+*************************************************
+* get latest date data showing with hover: <---
+* 14 July 2022
+* % positive: 20.4
+* Total tests/day: 18673
+
+
+
+
 
 gen id = _n 
 
@@ -246,7 +262,7 @@ reshape long v, i(id) j(j)
 
 gen date = .
 
-replace date = td(08Jul2021) in 1
+replace date = td(16Jul2021) in 1
 
 replace date = date[_n-1] + 1 in 2/l
 
@@ -266,7 +282,6 @@ drop id j
 qui compress
 
 save "MEDRIVA percent positive data $MEDRIVAdate.dta", replace
-
 
 
 
@@ -293,6 +308,26 @@ qui compress
 
 save "country MEDRIVA.dta", replace
 
+
+
+
+
+
+
+
+*************************************************
+* check latest date data showing with hover: <---
+* 14 July 2022
+* % positive: 20.4
+* Total tests/day: 18673
+
+
+
+tab percentpositive7dayaverage if date == td(14Jul2022)
+* 18.2
+
+tab newtests if date == td(14Jul2022)
+* 18673
 
 
 

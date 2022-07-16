@@ -17,6 +17,9 @@ log using "log country IMPE 4.smcl", replace
 *****************************************************************************
 
 
+* latest update used in this uptake
+* input data files: csv files on web site
+* output data files: "country IMPE.dta"
 																 
 
 clear 
@@ -25,9 +28,9 @@ clear
 
 * get IMPE estimates
 
-copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2022-06-20_v9.csv.zip 2022-06-20_v9.csv.zip
-unzipfile 2022-06-20_v9.csv.zip, replace
-erase 2022-06-20_v9.csv.zip
+copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2022-07-03_v9.csv.zip 2022-07-03_v9.csv.zip
+unzipfile 2022-07-03_v9.csv.zip, replace
+erase 2022-07-03_v9.csv.zip
 
 
 
@@ -36,7 +39,7 @@ erase 2022-06-20_v9.csv.zip
 
 * import csv file
 
-* Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data/2022-06-20_v9.csv
+* Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data/2022-07-03_v9.csv
 
 cd Users
 cd gbarnsle
@@ -46,7 +49,7 @@ cd "global-lmic-reports-orderly"
 cd "gh-pages"
 cd data
 
-import delimited "2022-06-20_v9.csv", clear varnames(1)
+import delimited "2022-07-03_v9.csv", clear varnames(1)
 
 keep if regexm(country,"$country") == 1
 
@@ -110,7 +113,7 @@ S6	Surged Pessimistic
 
 
 
-*** With IMPE 2022-06-20_v9, IMPE has new terms for their scenarios:
+*** With IMPE 2022-07-03_v9, IMPE has new terms for their scenarios:
 
 . tab scenario 
 

@@ -1,0 +1,1066 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/SRIV/log country SRIV 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:28:13
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country SRIV 2.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek
+. ***************************************************************************
+. 
+. 
+. 
+. * download updates after uptake 20220708 + graphs
+. * input data files: "country SRIV longit 20220708.dta"
+. * output data files: "country SRIV longit.dta"
+. 
+. 
+. 
+. **********************************************
+. * download updates after uptake 20220708
+. 
+. 
+. local list `" 2022-07-08 "2022-07-09" "2022-07-10" "2022-07-11" "2022-07-12" "2022-07-13" "2022-07-14" "2022-07-15" "'
+{txt}
+{com}. 
+. foreach update of local list {c -(}  
+{txt}  2{com}. 
+.         di in red ">>>>> This is update " "`update'"
+{txt}  3{com}.         
+.         * transfrom update (2022-01-01) to updatestring (20220101)
+.         
+.         capture drop updatestring
+{txt}  4{com}.         gen updatestring = "`update'"
+{txt}  5{com}.         
+.         gen year = substr(updatestring,1,4) 
+{txt}  6{com}.         gen month = substr(updatestring,6,2) 
+{txt}  7{com}.         gen day = substr(updatestring,9,2) 
+{txt}  8{com}.         capture drop updatestring2
+{txt}  9{com}.         egen updatestring2 = concat(year month day)
+{txt} 10{com}.         
+.         drop updatestring
+{txt} 11{com}.         rename updatestring2 updatestring
+{txt} 12{com}.         local updatestring = updatestring
+{txt} 13{com}.         
+.         
+.         * download "global_forecasts_deaths.csv" for new updates
+.         
+.         copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/`update'/global_forecasts_deaths.csv global_forecasts_deaths.csv 
+{txt} 14{com}.                         
+.         import delimited "global_forecasts_deaths.csv", clear varnames(1) 
+{txt} 15{com}.         
+.                         keep if regexm(country,"$country") == 1
+{txt} 16{com}.                 
+.         qui destring *, replace
+{txt} 17{com}.         
+.         * destring for Total Deaths that contain NaN instead of numbers
+.         
+.         qui {c -(}
+{txt} 18{com}.                 foreach v of var * {c -(}
+{txt} 19{com}.                         capture replace `v' = "" if `v' == "NaN"
+{txt} 20{com}.                 {c )-}
+{txt} 21{com}.                         *
+.                 destring *, replace
+{txt} 22{com}.         {c )-}       
+{txt} 23{com}.         
+.         drop id
+{txt} 24{com}.         
+.         * use varlables for varnames
+.         
+.         foreach v of var v* {c -(}
+{txt} 25{com}.                 local lbl : var label `v'
+{txt} 26{com}.                 local lbl = strtoname("`lbl'")
+{txt} 27{com}.                 rename `v' `lbl'                                        
+{txt} 28{com}.         {c )-}               
+{txt} 29{com}. *
+.  
+.         rename (_*) (v_*)
+{txt} 30{com}.         
+.         * reshape long
+.                 
+.         gen i = _n
+{txt} 31{com}.         qui reshape long v, i(i) j(j, string)
+{txt} 32{com}.         rename v TotDeaMeRaA05
+{txt} 33{com}.         rename j date_original
+{txt} 34{com}.         drop i
+{txt} 35{com}.         
+.         * gen date
+.         
+.         gen year = substr(date_original,2,4) 
+{txt} 36{com}.         gen month = substr(date_original,7,2) 
+{txt} 37{com}.         gen day = substr(date_original,10,2) 
+{txt} 38{com}.         egen date2 = concat(day month year)
+{txt} 39{com}.         gen date = date(date2, "DMY", 2050)
+{txt} 40{com}.         format date %tdDDMonCCYY
+{txt} 41{com}.         codebook date
+{txt} 42{com}.         drop year month day date2 date_original
+{txt} 43{com}. 
+.         * add update date to the end of Total Deaths
+. 
+.         rename TotDeaMeRaA05 TotDeaMeRaA05`updatestring'
+{txt} 44{com}.         
+.         * gen update date for this update
+.         
+.         gen update = "`updatestring'"
+{txt} 45{com}.         gen update_date = date(update, "YMD")
+{txt} 46{com}.         format update_date %tdDDMonCCYY
+{txt} 47{com}.         codebook update_date
+{txt} 48{com}.         
+.         destring update, replace
+{txt} 49{com}.         local update = update
+{txt} 50{com}.         
+.         
+.         
+.         
+.         * gen daily deaths
+.         
+.         sort date 
+{txt} 51{com}.                     
+.         gen DayDeaMeRaA05`update' =  TotDeaMeRaA05`update'[_n] - TotDeaMeRaA05`update'[_n-1]
+{txt} 52{com}.         
+.         drop TotDeaMeRaA05`update'
+{txt} 53{com}.         
+.         
+.         
+.         * smooth
+.         
+.         tsset date, daily   
+{txt} 54{com}.         
+.         qui {c -(}
+{txt} 55{com}.                 tssmooth ma DayDeaMeRaA05`update'_window = DayDeaMeRaA05`update' if DayDeaMeRaA05`update' >= 0, window(3 1 3) 
+{txt} 56{com}.                 
+.                 tssmooth ma DayDeaMeSmA05`update' = DayDeaMeRaA05`update'_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt} 57{com}.                 
+.                 label var DayDeaMeSmA05`update' "Daily deaths smooth mean SRIV"
+{txt} 58{com}.                 
+.                 drop DayDeaMeRaA05`update'_window DayDeaMeRaA05`update'
+{txt} 59{com}.                 
+.         {c )-}       
+{txt} 60{com}.         *       
+.         
+.         
+.         
+.         local update_date = update_date
+{txt} 61{com}.                 
+.                 
+.         * gen FORE, that is forecast only 
+.                 
+.         gen DayDeaFOREA05`update' = DayDeaMeSmA05`update'
+{txt} 62{com}.         
+.         label var DayDeaFOREA05`update' "Daily deaths smooth mean forecast only SRIV"
+{txt} 63{com}.         
+.         di ">>>>> update_date is " `update_date'
+{txt} 64{com}.         
+.         replace DayDeaFOREA05`update' = . if date < `update_date'
+{txt} 65{com}.         
+.         rename country loc_grand_name   
+{txt} 66{com}.                 
+.         qui compress
+{txt} 67{com}.         
+.         save "country SRIV `updatestring'.dta", replace
+{txt} 68{com}. 
+.          
+.         shell rm -r "global_forecasts_deaths.csv" 
+{txt} 69{com}. 
+. {c )-}
+{err}>>>>> This is update 2022-07-08
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22833{txt},{res}22933{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}07jul2022{txt},{res}15oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22883{txt} = {res}26aug2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22843{col 37}   22858{col 47}   22883{col 57}   22908{col 67}   22923
+{col 26}17jul2022{col 36}01aug2022{col 46}26aug2022{col 56}20sep2022{col 66}05oct2022
+{txt}(101 missing values generated)
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}.{txt},{res}.{txt}]{col 55}units:  {res}.
+{col 8}{txt}or equivalently:  [{res}.{txt},{res}.{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}0{col 51}{txt}missing .:  {res}101{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}.{col 40}{txt}        .
+update: contains nonnumeric characters; no {res}replace
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 07Jul2022 to 15Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is .
+{txt}(101 real changes made, 101 to missing)
+{res}{txt}file country SRIV r.dta saved
+
+{err}>>>>> This is update 2022-07-09
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22834{txt},{res}22934{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}08jul2022{txt},{res}16oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22884{txt} = {res}27aug2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22844{col 37}   22859{col 47}   22884{col 57}   22909{col 67}   22924
+{col 26}18jul2022{col 36}02aug2022{col 46}27aug2022{col 56}21sep2022{col 66}06oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22835{txt},{res}22835{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}09jul2022{txt},{res}09jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22835{col 40}{txt}09jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 08Jul2022 to 16Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22835
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220709.dta saved
+
+{err}>>>>> This is update 2022-07-10
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22835{txt},{res}22935{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}09jul2022{txt},{res}17oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22885{txt} = {res}28aug2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22845{col 37}   22860{col 47}   22885{col 57}   22910{col 67}   22925
+{col 26}19jul2022{col 36}03aug2022{col 46}28aug2022{col 56}22sep2022{col 66}07oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22836{txt},{res}22836{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}10jul2022{txt},{res}10jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22836{col 40}{txt}10jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 09Jul2022 to 17Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22836
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220710.dta saved
+
+{err}>>>>> This is update 2022-07-11
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22836{txt},{res}22936{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}10jul2022{txt},{res}18oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22886{txt} = {res}29aug2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22846{col 37}   22861{col 47}   22886{col 57}   22911{col 67}   22926
+{col 26}20jul2022{col 36}04aug2022{col 46}29aug2022{col 56}23sep2022{col 66}08oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22837{txt},{res}22837{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}11jul2022{txt},{res}11jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22837{col 40}{txt}11jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 10Jul2022 to 18Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22837
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220711.dta saved
+
+{err}>>>>> This is update 2022-07-12
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22837{txt},{res}22937{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}11jul2022{txt},{res}19oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22887{txt} = {res}30aug2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22847{col 37}   22862{col 47}   22887{col 57}   22912{col 67}   22927
+{col 26}21jul2022{col 36}05aug2022{col 46}30aug2022{col 56}24sep2022{col 66}09oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22838{txt},{res}22838{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}12jul2022{txt},{res}12jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22838{col 40}{txt}12jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 11Jul2022 to 19Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22838
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220712.dta saved
+
+{err}>>>>> This is update 2022-07-13
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22838{txt},{res}22938{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}12jul2022{txt},{res}20oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22888{txt} = {res}31aug2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22848{col 37}   22863{col 47}   22888{col 57}   22913{col 67}   22928
+{col 26}22jul2022{col 36}06aug2022{col 46}31aug2022{col 56}25sep2022{col 66}10oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22839{txt},{res}22839{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}13jul2022{txt},{res}13jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22839{col 40}{txt}13jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 12Jul2022 to 20Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22839
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220713.dta saved
+
+{err}>>>>> This is update 2022-07-14
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22839{txt},{res}22939{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}13jul2022{txt},{res}21oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22889{txt} = {res}01sep2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22849{col 37}   22864{col 47}   22889{col 57}   22914{col 67}   22929
+{col 26}23jul2022{col 36}07aug2022{col 46}01sep2022{col 56}26sep2022{col 66}11oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22840{txt},{res}22840{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}14jul2022{txt},{res}14jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22840{col 40}{txt}14jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 13Jul2022 to 21Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22840
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220714.dta saved
+
+{err}>>>>> This is update 2022-07-15
+{res}{text}(103 vars, 184 obs)
+(183 observations deleted)
+{res}
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22840{txt},{res}22940{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}14jul2022{txt},{res}22oct2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}101{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 19}mean:{res}{col 26}   22890{txt} = {res}02sep2022{txt}
+{col 15}std. dev:{res}{col 26} 29.3002
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22850{col 37}   22865{col 47}   22890{col 57}   22915{col 67}   22930
+{col 26}24jul2022{col 36}08aug2022{col 46}02sep2022{col 56}27sep2022{col 66}12oct2022
+
+{txt}{hline}
+{res}update_date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22841{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}15jul2022{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}101
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       101{col 33}22841{col 40}{txt}15jul2022
+update: all characters numeric; {res}replaced {txt}as {res}long
+{txt}(1 missing value generated)
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 14Jul2022 to 22Oct2022
+{txt}{col 17}delta:  {res}1 day
+>>>>> update_date is 22841
+{txt}(1 real change made, 1 to missing)
+{res}{txt}file country SRIV 20220715.dta saved
+
+
+{com}. *
+. 
+. 
+. 
+. 
+. 
+. *****************************
+. 
+. * merge the new updates
+. 
+. 
+. use "country SRIV 20220709.dta", clear  
+{txt}
+{com}. 
+. 
+. local list ///
+> 20220709 /// 
+> 20220710 /// 
+> 20220711 /// 
+> 20220712 /// 
+> 20220713 /// 
+> 20220714 ///
+> 20220715
+{txt}
+{com}. 
+. foreach update of local list {c -(}
+{txt}  2{com}.                 
+.         merge m:m date loc_grand_name using "country SRIV `update'.dta", force
+{txt}  3{com}.                 
+.         drop _merge
+{txt}  4{com}.         
+. *       
+. 
+. duplicates drop
+{txt}  5{com}. 
+. order loc_grand_name date 
+{txt}  6{com}. 
+. drop update     update_date
+{txt}  7{com}. 
+. qui compress
+{txt}  8{com}. 
+. save "country SRIV longit 20220715.dta", replace
+{txt}  9{com}. 
+. {c )-}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             101{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               2
+{txt}{col 9}from master{col 30}{res}               1{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               1{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               3
+{txt}{col 9}from master{col 30}{res}               2{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               1{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               4
+{txt}{col 9}from master{col 30}{res}               3{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               1{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               5
+{txt}{col 9}from master{col 30}{res}               4{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               1{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               6
+{txt}{col 9}from master{col 30}{res}               5{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               1{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               7
+{txt}{col 9}from master{col 30}{res}               6{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               1{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{p 0 4}{txt}Duplicates in terms of {txt} all variables{p_end}
+
+(0 observations are duplicates)
+file country SRIV longit 20220715.dta saved
+
+{com}. *
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************************
+. * merge "country SRIV longit 20220708.dta" with downloadED updates after uptake 20220708
+. 
+. use "country SRIV longit 20220708.dta", clear
+{txt}
+{com}. 
+.         merge m:m date loc_grand_name using "country SRIV longit 20220715.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             905
+{txt}{col 9}from master{col 30}{res}             898{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               7{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             100{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}.         
+.         drop _merge
+{txt}
+{com}. 
+. 
+. save "country SRIV longit.dta", replace
+{txt}file country SRIV longit.dta saved
+
+{com}. 
+. 
+. 
+. **********************
+. 
+. * graphs
+. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. 
+. ***********************************************
+. 
+. * Daily deaths, country, Updates together, With extremes
+. 
+. twoway ///
+> (line DayDeaFOREA0520220101 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220102 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220103 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220104 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220105 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220106 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220108 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220109 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220110 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220111 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220112 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220113 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220115 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220116 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220117 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220118 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220119 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220120 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220122 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220123 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220124 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220125 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220126 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220127 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220129 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220130 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220204 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220205 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220206 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220207 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220208 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220209 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220210 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220211 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220212 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220213 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220214 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220215 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220216 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220217 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220218 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220219 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220220 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220221 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220222 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220223 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220224 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220225 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220226 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220227 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220228 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220301 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220305 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220306 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220307 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220308 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220309 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220310 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220311 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220312 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220313 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220314 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220315 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220316 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220317 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220318 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220319 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220320 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220321 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220322 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220323 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220324 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220325 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220326 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220327 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220328 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220329 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220330 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220331 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220401 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220402 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220403 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220404 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220405 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220406 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220407 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220408 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220409 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220410 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220411 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220413 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220417 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220418 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220419 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220420 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220421 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220422 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220423 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220424 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220425 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220426 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220427 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220428 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220429 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220430 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220501 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220502 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220508 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220515 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220516 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220517 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220518 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220519 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220520 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220521 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220522 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220602 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220603 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220605 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220606 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220607 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220608 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220609 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220610 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220611 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220612 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220614 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220615 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220617 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220618 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220619 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220620 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220621 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220622 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220623 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220624 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220625 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220626 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220627 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220628 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220629 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220630 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220701 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220702 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220703 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220704 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220705 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220706 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220707 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220708 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220709 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220710 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220711 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220712 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220713 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220714 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220715 date, sort lcolor(black) lwidth(thick)) ///
+> (line DayDeaMeSmA00 date, sort lcolor(cyan) lwidth(thick)) /// "JOHN smooth"
+> if date >= td(01jan2022) ///
+> , xtitle(Date) xlabel(#11, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, SRIV, updates in 2022", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(158 "JOHN" 1 "SRIV previous updates" 157 "SRIV latest update 20220715") size(small) row(2)) ///
+> subtitle("Forecasts only; smooth; with extremes", size(small)) 
+{res}{txt}
+{com}. 
+. qui graph export "graph 1 $country C19 daily deaths, SRIV, Updates together With extremes.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************
+. 
+. * Daily deaths, country, Updates together, Without extremes
+. 
+. 
+. * all-time max DayDeaMeSmA00 = 640. 640 * 5 = 3200. DayDeaFOREA05 > 3200 = extreme.
+. 
+. /*
+> 20220119
+> 20220120
+> 20220122
+> 20220123
+> 20220124
+> 20220125
+> 20220126
+> 20220129
+> 20220130
+> 20220204
+> 20220205
+> 20220206
+> 20220207
+> 20220208
+> 20220209
+> 20220211
+> 20220212
+> 20220213
+> 20220327
+> 20220406
+> 20220407
+> 20220408
+> 
+> 20220714
+> */
+. 
+. twoway ///
+> (line DayDeaFOREA0520220101 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220102 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220103 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220104 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220105 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220106 date, sort lcolor(green) lwidth(thin)) /// 
+> (line DayDeaFOREA0520220108 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220109 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220110 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220111 date, sort lcolor(green) lwidth(thin)) /// 
+> (line DayDeaFOREA0520220112 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220113 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220115 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220116 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220117 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220118 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220127 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220210 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220214 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220215 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220216 date, sort lcolor(green) lwidth(thin)) /// 
+> (line DayDeaFOREA0520220218 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220219 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220220 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220221 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220222 date, sort lcolor(green) lwidth(thin)) /// 
+> (line DayDeaFOREA0520220223 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220224 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220225 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220226 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220227 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220228 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220301 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220305 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220306 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220307 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220308 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220309 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220310 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220311 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220312 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220313 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220314 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220315 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220316 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220317 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220318 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220319 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220320 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220321 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220322 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220323 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220324 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220325 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220326 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220328 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220329 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220330 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220331 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220401 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220402 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220403 date, sort lcolor(green) lwidth(thin)) /// 
+> (line DayDeaFOREA0520220404 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220405 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220409 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220410 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220411 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220413 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220417 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220418 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220419 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220420 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220421 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220422 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220423 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220424 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220425 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220426 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220427 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220428 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220429 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220430 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220501 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220502 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220508 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220515 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220516 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220517 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220518 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220519 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220520 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220521 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220522 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220602 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220603 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220605 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220606 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220607 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220608 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220609 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220610 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220611 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220612 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220614 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220615 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220617 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220618 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220619 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220620 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220621 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220622 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220623 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220624 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220625 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220626 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220627 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220628 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220629 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220630 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220701 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220702 date, sort lcolor(green) lwidth(thin)) /// 
+> (line DayDeaFOREA0520220703 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220704 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220705 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220706 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220707 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220708 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220709 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220710 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220711 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220712 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220713 date, sort lcolor(green) lwidth(thin)) ///
+> (line DayDeaFOREA0520220715 date, sort lcolor(black) lwidth(thick)) ///
+> (line DayDeaMeSmA00 date, sort lcolor(cyan) lwidth(thick)) /// "JOHN smooth"
+> if date >= td(01jan2022) ///
+> , xtitle(Date) xlabel(#11, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%15.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily deaths) title("COVID-19 daily deaths, $country, SRIV, updates in 2022", size(medium)) /// 
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(134 "JOHN" 1 "SRIV previous updates" 133 "SRIV latest update 20220715") size(small) row(2)) ///
+> subtitle("Forecasts only; smooth; without extremes", size(small)) 
+{res}{txt}
+{com}. 
+. qui graph export "graph 2 $country C19 daily deaths, SRIV, Updates together Without extremes.pdf", replace
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+.                                 
+. view "log country SRIV 2.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/SRIV/log country SRIV 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:28:33
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

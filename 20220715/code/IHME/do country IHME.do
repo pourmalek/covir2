@@ -19,16 +19,14 @@ cd IHME
 
 
 do "do country IHME 1.do"
-* download and prepare estimates files
-* input data files: download csv files
-* output data files: "IHME 202?????.dta " 
-* "graph epoch update 202?????.pdf"
+* get downloaded and prepared update files from covir2/20220708/output/
+* input data files: web "country IHME longit.dta"
+* output data files: "country IHME longit 20220708.dta" 
 
 
 do "do country IHME 2.do"
-* continue preparation of estimates files and merge them, graphs
-* Forecast and backcast
-* input data files: "IHME`update'.dta" and "country JOHN.dta"
+* download updates after uptake 20220708 + graph 1
+* input data files: "country IHME longit 20220708.dta"
 * output data files: "country IHME longit.dta"
 
 

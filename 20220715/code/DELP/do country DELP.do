@@ -18,15 +18,15 @@ cd DELP
 
 
 do "do country DELP 1.do"
-* download and prepare update files
-* input data files: download csv files
-* output data files: "country DELP 202?????.dta " 
+* get downloaded and prepared update files from covir2/20220708/output/
+* input data files: web "country DELP longit.dta"
+* output data files: "country DELP longit 20220708.dta" 
 
 
 
 do "do country DELP 2.do"
-* merge update files
-* input data files: "country DELP 202?????.dta " 
+* download updates after uptake 20220708
+* input data files: "country DELP longit 20220708.dta"
 * output data files: "country DELP longit.dta"
 
 
@@ -39,4 +39,7 @@ do "do country DELP 3.do"
 
 
 do "do country DELP 4.do"
+* latest update used in this uptake
+* input data files: csv files on web site
+* output data files: "country DELP.dta"
 

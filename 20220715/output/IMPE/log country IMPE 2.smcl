@@ -1,0 +1,273 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/log country IMPE 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:21:00
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country IMPE 2.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek
+. ***************************************************************************
+. 
+. 
+. * download updates after uptake 20220708
+. * input data files: "country IMPE longit 20220708.dta"
+. * output data files: "country IMPE longit.dta"
+. 
+. 
+. 
+. 
+. 
+. ****************************************
+. 
+. * download updates after uptake 20220708
+. 
+. 
+. 
+. ********************
+. 
+. * 2022-07-03_v9.csv.zip 
+. 
+. * creates:
+. * Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data/2022-07-03_v9.csv
+. 
+. 
+. 
+. clear
+{txt}
+{com}.                            
+. copy https://raw.githubusercontent.com/mrc-ide/global-lmic-reports/master/data/2022-07-03_v9.csv.zip 2022-07-03_v9.csv.zip
+{txt}
+{com}. unzipfile 2022-07-03_v9.csv.zip, replace
+{res}{txt}    inflating: Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data/2022-07-03_v9.csv
+successfully unzipped 2022-07-03_v9.csv.zip to current directory
+
+{com}. erase 2022-07-03_v9.csv.zip
+{txt}
+{com}. 
+. cd Users
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users
+{txt}
+{com}. cd gbarnsle
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users/gbarnsle
+{txt}
+{com}. cd Documents
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users/gbarnsle/Documents
+{txt}
+{com}. cd LMIC_fitting
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users/gbarnsle/Documents/LMIC_fitting
+{txt}
+{com}. cd "global-lmic-reports-orderly"
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly
+{txt}
+{com}. cd "gh-pages"
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages
+{txt}
+{com}. cd data
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/Users/gbarnsle/Documents/LMIC_fitting/global-lmic-reports-orderly/gh-pages/data
+{txt}
+{com}. 
+. import delimited "2022-07-03_v9.csv", clear varnames(1)
+{res}{text}(14 vars, 9,605,568 obs)
+
+{com}. 
+. 
+. cd "$pathcovir2"
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code
+{txt}
+{com}. 
+. cd IMPE
+{res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE
+{txt}
+{com}. 
+. 
+. keep if regexm(country,"$country") == 1
+{txt}(9,553,692 observations deleted)
+
+{com}. 
+. keep if scenario == "Central"
+{txt}(43,230 observations deleted)
+
+{com}. 
+. drop scenario
+{txt}
+{com}. 
+. keep if compartment == "deaths"
+{txt}(7,860 observations deleted)
+
+{com}. 
+. drop compartment
+{txt}
+{com}. 
+. drop y_025 y_25 y_median y_75 y_975 // keeps y_mean
+{txt}
+{com}. 
+. 
+. * gen date 
+. 
+. rename date date_original
+{res}{txt}
+{com}. gen year = substr(date_original,1,4) 
+{txt}
+{com}. gen month = substr(date_original,6,2) 
+{txt}
+{com}. gen day = substr(date_original,9,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. gen date = date(date2, "DMY", 2050)
+{txt}
+{com}. format date %tdDDMonCCYY
+{txt}
+{com}. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22133{txt},{res}22918{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}06aug2020{txt},{res}30sep2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}786{col 51}{txt}missing .:  {res}0{txt}/{res}786
+
+{txt}{col 19}mean:{res}{col 26} 22525.5{txt} = {res}02sep2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26} 227.043
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22211{col 37}   22329{col 47} 22525.5{col 57}   22722{col 67}   22840
+{col 26}23oct2020{col 36}18feb2021{col 46}02sep2021{col 56}18mar2022{col 66}14jul2022
+{txt}
+{com}. drop year month day date2 date_original
+{txt}
+{com}. 
+. 
+. rename country loc_grand_name 
+{res}{txt}
+{com}. 
+. drop iso3c report_date version
+{txt}
+{com}. 
+. rename y_mean DayDeaMeRaA03S02
+{res}{txt}
+{com}. 
+. order loc_grand_name date DayDeaMeRaA03S02
+{txt}
+{com}. 
+. rename DayDeaMeRaA03S02 DayDeaMeRaA0320220703
+{res}{txt}
+{com}. 
+. 
+. * smooth
+. 
+. tsset date, daily   
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 06Aug2020 to 30Sep2022
+{txt}{col 17}delta:  {res}1 day
+{txt}
+{com}.         
+. qui tssmooth ma DayDeaMeRaA0320220703window = DayDeaMeRaA0320220703 if DayDeaMeRaA0320220703 >= 0, window(3 1 3)
+{txt}
+{com}. 
+. qui tssmooth ma DayDeaMeSmA0320220703 = DayDeaMeRaA0320220703window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}
+{com}. 
+. label var DayDeaMeSmA0320220703 "Daily deaths mean smooth IMPE"
+{txt}
+{com}. 
+. drop *window
+{txt}
+{com}. 
+. tsset, clear
+{txt}
+{com}. 
+. 
+. 
+. * gen Forecast only
+.         
+. capture drop update_date
+{txt}
+{com}. 
+. gen update_date = td(20Jun2022)
+{txt}
+{com}. 
+. cap drop DayDeaFOREA0320220703
+{txt}
+{com}. 
+. gen DayDeaFOREA0320220703 = DayDeaMeSmA0320220703
+{txt}
+{com}. 
+. replace DayDeaFOREA0320220703 = . if date < update_date
+{txt}(683 real changes made, 683 to missing)
+
+{com}. 
+. label var DayDeaFOREA0320220703 "DayDeaMeRaA03 `update' Forecast only"
+{txt}
+{com}.         
+. qui compress 
+{txt}
+{com}. 
+. save "country IMPE 20220703.dta", replace
+{txt}file country IMPE 20220703.dta saved
+
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************
+. 
+. * merge "country IMPE longit 20220708.dta" with downloadED updates after uptake 20220708
+. 
+. 
+. 
+. use "country IMPE longit 20220708.dta", clear
+{txt}
+{com}. 
+.         merge m:m date loc_grand_name using "country IMPE 20220703.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}             236
+{txt}{col 9}from master{col 30}{res}             223{txt}  (_merge==1)
+{col 9}from using{col 30}{res}              13{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}             773{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}.         
+.         drop _merge
+{txt}
+{com}. 
+. 
+. save "country IMPE longit.dta", replace
+{txt}file country IMPE longit.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. view "log country IMPE 2.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/IMPE/log country IMPE 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:23:51
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

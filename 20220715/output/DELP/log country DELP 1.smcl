@@ -1,0 +1,44 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/DELP/log country DELP 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:17:41
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country DELP 1.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates                                                                       
+. * Person: Farshad Pourmalek 
+. ***************************************************************************
+. 
+. 
+. * get downloaded and prepared update files from covir2/20220708/output/
+. * input data files: web "country DELP longit.dta"
+. * output data files: "country DELP longit 20220708.dta" 
+. 
+. 
+. clear 
+{txt}
+{com}. 
+. use https://raw.githubusercontent.com/pourmalek/covir2/main/20220708/output/DELP/country%20DELP%20longit.dta
+{txt}
+{com}. 
+. save "country DELP longit 20220708.dta", replace
+{txt}file country DELP longit 20220708.dta saved
+
+{com}. 
+. 
+. 
+. view "log country DELP 1.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/DELP/log country DELP 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:17:47
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

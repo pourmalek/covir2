@@ -1,0 +1,1272 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/JOHN/log country JOHN.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jul 2022, 07:16:20
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do country JOHN.do"
+. 
+. * Project: CovidVisualized country - countries without subnational estimates
+. * Person: Farshad Pourmalek 
+. ***************************************************************************
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************
+. ****************************************
+. 
+. * get Johns Hopkins data for deaths, all countries
+. 
+. 
+. import delimited ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv" ///
+> , clear varnames(1) colrange(1:2)
+{res}{text}(2 vars, 285 obs)
+
+{com}. 
+. save "time_series_covid19_deaths_global col 2.dta", replace
+{txt}(note: file time_series_covid19_deaths_global col 2.dta not found)
+file time_series_covid19_deaths_global col 2.dta saved
+
+{com}. 
+. 
+. import delimited ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv" ///
+> , clear varnames(1) colrange(5)
+{res}{text}(906 vars, 285 obs)
+
+{com}. 
+. save "time_series_covid19_deaths_global col 5 on.dta", replace
+{txt}(note: file time_series_covid19_deaths_global col 5 on.dta not found)
+file time_series_covid19_deaths_global col 5 on.dta saved
+
+{com}. 
+. 
+. use "time_series_covid19_deaths_global col 2.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 _n using "time_series_covid19_deaths_global col 5 on.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             285{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. order provincestate countryregion, last
+{txt}
+{com}. 
+. count
+  {res}285
+{txt}
+{com}. 
+. qui destring v*, replace
+{txt}
+{com}. 
+. collapse (sum) v*, by(countryregion) // sum to add subnational estimates to national level and omit subnational estimates
+{txt}
+{com}. 
+. count
+  {res}199
+{txt}
+{com}. 
+. replace countryregion = trim(countryregion)
+{txt}(0 real changes made)
+
+{com}. 
+. rename countryregion loc_grand_name
+{res}{txt}
+{com}. 
+. label var loc_grand_name loc_grand_name
+{txt}
+{com}. 
+. 
+. gen counter = _n
+{txt}
+{com}. 
+. reshape long v, i(counter) 
+{txt}(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 579 580 581 582 583 584 585 586 587 588 589 590 591 592 593 594 595 596 597 598 599 600 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 637 638 639 640 641 642 643 644 645 646 647 648 649 650 651 652 653 654 655 656 657 658 659 660 661 662 663 664 665 666 667 668 669 670 671 672 673 674 675 676 677 678 679 680 681 682 683 684 685 686 687 688 689 690 691 692 693 694 695 696 697 698 699 700 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736 737 738 739 740 741 742 743 744 745 746 747 748 749 750 751 752 753 754 755 756 757 758 759 760 761 762 763 764 765 766 767 768 769 770 771 772 773 774 775 776 777 778 779 780 781 782 783 784 785 786 787 788 789 790 791 792 793 794 795 796 797 798 799 800 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 836 837 838 839 840 841 842 843 844 845 846 847 848 849 850 851 852 853 854 855 856 857 858 859 860 861 862 863 864 865 866 867 868 869 870 871 872 873 874 875 876 877 878 879 880 881 882 883 884 885 886 887 888 889 890 891 892 893 894 895 896 897 898 899 900 901 902 903 904 905 906)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}     199   {txt}->{res}  180294
+{txt}Number of variables            {res}     908   {txt}->{res}       4
+{txt}j variable (906 values)                   ->   {res}_j
+{txt}xij variables:
+                         {res}v1 v2 ... v906   {txt}->   {res}v
+{txt}{hline 77}
+
+{com}. 
+. rename v TotDeaMeRaA00
+{res}{txt}
+{com}. 
+. label var TotDeaMeRaA00 "Total deaths raw A00 JOHN"
+{txt}
+{com}. 
+. bysort loc_grand_name: gen DayDeaMeRaA00 =  TotDeaMeRaA00[_n] - TotDeaMeRaA00[_n-1]
+{txt}(199 missing values generated)
+
+{com}. 
+. label var DayDeaMeRaA00 "Daily deaths raw A00 JOHN"
+{txt}
+{com}. 
+. 
+. * JOHN starts from 22 Jan 2020
+. 
+. gen date = date("22 Jan 2020", "DMY")
+{txt}
+{com}. 
+. bysort loc_grand_name: replace date = date + _j - 1
+{txt}(180,095 real changes made)
+
+{com}. 
+. format date %td
+{txt}
+{com}. 
+. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21936{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}22jan2020{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}906{col 51}{txt}missing .:  {res}0{txt}/{res}180,294
+
+{txt}{col 19}mean:{res}{col 26} 22388.5{txt} = {res}18apr2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26}  261.54
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22026{col 37}   22162{col 47} 22388.5{col 57}   22615{col 67}   22751
+{col 26}21apr2020{col 36}04sep2020{col 46}18apr2021{col 56}01dec2021{col 66}16apr2022
+{txt}
+{com}. 
+. drop counter _j
+{txt}
+{com}. 
+. save "all JOHN deaths.dta", replace
+{txt}(note: file all JOHN deaths.dta not found)
+file all JOHN deaths.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************
+. ****************************************
+. 
+. * get Johns Hopkins data for cases, all countries
+. 
+. 
+. import delimited using ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv" ///
+> , clear varnames(1) colrange(1:2)
+{res}{text}(2 vars, 285 obs)
+
+{com}. 
+. save "time_series_covid19_confirmed_global col 2.dta", replace
+{txt}(note: file time_series_covid19_confirmed_global col 2.dta not found)
+file time_series_covid19_confirmed_global col 2.dta saved
+
+{com}. 
+. 
+. import delimited using ///
+> "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv" ///
+> , clear varnames(1) colrange(5)
+{res}{text}(906 vars, 285 obs)
+
+{com}. 
+. save "time_series_covid19_confirmed_global col 5 on.dta", replace
+{txt}(note: file time_series_covid19_confirmed_global col 5 on.dta not found)
+file time_series_covid19_confirmed_global col 5 on.dta saved
+
+{com}. 
+. 
+. use "time_series_covid19_confirmed_global col 2.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 _n using "time_series_covid19_confirmed_global col 5 on.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             285{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. order provincestate countryregion, last
+{txt}
+{com}. 
+. count
+  {res}285
+{txt}
+{com}. 
+. qui destring v*, replace
+{txt}
+{com}. 
+. collapse (sum) v*, by(countryregion) // sum to add subnational estimates to national level and omit subnational estimates
+{txt}
+{com}. 
+. count
+  {res}199
+{txt}
+{com}. 
+. replace countryregion = trim(countryregion)
+{txt}(0 real changes made)
+
+{com}. 
+. rename countryregion loc_grand_name
+{res}{txt}
+{com}. 
+. label var loc_grand_name loc_grand_name
+{txt}
+{com}. 
+. 
+. gen counter = _n
+{txt}
+{com}. 
+. reshape long v, i(counter) 
+{txt}(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 579 580 581 582 583 584 585 586 587 588 589 590 591 592 593 594 595 596 597 598 599 600 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 637 638 639 640 641 642 643 644 645 646 647 648 649 650 651 652 653 654 655 656 657 658 659 660 661 662 663 664 665 666 667 668 669 670 671 672 673 674 675 676 677 678 679 680 681 682 683 684 685 686 687 688 689 690 691 692 693 694 695 696 697 698 699 700 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736 737 738 739 740 741 742 743 744 745 746 747 748 749 750 751 752 753 754 755 756 757 758 759 760 761 762 763 764 765 766 767 768 769 770 771 772 773 774 775 776 777 778 779 780 781 782 783 784 785 786 787 788 789 790 791 792 793 794 795 796 797 798 799 800 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 836 837 838 839 840 841 842 843 844 845 846 847 848 849 850 851 852 853 854 855 856 857 858 859 860 861 862 863 864 865 866 867 868 869 870 871 872 873 874 875 876 877 878 879 880 881 882 883 884 885 886 887 888 889 890 891 892 893 894 895 896 897 898 899 900 901 902 903 904 905 906)
+
+Data{col 36}wide{col 43}->{col 48}long
+{hline 77}
+Number of obs.                 {res}     199   {txt}->{res}  180294
+{txt}Number of variables            {res}     908   {txt}->{res}       4
+{txt}j variable (906 values)                   ->   {res}_j
+{txt}xij variables:
+                         {res}v1 v2 ... v906   {txt}->   {res}v
+{txt}{hline 77}
+
+{com}. 
+. rename v TotCasMeRaA00
+{res}{txt}
+{com}. 
+. label var TotCasMeRaA00 "Total cases raw A00 JOHN"
+{txt}
+{com}. 
+. bysort loc_grand_name: gen DayCasMeRaA00 =  TotCasMeRaA00[_n] - TotCasMeRaA00[_n-1]
+{txt}(199 missing values generated)
+
+{com}. 
+. label var DayCasMeRaA00 "Daily cases raw A00 JOHN"
+{txt}
+{com}. 
+. 
+. * JOHN starts from 22 Jan 2020
+. 
+. gen date = date("22 Jan 2020", "DMY")
+{txt}
+{com}. 
+. bysort loc_grand_name: replace date = date + _j - 1
+{txt}(180,095 real changes made)
+
+{com}. 
+. format date %td
+{txt}
+{com}. 
+. codebook date
+
+{txt}{hline}
+{res}date{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}21936{txt},{res}22841{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}22jan2020{txt},{res}15jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}906{col 51}{txt}missing .:  {res}0{txt}/{res}180,294
+
+{txt}{col 19}mean:{res}{col 26} 22388.5{txt} = {res}18apr2021{txt} (+ 12 hours)
+{col 15}std. dev:{res}{col 26}  261.54
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   22026{col 37}   22162{col 47} 22388.5{col 57}   22615{col 67}   22751
+{col 26}21apr2020{col 36}04sep2020{col 46}18apr2021{col 56}01dec2021{col 66}16apr2022
+{txt}
+{com}. 
+. drop counter _j
+{txt}
+{com}. 
+. save "all JOHN cases.dta", replace
+{txt}(note: file all JOHN cases.dta not found)
+file all JOHN cases.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * get Johns Hopkins data for deaths, for EMRO countries
+. 
+. 
+. use "all JOHN deaths.dta", clear 
+{txt}
+{com}. 
+. 
+. keep if ///
+> loc_grand_name == "Afghanistan" | ///
+> loc_grand_name == "Bahrain" | ///
+> loc_grand_name == "Djibouti" | ///
+> loc_grand_name == "Egypt" | ///
+> loc_grand_name == "Iran" | ///
+> loc_grand_name == "Iraq" | ///
+> loc_grand_name == "Jordan" | ///
+> loc_grand_name == "Kuwait" | ///
+> loc_grand_name == "Lebanon" | ///
+> loc_grand_name == "Libya" | ///
+> loc_grand_name == "Morocco" | ///
+> loc_grand_name == "Oman" | ///
+> loc_grand_name == "Pakistan" | ///
+> loc_grand_name == "Qatar" | ///
+> loc_grand_name == "Saudi Arabia" | ///
+> loc_grand_name == "Somalia" | ///
+> loc_grand_name == "Sudan" | ///
+> loc_grand_name == "Syria" | ///
+> loc_grand_name == "Tunisia" | ///
+> loc_grand_name == "United Arab Emirates" | ///
+> loc_grand_name == "West Bank and Gaza" | ///
+> loc_grand_name == "Yemen" 
+{txt}(160,362 observations deleted)
+
+{com}. 
+. 
+. 
+. ******************
+. 
+. * smooth 
+. 
+. encode loc_grand_name, gen(loc_grand_name_encoded)
+{txt}
+{com}. 
+. tsset loc_grand_name_encoded date, daily   
+{res}{txt}{col 8}panel variable:  {res}loc_grand_name_encoded (strongly balanced)
+{txt}{col 9}time variable:  {res}{col 25}date, 22jan2020 to 15jul2022
+{txt}{col 17}delta:  {res}1 day
+{txt}
+{com}. 
+. 
+. tssmooth ma DayDeaMeRaA00_window = DayDeaMeRaA00 if DayDeaMeRaA00 >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayDeaMeRaA00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayDeaMeSmA00 = DayDeaMeRaA00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayDeaMeRaA00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayDeaMeSmA00 "Daily deaths smooth A00 JOHN"
+{txt}
+{com}. 
+. drop DayDeaMeRaA00_window loc_grand_name_encoded
+{txt}
+{com}. 
+. 
+. tsset, clear
+{txt}
+{com}. 
+. 
+. 
+. sort date
+{txt}
+{com}. 
+. save "JOHN deaths EMRO countries.dta", replace
+{txt}(note: file JOHN deaths EMRO countries.dta not found)
+file JOHN deaths EMRO countries.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * get Johns Hopkins data for cases, for EMRO countries
+. 
+. 
+. use "all JOHN cases.dta", clear 
+{txt}
+{com}. 
+. 
+. keep if ///
+> loc_grand_name == "Afghanistan" | ///
+> loc_grand_name == "Bahrain" | ///
+> loc_grand_name == "Djibouti" | ///
+> loc_grand_name == "Egypt" | ///
+> loc_grand_name == "Iran" | ///
+> loc_grand_name == "Iraq" | ///
+> loc_grand_name == "Jordan" | ///
+> loc_grand_name == "Kuwait" | ///
+> loc_grand_name == "Lebanon" | ///
+> loc_grand_name == "Libya" | ///
+> loc_grand_name == "Morocco" | ///
+> loc_grand_name == "Oman" | ///
+> loc_grand_name == "Pakistan" | ///
+> loc_grand_name == "Qatar" | ///
+> loc_grand_name == "Saudi Arabia" | ///
+> loc_grand_name == "Somalia" | ///
+> loc_grand_name == "Sudan" | ///
+> loc_grand_name == "Syria" | ///
+> loc_grand_name == "Tunisia" | ///
+> loc_grand_name == "United Arab Emirates" | ///
+> loc_grand_name == "West Bank and Gaza" | ///
+> loc_grand_name == "Yemen" 
+{txt}(160,362 observations deleted)
+
+{com}. 
+. 
+. 
+. ******************
+. 
+. * smooth 
+. 
+. encode loc_grand_name, gen(loc_grand_name_encoded)
+{txt}
+{com}. 
+. tsset loc_grand_name_encoded date, daily   
+{res}{txt}{col 8}panel variable:  {res}loc_grand_name_encoded (strongly balanced)
+{txt}{col 9}time variable:  {res}{col 25}date, 22jan2020 to 15jul2022
+{txt}{col 17}delta:  {res}1 day
+{txt}
+{com}. 
+. 
+. tssmooth ma DayCasMeRaA00_window = DayCasMeRaA00 if DayCasMeRaA00 >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayCasMeRaA00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayCasMeSmA00 = DayCasMeRaA00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayCasMeRaA00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayCasMeSmA00 "Daily cases smooth A00 JOHN"
+{txt}
+{com}. 
+. drop DayCasMeRaA00_window loc_grand_name_encoded
+{txt}
+{com}. 
+. 
+. tsset, clear
+{txt}
+{com}. 
+. 
+. sort date
+{txt}
+{com}. 
+. save "JOHN cases EMRO countries.dta", replace
+{txt}(note: file JOHN cases EMRO countries.dta not found)
+file JOHN cases EMRO countries.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * get Johns Hopkins data for deaths, for EMRO region
+. 
+. 
+. use "JOHN deaths EMRO countries.dta", clear 
+{txt}
+{com}. 
+. drop loc_grand_name
+{txt}
+{com}.  
+. collapse (sum) TotDeaMeRaA00 DayDeaMeRaA00, by(date)
+{txt}
+{com}. 
+. gen loc_grand_name = "EMRO"
+{txt}
+{com}. 
+. replace DayDeaMeRaA00 = TotDeaMeRaA00 in 1
+{txt}(0 real changes made)
+
+{com}. 
+. sort date
+{txt}
+{com}. 
+. save "JOHN deaths EMRO region.dta", replace
+{txt}(note: file JOHN deaths EMRO region.dta not found)
+file JOHN deaths EMRO region.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * get Johns Hopkins data for cases, for EMRO region
+. 
+. 
+. use "JOHN cases EMRO countries.dta", clear 
+{txt}
+{com}. 
+. drop loc_grand_name
+{txt}
+{com}.  
+. collapse (sum) TotCasMeRaA00 DayCasMeRaA00, by(date)
+{txt}
+{com}. 
+. gen loc_grand_name = "EMRO"
+{txt}
+{com}. 
+. replace DayCasMeRaA00 = TotCasMeRaA00 in 1
+{txt}(0 real changes made)
+
+{com}. 
+. sort date
+{txt}
+{com}. 
+. save "JOHN cases EMRO region.dta", replace
+{txt}(note: file JOHN cases EMRO region.dta not found)
+file JOHN cases EMRO region.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * append Johns Hopkins data for deaths for EMRO region, to EMRO countries
+. 
+. 
+. use "JOHN deaths EMRO countries.dta", clear 
+{txt}
+{com}. 
+. append using "JOHN deaths EMRO region.dta"
+{txt}{p 0 7 2}
+(note: variable
+DayDeaMeRaA00 was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "JOHN deaths EMRO region and countries.dta", replace
+{txt}(note: file JOHN deaths EMRO region and countries.dta not found)
+file JOHN deaths EMRO region and countries.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * append Johns Hopkins data for cases for EMRO region, to EMRO countries
+. 
+. 
+. use "JOHN cases EMRO countries.dta", clear 
+{txt}
+{com}. 
+. append using "JOHN cases EMRO region.dta"
+{txt}{p 0 7 2}
+(note: variable
+DayCasMeRaA00 was 
+float, now double to accommodate using data's values)
+{p_end}
+
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "JOHN cases EMRO region and countries.dta", replace
+{txt}(note: file JOHN cases EMRO region and countries.dta not found)
+file JOHN cases EMRO region and countries.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * merge JOHN cases and deaths for EMRO region and countries
+. 
+. 
+. use "JOHN deaths EMRO region and countries.dta", clear 
+{txt}
+{com}. 
+. merge m:m date loc_grand_name using "JOHN cases EMRO region and countries.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}          20,838{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. replace loc_grand_name = "Palestine" if loc_grand_name == "West Bank and Gaza"
+{txt}(906 real changes made)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * gen vars by location 
+. 
+. /*
+> Afghanistan             AFG
+> Bahrain                 BHR
+> Djibouti                DJI
+> Egypt                   EGY
+> EMRO                    EMR <-
+> Iran                    IRN
+> Iraq                    IRQ
+> Jordan                  JOR
+> Kuwait                  KWT
+> Lebanon                 LBN
+> Libya                   LBY
+> Morocco                 MAR
+> Oman                    OMN
+> Pakistan                PAK
+> Palestine               PSE
+> Qatar                   QAT
+> Saudi Arabia    SAU
+> Somalia                 SOM
+> Sudan                   SDN
+> Syria                   SYR
+> Tunisia                 TUN
+> United Arab Emirates            ARE
+> Yemen                   YEM
+> */
+. 
+. foreach var of varlist TotDeaMeRaA00 DayDeaMeRaA00 DayDeaMeSmA00 TotCasMeRaA00 DayCasMeRaA00 DayCasMeSmA00  {c -(}
+{txt}  2{com}. 
+. 
+.         qui gen `var'AFG = `var' 
+{txt}  3{com}.         qui replace `var'AFG = . if loc_grand_name != "Afghanistan"
+{txt}  4{com}.         
+.         qui gen `var'BHR = `var'
+{txt}  5{com}.         qui replace `var'BHR = . if loc_grand_name != "Bahrain"
+{txt}  6{com}.         
+.         qui gen `var'DJI = `var'
+{txt}  7{com}.         qui replace `var'DJI = . if loc_grand_name != "Djibouti"
+{txt}  8{com}.         
+.         qui gen `var'EGY = `var'
+{txt}  9{com}.         qui replace `var'EGY = . if loc_grand_name != "Egypt"
+{txt} 10{com}.         
+.         qui gen `var'EMR = `var'
+{txt} 11{com}.         qui replace `var'EMR = . if loc_grand_name != "EMRO"
+{txt} 12{com}.         
+.         qui gen `var'IRN = `var'
+{txt} 13{com}.         qui replace `var'IRN = . if loc_grand_name != "Iran"
+{txt} 14{com}.         
+.         qui gen `var'IRQ = `var'
+{txt} 15{com}.         qui replace `var'IRQ = . if loc_grand_name != "Iraq"
+{txt} 16{com}.         
+.         qui gen `var'JOR = `var'
+{txt} 17{com}.         qui replace `var'JOR = . if loc_grand_name != "Jordan"
+{txt} 18{com}.         
+.         qui gen `var'KWT = `var'
+{txt} 19{com}.         qui replace `var'KWT = . if loc_grand_name != "Kuwait"
+{txt} 20{com}.         
+.         qui gen `var'LBN = `var'
+{txt} 21{com}.         qui replace `var'LBN = . if loc_grand_name != "Lebanon"
+{txt} 22{com}.         
+.         qui gen `var'LBY = `var'
+{txt} 23{com}.         qui replace `var'LBY = . if loc_grand_name != "Libya"
+{txt} 24{com}.         
+.         qui gen `var'MAR = `var'
+{txt} 25{com}.         qui replace `var'MAR = . if loc_grand_name != "Morocco"
+{txt} 26{com}.         
+.         qui gen `var'OMN = `var'
+{txt} 27{com}.         qui replace `var'OMN = . if loc_grand_name != "Oman"
+{txt} 28{com}.         
+.         qui gen `var'PAK = `var'
+{txt} 29{com}.         qui replace `var'PAK = . if loc_grand_name != "Pakistan"
+{txt} 30{com}.         
+.         qui gen `var'PSE = `var'
+{txt} 31{com}.         qui replace `var'PSE = . if loc_grand_name != "Palestine"
+{txt} 32{com}.         
+.         qui gen `var'QAT = `var'
+{txt} 33{com}.         qui replace `var'QAT = . if loc_grand_name != "Qatar"
+{txt} 34{com}.         
+.         qui gen `var'SAU = `var'
+{txt} 35{com}.         qui replace `var'SAU = . if loc_grand_name != "Saudi Arabia"
+{txt} 36{com}.         
+.         qui gen `var'SOM = `var'
+{txt} 37{com}.         qui replace `var'SOM = . if loc_grand_name != "Somalia"
+{txt} 38{com}.         
+.         qui gen `var'SDN = `var'
+{txt} 39{com}.         qui replace `var'SDN = . if loc_grand_name != "Sudan"
+{txt} 40{com}.         
+.         qui gen `var'SYR = `var'
+{txt} 41{com}.         qui replace `var'SYR = . if loc_grand_name != "Syria"
+{txt} 42{com}.         
+.         qui gen `var'TUN = `var'
+{txt} 43{com}.         qui replace `var'TUN = . if loc_grand_name != "Tunisia"
+{txt} 44{com}.         
+.         qui gen `var'ARE = `var'
+{txt} 45{com}.         qui replace `var'ARE = . if loc_grand_name != "United Arab Emirates"
+{txt} 46{com}.         
+.         qui gen `var'YEM = `var'
+{txt} 47{com}.         qui replace `var'YEM = . if loc_grand_name != "Yemen"
+{txt} 48{com}.         
+. 
+.         
+.         label var `var'AFG "`var' Afghanistan"
+{txt} 49{com}.         label var `var'BHR "`var' Bahrain"
+{txt} 50{com}.         label var `var'DJI "`var' Djibouti"
+{txt} 51{com}.         label var `var'EGY "`var' Egypt"
+{txt} 52{com}.         label var `var'EMR "`var' EMRO"
+{txt} 53{com}.         label var `var'IRN "`var' Iran"
+{txt} 54{com}.         label var `var'IRQ "`var' Iraq"
+{txt} 55{com}.         label var `var'JOR "`var' Jordan"
+{txt} 56{com}.         label var `var'KWT "`var' Kuwait"
+{txt} 57{com}.         label var `var'LBN "`var' Lebanon"
+{txt} 58{com}.         label var `var'LBY "`var' Libya"
+{txt} 59{com}.         label var `var'MAR "`var' Morocco"
+{txt} 60{com}.         label var `var'OMN "`var' Oman"
+{txt} 61{com}.         label var `var'PAK "`var' Pakistan"
+{txt} 62{com}.         label var `var'PSE "`var' Palestine"
+{txt} 63{com}.         label var `var'QAT "`var' Qatar"
+{txt} 64{com}.         label var `var'SAU "`var' Saudi Arabia"
+{txt} 65{com}.         label var `var'SOM "`var' Somalia"
+{txt} 66{com}.         label var `var'SDN "`var' Sudan"
+{txt} 67{com}.         label var `var'SYR "`var' Syria"
+{txt} 68{com}.         label var `var'TUN "`var' Tunisia"
+{txt} 69{com}.         label var `var'ARE "`var' United Arab Emirates"
+{txt} 70{com}.         label var `var'YEM "`var' Yemen"
+{txt} 71{com}. 
+.                 
+. {c )-}
+{txt}
+{com}. *
+. 
+. 
+. 
+. 
+. 
+. * smooth daily deaths and daily cases for the EMR region
+. 
+. encode loc_grand_name, gen(loc_grand_name_encoded)
+{txt}
+{com}. 
+. tsset loc_grand_name_encoded date, daily   
+{res}{txt}{col 8}panel variable:  {res}loc_grand_name_encoded (strongly balanced)
+{txt}{col 9}time variable:  {res}{col 25}date, 22jan2020 to 15jul2022
+{txt}{col 17}delta:  {res}1 day
+{txt}
+{com}. 
+. 
+. tssmooth ma DayDeaMeRaA00EMR_window = DayDeaMeRaA00EMR if DayDeaMeRaA00EMR >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayDeaMeRaA00EMR {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayDeaMeSmA00EMR = DayDeaMeRaA00EMR_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayDeaMeRaA00EMR_window
+{txt}
+{smcl}
+{com}. 
+. label var DayDeaMeSmA00EMR "Daily deaths smooth A00 JOHN EMRO"
+{txt}
+{com}. 
+. 
+. tssmooth ma DayCasMeRaA00EMR_window = DayCasMeRaA00EMR if DayCasMeRaA00EMR >= 0, window(3 1 3) 
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayCasMeRaA00EMR {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayCasMeSmA00EMR = DayCasMeRaA00EMR_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5} by loc_grand_name_encoded : (1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayCasMeRaA00EMR_window
+{txt}
+{smcl}
+{com}. 
+. label var DayCasMeSmA00EMR "Daily cases smooth A00 JOHN EMRO"
+{txt}
+{com}. 
+. drop DayDeaMeRaA00EMR_window DayCasMeRaA00EMR_window DayCasMeRaA00EMR loc_grand_name_encoded
+{txt}
+{com}. 
+. 
+. tsset, clear
+{txt}
+{com}. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "JOHN deaths and cases EMRO region and countries.dta", replace
+{txt}(note: file JOHN deaths and cases EMRO region and countries.dta not found)
+file JOHN deaths and cases EMRO region and countries.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * get Johns Hopkins data for deaths, for $country
+. 
+. 
+. use "all JOHN deaths.dta", clear 
+{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(179,388 observations deleted)
+
+{com}. 
+. 
+. replace TotDeaMeRaA00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. replace DayDeaMeRaA00 = . if date < td(19feb2020)
+{txt}(27 real changes made, 27 to missing)
+
+{com}. 
+. 
+. 
+. 
+. 
+. gen DayDeaMeRaA00_CF2 = DayDeaMeRaA00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayDeaMeRaA00_CF2 "Daily Deaths JOHN correction factor 2"
+{txt}
+{com}. 
+. gen DayDeaMeRaA00_CF5 = DayDeaMeRaA00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayDeaMeRaA00_CF5 "Daily Deaths JOHN correction factor 5"
+{txt}
+{com}. 
+. gen TotDeaMeRaA00_CF2 = TotDeaMeRaA00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotDeaMeRaA00_CF2 "Total Deaths JOHN correction factor 2"
+{txt}
+{com}. 
+. gen TotDeaMeRaA00_CF5 = TotDeaMeRaA00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotDeaMeRaA00_CF5 "Total Deaths JOHN correction factor 5"
+{txt}
+{com}. 
+. 
+. 
+. order date loc_grand_name DayDeaMeRaA00 TotDeaMeRaA00 DayDeaMeRaA00_CF2 DayDeaMeRaA00_CF5 TotDeaMeRaA00_CF2 TotDeaMeRaA00_CF5
+{txt}
+{com}.                                         
+. 
+. sort date
+{txt}
+{com}. 
+. save "country JOHN deaths.dta", replace
+{txt}(note: file country JOHN deaths.dta not found)
+file country JOHN deaths.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * get Johns Hopkins data for cases, for $country
+. 
+. 
+. use "all JOHN cases.dta", clear 
+{txt}
+{com}. 
+. keep if regexm(loc_grand_name,"$country") == 1
+{txt}(179,388 observations deleted)
+
+{com}. 
+. 
+. 
+. 
+. replace TotCasMeRaA00 = . if date < td(19feb2020)
+{txt}(28 real changes made, 28 to missing)
+
+{com}. 
+. replace DayCasMeRaA00 = . if date < td(19feb2020)
+{txt}(27 real changes made, 27 to missing)
+
+{com}. 
+. 
+. 
+. gen DayCasMeRaA00_CF2 = DayCasMeRaA00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayCasMeRaA00_CF2 "Daily Cases JOHN correction factor 2"
+{txt}
+{com}. 
+. gen DayCasMeRaA00_CF5 = DayCasMeRaA00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayCasMeRaA00_CF5 "Daily Cases JOHN correction factor 5"
+{txt}
+{com}. 
+. gen TotCasMeRaA00_CF2 = TotCasMeRaA00 * 2
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotCasMeRaA00_CF2 "Total Cases JOHN correction factor 2"
+{txt}
+{com}. 
+. gen TotCasMeRaA00_CF5 = TotCasMeRaA00 * 5
+{txt}(28 missing values generated)
+
+{com}. 
+. label var TotCasMeRaA00_CF5 "Total Cases JOHN correction factor 5"
+{txt}
+{com}. 
+. 
+. order date loc_grand_name DayCasMeRaA00 TotCasMeRaA00 DayCasMeRaA00_CF2 DayCasMeRaA00_CF5 TotCasMeRaA00_CF2 TotCasMeRaA00_CF5
+{txt}
+{com}. 
+. sort date
+{txt}
+{com}. 
+. compress
+  {txt}variable {bf}date{sf} was {bf}{res}float{sf}{txt} now {bf}{res}int{sf}
+  {txt}variable {bf}TotCasMeRaA00{sf} was {bf}{res}double{sf}{txt} now {bf}{res}long{sf}
+  {txt}variable {bf}loc_grand_name{sf} was {bf}{res}str32{sf}{txt} now {bf}{res}str4{sf}
+{txt}  (30,804 bytes saved)
+
+{com}. 
+. save "country JOHN Cases.dta", replace
+{txt}(note: file country JOHN Cases.dta not found)
+file country JOHN Cases.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ****************************************************
+. * merge deaths and cases, for $country
+. 
+. use "country JOHN deaths.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 date using "country JOHN Cases.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             906{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. 
+. *
+. 
+. * gen cfr
+. 
+. gen DayCfrMeRaA00 = 100 * DayDeaMeRaA00 / DayCasMeRaA00
+{txt}(28 missing values generated)
+
+{com}. 
+. label var DayCfrMeRaA00 "Daily CFR JOHN"
+{txt}
+{com}. 
+. *
+. 
+. 
+. 
+. 
+. * smooth 
+. 
+. tsset date, daily   
+{res}{txt}{col 9}time variable:  {res}{col 25}date, 22jan2020 to 15jul2022
+{txt}{col 17}delta:  {res}1 day
+{txt}
+{com}. 
+. 
+. tssmooth ma DayDeaMeRaA00_window = DayDeaMeRaA00 if DayDeaMeRaA00 >= 0, window(3 1 3)
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayDeaMeRaA00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayDeaMeSmA00 = DayDeaMeRaA00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayDeaMeRaA00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayDeaMeSmA00 "Daily deaths smooth A00 JOHN"
+{txt}
+{com}. 
+. drop DayDeaMeRaA00_window
+{txt}
+{com}. 
+. 
+. tssmooth ma DayCasMeRaA00_window = DayCasMeRaA00 if DayCasMeRaA00 >= 0, window(3 1 3)
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/7)*[x(t-3) + x(t-2) + x(t-1) + 1*x(t) + x(t+1) + x(t+2) + x(t+3)]; x(t)= DayCasMeRaA00 {p_end}
+{txt}
+{com}. 
+. tssmooth ma DayCasMeSmA00 = DayCasMeRaA00_window, weights( 1 2 3 <4> 3 2 1) replace
+{txt}The smoother applied was
+{res}{p 5 5 5}(1/16)*[1*x(t-3) + 2*x(t-2) + 3*x(t-1) + 4*x(t) + 3*x(t+1) + 2*x(t+2) + ...; x(t)= DayCasMeRaA00_window
+{txt}
+{smcl}
+{com}. 
+. label var DayCasMeSmA00 "Daily cases smooth A00 JOHN"
+{txt}
+{com}. 
+. drop DayCasMeRaA00_window
+{txt}
+{com}. 
+. tsset, clear
+{txt}
+{com}. 
+. 
+. 
+. 
+. * gen monthspast vars for #thicknumber of graphs
+. 
+. 
+. 
+. gen today_date_string = "`c(current_date)'"
+{txt}
+{com}. 
+. gen year = substr(today_date_string,8,4) 
+{txt}
+{com}. gen month = substr(today_date_string,4,3) 
+{txt}
+{com}. gen day = substr(today_date_string,1,2) 
+{txt}
+{com}. egen date2 = concat(day month year)
+{txt}
+{com}. 
+. gen today_numericdailydate  = date(date2, "DMY", 2050)
+{txt}
+{com}. format today_numericdailydate  %tdDDMonCCYY
+{txt}
+{com}. 
+. drop year month day date2 today_date_string
+{txt}
+{com}. 
+. codebook today_numericdailydate 
+
+{txt}{hline}
+{res}today_numericdailydate{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric daily date ({res}float{txt})
+
+{col 18}range:  [{res}22842{txt},{res}22842{txt}]{col 55}units:  {res}1
+{col 8}{txt}or equivalently:  [{res}16jul2022{txt},{res}16jul2022{txt}]{col 55}units:  {res}days
+{col 10}{txt}unique values:  {res}1{col 51}{txt}missing .:  {res}0{txt}/{res}906
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       906{col 33}22842{col 40}{txt}16jul2022
+
+{com}. 
+. gen monthspast01jan2020 = ((today_numericdailydate - td(01jan2020)) / 30) + 1
+{txt}
+{com}. 
+. replace monthspast01jan2020 = round(monthspast01jan2020)
+{txt}(906 real changes made)
+
+{com}. 
+. global monthspast01jan2020 = monthspast01jan2020
+{txt}
+{com}. 
+. di $monthspast01jan2020
+{res}32
+{txt}
+{com}. 
+. 
+. 
+. gen monthspast01jan2021 = ((today_numericdailydate - td(01jan2021)) / 30) + 1
+{txt}
+{com}. 
+. replace monthspast01jan2021 = round(monthspast01jan2021)
+{txt}(906 real changes made)
+
+{com}. 
+. global monthspast01jan2021 = monthspast01jan2021
+{txt}
+{com}. 
+. di $monthspast01jan2021
+{res}20
+{txt}
+{com}. 
+. 
+. 
+. gen monthspast01jan2022 = ((today_numericdailydate - td(01jan2022)) / 30) + 1
+{txt}
+{com}. 
+. replace monthspast01jan2022 = round(monthspast01jan2022)
+{txt}(906 real changes made)
+
+{com}. 
+. global monthspast01jan2022 = monthspast01jan2022
+{txt}
+{com}. 
+. di $monthspast01jan2022
+{res}8
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. sort date loc_grand_name
+{txt}
+{com}. 
+. 
+. save "country JOHN.dta", replace
+{txt}(note: file country JOHN.dta not found)
+file country JOHN.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **************
+. 
+. * graphs
+. 
+. ssc install grstyle, replace
+{txt}checking {hilite:grstyle} consistency and verifying not already installed...
+all files already exist and are up to date.
+
+{com}. 
+. grstyle init
+{res}{txt}
+{com}. 
+. grstyle color background white
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * daily deaths, JOHN, $country
+. 
+. twoway ///
+> (line DayDeaMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayDeaMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+> , xtitle(Date) xlabel(#$monthspast01jan2020, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily reported deaths) title("COVID-19 daily reported deaths, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Raw deaths" 2 "Smooth deaths") size(small) row(1)) 
+{res}{txt}
+{com}. 
+. graph export "graph 1 COVID-19 daily deaths, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220715/code/JOHN/graph 1 COVID-19 daily deaths, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. * daily cases, JOHN, $country
+. 
+. twoway ///
+> (line DayCasMeRaA00 date, sort lcolor(black) lwidth(medium)) /// 1 "JOHN raw"
+> (line DayCasMeSmA00 date, sort lcolor(cyan*1.2) lwidth(thick)) /// 2 "JOHN smooth"
+> , xtitle(Date) xlabel(#$monthspast01jan2020, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
+> xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
+> ytitle(Daily reported cases) title("COVID-19 daily reported cases, $country, Johns Hopkins", size(medium)) ///
+> xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
+> legend(order(1 "Raw cases" 2 "Smooth cases") size(small) row(1)) 
+{res}{txt}
+{com}. 
+. graph export "graph 2 COVID-19 daily cases, $country, Johns Hopkins.pdf", replace
+{txt}(file /Users/farshadpourmalek/Downloads/covir2-main/20220715/code/JOHN/graph 2 COVID-19 daily cases, Iran, Johns Hopkins.pdf written in PDF format)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. view "log country JOHN.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/covir2-main/20220715/code/JOHN/log country JOHN.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Jul 2022, 07:17:41
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
