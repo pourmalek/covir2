@@ -177,6 +177,12 @@ MEDRIVA:  https://charts.medriva.com/country/IR
   
 ****
 
+(8b1) Iran [Daily cases JOHN, and infections IMPE, Iran, 2021 on](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2026%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenario%20with%20uncertainty%2C%20IMPE.pdf)
+
+![image](https://user-images.githubusercontent.com/30849720/179369955-7c3f0ce0-3049-47bb-a4bf-53fd03c0035e.png)
+
+****
+
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
 ![image](https://user-images.githubusercontent.com/30849720/179366640-ddb882fc-0ca6-40e8-8ae5-4b30769013c4.png)
