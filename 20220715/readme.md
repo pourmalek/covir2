@@ -238,13 +238,13 @@ https://www.instagram.com/p/CfyxAcNDOdI/?igshid=MDJmNzVkMjY=
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://raw.githubusercontent.com/pourmalek/covir2/main/20220715/output/merge/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179363408-531cb911-e2d6-4cb2-a10c-825f810571b1.png)
 
 ****
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220715/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/179363428-e4117fa9-8740-4a5f-b050-552508f7edd1.png)
 
 ****
 
