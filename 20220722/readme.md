@@ -50,7 +50,7 @@ These are for documentations in history and future generations, those who and if
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180588007-3b8e575c-6072-469a-9e64-f33dad284ea6.png)
 
 ****
 
