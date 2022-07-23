@@ -44,7 +44,7 @@ These are for documentations in history and future generations, those who and if
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://raw.githubusercontent.com/pourmalek/covir2/main/20220722/output/merge/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180587967-3d319ccb-4d66-4479-b24b-48106b5c7db9.png) 
 
 ****
 
