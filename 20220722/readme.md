@@ -13,6 +13,8 @@ Latest models' updates > 2 weeks are not included.
 
 <br/><br/> 
 
+##Generalities about COVID-19 and global warming:##
+
 These are for documentation in history and future generations, those who and if have remained. Someday some intelligent people will read. 
 
 I informed the Ministry of Health of Iran about these reports of COVID-19 epidemic models for Iran. They listened and went on their deficient way. 
@@ -21,23 +23,13 @@ Not to forget:
 
 (1) China reacted with the lowest speed, releasing the virus to the world. WHO reacted reluctantly. The world nagged and then let it go. 
 
-(2) The course of events showed that the function of the Ministers of Health and Public Health Officers (and their equivalent positions, e.g., Health Deputy Ministers) indicated that their decisions are primarily driven by POLITICS rather than PUBLIC HEALTH. 
+(2) The course of events showed that the function of the Ministers of Health and Public Health Officers (and their equivalent positions, e.g., Health Deputy Ministers) indicated that their decisions are primarily driven by POLITICS rather than PUBLIC HEALTH. This is particularly true about Iran and Canada. Iran deliberately chose free propagation of virus for a delusional objective of herd immunity.
 
 (3) Epidemic models for COVD-19 are generally weak (i.e., of low predictive validity), and the emergence of newer variants practically makes them flail until the new wave has started to rise. I have looked at this, and the manuscript will be ready in future, with codes and details to be placed here: https://github.com/pourmalek/CovidLongitudinal 
 
 (4) The available vaccines do not substantially reduce the spread of the virus. This puts evolutionary pressure on the virus for the emergence of newer immune-evasive variants that are more spreadable and / or fatal. The problem will remain without vaccines that stop transmission and without effective suppression of airborne propagation. These are necessary components of the solution but not a sufficient collection of components. 
 
-(6) Governments have chosen to set the current and ongoing (low or high) levels of morbidity and mortality of the people to preserve the economy and stability. People have regressed into personal and family survival mode. Numerable individuals speak, and no one listens. 
-
-<div dir="rtl"> 
-
-این ها برای ثبت در تاریخ است و جستجو گران نسل های آینده، آن ها که اگر باقی مانده اند. روزی انسان های بخرد خواهند خواند.
-
-شخص بنده وزارت بهداشت ایران را از وجود و جزییات این گزارش های وضعیت مدل های همه گیری کووید-۱۹ برای ایران آگاه کردم. ایشان گوش فرا داده و به راه کج خود ادامه دادند. 
-
-برای فراموش نشدن:
-   
-<div dir="ltr"> 
+(6) Governments have chosen to set the current and ongoing (low or high) levels of morbidity and mortality of the people to preserve the economy and stability. People have regressed into personal and family survival mode. Numerable individuals speak, and no one listens. Environmental degradation (consequences of which includes the infamous global warming) is an existential threat for Homo sapiens, and the causes and solutions have been explained since the 1970s. 
 
 <br/><br/> 
 
