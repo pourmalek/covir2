@@ -83,49 +83,15 @@ These are for documentations in history and future generations, those who and if
 
 (5) Iran [Deaths, Iran, IMPE, 2021 on, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-book
+
 
 ****
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book
+![image](https://user-images.githubusercontent.com/30849720/180588113-4b1735dc-2940-443c-8cb0-994adf34f3a0.png)
   
 ****  
-  
-(000) Iran [Variants composition, Ending 27 June 2022, CoVariants by Emma B. Hodcroft](https://covariants.org/per-country?country=Iran)
-  
-book
-  
-<br/><br/> 
-  
-Legend (Number sequenced and Frequency as of 15 July 2022) :
-  
-book
-
-<br/><br/> 
-
-Mapping of variants nomenclature schemes 
-
-book
-
-https://covariants.org
-
-CoVariants uses the Nextstrain naming system for variants ([here](https://nextstrain.org/blog/2021-01-06-updated-SARS-CoV-2-clade-naming)). 
-
-WHO variants nomenclature scheme ([here](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)).
-
-<br/><br/> 
-  
-SOURCE CITATION: Emma B. Hodcroft. 2021. "CoVariants: SARS-CoV-2 Mutations and Variants of Interest." https://covariants.org/
-
-SOURCE WEB PAGE: https://covariants.org/per-country 
-
-DATE ACCESED: July 15, 2022
-  
-SOURCE LICENSE: This CoVariants code and work is licensed under a [GNU Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html). You can view this license [here](https://github.com/hodcroftlab/covariants/blob/master/LICENSE.md)
-  
-****
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
