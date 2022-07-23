@@ -13,12 +13,12 @@ Latest models' updates > 2 weeks are not included.
 
 <br/><br/> 
 
-These are for documentations in history and future generations, those who and if have remained. The past can illuminate the future.
+These are for documentations in history and future generations, those who and if have remained. We were alive and saying.
 
 <div dir="rtl"> 
 
-این ها برای ثبت در تاریخ است و جستجو گران نسل های آینده، آن ها که اگر باقی مانده اند. گذشته چراغ راه آینده است.
-
+این ها برای ثبت در تاریخ است و جستجو گران نسل های آینده، آن ها که اگر باقی مانده اند. ما زنده بودیم و می گفتیم.
+   
 <div dir="ltr"> 
 
 <br/><br/> 
@@ -95,7 +95,7 @@ These are for documentations in history and future generations, those who and if
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180588207-470e36d0-01c6-49f6-ad56-eaeab24bb4e3.png)
   
 ****
 
