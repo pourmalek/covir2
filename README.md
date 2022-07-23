@@ -195,45 +195,49 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20220715`](https://github.com/pourmalek/covir2/tree/main/20220715)
+#### LATEST UPTAKE: uptake [`20220722`](https://github.com/pourmalek/covir2/tree/main/20220722)
 
-### Study update dates in uptake 20220715
+### Study update dates in uptake 20220722
 
-DELP 20220618, IHME 20220610, **_IMPE 20220703_**, **_SRIV 20220715_** 
+**_DELP 20220719_**, **_IHME 20220719_**, NO IMPE, **_SRIV 20220722_** 
 
-Days old: DELP 28, IHME 36, IMPE 13, SRIV 0
+Days old: DELP 3, IHME 3, IMPE > 2 weeks, SRIV 0
 
-The latest IMPE update 20220703 was released on 20220711.
+Latest models' updates > 2 weeks are not included.
 
 <br/><br/> 
 
 **********
 **********
 
-<div dir="rtl"> 
+<br/><br/> 
 
-کورونا، تا کی؟
+## Generalities about COVID-19 and global warming: ##
 
-تا زمانی که "انتقال" ویروس به شدت کم نشود، مشکل کووید ادامه خواهد داشت.
+These are for documentation in history and future generations, those who and if have remained. Someday some intelligent people will read. 
 
-برای کاهش موارد و مرگ، این موارد ذکر شده اند: فاصله فیزیکی و شیوه نامه های عدم تجمع +‌ ماسک + ‌واکسن.
+I informed the Ministry of Health of Iran about these reports of COVID-19 epidemic models for Iran. They listened and went on their deficient way. 
 
-به نظر من تا زمانی که دو موضوع زیر به نحو مناسب مد نظر قرار نگیرند و به طور موثر حل و فصل نشوند، مشکل کورونا ادامه خواهد یافت: (۱) واکسن های قطع کننده یا کاهش دهنده تکثیر و انتقال ویروس، (۲) حل مشکل انتقال هوابرد ویروس در فضاهای سر بسته.
+Not to forget:
 
-واکسن های موجود، جلوی تکثیر و انتقال ویروس را نمی گیرند بلکه از مرگ و بستری تا حد زیادی جلوگیری می کنند. حتی اگر و زمانی که بر ضد واریانت های جدید تر به روز رسانی شوند، باز هم انتقال ویروس ادامه داشته و واریانت های جدید تر ایجاد می شوند. راه حل قطع این چرخه تکرار شونده، ساختن واکسن هایی است که انتقال ویروس را از بین برده یا به شدت کاهش دهند. البته گفتن یا نوشتن یا پیشنهاد آن ساده است ولی انجام این کار ساده نیست. شرکت های فارما واکسن ساز فعلا با همین واکسن ها راضی هستند و از منبع درآمد خود (سود سهام داران) سرمایه گزاری برای واکسن نسل بعدی کووید نخواهند کرد. من یا شما هم اگر سهام دار آن ها بودیم نمی کردیم. مطالبه +‌ فشار +‌ پول مردم از طریق کمک دولت ها لازم است. خصوصا تا زمانی که مرگ ها پایین بماند.
+(1) China reacted with the lowest speed, releasing the virus to the world. WHO reacted reluctantly. The world nagged and then let it go. 
 
-مشکل انتقال هوابرد ویروس در فضاهای سر بسته باعث می شود علی رغم فرض استفاده از بهترین ماسک هم حتی توسط همه افرادی که در محیط های سربسته هستند باز هم انتقال ویروس صورت گیرد. بنابراین انتقال بیماری ادامه پیدا می کند. روش های کاهش انتقال هوابرد ویروس در فضاهای سر بسته شناخته شده هستند. روش های غیر فعال هزینه کمتری دارند ولی هزینه روش های فعال برای پوشش موثر جمعیت بسیار زیاد است. مردم و دولت ها چنین پولی ندارند. یک درصدی های جهان دارند و چرا چنین پولی را مفت و مسلم از دست بدهند؟
+(2) The course of events showed that the function of the Ministers of Health and Public Health Officers (and their equivalent positions, e.g., Health Deputy Ministers) indicated that their decisions are primarily driven by POLITICS rather than PUBLIC HEALTH. This is particularly true about Iran and Canada. Iran deliberately chose free propagation of virus for a delusional objective of herd immunity.
 
-مسیر احتمالی به سوی حل مشکل واکسن، در ذهن من این گونه است: متخصصین این موضوع را قبول داشته باشند و توصیه کنند. افکار عمومی (مردم) متوجه شوند و اهمیت بدهند، به نحوی که به سیاست مداران و حاکمان فشار بیاورند که مشکل را حال کنند. سیاست مداران و حاکمان مجبور شوند دنبال راه حل مشکل بروند. زمانی که برای کشف و ساختن واکسن "نسل بعدی" پول حاضر باشد، شاید ساخته شوند. راه حل مشکل انتقال هوابرد ویروس در فضاهای سر بسته، به طور موثر و با هزینه قابل تامین و پرداخت را من نمی دانم.
+(3) Epidemic models for COVD-19 are generally weak (i.e., of low predictive validity), and the emergence of newer variants practically makes them flail until the new wave has started to rise. I have looked at this, and the manuscript will be ready in future, with codes and details to be placed here: https://github.com/pourmalek/CovidLongitudinal 
 
-تا زمانی که "انتقال" ویروس به شدت کم نشود، مشکل ادامه خواهد داشت و ممکن است با ظهور همه گیری های بعدی جزو بایگانی مشکلات و راه حل ها قرار گیرد. مشکل تخریب محیط زیست توسط بشر و راه حل آن از دهه ۱۹۷۰ و ۱۹۸۰ معلوم بوده است. نتیجه: همین تغییرات اقلیمی که می بینیم. پیش آگهی که در ذهن برای حل مشکل انتقال ویروس هست: ضعیف. چرا؟ چون همه فکر می کنند هزار تا مشکل مهم تر داریم. 
+(4) The available vaccines do not substantially reduce the spread of the virus. This puts evolutionary pressure on the virus for the emergence of newer immune-evasive variants that are more spreadable and / or fatal. The problem will remain without vaccines that stop transmission and without effective suppression of airborne propagation. These are necessary components of the solution but not a sufficient collection of components. 
 
-فرشاد پورملک
+(6) Governments have chosen to set the current and ongoing (low or high) levels of morbidity and mortality of the people to preserve the economy and stability. People have regressed into personal and family survival mode. Numerable individuals speak, and no one listens. Environmental degradation (consequences of which includes the infamous global warming) is an existential threat for Homo sapiens, and the causes and solutions have been explained since the 1970s. 
 
-۲۰ تیر ۱۴۰۱ و ۱۱ جولای ۲۰۲۲
+<br/><br/> 
 
-<div dir="ltr">
 
+## Summary 20220722: ##
+
+Among the Eastern Mediterranean countries, only Tunisia had more COVID-19 deaths than Iran in July 2002. 
+
+Graph (4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on, without extremes](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%201001%20d%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
 
 ********************************************************************************************************************************************
@@ -1051,9 +1055,8 @@ and /20220318/ denotes the date of uptake.
 
 
 
-
-
-
+(83) uptake [`20220722`](https://github.com/pourmalek/covir2/tree/main/20220722): 
+**_DELP 20220719_**, **_IHME 20220719_**, NO IMPE, **_SRIV 20220722_**   || Days old: DELP 3, IHME 3, IMPE > 2 weeks, SRIV 0
 
 (82) uptake [`20220715`](https://github.com/pourmalek/covir2/tree/main/20220715): 
 DELP 20220618, IHME 20220610, **_IMPE 20220703_**, **_SRIV 20220715_**  || Days old: DELP 28, IHME 36, IMPE 13, SRIV 0
