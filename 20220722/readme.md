@@ -180,8 +180,9 @@ These are for documentations in history and future generations, those who and if
  
 ****
 
-(15) Iran [Daily mobility, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220722/output/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
+(15) Iran [Daily mobility, 2 scenarios, all time, IHME](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%20103%20COVID-19%20daily%20mobility%2C%20Iran%2C%202%20scenarios%20IHME.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/180589547-45363f5a-fe55-46aa-ad10-3ea8b30e5af4.png)
  
 ****
 
@@ -235,31 +236,31 @@ YEM:	Yemen
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/180589562-267607cd-d722-432c-8a4d-f58214a0b7d6.png)
   
 ****   
    
 (2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/180589581-c52a3f30-2d87-48b7-9d25-3c71d3766bc1.png)
   
 ****   
     
 (3) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/180589830-0ab6e08c-2ac9-4a07-bff3-862eb766eea3.png)
   
 ****   
     
 (4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on, without extremes](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%201001%20d%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/180589852-15cf3609-f985-468f-9034-8e32ed430d6b.png)
   
 ****    
 
 (5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/180589867-79042760-632d-4355-abc7-1407f8d6451c.png)
   
 ****   
    
