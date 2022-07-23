@@ -56,13 +56,13 @@ These are for documentations in history and future generations, those who and if
 
 (0c) Iran [Daily reported deaths, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180588028-16e81735-9722-4536-9cfe-a938c26b502a.png)
 
 ****
   
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180588053-01b7706a-8fa5-473c-9bec-b981964aee1a.png)
   
 ****
 
