@@ -44,7 +44,6 @@ Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19
 
 . 
  
-![image](https://user-images.githubusercontent.com/30849720/167263231-c48d340a-8240-458e-aa72-5b4292026182.png)
  
  
 ********************************************************************************************************************************************
