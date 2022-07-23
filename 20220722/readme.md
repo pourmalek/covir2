@@ -13,7 +13,7 @@ Latest models' updates > 2 weeks are not included.
 
 <br/><br/> 
 
-##Generalities about COVID-19 and global warming:##
+## Generalities about COVID-19 and global warming: ##
 
 These are for documentation in history and future generations, those who and if have remained. Someday some intelligent people will read. 
 
