@@ -101,19 +101,19 @@ These are for documentations in history and future generations, those who and if
 
 (00b3) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180589261-66c41d79-27cb-49bf-be4f-7fe3dc4e435f.png)
   
 ****
 
 (00c) Iran [Daily reported cases, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%204%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180589282-1f16ba70-b74e-443d-82d2-1be761472ac3.png)
   
 ****
   
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180589292-7f085f4c-adbd-4c7b-8a01-6afa181ef2f2.png)
   
 ****
 
@@ -134,7 +134,7 @@ book
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220722/output/merge/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/180589308-4925832d-6d06-4512-856b-f7e521d1baf1.png)
   
 ****
 
