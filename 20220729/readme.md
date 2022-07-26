@@ -58,7 +58,7 @@ CONTENT:
 
 ## Farshad Pourmalek, 20220726: ##
 
-## According to my best understanding of medicine, public health, and epidemiology, I genuinely believe that it is not prudent to PRESCRIBE no-mask, no-social-distancing, AT-LARGE, until-further-notice.  ##
+## According to my best understanding of medicine, public health, and epidemiology, I genuinely believe that it is not quite prudent to PRESCRIBE no-mask, no-social-distancing, AT-LARGE, until-further-notice.  ##
 
 
 ***********************************************************
