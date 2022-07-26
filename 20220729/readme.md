@@ -13,6 +13,53 @@ Latest models' updates > 2 weeks are not included.
 
 <br/><br/> 
 
+***********************************************************
+***********************************************************
+
+
+## IHME, 20220726: AT THIS TIME, WE DO NOT THINK IT IS NECESSARY TO IMPLEMENT MASK OR SOCIAL DISTANCING MANDATES ##
+
+***
+
+SOURCE: 
+
+"IHME Update" email "ihmedigital@healthdata.org", subject: "COVID-19 insights: unlikely to be many cases of severe COVID"
+
+CONTENT:
+
+The latest takeaways from IHME Director Chris Murray:
+
+Globally, we remain optimistic about the course of the BA.5 Omicron subvariant. However, one of the challenges in many European countries and in the US is distinguishing whether hospitalizations are due to COVID or if individuals tested positive after being admitted for other reasons.
+ 
+Because of the widespread use of Paxlovid and the likelihood of many hospitalizations to be incidental infections, the US likely won't see a large amount of severe COVID.
+ 
+At this time, we do not think it is necessary to implement mask or social distancing mandates, but we do encourage national surveillance systems to track the underlying cause of hospital admissions.
+
+***
+
+
+SOURCE: 
+
+"IHME | COVID-19 Update (July 22, 2022)" by "Institute for Health Metrics and Evaluation (IHME) Institute for Health Metrics and Evaluation (IHME)" dated "Jul 22, 2022" at "https://www.youtube.com/watch?v=yG0xkDAkPJg"
+
+CONTENT:
+
+"https://www.youtube.com/watch?v=yG0xkDAkPJg"
+
+***
+
+
+<br/><br/> 
+
+
+## Farshad Pourmalek, 20220726: ##
+
+## It is astonishingly misleading to prescribe no-mask, no-social-distancing, until-further-notice. This statement abysmally distorts science, common sense, and conscience. It contributes to increasing preventable deaths and morbidity from COVID-19 and other causes. It increases the burden of disease. ##
+
+
+***********************************************************
+***********************************************************
+
 ## Generalities about COVID-19 and global warming: ##
 
 These are for documentation in history and future generations, those who and if have remained. Someday some intelligent people will read. 
