@@ -56,7 +56,7 @@ CONTENT:
 
 ## Farshad Pourmalek, 20220726: ##
 
-## It is astonishingly misleading to prescribe no-mask, no-social-distancing, at-large, and until-further-notice. This statement abysmally distorts science, common sense, and conscience. It contributes to increasing preventable deaths and morbidity from COVID-19 and other causes. It increases the burden of disease. ##
+## According to my best understanding of medicine (1993), public health (2002), and epidemiology (2006), I genuinely believe that it is overwhelmingly misleading to PRESCRIBE no-mask, no-social-distancing, AT-LARGE, until-further-notice. Such prescription abysmally distorts science, common sense, and my conscience. It contributes to increasing preventable deaths and morbidity from both COVID-19 and other causes. It increases the burden of disease. First, DO NOT HARM. ##
 
 
 ***********************************************************
