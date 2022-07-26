@@ -25,7 +25,9 @@ Latest models' updates > 2 weeks are not included.
 
 SOURCE: 
 
-"IHME Update" email "ihmedigital@healthdata.org", subject: "COVID-19 insights: unlikely to be many cases of severe COVID"
+COVID-19 insights: cases rising but unlikely to be severe
+https://mailchi.mp/healthdata/covid-19-insights-unlikely-to-be-many-cases-of-severe-covid
+Accessed June 26, 2022
 
 CONTENT:
 
