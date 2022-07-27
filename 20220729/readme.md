@@ -13,53 +13,6 @@ Latest models' updates > 2 weeks are not included.
 
 <br/><br/> 
 
-***********************************************************
-***********************************************************
-
-
-## IHME, 20220726: ## 
-
-## AT THIS TIME, WE DO NOT THINK IT IS NECESSARY TO IMPLEMENT MASK OR SOCIAL DISTANCING MANDATES, BUT WE DO ENCOURAGE NATIONAL SURVEILLANCE SYSTEMS TO TRACK THE UNDERLYING CAUSE OF HOSPITAL ADMISSIONS. ##
-
-***
-
-SOURCE: 
-
-[IHME] COVID-19 insights: cases rising but unlikely to be severe
-https://mailchi.mp/healthdata/covid-19-insights-unlikely-to-be-many-cases-of-severe-covid
-Accessed June 26, 2022
-
-CONTENT:
-
-The latest takeaways from IHME Director Chris Murray:
-
-Globally, we remain optimistic about the course of the BA.5 Omicron subvariant. However, one of the challenges in many European countries and in the US is distinguishing whether hospitalizations are due to COVID or if individuals tested positive after being admitted for other reasons.
- 
-Because of the widespread use of Paxlovid and the likelihood of many hospitalizations to be incidental infections, the US likely won't see a large amount of severe COVID.
- 
-At this time, we do not think it is necessary to implement mask or social distancing mandates, but we do encourage national surveillance systems to track the underlying cause of hospital admissions.
-
-***
-
-
-SOURCE: 
-
-"IHME | COVID-19 Update (July 22, 2022)" by "Institute for Health Metrics and Evaluation (IHME) Institute for Health Metrics and Evaluation (IHME)" dated "Jul 22, 2022" at "https://www.youtube.com/watch?v=yG0xkDAkPJg"
-
-CONTENT:
-
-"https://www.youtube.com/watch?v=yG0xkDAkPJg"
-
-***
-
-
-<br/><br/> 
-
-
-## Farshad Pourmalek, 20220726: ##
-
-## According to my best understanding of medicine, public health, and epidemiology, I genuinely believe that it is not quite prudent to PRESCRIBE no-mask, no-social-distancing, AT-LARGE, until-further-notice.  ##
-
 
 ***********************************************************
 ***********************************************************
@@ -85,6 +38,9 @@ Not to forget:
 Carl Sagan testifying before Congress in 1985 on climate change || https://www.youtube.com/watch?v=Wp-WiNXH6hI
 
 <br/><br/> 
+
+***********************************************************
+***********************************************************
 
 
 ## Summary 20220729: ##
