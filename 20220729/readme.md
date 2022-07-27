@@ -80,7 +80,7 @@ Not to forget:
 
 (4) The available vaccines do not substantially reduce the spread of the virus. This puts evolutionary pressure on the virus for the emergence of newer immune-evasive variants that are more spreadable and / or fatal. The problem will remain without vaccines that stop transmission and without effective suppression of airborne propagation. These are necessary components of the solution but not a sufficient collection of components. 
 
-(6) Governments have chosen to set the current and ongoing (low or high) levels of morbidity and mortality of the people to preserve the economy and stability. People have regressed into personal and family survival mode. Numerable individuals speak, and no one listens. Environmental degradation (consequences of which includes the infamous global warming) is an existential threat for Homo sapiens, and the causes and solutions have been explained since the 1970s.
+(6) Governments have chosen to set the current and ongoing (low or high) levels of morbidity and mortality of the people to preserve the economy and stability. People have regressed into personal and family survival mode. Numerable individuals speak, and no one listens. Environmental degradation (consequences of which includes the infamous global warming, the old "greenhouse effect") is an existential threat for Homo sapiens, and the causes and solutions have been explained since the 1970s.
 
 Carl Sagan testifying before Congress in 1985 on climate change || https://www.youtube.com/watch?v=Wp-WiNXH6hI
 
