@@ -67,7 +67,7 @@ Carl Sagan testifying before Congress in 1985 on climate change || https://www.y
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://raw.githubusercontent.com/pourmalek/covir2/main/20220729/output/merge/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/181815092-d339c847-acad-4aa0-a7bb-688157bab72a.png)
 
 ****
 
