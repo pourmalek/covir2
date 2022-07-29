@@ -194,7 +194,7 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
 
-#### LATEST UPTAKE: uptake [`20220722`](https://github.com/pourmalek/covir2/tree/main/20220722)
+#### LATEST UPTAKE: uptake [`20220729`](https://github.com/pourmalek/covir2/tree/main/20220729)
 
 ### Study update dates in uptake 20220729
 
