@@ -73,19 +73,19 @@ Carl Sagan testifying before Congress in 1985 on climate change || https://www.y
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220729/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/181815230-f1272ffe-fd7b-44c9-9bfd-f23bd08e0aba.png)
 
 ****
 
 (0c) Iran [Daily reported deaths, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220729/output/merge/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/181815424-c778044f-36b4-4fb1-9215-d7070aa3ec2b.png)
 
 ****
   
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220729/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/181815567-f0eb8369-237b-42b9-8355-2eae8eb7c126.png)
   
 ****
 
@@ -107,12 +107,11 @@ book
 (5) Iran [Deaths, Iran, IMPE, 2021 on, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20220729/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
 
-
 ****
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220729/output/merge/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book
+![image](https://user-images.githubusercontent.com/30849720/181815734-28ecc031-8db9-4be0-aeb1-6ba20ab44c8c.png)
   
 ****  
 
