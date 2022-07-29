@@ -5,9 +5,9 @@
 
 ### Study update dates in uptake 20220729
 
-**_DELP 20220719_**, IHME 20220719, NO IMPE, **_SRIV 20220729_** 
+**_DELP 20220719_**, IHME 20220719, NO IMPE, **_SRIV 20220728_** 
 
-Days old: DELP 10, IHME 10, IMPE > 2 weeks, SRIV 0
+Days old: DELP 10, IHME 10, IMPE > 2 weeks, SRIV 1
 
 Latest models' updates > 2 weeks are not included.
 

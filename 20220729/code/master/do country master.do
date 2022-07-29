@@ -18,9 +18,9 @@
 
 ### Study update dates in uptake 20220729
 
-**_DELP 20220719_**, IHME 20220719, NO IMPE, **_SRIV 20220729_** 
+**_DELP 20220719_**, IHME 20220719, NO IMPE, **_SRIV 20220728_** 
 
-Days old: DELP 10, IHME 10, IMPE > 2 weeks, SRIV 0
+Days old: DELP 10, IHME 10, IMPE > 2 weeks, SRIV 1
 
 Latest models' updates > 2 weeks are not included.
 
@@ -51,7 +51,7 @@ global IHMEepoch 08Jul2022 // as per https://covid19.healthdata.org/iran-(islami
 global IMPEdate 2022-07-03_v9 
 *            4/ -------------
 
-global SRIVdate 2022-07-29
+global SRIVdate 2022-07-28
 *            5/ ----------
 
 
@@ -67,7 +67,7 @@ global IHMEdate 2022-09-19
 global IMPEepoch 03Jun2022 // update release date																		 
 *            8/ ----------
 
-global SRIVepoch 29Jul2022 // update release date																		 
+global SRIVepoch 28Jul2022 // update release date																		 
 *            9/ ----------
 
 
