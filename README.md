@@ -198,7 +198,7 @@ JOHN: Johns Hopkins. The coronavirus resource center, Johns Hopkins University, 
 
 ### Study update dates in uptake 20220729
 
-**_DELP 20220719_**, IHME 20220719, NO IMPE, **_SRIV 20220728_** 
+DELP 20220719, IHME 20220719, NO IMPE, **_SRIV 20220728_** 
 
 Days old: DELP 10, IHME 10, IMPE > 2 weeks, SRIV 1
 
@@ -902,16 +902,11 @@ and /20220318/ denotes the date of uptake.
 
 .
  
- 
-### Study update dates in uptake 20220729
 
 
 
 
-
-
-
-(84) uptake [`20220722`](https://github.com/pourmalek/covir2/tree/main/20220722): 
+(84) uptake [`20220729`](https://github.com/pourmalek/covir2/tree/main/20220729): 
 **_DELP 20220719_**, IHME 20220719, NO IMPE, **_SRIV 20220728_**    || Days old: DELP 10, IHME 10, IMPE > 2 weeks, SRIV 1
 
 (83) uptake [`20220722`](https://github.com/pourmalek/covir2/tree/main/20220722): 
