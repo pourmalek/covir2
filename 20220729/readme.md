@@ -3,7 +3,7 @@
 <br/><br/> 
 
 
-### Study update dates in uptake 20220729
+### Study update dates in uptake 20220729 
 
 DELP 20220719, IHME 20220719, NO IMPE, **_SRIV 20220728_** 
 
