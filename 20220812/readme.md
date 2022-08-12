@@ -262,7 +262,7 @@ YEM:	Yemen
    
 (2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-![image](https://user-images.githubusercontent.com/30849720/184397019-6f61698a-2175-4eec-8b3b-ac35a3db2a7d.png)
+![image](https://user-images.githubusercontent.com/30849720/184399035-3350099d-77e3-4685-9562-bc0c28981a77.png)
   
 ****   
     
@@ -274,25 +274,25 @@ YEM:	Yemen
     
 (4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on, without extremes](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%201001%20d%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/184399295-6d9e4ab2-e333-40cd-ab38-792d1fe93847.png)
   
 ****    
 
 (5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/184399472-e8cf11a3-985e-4b9b-80fe-6281f1636140.png)
   
 ****   
    
 (6) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/184399826-d73e05c7-e201-490d-8e6c-8006b492aa17.png)
   
 ****   
     
 (7) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022 on](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%201010%20c%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/184399999-2abf5dc1-a7b9-46b0-ab24-be310c907305.png)
   
 ****   
    
