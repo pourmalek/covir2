@@ -67,25 +67,25 @@ Carl Sagan testifying before Congress in 1985 on climate change || https://www.y
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://raw.githubusercontent.com/pourmalek/covir2/main/20220812/output/merge/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184384978-523c981d-3539-4e2c-bc3e-322d0a93cd24.png)
 
 ****
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184385113-5855139a-3cc4-4595-8c91-18185859a0c5.png)
 
 ****
 
 (0c) Iran [Daily reported deaths, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184385245-156c9ac0-d04b-4f7b-b3b9-637e0a1095c2.png)
 
 ****
   
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184385372-5cf53f85-c9aa-4101-8a67-ada2c22b8ef3.png)
   
 ****
 
@@ -106,36 +106,37 @@ book
 
 (5) Iran [Deaths, Iran, IMPE, 2021 on, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
+![image](https://user-images.githubusercontent.com/30849720/184385828-44c2863f-2c75-4a87-bd4d-4ebafab470c1.png)
 
 ****
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book
+![image](https://user-images.githubusercontent.com/30849720/184386011-3a3f5268-c13b-4e83-beb7-4cd690fc11a7.png)
   
 ****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184391843-4f3a4940-4504-4859-b305-508e43c82fd5.png)
   
 ****
 
 (00b3) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184392360-5423a84d-0450-4418-8a7c-d68ce3417881.png)
   
 ****
 
 (00c) Iran [Daily reported cases, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%204%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184392708-77f20d39-177b-4e3a-885d-37a7d8daa1b7.png)
   
 ****
   
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184392904-fcf01553-3f65-4634-b97c-4641a9ba6861.png)
   
 ****
 
@@ -156,7 +157,7 @@ book
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/184393187-eb69ea57-3283-4474-a44e-05411a7d90f0.png)
   
 ****
 
@@ -255,7 +256,7 @@ YEM:	Yemen
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220812/output/merge/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/184393711-e852e95b-de3d-4223-bada-f4caf80998a6.png)
   
 ****   
    
