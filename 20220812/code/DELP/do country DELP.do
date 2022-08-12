@@ -27,6 +27,9 @@ di "DELPdate = " "$DELPdate"
 * Get DELPHI data for country
 
 
+capture shell rm -r "Global_V4_since100_$DELPdate.csv"
+
+
 clear
 
 copy https://raw.githubusercontent.com/COVIDAnalytics/website/master/data/predicted/Global_V4_since100_$DELPdate.csv Global_V4_since100_$DELPdate.csv
