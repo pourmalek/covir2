@@ -30,6 +30,15 @@ di "SRIVdate = " "$SRIVdate"
 
 * Get SRIV estimates for $country
 
+
+capture shell rm -r "global_forecasts_deaths.csv"
+capture shell rm -r "global_forecasts_deaths_lb.csv"
+capture shell rm -r "global_forecasts_deaths_ub.csv"
+capture shell rm -r "global_forecasts_cases.csv"
+capture shell rm -r "global_forecasts_cases_lb.csv"
+capture shell rm -r "global_forecasts_cases_ub.csv"
+
+
 copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/$SRIVdate/global_forecasts_deaths.csv global_forecasts_deaths.csv
 copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/$SRIVdate/global_forecasts_deaths_lb.csv global_forecasts_deaths_lb.csv
 copy https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/historical_forecasts/$SRIVdate/global_forecasts_deaths_ub.csv global_forecasts_deaths_ub.csv
