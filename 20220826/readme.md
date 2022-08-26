@@ -286,7 +286,7 @@ YEM:	Yemen
     
 (7) EMR [Daily reported cases, EMR countries, Johns Hopkins, June 2022 on](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201010%20c%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186969183-a5c20beb-001b-4c14-8455-d373521268cf.png)
   
 ****   
    
