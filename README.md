@@ -2,7 +2,7 @@
 
 ## ! THE MOST RECENT WEEKLY SITUATION REPORT, EVERY SATURDAY MORNING, HERE:
 
-**! Read Iran COVID-19 epidemic models situation report No 69 - 2022-08-12 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/69%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2069%20–%202022-08-12.pdf)
+**! Read Iran COVID-19 epidemic models situation report No 70 - 2022-08-26 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/70%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2070%20–%202022-08-26.pdf)
 
 <br/><br/>
 
@@ -245,7 +245,7 @@ Graph (4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on
 ********************************************************************************************************************************************
  
 
-# :eyes: SEE: Iran COVID-19 epidemic models situation report No 69 - 2022-08-12 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/69%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2069%20–%202022-08-12.pdf)
+# :eyes: SEE: Iran COVID-19 epidemic models situation report No 70 - 2022-08-26 [here](https://github.com/pourmalek/covir2/blob/main/situation%20reports/70%20Iran%20COVID-19%20epidemic%20models%20situation%20report%20No%2070%20–%202022-08-26.pdf)
  
 
 ********************************************************************************************************************************************
