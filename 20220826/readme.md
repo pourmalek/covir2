@@ -101,31 +101,30 @@ Carl Sagan testifying before Congress in 1985 on climate change || https://www.y
 
 (5) Iran [Deaths, Iran, IMPE, 2021 on, 3 scenarios](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%2017%20COVID-19%20daily%20deaths%2C%20Iran%2C%203%20scenarios%2C%20IMPE.pdf)
 
-book
 
 ****
   
 (6b) Iran [Daily deaths, 2022 on, reference scenarios](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%2018%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%202022%20on.pdf)  
   
-book
+![image](https://user-images.githubusercontent.com/30849720/186966776-eeb155c3-62aa-4eed-b8fe-fad35da1b204.png)
   
 ****  
 
 (00) Iran [Daily reported cases, JOHN, all times](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%202%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186966900-2b97a114-1781-41bc-bcc3-3128f60effbc.png)
   
 ****
 
 (00b3) Iran [Daily reported cases, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%204%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186967048-cde65819-f206-4f9f-adc7-b94fb6953a3e.png)
   
 ****
 
 (00c) Iran [Daily reported cases, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%204%20b%20COVID-19%20daily%20cases%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186967218-1f577328-1703-4107-8c5e-ace2685d598b.png)
   
 ****
   
