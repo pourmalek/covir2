@@ -130,7 +130,7 @@ Carl Sagan testifying before Congress in 1985 on climate change || https://www.y
   
 (7) Iran [Daily cases or infections, all time](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%2021%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186967492-7705afa1-a6a9-495e-a10d-24caa714a830.png)
   
 ****
 
@@ -151,7 +151,7 @@ book
 
 (8b2) Iran [Daily cases, 2022 on](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%2022b2%20COVID-19%20daily%20cases%2C%20Iran%2C%20reference%20scenarios.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186967610-2c819a2c-bf28-47c1-94b0-7590a89413fd.png)
   
 ****
 
@@ -250,37 +250,37 @@ YEM:	Yemen
 
 (1) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201001%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186967758-5e874a24-0951-4e1c-9eb2-8da8478061bd.png)
   
 ****   
    
 (2) EMR [Daily reported deaths, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201001%20b%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186967961-94eb14fe-cda5-41e0-bac8-85dc70f7882a.png)
   
 ****   
     
 (3) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201001%20c%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186967863-b38af0f7-597f-4f7a-b9bc-bcd8400108be.png)
   
 ****   
     
 (4) EMR [Daily reported deaths, EMR countries, Johns Hopkins, June 2022 on, without extremes](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201001%20d%20COVID-19%20daily%20deaths%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)   
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186968082-99a2419c-7aca-40c7-a89e-bbf155d1ca8f.png)
   
 ****    
 
 (5) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201010%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186968201-4c83d9bd-821e-4060-9606-1aeb1ce558b3.png)
   
 ****   
    
 (6) EMR [Daily reported cases, EMR countries, Johns Hopkins, 2022, without extremes](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%201010%20b%20COVID-19%20daily%20cases%2C%20EMRO%20countries%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
    
-book
+![image](https://user-images.githubusercontent.com/30849720/186968298-f31cb553-d9fa-4d6d-b0e1-4ef1b400ebc4.png)
   
 ****   
     
