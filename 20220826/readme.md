@@ -62,25 +62,25 @@ Carl Sagan testifying before Congress in 1985 on climate change || https://www.y
 
 (0) Iran [Daily reported deaths, JOHN, all times](https://raw.githubusercontent.com/pourmalek/covir2/main/20220826/output/merge/graph%201%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186966076-0dd7cdd7-a264-477e-ab1a-700e3875ba8c.png)
 
 ****
 
 (0b) Iran [Daily reported deaths, JOHN, 2022](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%203%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20on.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186966223-bdee7bd0-42dc-47f8-9802-1ac8eff0c355.png)
 
 ****
 
 (0c) Iran [Daily reported deaths, JOHN, 2022 June on](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%203%20b%20COVID-19%20daily%20deaths%2C%20Iran%2C%20Johns%20Hopkins%2C%202022%20June.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186966311-753aea5d-cf6c-420f-8e6b-289f9abc38cb.png)
 
 ****
   
 (1) Iran [Daily deaths, all time](https://github.com/pourmalek/covir2/blob/main/20220826/output/merge/graph%2011%20COVID-19%20daily%20deaths%2C%20Iran%2C%20reference%20scenarios%2C%20all%20time.pdf)
 
-book
+![image](https://user-images.githubusercontent.com/30849720/186966452-3f2c34da-57b4-40ab-b8e5-fd1f16578f7c.png)
   
 ****
 
