@@ -27,10 +27,9 @@
 
  
  
- https://www.amnesty.ca/news/iran-killings-of-children-during-youthful-anti-establishment-protests/
+https://www.amnesty.ca/news/iran-killings-of-children-during-youthful-anti-establishment-protests/
 
-![image](https://user-images.githubusercontent.com/30849720/195999816-ba491c87-50e8-4aed-9fb1-3d3d542c0815.png)
-
+![image](https://user-images.githubusercontent.com/30849720/196000061-eaf052b7-5802-4363-9d61-190a9d1e71d3.png)
 
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
