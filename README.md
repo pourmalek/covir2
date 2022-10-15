@@ -25,6 +25,9 @@
 
 ## <div align="center"> covir2 = COVID Iran review number 2
 
+ 
+ 
+ https://www.amnesty.ca/news/iran-killings-of-children-during-youthful-anti-establishment-protests/
 
 ![image](https://user-images.githubusercontent.com/30849720/195999816-ba491c87-50e8-4aed-9fb1-3d3d542c0815.png)
 
