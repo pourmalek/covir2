@@ -48,7 +48,10 @@ di "$country"                                                                   
 global DELPepoch 08Sep2022 // update release date
 *            2/ ----------
 
-global IHMEepoch 08Jul2022 // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
+
+di td(08Jul2022)
+
+global IHMEepoch 22834 // as per https://covid19.healthdata.org/iran-(islamic-republic-of)?view=daily-deaths&tab=trend
 *            3/ ----------
 
 global IMPEdate 2022-08-08_v9 
