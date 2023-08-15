@@ -25,15 +25,6 @@
 
 ## <div align="center"> covir2 = COVID Iran review number 2
 
- 
- 
-https://www.amnesty.ca/news/iran-killings-of-children-during-youthful-anti-establishment-protests/
-
-![image](https://user-images.githubusercontent.com/30849720/196000061-eaf052b7-5802-4363-9d61-190a9d1e71d3.png)
-
-As of October 13, 2022. 
-
-
 ********************************************************************************************************************************************
 ********************************************************************************************************************************************
  
@@ -78,8 +69,7 @@ Deputy Minister of Research and Technology
 * Project: Combine and visualize predictions of international periodically updated COVID-19 pandemic models for countries without subnational level estimates: Iran
 
 * Person: Farshad Pourmalek (pourmalek_farshad at yahoo dot com) 
-  
-  [![ORCIDID](https://user-images.githubusercontent.com/30849720/127926326-89321742-cb08-4c18-bbdd-9b0c12e4ab2f.png)](https://orcid.org/0000-0002-2134-0771) || [`PubMed`](https://pubmed.ncbi.nlm.nih.gov/?term=Pourmalek+F&sort=pubdate&size=200)  ||  [![global_reach](https://github.com/pourmalek/covir2/blob/main/sandbox/global_reach.png?raw=true)](https://profiles.impactstory.org/u/0000-0002-2134-0771/achievements) [`Global Reach Top 10%`](https://profiles.impactstory.org/u/0000-0002-2134-0771/achievements)  || [UBC SPPH](https://www.spph.ubc.ca/person/farshad-pourmalek/) || [UW IHME](http://www.healthdata.org/about/farshad-pourmalek) || [YouCheck](https://youcheck.ca)  
+   
 * Time (initial): 2021-02-10
  
 * [Research Article](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-06020-4) 
