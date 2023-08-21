@@ -23,6 +23,9 @@
  
 ## <div align="center"> :iran: Iran 
 
+<div align="center"> ![image](https://github.com/pourmalek/covir2/assets/30849720/db0c8646-a092-4342-9f5b-58188b1523fb)
+
+
 ## <div align="center"> covir2 = COVID Iran review number 2
 
 ********************************************************************************************************************************************
