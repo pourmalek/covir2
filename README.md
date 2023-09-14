@@ -23,7 +23,8 @@
  
 ## <div align="center"> :iran: Iran 
 
-![mahsa1](https://github.com/pourmalek/covir2/assets/30849720/c229c1f4-fcf8-4fa4-8751-97cb08583cc2)
+ ![image](https://github.com/pourmalek/covir2/assets/30849720/6405f989-e6f6-4cac-8b51-4fee0fa2e5e9)
+
 
 
  ![image](https://github.com/pourmalek/covir2/assets/30849720/db0c8646-a092-4342-9f5b-58188b1523fb)
